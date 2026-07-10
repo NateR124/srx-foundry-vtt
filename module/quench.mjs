@@ -448,4 +448,56 @@ export function registerQuenchTests(quench) {
     },
     { displayName: "SRX: Matrix integration (persona state, host + IC data)" }
   );
+
+  quench.registerBatch("srx.vehicle.integration",
+    (context) => {
+      const { describe, it, expect, after } = context;
+
+      after(cleanup);
+
+      describe("Vehicle document (single damage track)", function () {
+        this.timeout(30000);
+        let car;
+
+        it("validates with SRX stats; derived wounded/totaled/movement", async () => {
+          car = await Actor.create({
+            name: "Quench Car",
+            type: "vehicle",
+            system: { handling: 2, speed: 4, body: 10, armor: 6, health: { max: 15 } }
+          });
+          CLEANUP.actors.push(car.id);
+          expect(car.system.derived.movementRate).to.equal(200);
+          expect(car.system.derived.woundedLimit).to.equal(8);
+          expect(car.system.derived.wounded).to.equal(false);
+        });
+
+        it("applyDamageToActor lands Physical AND Stun on the one track, uncapped", async () => {
+          const { applyDamageToActor } = await import("./combat/damage.mjs");
+          await applyDamageToActor(car, { physical: 5, stun: 0 });
+          expect(car.system.health.value).to.equal(5);
+          await applyDamageToActor(car, { physical: 0, stun: 4 });
+          expect(car.system.health.value).to.equal(9);
+          expect(car.system.derived.wounded).to.equal(true);
+          await applyDamageToActor(car, { physical: 10, stun: 0 });
+          // No cap: damage above Health persists for repair costing
+          expect(car.system.health.value).to.equal(19);
+          expect(car.system.derived.totaled).to.equal(true);
+        });
+
+        it("vehicle sheet renders the cockpit (damage track + test buttons)", async () => {
+          try {
+            window.localStorage.removeItem(`srx.sheetMode.${car.id}`);
+          } catch (_e) { /* ignore */ }
+          const sheet = car.sheet;
+          await sheet.render(true);
+          await new Promise((r) => setTimeout(r, 300));
+          expect(sheet.element.querySelector("[data-action='rollHandling']")).to.not.equal(null);
+          expect(sheet.element.querySelector("[data-action='setHealth']")).to.not.equal(null);
+          expect(sheet.element.querySelector("[data-action='takeControls']")).to.not.equal(null);
+          await sheet.close();
+        });
+      });
+    },
+    { displayName: "SRX: Vehicle integration (damage track, cockpit)" }
+  );
 }

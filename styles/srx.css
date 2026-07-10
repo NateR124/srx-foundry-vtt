@@ -643,13 +643,14 @@
   opacity: 0.75;
 }
 .srx .matrix-panel .matrix-status .stat b { font-size: 1.3em; }
-.srx .matrix-panel .matrix-actions {
+/* shared by the Matrix tab and the vehicle cockpit */
+.srx .matrix-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   margin: 4px 0 8px;
 }
-.srx .matrix-panel .matrix-actions button {
+.srx .matrix-actions button {
   font-size: 0.82em;
   padding: 3px 12px;
   height: auto;

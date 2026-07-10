@@ -65,6 +65,16 @@ export async function applyDamageToActor(actor, amount) {
   const before = monitorStateFromActor(actor);
   const next = applyToMonitors(before, amount);
 
+  if (actor.type === "vehicle") {
+    // Single track: Physical AND Stun both land on it, Physical does not
+    // mirror, no System Shock (p. 195). No cap — damage above Health stays
+    // (repair costs are per point, p. 196).
+    const dmg = Math.max(amount.physical || 0, amount.stun || 0);
+    const value = actor.system.health.value + dmg;
+    await actor.update({ "system.health.value": value });
+    return { before, after: monitorStateFromActor(actor) };
+  }
+
   if (actor.type === "threat") {
     // Single track: use max of physical/stun applied as health value
     const dmg = Math.max(amount.physical || 0, amount.stun || 0);

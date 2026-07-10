@@ -33,7 +33,8 @@ const BATCHES = [
   "srx.magic.integration",
   "srx.sheet.integration",
   "srx.import.integration",
-  "srx.matrix.integration"
+  "srx.matrix.integration",
+  "srx.vehicle.integration"
 ];
 
 const browser = await chromium.launch({ headless: true });

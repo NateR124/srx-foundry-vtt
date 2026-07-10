@@ -1,31 +1,185 @@
-<form autocomplete="off">
+<div class="srx vehicle-sheet-body threat-sheet-body {{#if isBuild}}mode-build{{else}}mode-play{{/if}}">
   <header class="sheet-header">
-    <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64"/>
-    <h1><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-  </header>
-  <div class="sheet-body">
-    <h2>Vehicle Stats</h2>
-    <div class="grid grid-2col">
-      <label>Handling</label>
-      <input type="number" name="system.handling" value="{{system.handling}}">
-      
-      <label>Speed</label>
-      <input type="number" name="system.speed" value="{{system.speed}}">
-      
-      <label>Acceleration</label>
-      <input type="number" name="system.acceleration" value="{{system.acceleration}}">
-      
-      <label>Body</label>
-      <input type="number" name="system.body" value="{{system.body}}">
-      
-      <label>Armor</label>
-      <input type="number" name="system.armor" value="{{system.armor}}">
-      
-      <label>Pilot</label>
-      <input type="number" name="system.pilot" value="{{system.pilot}}">
-      
-      <label>Sensor</label>
-      <input type="number" name="system.sensor" value="{{system.sensor}}">
+    <img class="portrait" src="{{actor.img}}" data-action="editImage" data-edit="img" alt="{{actor.name}}">
+    <div class="header-fields">
+      <div class="name-row">
+        {{#if isBuild}}
+        <input class="charname" type="text" name="name" value="{{actor.name}}">
+        {{else}}
+        <h1 class="charname display">{{actor.name}}</h1>
+        {{/if}}
+        {{#if editable}}
+        <a class="mode-toggle {{#if isBuild}}building{{/if}}" data-action="toggleMode"
+           title="{{#if isBuild}}{{localize 'SRX.Sheet.modeToPlay'}}{{else}}{{localize 'SRX.Sheet.modeToBuild'}}{{/if}}">
+          <i class="fa-solid {{#if isBuild}}fa-hammer{{else}}fa-dice-d6{{/if}}"></i>
+          {{#if isBuild}}{{localize "SRX.Sheet.modeBuild"}}{{else}}{{localize "SRX.Sheet.modePlay"}}{{/if}}
+        </a>
+        {{/if}}
+      </div>
+      <span class="threat-tr" data-tooltip="{{localize 'SRX.Vehicle.controlMode'}}">
+        {{modeLabel}}{{#if operatorName}} · {{operatorName}}{{/if}}
+      </span>
     </div>
-  </div>
-</form>
+  </header>
+
+  {{#if isBuild}}
+  <section>
+    <div class="header-row">
+      <label>{{localize "SRX.Vehicle.handling"}}
+        <input type="number" name="system.handling" value="{{system.handling}}">
+      </label>
+      <label>{{localize "SRX.Vehicle.speed"}}
+        <input type="number" name="system.speed" value="{{system.speed}}" min="0">
+      </label>
+      <label>{{localize "SRX.Threat.body"}}
+        <input type="number" name="system.body" value="{{system.body}}" min="1">
+      </label>
+      <label>{{localize "SRX.Item.armor"}}
+        <input type="number" name="system.armor" value="{{system.armor}}" min="0">
+      </label>
+    </div>
+    <div class="form-row">
+      <label>{{localize "SRX.Vehicle.vehicleType"}}
+        <select name="system.vehicleType">
+          <option value="ground" {{#if (srxEq system.vehicleType "ground")}}selected{{/if}}>{{localize "SRX.Vehicle.typeGround"}}</option>
+          <option value="air" {{#if (srxEq system.vehicleType "air")}}selected{{/if}}>{{localize "SRX.Vehicle.typeAir"}}</option>
+          <option value="water" {{#if (srxEq system.vehicleType "water")}}selected{{/if}}>{{localize "SRX.Vehicle.typeWater"}}</option>
+        </select>
+      </label>
+      <label>{{localize "SRX.Item.skill"}}
+        <select name="system.skill">
+          <option value="driving" {{#if (srxEq system.skill "driving")}}selected{{/if}}>{{localize "SRX.Skill.driving"}}</option>
+          <option value="piloting" {{#if (srxEq system.skill "piloting")}}selected{{/if}}>{{localize "SRX.Skill.piloting"}}</option>
+        </select>
+      </label>
+      <label>{{localize "SRX.Vehicle.listPrice"}}
+        <input type="number" name="system.listPrice" value="{{system.listPrice}}" min="0">
+      </label>
+    </div>
+
+    <h3>{{localize "SRX.Vehicle.autopilot"}}</h3>
+    <div class="form-row">
+      <label>{{localize "SRX.Item.rating"}}
+        <input type="number" name="system.autopilot.rating" value="{{system.autopilot.rating}}" min="0">
+      </label>
+      <label>{{localize "SRX.Derived.defenseScore"}}
+        <input type="number" name="system.autopilot.defenseScore" value="{{system.autopilot.defenseScore}}" min="1">
+      </label>
+      <label>{{localize "SRX.Sheet.skills"}}
+        <input type="text" name="system.autopilot.skills" value="{{system.autopilot.skills}}">
+      </label>
+    </div>
+
+    <h3>{{localize "SRX.Sheet.monitors"}}</h3>
+    <div class="form-row">
+      <label>{{localize "SRX.Threat.damage"}}
+        <input type="number" name="system.health.value" value="{{system.health.value}}" min="0">
+      </label>
+      <label>{{localize "SRX.Threat.healthMax"}}
+        <input type="number" name="system.health.max" value="{{system.health.max}}" min="1">
+      </label>
+      <label>{{localize "SRX.Vehicle.tires"}}
+        <input type="number" name="system.tireStacks" value="{{system.tireStacks}}" min="0">
+      </label>
+    </div>
+  </section>
+
+  {{else}}
+  <section>
+    <div class="threat-statline">
+      <div class="stat" data-tooltip="{{localize 'SRX.Vehicle.handling'}}">
+        <label>{{localize "SRX.Vehicle.handling"}}</label>
+        <span>{{system.handling}}</span>
+      </div>
+      <div class="stat" data-tooltip="{{localize 'SRX.Vehicle.movement'}} — {{system.derived.movementRate}}">
+        <label>{{localize "SRX.Vehicle.speed"}}</label>
+        <span>{{system.derived.effectiveSpeed}}</span>
+      </div>
+      <div class="stat" data-tooltip="{{localize 'SRX.Threat.body'}}">
+        <label>{{localize "SRX.Threat.body"}}</label>
+        <span>{{system.body}}</span>
+      </div>
+      <div class="stat" data-tooltip="{{localize 'SRX.Item.armor'}}">
+        <label>{{localize "SRX.Item.armor"}}</label>
+        <span>{{system.armor}}</span>
+      </div>
+      <div class="stat" data-tooltip="{{localize 'SRX.Vehicle.autopilot'}}">
+        <label>{{localize "SRX.Vehicle.autopilot"}}</label>
+        <span>{{system.autopilot.rating}}</span>
+      </div>
+    </div>
+
+    <div class="monitor threat-health">
+      <span class="monitor-label">{{localize "SRX.Threat.damage"}} ({{system.health.value}}/{{system.health.max}})</span>
+      <div class="boxes">
+        {{#each healthBoxes}}
+        <a class="box {{#if this.filled}}filled{{/if}} {{#if this.woundedMark}}wounded-mark{{/if}}"
+           data-action="setHealth" data-index="{{this.index}}" data-tooltip="{{this.index}}"></a>
+        {{/each}}
+      </div>
+    </div>
+    {{#if system.derived.totaled}}<p class="state-banner dead">{{localize "SRX.Vehicle.totaled"}}</p>
+    {{else if system.derived.wounded}}<p class="state-banner wounded">{{localize "SRX.State.wounded"}}</p>{{/if}}
+    {{#if system.derived.immobile}}<p class="state-banner wounded">{{localize "SRX.Vehicle.immobile"}}</p>{{/if}}
+
+    <div class="matrix-actions">
+      <button type="button" data-action="takeControls" data-mode="manual">
+        <i class="fa-solid fa-hand"></i> {{localize "SRX.Vehicle.takeControls"}}
+      </button>
+      <button type="button" data-action="takeControls" data-mode="remote">
+        <i class="fa-solid fa-satellite-dish"></i> {{localize "SRX.Vehicle.modeRemote"}}
+      </button>
+      <button type="button" data-action="takeControls" data-mode="jumpedIn">
+        <i class="fa-solid fa-plug"></i> {{localize "SRX.Vehicle.modeJumpedIn"}}
+      </button>
+      <button type="button" data-action="takeControls" data-mode="autopilot">
+        <i class="fa-solid fa-robot"></i> {{localize "SRX.Vehicle.modeAutopilot"}}
+      </button>
+    </div>
+
+    <div class="matrix-actions">
+      <button type="button" data-action="rollHandling">
+        <i class="fa-solid fa-arrows-turn-to-dots"></i> {{localize "SRX.Vehicle.handlingTest"}}
+      </button>
+      <button type="button" data-action="rollSpeed">
+        <i class="fa-solid fa-gauge-high"></i> {{localize "SRX.Vehicle.speedTest"}}
+      </button>
+      <button type="button" data-action="rollRam">
+        <i class="fa-solid fa-car-burst"></i> {{localize "SRX.Vehicle.ram"}}
+      </button>
+      <button type="button" data-action="rollCrash" data-light="false">
+        <i class="fa-solid fa-explosion"></i> {{localize "SRX.Vehicle.crash"}}
+      </button>
+      <button type="button" data-action="rollCrash" data-light="true">
+        {{localize "SRX.Vehicle.crashLight"}}
+      </button>
+    </div>
+
+    <h3>{{localize "SRX.Vehicle.environment"}}</h3>
+    <div class="matrix-actions">
+      <button type="button" data-action="rollEnvironment" data-area="cluttered">{{localize "SRX.Vehicle.areaCluttered"}}</button>
+      <button type="button" data-action="rollEnvironment" data-area="standard">{{localize "SRX.Vehicle.areaStandard"}}</button>
+      <button type="button" data-action="rollEnvironment" data-area="open">{{localize "SRX.Vehicle.areaOpen"}}</button>
+    </div>
+
+    <div class="form-row chase-state">
+      <label>{{localize "SRX.Vehicle.chaseRole"}}
+        <select name="system.chase.role">
+          <option value="none" {{#if (srxEq system.chase.role "none")}}selected{{/if}}>{{localize "SRX.Vehicle.roleNone"}}</option>
+          <option value="quarry" {{#if (srxEq system.chase.role "quarry")}}selected{{/if}}>{{localize "SRX.Vehicle.roleQuarry"}}</option>
+          <option value="pursuer" {{#if (srxEq system.chase.role "pursuer")}}selected{{/if}}>{{localize "SRX.Vehicle.rolePursuer"}}</option>
+        </select>
+      </label>
+      {{#if (srxEq system.chase.role "pursuer")}}
+      <label>{{localize "SRX.Vehicle.chaseRange"}}
+        <select name="system.chase.range">
+          <option value="close" {{#if (srxEq system.chase.range "close")}}selected{{/if}}>{{localize "SRX.Vehicle.rangeClose"}}</option>
+          <option value="medium" {{#if (srxEq system.chase.range "medium")}}selected{{/if}}>{{localize "SRX.Vehicle.rangeMedium"}}</option>
+          <option value="long" {{#if (srxEq system.chase.range "long")}}selected{{/if}}>{{localize "SRX.Vehicle.rangeLong"}}</option>
+        </select>
+      </label>
+      {{/if}}
+    </div>
+  </section>
+  {{/if}}
+</div>
