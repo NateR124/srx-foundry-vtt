@@ -10,6 +10,13 @@ An unofficial, free, fan-made game system for [Foundry Virtual Tabletop](https:/
 - Character sheet: attributes with augmented values (+3 cap), the 21 skills, derived stats (Initiative, Accelerator, Defense Score, Matrix Defense Score, Wounded Limit, movement, unarmed DV), dual condition monitors with System Shock, Edge tracker.
 - Items: weapons (multi-attack-mode, DV formulas like `BOD-3`), armor (worn/highest-only, hardened, heavy), gear, talents, traits, contacts, knowledge domains.
 
+## Installation
+
+To install in Foundry VTT:
+1. Copy the manifest URL: `https://raw.githubusercontent.com/OWNER/REPO/main/system.json` (Replace OWNER/REPO with the actual repo path when published)
+2. In Foundry, go to Game Systems -> Install System.
+3. Paste the manifest URL and click Install.
+
 ## Content
 
 This repository ships **no SRX or Shadowrun content** — no rules text, stats, art, or logos. Game data is created in-app or (in a later milestone) imported from your own copy of the freely distributed SRX Character Builder data files.
