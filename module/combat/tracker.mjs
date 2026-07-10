@@ -9,8 +9,7 @@ import {
 import {
   getEconomy,
   spendCombatantAction,
-  useFullDefense,
-  onActionPhaseStart
+  useFullDefense
 } from "./actions.mjs";
 
 /**
@@ -37,12 +36,12 @@ export function registerTrackerHooks() {
       if (b) b.textContent = game.i18n.format("SRX.Combat.passBanner", { pass });
     }
 
-    // Per-combatant action economy chips
+    // Per-combatant action economy chips (only where the user can act)
     root.querySelectorAll(".combatant").forEach((li) => {
       const id = li.dataset.combatantId;
       if (!id || li.querySelector(".srx-economy")) return;
       const combatant = combat.combatants.get(id);
-      if (!combatant) return;
+      if (!combatant || !(combatant.isOwner || game.user.isGM)) return;
 
       const economy = getEconomy(combatant);
       const row = document.createElement("div");
@@ -68,18 +67,10 @@ export function registerTrackerHooks() {
     });
   });
 
-  // Clear economy / Full Defense at phase boundaries
-  Hooks.on("updateCombat", async (combat, changed, _options, userId) => {
-    if (game.user.id !== userId) return;
-    if (changed.turn === undefined && changed.round === undefined) return;
-
-    // Previous combatant phase end
-    // Current combatant phase start
-    const current = combat.combatant;
-    if (current) {
-      await onActionPhaseStart(current);
-    }
-  });
+  // Phase-boundary bookkeeping (Full Defense clear, economy reset, suppress)
+  // runs inside SrxCombat.nextTurn/nextRound on the GM client — no
+  // updateCombat hook here: the initiating client may be a player without
+  // permission to write other combatants' flags.
 }
 
 function economyHtml(economy, combatantId) {

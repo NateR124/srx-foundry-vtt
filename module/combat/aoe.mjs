@@ -155,30 +155,32 @@ async function rollBlastAttack(attacker, item, mode) {
     });
   }
 
-  // Place visual regions (GM / owner)
+  // Place visual regions (players relay through the GM executor)
   try {
-    if (game.user.isGM || attacker.isOwner) {
-      await placeBlastRegions({
-        centerPx,
-        fullRadius,
-        halfRadius,
-        name: item.name,
-        flags: {
-          itemUuid: item.uuid,
-          attackerUuid: attacker.uuid,
-          fullDv,
-          halfDv,
-          dvType,
-          element: mode.element || ""
-        }
-      });
-    }
+    await placeBlastRegions({
+      centerPx,
+      fullRadius,
+      halfRadius,
+      name: item.name,
+      flags: {
+        itemUuid: item.uuid,
+        attackerUuid: attacker.uuid,
+        fullDv,
+        halfDv,
+        dvType,
+        element: mode.element || ""
+      }
+    });
   } catch (err) {
     console.warn("SRX | Could not place blast regions", err);
+    ui.notifications.warn(game.i18n.localize("SRX.Aoe.regionFailed"));
   }
 
+  // A blast hits everything in radius — including the thrower and any
+  // unlinked-token siblings of the attacker (filtering by actor id excluded
+  // both, since synthetic actors share the base actor's id).
   const affected = tokensInBlast(centerPx, fullRadius, halfRadius, fullDv, halfDv)
-    .filter((t) => t.actor && t.actor.id !== attacker.id);
+    .filter((t) => t.actor);
 
   if (!affected.length) {
     return foundry.documents.ChatMessage.create({
@@ -279,27 +281,25 @@ async function rollConeAttack(attacker, item, mode) {
   const affected = tokensInCone(token, range, fullDv, facing)
     .filter((t) => t.actor);
 
-  // Polygon cone region (matches membership math)
+  // Polygon cone region (matches membership math; players relay via GM)
   try {
-    if (game.user.isGM || attacker.isOwner) {
-      const originPx = token.center ?? {
-        x: token.document.x + (token.w ?? 50) / 2,
-        y: token.document.y + (token.h ?? 50) / 2
-      };
-      await placeConeRegion({
-        originPx,
-        facingCompassDeg: facing,
-        rangeMeters: range,
-        name: item.name,
-        flags: {
-          itemUuid: item.uuid,
-          attackerUuid: attacker.uuid,
-          fullDv,
-          dvType,
-          element: mode.element || ""
-        }
-      });
-    }
+    const originPx = token.center ?? {
+      x: token.document.x + (token.w ?? 50) / 2,
+      y: token.document.y + (token.h ?? 50) / 2
+    };
+    await placeConeRegion({
+      originPx,
+      facingCompassDeg: facing,
+      rangeMeters: range,
+      name: item.name,
+      flags: {
+        itemUuid: item.uuid,
+        attackerUuid: attacker.uuid,
+        fullDv,
+        dvType,
+        element: mode.element || ""
+      }
+    });
   } catch (err) {
     console.warn("SRX | cone region", err);
   }
@@ -479,15 +479,9 @@ export async function resistAoeDamage({
     aoe: true
   });
 
+  // Ownership was gated at entry (only the defender's owner or the GM rolls
+  // this resistance), so damage can always be applied directly here.
   const amount = { physical: resolved.physical, stun: resolved.stun };
-  if (!defender.isOwner && !game.user.isGM) {
-    return requestGmAction("applyDamage", {
-      defenderUuid: actorUuid,
-      physical: amount.physical,
-      stun: amount.stun
-    });
-  }
-
   const result = await applyDamageToActor(defender, amount);
   if (element) await applyElementalAftermath(defender, amount, element);
 

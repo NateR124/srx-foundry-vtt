@@ -33,9 +33,13 @@ export async function markEdgeSpent(message, talentId) {
  * @returns {Actor|null}
  */
 export function edgeActorFromMessage(message) {
-  return message.speaker?.actor ? game.actors.get(message.speaker.actor) : null
-    ?? canvas?.tokens?.get(message.speaker?.token)?.actor
-    ?? null;
+  // Token actor first: unlinked tokens have synthetic actors that
+  // game.actors.get(speaker.actor) would wrongly resolve to the base actor.
+  // (The previous ?:/?? chain also parsed as ternary-first, so the token
+  // branch was unreachable whenever speaker.actor was set.)
+  const tokenActor = canvas?.tokens?.get(message.speaker?.token)?.actor;
+  if (tokenActor) return tokenActor;
+  return message.speaker?.actor ? game.actors.get(message.speaker.actor) : null;
 }
 
 /**
@@ -50,9 +54,9 @@ export async function useCloseCall(actor, message = null) {
   if (!(await actor.spendEdge())) return null;
   if (message) await markEdgeSpent(message, "closeCall");
 
-  // Stack as a transient actor flag; M2 attack flow subtracts from attacker threshold.
-  const until = game.time.worldTime + 1; // consumed on next defense resolution
-  await actor.setFlag("srx", "closeCall", { bonus: 2, until });
+  // Transient actor flag; the attack pipeline consumes it on the next
+  // defense resolution — hit or miss (postAttackOutcome).
+  await actor.setFlag("srx", "closeCall", { bonus: 2 });
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),

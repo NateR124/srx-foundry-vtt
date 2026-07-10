@@ -5,11 +5,40 @@ import {
   resolveFirstAidTest
 } from "../rules/healing.mjs";
 import { syncCharacterStatuses } from "./damage.mjs";
+import { registerGmHandler, requestGmAction } from "../net/socket.mjs";
+
+/**
+ * Apply a healing outcome to the target, relaying through the GM executor
+ * when the healer's player does not own the target (medic healing another
+ * player's PC or an NPC — the common case at a table).
+ */
+async function applyHealingOutcome(target, outcome) {
+  if (!target.isOwner && !game.user.isGM) {
+    return requestGmAction("applyHealing", { targetUuid: target.uuid, ...outcome });
+  }
+  if (outcome.stabilized) {
+    await target.toggleStatusEffect("dying", { active: false }).catch(() => null);
+  }
+  if (outcome.physicalHealed > 0) {
+    const phys = target.system.monitors?.physical?.value ?? 0;
+    await target.update({
+      "system.monitors.physical.value": Math.max(0, phys - outcome.physicalHealed)
+    });
+    await syncCharacterStatuses(target);
+  }
+  return true;
+}
 
 /**
  * Register chat buttons for Stabilize / First Aid (HTMLElement hooks, v13+).
  */
 export function registerHealingHooks() {
+  registerGmHandler("applyHealing", async (payload) => {
+    const target = await fromUuid(payload.targetUuid);
+    if (!target) throw new Error("Healing target not found");
+    return applyHealingOutcome(target, payload);
+  });
+
   Hooks.on("renderChatMessageHTML", (message, html) => {
     const root = html instanceof HTMLElement ? html : html?.[0];
     if (!root) return;
@@ -120,7 +149,7 @@ export async function rollStabilize(healer, target) {
   });
   
   if (result.success) {
-    await target.toggleStatusEffect("dying", { active: false }).catch(() => null);
+    await applyHealingOutcome(target, { stabilized: true, physicalHealed: 0 });
   }
 }
 
@@ -176,9 +205,6 @@ export async function rollFirstAid(healer, target) {
   
   if (result.success && result.boxesHealed > 0) {
     // First Aid outline: heal Physical boxes (stun path can be added later)
-    const phys = target.system.monitors?.physical?.value ?? 0;
-    const newPhys = Math.max(0, phys - result.boxesHealed);
-    await target.update({ "system.monitors.physical.value": newPhys });
-    await syncCharacterStatuses(target);
+    await applyHealingOutcome(target, { stabilized: false, physicalHealed: result.boxesHealed });
   }
 }

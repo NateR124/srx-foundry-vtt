@@ -11,8 +11,21 @@ import {
 } from "../rules/suppress.mjs";
 import { foundryRotationToCompass, tokenCenterMeters, metersToPixels } from "../canvas/aoe.mjs";
 import { resolveDefenderCover } from "../canvas/cover.mjs";
+import { combatantForActor, markFiredFirearm, spendCombatantAction } from "./actions.mjs";
+import { requestGmAction } from "../net/socket.mjs";
 const FLAG_ZONE = "suppressZone";
 const FLAG_WORLD = "suppressZones";
+
+/**
+ * Write the zone list onto the Combat. Players cannot set Combat flags, so
+ * non-GM users relay through the GM executor.
+ */
+async function setSuppressZones(list) {
+  const combat = game.combat;
+  if (!combat) return;
+  if (game.user.isGM) await combat.setFlag("srx", FLAG_WORLD, list);
+  else await requestGmAction("setSrxFlag", { combatId: combat.id, key: FLAG_WORLD, value: list });
+}
 
 /**
  * Start suppressive fire from firer token + FA DV.
@@ -35,7 +48,15 @@ export async function startSuppressiveFire(firer, {
   const originM = tokenCenterMeters(token);
   const facing = foundryRotationToCompass(token.document?.rotation ?? 0);
   const zone = defaultSuppressZone(widthM, depthM);
-  const combatant = game.combat?.combatants.find((c) => c.actorId === firer.id);
+  const combatant = combatantForActor(firer);
+
+  // Suppressive fire is a Complex action and counts as firing (recoil)
+  if (combatant) {
+    const ok = await spendCombatantAction(combatant, "complex");
+    if (!ok) return null;
+    await markFiredFirearm(combatant);
+  }
+
   const state = createSuppressState({
     firerUuid: firer.uuid,
     origin: originM,
@@ -50,19 +71,28 @@ export async function startSuppressiveFire(firer, {
   // Drop prior zones from same firer
   const next = list.filter((z) => z.firerUuid !== firer.uuid);
   next.push(state);
-  if (game.combat) await game.combat.setFlag("srx", FLAG_WORLD, next);
+  if (game.combat) await setSuppressZones(next);
   else await firer.setFlag("srx", FLAG_ZONE, state);
 
-  // Visual region (rectangle approx as polygon)
+  // Visual region (rectangle approx as polygon). Scene embedded documents are
+  // GM-only, so players relay creation through the GM executor.
   try {
-    if (canvas?.scene && (game.user.isGM || firer.isOwner)) {
+    if (canvas?.scene) {
       const poly = suppressPolygonPixels(originM, facing, zone);
-      await canvas.scene.createEmbeddedDocuments("Region", [{
+      const regionData = [{
         name: `${firer.name} — Suppress`,
         color: "#6688aa",
         shapes: [{ type: "polygon", points: poly }],
         flags: { srx: { suppress: true, firerUuid: firer.uuid, dv: state.dv } }
-      }]);
+      }];
+      if (game.user.isGM) {
+        await canvas.scene.createEmbeddedDocuments("Region", regionData);
+      } else {
+        await requestGmAction("createSrxRegions", {
+          sceneId: canvas.scene.id,
+          regions: regionData
+        });
+      }
     }
   } catch (err) {
     console.warn("SRX | suppress region", err);
@@ -117,15 +147,27 @@ export function getSuppressZones() {
 }
 
 /**
- * Clear zones that expire when this combatant's phase starts (firer's next phase).
+ * Clear zones that expire when this combatant's phase starts (firer's next
+ * phase), and remove their visual Regions. Runs GM-side (phase-start hook).
  * @param {Combatant} combatant
  */
 export async function clearSuppressOnPhaseStart(combatant) {
   if (!game.combat || !combatant) return;
   const list = getSuppressZones();
-  const next = list.filter((z) => z.expiresOnCombatantId !== combatant.id);
-  if (next.length !== list.length) {
-    await game.combat.setFlag("srx", FLAG_WORLD, next);
+  const expired = list.filter((z) => z.expiresOnCombatantId === combatant.id);
+  if (!expired.length) return;
+  await setSuppressZones(list.filter((z) => z.expiresOnCombatantId !== combatant.id));
+
+  // Delete the matching visual Regions so scenes don't accumulate stale zones
+  if (game.user.isGM && canvas?.scene) {
+    const firerUuids = new Set(expired.map((z) => z.firerUuid));
+    const stale = canvas.scene.regions
+      .filter((r) => r.flags?.srx?.suppress && firerUuids.has(r.flags.srx.firerUuid))
+      .map((r) => r.id);
+    if (stale.length) {
+      await canvas.scene.deleteEmbeddedDocuments("Region", stale).catch((err) =>
+        console.warn("SRX | suppress region cleanup", err));
+    }
   }
 }
 

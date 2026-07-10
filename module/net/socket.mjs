@@ -67,8 +67,9 @@ export function registerSocket() {
   game.socket.on(SOCKET_NAME, async (data) => {
     if (!data) return;
 
-    // GM executes
-    if (data.type === "request" && game.user.isGM) {
+    // Exactly ONE GM client executes — without the activeGM election, two
+    // connected GM sessions would both run every request (double damage etc.)
+    if (data.type === "request" && game.user.isGM && game.users.activeGM === game.user) {
       const fn = handlers.get(data.action);
       let result = null;
       let error = null;
@@ -88,14 +89,63 @@ export function registerSocket() {
     }
   });
 
-  // Built-in: apply damage
+  // Built-in: apply damage (elemental rider included — acid burn / catch
+  // fire must not be lost when a non-owner routes damage through the GM)
   registerGmHandler("applyDamage", async (payload) => {
     const { applyDamageToActor } = await import("../combat/damage.mjs");
     const defender = await fromUuid(payload.defenderUuid);
     if (!defender) throw new Error("Defender not found");
-    return applyDamageToActor(defender, {
+    const amount = {
       physical: payload.physical ?? 0,
       stun: payload.stun ?? 0
+    };
+    const result = await applyDamageToActor(defender, amount);
+    if (payload.element) {
+      const { applyElementalAftermath } = await import("../combat/lifecycle.mjs");
+      await applyElementalAftermath(defender, amount, payload.element);
+    }
+    return result;
+  });
+
+  // Built-in: scene Regions are GM-only embedded documents; players placing
+  // SRX templates (blast, cone, suppress) relay creation here. Every region
+  // is stamped with an srx flag so cleanup can find system-owned regions.
+  registerGmHandler("createSrxRegions", async (payload) => {
+    const scene = game.scenes.get(payload.sceneId);
+    if (!scene) throw new Error("Scene not found");
+    const regions = (payload.regions ?? []).map((r) => ({
+      ...r,
+      flags: foundry.utils.mergeObject(r.flags ?? {}, { srx: { system: true } })
+    }));
+    const created = await scene.createEmbeddedDocuments("Region", regions);
+    return created.map((r) => r.id);
+  });
+
+  registerGmHandler("deleteSrxRegions", async (payload) => {
+    const scene = game.scenes.get(payload.sceneId);
+    if (!scene) throw new Error("Scene not found");
+    // Only regions the system created may be deleted through this relay
+    const ids = (payload.regionIds ?? []).filter((id) => {
+      const region = scene.regions.get(id);
+      return region && region.flags?.srx;
     });
+    if (ids.length) await scene.deleteEmbeddedDocuments("Region", ids);
+    return ids;
+  });
+
+  // Built-in: set a flag on a document the requesting player does not own
+  // (suppress zones on the Combat, warding/close-call state on other actors).
+  // Restricted to the srx scope so this cannot be abused to write core flags.
+  registerGmHandler("setSrxFlag", async (payload) => {
+    const doc = payload.combatId
+      ? game.combats.get(payload.combatId)
+      : await fromUuid(payload.uuid);
+    if (!doc) throw new Error("Document not found");
+    if (payload.value === null || payload.value === undefined) {
+      await doc.unsetFlag("srx", payload.key);
+    } else {
+      await doc.setFlag("srx", payload.key, payload.value);
+    }
+    return true;
   });
 }

@@ -231,6 +231,14 @@ export async function runCombatTurnEnd(combat) {
       console.error("SRX | combat turn end for", actor.name, err);
     }
   }
+
+  // Blast/cone templates are instantaneous — clear them with the Combat Turn
+  try {
+    const { cleanupAoeRegions } = await import("../canvas/aoe.mjs");
+    await cleanupAoeRegions();
+  } catch (err) {
+    console.warn("SRX | AOE cleanup", err);
+  }
 }
 
 /**

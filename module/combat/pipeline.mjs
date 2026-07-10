@@ -44,10 +44,23 @@ export async function postAttackOutcome({
   const cc = defender.getFlag?.("srx", "closeCall");
 
   const { hit, netHits } = resolveAttackHit(rollResult.hits, ds);
-  if (!hit) return null;
 
-  // Consume Close Call after it modified this defense
-  if (cc) await defender.unsetFlag("srx", "closeCall").catch(() => null);
+  // Close Call is spent once it has modified a defense — hit or MISS (a miss
+  // is exactly what it was bought for). The attacker's client usually doesn't
+  // own the defender, so cross-ownership consumption relays through the GM.
+  if (cc) {
+    if (defender.isOwner || game.user.isGM) {
+      await defender.unsetFlag("srx", "closeCall").catch(() => null);
+    } else {
+      await requestGmAction("setSrxFlag", {
+        uuid: defender.uuid,
+        key: "closeCall",
+        value: null
+      });
+    }
+  }
+
+  if (!hit) return null;
 
   const content = await foundry.applications.handlebars.renderTemplate(
     "systems/srx/templates/chat/attack-outcome.hbs",
@@ -152,9 +165,9 @@ export async function resistDamageFromCard(message) {
     aoe: flag.aoe
   });
 
-  await message.setFlag("srx", "resistHits", resistHits);
-  await message.setFlag("srx", "resolved", resolved);
-
+  // The resolution lives ONLY on this defender-authored message. Writing it
+  // to the attack-outcome message would fail for players: ChatMessage grants
+  // update rights to its author alone, and that card belongs to the attacker.
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor: defender }),
     content: `<div class="srx chat-card"><p>${game.i18n.format("SRX.Combat.resistResult", {
@@ -162,7 +175,7 @@ export async function resistDamageFromCard(message) {
       hits: resistHits,
       summary: damageSummary(resolved)
     })}</p>
-    <button type="button" class="srx-combat-btn" data-combat-action="applyDamage" data-message-id="${message.id}">
+    <button type="button" class="srx-combat-btn" data-combat-action="applyDamage">
       ${game.i18n.localize("SRX.Combat.applyDamage")}
     </button></div>`,
     flags: {
@@ -170,7 +183,9 @@ export async function resistDamageFromCard(message) {
         type: "resistResult",
         parentMessageId: message.id,
         defenderUuid: flag.defenderUuid,
-        resolved
+        resistHits,
+        resolved,
+        element: flag.element ?? ""
       }
     }
   });
@@ -212,12 +227,20 @@ export async function applyDamageFromCard(message) {
   const defender = await fromUuid(defenderUuid);
   if (!defender) return null;
 
-  // Cross-ownership → GM executor
+  // Elemental riders: acid duration / catch fire (from parent attackOutcome)
+  let element = flag?.element ?? "";
+  if (!element && flag?.type === "resistResult" && flag.parentMessageId) {
+    const parent = game.messages.get(flag.parentMessageId);
+    element = parent?.flags?.srx?.element ?? "";
+  }
+
+  // Cross-ownership → GM executor (element included so riders aren't lost)
   if (!defender.isOwner && !game.user.isGM) {
     return requestGmAction("applyDamage", {
       defenderUuid,
       physical: resolved.physical,
-      stun: resolved.stun
+      stun: resolved.stun,
+      element
     });
   }
 
@@ -226,13 +249,6 @@ export async function applyDamageFromCard(message) {
     stun: resolved.stun
   };
   const result = await applyDamageToActor(defender, amount);
-
-  // Elemental riders: acid duration / catch fire (from parent attackOutcome)
-  let element = flag?.element ?? "";
-  if (!element && flag?.type === "resistResult" && flag.parentMessageId) {
-    const parent = game.messages.get(flag.parentMessageId);
-    element = parent?.flags?.srx?.element ?? "";
-  }
   if (element) await applyElementalAftermath(defender, amount, element);
 
   return foundry.documents.ChatMessage.create({

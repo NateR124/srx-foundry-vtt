@@ -17,12 +17,25 @@ import {
   resolveScatter
 } from "../rules/aoe.mjs";
 import { evaluateDv } from "../rules/formulas.mjs";
+import { requestGmAction } from "../net/socket.mjs";
+
+/**
+ * Create scene Regions as GM, or relay through the GM executor: scene
+ * embedded documents are GM-only, so a player placing an SRX template
+ * cannot call createEmbeddedDocuments directly.
+ * @param {object[]} data - Region document data
+ */
+async function createRegions(scene, data) {
+  if (game.user.isGM) return scene.createEmbeddedDocuments("Region", data);
+  return requestGmAction("createSrxRegions", { sceneId: scene.id, regions: data });
+}
 
 /** Pixels per grid meter on the active canvas. */
 export function distancePixels() {
-  return canvas?.dimensions?.distancePixels
-    ?? (canvas?.dimensions?.size / (canvas?.grid?.distance || 1))
-    ?? 100;
+  const px = canvas?.dimensions?.distancePixels
+    ?? (canvas?.dimensions?.size / (canvas?.grid?.distance || 1));
+  // ?? doesn't catch NaN (size undefined / 1 → NaN) — guard explicitly
+  return Number.isFinite(px) && px > 0 ? px : 100;
 }
 
 /**
@@ -90,9 +103,11 @@ export function blastRegionData({
   flags = {}
 } = {}) {
   const half = Math.max(fullRadius, halfRadius);
+  // No elevation field: Region elevation is a finite NumberField where null
+  // (the schema default) means unbounded — ±Infinity fails validation and
+  // would reject the whole createEmbeddedDocuments call.
   const base = {
     color: "#cc3300",
-    elevation: { bottom: -Infinity, top: Infinity },
     flags: { srx: { ...flags, aoe: true, band: "half", fullRadius, halfRadius } }
   };
   const regions = [
@@ -122,7 +137,7 @@ export async function placeBlastRegions(opts) {
   const scene = canvas?.scene;
   if (!scene) throw new Error("No active scene");
   const data = blastRegionData(opts);
-  return scene.createEmbeddedDocuments("Region", data);
+  return createRegions(scene, data);
 }
 
 /**
@@ -156,7 +171,7 @@ export async function placeConeRegion({
 } = {}) {
   const scene = canvas?.scene;
   if (!scene) throw new Error("No active scene");
-  return scene.createEmbeddedDocuments("Region", [{
+  return createRegions(scene, [{
     name: `${name} (${rangeMeters}m cone)`,
     color: "#ddaa00",
     shapes: [conePolygonShape(originPx, facingCompassDeg, rangeMeters)],
@@ -170,6 +185,23 @@ export async function placeConeRegion({
       }
     }
   }]);
+}
+
+/**
+ * Delete all SRX AOE regions (blast bands + cones) from the active scene.
+ * Called at end of Combat Turn and when a combat is deleted so scenes don't
+ * accumulate stale templates. GM client only (no-op otherwise).
+ */
+export async function cleanupAoeRegions() {
+  const scene = canvas?.scene;
+  if (!scene || !game.user.isGM) return;
+  const stale = scene.regions
+    .filter((r) => r.flags?.srx?.aoe)
+    .map((r) => r.id);
+  if (stale.length) {
+    await scene.deleteEmbeddedDocuments("Region", stale).catch((err) =>
+      console.warn("SRX | AOE region cleanup", err));
+  }
 }
 
 /**

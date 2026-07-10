@@ -6,12 +6,22 @@ import { canTakeAction, freshActionEconomy, spendAction } from "../rules/combat.
 
 /**
  * Find the combatant for an actor in the active combat.
+ * Matches by token first: synthetic actors of unlinked tokens share the base
+ * actor's id, so actor-id matching alone picks the wrong combatant whenever
+ * two unlinked tokens come from the same base actor.
  * @param {Actor} actor
  * @returns {Combatant|null}
  */
 export function combatantForActor(actor) {
   const combat = game.combat;
   if (!combat || !actor) return null;
+  const tokenId = actor.token?.id
+    ?? actor.getActiveTokens?.(true, true)?.[0]?.id
+    ?? null;
+  if (tokenId) {
+    const byToken = combat.combatants.find((c) => c.tokenId === tokenId);
+    if (byToken) return byToken;
+  }
   return combat.combatants.find((c) => c.actorId === actor.id) ?? null;
 }
 
@@ -109,9 +119,16 @@ export function firedLastPhase(combatant) {
  * On phase start: clear Full Defense, promote firedThisPhasePending → firedLastPhase
  * (recoil for firearms next phase), reset action economy.
  * @param {Combatant} combatant
+ * @param {string} [phaseKey] - when given, the same phase is processed at most
+ *   once (several Combat updates can land on one phase; the fired-pending
+ *   promotion is not idempotent, so a re-run would erase recoil state).
  */
-export async function onActionPhaseStart(combatant) {
+export async function onActionPhaseStart(combatant, phaseKey) {
   if (!combatant) return;
+  if (phaseKey) {
+    if (combatant.getFlag("srx", "lastPhaseStart") === phaseKey) return;
+    await combatant.setFlag("srx", "lastPhaseStart", phaseKey);
+  }
   const actor = combatant.actor;
   if (actor) await clearFullDefense(actor);
 
