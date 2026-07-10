@@ -16,6 +16,7 @@
   height: 64px;
   object-fit: cover;
   border: 1px solid var(--color-border, #888);
+  border-radius: 6px;
   cursor: pointer;
   flex: 0 0 auto;
 }
@@ -63,11 +64,12 @@
 }
 .srx .play-identity { align-items: center; }
 .srx .identity-tag {
-  padding: 1px 8px;
-  border: 1px solid var(--color-border, #888);
+  padding: 1px 9px;
+  border: 1px solid var(--color-border, #88888888);
   border-radius: 10px;
   font-size: 0.95em;
   opacity: 0.85;
+  background: rgba(140, 140, 140, 0.08);
 }
 .srx .play-identity .nuyen { margin-left: auto; }
 .srx .bio-identity { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
@@ -76,15 +78,15 @@
 .srx .chrome-strip {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 8px 20px;
-  padding: 6px 8px;
-  margin-bottom: 6px;
+  align-items: center;
+  gap: 6px 24px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
   border: 1px solid var(--color-border, #88888855);
   border-radius: 6px;
-  background: #00000012;
+  background: rgba(140, 140, 140, 0.06);
 }
-.srx .chrome-monitors { display: flex; flex-wrap: wrap; gap: 4px 20px; flex: 1; }
+.srx .chrome-monitors { display: flex; flex-wrap: wrap; gap: 4px 28px; flex: 1; }
 .srx .chrome-strip .monitor { margin: 0; }
 .srx .chrome-edge { display: flex; align-items: center; gap: 6px; padding-top: 2px; }
 .srx .chrome-edge .edge-label {
@@ -122,7 +124,7 @@
 .srx .main-grid {
   display: grid;
   grid-template-columns: 300px 1fr;
-  gap: 14px;
+  gap: 20px;
 }
 .srx .col h3,
 .srx .magic-panel h3,
@@ -136,17 +138,24 @@
   font-size: 0.9em;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin: 10px 0 4px;
+  margin: 16px 0 6px;
 }
+.srx .col > h3:first-child,
+.srx .magic-panel > h3:first-child { margin-top: 2px; }
 
 .srx .attribute-row {
   display: grid;
   grid-template-columns: 1fr 56px 40px;
   align-items: center;
   gap: 6px;
-  padding: 1px 0;
+  padding: 2px 6px;
+  border-radius: 4px;
 }
-.srx .attribute-row .aug { opacity: 0.75; font-variant-numeric: tabular-nums; }
+/* Same subtle striping as the skills table so the two lists read as one
+   family (neutral alpha works in both light and dark themes) */
+.srx .attributes-col div.attribute-row:nth-of-type(odd) { background: rgba(140, 140, 140, 0.08); }
+.srx .attribute-row:hover { background: rgba(140, 140, 140, 0.16); }
+.srx .attribute-row .aug { opacity: 0.75; font-variant-numeric: tabular-nums; text-align: right; }
 
 /* Play cockpit: no base inputs — the augmented value IS the number */
 .srx .mode-play .attribute-row { grid-template-columns: 1fr 44px; }
@@ -156,7 +165,7 @@
   font-size: 1.15em;
   text-align: right;
 }
-.srx .mode-play .attribute-row .rollable { font-weight: 600; }
+.srx .mode-play .attribute-row .rollable { font-weight: 600; letter-spacing: 0.04em; }
 .srx .mode-play .skills-table .pool { font-size: 1.05em; }
 
 .srx .rollable { cursor: pointer; }
@@ -178,15 +187,20 @@
 .srx .derived-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
+  gap: 8px;
 }
 .srx .derived-stat {
   text-align: center;
-  border: 1px solid var(--color-border, #888);
-  border-radius: 4px;
-  padding: 4px 2px;
+  border: 1px solid var(--color-border, #88888866);
+  border-radius: 6px;
+  padding: 6px 2px 4px;
+  background: rgba(140, 140, 140, 0.07);
 }
-.srx .derived-stat b { display: block; font-size: 1.2em; font-variant-numeric: tabular-nums; }
+.srx .derived-stat:has(.rollable):hover {
+  border-color: var(--color-warm-2, #b8342c);
+  background: rgba(140, 140, 140, 0.14);
+}
+.srx .derived-stat b { display: block; font-size: 1.25em; font-variant-numeric: tabular-nums; line-height: 1.2; }
 .srx .derived-stat span { font-size: 0.65em; text-transform: uppercase; letter-spacing: 0.04em; opacity: 0.8; }
 
 /* ---------- Monitors ---------- */
@@ -222,7 +236,7 @@
 /* ---------- Skills ---------- */
 .srx .skills-table { width: 100%; border-collapse: collapse; font-size: 0.88em; }
 .srx .skills-table th { text-align: left; font-size: 0.75em; text-transform: uppercase; opacity: 0.7; }
-.srx .skills-table td { padding: 1px 4px 1px 0; }
+.srx .skills-table td { padding: 2px 6px 2px 4px; }
 .srx .skills-table input { width: 46px; }
 .srx .skills-table .linked { font-size: 0.72em; opacity: 0.6; }
 .srx .skills-table .linked.alt { opacity: 0.85; }
@@ -230,13 +244,18 @@
 .srx .derived-mods {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 10px;
+  gap: 4px 12px;
   align-items: center;
   font-size: 0.72em;
-  margin-top: 4px;
+  margin-top: 6px;
   opacity: 0.9;
 }
-.srx .derived-mods .mods-label { text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.7; }
+.srx .derived-mods .mods-label {
+  flex-basis: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+}
 .srx .derived-mods label { display: flex; align-items: center; gap: 3px; }
 .srx .derived-mods input { width: 40px; }
 .srx .skills-table .pool { text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
@@ -247,22 +266,42 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 2px 0;
+  padding: 3px 2px;
   border-bottom: 1px dotted var(--color-border, #66666655);
 }
+.srx .item-list li:hover { background: rgba(140, 140, 140, 0.07); }
 .srx .item-list .item-name { cursor: pointer; font-weight: 600; }
 .srx .item-list .summary { flex: 1; font-size: 0.82em; opacity: 0.75; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .srx .item-list .category, .srx .item-list .qty, .srx .item-list .rating { font-size: 0.8em; opacity: 0.8; }
+/* Action chips and secondary facts sit on the right edge for scanability */
+.srx .item-list .modes { margin-left: auto; display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-end; }
+.srx .item-list.armor .rating { margin-left: auto; }
 .srx .item-control { cursor: pointer; opacity: 0.6; }
 .srx .item-control:hover { opacity: 1; }
 .srx .item-list .equip { opacity: 0.35; cursor: pointer; }
 .srx .item-list .equip.equipped { opacity: 1; color: var(--color-warm-2, #b8342c); }
 .srx .item-list .mode {
   border: 1px solid var(--color-border, #888);
-  border-radius: 3px;
-  padding: 0 6px;
+  border-radius: 10px;
+  padding: 1px 9px;
   font-size: 0.8em;
-  margin-right: 2px;
+  white-space: nowrap;
+}
+.srx .item-list .mode:hover {
+  border-color: var(--color-warm-2, #b8342c);
+  background: rgba(140, 140, 140, 0.12);
+}
+/* Cast is an intent chip, same family as weapon mode buttons */
+.srx .item-list a[data-action="castSpell"] {
+  border: 1px solid var(--color-border, #888);
+  border-radius: 10px;
+  padding: 1px 9px;
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+.srx .item-list a[data-action="castSpell"]:hover {
+  border-color: var(--color-warm-2, #b8342c);
+  background: rgba(140, 140, 140, 0.12);
 }
 
 /* ---------- Bio ---------- */
@@ -345,6 +384,17 @@
   margin-left: 6px; font-size: 0.85em; opacity: 0.8;
 }
 .srx.chat-card .summary { font-style: italic; opacity: 0.85; }
+
+/* ---------- Magic tab ---------- */
+.srx .magic-panel > .detail { margin: 2px 0 8px; opacity: 0.85; }
+.srx .magic-actions { gap: 6px; margin: 4px 0 10px; }
+.srx .magic-actions button {
+  font-size: 0.82em;
+  padding: 3px 12px;
+  height: auto;
+  width: auto;
+  white-space: nowrap;
+}
 
 /* ---------- Vision tags ---------- */
 .srx .vision-tags {
