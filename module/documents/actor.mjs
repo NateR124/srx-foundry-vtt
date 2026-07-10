@@ -6,6 +6,7 @@ import { evaluateDv } from "../rules/formulas.mjs";
 import { postAttackOutcome } from "../combat/pipeline.mjs";
 import { rollAoeAttack } from "../combat/aoe.mjs";
 import { isAoeMode } from "../rules/aoe.mjs";
+import { resolveDefenderCover } from "../canvas/cover.mjs";
 import {
   combatantForActor,
   firedLastPhase,
@@ -174,6 +175,13 @@ export class SrxActor extends foundry.documents.Actor {
       { label: game.i18n.localize("SRX.Item.accuracy"), value: mode.acc || 0 }
     ];
 
+    let coverDefault = "none";
+    try {
+      if (defender) coverDefault = resolveDefenderCover(defender, this);
+    } catch (_e) {
+      coverDefault = "none";
+    }
+
     const config = await promptAttackConfig({
       title: `${item.name}${mode.name ? ` (${mode.name})` : ""}`,
       parts,
@@ -181,7 +189,8 @@ export class SrxActor extends foundry.documents.Actor {
       defaults: {
         recoil: isFirearm && firedLastPhase(combatant),
         fullDefense: defender ? hasFullDefense(defender) : false,
-        inMeleeRanged: false
+        inMeleeRanged: false,
+        cover: coverDefault
       }
     });
     if (!config) return null;
@@ -198,10 +207,11 @@ export class SrxActor extends foundry.documents.Actor {
       if (cc?.bonus) threshold += cc.bonus;
     }
 
-    const dv = evaluateDv(mode.dv, {
+    let dv = evaluateDv(mode.dv, {
       bod: this.system.attributes.bod.value,
       agi: this.system.attributes.agi.value
     }, { min: mode.dvMin, max: mode.dvMax });
+    if (config.combat?.dvMod) dv += config.combat.dvMod;
 
     const msg = await this.#rollPoolFromConfig({
       title: `${item.name}${mode.name ? ` (${mode.name})` : ""}`,
@@ -213,7 +223,8 @@ export class SrxActor extends foundry.documents.Actor {
         element: mode.element,
         fireMode: mode.fireMode,
         action: mode.action,
-        combatNotes: config.combat?.notes
+        combatNotes: config.combat?.notes,
+        calledShot: config.combat?.calledShot
       }
     });
 

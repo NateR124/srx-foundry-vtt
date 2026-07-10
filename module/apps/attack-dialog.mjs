@@ -38,6 +38,15 @@ export async function promptAttackConfig({
         <div class="form-group"><label><input type="checkbox" name="recoil" ${checked("recoil")}> ${game.i18n.localize("SRX.Combat.recoil")}</label></div>
         <div class="form-group"><label><input type="checkbox" name="takeAim" ${checked("takeAim")}> ${game.i18n.localize("SRX.Combat.takeAim")}</label></div>
         <div class="form-group">
+          <label>${game.i18n.localize("SRX.Combat.calledShot")}</label>
+          <select name="calledShot">
+            <option value="none">${game.i18n.localize("SRX.Combat.calledNone")}</option>
+            <option value="vitals">${game.i18n.localize("SRX.Combat.calledVitals")}</option>
+            <option value="limb">${game.i18n.localize("SRX.Combat.calledLimb")}</option>
+            <option value="weapon">${game.i18n.localize("SRX.Combat.calledWeapon")}</option>
+          </select>
+        </div>
+        <div class="form-group">
           <label>${game.i18n.localize("SRX.Combat.visibility")}</label>
           <select name="visibility">
             <option value="none">${game.i18n.localize("SRX.Combat.visNone")}</option>
@@ -53,10 +62,10 @@ export async function promptAttackConfig({
         <div class="form-group">
           <label>${game.i18n.localize("SRX.Combat.cover")}</label>
           <select name="cover">
-            <option value="none">${game.i18n.localize("SRX.Combat.coverNone")}</option>
-            <option value="partial">${game.i18n.localize("SRX.Combat.coverPartial")}</option>
-            <option value="good">${game.i18n.localize("SRX.Combat.coverGood")}</option>
-            <option value="total">${game.i18n.localize("SRX.Combat.coverTotal")}</option>
+            <option value="none" ${defaults.cover === "none" || !defaults.cover ? "selected" : ""}>${game.i18n.localize("SRX.Combat.coverNone")}</option>
+            <option value="partial" ${defaults.cover === "partial" ? "selected" : ""}>${game.i18n.localize("SRX.Combat.coverPartial")}</option>
+            <option value="good" ${defaults.cover === "good" ? "selected" : ""}>${game.i18n.localize("SRX.Combat.coverGood")}</option>
+            <option value="total" ${defaults.cover === "total" ? "selected" : ""}>${game.i18n.localize("SRX.Combat.coverTotal")}</option>
           </select>
         </div>
         <div class="form-group"><label><input type="checkbox" name="prone"> ${game.i18n.localize("SRX.Combat.prone")}</label></div>
@@ -111,6 +120,7 @@ export async function promptAttackConfig({
             unseen: el.unseen.checked,
             recoil: el.recoil.checked,
             takeAim: el.takeAim.checked,
+            calledShot: el.calledShot?.value ?? "none",
             visibility: el.visibility.value,
             visibilityMitigated: el.visibilityMitigated.checked,
             cover: el.cover.value,
@@ -138,6 +148,7 @@ export async function promptAttackConfig({
     unseen: result.unseen,
     recoil: result.recoil,
     takeAim: result.takeAim,
+    calledShot: result.calledShot,
     visibility: result.visibility,
     visibilityMitigated: result.visibilityMitigated,
     extraHitMods: result.hitMods,
@@ -206,7 +217,9 @@ export async function promptAttackConfig({
       prone: result.prone,
       notes: composed.notes,
       recoil: result.recoil,
-      takeAim: result.takeAim
+      takeAim: result.takeAim,
+      calledShot: result.calledShot,
+      dvMod: composed.dvMod || 0
     }
   };
 }

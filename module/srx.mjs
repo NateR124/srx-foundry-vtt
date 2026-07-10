@@ -21,6 +21,9 @@ import { registerHealingHooks } from "./combat/healing.mjs";
 import { registerTimedHooks } from "./time/scheduler.mjs";
 import { registerSocket } from "./net/socket.mjs";
 import * as aoeRules from "./rules/aoe.mjs";
+import * as coverRules from "./rules/cover.mjs";
+import * as effectRules from "./rules/effects.mjs";
+import { startSuppressiveFire } from "./combat/suppress.mjs";
 import { SRXRoll } from "./dice/srx-roll.mjs";
 import { SrxCharacterSheet } from "./apps/actor-sheet.mjs";
 import { SrxThreatSheet } from "./apps/threat-sheet.mjs";
@@ -43,7 +46,17 @@ Hooks.once("init", () => {
   console.log("SRX | Initializing Shadowrun Edition X system");
 
   CONFIG.SRX = SRX;
-  game.srx = { SRXRoll, rules, derived, combatRules, aoe: aoeRules, openCatalogImport };
+  game.srx = {
+    SRXRoll,
+    rules,
+    derived,
+    combatRules,
+    aoe: aoeRules,
+    cover: coverRules,
+    effects: effectRules,
+    startSuppressiveFire,
+    openCatalogImport
+  };
 
   // Documents
   CONFIG.Actor.documentClass = SrxActor;

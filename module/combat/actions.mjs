@@ -120,6 +120,15 @@ export async function onActionPhaseStart(combatant) {
   await combatant.setFlag("srx", "firedLastPhase", prevFired);
   await combatant.setFlag("srx", "firedThisPhasePending", false);
   await combatant.setFlag("srx", "actionEconomy", freshActionEconomy());
+
+  // Suppressive fire: firer's zone expires; others check zone at phase start
+  try {
+    const { clearSuppressOnPhaseStart, checkSuppressPhaseStart } = await import("./suppress.mjs");
+    await clearSuppressOnPhaseStart(combatant);
+    if (actor) await checkSuppressPhaseStart(actor);
+  } catch (err) {
+    console.warn("SRX | suppress phase start", err);
+  }
 }
 
 /**

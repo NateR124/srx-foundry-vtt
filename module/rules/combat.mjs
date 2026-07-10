@@ -2,6 +2,8 @@
  * Pure SRX combat math (pp. 112–136). No Foundry imports — unit-tested.
  */
 
+import { calledShotModifiers } from "./called-shot.mjs";
+
 /**
  * Attack hits vs Defense Score: ties favor the attacker (p. 120).
  * @returns {{ hit: boolean, netHits: number }}
@@ -228,9 +230,10 @@ export function coverDefenseBonus(cover = "none", { prone = false } = {}) {
  * @param {boolean} [opts.takeAim]
  * @param {"none"|"medium"|"heavy"} [opts.visibility]
  * @param {boolean} [opts.visibilityMitigated]
+ * @param {"none"|"vitals"|"limb"|"weapon"|"device"} [opts.calledShot]
  * @param {number} [opts.extraHitMods]
  * @param {number} [opts.extraDice]
- * @returns {{ leverage: boolean, liability: boolean, hitMods: number, diceMod: number, notes: string[] }}
+ * @returns {{ leverage: boolean, liability: boolean, hitMods: number, diceMod: number, dvMod: number, notes: string[] }}
  */
 export function composeAttackModifiers(opts = {}) {
   const notes = [];
@@ -238,6 +241,7 @@ export function composeAttackModifiers(opts = {}) {
   let leverage = !!opts.leverage;
   let hitMods = Number(opts.extraHitMods) || 0;
   let diceMod = Number(opts.extraDice) || 0;
+  let dvMod = 0;
 
   if (opts.offHand) {
     liability = true;
@@ -270,12 +274,20 @@ export function composeAttackModifiers(opts = {}) {
     notes.push(`visibility ${vis.hitMod} hit`);
   }
 
+  if (opts.calledShot && opts.calledShot !== "none") {
+    const cs = calledShotModifiers(opts.calledShot);
+    if (cs.liability) liability = true;
+    hitMods += cs.hitMod;
+    dvMod += cs.dvMod;
+    notes.push(...cs.notes);
+  }
+
   // Leverage + Liability cancel (p. 8) unless only one remains
   if (leverage && liability) {
     notes.push("Leverage/Liability cancel");
   }
 
-  return { leverage, liability, hitMods, diceMod, notes };
+  return { leverage, liability, hitMods, diceMod, dvMod, notes };
 }
 
 /**
