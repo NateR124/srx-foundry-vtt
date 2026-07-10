@@ -192,3 +192,111 @@ export function visibilityAttackMod(worst = "none", mitigated = false) {
   if (tier === "medium") return { hitMod: -1, liability: false };
   return { hitMod: 0, liability: false };
 }
+
+/**
+ * Cover bonus to defender's Defense Score (pp. 122–123).
+ * @param {"none"|"partial"|"good"|"total"} cover
+ * @param {{ prone?: boolean }} [opts] - Prone grants Partial vs ranged (does not stack with Partial)
+ */
+export function coverDefenseBonus(cover = "none", { prone = false } = {}) {
+  let c = cover;
+  if (prone && (c === "none" || c === "partial")) c = "partial";
+  switch (c) {
+    case "partial":
+      return 1;
+    case "good":
+      return 2;
+    case "total":
+      return 2; // still +2 DS if somehow attackable; untargetable is a separate flag
+    default:
+      return 0;
+  }
+}
+
+/**
+ * Compose attack-side modifiers from the combat dialog (pp. 120–122).
+ * Liability sources stack as boolean OR (then cancel with Leverage per resolveTn).
+ * Hit mods sum (recoil −1, visibility medium −1, take aim +1, etc.).
+ *
+ * @param {object} opts
+ * @param {boolean} [opts.leverage]
+ * @param {boolean} [opts.liability]
+ * @param {boolean} [opts.offHand]
+ * @param {boolean} [opts.inMeleeRanged]
+ * @param {boolean} [opts.unseen]
+ * @param {boolean} [opts.recoil]
+ * @param {boolean} [opts.takeAim]
+ * @param {"none"|"medium"|"heavy"} [opts.visibility]
+ * @param {boolean} [opts.visibilityMitigated]
+ * @param {number} [opts.extraHitMods]
+ * @param {number} [opts.extraDice]
+ * @returns {{ leverage: boolean, liability: boolean, hitMods: number, diceMod: number, notes: string[] }}
+ */
+export function composeAttackModifiers(opts = {}) {
+  const notes = [];
+  let liability = !!opts.liability;
+  let leverage = !!opts.leverage;
+  let hitMods = Number(opts.extraHitMods) || 0;
+  let diceMod = Number(opts.extraDice) || 0;
+
+  if (opts.offHand) {
+    liability = true;
+    notes.push("off-hand");
+  }
+  if (opts.inMeleeRanged) {
+    liability = true;
+    notes.push("ranged in melee");
+  }
+  if (opts.unseen) {
+    leverage = true;
+    notes.push("unseen");
+  }
+  if (opts.recoil) {
+    hitMods -= 1;
+    notes.push("recoil −1 hit");
+  }
+  if (opts.takeAim) {
+    hitMods += 1;
+    notes.push("take aim +1 hit");
+  }
+
+  const vis = visibilityAttackMod(opts.visibility ?? "none", !!opts.visibilityMitigated);
+  if (vis.liability) {
+    liability = true;
+    notes.push("visibility heavy");
+  }
+  if (vis.hitMod) {
+    hitMods += vis.hitMod;
+    notes.push(`visibility ${vis.hitMod} hit`);
+  }
+
+  // Leverage + Liability cancel (p. 8) unless only one remains
+  if (leverage && liability) {
+    notes.push("Leverage/Liability cancel");
+  }
+
+  return { leverage, liability, hitMods, diceMod, notes };
+}
+
+/**
+ * Effective Defense Score with cover, Full Defense, Close Call, size, etc.
+ * @param {number} baseDs
+ * @param {object} [opts]
+ * @param {"none"|"partial"|"good"|"total"} [opts.cover]
+ * @param {boolean} [opts.prone]
+ * @param {boolean} [opts.fullDefense]
+ * @param {number} [opts.closeCallBonus]
+ * @param {number} [opts.sizeMod] - +1 small / −1 large
+ * @param {boolean} [opts.immobilized] - DS = 1 (cover still applies per book for Immobilized)
+ */
+export function effectiveDefenseScore(baseDs, opts = {}) {
+  let ds = Math.max(1, Number(baseDs) || 1);
+  if (opts.immobilized) {
+    ds = 1;
+  }
+  ds += coverDefenseBonus(opts.cover ?? "none", { prone: !!opts.prone });
+  if (opts.fullDefense) ds += 2;
+  if (opts.closeCallBonus) ds += Number(opts.closeCallBonus) || 0;
+  if (opts.sizeMod) ds += Number(opts.sizeMod) || 0;
+  return Math.max(1, ds);
+}

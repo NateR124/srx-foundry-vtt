@@ -8,7 +8,8 @@
  *  4. Hard cap 4 passes, then new Combat Turn (re-roll)
  */
 
-import { lateJoinerInitiative, sortCombatants, freshActionEconomy } from "../rules/combat.mjs";
+import { lateJoinerInitiative, freshActionEconomy } from "../rules/combat.mjs";
+import { onActionPhaseEnd } from "./actions.mjs";
 
 /**
  * @extends {Combatant}
@@ -125,10 +126,11 @@ export class SrxCombat extends Combat {
     const turns = this.turns ?? [];
     const currentTurn = this.turn ?? 0;
 
-    // Mark current combatant as having acted
+    // Mark current combatant as having acted; end-of-phase bookkeeping
     const current = turns[currentTurn];
     if (current) {
       await current.setFlag("srx", "actedThisPass", true);
+      await onActionPhaseEnd(current);
       await current.setFlag("srx", "actionEconomy", freshActionEconomy());
     }
 

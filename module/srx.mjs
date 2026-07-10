@@ -14,6 +14,7 @@ import { SrxItem } from "./documents/item.mjs";
 import { SrxCombat, SrxCombatant, registerCombatHooks } from "./combat/combat.mjs";
 import { registerStatusEffects } from "./combat/statuses.mjs";
 import { registerPipelineHooks } from "./combat/pipeline.mjs";
+import { registerTrackerHooks } from "./combat/tracker.mjs";
 import { registerSocket } from "./net/socket.mjs";
 import { SRXRoll } from "./dice/srx-roll.mjs";
 import { SrxCharacterSheet } from "./apps/actor-sheet.mjs";
@@ -96,6 +97,7 @@ Hooks.once("ready", () => {
   registerSocket();
   registerCombatHooks();
   registerPipelineHooks();
+  registerTrackerHooks();
   console.log("SRX | Ready (M2 combat pipeline active)");
 });
 

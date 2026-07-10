@@ -11,9 +11,13 @@ import {
   canTakeAction,
   spendAction,
   freshActionEconomy,
-  visibilityAttackMod
+  visibilityAttackMod,
+  coverDefenseBonus,
+  composeAttackModifiers,
+  effectiveDefenseScore
 } from "../module/rules/combat.mjs";
 import { resolveDamageApplication } from "../module/combat/damage.mjs";
+import { resolveTn } from "../module/rules/dice.mjs";
 
 describe("attack resolution", () => {
   it("ties favor the attacker", () => {
@@ -121,6 +125,77 @@ describe("visibility mods", () => {
     expect(visibilityAttackMod("heavy", false)).toEqual({ hitMod: 0, liability: true });
     expect(visibilityAttackMod("heavy", true)).toEqual({ hitMod: -1, liability: false });
     expect(visibilityAttackMod("medium", true)).toEqual({ hitMod: 0, liability: false });
+  });
+});
+
+describe("cover defense bonus", () => {
+  it("maps cover tiers", () => {
+    expect(coverDefenseBonus("none")).toBe(0);
+    expect(coverDefenseBonus("partial")).toBe(1);
+    expect(coverDefenseBonus("good")).toBe(2);
+    expect(coverDefenseBonus("total")).toBe(2);
+  });
+
+  it("prone grants partial vs ranged without stacking above partial", () => {
+    expect(coverDefenseBonus("none", { prone: true })).toBe(1);
+    expect(coverDefenseBonus("partial", { prone: true })).toBe(1);
+    expect(coverDefenseBonus("good", { prone: true })).toBe(2);
+  });
+});
+
+describe("composeAttackModifiers", () => {
+  it("stacks recoil and take aim hit mods", () => {
+    const r = composeAttackModifiers({ recoil: true, takeAim: true });
+    expect(r.hitMods).toBe(0); // −1 + 1
+    expect(r.notes).toEqual(expect.arrayContaining(["recoil −1 hit", "take aim +1 hit"]));
+  });
+
+  it("off-hand and ranged-in-melee set liability", () => {
+    const r = composeAttackModifiers({ offHand: true });
+    expect(r.liability).toBe(true);
+    expect(resolveTn({ leverage: r.leverage, liability: r.liability })).toBe(6);
+  });
+
+  it("unseen sets leverage; cancels with liability for TN 5", () => {
+    const r = composeAttackModifiers({ unseen: true, offHand: true });
+    expect(r.leverage).toBe(true);
+    expect(r.liability).toBe(true);
+    expect(resolveTn({ leverage: r.leverage, liability: r.liability })).toBe(5);
+    expect(r.notes).toContain("Leverage/Liability cancel");
+  });
+
+  it("applies medium visibility hit mod and heavy liability", () => {
+    expect(composeAttackModifiers({ visibility: "medium" }).hitMods).toBe(-1);
+    const heavy = composeAttackModifiers({ visibility: "heavy" });
+    expect(heavy.liability).toBe(true);
+    expect(heavy.hitMods).toBe(0);
+    const mitigated = composeAttackModifiers({ visibility: "heavy", visibilityMitigated: true });
+    expect(mitigated.liability).toBe(false);
+    expect(mitigated.hitMods).toBe(-1);
+  });
+
+  it("adds extraHitMods and extraDice", () => {
+    const r = composeAttackModifiers({ extraHitMods: 2, extraDice: -1, recoil: true });
+    expect(r.hitMods).toBe(1); // 2 − 1
+    expect(r.diceMod).toBe(-1);
+  });
+});
+
+describe("effectiveDefenseScore", () => {
+  it("adds cover and Full Defense", () => {
+    expect(effectiveDefenseScore(5, { cover: "good", fullDefense: true })).toBe(9); // 5+2+2
+  });
+
+  it("immobilized sets base to 1 then cover", () => {
+    expect(effectiveDefenseScore(8, { immobilized: true, cover: "partial" })).toBe(2);
+  });
+
+  it("applies close call and size mods", () => {
+    expect(effectiveDefenseScore(4, { closeCallBonus: 2, sizeMod: 1 })).toBe(7);
+  });
+
+  it("never drops below 1", () => {
+    expect(effectiveDefenseScore(0, { sizeMod: -5 })).toBe(1);
   });
 });
 

@@ -1,8 +1,16 @@
 import { SRX } from "../config.mjs";
 import { SRXRoll } from "../dice/srx-roll.mjs";
 import { promptRollConfig } from "../apps/roll-dialog.mjs";
+import { promptAttackConfig } from "../apps/attack-dialog.mjs";
 import { evaluateDv } from "../rules/formulas.mjs";
 import { postAttackOutcome } from "../combat/pipeline.mjs";
+import {
+  combatantForActor,
+  firedLastPhase,
+  hasFullDefense,
+  markFiredFirearm,
+  spendCombatantAction
+} from "../combat/actions.mjs";
 
 export class SrxActor extends foundry.documents.Actor {
   /** @override — flat keys for roll formulas (initiative: (@qui)d6 + @accel). */
@@ -125,9 +133,8 @@ export class SrxActor extends foundry.documents.Actor {
   }
 
   /**
-   * Weapon attack: skill + AGI + mode accuracy, threshold = target's Defense
-   * Score when exactly one token is targeted (tie = hit, p. 120).
-   * On a hit, posts an attack-outcome card with Resist / Apply buttons.
+   * Weapon attack: skill + AGI + mode accuracy + combat modifiers dialog.
+   * Threshold = target DS (ties hit). On hit → attack-outcome card.
    */
   async rollWeaponAttack(item, modeIndex = 0) {
     if (item.type !== "weapon") return null;
@@ -138,16 +145,51 @@ export class SrxActor extends foundry.documents.Actor {
     const skill = this.system.skills[item.system.skill];
     const attrKey = def?.linked ?? "agi";
     const attr = this.system.attributes[attrKey];
+    const isFirearm = item.system.skill === "firearms";
+    const isRanged = isFirearm || item.system.skill === "projectileWeapons";
 
     let defender = null;
-    let threshold = null;
     const targets = [...(game.user?.targets ?? [])];
-    if (targets.length === 1) {
-      defender = targets[0].actor;
-      threshold = defender?.effectiveDefenseScore
-        ?? defender?.system?.derived?.defenseScore
-        ?? defender?.system?.defenseScore
-        ?? null;
+    if (targets.length === 1) defender = targets[0].actor;
+
+    const combatant = combatantForActor(this);
+    const actionCost = /complex/i.test(mode.action || "") ? "complex" : "major";
+
+    const baseDs = defender
+      ? (defender.system?.derived?.defenseScore
+        ?? defender.system?.defenseScore
+        ?? 1)
+      : null;
+    // Close Call is layered into threshold after the dialog
+
+    const parts = [
+      { label: this.#label(SRX.attributes[attrKey]?.label ?? "SRX.Attribute.agi"), value: attr?.value ?? 0 },
+      { label: this.#label(def?.label ?? "SRX.Skill.firearms"), value: skill?.value ?? 0 },
+      { label: game.i18n.localize("SRX.Item.accuracy"), value: mode.acc || 0 }
+    ];
+
+    const config = await promptAttackConfig({
+      title: `${item.name}${mode.name ? ` (${mode.name})` : ""}`,
+      parts,
+      baseDefenseScore: baseDs,
+      defaults: {
+        recoil: isFirearm && firedLastPhase(combatant),
+        fullDefense: defender ? hasFullDefense(defender) : false,
+        inMeleeRanged: false
+      }
+    });
+    if (!config) return null;
+
+    // Spend action only after the player confirms the attack (soft-fail if already spent)
+    if (combatant) {
+      await spendCombatantAction(combatant, actionCost);
+    }
+
+    // Merge Close Call into threshold
+    let threshold = config.threshold;
+    if (threshold != null && defender) {
+      const cc = defender.getFlag?.("srx", "closeCall");
+      if (cc?.bonus) threshold += cc.bonus;
     }
 
     const dv = evaluateDv(mode.dv, {
@@ -155,28 +197,24 @@ export class SrxActor extends foundry.documents.Actor {
       agi: this.system.attributes.agi.value
     }, { min: mode.dvMin, max: mode.dvMax });
 
-    const msg = await this.#rollPool({
+    const msg = await this.#rollPoolFromConfig({
       title: `${item.name}${mode.name ? ` (${mode.name})` : ""}`,
-      parts: [
-        { label: this.#label(SRX.attributes[attrKey]?.label ?? "SRX.Attribute.agi"), value: attr?.value ?? 0 },
-        { label: this.#label(def?.label ?? "SRX.Skill.firearms"), value: skill?.value ?? 0 },
-        { label: game.i18n.localize("SRX.Item.accuracy"), value: mode.acc || 0 }
-      ],
-      threshold,
-      thresholdLabel: game.i18n.localize("SRX.Roll.targetDefense"),
+      config: { ...config, threshold },
+      flavor: `${item.name}${mode.name ? ` (${mode.name})` : ""}`,
       extraContext: {
         dv,
         dvType: mode.dvType,
         element: mode.element,
         fireMode: mode.fireMode,
-        action: mode.action
+        action: mode.action,
+        combatNotes: config.combat?.notes
       }
     });
 
-    // Extract roll result from the chat message for the outcome card
+    if (isFirearm && combatant) await markFiredFirearm(combatant);
+
     if (defender && msg?.rolls?.[0]) {
-      const roll = msg.rolls[0];
-      const result = roll.srx ?? null;
+      const result = msg.rolls[0].srx ?? null;
       if (result) {
         await postAttackOutcome({
           attacker: this,
@@ -187,11 +225,60 @@ export class SrxActor extends foundry.documents.Actor {
           baseDv: dv,
           dvType: mode.dvType || "P",
           element: mode.element || "",
-          aoe: /aoe/i.test(mode.name || "")
+          aoe: /aoe/i.test(mode.name || ""),
+          // Pass pre-composed threshold so Close Call isn't double-counted
+          defenseScoreOverride: threshold
         });
       }
     }
     return msg;
+  }
+
+  /** Roll using a pre-built config from promptRollConfig / promptAttackConfig. */
+  async #rollPoolFromConfig({ title, config, flavor = "", extraContext = {} }) {
+    const speaker = foundry.documents.ChatMessage.getSpeaker({ actor: this });
+
+    if (config.pool <= 0) {
+      return foundry.documents.ChatMessage.create({
+        speaker,
+        content: `<div class="srx chat-card roll-card"><header class="card-header"><h3>${foundry.utils.escapeHTML(title)}</h3></header><div class="threshold-row failure">${game.i18n.localize("SRX.Roll.autoFail")}</div></div>`
+      });
+    }
+
+    if (config.buyHits !== null && config.buyHits !== undefined) {
+      const content = await foundry.applications.handlebars.renderTemplate(
+        "systems/srx/templates/chat/buy-hits-card.hbs",
+        { title, pool: config.pool, hits: config.buyHits, threshold: config.threshold }
+      );
+      const msg = await foundry.documents.ChatMessage.create({ speaker, content });
+      msg.rolls = [{
+        srx: {
+          hits: config.buyHits,
+          tn: config.tn ?? 5,
+          baseHits: config.buyHits,
+          critBonus: 0,
+          hitMods: config.hitMods ?? 0,
+          isCrit: false,
+          isGlitch: false,
+          isCriticalGlitch: false,
+          threshold: config.threshold,
+          success: config.threshold != null ? config.buyHits >= config.threshold : null,
+          netHits: config.threshold != null ? config.buyHits - config.threshold : null
+        }
+      }];
+      return msg;
+    }
+
+    const roll = SRXRoll.fromPool({
+      pool: config.pool,
+      tn: config.tn,
+      hitMods: config.hitMods,
+      threshold: config.threshold,
+      flavor: flavor || title,
+      context: { parts: config.parts, actorName: this.name, ...extraContext }
+    });
+    await roll.evaluate();
+    return roll.toChat({ speaker });
   }
 
   /** Threat flat-pool attack against a targeted token. */

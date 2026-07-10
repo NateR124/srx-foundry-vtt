@@ -27,20 +27,20 @@ export async function postAttackOutcome({
   baseDv,
   dvType = "P",
   element = "",
-  aoe = false
+  aoe = false,
+  defenseScoreOverride = null
 } = {}) {
   if (!rollResult || !defender) return null;
 
-  // Close Call temporary DS bonus
-  let ds = defender.effectiveDefenseScore
-    ?? defender.system?.derived?.defenseScore
-    ?? defender.system?.defenseScore
-    ?? 1;
-  const cc = defender.getFlag?.("srx", "closeCall");
-  if (cc?.bonus) {
-    // Already in effectiveDefenseScore if character; ensure threat path too
-    ds = Math.max(ds, (defender.system?.derived?.defenseScore ?? defender.system?.defenseScore ?? 1) + (cc.bonus || 0));
+  // Prefer threshold already composed by the attack dialog (cover/FD/Close Call)
+  let ds = defenseScoreOverride;
+  if (ds == null) {
+    ds = defender.effectiveDefenseScore
+      ?? defender.system?.derived?.defenseScore
+      ?? defender.system?.defenseScore
+      ?? 1;
   }
+  const cc = defender.getFlag?.("srx", "closeCall");
 
   const { hit, netHits } = resolveAttackHit(rollResult.hits, ds);
   if (!hit) return null;
