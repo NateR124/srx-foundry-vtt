@@ -13,7 +13,13 @@ function descriptionSchema() {
 function costSchema() {
   return {
     cost: new fields.NumberField({ required: true, integer: true, min: 0, initial: 0, nullable: false }),
-    legality: new fields.StringField({ required: true, initial: "", choices: ["", "restricted", "illegal"] })
+    // blank = unrestricted (legal). blank:true required — Foundry rejects "" in choices otherwise.
+    legality: new fields.StringField({
+      required: true,
+      blank: true,
+      initial: "",
+      choices: ["", "restricted", "illegal"]
+    })
   };
 }
 
