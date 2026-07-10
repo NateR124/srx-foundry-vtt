@@ -4,6 +4,7 @@ export class SrxItem extends foundry.documents.Item {
     const actor = this.actor;
     if (!actor) return null;
     if (this.type === "weapon") return actor.rollWeaponAttack(this, modeIndex);
+    if (this.type === "spell") return actor.castSpell(this);
     // Other item types get chat descriptions for now (M1).
     return this.toChatCard();
   }

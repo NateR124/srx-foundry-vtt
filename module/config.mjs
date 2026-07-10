@@ -51,6 +51,15 @@ SRX.skills = {
 /** Combat skills whose attack tests target Defense Score. */
 SRX.weaponSkills = ["closeCombat", "firearms", "projectileWeapons"];
 
+/** Sorcery spell categories (p. 220). */
+SRX.spellCategories = ["combat", "detection", "health", "illusion", "manipulation"];
+
+/** Cast resolution patterns. */
+SRX.spellPatterns = ["direct", "ranged", "touch", "self", "area"];
+
+/** Duration classes (p. 219). */
+SRX.spellDurations = ["instantaneous", "sustained", "timed", "permanent"];
+
 /**
  * Metatypes (p. 12) — attribute modifiers, unaugmented maxima (p. 13),
  * vision, health modifier (both tracks), movement modifier, extras.

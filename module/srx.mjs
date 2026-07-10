@@ -7,8 +7,11 @@ import { SRX } from "./config.mjs";
 import { CharacterData } from "./data/actor-character.mjs";
 import { ThreatData } from "./data/actor-threat.mjs";
 import {
-  WeaponData, ArmorData, GearData, TalentData, TraitData, ContactData, KnowledgeData
+  WeaponData, ArmorData, GearData, TalentData, TraitData, ContactData, KnowledgeData, SpellData
 } from "./data/items.mjs";
+import * as magicRules from "./rules/magic.mjs";
+import { castSpell, registerMagicHooks } from "./magic/cast.mjs";
+import { registerSustainHooks } from "./magic/sustain.mjs";
 import { SrxActor } from "./documents/actor.mjs";
 import { SrxItem } from "./documents/item.mjs";
 import { SrxCombat, SrxCombatant, registerCombatHooks } from "./combat/combat.mjs";
@@ -57,6 +60,8 @@ Hooks.once("init", () => {
     effects: effectRules,
     startSuppressiveFire,
     automationLevel,
+    magic: magicRules,
+    castSpell,
     openCatalogImport
   };
 
@@ -76,6 +81,7 @@ Hooks.once("init", () => {
   CONFIG.Item.dataModels.trait = TraitData;
   CONFIG.Item.dataModels.contact = ContactData;
   CONFIG.Item.dataModels.knowledge = KnowledgeData;
+  CONFIG.Item.dataModels.spell = SpellData;
 
   // Dice
   CONFIG.Dice.rolls.push(SRXRoll);
@@ -123,8 +129,10 @@ Hooks.once("ready", () => {
   registerLifecycleChatHooks();
   registerAoeChatHooks();
   registerHealingHooks();
+  registerMagicHooks();
+  registerSustainHooks();
   registerTimedHooks();
-  console.log("SRX | Ready (M2 combat pipeline active)");
+  console.log("SRX | Ready (M2 combat + M4 magic cast/drain/sustain)");
 });
 
 /** Dice So Nice */

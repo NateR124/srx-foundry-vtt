@@ -109,6 +109,41 @@
       </div>
     {{/if}}
 
+    {{#if (srxEq type "spell")}}
+      <div class="form-row">
+        <label>{{localize "SRX.Magic.category"}}
+          <select name="system.category">
+            {{#each spellCategories}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+          </select>
+        </label>
+        <label>{{localize "SRX.Magic.pattern"}}
+          <select name="system.pattern">
+            {{#each spellPatterns}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.key}}</option>{{/each}}
+          </select>
+        </label>
+        <label>{{localize "SRX.Magic.duration"}}
+          <select name="system.duration">
+            {{#each spellDurations}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.key}}</option>{{/each}}
+          </select>
+        </label>
+      </div>
+      <div class="form-row">
+        <label>{{localize "SRX.Magic.resistanceAttr"}}<input type="text" name="system.resistanceAttr" value="{{system.resistanceAttr}}" placeholder="wil"></label>
+        <label>{{localize "SRX.Magic.dvFormula"}}<input type="text" name="system.dvFormula" value="{{system.dvFormula}}" placeholder="nf+1"></label>
+        <label>{{localize "SRX.Item.dvType"}}
+          <select name="system.dvType">
+            {{#each damageTypes}}<option value="{{this.key}}" {{#if (srxEq this.key ../system.dvType)}}selected{{/if}}>{{this.key}}</option>{{/each}}
+          </select>
+        </label>
+        <label>{{localize "SRX.Magic.physicalDrain"}}<input type="checkbox" name="system.physicalDrain" {{#if system.physicalDrain}}checked{{/if}}></label>
+      </div>
+      <div class="form-row">
+        <label>{{localize "SRX.Item.range"}}<input type="text" name="system.range" value="{{system.range}}"></label>
+        <label>{{localize "SRX.Item.element"}}<input type="text" name="system.element" value="{{system.element}}"></label>
+        <label>{{localize "SRX.Magic.keywords"}}<input type="text" name="system.keywords" value="{{system.keywords}}"></label>
+      </div>
+    {{/if}}
+
     {{#if (srxHasLegality type)}}
       <div class="form-group">
         <label>{{localize "SRX.Item.legality"}}</label>

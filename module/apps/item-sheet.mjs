@@ -45,6 +45,17 @@ export class SrxItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
     context.knowledgeKinds = ["domain", "language"].map((key) => ({
       key, label: game.i18n.localize(`SRX.Knowledge.${key}`), selected: item.system.kind === key
     }));
+    context.spellCategories = (SRX.spellCategories ?? []).map((key) => ({
+      key,
+      label: game.i18n.localize(`SRX.Magic.Category.${key}`),
+      selected: item.system.category === key
+    }));
+    context.spellPatterns = (SRX.spellPatterns ?? []).map((key) => ({
+      key, selected: item.system.pattern === key
+    }));
+    context.spellDurations = (SRX.spellDurations ?? []).map((key) => ({
+      key, selected: item.system.duration === key
+    }));
 
     if (item.type === "weapon") {
       context.attackModes = item.system.attackModes.map((m, idx) => ({ ...m, idx }));

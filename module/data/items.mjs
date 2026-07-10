@@ -119,3 +119,57 @@ export class KnowledgeData extends foundry.abstract.TypeDataModel {
     };
   }
 }
+
+/**
+ * Spell (Sorcery). Cast via actor.castSpell(item).
+ * pattern: direct = magic resist → Net Force; ranged = AGI+Sorcery vs DS then resist;
+ * touch/self/area as casting mode flags for the cast app.
+ */
+export class SpellData extends foundry.abstract.TypeDataModel {
+  static defineSchema() {
+    return {
+      ...descriptionSchema(),
+      category: new fields.StringField({
+        required: true,
+        initial: "combat",
+        choices: () => SRX.spellCategories
+      }),
+      pattern: new fields.StringField({
+        required: true,
+        initial: "direct",
+        choices: () => SRX.spellPatterns
+      }),
+      duration: new fields.StringField({
+        required: true,
+        initial: "instantaneous",
+        choices: () => SRX.spellDurations
+      }),
+      range: new fields.StringField({ required: true, blank: true, initial: "LOS" }),
+      action: new fields.StringField({
+        required: true,
+        initial: "complex",
+        choices: () => SRX.attackActions
+      }),
+      /** Attribute key for magic resistance (wil, bod, …); blank = no resist (Net Force = Force). */
+      resistanceAttr: new fields.StringField({ required: true, blank: true, initial: "wil" }),
+      /** Damage formula from Net Force: nf | nf+1 | nf*2 */
+      dvFormula: new fields.StringField({ required: true, initial: "nf+1" }),
+      dvType: new fields.StringField({
+        required: true,
+        initial: "S",
+        choices: () => Object.keys(SRX.damageTypes)
+      }),
+      element: new fields.StringField({ required: true, blank: true, initial: "" }),
+      drainSkill: new fields.StringField({
+        required: true,
+        initial: "sorcery",
+        choices: () => ["sorcery", "conjuring", "mysticism", "channeling"]
+      }),
+      physicalDrain: new fields.BooleanField({ initial: false }),
+      keywords: new fields.StringField({ required: true, blank: true, initial: "" }),
+      areaRadius: new fields.NumberField({
+        required: false, integer: true, min: 0, nullable: true, initial: null
+      })
+    };
+  }
+}

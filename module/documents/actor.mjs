@@ -14,6 +14,7 @@ import {
   markFiredFirearm,
   spendCombatantAction
 } from "../combat/actions.mjs";
+import { castSpell as castSpellPipeline } from "../magic/cast.mjs";
 
 export class SrxActor extends foundry.documents.Actor {
   /** @override — flat keys for roll formulas (initiative: (@qui)d6 + @accel). */
@@ -262,6 +263,11 @@ export class SrxActor extends foundry.documents.Actor {
       }
     }
     return msg;
+  }
+
+  /** Cast a spell item (M4). */
+  async castSpell(spell) {
+    return castSpellPipeline(this, spell);
   }
 
   /** Roll using a pre-built config from promptRollConfig / promptAttackConfig. */

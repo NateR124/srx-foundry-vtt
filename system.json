@@ -37,7 +37,8 @@
       "talent": { "htmlFields": ["description"] },
       "trait": { "htmlFields": ["description"] },
       "contact": { "htmlFields": ["description"] },
-      "knowledge": { "htmlFields": ["description"] }
+      "knowledge": { "htmlFields": ["description"] },
+      "spell": { "htmlFields": ["description"] }
     }
   },
   "grid": {
