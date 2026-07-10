@@ -314,6 +314,11 @@
   "SRX.Combat.shakeOffSuccess": "{name} shakes off {status}.",
   "SRX.Combat.shakeOffFail": "{name} remains {status} ({hits} hits vs {threshold}).",
   "SRX.Combat.notOwner": "Only the owner (or GM) can do that.",
+  "SRX.Time.toxinScheduled": "{name} is exposed to {toxin} (onset in ~{minutes} min).",
+  "SRX.Time.toxinResist": "Toxin resistance ({toxin})",
+  "SRX.Time.toxinResisted": "{name} resists {toxin} ({hits} hits vs Power {power}).",
+  "SRX.Time.toxinFailed": "{name} succumbs to {toxin} ({hits} vs Power {power}) — Sick.",
+  "SRX.Time.toxinExpired": "{name}: {toxin} effects end.",
   "SRX.Socket.noGm": "No active GM to apply this action.",
 
   "SRX.Status.blinded": "Blinded",
