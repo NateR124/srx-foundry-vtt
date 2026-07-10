@@ -1,0 +1,1647 @@
+{
+  "srxVersion": "3.07",
+  "source": "StreetSamurai.srx.deploy",
+  "task": "task-2-srx-parser",
+  "entries": [
+    {
+      "version": 3.07,
+      "meta": {
+        "nextInstanceId": 3664,
+        "name": "",
+        "player": "",
+        "archetype": "Street Samurai",
+        "uiFlags": [
+          "False",
+          "True",
+          "False",
+          "False",
+          "False",
+          "True"
+        ],
+        "rawTrackers": {
+          "karma": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "counters": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "lifestyle": "Lifestyle Adv: 0",
+          "header42": "True",
+          "header43": "0"
+        },
+        "matrixConnection": "DNI",
+        "edge": 2,
+        "activeDcc": "",
+        "activeCommlink": "Sony Emperor Commlink"
+      },
+      "priorities": {
+        "a": "Resources",
+        "b": "Attributes",
+        "c": "Metatype",
+        "d": "Skills",
+        "e": "Magic/Resonance"
+      },
+      "metatype": {
+        "name": "Troll",
+        "metatypeAttributeChoice": "Logic"
+      },
+      "tradition": {
+        "magicType": "Magic",
+        "name": ""
+      },
+      "attributes": {
+        "body": {
+          "rating": 5,
+          "karma": 0,
+          "flag": "False"
+        },
+        "agility": {
+          "rating": 5,
+          "karma": 0,
+          "flag": "False"
+        },
+        "reaction": {
+          "rating": 4,
+          "karma": 0,
+          "flag": "False"
+        },
+        "willpower": {
+          "rating": 4,
+          "karma": 0,
+          "flag": "False"
+        },
+        "logic": {
+          "rating": 4,
+          "karma": 0,
+          "flag": "False"
+        },
+        "intuition": {
+          "rating": 3,
+          "karma": 0,
+          "flag": "False"
+        },
+        "charisma": {
+          "rating": 1,
+          "karma": 0,
+          "flag": "False"
+        }
+      },
+      "skills": {
+        "athletics": {
+          "rating": 3,
+          "karma": 0,
+          "specialization": ""
+        },
+        "biotech": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "channeling": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "closeCombat": {
+          "rating": 4,
+          "karma": 0,
+          "specialization": ""
+        },
+        "con": {
+          "rating": 1,
+          "karma": 0,
+          "specialization": ""
+        },
+        "conjuring": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "driving": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "engineering": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "firearms": {
+          "rating": 4,
+          "karma": 0,
+          "specialization": ""
+        },
+        "hacking": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "influence": {
+          "rating": 1,
+          "karma": 0,
+          "specialization": ""
+        },
+        "insight": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "mysticism": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "outdoors": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "perception": {
+          "rating": 2,
+          "karma": 0,
+          "specialization": ""
+        },
+        "piloting": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "projectileWeapons": {
+          "rating": 2,
+          "karma": 0,
+          "specialization": ""
+        },
+        "software": {
+          "rating": 3,
+          "karma": 0,
+          "specialization": ""
+        },
+        "sorcery": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "stealth": {
+          "rating": 3,
+          "karma": 0,
+          "specialization": ""
+        },
+        "threading": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        }
+      },
+      "talents": [
+        {
+          "name": "General Talents",
+          "slug": "general-talents",
+          "category": "General",
+          "subtype": "Heading",
+          "gateway": true,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Armor Training",
+          "slug": "armor-training",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 7,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Edge: Close Call",
+          "slug": "edge-close-call",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Edge: Hustle",
+          "slug": "edge-hustle",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Edge: Increased Edge",
+          "slug": "edge-increased-edge",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 12,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Edge: Second Chance",
+          "slug": "edge-second-chance",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "High Pain Tolerance",
+          "slug": "high-pain-tolerance",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Skill Mastery",
+          "slug": "skill-mastery",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": "Firearms",
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Skill Mastery: Improved Critical",
+          "slug": "skill-mastery-improved-critical",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": "Firearms",
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 8,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Metatype Talents",
+          "slug": "metatype-talents",
+          "category": "Metatype",
+          "subtype": "Heading",
+          "gateway": true,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Big Boned",
+          "slug": "big-boned",
+          "category": "Metatype",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 8,
+          "flags": [
+            "True",
+            "False"
+          ]
+        }
+      ],
+      "spells": [],
+      "anima": [],
+      "augmentations": [
+        {
+          "name": "Senseware",
+          "slug": "senseware",
+          "category": "Senseware",
+          "subcategory": "Heading",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 0,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Eyeware",
+          "slug": "eyeware",
+          "category": "Senseware",
+          "subcategory": "Subheading",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 0,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Cybereyes",
+          "slug": "cybereyes",
+          "category": "Senseware",
+          "subcategory": "Eyeware",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0.3,
+          "cost": 8500,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Flare Compensation",
+          "slug": "flare-compensation",
+          "category": "Senseware",
+          "subcategory": "Eyeware",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 200,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Low-Light Vision",
+          "slug": "low-light-vision",
+          "category": "Senseware",
+          "subcategory": "Eyeware",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 750,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Smartlink (Implanted)",
+          "slug": "smartlink-implanted",
+          "category": "Senseware",
+          "subcategory": "Eyeware",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 12000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Thermographic Vision",
+          "slug": "thermographic-vision",
+          "category": "Senseware",
+          "subcategory": "Eyeware",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 1500,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Vision Magnification",
+          "slug": "vision-magnification",
+          "category": "Senseware",
+          "subcategory": "Eyeware",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 1000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Visual Acuity",
+          "slug": "visual-acuity",
+          "category": "Senseware",
+          "subcategory": "Eyeware",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 19000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Headware",
+          "slug": "headware",
+          "category": "Headware",
+          "subcategory": "Heading",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 0,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "DNI (Direct Neural Interface)",
+          "slug": "dni-direct-neural-interface",
+          "category": "Headware",
+          "subcategory": null,
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0.05,
+          "cost": 0,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Cyberlimbs",
+          "slug": "cyberlimbs",
+          "category": "Cyberlimbs",
+          "subcategory": "Heading",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 0,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Cyberarms",
+          "slug": "cyberarms",
+          "category": "Cyberlimbs",
+          "subcategory": "Subheading",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 0,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Cyberarm",
+          "slug": "cyberarm",
+          "category": "Cyberlimbs",
+          "subcategory": null,
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0.5,
+          "cost": 28000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Cyber Spurs",
+          "slug": "cyber-spurs",
+          "category": "Cyberlimbs",
+          "subcategory": "Cyberarm Upgrade",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 3000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Gyroarm",
+          "slug": "gyroarm",
+          "category": "Cyberlimbs",
+          "subcategory": "Cyberarm Upgrade",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 9000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Bodyware",
+          "slug": "bodyware",
+          "category": "Bodyware",
+          "subcategory": "Heading",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 0,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Bone Lacing",
+          "slug": "bone-lacing",
+          "category": "Bodyware",
+          "subcategory": null,
+          "option": "Aluminum",
+          "option2": null,
+          "rating": 1,
+          "essence": 0.6,
+          "cost": 15000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Damage Compensators",
+          "slug": "damage-compensators",
+          "category": "Bodyware",
+          "subcategory": null,
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0.4,
+          "cost": 11000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Enhanced Articulation",
+          "slug": "enhanced-articulation",
+          "category": "Bodyware",
+          "subcategory": null,
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0.3,
+          "cost": 35000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Muscle Replacement",
+          "slug": "muscle-replacement",
+          "category": "Bodyware",
+          "subcategory": null,
+          "option": null,
+          "option2": null,
+          "rating": 2,
+          "essence": 1.4,
+          "cost": 96000,
+          "grade": 1,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Orthoskin",
+          "slug": "orthoskin",
+          "category": "Bodyware",
+          "subcategory": null,
+          "option": null,
+          "option2": null,
+          "rating": 2,
+          "essence": 0.4,
+          "cost": 40000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Wired Reflexes",
+          "slug": "wired-reflexes",
+          "category": "Bodyware",
+          "subcategory": null,
+          "option": null,
+          "option2": null,
+          "rating": 2,
+          "essence": 1.05,
+          "cost": 96000,
+          "grade": 1,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        }
+      ],
+      "armor": [
+        {
+          "name": "Armor Jacket",
+          "slug": "armor-jacket",
+          "category": null,
+          "subcategory": null,
+          "instanceId": 3053,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 1300,
+          "modCode": 0,
+          "flags": [
+            "False",
+            "0",
+            "False"
+          ]
+        },
+        {
+          "name": "Lined Coat",
+          "slug": "lined-coat",
+          "category": null,
+          "subcategory": null,
+          "instanceId": 1169,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 2200,
+          "modCode": 0,
+          "flags": [
+            "False",
+            "0",
+            "False"
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Close Combat",
+          "slug": "close-combat",
+          "category": null,
+          "type": "Heading",
+          "instanceId": 1180,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Blades",
+          "slug": "blades",
+          "category": null,
+          "type": "Subheading",
+          "instanceId": 1190,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Combat Axe",
+          "slug": "combat-axe",
+          "category": null,
+          "type": "Close Combat",
+          "instanceId": 1170,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 1000,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Sword",
+          "slug": "sword",
+          "category": null,
+          "type": "Close Combat",
+          "instanceId": 3068,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 350,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Pistols",
+          "slug": "pistols",
+          "category": null,
+          "type": "Heading",
+          "instanceId": 1220,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Heavy",
+          "slug": "heavy",
+          "category": null,
+          "type": "Subheading",
+          "instanceId": 1230,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Ares Predator V",
+          "slug": "ares-predator-v",
+          "category": null,
+          "type": "Firearms",
+          "instanceId": 1210,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 2050,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Automatics",
+          "slug": "automatics",
+          "category": null,
+          "type": "Heading",
+          "instanceId": 1252,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Submachine Guns",
+          "slug": "submachine-guns",
+          "category": null,
+          "type": "Subheading",
+          "instanceId": 3104,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Ingram Smartgun X",
+          "slug": "ingram-smartgun-x",
+          "category": null,
+          "type": "Firearms",
+          "instanceId": 3092,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 6200,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Assault Rifles",
+          "slug": "assault-rifles",
+          "category": null,
+          "type": "Subheading",
+          "instanceId": 2995,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "FN HAR",
+          "slug": "fn-har",
+          "category": null,
+          "type": "Firearms",
+          "instanceId": 3005,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 2800,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Explosives",
+          "slug": "explosives",
+          "category": null,
+          "type": "Heading",
+          "instanceId": 3144,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Grenades",
+          "slug": "grenades",
+          "category": null,
+          "type": "Subheading",
+          "instanceId": 3154,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Flash-bang Grenade",
+          "slug": "flash-bang-grenade",
+          "category": null,
+          "type": "Explosives",
+          "instanceId": 1510,
+          "quantity": 2,
+          "option": null,
+          "notes": "",
+          "cost": 300,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Ammo",
+          "slug": "ammo",
+          "category": null,
+          "type": "Heading",
+          "instanceId": 267,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Bullet (Regular Round)",
+          "slug": "bullet-regular-round",
+          "category": null,
+          "type": "Ammo",
+          "instanceId": 257,
+          "quantity": 400,
+          "option": null,
+          "notes": "",
+          "cost": 400,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Gel Round",
+          "slug": "gel-round",
+          "category": null,
+          "type": "Ammo",
+          "instanceId": 398,
+          "quantity": 200,
+          "option": null,
+          "notes": "",
+          "cost": 400,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        }
+      ],
+      "gear": [
+        {
+          "name": "Matrix Devices",
+          "slug": "matrix-devices",
+          "category": "Matrix Devices",
+          "subcategory": "Heading",
+          "instanceId": 1532,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Commlinks",
+          "slug": "commlinks",
+          "category": "Matrix Devices",
+          "subcategory": "Subheading",
+          "instanceId": 1533,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Sony Emperor Commlink",
+          "slug": "sony-emperor-commlink",
+          "category": "Matrix Devices",
+          "subcategory": "Matrix Devices",
+          "instanceId": 1557,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 4000,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Electronics",
+          "slug": "electronics",
+          "category": "Electronics",
+          "subcategory": "Heading",
+          "instanceId": 278,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Certified Credstick",
+          "slug": "certified-credstick",
+          "category": "Electronics",
+          "subcategory": "Electronics",
+          "instanceId": 279,
+          "rating": 1,
+          "quantity": 2,
+          "variant": null,
+          "notes": "",
+          "cost": 50,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Datachip",
+          "slug": "datachip",
+          "category": "Electronics",
+          "subcategory": "Electronics",
+          "instanceId": 277,
+          "rating": 1,
+          "quantity": 2,
+          "variant": null,
+          "notes": "",
+          "cost": 10,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "RFID Tag",
+          "slug": "rfid-tag",
+          "category": "Electronics",
+          "subcategory": "Electronics",
+          "instanceId": 409,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 100,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Breaking & Entering Gear",
+          "slug": "breaking-entering-gear",
+          "category": "Breaking & Entering Gear",
+          "subcategory": "Heading",
+          "instanceId": 11,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Fake SIN",
+          "slug": "fake-sin",
+          "category": "Breaking & Entering Gear",
+          "subcategory": "Breaking & Entering Gear",
+          "instanceId": 10,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": true,
+          "flags": [
+            "0",
+            "False",
+            "True"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Tools & Survival Gear",
+          "slug": "tools-survival-gear",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Heading",
+          "instanceId": 281,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Flashlight",
+          "slug": "flashlight",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Tools & Survival Gear",
+          "instanceId": 411,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 20,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Grapple Gun",
+          "slug": "grapple-gun",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Tools & Survival Gear",
+          "instanceId": 3056,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 600,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Medkit",
+          "slug": "medkit",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Tools & Survival Gear",
+          "instanceId": 283,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 500,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Rope",
+          "slug": "rope",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Tools & Survival Gear",
+          "instanceId": 3057,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": true,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Biotech",
+          "slug": "biotech",
+          "category": "Biotech",
+          "subcategory": "Heading",
+          "instanceId": 285,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Stim Patch",
+          "slug": "stim-patch",
+          "category": "Biotech",
+          "subcategory": "Biotech",
+          "instanceId": 312,
+          "rating": 1,
+          "quantity": 2,
+          "variant": null,
+          "notes": "",
+          "cost": 400,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Trauma Patch",
+          "slug": "trauma-patch",
+          "category": "Biotech",
+          "subcategory": "Biotech",
+          "instanceId": 313,
+          "rating": 1,
+          "quantity": 2,
+          "variant": null,
+          "notes": "",
+          "cost": 200,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        }
+      ],
+      "magicalGear": [],
+      "vehicles": [],
+      "contacts": [
+        {
+          "name": "Fixer",
+          "slug": "fixer",
+          "values": [
+            "",
+            "",
+            "False",
+            "False"
+          ],
+          "notes": "\n\n"
+        }
+      ],
+      "traits": [
+        {
+          "name": "Livin' on the Streets",
+          "slug": "livin-on-the-streets",
+          "values": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "notes": ""
+        }
+      ],
+      "knowledge": [
+        {
+          "name": "Military & Law Enforcement",
+          "slug": "military-law-enforcement",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "Streets",
+          "slug": "streets",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "Weapons",
+          "slug": "weapons",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "Languages",
+          "slug": "languages",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "English",
+          "slug": "english",
+          "isLanguage": true,
+          "values": [
+            "",
+            "False",
+            "True",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        }
+      ],
+      "personal": {
+        "legalName": "",
+        "height": "",
+        "weight": "",
+        "age": "",
+        "aliases": "",
+        "gender": "",
+        "description": "Your body is an indestructible weapon, augmented with cutting-edge cyberware that blurs the line between man and machine. You're fast, brutal, and surgical in a fight, trained in tactics and hardened by your past life to mercilessly eliminate the opposition. But you don't kill without reason. Maintaining some honor, and a shred of humanity, means something to you, even if no one else in this line of work cares. You've got the skills to sneak by the opposition when you can, but if that doesn't work, you make sure you and your team get out alive.\n\nKeep your Firearms Skill Mastery talent and your Aluminum Bone Lacing cyberware in mind - whenever you attack with a firearm, or when you make an Armor test, you score a critical hit if both of your Crit Dice are a 5 or a 6 (not just if they're both 6's)."
+      },
+      "notes": "",
+      "unknown": []
+    }
+  ]
+}

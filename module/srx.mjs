@@ -6,6 +6,8 @@
 import { SRX } from "./config.mjs";
 import { CharacterData } from "./data/actor-character.mjs";
 import { ThreatData } from "./data/actor-threat.mjs";
+import { HostData } from "./data/actor-host.mjs";
+import { VehicleData } from "./data/actor-vehicle.mjs";
 import {
   WeaponData, ArmorData, GearData, TalentData, TraitData, ContactData, KnowledgeData,
   SpellData, FocusData
@@ -41,11 +43,16 @@ import { registerSocket } from "./net/socket.mjs";
 import * as aoeRules from "./rules/aoe.mjs";
 import * as coverRules from "./rules/cover.mjs";
 import * as effectRules from "./rules/effects.mjs";
+import * as matrixRules from "./rules/matrix.mjs";
+import * as vehicleRules from "./rules/vehicle.mjs";
 import { startSuppressiveFire } from "./combat/suppress.mjs";
+import { registerMatrixHooks } from "./matrix/hooks.mjs";
+import { registerVehicleHooks } from "./vehicle/hooks.mjs";
 import { SRXRoll } from "./dice/srx-roll.mjs";
 import { SrxCharacterSheet } from "./apps/actor-sheet.mjs";
 import { SrxThreatSheet } from "./apps/threat-sheet.mjs";
 import { SrxItemSheet } from "./apps/item-sheet.mjs";
+import { SrxVehicleSheet } from "./apps/vehicle-sheet.mjs";
 import { registerVisionModes } from "./canvas/vision.mjs";
 import { registerDiceSoNice, styleSrxDice } from "./dice/dice-so-nice.mjs";
 import {
@@ -73,6 +80,8 @@ Hooks.once("init", () => {
     aoe: aoeRules,
     cover: coverRules,
     effects: effectRules,
+    matrix: matrixRules,
+    vehicle: vehicleRules,
     startSuppressiveFire,
     automationLevel,
     magic: magicRules,
@@ -102,6 +111,8 @@ Hooks.once("init", () => {
   // Data models
   CONFIG.Actor.dataModels.character = CharacterData;
   CONFIG.Actor.dataModels.threat = ThreatData;
+  CONFIG.Actor.dataModels.host = HostData;
+  CONFIG.Actor.dataModels.vehicle = VehicleData;
   CONFIG.Item.dataModels.weapon = WeaponData;
   CONFIG.Item.dataModels.armor = ArmorData;
   CONFIG.Item.dataModels.gear = GearData;
@@ -130,6 +141,13 @@ Hooks.once("init", () => {
   });
   Actors.registerSheet("srx", SrxThreatSheet, {
     types: ["threat"], makeDefault: true, label: "SRX.Sheet.threat"
+  });
+  Actors.registerSheet("srx", SrxVehicleSheet, {
+    types: ["vehicle"], makeDefault: true, label: "SRX.Sheet.vehicle"
+  });
+  // Host reuses threat sheet for now (no dedicated host sheet yet)
+  Actors.registerSheet("srx", SrxThreatSheet, {
+    types: ["host"], makeDefault: true, label: "SRX.Sheet.host"
   });
   Items.registerSheet("srx", SrxItemSheet, { makeDefault: true, label: "SRX.Sheet.item" });
 
@@ -161,8 +179,10 @@ Hooks.once("ready", () => {
   registerMagicHooks();
   registerSustainHooks();
   registerAstralHooks();
+  registerMatrixHooks();
+  registerVehicleHooks();
   registerTimedHooks();
-  console.log("SRX | Ready (M2 combat + M4 magic)");
+  console.log("SRX | Ready (M2 combat + M3 import + M4 magic + M5/M6 seeds)");
 });
 
 /** Dice So Nice */

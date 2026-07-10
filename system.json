@@ -28,7 +28,9 @@
       },
       "threat": {
         "htmlFields": ["notes"]
-      }
+      },
+      "host": {},
+      "vehicle": {}
     },
     "Item": {
       "weapon": { "htmlFields": ["description"] },

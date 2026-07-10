@@ -1,0 +1,1316 @@
+{
+  "srxVersion": "3.07",
+  "source": "Mage.srx.deploy",
+  "task": "task-2-srx-parser",
+  "entries": [
+    {
+      "version": 3.07,
+      "meta": {
+        "nextInstanceId": 2284,
+        "name": "",
+        "player": "",
+        "archetype": "Mage",
+        "uiFlags": [
+          "False",
+          "True",
+          "False",
+          "False",
+          "False",
+          "True"
+        ],
+        "rawTrackers": {
+          "karma": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "counters": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "lifestyle": "Lifestyle Adv: 0",
+          "header42": "False",
+          "header43": "0"
+        },
+        "matrixConnection": "Trodes",
+        "edge": 1,
+        "activeDcc": "",
+        "activeCommlink": "Meta Link Commlink"
+      },
+      "priorities": {
+        "a": "Magic/Resonance",
+        "b": "Attributes",
+        "c": "Skills",
+        "d": "Metatype",
+        "e": "Resources"
+      },
+      "metatype": {
+        "name": "Human",
+        "metatypeAttributeChoice": "Intuition"
+      },
+      "tradition": {
+        "magicType": "Magic",
+        "name": "Hermetic Mage"
+      },
+      "attributes": {
+        "body": {
+          "rating": 3,
+          "karma": 0,
+          "flag": "False"
+        },
+        "agility": {
+          "rating": 4,
+          "karma": 0,
+          "flag": "False"
+        },
+        "reaction": {
+          "rating": 4,
+          "karma": 0,
+          "flag": "False"
+        },
+        "willpower": {
+          "rating": 5,
+          "karma": 0,
+          "flag": "False"
+        },
+        "logic": {
+          "rating": 5,
+          "karma": 0,
+          "flag": "False"
+        },
+        "intuition": {
+          "rating": 3,
+          "karma": 0,
+          "flag": "False"
+        },
+        "charisma": {
+          "rating": 2,
+          "karma": 0,
+          "flag": "False"
+        }
+      },
+      "skills": {
+        "athletics": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "biotech": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "channeling": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "closeCombat": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "con": {
+          "rating": 1,
+          "karma": 0,
+          "specialization": ""
+        },
+        "conjuring": {
+          "rating": 5,
+          "karma": 0,
+          "specialization": ""
+        },
+        "driving": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "engineering": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "firearms": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "hacking": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "influence": {
+          "rating": 1,
+          "karma": 0,
+          "specialization": ""
+        },
+        "insight": {
+          "rating": 2,
+          "karma": 0,
+          "specialization": ""
+        },
+        "mysticism": {
+          "rating": 5,
+          "karma": 0,
+          "specialization": ""
+        },
+        "outdoors": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "perception": {
+          "rating": 1,
+          "karma": 0,
+          "specialization": ""
+        },
+        "piloting": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "projectileWeapons": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "software": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "sorcery": {
+          "rating": 6,
+          "karma": 0,
+          "specialization": ""
+        },
+        "stealth": {
+          "rating": 2,
+          "karma": 0,
+          "specialization": ""
+        },
+        "threading": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        }
+      },
+      "talents": [
+        {
+          "name": "General Talents",
+          "slug": "general-talents",
+          "category": "General",
+          "subtype": "Heading",
+          "gateway": true,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Edge: Close Call",
+          "slug": "edge-close-call",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Edge: Hustle",
+          "slug": "edge-hustle",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Edge: Second Chance",
+          "slug": "edge-second-chance",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Expertise: Full Magician",
+          "slug": "expertise-full-magician",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 30,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Innate Talent",
+          "slug": "innate-talent",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 8,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Spending Money",
+          "slug": "spending-money",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 2,
+          "karmaCost": 2,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Sorcery Talents",
+          "slug": "sorcery-talents",
+          "category": "Sorcery",
+          "subtype": "Heading",
+          "gateway": true,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "[Spell]",
+          "slug": "spell",
+          "category": "Sorcery",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 8,
+          "karmaCost": 28,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Conjuring Talents",
+          "slug": "conjuring-talents",
+          "category": "Conjuring",
+          "subtype": "Heading",
+          "gateway": true,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Bind Elemental",
+          "slug": "bind-elemental",
+          "category": "Conjuring",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "[Elemental Form]",
+          "slug": "elemental-form",
+          "category": "Conjuring",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 2,
+          "karmaCost": 24,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Favored Elemental",
+          "slug": "favored-elemental",
+          "category": "Conjuring",
+          "subtype": null,
+          "gateway": false,
+          "option": "Earth",
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 20,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Mysticism Talents",
+          "slug": "mysticism-talents",
+          "category": "Mysticism",
+          "subtype": "Heading",
+          "gateway": true,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Arcane Reflexes",
+          "slug": "arcane-reflexes",
+          "category": "Mysticism",
+          "subtype": "Astral",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 16,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Astral Perception",
+          "slug": "astral-perception",
+          "category": "Mysticism",
+          "subtype": "Astral",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 4,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Centering",
+          "slug": "centering",
+          "category": "Mysticism",
+          "subtype": "Metamagic",
+          "gateway": false,
+          "option": "Sorcery",
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 12,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Magical Lodge",
+          "slug": "magical-lodge",
+          "category": "Mysticism",
+          "subtype": "Artificing",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 4,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Mystical Acceleration",
+          "slug": "mystical-acceleration",
+          "category": "Mysticism",
+          "subtype": "Assensing",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 12,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Negate",
+          "slug": "negate",
+          "category": "Mysticism",
+          "subtype": "Metamagic",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        }
+      ],
+      "spells": [
+        {
+          "name": "Control Actions",
+          "slug": "control-actions",
+          "instanceId": 2110,
+          "flag": "False",
+          "karmaCost": 4,
+          "nuyenCost": 400
+        },
+        {
+          "name": "Detect Magic",
+          "slug": "detect-magic",
+          "instanceId": 2223,
+          "flag": "False",
+          "karmaCost": 0,
+          "nuyenCost": 0
+        },
+        {
+          "name": "Fireball",
+          "slug": "fireball",
+          "instanceId": 1608,
+          "flag": "False",
+          "karmaCost": 4,
+          "nuyenCost": 400
+        },
+        {
+          "name": "Heal",
+          "slug": "heal",
+          "instanceId": 2123,
+          "flag": "False",
+          "karmaCost": 4,
+          "nuyenCost": 400
+        },
+        {
+          "name": "Influence",
+          "slug": "influence",
+          "instanceId": 1783,
+          "flag": "False",
+          "karmaCost": 4,
+          "nuyenCost": 400
+        },
+        {
+          "name": "Invisibility",
+          "slug": "invisibility",
+          "instanceId": 1189,
+          "flag": "False",
+          "karmaCost": 4,
+          "nuyenCost": 400
+        },
+        {
+          "name": "Levitate",
+          "slug": "levitate",
+          "instanceId": 2122,
+          "flag": "False",
+          "karmaCost": 4,
+          "nuyenCost": 400
+        },
+        {
+          "name": "Punch",
+          "slug": "punch",
+          "instanceId": 2109,
+          "flag": "False",
+          "karmaCost": 4,
+          "nuyenCost": 400
+        }
+      ],
+      "anima": [
+        {
+          "name": "Earth",
+          "slug": "earth",
+          "instanceId": 2102,
+          "flag": "False",
+          "karmaCost": 12,
+          "nuyenCost": 1200
+        },
+        {
+          "name": "Fire",
+          "slug": "fire",
+          "instanceId": 1689,
+          "flag": "False",
+          "karmaCost": 12,
+          "nuyenCost": 1200
+        }
+      ],
+      "augmentations": [],
+      "armor": [
+        {
+          "name": "Lined Coat",
+          "slug": "lined-coat",
+          "category": null,
+          "subcategory": null,
+          "instanceId": 1212,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 2200,
+          "modCode": 0,
+          "flags": [
+            "False",
+            "0",
+            "False"
+          ]
+        }
+      ],
+      "weapons": [],
+      "gear": [
+        {
+          "name": "Matrix Devices",
+          "slug": "matrix-devices",
+          "category": "Matrix Devices",
+          "subcategory": "Heading",
+          "instanceId": 1148,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Connection Devices",
+          "slug": "connection-devices",
+          "category": "Matrix Devices",
+          "subcategory": "Subheading",
+          "instanceId": 1149,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Trodes",
+          "slug": "trodes",
+          "category": "Matrix Devices",
+          "subcategory": "Matrix Devices",
+          "instanceId": 1147,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": true,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Commlinks",
+          "slug": "commlinks",
+          "category": "Matrix Devices",
+          "subcategory": "Subheading",
+          "instanceId": 1220,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Meta Link Commlink",
+          "slug": "meta-link-commlink",
+          "category": "Matrix Devices",
+          "subcategory": "Matrix Devices",
+          "instanceId": 1219,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 800,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Electronics",
+          "slug": "electronics",
+          "category": "Electronics",
+          "subcategory": "Heading",
+          "instanceId": 278,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Certified Credstick",
+          "slug": "certified-credstick",
+          "category": "Electronics",
+          "subcategory": "Electronics",
+          "instanceId": 279,
+          "rating": 1,
+          "quantity": 2,
+          "variant": null,
+          "notes": "",
+          "cost": 50,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Datachip",
+          "slug": "datachip",
+          "category": "Electronics",
+          "subcategory": "Electronics",
+          "instanceId": 277,
+          "rating": 1,
+          "quantity": 2,
+          "variant": null,
+          "notes": "",
+          "cost": 10,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "RFID Tag",
+          "slug": "rfid-tag",
+          "category": "Electronics",
+          "subcategory": "Electronics",
+          "instanceId": 409,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 100,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Audio & Optical Devices",
+          "slug": "audio-optical-devices",
+          "category": "Audio & Optical Devices",
+          "subcategory": "Heading",
+          "instanceId": 2023,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Optical Devices",
+          "slug": "optical-devices",
+          "category": "Audio & Optical Devices",
+          "subcategory": "Subheading",
+          "instanceId": 2024,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Glasses",
+          "slug": "glasses",
+          "category": "Audio & Optical Devices",
+          "subcategory": "Optical Device",
+          "instanceId": 2021,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 3550,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [
+            1,
+            0,
+            3,
+            4
+          ],
+          "mods": []
+        },
+        {
+          "name": "Breaking & Entering Gear",
+          "slug": "breaking-entering-gear",
+          "category": "Breaking & Entering Gear",
+          "subcategory": "Heading",
+          "instanceId": 11,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Fake SIN",
+          "slug": "fake-sin",
+          "category": "Breaking & Entering Gear",
+          "subcategory": "Breaking & Entering Gear",
+          "instanceId": 10,
+          "rating": 2,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": true,
+          "flags": [
+            "0",
+            "False",
+            "True"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Tools & Survival Gear",
+          "slug": "tools-survival-gear",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Heading",
+          "instanceId": 281,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Flashlight",
+          "slug": "flashlight",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Tools & Survival Gear",
+          "instanceId": 411,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 20,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Medkit",
+          "slug": "medkit",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Tools & Survival Gear",
+          "instanceId": 283,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 500,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Biotech",
+          "slug": "biotech",
+          "category": "Biotech",
+          "subcategory": "Heading",
+          "instanceId": 285,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Stim Patch",
+          "slug": "stim-patch",
+          "category": "Biotech",
+          "subcategory": "Biotech",
+          "instanceId": 312,
+          "rating": 1,
+          "quantity": 2,
+          "variant": null,
+          "notes": "",
+          "cost": 400,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Trauma Patch",
+          "slug": "trauma-patch",
+          "category": "Biotech",
+          "subcategory": "Biotech",
+          "instanceId": 313,
+          "rating": 1,
+          "quantity": 2,
+          "variant": null,
+          "notes": "",
+          "cost": 200,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        }
+      ],
+      "magicalGear": [
+        {
+          "name": "Magical Gear",
+          "slug": "magical-gear",
+          "category": "Magical Gear",
+          "subcategory": "Heading",
+          "instanceId": 1204,
+          "flags": [
+            "False",
+            "False"
+          ],
+          "rating": 1,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "trailingFlags": [
+            "False",
+            "0",
+            "False",
+            "False",
+            "True",
+            "0",
+            ""
+          ]
+        },
+        {
+          "name": "Bound Elementals",
+          "slug": "bound-elementals",
+          "category": "Magical Gear",
+          "subcategory": "Subheading",
+          "instanceId": 1208,
+          "flags": [
+            "False",
+            "False"
+          ],
+          "rating": 1,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "trailingFlags": [
+            "False",
+            "0",
+            "False",
+            "False",
+            "True",
+            "0",
+            ""
+          ]
+        },
+        {
+          "name": "Elemental",
+          "slug": "elemental",
+          "category": "Magical Gear",
+          "subcategory": "Bound Elemental",
+          "instanceId": 1217,
+          "flags": [
+            "False",
+            "False"
+          ],
+          "rating": 4,
+          "quantity": 1,
+          "option": "Earth",
+          "notes": "",
+          "cost": 12000,
+          "trailingFlags": [
+            "False",
+            "0",
+            "False",
+            "False",
+            "True",
+            "0",
+            ""
+          ]
+        },
+        {
+          "name": "Elemental",
+          "slug": "elemental",
+          "category": "Magical Gear",
+          "subcategory": "Bound Elemental",
+          "instanceId": 1692,
+          "flags": [
+            "False",
+            "False"
+          ],
+          "rating": 3,
+          "quantity": 1,
+          "option": "Fire",
+          "notes": "",
+          "cost": 9000,
+          "trailingFlags": [
+            "False",
+            "0",
+            "False",
+            "False",
+            "True",
+            "0",
+            ""
+          ]
+        },
+        {
+          "name": "Mysticism Talents",
+          "slug": "mysticism-talents",
+          "category": "Magical Gear",
+          "subcategory": "Subheading",
+          "instanceId": 2119,
+          "flags": [
+            "False",
+            "False"
+          ],
+          "rating": 1,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "trailingFlags": [
+            "False",
+            "0",
+            "False",
+            "False",
+            "True",
+            "0",
+            ""
+          ]
+        },
+        {
+          "name": "Magical Lodge (Permanent)",
+          "slug": "magical-lodge-permanent",
+          "category": "Magical Gear",
+          "subcategory": "Permanent Magical Effect",
+          "instanceId": 1202,
+          "flags": [
+            "False",
+            "False"
+          ],
+          "rating": 6,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 12000,
+          "trailingFlags": [
+            "False",
+            "0",
+            "False",
+            "False",
+            "True",
+            "0",
+            ""
+          ]
+        }
+      ],
+      "vehicles": [],
+      "contacts": [
+        {
+          "name": "Fixer",
+          "slug": "fixer",
+          "values": [
+            "",
+            "",
+            "False",
+            "False"
+          ],
+          "notes": "\n\n"
+        },
+        {
+          "name": "Hermetic Academic",
+          "slug": "hermetic-academic",
+          "values": [
+            "",
+            "",
+            "False",
+            "False"
+          ],
+          "notes": "\n\n"
+        }
+      ],
+      "traits": [],
+      "knowledge": [
+        {
+          "name": "Arcana",
+          "slug": "arcana",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "Critters & Paranormal Creatures",
+          "slug": "critters-paranormal-creatures",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "History",
+          "slug": "history",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "Security Systems & Protocols",
+          "slug": "security-systems-protocols",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "Spellcraft",
+          "slug": "spellcraft",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "Languages",
+          "slug": "languages",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "English",
+          "slug": "english",
+          "isLanguage": true,
+          "values": [
+            "",
+            "False",
+            "True",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        }
+      ],
+      "personal": {
+        "legalName": "",
+        "height": "",
+        "weight": "",
+        "age": "",
+        "aliases": "",
+        "gender": "",
+        "description": "You have rare command over magical forces, and you wield them with precision and purpose. You've studied the arcane arts and unlocked a versatile arsenal of spells - from hurling fireballs that decimate your enemies to subtly warping their thoughts with just a whisper. You can fly through the air, heal your allies, and vanish into thin air. Your unique abilities are hard to overlook and make you a valuable asset to any team."
+      },
+      "notes": "",
+      "unknown": []
+    }
+  ]
+}

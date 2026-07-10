@@ -1,0 +1,3441 @@
+{
+  "srxVersion": "3.07",
+  "source": "SRX GM v3.07na.txt",
+  "task": "task-4-gm-threats",
+  "entries": [
+    {
+      "slug": "barghest",
+      "name": "BARGHEST",
+      "pages": [
+        68
+      ],
+      "threatRating": 4,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 4,
+      "defenseScoreAlt": null,
+      "move": "14m Health: 12",
+      "health": 12,
+      "woundLimit": null,
+      "dmgResistance": 14,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 3,
+        "bonus": 4,
+        "raw": "3d6+4"
+      },
+      "skills": {
+        "tier1": {
+          "value": 6,
+          "list": "Athletics, Close Combat, Perception"
+        },
+        "tier2": {
+          "value": 3,
+          "list": "Stealth, Outdoors"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Bite",
+          "action": "Complex",
+          "fireModes": null,
+          "pool": 14,
+          "dv": {
+            "raw": "8P",
+            "n": 8,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Claws",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 16,
+          "dv": {
+            "raw": "6P",
+            "n": 6,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Hunter’s Howl",
+          "action": "Major Action",
+          "uses": null,
+          "duration": null,
+          "text": "The barghest unleashes a terrifying howl that causes their prey to stumble as their muscles uncontrollably seize up. Any living being that can hear the howl is affected as if by the Slow spell, with a Force equal to the Barghest’s"
+        }
+      ],
+      "traits": [
+        {
+          "name": "Vision Enhancements",
+          "text": "Low-Light"
+        },
+        {
+          "name": "Dual Natured",
+          "text": "The barghest always exists on both the"
+        },
+        {
+          "name": "astral and physical planes, and can interact with",
+          "text": ""
+        },
+        {
+          "name": "anything on either plane. Their Armor applies to",
+          "text": ""
+        },
+        {
+          "name": "attacks from both the physical and astral planes.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": 4,
+      "resonance": null,
+      "notes": null,
+      "raw": "BARGHEST\nThreat: 4 Initiative: 3d6+4\nBody: 8 Willpower: 5\nAgility: 6 Logic: 1\nReaction: 6 Intuition: 4\nEdge: - Charisma: 2\nMagic: 4\n\nDef Score: 4 Wound Lmt: 8\nMove Rate: 14m Health: 12\n\nDEFENSES\nDmg Resistance (Thick Hide): 14\nSKILLS\nPrimary [6]: Athletics, Close Combat, Perception\nSecondary [3]: Stealth, Outdoors\nWEAPONS ACTION ATK DV\nBite Complex 14 8P\nClaws Major 16 6P\nTRAITS\nVision Enhancements: Low-Light\nDual Natured: The barghest always exists on both the\nastral and physical planes, and can interact with\nanything on either plane. Their Armor applies to\nattacks from both the physical and astral planes.\nABILITIES\nHunter’s Howl (Major Action): The barghest\nunleashes a terrifying howl that causes their prey to\nstumble as their muscles uncontrollably seize up. Any\nliving being that can hear the howl is affected as if by\nthe Slow spell, with a Force equal to the Barghest’s\nMagic. This is a sonic effect – any bonuses against\nsonic attacks apply to a target’s resistance test. If a\ntarget gets zero hits on their resistance test, they also\ngain the Immobilized status for the duration of the\neffect. This effect ends per the duration of the Slow\nspell, or if the barghest is killed. If a target succeeds\non their resistance test, they cannot be affected by this\npower again for 24 hours.\nLatching Jaws: If the barghest hits a target with its\nBite attack, it immediately makes a subdual test: Body\n+ Athletics opposed by the target’s (Body or Agility)\n+ Athletics. If the barghest wins, the target gains the\nImmobilized status. The barghest can only\nimmobilize 1 target at a time. The target can spend a\nMajor Action to repeat the subdual test. If the target\nwins, they are no longer Immobilized.\nSwift: The barghest can take the Run action as a\nMinor Action, and the Move Action as a Free action\n(but can still only take each once per Combat Turn).\nThe barghest does not suffer Liability on tests when\nthey take the Run action."
+    },
+    {
+      "slug": "chupacabra-blood-spirit",
+      "name": "CHUPACABRA (BLOOD SPIRIT)",
+      "pages": [
+        69
+      ],
+      "threatRating": 5,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 6,
+      "defenseScoreAlt": null,
+      "move": "10m  Health: 12",
+      "health": 12,
+      "woundLimit": null,
+      "dmgResistance": 16,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 4,
+        "bonus": 8,
+        "raw": "4d6+8"
+      },
+      "skills": {
+        "tier1": {
+          "value": 8,
+          "list": "Athletics, Close Combat, Mysticism,"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Bite",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 22,
+          "dv": {
+            "raw": "9P",
+            "n": 9,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Launch Spines",
+          "action": "Complex",
+          "fireModes": null,
+          "pool": "AOE",
+          "dv": {
+            "raw": "10P",
+            "n": 10,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Blood Thirst",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "Once per Initiative Pass, at the end of any enemy’s Action Phase, the chupacabra can use its Bite attack."
+        },
+        {
+          "name": "Death from Above",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "The chupacabra can move across vertical surfaces and along ceilings at its Movement Rate without making any climbing tests."
+        },
+        {
+          "name": "Drain Blood",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "When the chupacabra damages a target with its Bite attack, it heals 2 damage."
+        },
+        {
+          "name": "Launch Spines",
+          "action": "Complex Action",
+          "uses": null,
+          "duration": null,
+          "text": "The chupacabra can launch a volley of spines out of its body. This is an AOE attack (see above) affecting everyone within 20m. The chupacabra cannot use this attack again for 10 minutes."
+        },
+        {
+          "name": "Poisonous Bite",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "A target that takes damage from the chupacabra’s Bite attack is afflicted with a Power 6 toxin. The target must make a Body + Willpower toxin resistance test with a threshold of the toxin’s Power. If they fail, the target gains the Sick status. While they have the Sick status, the target also suffers the Impaired status. The target can repeat the toxin resistance test at the end of each of their Action Phases to end the effect early. Otherwise, the Sick status ends after 1 minute."
+        },
+        {
+          "name": "Unstoppable",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "On their turn, the chupacabra can take 2 damage to end an ongoing effect or status on them."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Physical Resistance, Toxin & Disease Immunity",
+          "text": ""
+        },
+        {
+          "name": "Unphased",
+          "text": "Can’t gain Frightened or Wounded status."
+        },
+        {
+          "name": "Dual Natured",
+          "text": "The chupacabra always exists on both"
+        },
+        {
+          "name": "the astral and physical planes, and can interact with",
+          "text": ""
+        },
+        {
+          "name": "anything on either plane. Their Armor applies to",
+          "text": ""
+        },
+        {
+          "name": "attacks from both the physical and astral planes.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": 1,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "CHUPACABRA (BLOOD SPIRIT)\nThreat: 5 Initiative: 4d6+8\nBody: 8 Willpower: 7\nAgility: 8 Logic: 4\nReaction: 6 Intuition: 9\nEdge: 1 Charisma: 7\nForce: 9\n\nDef Score: 6 Wound Lmt: -\nMove Rate: 10m  Health: 12\n\nDEFENSES\nDmg Resistance (Armor-8): 16\nSKILLS\nPrimary [8]: Athletics, Close Combat, Mysticism,\nPerception, Stealth\nWEAPONS ACTION ATK DV\nBite Major 22 9P\nLaunch Spines Complex AOE 10P\nTRAITS\nPhysical Resistance, Toxin & Disease Immunity\nUnphased: Can’t gain Frightened or Wounded status.\nDual Natured: The chupacabra always exists on both\nthe astral and physical planes, and can interact with\nanything on either plane. Their Armor applies to\nattacks from both the physical and astral planes.\nABILITIES\nBlood Thirst: Once per Initiative Pass, at the end of\nany enemy’s Action Phase, the chupacabra can use its\nBite attack.\nDeath from Above: The chupacabra can move across\nvertical surfaces and along ceilings at its Movement\nRate without making any climbing tests.\nDrain Blood: When the chupacabra damages a target\nwith its Bite attack, it heals 2 damage.\nLaunch Spines (Complex Action): The chupacabra\ncan launch a volley of spines out of its body. This is\nan AOE attack (see above) affecting everyone within\n20m. The chupacabra cannot use this attack again for\n10 minutes.\nPoisonous Bite: A target that takes damage from the\nchupacabra’s Bite attack is afflicted with a Power 6\ntoxin. The target must make a Body + Willpower\ntoxin resistance test with a threshold of the toxin’s\nPower. If they fail, the target gains the Sick status.\nWhile they have the Sick status, the target also suffers\nthe Impaired status. The target can repeat the toxin\nresistance test at the end of each of their Action\nPhases to end the effect early. Otherwise, the Sick\nstatus ends after 1 minute.\nUnstoppable: On their turn, the chupacabra can take\n2 damage to end an ongoing effect or status on them.",
+      "force": 9,
+      "toxin": {
+        "power": 6,
+        "effect": null,
+        "cadence": null,
+        "raw": "Poisonous Bite: A target that takes damage from the\nchupacabra’s Bite attack is afflicted with a Power 6"
+      }
+    },
+    {
+      "slug": "devil-rat",
+      "name": "DEVIL RAT",
+      "pages": [
+        70
+      ],
+      "threatRating": 1,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 4,
+      "defenseScoreAlt": null,
+      "move": "12m Health: 4",
+      "health": 4,
+      "woundLimit": null,
+      "dmgResistance": 5,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 1,
+        "bonus": 3,
+        "raw": "1d6+3"
+      },
+      "skills": {
+        "tier1": {
+          "value": 7,
+          "list": "Stealth"
+        },
+        "tier2": {
+          "value": 3,
+          "list": "Athletics, Close Combat, Perception"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Bite",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 10,
+          "dv": {
+            "raw": "2P",
+            "n": 2,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Rat Master",
+          "action": "Complex Action",
+          "uses": null,
+          "duration": null,
+          "text": "Using a Complex Action, the devil rat can telepathically control the behavior of up to 30 rats within 100m of it, directing them to take whatever actions it wishes. This power is a magical effect with a Force equal to the devil rat’s"
+        }
+      ],
+      "traits": [
+        {
+          "name": "Vision Enhancements",
+          "text": "Low-Light"
+        },
+        {
+          "name": "Devil rats are immune to toxins and diseases.",
+          "text": ""
+        },
+        {
+          "name": "Aversion to Sunlight",
+          "text": "While in natural sunlight, a"
+        },
+        {
+          "name": "devil rat suffers Liability on all tests.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": 2,
+      "resonance": null,
+      "notes": null,
+      "raw": "DEVIL RAT\nThreat: 1 Initiative: 1d6+3\nBody: 2 Willpower: 2\nAgility: 5 Logic: 1\nReaction: 5 Intuition: 5\nEdge: - Charisma: 3\nMagic: 2\n\nDef Score: 4 Wound Lmt: 2\nMove Rate: 12m Health: 4\n\nDEFENSES\nDmg Resistance (Thick Hide): 5\nSKILLS\nPrimary [7]: Stealth\nSecondary [3]: Athletics, Close Combat, Perception\nWEAPONS ACTION ATK DV\nBite Major 10 2P\nTRAITS\nVision Enhancements: Low-Light\nDevil rats are immune to toxins and diseases.\nAversion to Sunlight: While in natural sunlight, a\ndevil rat suffers Liability on all tests.\nABILITIES\nRat Master (Complex Action): Using a Complex\nAction, the devil rat can telepathically control the\nbehavior of up to 30 rats within 100m of it, directing\nthem to take whatever actions it wishes. This power is\na magical effect with a Force equal to the devil rat’s\nMagic."
+    },
+    {
+      "slug": "eastern-dragon",
+      "name": "EASTERN DRAGON",
+      "pages": [
+        71
+      ],
+      "threatRating": 6,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 8,
+      "defenseScoreAlt": null,
+      "move": "20m Health: 30",
+      "health": 30,
+      "woundLimit": null,
+      "dmgResistance": 28,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 5,
+        "bonus": 10,
+        "raw": "5d6+10"
+      },
+      "skills": {
+        "tier1": {
+          "value": 10,
+          "list": "Athletics, Close Combat, Influence,"
+        },
+        "tier2": {
+          "value": 6,
+          "list": "Biotech, Con, Engineering, Software,"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Claw (Reach: 2m)",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 25,
+          "dv": {
+            "raw": "14P",
+            "n": 14,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Bite",
+          "action": "Complex",
+          "fireModes": null,
+          "pool": 22,
+          "dv": {
+            "raw": "16P",
+            "n": 16,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Breath Weapon",
+          "action": "Complex",
+          "fireModes": null,
+          "pool": "AOE",
+          "dv": {
+            "raw": "14P Fire",
+            "n": 14,
+            "type": "P",
+            "element": "fire"
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Breath Weapon",
+          "action": "Complex Action",
+          "uses": null,
+          "duration": null,
+          "text": "The dragon uses its Breath Weapon attack above, affecting everything in a 30m cone. At any given point, the cone’s width is equal to its length. The dragon cannot use its Breath Weapon if it already used it in this Combat Turn or the previous Combat Turn."
+        },
+        {
+          "name": "Furious Rake",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "Twice per Combat Turn, at the end of any enemy’s Action Phase, the dragon can use its Claw attack."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Physical, Fire Resistance",
+          "text": ""
+        },
+        {
+          "name": "Apex Predator",
+          "text": "Can’t gain Frightened status."
+        },
+        {
+          "name": "Vision Enhancements",
+          "text": "Flare Compensation, Low-"
+        },
+        {
+          "name": "Light, Ultrasound, Vision Magnification",
+          "text": ""
+        },
+        {
+          "name": "Dual Natured",
+          "text": "Dragons always exist on both the"
+        },
+        {
+          "name": "astral and physical planes, and can interact with",
+          "text": ""
+        },
+        {
+          "name": "anything on either plane. Their Armor applies to",
+          "text": ""
+        },
+        {
+          "name": "attacks from both the physical and astral planes.",
+          "text": ""
+        },
+        {
+          "name": "Unchained",
+          "text": "If the dragon is under an effect that they"
+        },
+        {
+          "name": "roll at the end of the Combat Turn or their Action",
+          "text": ""
+        },
+        {
+          "name": "Phase to end, they instead roll at the start of their",
+          "text": ""
+        },
+        {
+          "name": "Action Phase.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": {
+        "pool": null,
+        "fixedHits": null,
+        "poolNote": null,
+        "drainPool": 22,
+        "drainFixedHits": 6,
+        "fadingPool": null,
+        "fadingFixedHits": null,
+        "spells": [
+          "Antidote",
+          "Control Actions",
+          "Detect Life",
+          "Detect"
+        ],
+        "raw": "Drain Tests: 22 (6 hits) Spells: Antidote, Control Actions, Detect Life, Detect"
+      },
+      "matrix": null,
+      "edge": 6,
+      "magicRating": 12,
+      "resonance": null,
+      "notes": null,
+      "raw": "EASTERN DRAGON\nThreat: 6 Initiative: 5d6+10\nBody: 14 Willpower: 12\nAgility: 12 Logic: 9\nReaction: 8 Intuition: 11\nEdge: 6 Charisma: 10\nMagic: 12\n\nDef Score: 8 Wound Lmt: 20\nMove Rate: 20m Health: 30\n\nDEFENSES\nDmg Resistance (Dragon Scale): 28\nSKILLS\nPrimary [10]: Athletics, Close Combat, Influence,\nInsight, Mysticism, Outdoors, Perception, Sorcery\nSecondary [6]: Biotech, Con, Engineering, Software,\nStealth\nWEAPONS ACTION ATK DV\nClaw (Reach: 2m) Major 25 14P\nBite Complex 22 16P\nBreath Weapon Complex AOE 14P\nFire\nTRAITS\nPhysical, Fire Resistance\nApex Predator: Can’t gain Frightened status.\nVision Enhancements: Flare Compensation, Low-\nLight, Ultrasound, Vision Magnification\nDual Natured: Dragons always exist on both the\nastral and physical planes, and can interact with\nanything on either plane. Their Armor applies to\nattacks from both the physical and astral planes.\nUnchained: If the dragon is under an effect that they\nroll at the end of the Combat Turn or their Action\nPhase to end, they instead roll at the start of their\nAction Phase.\nABILITIES\nBreath Weapon (Complex Action): The dragon uses\nits Breath Weapon attack above, affecting everything\nin a 30m cone. At any given point, the cone’s width is\nequal to its length. The dragon cannot use its Breath\nWeapon if it already used it in this Combat Turn or\nthe previous Combat Turn.\nFurious Rake: Twice per Combat Turn, at the end of\nany enemy’s Action Phase, the dragon can use its\nClaw attack.\nMAGIC\nDrain Tests: 22 (6 hits)\nSpells: Antidote, Control Actions, Detect Life, Detect\nMagic, Influence, Mass Confusion, Mindlink, Terrify\nMysticism Talents: Astral Perception, Aura\nManipulation, Counter, Mana Barrier, Negate\nSuperior Quickening: The dragon can sustain up to 6\nspells or magical abilities without penalty."
+    },
+    {
+      "slug": "feathered-serpent",
+      "name": "FEATHERED SERPENT",
+      "pages": [
+        72
+      ],
+      "threatRating": 6,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 8,
+      "defenseScoreAlt": null,
+      "move": "20m Health: 26",
+      "health": 26,
+      "woundLimit": null,
+      "dmgResistance": 26,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 4,
+        "bonus": 14,
+        "raw": "4d6+14"
+      },
+      "skills": {
+        "tier1": {
+          "value": 10,
+          "list": "Athletics, Close Combat, Influence,"
+        },
+        "tier2": {
+          "value": 6,
+          "list": "Biotech, Con, Engineering, Software,"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Claw (Reach: 2m)",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 27,
+          "dv": {
+            "raw": "12P",
+            "n": 12,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Bite",
+          "action": "Complex",
+          "fireModes": null,
+          "pool": 24,
+          "dv": {
+            "raw": "14P",
+            "n": 14,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Tail",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 24,
+          "dv": {
+            "raw": "12P",
+            "n": 12,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Furious Rake",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "Twice per Combat Turn, at the end of any enemy’s Action Phase, the dragon can use its Claw attack."
+        },
+        {
+          "name": "Tail",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "When the dragon damages a target with their Tail attack, they can deliver a toxin through their stinger with a Power of 12. The target must make a toxin resistance test using Body + Willpower. If the target fails, reduce the Power of the toxin by their hits. The target takes Physical damage equal to the remaining Power of the toxin."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Physical, Toxin Resistance",
+          "text": ""
+        },
+        {
+          "name": "Apex Predator",
+          "text": "Can’t gain Frightened status."
+        },
+        {
+          "name": "Vision Enhancements",
+          "text": "Flare Compensation, Low-"
+        },
+        {
+          "name": "Light, Ultrasound, Vision Magnification",
+          "text": ""
+        },
+        {
+          "name": "Dual Natured",
+          "text": "Dragons always exist on both the"
+        },
+        {
+          "name": "astral and physical planes, and can interact with",
+          "text": ""
+        },
+        {
+          "name": "anything on either plane. Their Armor applies to",
+          "text": ""
+        },
+        {
+          "name": "attacks from both the physical and astral planes.",
+          "text": ""
+        },
+        {
+          "name": "Unchained",
+          "text": "If the dragon is under an effect that they"
+        },
+        {
+          "name": "roll at the end of the Combat Turn or their Action",
+          "text": ""
+        },
+        {
+          "name": "Phase to end, they instead roll at the start of their",
+          "text": ""
+        },
+        {
+          "name": "Action Phase.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": {
+        "pool": null,
+        "fixedHits": null,
+        "poolNote": null,
+        "drainPool": 22,
+        "drainFixedHits": 6,
+        "fadingPool": null,
+        "fadingFixedHits": null,
+        "spells": [
+          "Agony",
+          "Alter Memory",
+          "Detect Life",
+          "Detect"
+        ],
+        "raw": "Drain Tests: 22 (6 hits) Spells: Agony, Alter Memory, Detect Life, Detect"
+      },
+      "matrix": null,
+      "edge": 6,
+      "magicRating": 12,
+      "resonance": null,
+      "notes": null,
+      "raw": "FEATHERED SERPENT\nThreat: 6 Initiative: 4d6+14\nBody: 12 Willpower: 12\nAgility: 14 Logic: 10\nReaction: 10 Intuition: 10\nEdge: 6 Charisma: 10\nMagic: 12\n\nDef Score: 8 Wound Lmt: 20\nMove Rate: 20m Health: 26\n\nDEFENSES\nDmg Resistance (Dragon Scale): 26\nSKILLS\nPrimary [10]: Athletics, Close Combat, Influence,\nInsight, Mysticism, Outdoors, Perception, Sorcery\nSecondary [6]: Biotech, Con, Engineering, Software,\nStealth\nWEAPONS ACTION ATK DV\nClaw (Reach: 2m) Major 27 12P\nBite Complex 24 14P\nTail Major 24 12P\nTRAITS\nPhysical, Toxin Resistance\nApex Predator: Can’t gain Frightened status.\nVision Enhancements: Flare Compensation, Low-\nLight, Ultrasound, Vision Magnification\nDual Natured: Dragons always exist on both the\nastral and physical planes, and can interact with\nanything on either plane. Their Armor applies to\nattacks from both the physical and astral planes.\nUnchained: If the dragon is under an effect that they\nroll at the end of the Combat Turn or their Action\nPhase to end, they instead roll at the start of their\nAction Phase.\nABILITIES\nFurious Rake: Twice per Combat Turn, at the end of\nany enemy’s Action Phase, the dragon can use its\nClaw attack.\nTail: When the dragon damages a target with their\nTail attack, they can deliver a toxin through their\nstinger with a Power of 12. The target must make a\ntoxin resistance test using Body + Willpower. If the\ntarget fails, reduce the Power of the toxin by their\nhits. The target takes Physical damage equal to the\nremaining Power of the toxin.\nMAGIC\nDrain Tests: 22 (6 hits)\nSpells: Agony, Alter Memory, Detect Life, Detect\nMagic, Heal, Mass Confusion, Mindlink, Terrify\nMysticism Talents: Astral Perception, Aura\nManipulation, Counter, Mana Barrier, Negate\nSuperior Quickening: The dragon can sustain up to 6\nspells or magical abilities without penalty."
+    },
+    {
+      "slug": "western-dragon",
+      "name": "WESTERN DRAGON",
+      "pages": [
+        73
+      ],
+      "threatRating": 6,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 7,
+      "defenseScoreAlt": null,
+      "move": "20m Health: 34",
+      "health": 34,
+      "woundLimit": null,
+      "dmgResistance": 32,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 4,
+        "bonus": 12,
+        "raw": "4d6+12"
+      },
+      "skills": {
+        "tier1": {
+          "value": 10,
+          "list": "Athletics, Close Combat, Influence,"
+        },
+        "tier2": {
+          "value": 6,
+          "list": "Biotech, Con, Engineering, Software,"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Claw (Reach: 2m)",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 23,
+          "dv": {
+            "raw": "16P",
+            "n": 16,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Bite",
+          "action": "Complex",
+          "fireModes": null,
+          "pool": 20,
+          "dv": {
+            "raw": "18P",
+            "n": 18,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Breath Weapon",
+          "action": "Complex",
+          "fireModes": null,
+          "pool": "AOE",
+          "dv": {
+            "raw": "16P Fire",
+            "n": 16,
+            "type": "P",
+            "element": "fire"
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Breath Weapon",
+          "action": "Complex Action",
+          "uses": null,
+          "duration": null,
+          "text": "The dragon uses its Breath Weapon attack above, affecting everything in a 30m cone. At any given point, the cone’s width is equal to its length. The dragon cannot use its Breath Weapon if it already used it in this Combat Turn or the previous Combat Turn."
+        },
+        {
+          "name": "Furious Rake",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "Twice per Combat Turn, at the end of any enemy’s Action Phase, the dragon can use its Claw attack."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Physical, Fire Resistance",
+          "text": ""
+        },
+        {
+          "name": "Apex Predator",
+          "text": "Can’t gain Frightened status."
+        },
+        {
+          "name": "Vision Enhancements",
+          "text": "Flare Compensation, Low-"
+        },
+        {
+          "name": "Light, Ultrasound, Vision Magnification",
+          "text": ""
+        },
+        {
+          "name": "Dual Natured",
+          "text": "Dragons always exist on both the"
+        },
+        {
+          "name": "astral and physical planes, and can interact with",
+          "text": ""
+        },
+        {
+          "name": "anything on either plane. Their Armor applies to",
+          "text": ""
+        },
+        {
+          "name": "attacks from both the physical and astral planes.",
+          "text": ""
+        },
+        {
+          "name": "Unchained",
+          "text": "If the dragon is under an effect that they"
+        },
+        {
+          "name": "roll at the end of the Combat Turn or their Action",
+          "text": ""
+        },
+        {
+          "name": "Phase to end, they instead roll at the start of their",
+          "text": ""
+        },
+        {
+          "name": "Action Phase.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": {
+        "pool": null,
+        "fixedHits": null,
+        "poolNote": null,
+        "drainPool": 22,
+        "drainFixedHits": 6,
+        "fadingPool": null,
+        "fadingFixedHits": null,
+        "spells": [
+          "Antidote",
+          "Bind",
+          "Detect Life",
+          "Detect Magic",
+          "Mass Confusion",
+          "Mind Probe",
+          "Mindlink",
+          "Terrify Mysticism Talents: Astral Perception",
+          "Aura Manipulation",
+          "Counter",
+          "Mana Barrier",
+          "Negate Superior Quickening: The dragon can sustain up to 6 spells or magical abilities without penalty."
+        ],
+        "raw": "Drain Tests: 22 (6 hits) Spells: Antidote, Bind, Detect Life, Detect Magic, Mass Confusion, Mind Probe, Mindlink, Terrify Mysticism Talents: Astral Perception, Aura Manipulation, Counter, Mana Barrier, Negate Superior Quickening: The dragon can sustain up to 6 spells or magical abilities without penalty."
+      },
+      "matrix": null,
+      "edge": 6,
+      "magicRating": 12,
+      "resonance": null,
+      "notes": null,
+      "raw": "WESTERN DRAGON\nThreat: 6 Initiative: 4d6+12\nBody: 17 Willpower: 12\nAgility: 10 Logic: 11\nReaction: 8 Intuition: 9\nEdge: 6 Charisma: 10\nMagic: 12\n\nDef Score: 7 Wound Lmt: 20\nMove Rate: 20m Health: 34\n\nDEFENSES\nDmg Resistance (Dragon Scale): 32\nSKILLS\nPrimary [10]: Athletics, Close Combat, Influence,\nInsight, Mysticism, Outdoors, Perception, Sorcery\nSecondary [6]: Biotech, Con, Engineering, Software,\nStealth\nWEAPONS ACTION ATK DV\nClaw (Reach: 2m) Major 23 16P\nBite Complex 20 18P\nBreath Weapon Complex AOE 16P\nFire\nTRAITS\nPhysical, Fire Resistance\nApex Predator: Can’t gain Frightened status.\nVision Enhancements: Flare Compensation, Low-\nLight, Ultrasound, Vision Magnification\nDual Natured: Dragons always exist on both the\nastral and physical planes, and can interact with\nanything on either plane. Their Armor applies to\nattacks from both the physical and astral planes.\nUnchained: If the dragon is under an effect that they\nroll at the end of the Combat Turn or their Action\nPhase to end, they instead roll at the start of their\nAction Phase.\nABILITIES\nBreath Weapon (Complex Action): The dragon uses\nits Breath Weapon attack above, affecting everything\nin a 30m cone. At any given point, the cone’s width is\nequal to its length. The dragon cannot use its Breath\nWeapon if it already used it in this Combat Turn or\nthe previous Combat Turn.\nFurious Rake: Twice per Combat Turn, at the end of\nany enemy’s Action Phase, the dragon can use its\nClaw attack.\nMAGIC\nDrain Tests: 22 (6 hits)\nSpells: Antidote, Bind, Detect Life, Detect Magic,\nMass Confusion, Mind Probe, Mindlink, Terrify\nMysticism Talents: Astral Perception, Aura\nManipulation, Counter, Mana Barrier, Negate\nSuperior Quickening: The dragon can sustain up to 6\nspells or magical abilities without penalty."
+    },
+    {
+      "slug": "ghoul",
+      "name": "GHOUL",
+      "pages": [
+        74
+      ],
+      "threatRating": 2,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 3,
+      "defenseScoreAlt": null,
+      "move": "10m Health: 10",
+      "health": 10,
+      "woundLimit": null,
+      "dmgResistance": 10,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 2,
+        "bonus": 3,
+        "raw": "2d6+3"
+      },
+      "skills": {
+        "tier1": {
+          "value": 4,
+          "list": "Close Combat, Perception, Stealth"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Claws",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 10,
+          "dv": {
+            "raw": "6P",
+            "n": 6,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Bite",
+          "action": "Complex",
+          "fireModes": null,
+          "pool": 9,
+          "dv": {
+            "raw": "8P",
+            "n": 8,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Diseased",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "If the ghoul damages a target with a melee attack, it delivers the HMHVV III disease, with a Power of 4. The target must make a disease resistance test using Body + Willpower against a threshold of the disease’s Power. If they fail, the target gains the Sick status. This disease onsets 12 hours later, giving the target the Impaired status. The target can repeat the disease resistance test at the end of each day to end the Sick status. After 3 days, if they have not removed the Sick status, the target turns into a ghoul."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Dual Natured",
+          "text": "Ghouls always exist on both the astral"
+        },
+        {
+          "name": "and physical planes, and can interact with anything",
+          "text": ""
+        },
+        {
+          "name": "on either plane. Their Armor applies to attacks from",
+          "text": ""
+        },
+        {
+          "name": "both the physical and astral planes.",
+          "text": ""
+        },
+        {
+          "name": "Aversion to Sunlight",
+          "text": "While in natural sunlight, a"
+        },
+        {
+          "name": "ghoul suffers Liability on all tests.",
+          "text": ""
+        },
+        {
+          "name": "Pack Hunter",
+          "text": "If one or more of the ghoul’s allies is"
+        },
+        {
+          "name": "within melee reach of a target, the ghoul gains",
+          "text": ""
+        },
+        {
+          "name": "Leverage on melee attacks against that target.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "GHOUL\nThreat: 2 Initiative: 2d6+3\nBody: 6 Willpower: 4\nAgility: 4 Logic: 2\nReaction: 4 Intuition: 4\nEdge: - Charisma: 1\n\nDef Score: 3 Wound Lmt: 4\nMove Rate: 10m Health: 10\n\nDEFENSES\nDmg Resistance (Thick Hide): 10\nSKILLS\nPrimary [4]: Close Combat, Perception, Stealth\nWEAPONS ACTION ATK DV\nClaws Major 10 6P\nBite Complex 9 8P\nTRAITS\nDual Natured: Ghouls always exist on both the astral\nand physical planes, and can interact with anything\non either plane. Their Armor applies to attacks from\nboth the physical and astral planes.\nAversion to Sunlight: While in natural sunlight, a\nghoul suffers Liability on all tests.\nPack Hunter: If one or more of the ghoul’s allies is\nwithin melee reach of a target, the ghoul gains\nLeverage on melee attacks against that target.\nABILITIES\nDiseased: If the ghoul damages a target with a melee\nattack, it delivers the HMHVV III disease, with a\nPower of 4. The target must make a disease resistance\ntest using Body + Willpower against a threshold of\nthe disease’s Power. If they fail, the target gains the\nSick status. This disease onsets 12 hours later, giving\nthe target the Impaired status. The target can repeat\nthe disease resistance test at the end of each day to\nend the Sick status. After 3 days, if they have not\nremoved the Sick status, the target turns into a ghoul."
+    },
+    {
+      "slug": "ghoul-troll",
+      "name": "GHOUL (TROLL)",
+      "pages": [
+        75
+      ],
+      "threatRating": 2,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 3,
+      "defenseScoreAlt": null,
+      "move": "10m Health: 12",
+      "health": 12,
+      "woundLimit": null,
+      "dmgResistance": 16,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 2,
+        "bonus": 3,
+        "raw": "2d6+3"
+      },
+      "skills": {
+        "tier1": {
+          "value": 4,
+          "list": "Close Combat, Perception, Stealth"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Claws (Reach: 2m)",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 10,
+          "dv": {
+            "raw": "8P",
+            "n": 8,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Bite",
+          "action": "Complex",
+          "fireModes": null,
+          "pool": 8,
+          "dv": {
+            "raw": "10P",
+            "n": 10,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Diseased",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "If the ghoul damages a target with a melee attack, it delivers the HMHVV III disease, with a Power of 4. The target must make a disease resistance test using Body + Willpower against a threshold of the disease’s Power. If they fail, the target gains the Sick status. This disease onsets 12 hours later, giving the target the Impaired status. The target can repeat the disease resistance test at the end of each day to end the Sick status. After 3 days, if they have not removed the Sick status, the target turns into a ghoul. GHOUL FODDER"
+        }
+      ],
+      "traits": [
+        {
+          "name": "Dual Natured",
+          "text": "Ghouls always exist on both the astral"
+        },
+        {
+          "name": "and physical planes, and can interact with anything",
+          "text": ""
+        },
+        {
+          "name": "on either plane. Their Armor applies to attacks from",
+          "text": ""
+        },
+        {
+          "name": "both the physical and astral planes.",
+          "text": ""
+        },
+        {
+          "name": "Aversion to Sunlight",
+          "text": "While in natural sunlight, a"
+        },
+        {
+          "name": "ghoul suffers Liability on all tests.",
+          "text": ""
+        },
+        {
+          "name": "Pack Hunter",
+          "text": "If one or more of the ghoul’s allies is"
+        },
+        {
+          "name": "within melee reach of a target, the ghoul gains",
+          "text": ""
+        },
+        {
+          "name": "Leverage on melee attacks against that target.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "GHOUL (TROLL)\nThreat: 2 Initiative: 2d6+3\nBody: 10 Willpower: 4\nAgility: 4 Logic: 2\nReaction: 4 Intuition: 4\nEdge: - Charisma: 1\n\nDef Score: 3 Wound Lmt: 4\nMove Rate: 10m Health: 12\n\nDEFENSES\nDmg Resistance (Thick Hide): 16\nSKILLS\nPrimary [4]: Close Combat, Perception, Stealth\nWEAPONS ACTION ATK DV\nClaws (Reach: 2m) Major 10 8P\nBite Complex 8 10P\nTRAITS\nDual Natured: Ghouls always exist on both the astral\nand physical planes, and can interact with anything\non either plane. Their Armor applies to attacks from\nboth the physical and astral planes.\nAversion to Sunlight: While in natural sunlight, a\nghoul suffers Liability on all tests.\nPack Hunter: If one or more of the ghoul’s allies is\nwithin melee reach of a target, the ghoul gains\nLeverage on melee attacks against that target.\nABILITIES\nDiseased: If the ghoul damages a target with a melee\nattack, it delivers the HMHVV III disease, with a\nPower of 4. The target must make a disease resistance\ntest using Body + Willpower against a threshold of\nthe disease’s Power. If they fail, the target gains the\nSick status. This disease onsets 12 hours later, giving\nthe target the Impaired status. The target can repeat\nthe disease resistance test at the end of each day to\nend the Sick status. After 3 days, if they have not\nremoved the Sick status, the target turns into a ghoul.\nGHOUL FODDER"
+    },
+    {
+      "slug": "ghoul-fodder",
+      "name": "GHOUL FODDER",
+      "pages": [
+        75
+      ],
+      "threatRating": 1,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 2,
+      "defenseScoreAlt": null,
+      "move": "10m Health: 5",
+      "health": 5,
+      "woundLimit": null,
+      "dmgResistance": 8,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 2,
+        "bonus": 2,
+        "raw": "2d6+2"
+      },
+      "skills": {
+        "tier1": {
+          "value": 4,
+          "list": "Close Combat, Perception, Stealth"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Claws",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 8,
+          "dv": {
+            "raw": "6P",
+            "n": 6,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Bite",
+          "action": "Complex",
+          "fireModes": null,
+          "pool": 6,
+          "dv": {
+            "raw": "8P",
+            "n": 8,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Diseased",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "If the ghoul damages a target with a melee attack, it delivers the HMHVV III disease, with a Power of 3. The target must make a disease resistance test using Body + Willpower against a threshold of the disease’s Power. If they fail, the target gains the Sick status. This disease onsets 12 hours later, giving the target the Impaired status. The target can repeat the disease resistance test at the end of each day to end the Sick status. After 3 days, if they have not removed the Sick status, the target turns into a ghoul."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Dual Natured",
+          "text": "Ghouls always exist on both the astral"
+        },
+        {
+          "name": "and physical planes, and can interact with anything",
+          "text": ""
+        },
+        {
+          "name": "on either plane. Their Armor applies to attacks from",
+          "text": ""
+        },
+        {
+          "name": "both the physical and astral planes.",
+          "text": ""
+        },
+        {
+          "name": "Aversion to Sunlight",
+          "text": "While in natural sunlight, a"
+        },
+        {
+          "name": "ghoul suffers Liability on all tests.",
+          "text": ""
+        },
+        {
+          "name": "Pack Hunter",
+          "text": "If one or more of the ghoul’s allies is"
+        },
+        {
+          "name": "within melee reach of a target, the ghoul gains",
+          "text": ""
+        },
+        {
+          "name": "Leverage on melee attacks against that target.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "GHOUL FODDER\nThreat: 1 Initiative: 2d6+2\nBody: 6 Willpower: 2\nAgility: 2 Logic: 1\nReaction: 2 Intuition: 2\nEdge: - Charisma: 1\n\nDef Score: 2 Wound Lmt: 2\nMove Rate: 10m Health: 5\n\nDEFENSES\nDmg Resistance (Thick Hide): 8\nSKILLS\nPrimary [4]: Close Combat, Perception, Stealth\nWEAPONS ACTION ATK DV\nClaws Major 8 6P\nBite Complex 6 8P\nTRAITS\nDual Natured: Ghouls always exist on both the astral\nand physical planes, and can interact with anything\non either plane. Their Armor applies to attacks from\nboth the physical and astral planes.\nAversion to Sunlight: While in natural sunlight, a\nghoul suffers Liability on all tests.\nPack Hunter: If one or more of the ghoul’s allies is\nwithin melee reach of a target, the ghoul gains\nLeverage on melee attacks against that target.\nABILITIES\nDiseased: If the ghoul damages a target with a melee\nattack, it delivers the HMHVV III disease, with a\nPower of 3. The target must make a disease resistance\ntest using Body + Willpower against a threshold of\nthe disease’s Power. If they fail, the target gains the\nSick status. This disease onsets 12 hours later, giving\nthe target the Impaired status. The target can repeat\nthe disease resistance test at the end of each day to\nend the Sick status. After 3 days, if they have not\nremoved the Sick status, the target turns into a ghoul."
+    },
+    {
+      "slug": "awakened-ghoul-adept",
+      "name": "AWAKENED GHOUL (ADEPT)",
+      "pages": [
+        76
+      ],
+      "threatRating": 3,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 4,
+      "defenseScoreAlt": null,
+      "move": "10m Health: 12",
+      "health": 12,
+      "woundLimit": null,
+      "dmgResistance": 13,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 3,
+        "bonus": 4,
+        "raw": "3d6+4"
+      },
+      "skills": {
+        "tier1": {
+          "value": 6,
+          "list": "Close Combat, Stealth"
+        },
+        "tier2": {
+          "value": 4,
+          "list": "Channeling, Insight, Mysticism,"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Claws",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 14,
+          "dv": {
+            "raw": "7P",
+            "n": 7,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Bite",
+          "action": "Complex",
+          "fireModes": null,
+          "pool": 12,
+          "dv": {
+            "raw": "9P",
+            "n": 9,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Diseased",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "If the ghoul damages a target with a melee attack, it delivers the HMHVV III disease, with a Power of 5. The target must make a disease resistance test using Body + Willpower against a threshold of the disease’s Power. If they fail, the target gains the Sick status. This disease onsets 12 hours later, giving the target the Impaired status. The target can repeat the disease resistance test at the end of each day to end the Sick status. After 3 days, if they have not removed the Sick status, the target turns into a ghoul."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Dual Natured",
+          "text": "Ghouls always exist on both the astral"
+        },
+        {
+          "name": "and physical planes, and can interact with anything",
+          "text": ""
+        },
+        {
+          "name": "on either plane. Their Armor applies to attacks from",
+          "text": ""
+        },
+        {
+          "name": "both the physical and astral planes.",
+          "text": ""
+        },
+        {
+          "name": "Aversion to Sunlight",
+          "text": "While in natural sunlight, a"
+        },
+        {
+          "name": "ghoul suffers Liability on all tests.",
+          "text": ""
+        },
+        {
+          "name": "Improved Crit",
+          "text": "On attack tests, the ghoul scores a"
+        },
+        {
+          "name": "critical hit with their Crit Dice on a 5 or a 6.",
+          "text": ""
+        },
+        {
+          "name": "Pack Hunter",
+          "text": "If one or more of the ghoul’s allies is"
+        },
+        {
+          "name": "within melee reach of a target, the ghoul gains",
+          "text": ""
+        },
+        {
+          "name": "Leverage on melee attacks against that target.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "AWAKENED GHOUL (ADEPT)\nThreat: 3 Initiative: 3d6+4\nBody: 8 Willpower: 4\nAgility: 6 Logic: 2\nReaction: 4 Intuition: 4\nEdge: - Charisma: 1\n\nDef Score: 4 Wound Lmt: 4\nMove Rate: 10m Health: 12\n\nDEFENSES\nDmg Resistance (Thick Hide): 13\nSKILLS\nPrimary [6]: Close Combat, Stealth\nSecondary [4]: Channeling, Insight, Mysticism,\nPerception\nWEAPONS ACTION ATK DV\nClaws Major 14 7P\nBite Complex 12 9P\nTRAITS\nDual Natured: Ghouls always exist on both the astral\nand physical planes, and can interact with anything\non either plane. Their Armor applies to attacks from\nboth the physical and astral planes.\nAversion to Sunlight: While in natural sunlight, a\nghoul suffers Liability on all tests.\nImproved Crit: On attack tests, the ghoul scores a\ncritical hit with their Crit Dice on a 5 or a 6.\nPack Hunter: If one or more of the ghoul’s allies is\nwithin melee reach of a target, the ghoul gains\nLeverage on melee attacks against that target.\nABILITIES\nDiseased: If the ghoul damages a target with a melee\nattack, it delivers the HMHVV III disease, with a\nPower of 5. The target must make a disease resistance\ntest using Body + Willpower against a threshold of\nthe disease’s Power. If they fail, the target gains the\nSick status. This disease onsets 12 hours later, giving\nthe target the Impaired status. The target can repeat\nthe disease resistance test at the end of each day to\nend the Sick status. After 3 days, if they have not\nremoved the Sick status, the target turns into a ghoul."
+    },
+    {
+      "slug": "awakened-ghoul-shaman",
+      "name": "AWAKENED GHOUL (SHAMAN)",
+      "pages": [
+        77
+      ],
+      "threatRating": 3,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 3,
+      "defenseScoreAlt": null,
+      "move": "10m Health: 12",
+      "health": 12,
+      "woundLimit": null,
+      "dmgResistance": 12,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 2,
+        "bonus": 5,
+        "raw": "2d6+5"
+      },
+      "skills": {
+        "tier1": {
+          "value": 6,
+          "list": "Close Combat, Insight, Mysticism,"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Claws",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 12,
+          "dv": {
+            "raw": "6P",
+            "n": 6,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Bite",
+          "action": "Complex",
+          "fireModes": null,
+          "pool": 10,
+          "dv": {
+            "raw": "8P",
+            "n": 8,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Frigid (Spell)",
+          "action": "Complex",
+          "fireModes": null,
+          "pool": "AOE",
+          "dv": {
+            "raw": "(F+2)P Cold",
+            "force": true,
+            "mod": 2,
+            "type": "P",
+            "element": "cold"
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Diseased",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "If the ghoul damages a target with a melee attack, it delivers the HMHVV III disease, with a Power of 5. The target must make a disease resistance test using Body + Willpower against a threshold of the disease’s Power. If they fail, the target gains the Sick status. This disease onsets 12 hours later, giving the target the Impaired status. The target can repeat the disease resistance test at the end of each day to end the Sick status. After 3 days, if they have not removed the Sick status, the target turns into a ghoul."
+        },
+        {
+          "name": "Sacrifice",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "When they are hit by an attack, the ghoul shaman can spend their Interrupt action to make the attack target an adjacent willing ally instead. If the attack would miss the new target, it instead hits with 0 net hits."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Dual Natured",
+          "text": "Ghouls always exist on both the astral"
+        },
+        {
+          "name": "and physical planes, and can interact with anything",
+          "text": ""
+        },
+        {
+          "name": "on either plane. Their Armor applies to attacks from",
+          "text": ""
+        },
+        {
+          "name": "both the physical and astral planes. Unless specified",
+          "text": ""
+        },
+        {
+          "name": "otherwise, any of the ghoul’s abilities can be used on",
+          "text": ""
+        },
+        {
+          "name": "the astral plane (if they cast a spell, it still requires the",
+          "text": ""
+        },
+        {
+          "name": "Astral keyword to be used on the astral plane).",
+          "text": ""
+        },
+        {
+          "name": "Aversion to Sunlight",
+          "text": "While in natural sunlight, a"
+        },
+        {
+          "name": "ghoul suffers Liability on all tests.",
+          "text": ""
+        },
+        {
+          "name": "Pack Hunter",
+          "text": "If one or more of the ghoul’s allies is"
+        },
+        {
+          "name": "within melee reach of a target, the ghoul gains",
+          "text": ""
+        },
+        {
+          "name": "Leverage on melee attacks against that target.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": {
+        "pool": null,
+        "fixedHits": null,
+        "poolNote": null,
+        "drainPool": 10,
+        "drainFixedHits": 2,
+        "fadingPool": null,
+        "fadingFixedHits": null,
+        "spells": [
+          "Detect Life",
+          "Frigid",
+          "Paralyze",
+          "Manabolt",
+          "Scramble"
+        ],
+        "raw": "Drain Tests: 10 (2 hits) Spells: Detect Life, Frigid, Paralyze, Manabolt, Scramble Quickening: The ghoul shaman can sustain one spell or magical ability without penalty."
+      },
+      "matrix": null,
+      "edge": 1,
+      "magicRating": 4,
+      "resonance": null,
+      "notes": null,
+      "raw": "AWAKENED GHOUL (SHAMAN)\nThreat: 3 Initiative: 2d6+5\nBody: 6 Willpower: 4\nAgility: 4 Logic: 2\nReaction: 4 Intuition: 4\nEdge: 1 Charisma: 1\nMagic: 4\n\nDef Score: 3 Wound Lmt: 6\nMove Rate: 10m Health: 12\n\nDEFENSES\nDmg Resistance (Thick Hide): 12\nSKILLS\nPrimary [6]: Close Combat, Insight, Mysticism,\nPerception, Sorcery, Stealth\nWEAPONS ACTION ATK DV\nClaws Major 12 6P\nBite Complex 10 8P\nFrigid (Spell) Complex AOE (F+2)P\nCold\nManabolt (Spell) Complex - (F+1)\nP/S\nTRAITS\nDual Natured: Ghouls always exist on both the astral\nand physical planes, and can interact with anything\non either plane. Their Armor applies to attacks from\nboth the physical and astral planes. Unless specified\notherwise, any of the ghoul’s abilities can be used on\nthe astral plane (if they cast a spell, it still requires the\nAstral keyword to be used on the astral plane).\nAversion to Sunlight: While in natural sunlight, a\nghoul suffers Liability on all tests.\nPack Hunter: If one or more of the ghoul’s allies is\nwithin melee reach of a target, the ghoul gains\nLeverage on melee attacks against that target.\nABILITIES\nDiseased: If the ghoul damages a target with a melee\nattack, it delivers the HMHVV III disease, with a\nPower of 5. The target must make a disease resistance\ntest using Body + Willpower against a threshold of\nthe disease’s Power. If they fail, the target gains the\nSick status. This disease onsets 12 hours later, giving\nthe target the Impaired status. The target can repeat\nthe disease resistance test at the end of each day to\nend the Sick status. After 3 days, if they have not\nremoved the Sick status, the target turns into a ghoul.\nSacrifice: When they are hit by an attack, the ghoul\nshaman can spend their Interrupt action to make the\nattack target an adjacent willing ally instead. If the\nattack would miss the new target, it instead hits with\n0 net hits.\nMAGIC\nDrain Tests: 10 (2 hits)\nSpells: Detect Life, Frigid, Paralyze, Manabolt,\nScramble\nQuickening: The ghoul shaman can sustain one spell\nor magical ability without penalty."
+    },
+    {
+      "slug": "cicada-mother-spirit",
+      "name": "CICADA MOTHER SPIRIT",
+      "pages": [
+        80
+      ],
+      "threatRating": 4,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 3,
+      "defenseScoreAlt": null,
+      "move": "10m",
+      "health": 12,
+      "woundLimit": null,
+      "dmgResistance": 11,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 3,
+        "bonus": 6,
+        "raw": "3d6+6"
+      },
+      "skills": {
+        "tier1": {
+          "value": 6,
+          "list": "Close Combat, Mysticism"
+        },
+        "tier2": {
+          "value": 4,
+          "list": "Influence, Perception, Stealth"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Bite",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 16,
+          "dv": {
+            "raw": "9P",
+            "n": 9,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [],
+      "traits": [
+        {
+          "name": "Physical Resistance",
+          "text": ""
+        },
+        {
+          "name": "Unphased",
+          "text": "Can’t gain Frightened or Wounded status."
+        },
+        {
+          "name": "Toxin & Disease Immunity",
+          "text": "The spirit is immune to"
+        },
+        {
+          "name": "diseases & toxins other than insecticides.",
+          "text": ""
+        },
+        {
+          "name": "Banishing Resistance",
+          "text": "When targeted by the Negate"
+        },
+        {
+          "name": "Mysticism power, double the spirit’s Force.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "CICADA MOTHER SPIRIT\nThreat: 4 Initiative: 3d6+6\nBody: 5 Willpower: 6\nAgility: 7 Logic: 6\nReaction: 5 Intuition: 4\nEdge: - Charisma: 6\nForce: 6\n\nDef Score: 3 Wound Lmt: -\nMove Rate: 10m\n(Flying) Health: 12\n\nDEFENSES\nDmg Resistance (Armor-6): 11\nSKILLS\nPrimary [6]: Close Combat, Mysticism\nSecondary [4]: Influence, Perception, Stealth\nWEAPONS ACTION ATK DV\nBite Major 16 9P\nTRAITS\nPhysical Resistance\nUnphased: Can’t gain Frightened or Wounded status.\nToxin & Disease Immunity: The spirit is immune to\ndiseases & toxins other than insecticides.\nBanishing Resistance: When targeted by the Negate\nMysticism power, double the spirit’s Force.",
+      "force": 6
+    },
+    {
+      "slug": "cicada-male-spirit",
+      "name": "CICADA MALE SPIRIT",
+      "pages": [
+        81
+      ],
+      "threatRating": 3,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 2,
+      "defenseScoreAlt": null,
+      "move": "10m",
+      "health": 10,
+      "woundLimit": null,
+      "dmgResistance": 7,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 2,
+        "bonus": 4,
+        "raw": "2d6+4"
+      },
+      "skills": {
+        "tier1": {
+          "value": 4,
+          "list": "Close Combat, Mysticism"
+        },
+        "tier2": {
+          "value": 2,
+          "list": "Influence, Perception"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Bite",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 11,
+          "dv": {
+            "raw": "7P",
+            "n": 7,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Deranged Chittering",
+          "action": "Major Action",
+          "uses": null,
+          "duration": "Sustained",
+          "text": "All living beings within 30m that can hear the spirit make a Willpower + Logic magic resistance test with a threshold equal to the spirit’s Force. Any bonuses or penalties a target has against sonic attacks apply to their resistance test. If a target fails, they have Liability on all tests, excluding resistance tests, and a –2 penalty to their Defense Score as long as they can hear any cicada spirit using this power. An affected target can repeat the magic resistance test at the end of each Combat Turn to end this effect. If a target succeeds on their resistance test, they cannot be affected by this power being used by the same spirit again for 24 hours. CICADA NYMPH SPIRIT"
+        }
+      ],
+      "traits": [
+        {
+          "name": "Physical Resistance",
+          "text": ""
+        },
+        {
+          "name": "Unphased",
+          "text": "Can’t gain Frightened or Wounded status."
+        },
+        {
+          "name": "Toxin & Disease Immunity",
+          "text": "The spirit is immune to"
+        },
+        {
+          "name": "diseases & toxins other than insecticides.",
+          "text": ""
+        },
+        {
+          "name": "Banishing Resistance",
+          "text": "When targeted by the Negate"
+        },
+        {
+          "name": "Mysticism power, double the spirit’s Force.",
+          "text": ""
+        },
+        {
+          "name": "Dual Natured",
+          "text": "Insect spirits always exist on both the"
+        },
+        {
+          "name": "astral and physical plane.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "CICADA MALE SPIRIT\nThreat: 3 Initiative: 2d6+4\nBody: 3 Willpower: 4\nAgility: 5 Logic: 4\nReaction: 3 Intuition: 3\nEdge: - Charisma: 4\nForce: 4\n\nDef Score: 2 Wound Lmt: -\nMove Rate: 10m\n(Flying) Health: 10\n\nDEFENSES\nDmg Resistance (Armor-4): 7\nSKILLS\nPrimary [4]: Close Combat, Mysticism\nSecondary [2]: Influence, Perception\nWEAPONS ACTION ATK DV\nBite Major 11 7P\nTRAITS\nPhysical Resistance\nUnphased: Can’t gain Frightened or Wounded status.\nToxin & Disease Immunity: The spirit is immune to\ndiseases & toxins other than insecticides.\nBanishing Resistance: When targeted by the Negate\nMysticism power, double the spirit’s Force.\nDual Natured: Insect spirits always exist on both the\nastral and physical plane.\nABILITIES\nDeranged Chittering (Major Action, Sustained): All\nliving beings within 30m that can hear the spirit make\na Willpower + Logic magic resistance test with a\nthreshold equal to the spirit’s Force. Any bonuses or\npenalties a target has against sonic attacks apply to\ntheir resistance test. If a target fails, they have\nLiability on all tests, excluding resistance tests, and a\n–2 penalty to their Defense Score as long as they can\nhear any cicada spirit using this power. An affected\ntarget can repeat the magic resistance test at the end\nof each Combat Turn to end this effect. If a target\nsucceeds on their resistance test, they cannot be\naffected by this power being used by the same spirit\nagain for 24 hours.\nCICADA NYMPH SPIRIT",
+      "force": 4
+    },
+    {
+      "slug": "cicada-nymph-spirit",
+      "name": "CICADA NYMPH SPIRIT",
+      "pages": [
+        81
+      ],
+      "threatRating": 2,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 3,
+      "defenseScoreAlt": null,
+      "move": "15m",
+      "health": 10,
+      "woundLimit": null,
+      "dmgResistance": 5,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 2,
+        "bonus": 4,
+        "raw": "2d6+4"
+      },
+      "skills": {
+        "tier1": {
+          "value": 3,
+          "list": "Close Combat, Influence, Mysticism,"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Bite",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 10,
+          "dv": {
+            "raw": "6P",
+            "n": 6,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Deranged Chittering",
+          "action": "Major Action",
+          "uses": null,
+          "duration": "Sustained",
+          "text": "All living beings within 30m that can hear the spirit make a Willpower + Logic magic resistance test with a threshold equal to the spirit’s Force. Any bonuses or penalties a target has against sonic attacks apply to their resistance test. If a target fails, they have Liability on all tests, excluding resistance tests, and a –2 penalty to their Defense Score as long as they can hear any cicada spirit using this power. An affected target can repeat the magic resistance test at the end of each Combat Turn to end this effect. If a target succeeds on their resistance test, they cannot be affected by this power being used by the same spirit again for 24 hours."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Physical Resistance",
+          "text": ""
+        },
+        {
+          "name": "Unphased",
+          "text": "Can’t gain Frightened or Wounded status."
+        },
+        {
+          "name": "Toxin & Disease Immunity",
+          "text": "The spirit is immune to"
+        },
+        {
+          "name": "diseases & toxins other than insecticides.",
+          "text": ""
+        },
+        {
+          "name": "Banishing Resistance",
+          "text": "When targeted by the Negate"
+        },
+        {
+          "name": "Mysticism power, double the spirit’s Force.",
+          "text": ""
+        },
+        {
+          "name": "Dual Natured",
+          "text": "Insect spirits always exist on both the"
+        },
+        {
+          "name": "astral and physical plane.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "CICADA NYMPH SPIRIT\nThreat: 2 Initiative: 2d6+4\nBody: 2 Willpower: 3\nAgility: 5 Logic: 3\nReaction: 5 Intuition: 2\nEdge: - Charisma: 3\nForce: 3\n\nDef Score: 3 Wound Lmt: -\nMove Rate: 15m\n(Flying) Health: 10\n\nDEFENSES\nDmg Resistance (Armor-3): 5\nSKILLS\nPrimary [3]: Close Combat, Influence, Mysticism,\nOutdoors, Perception, Stealth\nWEAPONS ACTION ATK DV\nBite Major 10 6P\nTRAITS\nPhysical Resistance\nUnphased: Can’t gain Frightened or Wounded status.\nToxin & Disease Immunity: The spirit is immune to\ndiseases & toxins other than insecticides.\nBanishing Resistance: When targeted by the Negate\nMysticism power, double the spirit’s Force.\nDual Natured: Insect spirits always exist on both the\nastral and physical plane.\nABILITIES\nDeranged Chittering (Major Action, Sustained): All\nliving beings within 30m that can hear the spirit make\na Willpower + Logic magic resistance test with a\nthreshold equal to the spirit’s Force. Any bonuses or\npenalties a target has against sonic attacks apply to\ntheir resistance test. If a target fails, they have\nLiability on all tests, excluding resistance tests, and a\n–2 penalty to their Defense Score as long as they can\nhear any cicada spirit using this power. An affected\ntarget can repeat the magic resistance test at the end\nof each Combat Turn to end this effect. If a target\nsucceeds on their resistance test, they cannot be\naffected by this power being used by the same spirit\nagain for 24 hours.",
+      "force": 3
+    },
+    {
+      "slug": "roach-mother-spirit",
+      "name": "ROACH MOTHER SPIRIT",
+      "pages": [
+        82
+      ],
+      "threatRating": 4,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 4,
+      "defenseScoreAlt": null,
+      "move": "10m Health: 16",
+      "health": 16,
+      "woundLimit": null,
+      "dmgResistance": 16,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 3,
+        "bonus": 6,
+        "raw": "3d6+6"
+      },
+      "skills": {
+        "tier1": {
+          "value": 6,
+          "list": "Athletics, Close Combat, Mysticism,"
+        },
+        "tier2": {
+          "value": 4,
+          "list": "Influence, Insight, Perception, Stealth"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Bite",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 14,
+          "dv": {
+            "raw": "9P",
+            "n": 9,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Slash (Reach: 3m)",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 17,
+          "dv": {
+            "raw": "7P",
+            "n": 7,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Darkness",
+          "action": "Complex Action",
+          "uses": null,
+          "duration": "Sustained",
+          "text": "The spirit casts the spell Shadow at Force 4. It can only sustain one instance of this spell, but suffers no penalties for sustaining it."
+        },
+        {
+          "name": "Grasping Legs",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "If the spirit hits a target with its Slash attack, it immediately makes a subdual test: Body + Athletics opposed by the target’s (Body or Agility) + Athletics. If the spirit wins, the target gains the Immobilized status. The spirit can only immobilize 1 target at a time. The target can spend a Major Action to repeat the subdual test. If the target wins, they are no longer Immobilized."
+        },
+        {
+          "name": "Terrifying Aura",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "Any metahuman that sees the Mother spirit must make a Willpower + Charisma (3) test or gain the Frightened Status. Once a target sees the Mother spirit, they cannot be affected by this power again for 24 hours."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Physical, Fire and Cold Resistance",
+          "text": ""
+        },
+        {
+          "name": "Unphased",
+          "text": "Can’t gain Frightened or Wounded status."
+        },
+        {
+          "name": "Toxin & Disease Immunity",
+          "text": "The spirit is immune to"
+        },
+        {
+          "name": "diseases & toxins other than insecticides.",
+          "text": ""
+        },
+        {
+          "name": "Banishing Resistance",
+          "text": "When targeted by the Negate"
+        },
+        {
+          "name": "Mysticism power, double the spirit’s Force.",
+          "text": ""
+        },
+        {
+          "name": "Dual Natured",
+          "text": "Insect spirits always exist on both the"
+        },
+        {
+          "name": "astral and physical plane.",
+          "text": ""
+        },
+        {
+          "name": "Fear of Sunlight",
+          "text": "While in natural sunlight, the spirit"
+        },
+        {
+          "name": "suffers the Frightened status.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": {
+        "pool": null,
+        "fixedHits": null,
+        "poolNote": null,
+        "drainPool": null,
+        "drainFixedHits": null,
+        "fadingPool": null,
+        "fadingFixedHits": null,
+        "spells": [],
+        "raw": "Magical Being: The spirit does not suffer Drain. Unless specified otherwise, the Force of any of the spirit’s abilities is equal to its Force. Mysticism Talents: Astral Tracking, Mana Barrier, Negate"
+      },
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "ROACH MOTHER SPIRIT\nThreat: 4 Initiative: 3d6+6\nBody: 8 Willpower: 8\nAgility: 7 Logic: 6\nReaction: 6 Intuition: 6\nEdge: - Charisma: 5\nForce: 7\n\nDef Score: 4 Wound Lmt: -\nMove Rate: 10m Health: 16\n\nDEFENSES\nDmg Resistance (Armor-8): 16\nSKILLS\nPrimary [6]: Athletics, Close Combat, Mysticism,\nSorcery\nSecondary [4]: Influence, Insight, Perception, Stealth\nWEAPONS ACTION ATK DV\nBite Major 14 9P\nSlash (Reach: 3m) Major 17 7P\nTRAITS\nPhysical, Fire and Cold Resistance\nUnphased: Can’t gain Frightened or Wounded status.\nToxin & Disease Immunity: The spirit is immune to\ndiseases & toxins other than insecticides.\nBanishing Resistance: When targeted by the Negate\nMysticism power, double the spirit’s Force.\nDual Natured: Insect spirits always exist on both the\nastral and physical plane.\nFear of Sunlight: While in natural sunlight, the spirit\nsuffers the Frightened status.\nABILITIES\nDarkness (Complex Action, Sustained): The spirit\ncasts the spell Shadow at Force 4. It can only sustain\none instance of this spell, but suffers no penalties for\nsustaining it.\nGrasping Legs: If the spirit hits a target with its Slash\nattack, it immediately makes a subdual test: Body +\nAthletics opposed by the target’s (Body or Agility) +\nAthletics. If the spirit wins, the target gains the\nImmobilized status. The spirit can only immobilize 1\ntarget at a time. The target can spend a Major Action\nto repeat the subdual test. If the target wins, they are\nno longer Immobilized.\nTerrifying Aura: Any metahuman that sees the\nMother spirit must make a Willpower + Charisma (3)\ntest or gain the Frightened Status. Once a target sees\nthe Mother spirit, they cannot be affected by this\npower again for 24 hours.\nMAGIC\nMagical Being: The spirit does not suffer Drain.\nUnless specified otherwise, the Force of any of the\nspirit’s abilities is equal to its Force.\nMysticism Talents: Astral Tracking, Mana Barrier,\nNegate",
+      "force": 7
+    },
+    {
+      "slug": "roach-flesh-form-spirit",
+      "name": "ROACH FLESH FORM SPIRIT",
+      "pages": [
+        83
+      ],
+      "threatRating": 1,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 4,
+      "defenseScoreAlt": null,
+      "move": "10m Health: 8",
+      "health": 8,
+      "woundLimit": null,
+      "dmgResistance": 9,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 1,
+        "bonus": 3,
+        "raw": "1d6+3"
+      },
+      "skills": {
+        "tier1": {
+          "value": 4,
+          "list": "Close Combat, Insight, Mysticism"
+        },
+        "tier2": {
+          "value": 2,
+          "list": "Con, Influence, Perception, Stealth"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Bite",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 10,
+          "dv": {
+            "raw": "5P",
+            "n": 5,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Masking",
+          "action": "Complex Action",
+          "uses": null,
+          "duration": "Sustained",
+          "text": "The flesh form spirit can use the Masking ability of the Aura Manipulation Mysticism Talent at Force 4 and suffers no Drain from using it. The spirit can only target itself with this power, and can only disguise its astral signature, not its physical form. It suffers no penalties for sustaining the power."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Fire and Cold Resistance",
+          "text": ""
+        },
+        {
+          "name": "Unphased",
+          "text": "Can’t gain Frightened or Wounded status."
+        },
+        {
+          "name": "Toxin & Disease Immunity",
+          "text": "The spirit is immune to"
+        },
+        {
+          "name": "diseases & toxins other than insecticides.",
+          "text": ""
+        },
+        {
+          "name": "Banishing Resistance",
+          "text": "When targeted by the Negate"
+        },
+        {
+          "name": "Mysticism power, double the spirit’s Force.",
+          "text": ""
+        },
+        {
+          "name": "Dual Natured",
+          "text": "Insect spirits always exist on both the"
+        },
+        {
+          "name": "astral and physical plane.",
+          "text": ""
+        },
+        {
+          "name": "Fear of Sunlight",
+          "text": "While in natural sunlight, the spirit"
+        },
+        {
+          "name": "suffers the Frightened status.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "ROACH FLESH FORM SPIRIT\nThreat: 1 Initiative: 1d6+3\nBody: 5 Willpower: 3\nAgility: 3 Logic: 3\nReaction: 2 Intuition: 3\nEdge: - Charisma: 2\nForce: 2\n\nDef Score: 4 Wound Lmt: -\nMove Rate: 10m Health: 8\n\nDEFENSES\nDmg Resistance (Leather/Armor Clothing): 9\nSKILLS\nPrimary [4]: Close Combat, Insight, Mysticism\nSecondary [2]: Con, Influence, Perception, Stealth\nWEAPONS ACTION ATK DV\nBite Major 10 5P\nTRAITS\nFire and Cold Resistance\nUnphased: Can’t gain Frightened or Wounded status.\nToxin & Disease Immunity: The spirit is immune to\ndiseases & toxins other than insecticides.\nBanishing Resistance: When targeted by the Negate\nMysticism power, double the spirit’s Force.\nDual Natured: Insect spirits always exist on both the\nastral and physical plane.\nFear of Sunlight: While in natural sunlight, the spirit\nsuffers the Frightened status.\nABILITIES\nMasking (Complex Action, Sustained): The flesh\nform spirit can use the Masking ability of the Aura\nManipulation Mysticism Talent at Force 4 and suffers\nno Drain from using it. The spirit can only target itself\nwith this power, and can only disguise its astral\nsignature, not its physical form. It suffers no penalties\nfor sustaining the power.",
+      "force": 2
+    },
+    {
+      "slug": "roach-male-spirit",
+      "name": "ROACH MALE SPIRIT",
+      "pages": [
+        83
+      ],
+      "threatRating": 3,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 3,
+      "defenseScoreAlt": null,
+      "move": "10m Health: 12",
+      "health": 12,
+      "woundLimit": null,
+      "dmgResistance": 12,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 2,
+        "bonus": 5,
+        "raw": "2d6+5"
+      },
+      "skills": {
+        "tier1": {
+          "value": 5,
+          "list": "Athletics, Close Combat, Mysticism"
+        },
+        "tier2": {
+          "value": 3,
+          "list": "Outdoors, Perception, Stealth"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Bite",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 10,
+          "dv": {
+            "raw": "8P",
+            "n": 8,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Slash (Reach: 2m)",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 13,
+          "dv": {
+            "raw": "6P",
+            "n": 6,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Grasping Legs",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "If the spirit hits a target with its Slash attack, it immediately makes a subdual test: Body + Athletics opposed by the target’s (Body or Agility) + Athletics. If the spirit wins, the target gains the Immobilized status. The spirit can only immobilize 1 target at a time. The target can spend a Major Action to repeat the subdual test. If the target wins, they are no longer Immobilized. ROACH FLESH FORM SPIRIT"
+        }
+      ],
+      "traits": [
+        {
+          "name": "Physical, Fire and Cold Resistance",
+          "text": ""
+        },
+        {
+          "name": "Unphased",
+          "text": "Can’t gain Frightened or Wounded status."
+        },
+        {
+          "name": "Toxin & Disease Immunity",
+          "text": "The spirit is immune to"
+        },
+        {
+          "name": "diseases & toxins other than insecticides.",
+          "text": ""
+        },
+        {
+          "name": "Banishing Resistance",
+          "text": "When targeted by the Negate"
+        },
+        {
+          "name": "Mysticism power, double the spirit’s Force.",
+          "text": ""
+        },
+        {
+          "name": "Dual Natured",
+          "text": "Insect spirits always exist on both the"
+        },
+        {
+          "name": "astral and physical plane.",
+          "text": ""
+        },
+        {
+          "name": "Fear of Sunlight",
+          "text": "While in natural sunlight, the spirit"
+        },
+        {
+          "name": "suffers the Frightened status.",
+          "text": ""
+        },
+        {
+          "name": "Improved Crit",
+          "text": "On attack tests, the spirit scores a"
+        },
+        {
+          "name": "critical hit with their Crit Dice on a 5 or a 6.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "ROACH MALE SPIRIT\nThreat: 3 Initiative: 2d6+5\nBody: 6 Willpower: 5\nAgility: 5 Logic: 4\nReaction: 3 Intuition: 4\nEdge: - Charisma: 3\nForce: 4\n\nDef Score: 3 Wound Lmt: -\nMove Rate: 10m Health: 12\n\nDEFENSES\nDmg Resistance (Armor-6): 12\nSKILLS\nPrimary [5]: Athletics, Close Combat, Mysticism\nSecondary [3]: Outdoors, Perception, Stealth\nWEAPONS ACTION ATK DV\nBite Major 10 8P\nSlash (Reach: 2m) Major 13 6P\nTRAITS\nPhysical, Fire and Cold Resistance\nUnphased: Can’t gain Frightened or Wounded status.\nToxin & Disease Immunity: The spirit is immune to\ndiseases & toxins other than insecticides.\nBanishing Resistance: When targeted by the Negate\nMysticism power, double the spirit’s Force.\nDual Natured: Insect spirits always exist on both the\nastral and physical plane.\nFear of Sunlight: While in natural sunlight, the spirit\nsuffers the Frightened status.\nImproved Crit: On attack tests, the spirit scores a\ncritical hit with their Crit Dice on a 5 or a 6.\nABILITIES\nGrasping Legs: If the spirit hits a target with its Slash\nattack, it immediately makes a subdual test: Body +\nAthletics opposed by the target’s (Body or Agility) +\nAthletics. If the spirit wins, the target gains the\nImmobilized status. The spirit can only immobilize 1\ntarget at a time. The target can spend a Major Action\nto repeat the subdual test. If the target wins, they are\nno longer Immobilized.\nROACH FLESH FORM SPIRIT",
+      "force": 4
+    },
+    {
+      "slug": "wasp-queen-spirit",
+      "name": "WASP QUEEN SPIRIT",
+      "pages": [
+        84
+      ],
+      "threatRating": 5,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 5,
+      "defenseScoreAlt": null,
+      "move": "10m",
+      "health": 14,
+      "woundLimit": null,
+      "dmgResistance": 14,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 4,
+        "bonus": 10,
+        "raw": "4d6+10"
+      },
+      "skills": {
+        "tier1": {
+          "value": 9,
+          "list": "Close Combat, Influence, Mysticism,"
+        },
+        "tier2": {
+          "value": 6,
+          "list": "Con, Insight, Perception"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Stinger",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 19,
+          "dv": {
+            "raw": "12P",
+            "n": 12,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Bite",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 17,
+          "dv": {
+            "raw": "8P",
+            "n": 8,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Stinger",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "The damage from the spirit’s Stinger attack is toxin damage – any bonuses or penalties the target has for toxin resistance tests apply to their damage resistance test. Additionally, the stinger delivers a toxin with a Power of 5. The target must make a Body + Willpower toxin resistance test with a threshold of the toxin’s Power. If they fail, the target gains the Sick status. This toxin causes the target to suffer the Paralyzed status. The target can repeat the toxin resistance test at the end of each Combat Turn to end the effect early. Otherwise, the Sick status ends after 1 minute."
+        },
+        {
+          "name": "Terrifying Aura",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "Any metahuman that sees the Queen spirit must make a Willpower + Charisma (3) test or gain the Frightened Status. Once a target sees the Queen spirit, they cannot be affected by this power again for 24 hours."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Physical Resistance",
+          "text": ""
+        },
+        {
+          "name": "Unphased",
+          "text": "Can’t gain Frightened or Wounded status."
+        },
+        {
+          "name": "Toxin & Disease Immunity",
+          "text": "The spirit is immune to"
+        },
+        {
+          "name": "diseases & toxins other than insecticides.",
+          "text": ""
+        },
+        {
+          "name": "Banishing Resistance",
+          "text": "When targeted by the Negate"
+        },
+        {
+          "name": "Mysticism power, double the spirit’s Force.",
+          "text": ""
+        },
+        {
+          "name": "Dual Natured",
+          "text": "Insect spirits always exist on both the"
+        },
+        {
+          "name": "astral and physical plane.",
+          "text": ""
+        },
+        {
+          "name": "Improved Crit",
+          "text": "On attack tests, the spirit scores a"
+        },
+        {
+          "name": "critical hit with their Crit Dice on a 5 or a 6.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": {
+        "pool": null,
+        "fixedHits": null,
+        "poolNote": null,
+        "drainPool": null,
+        "drainFixedHits": null,
+        "fadingPool": null,
+        "fadingFixedHits": null,
+        "spells": [],
+        "raw": "Magical Being: The spirit does not suffer Drain. Unless specified otherwise, the Force of any of the spirit’s abilities is equal to its Force. Compulsion (Complex Action): The spirit casts the spell Influence at Force 5 and does not suffer Drain. Mysticism Talents: Astral Tracking, Counter, Mana Barrier, Negate"
+      },
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "WASP QUEEN SPIRIT\nThreat: 5 Initiative: 4d6+10\nBody: 8 Willpower: 9\nAgility: 8 Logic: 6\nReaction: 8 Intuition: 9\nEdge: - Charisma: 8\nForce: 9\n\nDef Score: 5 Wound Lmt: -\nMove Rate: 10m\n(Flying) Health: 14\n\nDEFENSES\nDmg Resistance (Armor-6): 14\nSKILLS\nPrimary [9]: Close Combat, Influence, Mysticism,\nSorcery\nSecondary [6]: Con, Insight, Perception\nWEAPONS ACTION ATK DV\nStinger Major 19 12P\nBite Major 17 8P\nTRAITS\nPhysical Resistance\nUnphased: Can’t gain Frightened or Wounded status.\nToxin & Disease Immunity: The spirit is immune to\ndiseases & toxins other than insecticides.\nBanishing Resistance: When targeted by the Negate\nMysticism power, double the spirit’s Force.\nDual Natured: Insect spirits always exist on both the\nastral and physical plane.\nImproved Crit: On attack tests, the spirit scores a\ncritical hit with their Crit Dice on a 5 or a 6.\nABILITIES\nStinger: The damage from the spirit’s Stinger attack is\ntoxin damage – any bonuses or penalties the target\nhas for toxin resistance tests apply to their damage\nresistance test. Additionally, the stinger delivers a\ntoxin with a Power of 5. The target must make a Body\n+ Willpower toxin resistance test with a threshold of\nthe toxin’s Power. If they fail, the target gains the Sick\nstatus. This toxin causes the target to suffer the\nParalyzed status. The target can repeat the toxin\nresistance test at the end of each Combat Turn to end\nthe effect early. Otherwise, the Sick status ends after 1\nminute.\nTerrifying Aura: Any metahuman that sees the\nQueen spirit must make a Willpower + Charisma (3)\ntest or gain the Frightened Status. Once a target sees\nthe Queen spirit, they cannot be affected by this\npower again for 24 hours.\nMAGIC\nMagical Being: The spirit does not suffer Drain.\nUnless specified otherwise, the Force of any of the\nspirit’s abilities is equal to its Force.\nCompulsion (Complex Action): The spirit casts the\nspell Influence at Force 5 and does not suffer Drain.\nMysticism Talents: Astral Tracking, Counter, Mana\nBarrier, Negate",
+      "force": 9
+    },
+    {
+      "slug": "wasp-flesh-form-spirit",
+      "name": "WASP FLESH FORM SPIRIT",
+      "pages": [
+        85
+      ],
+      "threatRating": 2,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 4,
+      "defenseScoreAlt": null,
+      "move": "10m Health: 8",
+      "health": 8,
+      "woundLimit": null,
+      "dmgResistance": 7,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 2,
+        "bonus": 3,
+        "raw": "2d6+3"
+      },
+      "skills": {
+        "tier1": {
+          "value": 5,
+          "list": "Con, Close Combat, Mysticism"
+        },
+        "tier2": {
+          "value": 3,
+          "list": "Influence, Insight, Perception, Stealth"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Bite",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 10,
+          "dv": {
+            "raw": "5P",
+            "n": 5,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Masking",
+          "action": "Complex Action",
+          "uses": null,
+          "duration": "Sustained",
+          "text": "The flesh form spirit can use the Masking ability of the Aura Manipulation Mysticism Talent at Force 4 and suffers no Drain from using it. The spirit can only target itself with this power, and can only disguise its astral signature, not its physical form. It suffers no penalties for sustaining the power."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Unphased",
+          "text": "Can’t gain Frightened or Wounded status."
+        },
+        {
+          "name": "Toxin & Disease Immunity",
+          "text": "The spirit is immune to"
+        },
+        {
+          "name": "diseases & toxins other than insecticides.",
+          "text": ""
+        },
+        {
+          "name": "Banishing Resistance",
+          "text": "When targeted by the Negate"
+        },
+        {
+          "name": "Mysticism power, double the spirit’s Force.",
+          "text": ""
+        },
+        {
+          "name": "Dual Natured",
+          "text": "Insect spirits always exist on both the"
+        },
+        {
+          "name": "astral and physical plane.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "WASP FLESH FORM SPIRIT\nThreat: 2 Initiative: 2d6+3\nBody: 3 Willpower: 3\nAgility: 4 Logic: 3\nReaction: 3 Intuition: 4\nEdge: - Charisma: 4\nForce: 3\n\nDef Score: 4 Wound Lmt: -\nMove Rate: 10m Health: 8\n\nDEFENSES\nDmg Resistance (Leather/Armor Clothing): 7\nSKILLS\nPrimary [5]: Con, Close Combat, Mysticism\nSecondary [3]: Influence, Insight, Perception, Stealth\nWEAPONS ACTION ATK DV\nBite Major 10 5P\nTRAITS\nUnphased: Can’t gain Frightened or Wounded status.\nToxin & Disease Immunity: The spirit is immune to\ndiseases & toxins other than insecticides.\nBanishing Resistance: When targeted by the Negate\nMysticism power, double the spirit’s Force.\nDual Natured: Insect spirits always exist on both the\nastral and physical plane.\nABILITIES\nMasking (Complex Action, Sustained): The flesh\nform spirit can use the Masking ability of the Aura\nManipulation Mysticism Talent at Force 4 and suffers\nno Drain from using it. The spirit can only target itself\nwith this power, and can only disguise its astral\nsignature, not its physical form. It suffers no penalties\nfor sustaining the power.",
+      "force": 3
+    },
+    {
+      "slug": "wasp-worker-spirit",
+      "name": "WASP WORKER SPIRIT",
+      "pages": [
+        85
+      ],
+      "threatRating": 2,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 4,
+      "defenseScoreAlt": null,
+      "move": "10m",
+      "health": 8,
+      "woundLimit": null,
+      "dmgResistance": 7,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 2,
+        "bonus": 3,
+        "raw": "2d6+3"
+      },
+      "skills": {
+        "tier1": {
+          "value": 4,
+          "list": "Close Combat, Mysticism"
+        },
+        "tier2": {
+          "value": 2,
+          "list": "Influence, Insight, Perception"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Stinger",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 11,
+          "dv": {
+            "raw": "6P",
+            "n": 6,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Bite",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 9,
+          "dv": {
+            "raw": "5P",
+            "n": 5,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Stinger",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "The damage from the spirit’s Stinger attack is toxin damage – any bonuses or penalties the target has for toxin resistance tests apply to their damage resistance test. Additionally, the stinger delivers a toxin with a Power of 2. The target must make a Body + Willpower toxin resistance test with a threshold of the toxin’s Power. If they fail, the target gains the Sick status. This toxin causes the target to suffer the Immobilized and Impaired statuses. The target can repeat the toxin resistance test at the end of each Combat Turn to end the effect early. Otherwise, the Sick status ends after 1 minute. WASP FLESH FORM SPIRIT"
+        }
+      ],
+      "traits": [
+        {
+          "name": "Physical Resistance",
+          "text": ""
+        },
+        {
+          "name": "Unphased",
+          "text": "Can’t gain Frightened or Wounded status."
+        },
+        {
+          "name": "Toxin & Disease Immunity",
+          "text": "The spirit is immune to"
+        },
+        {
+          "name": "diseases & toxins other than insecticides.",
+          "text": ""
+        },
+        {
+          "name": "Banishing Resistance",
+          "text": "When targeted by the Negate"
+        },
+        {
+          "name": "Mysticism power, double the spirit’s Force.",
+          "text": ""
+        },
+        {
+          "name": "Dual Natured",
+          "text": "Insect spirits always exist on both the"
+        },
+        {
+          "name": "astral and physical plane.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "WASP WORKER SPIRIT\nThreat: 2 Initiative: 2d6+3\nBody: 3 Willpower: 3\nAgility: 5 Logic: 2\nReaction: 3 Intuition: 4\nEdge: - Charisma: 3\nForce: 3\n\nDef Score: 4 Wound Lmt: -\nMove Rate: 10m\n(Flying) Health: 8\n\nDEFENSES\nDmg Resistance (Armor-4): 7\nSKILLS\nPrimary [4]: Close Combat, Mysticism\nSecondary [2]: Influence, Insight, Perception\nWEAPONS ACTION ATK DV\nStinger Major 11 6P\nBite Major 9 5P\nTRAITS\nPhysical Resistance\nUnphased: Can’t gain Frightened or Wounded status.\nToxin & Disease Immunity: The spirit is immune to\ndiseases & toxins other than insecticides.\nBanishing Resistance: When targeted by the Negate\nMysticism power, double the spirit’s Force.\nDual Natured: Insect spirits always exist on both the\nastral and physical plane.\nABILITIES\nStinger: The damage from the spirit’s Stinger attack is\ntoxin damage – any bonuses or penalties the target\nhas for toxin resistance tests apply to their damage\nresistance test. Additionally, the stinger delivers a\ntoxin with a Power of 2. The target must make a Body\n+ Willpower toxin resistance test with a threshold of\nthe toxin’s Power. If they fail, the target gains the Sick\nstatus. This toxin causes the target to suffer the\nImmobilized and Impaired statuses. The target can\nrepeat the toxin resistance test at the end of each\nCombat Turn to end the effect early. Otherwise, the\nSick status ends after 1 minute.\nWASP FLESH FORM SPIRIT",
+      "force": 3
+    },
+    {
+      "slug": "wasp-scout-spirit",
+      "name": "WASP SCOUT SPIRIT",
+      "pages": [
+        86
+      ],
+      "threatRating": 3,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 5,
+      "defenseScoreAlt": null,
+      "move": "15m",
+      "health": 10,
+      "woundLimit": null,
+      "dmgResistance": 9,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 2,
+        "bonus": 5,
+        "raw": "2d6+5"
+      },
+      "skills": {
+        "tier1": {
+          "value": 5,
+          "list": "Close Combat, Mysticism, Outdoors"
+        },
+        "tier2": {
+          "value": 3,
+          "list": "Influence, Insight, Perception, Stealth"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Stinger",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 14,
+          "dv": {
+            "raw": "8P",
+            "n": 8,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Bite",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 12,
+          "dv": {
+            "raw": "6P",
+            "n": 6,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Stinger",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "The damage from the spirit’s Stinger attack is toxin damage – any bonuses or penalties the target has for toxin resistance tests apply to their damage resistance test. Additionally, the stinger delivers a toxin with a Power of 3. The target must make a Body + Willpower toxin resistance test with a threshold of the toxin’s Power. If they fail, the target gains the Sick status. This toxin causes the target to suffer the Immobilized and Impaired statuses. The target can repeat the toxin resistance test at the end of each Combat Turn to end the effect early. Otherwise, the Sick status ends after 1 minute. WASP SOLDIER SPIRIT"
+        }
+      ],
+      "traits": [
+        {
+          "name": "Physical Resistance",
+          "text": ""
+        },
+        {
+          "name": "Unphased",
+          "text": "Can’t gain Frightened or Wounded status."
+        },
+        {
+          "name": "Toxin & Disease Immunity",
+          "text": "The spirit is immune to"
+        },
+        {
+          "name": "diseases & toxins other than insecticides.",
+          "text": ""
+        },
+        {
+          "name": "Banishing Resistance",
+          "text": "When targeted by the Negate"
+        },
+        {
+          "name": "Mysticism power, double the spirit’s Force.",
+          "text": ""
+        },
+        {
+          "name": "Dual Natured",
+          "text": "Insect spirits always exist on both the"
+        },
+        {
+          "name": "astral and physical plane.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "WASP SCOUT SPIRIT\nThreat: 3 Initiative: 2d6+5\nBody: 5 Willpower: 5\nAgility: 7 Logic: 3\nReaction: 5 Intuition: 5\nEdge: - Charisma: 5\nForce: 5\n\nDef Score: 5 Wound Lmt: -\nMove Rate: 15m\n(Flying) Health: 10\n\nDEFENSES\nDmg Resistance (Armor-4): 9\nSKILLS\nPrimary [5]: Close Combat, Mysticism, Outdoors\nSecondary [3]: Influence, Insight, Perception, Stealth\nWEAPONS ACTION ATK DV\nStinger Major 14 8P\nBite Major 12 6P\nTRAITS\nPhysical Resistance\nUnphased: Can’t gain Frightened or Wounded status.\nToxin & Disease Immunity: The spirit is immune to\ndiseases & toxins other than insecticides.\nBanishing Resistance: When targeted by the Negate\nMysticism power, double the spirit’s Force.\nDual Natured: Insect spirits always exist on both the\nastral and physical plane.\nABILITIES\nStinger: The damage from the spirit’s Stinger attack is\ntoxin damage – any bonuses or penalties the target\nhas for toxin resistance tests apply to their damage\nresistance test. Additionally, the stinger delivers a\ntoxin with a Power of 3. The target must make a Body\n+ Willpower toxin resistance test with a threshold of\nthe toxin’s Power. If they fail, the target gains the Sick\nstatus. This toxin causes the target to suffer the\nImmobilized and Impaired statuses. The target can\nrepeat the toxin resistance test at the end of each\nCombat Turn to end the effect early. Otherwise, the\nSick status ends after 1 minute.\nWASP SOLDIER SPIRIT",
+      "force": 5
+    },
+    {
+      "slug": "wasp-soldier-spirit",
+      "name": "WASP SOLDIER SPIRIT",
+      "pages": [
+        86
+      ],
+      "threatRating": 4,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 5,
+      "defenseScoreAlt": null,
+      "move": "10m",
+      "health": 12,
+      "woundLimit": null,
+      "dmgResistance": 11,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 3,
+        "bonus": 6,
+        "raw": "3d6+6"
+      },
+      "skills": {
+        "tier1": {
+          "value": 7,
+          "list": "Close Combat, Mysticism"
+        },
+        "tier2": {
+          "value": 3,
+          "list": "Influence, Perception"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Stinger",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 16,
+          "dv": {
+            "raw": "10P",
+            "n": 10,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Bite",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 14,
+          "dv": {
+            "raw": "7P",
+            "n": 7,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Stinger",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "The damage from the spirit’s Stinger attack is toxin damage – any bonuses or penalties the target has for toxin resistance tests apply to their damage resistance test. Additionally, the stinger delivers a toxin with a Power of 4. The target must make a Body + Willpower toxin resistance test with a threshold of the toxin’s Power. If they fail, the target gains the Sick status. This toxin causes the target to suffer the Immobilized and Impaired statuses. The target can repeat the toxin resistance test at the end of each Combat Turn to end the effect early. Otherwise, the Sick status ends after 1 minute."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Physical Resistance",
+          "text": ""
+        },
+        {
+          "name": "Unphased",
+          "text": "Can’t gain Frightened or Wounded status."
+        },
+        {
+          "name": "Toxin & Disease Immunity",
+          "text": "The spirit is immune to"
+        },
+        {
+          "name": "diseases & toxins other than insecticides.",
+          "text": ""
+        },
+        {
+          "name": "Banishing Resistance",
+          "text": "When targeted by the Negate"
+        },
+        {
+          "name": "Mysticism power, double the spirit’s Force.",
+          "text": ""
+        },
+        {
+          "name": "Dual Natured",
+          "text": "Insect spirits always exist on both the"
+        },
+        {
+          "name": "astral and physical plane.",
+          "text": ""
+        },
+        {
+          "name": "Improved Crit",
+          "text": "On attack tests, the spirit scores a"
+        },
+        {
+          "name": "critical hit with their Crit Dice on a 5 or a 6.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "WASP SOLDIER SPIRIT\nThreat: 4 Initiative: 3d6+6\nBody: 6 Willpower: 5\nAgility: 7 Logic: 4\nReaction: 7 Intuition: 7\nEdge: - Charisma: 5\nForce: 7\n\nDef Score: 5 Wound Lmt: -\nMove Rate: 10m\n(Flying) Health: 12\n\nDEFENSES\nDmg Resistance (Armor-5): 11\nSKILLS\nPrimary [7]: Close Combat, Mysticism\nSecondary [3]: Influence, Perception\nWEAPONS ACTION ATK DV\nStinger Major 16 10P\nBite Major 14 7P\nTRAITS\nPhysical Resistance\nUnphased: Can’t gain Frightened or Wounded status.\nToxin & Disease Immunity: The spirit is immune to\ndiseases & toxins other than insecticides.\nBanishing Resistance: When targeted by the Negate\nMysticism power, double the spirit’s Force.\nDual Natured: Insect spirits always exist on both the\nastral and physical plane.\nImproved Crit: On attack tests, the spirit scores a\ncritical hit with their Crit Dice on a 5 or a 6.\nABILITIES\nStinger: The damage from the spirit’s Stinger attack is\ntoxin damage – any bonuses or penalties the target\nhas for toxin resistance tests apply to their damage\nresistance test. Additionally, the stinger delivers a\ntoxin with a Power of 4. The target must make a Body\n+ Willpower toxin resistance test with a threshold of\nthe toxin’s Power. If they fail, the target gains the Sick\nstatus. This toxin causes the target to suffer the\nImmobilized and Impaired statuses. The target can\nrepeat the toxin resistance test at the end of each\nCombat Turn to end the effect early. Otherwise, the\nSick status ends after 1 minute.",
+      "force": 7
+    },
+    {
+      "slug": "thunderbird",
+      "name": "THUNDERBIRD",
+      "pages": [
+        87
+      ],
+      "threatRating": 4,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 4,
+      "defenseScoreAlt": null,
+      "move": "15m Health: 12",
+      "health": 12,
+      "woundLimit": null,
+      "dmgResistance": 13,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 2,
+        "bonus": 7,
+        "raw": "2d6+7"
+      },
+      "skills": {
+        "tier1": {
+          "value": 8,
+          "list": "Athletics, Close Combat, Projectile"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Bite",
+          "action": "Complex",
+          "fireModes": null,
+          "pool": 13,
+          "dv": {
+            "raw": "12P",
+            "n": 12,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Claws",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 16,
+          "dv": {
+            "raw": "9P",
+            "n": 9,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Lightning Strike",
+          "action": "Complex",
+          "fireModes": null,
+          "pool": 18,
+          "dv": {
+            "raw": "8P Elec",
+            "n": 8,
+            "type": "P",
+            "element": "electricity"
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Lightning Strike",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "Once per Combat Turn, the thunderbird can use its Lightning Strike attack. This is a ranged attack, with a range of 30/75/150m."
+        },
+        {
+          "name": "Swift",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "The thunderbird can take the Run action as a Minor Action, and the Move Action as a Free action (but can still only take each once per Combat Turn). The thunderbird does not suffer Liability on tests when they take the Run action."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Vision Enhancements",
+          "text": "Flare Compensation, Low-"
+        },
+        {
+          "name": "Light, Vision Magnification",
+          "text": ""
+        },
+        {
+          "name": "Dual Natured",
+          "text": "The thunderbird always exists on both"
+        },
+        {
+          "name": "the astral and physical planes, and can interact with",
+          "text": ""
+        },
+        {
+          "name": "anything on either plane. Their Armor applies to",
+          "text": ""
+        },
+        {
+          "name": "attacks from both the physical and astral planes.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "THUNDERBIRD\nThreat: 4 Initiative: 2d6+7\nBody: 7 Willpower: 5\nAgility: 5 Logic: 2\nReaction: 8 Intuition: 4\nEdge: - Charisma: 3\n\nHandling: - Speed: 6\n\nDef Score: 4 Wound Lmt: 5\nMove Rate: 15m Health: 12\n\nDEFENSES\nDmg Resistance (Thick Hide): 13\nSKILLS\nPrimary [8]: Athletics, Close Combat, Projectile\nWeapons\nSecondary [4]: Perception, Stealth, Outdoors\nWEAPONS ACTION ATK DV\nBite Complex 13 12P\nClaws Major 16 9P\nLightning Strike Complex 18 8P\nElec\nTRAITS\nVision Enhancements: Flare Compensation, Low-\nLight, Vision Magnification\nDual Natured: The thunderbird always exists on both\nthe astral and physical planes, and can interact with\nanything on either plane. Their Armor applies to\nattacks from both the physical and astral planes.\nABILITIES\nLightning Strike: Once per Combat Turn, the\nthunderbird can use its Lightning Strike attack. This is\na ranged attack, with a range of 30/75/150m.\nSwift: The thunderbird can take the Run action as a\nMinor Action, and the Move Action as a Free action\n(but can still only take each once per Combat Turn).\nThe thunderbird does not suffer Liability on tests\nwhen they take the Run action."
+    },
+    {
+      "slug": "melded-bear",
+      "name": "MELDED BEAR",
+      "pages": [
+        91
+      ],
+      "threatRating": 4,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 3,
+      "defenseScoreAlt": null,
+      "move": "12m Health: 18",
+      "health": 18,
+      "woundLimit": null,
+      "dmgResistance": 21,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 3,
+        "bonus": 3,
+        "raw": "3d6+3"
+      },
+      "skills": {
+        "tier1": {
+          "value": 8,
+          "list": "Athletics, Close Combat"
+        },
+        "tier2": {
+          "value": 5,
+          "list": "Outdoors, Perception, Stealth"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Bite",
+          "action": "Complex",
+          "fireModes": null,
+          "pool": 15,
+          "dv": {
+            "raw": "12P",
+            "n": 12,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Claw (Reach: 2m)",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 17,
+          "dv": {
+            "raw": "9P",
+            "n": 9,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Bear Hug",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "If the melded bear hits a target with a melee attack, it immediately makes a subdual test: Body + Athletics opposed by the target’s (Body or Agility) + Athletics. If the melded bear wins, the target gains the Grabbed status. The melded bear can only grab 1 target at a time. The target can spend a Major Action to repeat the subdual test. If the target wins, they are no longer Grabbed."
+        },
+        {
+          "name": "Camouflage",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "Sitting still in one spot for 10 minutes, a melded bear can camouflage itself to become effectively invisible on both the physical and astral planes. Observers make an Intuition + Perception test opposed by the bear’s Agility + Stealth test. If they win this test, they notice the melded bear. This effect ends when the bear takes an action."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Vision Enhancements",
+          "text": "Low-Light"
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "MELDED BEAR\nThreat: 4 Initiative: 3d6+3\nBody: 10 Willpower: 5\nAgility: 5 Logic: 2\nReaction: 4 Intuition: 4\nEdge: - Charisma: 2\n\nDef Score: 3 Wound Lmt: 12\nMove Rate: 12m Health: 18\n\nDEFENSES\nDmg Resistance (Thick Hide): 21\nSKILLS\nPrimary [8]: Athletics, Close Combat\nSecondary [5]: Outdoors, Perception, Stealth\nWEAPONS ACTION ATK DV\nBite Complex 15 12P\nClaw (Reach: 2m) Major 17 9P\nTRAITS\nVision Enhancements: Low-Light\nABILITIES\nBear Hug: If the melded bear hits a target with a\nmelee attack, it immediately makes a subdual test:\nBody + Athletics opposed by the target’s (Body or\nAgility) + Athletics. If the melded bear wins, the\ntarget gains the Grabbed status. The melded bear can\nonly grab 1 target at a time. The target can spend a\nMajor Action to repeat the subdual test. If the target\nwins, they are no longer Grabbed.\nCamouflage: Sitting still in one spot for 10 minutes, a\nmelded bear can camouflage itself to become\neffectively invisible on both the physical and astral\nplanes. Observers make an Intuition + Perception test\nopposed by the bear’s Agility + Stealth test. If they\nwin this test, they notice the melded bear. This effect\nends when the bear takes an action."
+    },
+    {
+      "slug": "monstrous-vulture",
+      "name": "MONSTROUS VULTURE",
+      "pages": [
+        92
+      ],
+      "threatRating": 3,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 4,
+      "defenseScoreAlt": null,
+      "move": "12m",
+      "health": 10,
+      "woundLimit": null,
+      "dmgResistance": 13,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 2,
+        "bonus": 4,
+        "raw": "2d6+4"
+      },
+      "skills": {
+        "tier1": {
+          "value": 8,
+          "list": "Athletics, Close Combat, Perception"
+        },
+        "tier2": {
+          "value": 4,
+          "list": "Stealth, Outdoors"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Corrosive Bite",
+          "action": "Complex",
+          "fireModes": null,
+          "pool": 14,
+          "dv": {
+            "raw": "10P Acid",
+            "n": 10,
+            "type": "P",
+            "element": "acid"
+          },
+          "notes": ""
+        },
+        {
+          "name": "Claws",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 16,
+          "dv": {
+            "raw": "8P",
+            "n": 8,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Regeneration",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "If the monstrous vulture is alive, at the start of each Combat Turn it heals 3 damage. If its current damage is reduced to less than its Health, it immediately regains consciousness. If the monstrous vulture’s damage exceeds its Health x 2, it dies."
+        },
+        {
+          "name": "Swift",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "The monstrous vulture can take the Run action as a Minor Action, and the Move Action as a Free action (but can still only take each once per Combat Turn). The monstrous vulture does not suffer Liability on tests when they take the Run action. RADHOUND"
+        }
+      ],
+      "traits": [
+        {
+          "name": "Vision Enhancements",
+          "text": "Low-Light, Thermographic"
+        },
+        {
+          "name": "Elusive",
+          "text": "Intercept attacks made against the monstrous"
+        },
+        {
+          "name": "vulture suffer Liability.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "MONSTROUS VULTURE\nThreat: 3 Initiative: 2d6+4\nBody: 3 Willpower: 6\nAgility: 5 Logic: 4\nReaction: 4 Intuition: 3\nEdge: - Charisma: 2\n\nDef Score: 4 Wound Lmt: 4\nMove Rate: 12m\n(Flying) Health: 10\n\nDEFENSES\nDmg Resistance (Thick Hide): 13\nSKILLS\nPrimary [8]: Athletics, Close Combat, Perception\nSecondary [4]: Stealth, Outdoors\nWEAPONS ACTION ATK DV\nCorrosive Bite  Complex 14 10P\nAcid\nClaws Major 16 8P\nTRAITS\nVision Enhancements: Low-Light, Thermographic\nElusive: Intercept attacks made against the monstrous\nvulture suffer Liability.\nABILITIES\nRegeneration: If the monstrous vulture is alive, at the\nstart of each Combat Turn it heals 3 damage. If its\ncurrent damage is reduced to less than its Health, it\nimmediately regains consciousness. If the monstrous\nvulture’s damage exceeds its Health x 2, it dies.\nSwift: The monstrous vulture can take the Run action\nas a Minor Action, and the Move Action as a Free\naction (but can still only take each once per Combat\nTurn). The monstrous vulture does not suffer Liability\non tests when they take the Run action.\nRADHOUND"
+    },
+    {
+      "slug": "radhound",
+      "name": "RADHOUND",
+      "pages": [
+        92
+      ],
+      "threatRating": 2,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 4,
+      "defenseScoreAlt": null,
+      "move": "12m Health: 8",
+      "health": 8,
+      "woundLimit": null,
+      "dmgResistance": 9,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 2,
+        "bonus": 3,
+        "raw": "2d6+3"
+      },
+      "skills": {
+        "tier1": {
+          "value": 4,
+          "list": "Athletics, Close Combat, Perception"
+        },
+        "tier2": {
+          "value": 2,
+          "list": "Outdoors, Stealth"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Bite",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 10,
+          "dv": {
+            "raw": "6P",
+            "n": 6,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Regeneration",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "If the radhound is alive, at the start of each Combat Turn it heals 2 damage. If its current damage is reduced to less than its Health, it immediately regains consciousness. If the radhound’s damage exceeds its Health x 2, it dies."
+        },
+        {
+          "name": "Swift",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "The radhound can take the Run action as a Minor Action, and the Move Action as a Free action (but can still only take each once per Combat Turn). The radhound does not suffer Liability on tests when they take the Run action."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Vision Enhancements",
+          "text": "Low-Light, Thermographic"
+        },
+        {
+          "name": "Pack Hunter",
+          "text": "A radhound has Leverage on any attack"
+        },
+        {
+          "name": "tests against a target in melee range of another",
+          "text": ""
+        },
+        {
+          "name": "radhound.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "RADHOUND\nThreat: 2 Initiative: 2d6+3\nBody: 4 Willpower: 3\nAgility: 5 Logic: 2\nReaction: 4 Intuition: 4\nEdge: - Charisma: 3\n\nDef Score: 4 Wound Lmt: 5\nMove Rate: 12m Health: 8\n\nDEFENSES\nDmg Resistance (Thick Hide): 9\nSKILLS\nPrimary [4]: Athletics, Close Combat, Perception\nSecondary [2]: Outdoors, Stealth\nWEAPONS ACTION ATK DV\nBite Major 10 6P\nTRAITS\nVision Enhancements: Low-Light, Thermographic\nPack Hunter: A radhound has Leverage on any attack\ntests against a target in melee range of another\nradhound.\nABILITIES\nRegeneration: If the radhound is alive, at the start of\neach Combat Turn it heals 2 damage. If its current\ndamage is reduced to less than its Health, it\nimmediately regains consciousness. If the radhound’s\ndamage exceeds its Health x 2, it dies.\nSwift: The radhound can take the Run action as a\nMinor Action, and the Move Action as a Free action\n(but can still only take each once per Combat Turn).\nThe radhound does not suffer Liability on tests when\nthey take the Run action."
+    },
+    {
+      "slug": "ultharachna",
+      "name": "ULTHARACHNA",
+      "pages": [
+        93
+      ],
+      "threatRating": 5,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 4,
+      "defenseScoreAlt": null,
+      "move": "10m  Health: 18",
+      "health": 18,
+      "woundLimit": null,
+      "dmgResistance": 22,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 4,
+        "bonus": 7,
+        "raw": "4d6+7"
+      },
+      "skills": {
+        "tier1": {
+          "value": 8,
+          "list": "Athletics, Close Combat, Perception"
+        },
+        "tier2": {
+          "value": 4,
+          "list": "Insight, Outdoors, Stealth"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Bite",
+          "action": "Complex",
+          "fireModes": null,
+          "pool": 24,
+          "dv": {
+            "raw": "8P",
+            "n": 8,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Slash (Reach: 3m)",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 20,
+          "dv": {
+            "raw": "6P",
+            "n": 6,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Bite",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "A target that takes damage from the ultharachna’s Bite attack is afflicted with a Power 8 toxin. The target must make a toxin resistance test using Body + Willpower. Reduce the Power of the toxin by their hits. The target takes Physical damage equal to the remaining Power of the toxin."
+        },
+        {
+          "name": "Cocoon",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "Once per Combat Turn, if the ultharachna hits a target with its Slash attack, it can attempt to wrap the target in webbing. The target makes an Agility + Athletics (5) escaping test. If they fail, the target gains the Paralyzed status. On their turn, the target can spend a Major Action to make a Body + Athletics (5) escaping test to free themselves from the webbing."
+        },
+        {
+          "name": "Death from Above",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "The ultharachna can move across vertical surfaces and along ceilings at its Movement Rate without making any climbing tests."
+        },
+        {
+          "name": "Spider Legs",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "At the end of any enemy’s Action Phase, if they are within reach, the ultharachna uses its Slash attack against them. The ultharachna cannot use this power more than 8 times before its next Action Phase."
+        },
+        {
+          "name": "Unstoppable",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "On their turn, the ultharachna can take damage to end an ongoing effect or status on them. The damage is equal to the threshold for the test to end the ongoing effect or status."
+        },
+        {
+          "name": "Web Tendril",
+          "action": "Minor Action",
+          "uses": null,
+          "duration": null,
+          "text": "The ultharachna shoots a strand of webbing at a target and pulls the target to it. The ultharachna makes an attack test with a dice pool of 20 against any target within 40m. On a hit, the target makes an opposed Body + Athletics test against the ultharachna. If the ultharachna wins, the target is pulled adjacent to the ultharachna."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Vision Enhancements",
+          "text": "Low-Light, Thermographic,"
+        },
+        {
+          "name": "Ultrasound",
+          "text": ""
+        },
+        {
+          "name": "Fearless",
+          "text": "The ultharachna has Leverage on tests to"
+        },
+        {
+          "name": "remove, or avoid gaining, the Frightened status.",
+          "text": ""
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": 1,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "ULTHARACHNA\nThreat: 5 Initiative: 4d6+7\nBody: 9 Willpower: 7\nAgility: 9 Logic: 3\nReaction: 6 Intuition: 6\nEdge: 1 Charisma: 5\n\nDef Score: 4 Wound Lmt: 12\nMove Rate: 10m  Health: 18\n\nDEFENSES\nDmg Resistance (Chitinous Armor): 22\nSKILLS\nPrimary [8]: Athletics, Close Combat, Perception\nSecondary [4]: Insight, Outdoors, Stealth\nWEAPONS ACTION ATK DV\nBite Complex 24 8P\nSlash (Reach: 3m) Major 20 6P\nTRAITS\nVision Enhancements: Low-Light, Thermographic,\nUltrasound\nFearless: The ultharachna has Leverage on tests to\nremove, or avoid gaining, the Frightened status.\nABILITIES\nBite: A target that takes damage from the\nultharachna’s Bite attack is afflicted with a Power 8\ntoxin. The target must make a toxin resistance test\nusing Body + Willpower. Reduce the Power of the\ntoxin by their hits. The target takes Physical damage\nequal to the remaining Power of the toxin.\nCocoon: Once per Combat Turn, if the ultharachna\nhits a target with its Slash attack, it can attempt to\nwrap the target in webbing. The target makes an\nAgility + Athletics (5) escaping test. If they fail, the\ntarget gains the Paralyzed status. On their turn, the\ntarget can spend a Major Action to make a Body +\nAthletics (5) escaping test to free themselves from the\nwebbing.\nDeath from Above: The ultharachna can move across\nvertical surfaces and along ceilings at its Movement\nRate without making any climbing tests.\nSpider Legs: At the end of any enemy’s Action Phase,\nif they are within reach, the ultharachna uses its Slash\nattack against them. The ultharachna cannot use this\npower more than 8 times before its next Action Phase.\nUnstoppable: On their turn, the ultharachna can take\ndamage to end an ongoing effect or status on them.\nThe damage is equal to the threshold for the test to\nend the ongoing effect or status.\nWeb Tendril (Minor Action): The ultharachna shoots\na strand of webbing at a target and pulls the target to\nit. The ultharachna makes an attack test with a dice\npool of 20 against any target within 40m. On a hit, the\ntarget makes an opposed Body + Athletics test against\nthe ultharachna. If the ultharachna wins, the target is\npulled adjacent to the ultharachna.",
+      "toxin": {
+        "power": 8,
+        "effect": null,
+        "cadence": null,
+        "raw": "Power 8\ntoxin"
+      }
+    },
+    {
+      "slug": "spindler",
+      "name": "SPINDLER",
+      "pages": [
+        94
+      ],
+      "threatRating": 3,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 4,
+      "defenseScoreAlt": null,
+      "move": "12m  Health: 8",
+      "health": 8,
+      "woundLimit": null,
+      "dmgResistance": 11,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 2,
+        "bonus": 5,
+        "raw": "2d6+5"
+      },
+      "skills": {
+        "tier1": {
+          "value": 6,
+          "list": "Athletics, Close Combat"
+        },
+        "tier2": {
+          "value": 4,
+          "list": "Outdoors, Perception, Stealth"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Bite",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 19,
+          "dv": {
+            "raw": "7P",
+            "n": 7,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Death from Above",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "The spindler can move across vertical surfaces and along ceilings at its Movement Rate without making any climbing tests."
+        },
+        {
+          "name": "Poisonous Bite",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "A target that takes damage from the spindler’s Bite attack is afflicted with a Power 2 toxin. The target must make a Body + Willpower toxin resistance test with a threshold of the toxin’s Power. If they fail, the target gains the Sick status. While they have the Sick status, the target also suffers the Paralyzed status. The target can repeat the toxin resistance test at the end of each Combat Turn to end the effect early. Otherwise, the Sick status ends after 10 minutes."
+        }
+      ],
+      "traits": [
+        {
+          "name": "Vision Enhancements",
+          "text": "Low-Light, Thermographic"
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "SPINDLER\nThreat: 3 Initiative: 2d6+5\nBody: 3 Willpower: 3\nAgility: 6 Logic: 1\nReaction: 7 Intuition: 3\nEdge: - Charisma: 2\n\nDef Score: 4 Wound Lmt: 3\nMove Rate: 12m  Health: 8\n\nDEFENSES\nDmg Resistance (Chitinous Armor): 11\nSKILLS\nPrimary [6]: Athletics, Close Combat\nSecondary [4]: Outdoors, Perception, Stealth\nWEAPONS ACTION ATK DV\nBite Major 19 7P\nTRAITS\nVision Enhancements: Low-Light, Thermographic\nABILITIES\nDeath from Above: The spindler can move across\nvertical surfaces and along ceilings at its Movement\nRate without making any climbing tests.\nPoisonous Bite: A target that takes damage from the\nspindler’s Bite attack is afflicted with a Power 2 toxin.\nThe target must make a Body + Willpower toxin\nresistance test with a threshold of the toxin’s Power. If\nthey fail, the target gains the Sick status. While they\nhave the Sick status, the target also suffers the\nParalyzed status. The target can repeat the toxin\nresistance test at the end of each Combat Turn to end\nthe effect early. Otherwise, the Sick status ends after\n10 minutes.",
+      "toxin": {
+        "power": 2,
+        "effect": null,
+        "cadence": null,
+        "raw": "Poisonous Bite: A target that takes damage from the\nspindler’s Bite attack is afflicted with a Power 2"
+      }
+    },
+    {
+      "slug": "webspawn",
+      "name": "WEBSPAWN",
+      "pages": [
+        94
+      ],
+      "threatRating": 3,
+      "threatRatingAlt": null,
+      "tags": [
+        "critter"
+      ],
+      "defenseScore": 3,
+      "defenseScoreAlt": null,
+      "move": "10m  Health: 10",
+      "health": 10,
+      "woundLimit": null,
+      "dmgResistance": 16,
+      "matrixDefenseScore": null,
+      "initiative": {
+        "dice": 2,
+        "bonus": 4,
+        "raw": "2d6+4"
+      },
+      "skills": {
+        "tier1": {
+          "value": 8,
+          "list": "Athletics, Close Combat, Perception"
+        },
+        "tier2": {
+          "value": 4,
+          "list": "Insight, Stealth"
+        }
+      },
+      "attacks": [
+        {
+          "name": "Bite",
+          "action": "Complex",
+          "fireModes": null,
+          "pool": 18,
+          "dv": {
+            "raw": "9P",
+            "n": 9,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        },
+        {
+          "name": "Slash",
+          "action": "Major",
+          "fireModes": null,
+          "pool": 16,
+          "dv": {
+            "raw": "7P",
+            "n": 7,
+            "type": "P",
+            "element": null
+          },
+          "notes": ""
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Improved Crit",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "On attack tests, the webspawn scores a critical hit with their Crit Dice on a 5 or a 6."
+        },
+        {
+          "name": "Ensnare",
+          "action": null,
+          "uses": null,
+          "duration": null,
+          "text": "The webspawn can exude sticky strands of webbing to wrap around a target. If the webspawn hits a target with its Slash attack, it immediately makes a subdual test: Body + Athletics opposed by the target’s (Body or Agility) + Athletics. If the webspawn wins, the target gains the Grabbed status. If a target gets zero hits on their subdual test, they also gain the Immobilized status as long as they are Grabbed. The target can spend a Major Action to repeat the subdual test. If the target wins, they are no longer Grabbed. The webspawn can only have one target Ensnared at a time."
+        },
+        {
+          "name": "Web Strands",
+          "action": "Major Action",
+          "uses": null,
+          "duration": null,
+          "text": "The webspawn shoots a strand of webbing at a target and pulls the target to it. The webspawn makes an attack test with a dice pool of 16 against any target within 30m. On a hit, the target makes an opposed Body + Athletics test against the webspawn. If the webspawn wins, the target is pulled adjacent to the webspawn. SPINDLER"
+        }
+      ],
+      "traits": [
+        {
+          "name": "Vision Enhancements",
+          "text": "Low-Light, Thermographic"
+        }
+      ],
+      "gear": [],
+      "magic": null,
+      "matrix": null,
+      "edge": null,
+      "magicRating": null,
+      "resonance": null,
+      "notes": null,
+      "raw": "WEBSPAWN\nThreat: 3 Initiative: 2d6+4\nBody: 5 Willpower: 2\nAgility: 6 Logic: 2\nReaction: 5 Intuition: 4\nEdge: - Charisma: 3\n\nDef Score: 3 Wound Lmt: 2\nMove Rate: 10m  Health: 10\n\nDEFENSES\nDmg Resistance (Chitinous Armor): 16\nSKILLS\nPrimary [8]: Athletics, Close Combat, Perception\nSecondary [4]: Insight, Stealth\nWEAPONS ACTION ATK DV\nBite Complex 18 9P\nSlash Major 16 7P\nTRAITS\nVision Enhancements: Low-Light, Thermographic\nABILITIES\nImproved Crit: On attack tests, the webspawn scores\na critical hit with their Crit Dice on a 5 or a 6.\nEnsnare: The webspawn can exude sticky strands of\nwebbing to wrap around a target. If the webspawn\nhits a target with its Slash attack, it immediately\nmakes a subdual test: Body + Athletics opposed by\nthe target’s (Body or Agility) + Athletics. If the\nwebspawn wins, the target gains the Grabbed status.\nIf a target gets zero hits on their subdual test, they\nalso gain the Immobilized status as long as they are\nGrabbed. The target can spend a Major Action to\nrepeat the subdual test. If the target wins, they are no\nlonger Grabbed. The webspawn can only have one\ntarget Ensnared at a time.\nWeb Strands (Major Action): The webspawn shoots a\nstrand of webbing at a target and pulls the target to it.\nThe webspawn makes an attack test with a dice pool\nof 16 against any target within 30m. On a hit, the\ntarget makes an opposed Body + Athletics test against\nthe webspawn. If the webspawn wins, the target is\npulled adjacent to the webspawn.\nSPINDLER"
+    }
+  ]
+}

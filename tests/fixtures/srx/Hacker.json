@@ -1,0 +1,1656 @@
+{
+  "srxVersion": "3.07",
+  "source": "Hacker.srx.deploy",
+  "task": "task-2-srx-parser",
+  "entries": [
+    {
+      "version": 3.07,
+      "meta": {
+        "nextInstanceId": 2767,
+        "name": "",
+        "player": "",
+        "archetype": "Hacker",
+        "uiFlags": [
+          "False",
+          "True",
+          "False",
+          "False",
+          "False",
+          "True"
+        ],
+        "rawTrackers": {
+          "karma": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "counters": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "lifestyle": "Lifestyle Adv: 0",
+          "header42": "False",
+          "header43": "0"
+        },
+        "matrixConnection": "DNI",
+        "edge": 3,
+        "activeDcc": "",
+        "activeCommlink": "Sony CIY-720 Cyberdeck (Agent, Malware)"
+      },
+      "priorities": {
+        "a": "Resources",
+        "b": "Metatype",
+        "c": "Skills",
+        "d": "Attributes",
+        "e": "Magic/Resonance"
+      },
+      "metatype": {
+        "name": "Human",
+        "metatypeAttributeChoice": "Logic"
+      },
+      "tradition": {
+        "magicType": "Magic",
+        "name": ""
+      },
+      "attributes": {
+        "body": {
+          "rating": 2,
+          "karma": 0,
+          "flag": "False"
+        },
+        "agility": {
+          "rating": 4,
+          "karma": 0,
+          "flag": "False"
+        },
+        "reaction": {
+          "rating": 2,
+          "karma": 0,
+          "flag": "False"
+        },
+        "willpower": {
+          "rating": 4,
+          "karma": 0,
+          "flag": "False"
+        },
+        "logic": {
+          "rating": 5,
+          "karma": 0,
+          "flag": "False"
+        },
+        "intuition": {
+          "rating": 1,
+          "karma": 0,
+          "flag": "False"
+        },
+        "charisma": {
+          "rating": 2,
+          "karma": 0,
+          "flag": "False"
+        }
+      },
+      "skills": {
+        "athletics": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "biotech": {
+          "rating": 3,
+          "karma": 0,
+          "specialization": ""
+        },
+        "channeling": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "closeCombat": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "con": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "conjuring": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "driving": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "engineering": {
+          "rating": 3,
+          "karma": 0,
+          "specialization": ""
+        },
+        "firearms": {
+          "rating": 4,
+          "karma": 0,
+          "specialization": ""
+        },
+        "hacking": {
+          "rating": 6,
+          "karma": 0,
+          "specialization": ""
+        },
+        "influence": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "insight": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "mysticism": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "outdoors": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "perception": {
+          "rating": 1,
+          "karma": 0,
+          "specialization": ""
+        },
+        "piloting": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "projectileWeapons": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "software": {
+          "rating": 5,
+          "karma": 0,
+          "specialization": ""
+        },
+        "sorcery": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "stealth": {
+          "rating": 2,
+          "karma": 0,
+          "specialization": ""
+        },
+        "threading": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        }
+      },
+      "talents": [
+        {
+          "name": "General Talents",
+          "slug": "general-talents",
+          "category": "General",
+          "subtype": "Heading",
+          "gateway": true,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Edge: Close Call",
+          "slug": "edge-close-call",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Edge: Hustle",
+          "slug": "edge-hustle",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Edge: Increased Edge",
+          "slug": "edge-increased-edge",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 2,
+          "karmaCost": 24,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Edge: Second Chance",
+          "slug": "edge-second-chance",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Expertise: Decker",
+          "slug": "expertise-decker",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 18,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Expertise: Hacking",
+          "slug": "expertise-hacking",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Expertise: Software",
+          "slug": "expertise-software",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Spending Money",
+          "slug": "spending-money",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 2,
+          "karmaCost": 2,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Metatype Talents",
+          "slug": "metatype-talents",
+          "category": "Metatype",
+          "subtype": "Heading",
+          "gateway": true,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Privileged Opportunity",
+          "slug": "privileged-opportunity",
+          "category": "Metatype",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 2,
+          "karmaCost": 8,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Hacking Talents",
+          "slug": "hacking-talents",
+          "category": "Hacking",
+          "subtype": "Heading",
+          "gateway": true,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Backseat Driver",
+          "slug": "backseat-driver",
+          "category": "Hacking",
+          "subtype": "Drones & Vehicles",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 3,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Boom",
+          "slug": "boom",
+          "category": "Hacking",
+          "subtype": "Weapons & Cyberware",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 3,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Crack File",
+          "slug": "crack-file",
+          "category": "Hacking",
+          "subtype": "Files & Databases",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 3,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Crash Program",
+          "slug": "crash-program",
+          "category": "Hacking",
+          "subtype": "System Administration",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 3,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Data Spike",
+          "slug": "data-spike",
+          "category": "Hacking",
+          "subtype": "System Administration",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 3,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Disable Firearm",
+          "slug": "disable-firearm",
+          "category": "Hacking",
+          "subtype": "Weapons & Cyberware",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 3,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "False Alarm",
+          "slug": "false-alarm",
+          "category": "Hacking",
+          "subtype": "Alarms & Doors",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 3,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Hack Access",
+          "slug": "hack-access",
+          "category": "Hacking",
+          "subtype": "System Administration",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 6,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Jam Comms",
+          "slug": "jam-comms",
+          "category": "Hacking",
+          "subtype": "Communications & Surveillance",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 3,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Lockpick",
+          "slug": "lockpick",
+          "category": "Hacking",
+          "subtype": "Alarms & Doors",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 3,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Loop the Feed",
+          "slug": "loop-the-feed",
+          "category": "Hacking",
+          "subtype": "Communications & Surveillance",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 3,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Malfunction",
+          "slug": "malfunction",
+          "category": "Hacking",
+          "subtype": "Personal & Industrial Equipment",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 3,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Puppet Master",
+          "slug": "puppet-master",
+          "category": "Hacking",
+          "subtype": "Weapons & Cyberware",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 3,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Snoop",
+          "slug": "snoop",
+          "category": "Hacking",
+          "subtype": "Communications & Surveillance",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 3,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Visual Spam",
+          "slug": "visual-spam",
+          "category": "Hacking",
+          "subtype": "Communications & Surveillance",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 3,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Software Talents",
+          "slug": "software-talents",
+          "category": "Software",
+          "subtype": "Heading",
+          "gateway": true,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Content Mastery",
+          "slug": "content-mastery",
+          "category": "Software",
+          "subtype": "Data Processing",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 8,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Real-Time Threat Assessment (RTA)",
+          "slug": "real-time-threat-assessment-rta",
+          "category": "Software",
+          "subtype": "Data Processing",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 12,
+          "flags": [
+            "True",
+            "False"
+          ]
+        }
+      ],
+      "spells": [],
+      "anima": [],
+      "augmentations": [
+        {
+          "name": "Senseware",
+          "slug": "senseware",
+          "category": "Senseware",
+          "subcategory": "Heading",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 0,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Eyeware",
+          "slug": "eyeware",
+          "category": "Senseware",
+          "subcategory": "Subheading",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 0,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Smartlink (Implanted)",
+          "slug": "smartlink-implanted",
+          "category": "Senseware",
+          "subcategory": "Eyeware",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0.3,
+          "cost": 12000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Headware",
+          "slug": "headware",
+          "category": "Headware",
+          "subcategory": "Heading",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 0,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Cerebral Booster",
+          "slug": "cerebral-booster",
+          "category": "Headware",
+          "subcategory": null,
+          "option": null,
+          "option2": null,
+          "rating": 2,
+          "essence": 0.8,
+          "cost": 64000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "DNI (Direct Neural Interface)",
+          "slug": "dni-direct-neural-interface",
+          "category": "Headware",
+          "subcategory": null,
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0.05,
+          "cost": 0,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Advanced DNI",
+          "slug": "advanced-dni",
+          "category": "Headware",
+          "subcategory": null,
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0.4,
+          "cost": 66000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Neural Hardening",
+          "slug": "neural-hardening",
+          "category": "Headware",
+          "subcategory": null,
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0.2,
+          "cost": 9000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Bodyware",
+          "slug": "bodyware",
+          "category": "Bodyware",
+          "subcategory": "Heading",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 0,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Reaction Enhancers",
+          "slug": "reaction-enhancers",
+          "category": "Bodyware",
+          "subcategory": null,
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0.5,
+          "cost": 23000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Synaptic Booster",
+          "slug": "synaptic-booster",
+          "category": "Bodyware",
+          "subcategory": null,
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0.1,
+          "cost": 16000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Wired Reflexes",
+          "slug": "wired-reflexes",
+          "category": "Bodyware",
+          "subcategory": null,
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0.7,
+          "cost": 36000,
+          "grade": 1,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        }
+      ],
+      "armor": [
+        {
+          "name": "Actioneer Business Clothes",
+          "slug": "actioneer-business-clothes",
+          "category": null,
+          "subcategory": null,
+          "instanceId": 1327,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 1500,
+          "modCode": 0,
+          "flags": [
+            "False",
+            "0",
+            "False"
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Pistols",
+          "slug": "pistols",
+          "category": null,
+          "type": "Heading",
+          "instanceId": 1184,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Light",
+          "slug": "light",
+          "category": null,
+          "type": "Subheading",
+          "instanceId": 1235,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Beretta 201T",
+          "slug": "beretta-201t",
+          "category": null,
+          "type": "Firearms",
+          "instanceId": 1225,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 250,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Heavy",
+          "slug": "heavy",
+          "category": null,
+          "type": "Subheading",
+          "instanceId": 2547,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Ares Predator V",
+          "slug": "ares-predator-v",
+          "category": null,
+          "type": "Firearms",
+          "instanceId": 1174,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 2050,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Ammo",
+          "slug": "ammo",
+          "category": null,
+          "type": "Heading",
+          "instanceId": 267,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Bullet (Regular Round)",
+          "slug": "bullet-regular-round",
+          "category": null,
+          "type": "Ammo",
+          "instanceId": 257,
+          "quantity": 100,
+          "option": null,
+          "notes": "",
+          "cost": 100,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Gel Round",
+          "slug": "gel-round",
+          "category": null,
+          "type": "Ammo",
+          "instanceId": 398,
+          "quantity": 50,
+          "option": null,
+          "notes": "",
+          "cost": 100,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        }
+      ],
+      "gear": [
+        {
+          "name": "Matrix Devices",
+          "slug": "matrix-devices",
+          "category": "Matrix Devices",
+          "subcategory": "Heading",
+          "instanceId": 2004,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Cyberdecks",
+          "slug": "cyberdecks",
+          "category": "Matrix Devices",
+          "subcategory": "Subheading",
+          "instanceId": 2005,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Sony CIY-720 Cyberdeck",
+          "slug": "sony-ciy-720-cyberdeck",
+          "category": "Matrix Devices",
+          "subcategory": "Matrix Devices",
+          "instanceId": 2002,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 194000,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": [
+            "0",
+            "",
+            "5",
+            ""
+          ]
+        },
+        {
+          "name": "Electronics",
+          "slug": "electronics",
+          "category": "Electronics",
+          "subcategory": "Heading",
+          "instanceId": 278,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Certified Credstick",
+          "slug": "certified-credstick",
+          "category": "Electronics",
+          "subcategory": "Electronics",
+          "instanceId": 279,
+          "rating": 1,
+          "quantity": 2,
+          "variant": null,
+          "notes": "",
+          "cost": 50,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Data Tap",
+          "slug": "data-tap",
+          "category": "Electronics",
+          "subcategory": "Electronics",
+          "instanceId": 1161,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 250,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Datachip",
+          "slug": "datachip",
+          "category": "Electronics",
+          "subcategory": "Electronics",
+          "instanceId": 1686,
+          "rating": 1,
+          "quantity": 10,
+          "variant": null,
+          "notes": "",
+          "cost": 50,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "RFID Tag",
+          "slug": "rfid-tag",
+          "category": "Electronics",
+          "subcategory": "Electronics",
+          "instanceId": 2024,
+          "rating": 1,
+          "quantity": 2,
+          "variant": null,
+          "notes": "",
+          "cost": 200,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Audio & Optical Devices",
+          "slug": "audio-optical-devices",
+          "category": "Audio & Optical Devices",
+          "subcategory": "Heading",
+          "instanceId": 2022,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Optical Devices",
+          "slug": "optical-devices",
+          "category": "Audio & Optical Devices",
+          "subcategory": "Subheading",
+          "instanceId": 2023,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Glasses",
+          "slug": "glasses",
+          "category": "Audio & Optical Devices",
+          "subcategory": "Optical Device",
+          "instanceId": 2020,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 3550,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [
+            0,
+            1,
+            4,
+            3
+          ],
+          "mods": []
+        },
+        {
+          "name": "Breaking & Entering Gear",
+          "slug": "breaking-entering-gear",
+          "category": "Breaking & Entering Gear",
+          "subcategory": "Heading",
+          "instanceId": 11,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Fake SIN",
+          "slug": "fake-sin",
+          "category": "Breaking & Entering Gear",
+          "subcategory": "Breaking & Entering Gear",
+          "instanceId": 10,
+          "rating": 2,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": true,
+          "flags": [
+            "0",
+            "False",
+            "True"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Miniwelder",
+          "slug": "miniwelder",
+          "category": "Breaking & Entering Gear",
+          "subcategory": "Breaking & Entering Gear",
+          "instanceId": 1330,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": true,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Tools & Survival Gear",
+          "slug": "tools-survival-gear",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Heading",
+          "instanceId": 281,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Electrical Tools",
+          "slug": "electrical-tools",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Tools & Survival Gear",
+          "instanceId": 1678,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 750,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Flashlight",
+          "slug": "flashlight",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Tools & Survival Gear",
+          "instanceId": 411,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 20,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Mechanic's Tools",
+          "slug": "mechanics-tools",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Tools & Survival Gear",
+          "instanceId": 1329,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 800,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Medkit",
+          "slug": "medkit",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Tools & Survival Gear",
+          "instanceId": 283,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 500,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Biotech",
+          "slug": "biotech",
+          "category": "Biotech",
+          "subcategory": "Heading",
+          "instanceId": 285,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Stim Patch",
+          "slug": "stim-patch",
+          "category": "Biotech",
+          "subcategory": "Biotech",
+          "instanceId": 312,
+          "rating": 1,
+          "quantity": 2,
+          "variant": null,
+          "notes": "",
+          "cost": 400,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Trauma Patch",
+          "slug": "trauma-patch",
+          "category": "Biotech",
+          "subcategory": "Biotech",
+          "instanceId": 313,
+          "rating": 1,
+          "quantity": 2,
+          "variant": null,
+          "notes": "",
+          "cost": 200,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        }
+      ],
+      "magicalGear": [],
+      "vehicles": [],
+      "contacts": [
+        {
+          "name": "Fixer",
+          "slug": "fixer",
+          "values": [
+            "",
+            "",
+            "False",
+            "False"
+          ],
+          "notes": "\n\n"
+        },
+        {
+          "name": "Hacker",
+          "slug": "hacker",
+          "values": [
+            "",
+            "",
+            "False",
+            "False"
+          ],
+          "notes": "\n\n"
+        }
+      ],
+      "traits": [],
+      "knowledge": [
+        {
+          "name": "The Matrix",
+          "slug": "the-matrix",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "Megacorps",
+          "slug": "megacorps",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "Politics",
+          "slug": "politics",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "Sciences",
+          "slug": "sciences",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "Security Systems & Protocols",
+          "slug": "security-systems-protocols",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "Languages",
+          "slug": "languages",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "English",
+          "slug": "english",
+          "isLanguage": true,
+          "values": [
+            "",
+            "False",
+            "True",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        }
+      ],
+      "personal": {
+        "legalName": "",
+        "height": "",
+        "weight": "",
+        "age": "",
+        "aliases": "",
+        "gender": "",
+        "description": "You are the digital ghost in the machine, a master of the Matrix who sees code where others see reality. You can subvert security systems to get your team inside, slice through firewalls to extract paydata, and turn your enemies' tech against them when things get hot. You can use a sidearm when you have to, though in a firefight, your hacks can shift the tide faster than a bullet ever could. But you're most at home in the massive sprawling hosts of the Matrix, quietly cracking encryptions and sifting through data to lift what's worth more than gold in the modern world - information.\n\nKeep in mind your Real-Time Threat Assessment (RTA) Software program - you can activate this to give yourself or any of your allies +1 Defense Score as long as their Defense Score is 3 or less. You'll just need to dedicate one of your 5 agents to each instance of the program you're running."
+      },
+      "notes": "",
+      "unknown": []
+    }
+  ]
+}
