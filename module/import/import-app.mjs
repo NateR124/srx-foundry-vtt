@@ -161,23 +161,14 @@ export class SrxCatalogImportApp extends HandlebarsApplicationMixin(ApplicationV
 
 /** Register the settings menu entry that opens the importer. */
 export function registerImportSettings() {
-  // ApplicationV2 settings menus: Foundry instantiates `type` and calls render(true).
+  // Foundry instantiates `type` and calls render(true). Must be ApplicationV2
+  // (or FormApplication) subclass — plain wrappers fail setup with a hard error.
   game.settings.registerMenu("srx", "catalogImport", {
     name: "SRX.Import.menuName",
     label: "SRX.Import.menuLabel",
     hint: "SRX.Import.menuHint",
     icon: "fas fa-file-import",
-    type: class SrxCatalogImportMenu {
-      constructor() {
-        this.app = new SrxCatalogImportApp();
-      }
-      render(...args) {
-        return this.app.render(...args);
-      }
-      close(...args) {
-        return this.app.close?.(...args);
-      }
-    },
+    type: SrxCatalogImportApp,
     restricted: true
   });
 
