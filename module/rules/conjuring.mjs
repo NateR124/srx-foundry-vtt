@@ -182,3 +182,11 @@ export function buildAnimaThreatData({
     }
   };
 }
+
+/**
+ * Decrement services remaining for an anima. Returns updated count (min 0).
+ * @param {number} currentServices
+ */
+export function consumeService(currentServices) {
+  return Math.max(0, (Number(currentServices) || 0) - 1);
+}
