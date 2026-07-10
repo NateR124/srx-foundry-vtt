@@ -1,6 +1,7 @@
 import { SRX } from "../config.mjs";
 import * as derived from "../rules/derived.mjs";
 import * as metatype from "../rules/metatype.mjs";
+import { resolveVisionEnhancements } from "../canvas/vision.mjs";
 
 const fields = foundry.data.fields;
 
@@ -60,6 +61,14 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
       }),
       matrix: new fields.SchemaField({
         firewall: new fields.NumberField({ required: true, integer: true, min: 0, initial: 0, nullable: false })
+      }),
+      // Sensory enhancements beyond metatype (ware/gear until AE pipeline lands).
+      vision: new fields.SchemaField({
+        lowlight: new fields.BooleanField({ initial: false }),
+        thermographic: new fields.BooleanField({ initial: false }),
+        ultrasound: new fields.BooleanField({ initial: false }),
+        flareCompensation: new fields.BooleanField({ initial: false }),
+        visionMagnification: new fields.BooleanField({ initial: false })
       }),
       // Manual derived-stat modifiers (M1). Auto-fed by 'ware/talent Active
       // Effects in a later milestone; until then pregens enter them here.
@@ -186,9 +195,11 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
       // Baseline melee reach is 1 meter (p. 119); trolls' natural reach of 2
       // is an absolute value from the same rule, not a modifier.
       reach: meta.reach ?? SRX.baseReach,
-      // Copied — consumers (e.g. future cybereyes vision replacement, p. 12)
-      // must never mutate the shared metatype definition.
-      vision: [...meta.vision],
+      // Metatype vision + manual/ware flags (cybereyes replacement is M3).
+      vision: resolveVisionEnhancements(meta.vision, this.vision),
+      visionKeys: resolveVisionEnhancements(meta.vision, this.vision)
+        .filter((v) => v.active)
+        .map((v) => v.key),
       states
     };
 

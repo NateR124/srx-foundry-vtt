@@ -152,3 +152,63 @@ SRX.damageTypes = { P: "SRX.Damage.physical", S: "SRX.Damage.stun", PS: "SRX.Dam
 /** Weapon action costs and fire modes used by attack modes. */
 SRX.attackActions = ["major", "complex"];
 SRX.fireModes = ["", "SS", "SA", "BF", "FA"];
+
+/**
+ * Vision / sensory enhancements (p. 12 metatypes; gear/'ware columns).
+ * Registered as Foundry DetectionMode + VisionMode ids in srx.mjs.
+ */
+SRX.visionEnhancements = {
+  lowlight: {
+    label: "SRX.Vision.lowlight",
+    detectionMode: "srxLowLight",
+    visionMode: "srxLowLight"
+  },
+  thermographic: {
+    label: "SRX.Vision.thermographic",
+    detectionMode: "srxThermographic",
+    visionMode: "srxThermographic"
+  },
+  ultrasound: {
+    label: "SRX.Vision.ultrasound",
+    detectionMode: "srxUltrasound",
+    visionMode: "srxBasic"
+  },
+  flareCompensation: {
+    label: "SRX.Vision.flareCompensation",
+    detectionMode: null,
+    visionMode: null
+  },
+  visionMagnification: {
+    label: "SRX.Vision.visionMagnification",
+    detectionMode: null,
+    visionMode: null
+  }
+};
+
+/**
+ * Free Edge talents every character starts with (p. 17 / core-mechanics).
+ * Chat-card buttons enforce 1 Edge spend per test via message flags.
+ */
+SRX.freeEdgeTalents = {
+  closeCall: {
+    id: "closeCall",
+    label: "SRX.Edge.closeCall",
+    hint: "SRX.Edge.closeCallHint",
+    cost: 1,
+    window: "defense"
+  },
+  hustle: {
+    id: "hustle",
+    label: "SRX.Edge.hustle",
+    hint: "SRX.Edge.hustleHint",
+    cost: 1,
+    window: "initiative"
+  },
+  secondChance: {
+    id: "secondChance",
+    label: "SRX.Edge.secondChance",
+    hint: "SRX.Edge.secondChanceHint",
+    cost: 1,
+    window: "postRoll"
+  }
+};

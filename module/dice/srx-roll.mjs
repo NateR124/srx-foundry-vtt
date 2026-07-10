@@ -1,4 +1,5 @@
 import { evaluateRoll } from "../rules/dice.mjs";
+import { edgeButtonContext } from "./edge.mjs";
 
 /**
  * SRXRoll — a dice-pool test roll. The formula is always `${pool}d6`; SRX
@@ -19,16 +20,37 @@ export class SRXRoll extends foundry.dice.Roll {
    */
   static fromPool({ pool, tn = 5, hitMods = 0, threshold = null, flavor = "", context = {} } = {}) {
     const size = Math.max(0, Math.floor(pool));
-    const roll = new this(`${size}d6`, {}, { srx: { tn, hitMods, threshold, flavor, context } });
-    return roll;
+    // Flavor first two dice as "crit" so Dice So Nice / tooltips can style them.
+    // Evaluation still treats ordered faces as Crit Dice (first two).
+    let formula = "0d6";
+    if (size === 1) formula = "1d6[crit]";
+    else if (size === 2) formula = "2d6[crit]";
+    else if (size > 2) formula = `2d6[crit] + ${size - 2}d6`;
+    return new this(formula, {}, { srx: { tn, hitMods, threshold, flavor, context } });
+  }
+
+  /** Ordered d6 faces (Crit Dice first) from all die terms. */
+  get srxFaces() {
+    if (!this._evaluated) return [];
+    const faces = [];
+    for (const term of this.dice) {
+      for (const r of term.results ?? []) {
+        if (r.active === false) continue;
+        faces.push(r.result);
+      }
+    }
+    return faces;
   }
 
   /** SRX evaluation of the rolled dice (null until evaluated). */
   get srx() {
     if (!this._evaluated) return null;
     const opts = this.options.srx ?? {};
-    const dice = this.dice[0]?.results?.map((r) => r.result) ?? [];
-    return evaluateRoll(dice, { tn: opts.tn ?? 5, hitMods: opts.hitMods ?? 0, threshold: opts.threshold ?? null });
+    return evaluateRoll(this.srxFaces, {
+      tn: opts.tn ?? 5,
+      hitMods: opts.hitMods ?? 0,
+      threshold: opts.threshold ?? null
+    });
   }
 
   /** @override — SRX rolls report hits, not the summed total, as their card. */
@@ -36,6 +58,7 @@ export class SRXRoll extends foundry.dice.Roll {
     if (!this._evaluated) await this.evaluate();
     const result = this.srx;
     const opts = this.options.srx ?? {};
+    const edge = edgeButtonContext(opts.context ?? {}, result);
     return foundry.applications.handlebars.renderTemplate("systems/srx/templates/chat/roll-card.hbs", {
       roll: this,
       result,
@@ -43,7 +66,8 @@ export class SRXRoll extends foundry.dice.Roll {
       context: opts.context,
       tooltip: isPrivate ? "" : await this.getTooltip(),
       isPrivate,
-      total: result?.hits ?? 0
+      total: result?.hits ?? 0,
+      ...edge
     });
   }
 
@@ -57,6 +81,12 @@ export class SRXRoll extends foundry.dice.Roll {
       rolls: [this],
       sound: CONFIG.sounds.dice,
       content: await this.render(),
+      flags: {
+        srx: {
+          isRollCard: true,
+          isInitiative: !!(this.options.srx?.context?.isInitiative)
+        }
+      },
       ...messageData
     });
   }

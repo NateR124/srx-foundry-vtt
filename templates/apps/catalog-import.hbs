@@ -1,0 +1,32 @@
+<div class="srx catalog-import-body">
+  <p class="hint">{{localize "SRX.Import.instructions"}}</p>
+  <p class="hint mono">{{localize "SRX.Import.expectedFiles"}}:
+    {{#each catalogs}}<code>{{this}}</code>{{#unless @last}}, {{/unless}}{{/each}}
+  </p>
+
+  <div class="form-group">
+    <button type="button" data-action="pickFiles">
+      <i class="fa-solid fa-folder-open"></i> {{localize "SRX.Import.pickFiles"}}
+    </button>
+  </div>
+
+  {{#if files.length}}
+  <ul class="file-list">
+    {{#each files}}<li><code>{{this}}</code></li>{{/each}}
+  </ul>
+  {{/if}}
+
+  <div class="form-footer">
+    <button type="submit">
+      <i class="fa-solid fa-file-import"></i> {{localize "SRX.Import.run"}}
+    </button>
+  </div>
+
+  {{#if log.length}}
+  <div class="import-log">
+    <h3>{{localize "SRX.Import.log"}}</h3>
+    <pre>{{#each log}}{{this}}
+{{/each}}</pre>
+  </div>
+  {{/if}}
+</div>

@@ -1,4 +1,4 @@
-<div class="srx chat-card roll-card">
+<div class="srx chat-card roll-card" data-message-id="{{messageId}}">
   <header class="card-header">
     <h3>{{flavor}}</h3>
     {{#if context.actorName}}<span class="actor-name">{{context.actorName}}</span>{{/if}}
@@ -48,6 +48,29 @@
     {{localize "SRX.Item.dv"}}: <b>{{context.dv}}{{context.dvType}}</b>
     {{#if context.element}}<span class="element">{{context.element}}</span>{{/if}}
     {{#if context.fireMode}}<span class="fire-mode">{{context.fireMode}}</span>{{/if}}
+  </div>
+  {{/if}}
+
+  {{#if showEdge}}
+  <div class="edge-actions">
+    <span class="edge-label">{{localize "SRX.Edge.spend"}}</span>
+    {{#if context.isInitiative}}
+      <button type="button" class="srx-edge-btn" data-edge-action="hustle" data-tooltip="{{localize 'SRX.Edge.hustleHint'}}">
+        {{localize "SRX.Edge.hustle"}}
+      </button>
+    {{else}}
+      <button type="button" class="srx-edge-btn" data-edge-action="secondChance" data-which="normal" data-tooltip="{{localize 'SRX.Edge.secondChanceHint'}}">
+        {{localize "SRX.Edge.secondChance"}} ({{localize "SRX.Edge.rerollNormal"}})
+      </button>
+      {{#if result.critDice.length}}
+      <button type="button" class="srx-edge-btn" data-edge-action="secondChance" data-which="crit" data-tooltip="{{localize 'SRX.Edge.secondChanceHint'}}">
+        {{localize "SRX.Edge.secondChance"}} ({{localize "SRX.Edge.rerollCrit"}})
+      </button>
+      {{/if}}
+    {{/if}}
+    <button type="button" class="srx-edge-btn" data-edge-action="closeCall" data-tooltip="{{localize 'SRX.Edge.closeCallHint'}}">
+      {{localize "SRX.Edge.closeCall"}}
+    </button>
   </div>
   {{/if}}
 </div>

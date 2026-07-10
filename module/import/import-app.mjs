@@ -1,0 +1,161 @@
+/**
+ * M1.5 — minimal in-app SRX catalog import.
+ * User picks Load Data TSV files (or a folder of them); we parse in-browser
+ * and create world Items in typed folders. No enrichment, no Active Effects.
+ */
+
+import { CATALOG_FILES } from "./parse-catalog.mjs";
+
+const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
+
+export class SrxCatalogImportApp extends HandlebarsApplicationMixin(ApplicationV2) {
+  static DEFAULT_OPTIONS = {
+    id: "srx-catalog-import",
+    classes: ["srx", "catalog-import"],
+    tag: "form",
+    window: {
+      title: "SRX.Import.title",
+      resizable: true,
+      contentClasses: ["standard-form"]
+    },
+    position: { width: 520, height: "auto" },
+    form: {
+      handler: SrxCatalogImportApp.#onSubmit,
+      submitOnChange: false,
+      closeOnSubmit: false
+    },
+    actions: {
+      pickFiles: SrxCatalogImportApp.#onPickFiles
+    }
+  };
+
+  static PARTS = {
+    body: { template: "systems/srx/templates/apps/catalog-import.hbs" }
+  };
+
+  /** @type {File[]} */
+  #files = [];
+
+  /** @type {string[]} */
+  #log = [];
+
+  async _prepareContext() {
+    return {
+      files: this.#files.map((f) => f.name),
+      log: this.#log,
+      catalogs: Object.keys(CATALOG_FILES)
+    };
+  }
+
+  static async #onPickFiles() {
+    // Foundry has no native multi-file folder picker; use a hidden input.
+    const input = document.createElement("input");
+    input.type = "file";
+    input.multiple = true;
+    input.accept = ".deploy,.txt,text/plain";
+    input.onchange = async () => {
+      this.#files = [...(input.files ?? [])];
+      this.#log = [`Selected ${this.#files.length} file(s).`];
+      this.render();
+    };
+    input.click();
+  }
+
+  static async #onSubmit(_event, _form, _formData) {
+    if (!game.user.isGM) {
+      ui.notifications.error(game.i18n.localize("SRX.Import.gmOnly"));
+      return;
+    }
+    if (!this.#files.length) {
+      ui.notifications.warn(game.i18n.localize("SRX.Import.noFiles"));
+      return;
+    }
+
+    this.#log = [];
+    const byName = Object.fromEntries(this.#files.map((f) => [f.name, f]));
+    let totalCreated = 0;
+
+    for (const [filename, def] of Object.entries(CATALOG_FILES)) {
+      const file = byName[filename];
+      if (!file) {
+        this.#log.push(`Skip ${filename} (not selected).`);
+        continue;
+      }
+      try {
+        const text = await file.text();
+        const entries = def.parser(text);
+        this.#log.push(`Parsed ${filename}: ${entries.length} entries.`);
+
+        // World folder for this catalog
+        let folder = game.folders.find(
+          (f) => f.type === "Item" && f.name === def.packLabel
+        );
+        if (!folder) {
+          folder = await Folder.create({
+            name: def.packLabel,
+            type: "Item",
+            sorting: "a"
+          });
+        }
+
+        // Batch create (Foundry allows large creates; chunk for safety)
+        const docs = entries.map((e) => ({
+          name: e.name,
+          type: e.type,
+          folder: folder.id,
+          system: e.system
+        }));
+        const CHUNK = 50;
+        for (let i = 0; i < docs.length; i += CHUNK) {
+          const slice = docs.slice(i, i + CHUNK);
+          await Item.createDocuments(slice);
+          totalCreated += slice.length;
+        }
+        this.#log.push(`Created ${entries.length} ${def.itemType} items in "${def.packLabel}".`);
+      } catch (err) {
+        console.error("SRX | Import failed", filename, err);
+        this.#log.push(`ERROR ${filename}: ${err.message}`);
+      }
+      this.render();
+    }
+
+    this.#log.push(game.i18n.format("SRX.Import.done", { count: totalCreated }));
+    ui.notifications.info(game.i18n.format("SRX.Import.done", { count: totalCreated }));
+    this.render();
+  }
+}
+
+/** Register the settings menu entry that opens the importer. */
+export function registerImportSettings() {
+  // ApplicationV2 settings menus: Foundry instantiates `type` and calls render(true).
+  game.settings.registerMenu("srx", "catalogImport", {
+    name: "SRX.Import.menuName",
+    label: "SRX.Import.menuLabel",
+    hint: "SRX.Import.menuHint",
+    icon: "fas fa-file-import",
+    type: class SrxCatalogImportMenu {
+      constructor() {
+        this.app = new SrxCatalogImportApp();
+      }
+      render(...args) {
+        return this.app.render(...args);
+      }
+      close(...args) {
+        return this.app.close?.(...args);
+      }
+    },
+    restricted: true
+  });
+
+  game.settings.register("srx", "catalogImportPlaceholder", {
+    scope: "world",
+    config: false,
+    type: Boolean,
+    default: false
+  });
+}
+
+/** Convenience for macros: game.srx.openCatalogImport() */
+export function openCatalogImport() {
+  return new SrxCatalogImportApp().render(true);
+}

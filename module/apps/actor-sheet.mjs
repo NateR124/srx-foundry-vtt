@@ -140,6 +140,12 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
       sys.details.biography, { secrets: actor.isOwner, relativeTo: actor }
     );
 
+    // Vision enhancements: metatype innate + manual ware/gear toggles
+    context.vision = (sys.derived?.vision ?? []).map((v) => ({
+      ...v,
+      label: game.i18n.localize(v.label)
+    }));
+
     return context;
   }
 
@@ -295,13 +301,7 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
   }
 
   static async #onRollInitiative() {
-    const init = this.document.system.derived.initiative;
-    const roll = new foundry.dice.Roll(`max(${init.dice}d6 + ${init.bonus}, ${init.minimum})`);
-    await roll.evaluate();
-    return roll.toMessage({
-      speaker: foundry.documents.ChatMessage.getSpeaker({ actor: this.document }),
-      flavor: game.i18n.localize("SRX.Roll.initiative")
-    });
+    return this.document.rollInitiativeCard();
   }
 
   /** Click box N → value N; click the topmost filled box → value N−1 (undo). */

@@ -162,10 +162,83 @@ export class SrxActor extends foundry.documents.Actor {
   }
 
   /**
-   * Spend one Edge point (max 1 per test is enforced socially in M1).
-   * Not yet wired to sheet UI — Edge is tracked via the sheet pips; these
-   * methods are the macro/API surface (game.actors...) until the Edge-talent
-   * chat buttons land (M1 remainder / M2).
+   * Initiative: (Quickness)d6 + Accelerator — NOT a test (no Crit Dice rules),
+   * but Hustle Edge can still force one die to 6. We still roll via SRXRoll so
+   * the chat card gets Edge buttons; evaluation of hits is unused.
+   */
+  async rollInitiativeCard() {
+    const sys = this.system;
+    const qui = sys.special.quickness.value;
+    const accel = sys.derived?.accelerator ?? 1;
+    const pool = Math.max(1, qui); // initiative dice count = Quickness
+    const roll = SRXRoll.fromPool({
+      pool,
+      tn: 5,
+      flavor: game.i18n.localize("SRX.Roll.initiative"),
+      context: {
+        actorName: this.name,
+        isInitiative: true,
+        parts: [
+          { label: this.#label("SRX.Attribute.qui"), value: qui },
+          { label: game.i18n.localize("SRX.Derived.accelerator"), value: accel }
+        ],
+        initiativeBonus: accel
+      }
+    });
+    await roll.evaluate();
+    // Initiative total = sum of faces + Accelerator (not hits)
+    const faces = roll.srxFaces;
+    const sum = faces.reduce((a, d) => a + d, 0);
+    const total = sum + accel;
+    const speaker = foundry.documents.ChatMessage.getSpeaker({ actor: this });
+    const content = await foundry.applications.handlebars.renderTemplate(
+      "systems/srx/templates/chat/roll-card.hbs",
+      {
+        result: {
+          critDice: faces.slice(0, Math.min(2, faces.length)),
+          normalDice: faces.slice(Math.min(2, faces.length)),
+          hits: total,
+          baseHits: sum,
+          critBonus: 0,
+          hitMods: accel,
+          tn: 5,
+          isCrit: false,
+          isGlitch: false,
+          isCriticalGlitch: false,
+          threshold: null
+        },
+        flavor: game.i18n.localize("SRX.Roll.initiative"),
+        context: {
+          actorName: this.name,
+          isInitiative: true,
+          parts: [
+            { label: `${faces.length}d6`, value: sum },
+            { label: game.i18n.localize("SRX.Derived.accelerator"), value: accel }
+          ]
+        },
+        showEdge: true,
+        total
+      }
+    );
+    return foundry.documents.ChatMessage.create({
+      speaker,
+      rolls: [roll],
+      content,
+      flags: { srx: { isRollCard: true, isInitiative: true } }
+    });
+  }
+
+  /**
+   * Effective Defense Score including temporary Close Call Edge bonus.
+   */
+  get effectiveDefenseScore() {
+    const base = this.system.derived?.defenseScore ?? 1;
+    const cc = this.getFlag("srx", "closeCall");
+    return base + (cc?.bonus ?? 0);
+  }
+
+  /**
+   * Spend one Edge point (max 1 per test is enforced via chat-card flags).
    */
   async spendEdge() {
     const edge = this.system.special.edge;

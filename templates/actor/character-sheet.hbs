@@ -133,6 +133,22 @@
           </div>
           <div class="derived-stat"><b>{{system.derived.unarmedDv}}S</b><span>{{localize "SRX.Derived.unarmedDv"}}</span></div>
         </div>
+
+        <h3>{{localize "SRX.Sheet.vision"}}</h3>
+        <div class="vision-tags">
+          {{#each vision}}
+          <label class="vision-tag {{#if this.active}}active{{/if}}" title="{{this.label}}">
+            {{!-- Metatype vision is innate (read-only); ware/gear toggles are editable. --}}
+            {{#if this.fromMetatype}}
+            <i class="fa-solid fa-eye" aria-hidden="true"></i>
+            {{else}}
+            <input type="checkbox" name="system.vision.{{this.key}}" {{#if this.fromFlag}}checked{{/if}}>
+            {{/if}}
+            {{this.label}}
+          </label>
+          {{/each}}
+        </div>
+
         <div class="derived-mods">
           <span class="mods-label">{{localize "SRX.Sheet.mods"}}:</span>
           <label>{{localize "SRX.Derived.armor"}} <input type="number" name="system.derivedMods.armor" value="{{system.derivedMods.armor}}" step="1"></label>

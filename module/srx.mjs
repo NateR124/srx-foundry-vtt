@@ -13,6 +13,16 @@ import { SrxItem } from "./documents/item.mjs";
 import { SRXRoll } from "./dice/srx-roll.mjs";
 import { SrxCharacterSheet } from "./apps/actor-sheet.mjs";
 import { SrxItemSheet } from "./apps/item-sheet.mjs";
+import { registerVisionModes } from "./canvas/vision.mjs";
+import { registerDiceSoNice, styleSrxDice } from "./dice/dice-so-nice.mjs";
+import {
+  canSpendEdgeOnMessage,
+  edgeActorFromMessage,
+  useCloseCall,
+  useHustle,
+  useSecondChance
+} from "./dice/edge.mjs";
+import { registerImportSettings, openCatalogImport } from "./import/import-app.mjs";
 import * as rules from "./rules/dice.mjs";
 import * as derived from "./rules/derived.mjs";
 
@@ -20,7 +30,7 @@ Hooks.once("init", () => {
   console.log("SRX | Initializing Shadowrun Edition X system");
 
   CONFIG.SRX = SRX;
-  game.srx = { SRXRoll, rules, derived };
+  game.srx = { SRXRoll, rules, derived, openCatalogImport };
 
   // Documents
   CONFIG.Actor.documentClass = SrxActor;
@@ -39,9 +49,11 @@ Hooks.once("init", () => {
   // Dice
   CONFIG.Dice.rolls.push(SRXRoll);
 
-  // Initiative: (Quickness)d6 summed + Accelerator. The min-1 rule and
-  // multi-pass handling land with the custom Combat document in M2.
+  // Initiative: (Quickness)d6 summed + Accelerator. Multi-pass handling is M2.
   CONFIG.Combat.initiative = { formula: "(@qui)d6 + @accel", decimals: 0 };
+
+  // Vision / detection modes (low-light, thermo, ultrasound)
+  registerVisionModes();
 
   // Sheets
   const { Actors, Items } = foundry.documents.collections;
@@ -58,7 +70,74 @@ Hooks.once("init", () => {
     srxSigned: (v) => (Number(v) >= 0 ? `+${v}` : `${v}`),
     srxIsHit: (die, tn) => Number(die) >= Number(tn ?? 5),
     srxConcat: (...args) => args.slice(0, -1).join(""),
-    // Item types whose schema carries cost/legality (costSchema in data/items.mjs).
     srxHasLegality: (type) => ["weapon", "armor", "gear"].includes(type)
+  });
+});
+
+Hooks.once("setup", () => {
+  registerImportSettings();
+});
+
+/** Dice So Nice — Crit Dice material/edge distinct from pool dice. */
+Hooks.once("diceSoNiceReady", (dice3d) => {
+  registerDiceSoNice(dice3d);
+});
+
+Hooks.on("diceSoNiceRollStart", (messageId, context) => {
+  styleSrxDice(messageId, context);
+});
+
+/**
+ * Edge talent buttons on roll chat cards.
+ * Uses renderChatMessageHTML (HTMLElement, not jQuery) per v13+ API.
+ */
+Hooks.on("renderChatMessageHTML", (message, html) => {
+  const root = html instanceof HTMLElement ? html : html?.[0];
+  if (!root) return;
+  const card = root.querySelector?.(".srx.roll-card") ?? root.querySelector?.(".srx.chat-card.roll-card");
+  if (!card) return;
+
+  // Hide Edge buttons if already spent
+  if (!canSpendEdgeOnMessage(message)) {
+    card.querySelectorAll(".edge-actions").forEach((el) => {
+      el.classList.add("spent");
+      el.querySelectorAll("button").forEach((b) => {
+        b.disabled = true;
+      });
+    });
+  }
+
+  card.querySelectorAll("[data-edge-action]").forEach((btn) => {
+    btn.addEventListener("click", async (ev) => {
+      ev.preventDefault();
+      ev.stopPropagation();
+
+      if (!canSpendEdgeOnMessage(message)) {
+        ui.notifications.warn(game.i18n.localize("SRX.Edge.alreadySpent"));
+        return;
+      }
+
+      const actor = edgeActorFromMessage(message);
+      if (!actor) {
+        ui.notifications.warn(game.i18n.localize("SRX.Edge.noActor"));
+        return;
+      }
+      if (!actor.isOwner && !game.user.isGM) {
+        ui.notifications.warn(game.i18n.localize("SRX.Edge.notOwner"));
+        return;
+      }
+
+      const action = btn.dataset.edgeAction;
+      try {
+        if (action === "closeCall") await useCloseCall(actor, message);
+        else if (action === "hustle") await useHustle(actor, message, 0);
+        else if (action === "secondChance") {
+          await useSecondChance(actor, message, btn.dataset.which || "normal");
+        }
+      } catch (err) {
+        console.error("SRX | Edge action failed", err);
+        ui.notifications.error(err.message);
+      }
+    });
   });
 });

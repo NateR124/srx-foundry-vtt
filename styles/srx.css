@@ -273,3 +273,76 @@
   margin-left: 6px; font-size: 0.85em; opacity: 0.8;
 }
 .srx.chat-card .summary { font-style: italic; opacity: 0.85; }
+
+/* ---------- Vision tags ---------- */
+.srx .vision-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin: 4px 0 8px;
+  font-size: 0.85em;
+}
+.srx .vision-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 6px;
+  border: 1px solid var(--color-border, #888);
+  border-radius: 10px;
+  opacity: 0.55;
+}
+.srx .vision-tag.active {
+  opacity: 1;
+  background: #3e6a9a33;
+  border-color: #3e6a9a;
+}
+
+/* ---------- Edge buttons on chat cards ---------- */
+.srx.chat-card .edge-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+  margin-top: 6px;
+  padding-top: 4px;
+  border-top: 1px dashed var(--color-border, #888);
+}
+.srx.chat-card .edge-actions .edge-label {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.7;
+  margin-right: 2px;
+}
+.srx.chat-card .edge-actions button.srx-edge-btn {
+  font-size: 0.75em;
+  line-height: 1.2;
+  padding: 2px 6px;
+  height: auto;
+  width: auto;
+  white-space: nowrap;
+}
+.srx.chat-card .edge-actions.spent {
+  opacity: 0.45;
+}
+
+/* ---------- Catalog import ---------- */
+.srx.catalog-import-body .hint { font-size: 0.9em; margin: 0 0 8px; }
+.srx.catalog-import-body .mono code {
+  font-size: 0.8em;
+  padding: 0 3px;
+}
+.srx.catalog-import-body .file-list {
+  max-height: 120px;
+  overflow: auto;
+  font-size: 0.85em;
+  margin: 6px 0;
+}
+.srx.catalog-import-body .import-log pre {
+  max-height: 200px;
+  overflow: auto;
+  font-size: 0.8em;
+  background: #00000022;
+  padding: 6px;
+  border-radius: 4px;
+}
