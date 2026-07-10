@@ -109,7 +109,7 @@
       ]
     }
   },
-  "url": "",
-  "manifest": "",
-  "download": ""
+  "url": "https://github.com/NateR124/srx-foundry-vtt",
+  "manifest": "https://github.com/NateR124/srx-foundry-vtt/releases/latest/download/system.json",
+  "download": "https://github.com/NateR124/srx-foundry-vtt/releases/latest/download/srx.zip"
 }

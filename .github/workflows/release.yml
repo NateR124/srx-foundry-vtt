@@ -4,11 +4,14 @@ on:
   push:
     branches:
       - main
+    tags:
+      - "v*"
   pull_request:
     branches:
       - main
-  release:
-    types: [published]
+
+permissions:
+  contents: write
 
 jobs:
   test:
@@ -31,9 +34,9 @@ jobs:
       - name: Run vitest
         run: npm test
 
-  build:
+  release:
     needs: test
-    if: github.event_name == 'release'
+    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -41,16 +44,18 @@ jobs:
 
       - name: Zip release
         run: |
-          mkdir srx
-          # Foundry system layout: esmodules live under module/, plus top-level system.json
+          # Foundry install zip: system.json at the ARCHIVE ROOT (no wrapper
+          # folder) — the installer extracts straight into Data/systems/srx
+          mkdir stage
           for p in module templates styles lang assets ui system.json package.json README.md LICENSE LICENSE.md; do
-            if [ -e "$p" ]; then cp -r "$p" srx/; fi
+            if [ -e "$p" ]; then cp -r "$p" stage/; fi
           done
-          zip -r srx.zip srx/
+          cd stage && zip -r ../srx.zip . && cd ..
 
-      - name: Upload Release Asset
+      - name: Create release with assets
         uses: softprops/action-gh-release@v1
         with:
           files: |
             srx.zip
             system.json
+          generate_release_notes: true
