@@ -38,6 +38,7 @@ import {
   useSecondChance
 } from "./dice/edge.mjs";
 import { registerImportSettings, openCatalogImport } from "./import/import-app.mjs";
+import { registerAutomationSettings, automationLevel } from "./settings/automation.mjs";
 import * as rules from "./rules/dice.mjs";
 import * as derived from "./rules/derived.mjs";
 import * as combatRules from "./rules/combat.mjs";
@@ -55,6 +56,7 @@ Hooks.once("init", () => {
     cover: coverRules,
     effects: effectRules,
     startSuppressiveFire,
+    automationLevel,
     openCatalogImport
   };
 
@@ -110,6 +112,7 @@ Hooks.once("init", () => {
 
 Hooks.once("setup", () => {
   registerImportSettings();
+  registerAutomationSettings();
 });
 
 Hooks.once("ready", () => {
