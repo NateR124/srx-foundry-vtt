@@ -85,6 +85,25 @@ export function validateAgainstMaxima(attrBases, maximaObj) {
 }
 
 /**
+ * Check unaugmented ratings against the universal minimum: for all metatypes,
+ * Physical and Mental attributes have a minimum rating of 1 (p. 13). Advisory
+ * only, mirroring {@link validateAgainstMaxima} — callers surface violations,
+ * never clamp.
+ *
+ * @param {Record<string, number>} attrBases - attribute key → unaugmented
+ *   rating (base including metatype modifiers).
+ * @param {number} [min=1] - the minimum rating (p. 13).
+ * @returns {Array<{key: string, value: number, min: number}>} violations.
+ */
+export function validateAgainstMinimum(attrBases, min = 1) {
+  const violations = [];
+  for (const [key, value] of Object.entries(attrBases ?? {})) {
+    if (typeof value === "number" && value < min) violations.push({ key, value, min });
+  }
+  return violations;
+}
+
+/**
  * Describe which one-time chargen grants (p. 12) still apply to a character:
  * troll Close Combat starting rank 2 (only if the current rating is lower —
  * it is a starting rank, not a bonus) and the Streets starting lifestyle

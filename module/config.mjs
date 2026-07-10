@@ -59,12 +59,14 @@ SRX.weaponSkills = ["closeCombat", "firearms", "projectileWeapons"];
  * CONSUMPTION STATUS (M1): the character data model reads `health`,
  * `movement`, `naturalArmor`, `reach`, `vision`, and (via rules/metatype.mjs)
  * derives `mods` + `choice` live in prepareDerivedData (resolved pick
- * persisted at details.metatypeChoice) and surfaces `maxima` violations
- * advisorily (derived.maximaViolations → sheet banner, never clamped).
+ * persisted at details.metatypeChoice) and surfaces `maxima` violations and
+ * the universal minimum-1 rule (p. 13) advisorily (derived.maximaViolations /
+ * minimaViolations → sheet banners, never clamped).
  * `closeCombatStart` and `startingLifestyle` are one-time chargen grants
  * applied by the sheet's metatype-change dialog. NOT yet consumed:
- * `toxinDiseaseLeverage` (roll-context leverage) and chargen karma
- * validation — both land in M7.
+ * `toxinDiseaseLeverage` (roll-context leverage), the Livin' on the Streets
+ * trait auto-grant for trolls remaining at Streets (p. 12 → p. 74, lands
+ * with trait items), and chargen karma validation — all M7.
  */
 SRX.metatypes = {
   human: {
@@ -130,6 +132,9 @@ SRX.baseHealth = 12;
 
 /** Base movement rate in meters (p. 14). */
 SRX.baseMovement = 10;
+
+/** Base melee reach in meters (p. 119); troll natural reach overrides to 2 (p. 12). */
+SRX.baseReach = 1;
 
 /** Augmentation bonus aggregate cap per attribute/skill (p. 13). */
 SRX.augCap = 3;

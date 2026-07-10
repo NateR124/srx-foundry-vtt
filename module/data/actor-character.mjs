@@ -85,6 +85,23 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
     };
   }
 
+  /**
+   * @override — clear a stale ±1 pick whenever the metatype changes without
+   * an explicit new pick. The sheet dialog always re-sets the pick itself,
+   * but macros/importers calling Actor#update directly would otherwise carry
+   * it over — and elf and troll share choice options (p. 12), so a stale
+   * "log" pick would silently flip a +1 the player chose into a −1 they
+   * never did.
+   */
+  async _preUpdate(changes, options, user) {
+    const details = changes.system?.details;
+    if (details?.metatype !== undefined && details.metatype !== this.details.metatype
+      && details.metatypeChoice === undefined) {
+      details.metatypeChoice = null;
+    }
+    return super._preUpdate(changes, options, user);
+  }
+
   /** @override */
   prepareDerivedData() {
     const meta = SRX.metatypes[this.details.metatype] ?? SRX.metatypes.human;
@@ -166,8 +183,12 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
       unarmedDv: derived.unarmedDv({ bod: a.bod.value }),
       armor: wornRating + naturalArmor + this.derivedMods.armor,
       hardenedArmor: wornHardened + this.derivedMods.hardened,
-      reach: meta.reach ?? 0,
-      vision: meta.vision,
+      // Baseline melee reach is 1 meter (p. 119); trolls' natural reach of 2
+      // is an absolute value from the same rule, not a modifier.
+      reach: meta.reach ?? SRX.baseReach,
+      // Copied — consumers (e.g. future cybereyes vision replacement, p. 12)
+      // must never mutate the shared metatype definition.
+      vision: [...meta.vision],
       states
     };
 
@@ -177,6 +198,12 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
       Object.keys(SRX.attributes).map((key) => [key, this.attributes[key].unaugmented])
     );
     this.derived.maximaViolations = metatype.validateAgainstMaxima(unaugmented, meta.maxima);
+    // Same p. 13 sentence, lower bound: Physical and Mental attributes have a
+    // minimum rating of 1. Advisory like the maxima — applyMetatypeMod never
+    // raises an entered sub-1 base, so a 0 surfaces here instead.
+    this.derived.minimaViolations = metatype.validateAgainstMinimum(unaugmented);
+    // True while an elf/troll ±1 pick (p. 12) is unassigned — surfaced as a
+    // sheet banner so a troll's mandatory −1 penalty can't be silently skipped.
     this.derived.metatypeChoicePending = !!meta.choice && !choiceKey;
 
     this.monitors.stun.max = stunMax;

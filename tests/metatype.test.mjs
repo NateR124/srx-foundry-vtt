@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import {
   metatypePackage, resolveChoiceKey, applyMetatypeMod,
-  validateAgainstMaxima, oneTimeGrants
+  validateAgainstMaxima, validateAgainstMinimum, oneTimeGrants
 } from "../module/rules/metatype.mjs";
 import { SRX } from "../module/config.mjs";
 
@@ -121,6 +121,29 @@ describe("validateAgainstMaxima (p. 13 table)", () => {
   it("tolerates missing keys and empty maxima", () => {
     expect(validateAgainstMaxima({}, SRX.metatypes.ork.maxima)).toEqual([]);
     expect(validateAgainstMaxima({ bod: 12 }, undefined)).toEqual([]);
+  });
+});
+
+describe("validateAgainstMinimum (minimum rating 1, p. 13)", () => {
+  it("flags unaugmented ratings below 1", () => {
+    expect(validateAgainstMinimum({ bod: 0, agi: 3 })).toEqual([{ key: "bod", value: 0, min: 1 }]);
+    expect(validateAgainstMinimum({ log: -1 })).toEqual([{ key: "log", value: -1, min: 1 }]);
+  });
+  it("passes ratings at or above 1", () => {
+    expect(validateAgainstMinimum({ bod: 1, agi: 6, cha: 2 })).toEqual([]);
+  });
+  it("tolerates missing keys and empty input", () => {
+    expect(validateAgainstMinimum({})).toEqual([]);
+    expect(validateAgainstMinimum(undefined)).toEqual([]);
+  });
+});
+
+describe("melee reach (p. 119)", () => {
+  it("baseline reach is 1 meter for every non-troll metatype; troll natural reach is 2", () => {
+    for (const key of ["human", "elf", "dwarf", "ork"]) {
+      expect(SRX.metatypes[key].reach ?? SRX.baseReach).toBe(1);
+    }
+    expect(SRX.metatypes.troll.reach ?? SRX.baseReach).toBe(2);
   });
 });
 

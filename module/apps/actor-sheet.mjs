@@ -127,6 +127,11 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
         attr: SRX.attributes[v.key]?.abbr ?? v.key, value: v.value, max: v.max
       })
     );
+    context.minimaViolations = (sys.derived.minimaViolations ?? []).map((v) =>
+      game.i18n.format("SRX.Metatype.minimaViolation", {
+        attr: SRX.attributes[v.key]?.abbr ?? v.key, value: v.value, min: v.min
+      })
+    );
     context.lifestyles = SRX.lifestyles.map((key) => ({
       key, label: game.i18n.localize(`SRX.Lifestyle.${key}`), selected: sys.details.lifestyle === key
     }));
@@ -148,6 +153,15 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
   /** @override — a metatype change triggers the one-time application dialog. */
   async _processSubmitData(event, form, submitData, options) {
     const previous = this.document.system.details.metatype;
+    // Null the ±1 pick atomically with a metatype change: the form still
+    // carries the previous metatype's select value, which would defeat the
+    // data model's _preUpdate auto-clear (the key is present, not undefined)
+    // — and elf/troll share choice options (p. 12), so a stale pick would
+    // live-apply the wrong sign until the dialog's follow-up update.
+    const next = foundry.utils.getProperty(submitData, "system.details.metatype");
+    if (next && next !== previous) {
+      foundry.utils.setProperty(submitData, "system.details.metatypeChoice", null);
+    }
     const result = await super._processSubmitData(event, form, submitData, options);
     const current = this.document.system.details.metatype;
     if (current !== previous) await this.#applyMetatype(current);
@@ -200,12 +214,17 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
         </div>`;
     }
     if (grants.lifestyle) {
+      // Streets is a chargen STARTING condition ("trolls start with the
+      // Streets lifestyle", p. 12), not an override of an earned lifestyle —
+      // only pre-check the downgrade while the character still sits at the
+      // chargen default (Low).
+      const preChecked = sys.details.lifestyle === "low" ? " checked" : "";
       content += `
         <div class="form-group">
           <label>${game.i18n.format("SRX.Metatype.grantLifestyle", {
             lifestyle: game.i18n.localize(`SRX.Lifestyle.${grants.lifestyle}`)
           })}</label>
-          <input type="checkbox" name="grantLifestyle" checked>
+          <input type="checkbox" name="grantLifestyle"${preChecked}>
         </div>`;
     }
 
@@ -235,11 +254,19 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
     // clears.
     if (result && result !== "cancel") {
       update["system.details.metatypeChoice"] = result.choiceKey;
-      if (result.grantCloseCombat && grants.closeCombat !== undefined) {
-        update["system.skills.closeCombat.rating"] = grants.closeCombat;
+      // Re-guard against FRESH document state: the dialog is non-modal, so a
+      // rating/lifestyle edited while it was open (sheet behind the dialog,
+      // another client) must not be overwritten by the stale pre-dialog
+      // snapshot — starting ranks only ever raise, never lower (p. 12).
+      const fresh = oneTimeGrants(def, {
+        closeCombatRating: this.document.system.skills.closeCombat.rating,
+        lifestyle: this.document.system.details.lifestyle
+      });
+      if (result.grantCloseCombat && fresh.closeCombat !== undefined) {
+        update["system.skills.closeCombat.rating"] = fresh.closeCombat;
       }
-      if (result.grantLifestyle && grants.lifestyle) {
-        update["system.details.lifestyle"] = grants.lifestyle;
+      if (result.grantLifestyle && fresh.lifestyle) {
+        update["system.details.lifestyle"] = fresh.lifestyle;
       }
     }
     await this.document.update(update);

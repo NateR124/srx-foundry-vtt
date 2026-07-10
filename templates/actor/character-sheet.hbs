@@ -67,6 +67,15 @@
           {{#each maximaViolations}}<div class="maxima-detail">{{this}}</div>{{/each}}
         </div>
         {{/if}}
+        {{#if minimaViolations.length}}
+        <div class="state-banner maxima">
+          <span>{{localize "SRX.Metatype.minimaTitle"}}</span>
+          {{#each minimaViolations}}<div class="maxima-detail">{{this}}</div>{{/each}}
+        </div>
+        {{/if}}
+        {{#if system.derived.metatypeChoicePending}}
+        <div class="state-banner maxima">{{localize "SRX.Metatype.choicePendingWarning"}}</div>
+        {{/if}}
 
         <h3>{{localize "SRX.Sheet.special"}}</h3>
         <div class="attribute-row">
