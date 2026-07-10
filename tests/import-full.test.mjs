@@ -6,11 +6,36 @@ const pWare = CATALOG_FILES["Ware.txt.deploy"].parser;
 const pVehicles = CATALOG_FILES["Vehicles.txt.deploy"].parser;
 const pTraits = CATALOG_FILES["Traits.txt.deploy"].parser;
 const pContacts = CATALOG_FILES["Contacts.txt.deploy"].parser;
-const pKnowledge = CATALOG_FILES["Knowledge.txt.deploy"].parser;
+const pKnowledge = CATALOG_FILES["KnowledgeDomains.txt.deploy"].parser;
 const pArchetypes = CATALOG_FILES["Archetypes.txt.deploy"].parser;
 const pAnima = CATALOG_FILES["Anima.txt.deploy"].parser;
 
 describe("M3 full parsers", () => {
+  it("catalog keys exactly match the real builder Load Data filenames", () => {
+    // The builder exports these names — a mismatched key silently skips the
+    // whole catalog on import ("Skip unknown file"), which is how Knowledge
+    // and Magic Gear were lost before the architect review.
+    const REAL_BUILDER_FILES = [
+      "Anima.txt.deploy",
+      "Archetypes.txt.deploy",
+      "Armor.txt.deploy",
+      "Contacts.txt.deploy",
+      "Gear.txt.deploy",
+      "GearEnhancements.txt.deploy",
+      "KnowledgeDomains.txt.deploy",
+      "MagArtGear.txt.deploy",
+      "Spells.txt.deploy",
+      "Talents.txt.deploy",
+      "Traits.txt.deploy",
+      "VehMods.txt.deploy",
+      "Vehicles.txt.deploy",
+      "Ware.txt.deploy",
+      "Weapons.txt.deploy",
+      "WpnMods.txt.deploy"
+    ];
+    expect(Object.keys(CATALOG_FILES).sort()).toEqual(REAL_BUILDER_FILES);
+  });
+
   it("parses Spells", () => {
     const text = [
       "Spell\tID\tCategory\tDescription\tRange\tDuration\tResistance\tAttackType\tAcc\tDVFormula\tDVType\tDVElement",

@@ -1,7 +1,9 @@
 /**
- * M1.5 — minimal in-app SRX catalog import.
- * User picks Load Data TSV files (or a folder of them); we parse in-browser
- * and create world Items in typed folders. No enrichment, no Active Effects.
+ * In-app SRX catalog import (M3).
+ * User picks Load Data TSV files (or a folder of them) plus optional JSON
+ * sidecars; we parse in-browser and create world Items/Actors in folders.
+ * Including the spell-resolution JSON enriches spells during the same run.
+ * Re-imports skip documents that already exist in the target folder.
  */
 
 import { CATALOG_FILES } from "./parse-catalog.mjs";
@@ -63,6 +65,47 @@ export class SrxCatalogImportApp extends HandlebarsApplicationMixin(ApplicationV
     input.click();
   }
 
+  /** A spell-resolution sidecar entry has slug + resolution keys. */
+  static #isResolutionJson(data) {
+    return Array.isArray(data?.entries)
+      && data.entries.length > 0
+      && data.entries[0]?.slug !== undefined
+      && data.entries[0]?.resolution !== undefined;
+  }
+
+  /** A pregen entry has character-builder meta/attributes blocks. */
+  static #looksPregen(e) {
+    return e?.meta?.archetype !== undefined || e?.attributes !== undefined;
+  }
+
+  /**
+   * Create actor documents chunk-wise, falling back to per-document creation
+   * when a chunk fails validation — one bad NPC must not zero out the batch.
+   * @returns {Promise<number>} created count
+   */
+  async #createActorsRobustly(docs) {
+    let created = 0;
+    const CHUNK = 25;
+    for (let i = 0; i < docs.length; i += CHUNK) {
+      const slice = docs.slice(i, i + CHUNK);
+      try {
+        await Actor.createDocuments(slice);
+        created += slice.length;
+      } catch (_err) {
+        for (const doc of slice) {
+          try {
+            await Actor.createDocuments([doc]);
+            created += 1;
+          } catch (err) {
+            console.error("SRX | actor import failed", doc.name, err);
+            this.#log.push(`ERROR actor "${doc.name}": ${err.message}`);
+          }
+        }
+      }
+    }
+    return created;
+  }
+
   static async #onSubmit(_event, _form, _formData) {
     if (!game.user.isGM) {
       ui.notifications.error(game.i18n.localize("SRX.Import.gmOnly"));
@@ -76,6 +119,7 @@ export class SrxCatalogImportApp extends HandlebarsApplicationMixin(ApplicationV
     this.#log = [];
     const byName = Object.fromEntries(this.#files.map((f) => [f.name, f]));
     let totalCreated = 0;
+    let totalSkipped = 0;
 
     const knownFiles = new Set(Object.keys(CATALOG_FILES));
     for (const filename of Object.keys(byName)) {
@@ -84,12 +128,31 @@ export class SrxCatalogImportApp extends HandlebarsApplicationMixin(ApplicationV
       }
     }
 
+    // --- Phase 0: parse JSON files; spell-resolution sidecars become the
+    // enrichment index that the Spells TSV parser consumes below ---
+    const parsedJson = new Map();
+    let resolutionIndex = null;
+    for (const [filename, file] of Object.entries(byName)) {
+      if (!filename.endsWith(".json")) continue;
+      try {
+        const data = JSON.parse(await file.text());
+        parsedJson.set(filename, data);
+        if (SrxCatalogImportApp.#isResolutionJson(data)) {
+          resolutionIndex ??= {};
+          for (const e of data.entries) resolutionIndex[e.slug] = e;
+          this.#log.push(`Spell resolution index from ${filename}: ${data.entries.length} entries.`);
+        }
+      } catch (_e) {
+        this.#log.push(`ERROR ${filename}: Invalid JSON`);
+      }
+    }
+
     for (const [filename, file] of Object.entries(byName)) {
       if (knownFiles.has(filename)) {
         const def = CATALOG_FILES[filename];
         try {
           const text = await file.text();
-          const entries = def.parser(text);
+          const entries = def.parser(text, resolutionIndex ?? undefined);
           this.#log.push(`Parsed ${filename}: ${entries.length} entries.`);
 
           let folder = game.folders.find(
@@ -99,7 +162,14 @@ export class SrxCatalogImportApp extends HandlebarsApplicationMixin(ApplicationV
             folder = await Folder.create({ name: def.packLabel, type: "Item", sorting: "a" });
           }
 
-          const docs = entries.map((e) => ({
+          // Re-import must not double the world: skip entries whose type+name
+          // already exists in the target folder
+          const existing = new Set(folder.contents.map((i) => `${i.type}:${i.name}`));
+          const fresh = entries.filter((e) => !existing.has(`${e.type}:${e.name}`));
+          const skipped = entries.length - fresh.length;
+          totalSkipped += skipped;
+
+          const docs = fresh.map((e) => ({
             name: e.name, type: e.type, folder: folder.id, system: e.system, flags: e.flags || {}
           }));
           const CHUNK = 50;
@@ -108,43 +178,46 @@ export class SrxCatalogImportApp extends HandlebarsApplicationMixin(ApplicationV
             await Item.createDocuments(slice);
             totalCreated += slice.length;
           }
-          this.#log.push(`Created ${entries.length} ${def.itemType} items in "${def.packLabel}".`);
+          this.#log.push(`Created ${docs.length} ${def.itemType} items in "${def.packLabel}"${skipped ? ` (${skipped} already present, skipped)` : ""}.`);
         } catch (err) {
           console.error("SRX | Import failed", filename, err);
           this.#log.push(`ERROR ${filename}: ${err.message}`);
         }
       } else if (filename.endsWith(".json")) {
         try {
-          const text = await file.text();
-          let data;
-          try {
-            data = JSON.parse(text);
-          } catch(e) {
-            this.#log.push(`ERROR ${filename}: Invalid JSON`);
-            continue;
-          }
-          
+          const data = parsedJson.get(filename);
+          if (!data) continue; // invalid JSON, already logged
+          if (SrxCatalogImportApp.#isResolutionJson(data)) continue; // consumed above
+
           let actorPayloads = [];
-          // Heuristic to detect pregen vs threat
-          if (data.entries && data.entries[0]?.meta?.archetype || data.meta?.archetype || data.attributes) {
+          const entriesArr = Array.isArray(data.entries) ? data.entries : null;
+          if (entriesArr?.length && SrxCatalogImportApp.#looksPregen(entriesArr[0])) {
+            // Every pregen in the file, not just entries[0]
+            actorPayloads = entriesArr.map((e) => mapPregenToActorData({ entries: [e] }));
+          } else if (SrxCatalogImportApp.#looksPregen(data)) {
             actorPayloads = [mapPregenToActorData(data)];
-          } else if (data.entries || data.threatRating || Array.isArray(data)) {
+          } else if (entriesArr || data.threatRating || Array.isArray(data)) {
             actorPayloads = mapThreatCatalog(data);
           } else {
             this.#log.push(`Skip ${filename}: unrecognized JSON format`);
             continue;
           }
-          
+
           this.#log.push(`Parsed ${filename}: ${actorPayloads.length} actors.`);
           let folder = game.folders.find((f) => f.type === "Actor" && f.name === "Imported Actors");
           if (!folder) {
             folder = await Folder.create({ name: "Imported Actors", type: "Actor", sorting: "a" });
           }
-          
-          const docs = actorPayloads.map(a => ({...a, folder: folder.id}));
-          await Actor.createDocuments(docs);
-          totalCreated += docs.length;
-          this.#log.push(`Created ${docs.length} actors.`);
+
+          const existing = new Set(folder.contents.map((a) => a.name));
+          const fresh = actorPayloads.filter((p) => !existing.has(p.name));
+          const skipped = actorPayloads.length - fresh.length;
+          totalSkipped += skipped;
+
+          const docs = fresh.map((a) => ({ ...a, folder: folder.id }));
+          const created = await this.#createActorsRobustly(docs);
+          totalCreated += created;
+          this.#log.push(`Created ${created} actors${skipped ? ` (${skipped} already present, skipped)` : ""}.`);
         } catch (err) {
           console.error("SRX | Import failed", filename, err);
           this.#log.push(`ERROR ${filename}: ${err.message}`);

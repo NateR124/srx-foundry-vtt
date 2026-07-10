@@ -1,5 +1,5 @@
 import * as parsers from "./sidecar-parsers.mjs";
-import { enrichSpellEntry } from "./spell-enrich.mjs";
+import { enrichSpellEntry, mapDvFormula } from "./spell-enrich.mjs";
 
 function getWeaponSkill(raw) {
   const s = String(raw || "").toLowerCase();
@@ -61,28 +61,18 @@ function mapSpellDuration(raw) {
 }
 
 function mapSpellPattern(entry) {
+  const rangeObj = typeof entry.range === "object" && entry.range ? entry.range : null;
+  // The TSV parser already decoded the "[A]" suffix into range.area — trust
+  // it first: Fireball's raw range is "50m [A]", which no keyword regex hits.
+  if (rangeObj?.area) return "area";
   const range = String(
-    typeof entry.range === "object" && entry.range
-      ? entry.range.raw || entry.range.display || ""
-      : entry.range || ""
+    rangeObj ? rangeObj.raw || rangeObj.display || "" : entry.range || ""
   ).toLowerCase();
   if (/self|personal/.test(range)) return "self";
   if (/touch/.test(range)) return "touch";
-  if (/area|blast|radius|aoe/.test(range)) return "area";
+  if (/area|blast|radius|aoe|\[a\]/.test(range)) return "area";
   if (/los|line|ranged|sight/.test(range)) return "ranged";
   return "direct";
-}
-
-/** Map catalog DV formula → SpellData dvFormula (nf / nf+1 / nf*2). */
-function mapDvFormula(raw) {
-  const s = String(raw || "").toLowerCase().replace(/\s+/g, "");
-  if (!s) return "nf+1";
-  if (/mag\s*\*\s*2|2\s*\*\s*mag|nf\s*\*\s*2|2\s*\*\s*nf/.test(s) || s === "2x" || s.includes("*2")) {
-    return "nf*2";
-  }
-  if (/mag\s*\+\s*1|nf\s*\+\s*1|\+1/.test(s)) return "nf+1";
-  if (s === "mag" || s === "nf" || s === "force" || s === "f") return "nf";
-  return "nf+1";
 }
 
 function wrap(parser, itemType, catalogType) {
@@ -190,12 +180,12 @@ export const catalogParsers = {
   "Ware.txt.deploy": { parser: wrap(parsers.parseWare, "gear", "ware"), packLabel: "SRX Ware", itemType: "gear" },
   "Vehicles.txt.deploy": { parser: wrap(parsers.parseVehicles, "gear", "vehicle"), packLabel: "SRX Vehicles", itemType: "gear" },
   "VehMods.txt.deploy": { parser: wrap(parsers.parseVehMods, "gear", "vehicle-mod"), packLabel: "SRX Vehicle Mods", itemType: "gear" },
-  "MagicGear.txt.deploy": { parser: wrap(parsers.parseMagicGear, "gear", "magic-gear"), packLabel: "SRX Magic Gear", itemType: "gear" },
+  "MagArtGear.txt.deploy": { parser: wrap(parsers.parseMagicGear, "gear", "magic-gear"), packLabel: "SRX Magic Gear", itemType: "gear" },
   "Spells.txt.deploy": { parser: wrap(parsers.parseSpells, "spell", "spell"), packLabel: "SRX Spells", itemType: "spell" },
   "Anima.txt.deploy": { parser: wrap(parsers.parseAnima, "gear", "anima"), packLabel: "SRX Anima", itemType: "gear" },
   "Archetypes.txt.deploy": { parser: wrap(parsers.parseArchetypes, "gear", "archetype"), packLabel: "SRX Archetypes", itemType: "gear" },
   
   "Contacts.txt.deploy": { parser: wrap(parsers.parseContacts, "contact", "contact"), packLabel: "SRX Contacts", itemType: "contact" },
-  "Knowledge.txt.deploy": { parser: wrap(parsers.parseKnowledge, "knowledge", "knowledge"), packLabel: "SRX Knowledge", itemType: "knowledge" },
+  "KnowledgeDomains.txt.deploy": { parser: wrap(parsers.parseKnowledge, "knowledge", "knowledge"), packLabel: "SRX Knowledge", itemType: "knowledge" },
   "Traits.txt.deploy": { parser: wrap(parsers.parseTraits, "trait", "trait"), packLabel: "SRX Traits", itemType: "trait" }
 };

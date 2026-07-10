@@ -1,22 +1,67 @@
 import { describe, it, expect } from "vitest";
-import { parseEffectString } from "../module/import/full/effect-seed.mjs";
+import { parseEffectString, compileEffectString } from "../module/import/full/effect-seed.mjs";
+import { FLAT_EFFECT_KEYS } from "../module/rules/effects.mjs";
 
-describe("parseEffectString", () => {
-  it("parses basic attribute bonuses", () => {
-    const res = parseEffectString("+2 Bod");
-    expect(res).toEqual([{ key: "bod", value: 2, type: "bonus" }]);
+describe("parseEffectString (effect contract keys)", () => {
+  it("maps attribute bonuses to attr.* contract keys", () => {
+    const { effects, unsupported } = parseEffectString("+2 Bod");
+    expect(effects).toEqual([{ key: "attr.bod", value: 2 }]);
+    expect(unsupported).toEqual([]);
   });
 
-  it("parses negative defense score", () => {
-    const res = parseEffectString("-1 Defense Score");
-    expect(res).toEqual([{ key: "defenseScore", value: -1, type: "bonus" }]);
+  it("maps skill bonuses to skill.* contract keys", () => {
+    const { effects } = parseEffectString("+1 Firearms");
+    expect(effects).toEqual([{ key: "skill.firearms", value: 1 }]);
   });
 
-  it("parses multiple mixed effects", () => {
-    const res = parseEffectString("+1 to all combat skills, and +3 armor");
-    expect(res).toEqual([
-      { key: "combatSkills", value: 1, type: "bonus" },
-      { key: "armor", value: 3, type: "bonus" }
+  it("maps armor and full attribute names", () => {
+    const { effects } = parseEffectString("+3 armor, +1 Willpower");
+    expect(effects).toEqual([
+      { key: "derived.armor", value: 3 },
+      { key: "attr.wil", value: 1 }
     ]);
+  });
+
+  it("reports unmappable phrases as unsupported instead of inventing keys", () => {
+    const { effects, unsupported } = parseEffectString("-1 Defense Score");
+    expect(effects).toEqual([]);
+    expect(unsupported).toEqual([{ raw: "Defense Score", value: -1 }]);
+  });
+
+  it("every emitted key exists in FLAT_EFFECT_KEYS", () => {
+    const { effects } = parseEffectString(
+      "+1 Bod, +2 Agility, +1 Close Combat, +3 armor, +1 hardened, +2 Sorcery"
+    );
+    expect(effects.length).toBeGreaterThanOrEqual(6);
+    for (const e of effects) expect(FLAT_EFFECT_KEYS[e.key]).toBeDefined();
+  });
+});
+
+describe("compileEffectString (route through compileFlatEffects)", () => {
+  it("compiles supported effects into Foundry AE change rows", () => {
+    const r = compileEffectString("+2 Bod and +3 armor");
+    expect(r.ok).toBe(true);
+    expect(r.changes).toEqual([
+      { key: "system.attributes.bod.bonus", mode: 2, value: "2" },
+      { key: "system.derivedMods.armor", mode: 2, value: "3" }
+    ]);
+    expect(r.unsupported).toEqual([]);
+  });
+
+  it("surfaces unsupported phrases without failing supported ones", () => {
+    const r = compileEffectString("+1 Bod, +2 Initiative Dice");
+    expect(r.ok).toBe(true);
+    expect(r.changes.length).toBe(1);
+    expect(r.unsupported.length).toBe(1);
+  });
+});
+
+describe("FLAT_EFFECT_KEYS coverage", () => {
+  it("covers all seven attributes and all 21 skills", () => {
+    const keys = Object.keys(FLAT_EFFECT_KEYS);
+    const attrs = keys.filter((k) => k.startsWith("attr."));
+    const skills = keys.filter((k) => k.startsWith("skill."));
+    expect(attrs.length).toBe(8); // 7 real + str alias
+    expect(skills.length).toBe(21);
   });
 });

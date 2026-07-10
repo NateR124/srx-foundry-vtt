@@ -7,18 +7,23 @@
  * FLAT_EFFECT_KEYS (or document extensions here first).
  */
 
+import { SRX } from "../config.mjs";
+
 /** @type {Record<string, { path: string, mode?: "add"|"override", notes?: string }>} */
 export const FLAT_EFFECT_KEYS = {
-  "attr.bod": { path: "system.attributes.bod.bonus", mode: "add" },
-  "attr.agi": { path: "system.attributes.agi.bonus", mode: "add" },
-  "attr.rea": { path: "system.attributes.rea.bonus", mode: "add" },
-  "attr.str": { path: "system.attributes.bod.bonus", mode: "add", notes: "alias legacy" },
-  "attr.wil": { path: "system.attributes.wil.bonus", mode: "add" },
-  "attr.log": { path: "system.attributes.log.bonus", mode: "add" },
-  "attr.int": { path: "system.attributes.int.bonus", mode: "add" },
-  "attr.cha": { path: "system.attributes.cha.bonus", mode: "add" },
-  "skill.firearms": { path: "system.skills.firearms.bonus", mode: "add" },
-  "skill.closeCombat": { path: "system.skills.closeCombat.bonus", mode: "add" },
+  // All seven SRX attributes, generated from config so the contract can
+  // never drift from the schema
+  ...Object.fromEntries(Object.keys(SRX.attributes).map((key) => [
+    `attr.${key}`,
+    { path: `system.attributes.${key}.bonus`, mode: "add" }
+  ])),
+  // STR does not exist in SRX (folded into BOD, p. 12) — legacy-content alias
+  "attr.str": { path: "system.attributes.bod.bonus", mode: "add", notes: "alias — SRX has no STR; maps to BOD" },
+  // All 21 skills — bulk AE generation needs full coverage, not a sample
+  ...Object.fromEntries(Object.keys(SRX.skills).map((key) => [
+    `skill.${key}`,
+    { path: `system.skills.${key}.bonus`, mode: "add" }
+  ])),
   "derived.armor": { path: "system.derivedMods.armor", mode: "add" },
   "derived.hardened": { path: "system.derivedMods.hardened", mode: "add" },
   "derived.woundedLimit": { path: "system.derivedMods.woundedLimit", mode: "add" },

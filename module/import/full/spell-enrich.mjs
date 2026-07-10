@@ -1,15 +1,20 @@
 import { slugify } from "../slugify.mjs";
 
-/** Map catalog DV formula → SpellData dvFormula (nf / nf+1 / nf*2). */
-function mapDvFormula(raw) {
+/**
+ * Map catalog DV formula → SpellData dvFormula (nf / nf+k / nf*k).
+ * SINGLE source of truth — index.mjs imports this (the previous duplicate
+ * copies had already drifted). The rules engine parses any nf±k / nf*k.
+ */
+export function mapDvFormula(raw) {
   const s = String(raw || "").toLowerCase().replace(/\s+/g, "");
   if (!s) return "nf+1";
-  if (/mag\s*\*\s*2|2\s*\*\s*mag|nf\s*\*\s*2|2\s*\*\s*nf/.test(s) || s === "2x" || s.includes("*2")) {
+  if (/(?:mag|nf|f(?:orce)?)\*2|2\*(?:mag|nf|f)/.test(s) || s === "2x" || s.includes("*2")) {
     return "nf*2";
   }
-  if (/mag\s*\+\s*1|nf\s*\+\s*1|\+1/.test(s)) return "nf+1";
-  if (s === "mag" || s === "nf" || s === "force" || s === "f") return "nf";
-  if (s.includes("f+6") || s.includes("nf+6")) return "nf+6"; // Handle Acid Stream like formula
+  // Generic adder: (F+6), MAG+3, nf+1 … → nf+k
+  const add = s.match(/(?:mag|nf|f(?:orce)?)?\)?([+\-])(\d+)/);
+  if (add) return `nf${add[1]}${add[2]}`;
+  if (s === "mag" || s === "nf" || s === "force" || s === "f" || s === "(f)") return "nf";
   return "nf+1";
 }
 
