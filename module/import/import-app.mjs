@@ -5,6 +5,8 @@
  */
 
 import { CATALOG_FILES } from "./parse-catalog.mjs";
+import { mapPregenToActorData } from "./srx/parse-srx.mjs";
+import { mapThreatCatalog } from "./threats/parse-threats.mjs";
 
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 
@@ -52,7 +54,7 @@ export class SrxCatalogImportApp extends HandlebarsApplicationMixin(ApplicationV
     const input = document.createElement("input");
     input.type = "file";
     input.multiple = true;
-    input.accept = ".deploy,.txt,text/plain";
+    input.accept = ".deploy,.txt,text/plain,.json,application/json";
     input.onchange = async () => {
       this.#files = [...(input.files ?? [])];
       this.#log = [`Selected ${this.#files.length} file(s).`];
@@ -77,52 +79,76 @@ export class SrxCatalogImportApp extends HandlebarsApplicationMixin(ApplicationV
 
     const knownFiles = new Set(Object.keys(CATALOG_FILES));
     for (const filename of Object.keys(byName)) {
-      if (!knownFiles.has(filename)) {
+      if (!knownFiles.has(filename) && !filename.endsWith(".json")) {
         this.#log.push(`Skip unknown file: ${filename}`);
       }
     }
 
-    for (const [filename, def] of Object.entries(CATALOG_FILES)) {
-      const file = byName[filename];
-      if (!file) {
-        this.#log.push(`Skip ${filename} (not selected).`);
-        continue;
-      }
-      try {
-        const text = await file.text();
-        const entries = def.parser(text);
-        this.#log.push(`Parsed ${filename}: ${entries.length} entries.`);
+    for (const [filename, file] of Object.entries(byName)) {
+      if (knownFiles.has(filename)) {
+        const def = CATALOG_FILES[filename];
+        try {
+          const text = await file.text();
+          const entries = def.parser(text);
+          this.#log.push(`Parsed ${filename}: ${entries.length} entries.`);
 
-        // World folder for this catalog
-        let folder = game.folders.find(
-          (f) => f.type === "Item" && f.name === def.packLabel
-        );
-        if (!folder) {
-          folder = await Folder.create({
-            name: def.packLabel,
-            type: "Item",
-            sorting: "a"
-          });
-        }
+          let folder = game.folders.find(
+            (f) => f.type === "Item" && f.name === def.packLabel
+          );
+          if (!folder) {
+            folder = await Folder.create({ name: def.packLabel, type: "Item", sorting: "a" });
+          }
 
-        // Batch create (Foundry allows large creates; chunk for safety)
-        const docs = entries.map((e) => ({
-          name: e.name,
-          type: e.type,
-          folder: folder.id,
-          system: e.system,
-          flags: e.flags || {}
-        }));
-        const CHUNK = 50;
-        for (let i = 0; i < docs.length; i += CHUNK) {
-          const slice = docs.slice(i, i + CHUNK);
-          await Item.createDocuments(slice);
-          totalCreated += slice.length;
+          const docs = entries.map((e) => ({
+            name: e.name, type: e.type, folder: folder.id, system: e.system, flags: e.flags || {}
+          }));
+          const CHUNK = 50;
+          for (let i = 0; i < docs.length; i += CHUNK) {
+            const slice = docs.slice(i, i + CHUNK);
+            await Item.createDocuments(slice);
+            totalCreated += slice.length;
+          }
+          this.#log.push(`Created ${entries.length} ${def.itemType} items in "${def.packLabel}".`);
+        } catch (err) {
+          console.error("SRX | Import failed", filename, err);
+          this.#log.push(`ERROR ${filename}: ${err.message}`);
         }
-        this.#log.push(`Created ${entries.length} ${def.itemType} items in "${def.packLabel}".`);
-      } catch (err) {
-        console.error("SRX | Import failed", filename, err);
-        this.#log.push(`ERROR ${filename}: ${err.message}`);
+      } else if (filename.endsWith(".json")) {
+        try {
+          const text = await file.text();
+          let data;
+          try {
+            data = JSON.parse(text);
+          } catch(e) {
+            this.#log.push(`ERROR ${filename}: Invalid JSON`);
+            continue;
+          }
+          
+          let actorPayloads = [];
+          // Heuristic to detect pregen vs threat
+          if (data.entries && data.entries[0]?.meta?.archetype || data.meta?.archetype || data.attributes) {
+            actorPayloads = [mapPregenToActorData(data)];
+          } else if (data.entries || data.threatRating || Array.isArray(data)) {
+            actorPayloads = mapThreatCatalog(data);
+          } else {
+            this.#log.push(`Skip ${filename}: unrecognized JSON format`);
+            continue;
+          }
+          
+          this.#log.push(`Parsed ${filename}: ${actorPayloads.length} actors.`);
+          let folder = game.folders.find((f) => f.type === "Actor" && f.name === "Imported Actors");
+          if (!folder) {
+            folder = await Folder.create({ name: "Imported Actors", type: "Actor", sorting: "a" });
+          }
+          
+          const docs = actorPayloads.map(a => ({...a, folder: folder.id}));
+          await Actor.createDocuments(docs);
+          totalCreated += docs.length;
+          this.#log.push(`Created ${docs.length} actors.`);
+        } catch (err) {
+          console.error("SRX | Import failed", filename, err);
+          this.#log.push(`ERROR ${filename}: ${err.message}`);
+        }
       }
       this.render();
     }

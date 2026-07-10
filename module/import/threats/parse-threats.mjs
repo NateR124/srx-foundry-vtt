@@ -1,11 +1,9 @@
 /**
  * Parse sidecar GM threat JSON (NPCs, critters, drones) into Foundry `threat` actor payloads.
  */
-export function parseThreatJson(jsonText) {
-  const data = typeof jsonText === "string" ? JSON.parse(jsonText) : jsonText;
-  const entries = data.entries || (Array.isArray(data) ? data : [data]);
+
   
-  return entries.map(entry => {
+export function mapThreatToActorData(entry) {
     const isHostOrSpirit = entry.tags?.includes("host") || entry.tags?.includes("spirit");
     
     const attacks = (entry.attacks || []).map(atk => {
@@ -58,5 +56,14 @@ export function parseThreatJson(jsonText) {
         }
       }
     };
-  });
+}
+
+export function mapThreatCatalog(jsonText) {
+  const data = typeof jsonText === "string" ? JSON.parse(jsonText) : jsonText;
+  const entries = data.entries || (Array.isArray(data) ? data : [data]);
+  return entries.map(e => mapThreatToActorData(e));
+}
+
+export function parseThreatJson(jsonText) {
+  return mapThreatCatalog(jsonText);
 }

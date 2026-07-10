@@ -11,7 +11,7 @@ const ATTR_MAP = {
 /**
  * Phase A mapping: Convert sidecar task-2 JSON shape into Foundry Actor data.
  */
-export function parsePregenJson(jsonText) {
+export function mapPregenToActorData(jsonText) {
   const data = typeof jsonText === "string" ? JSON.parse(jsonText) : jsonText;
   const entry = data.entries && data.entries.length > 0 ? data.entries[0] : data;
   
@@ -108,4 +108,12 @@ export function parsePregenJson(jsonText) {
   }
 
   return actorData;
+}
+
+export function parsePregenJson(jsonText) {
+  return mapPregenToActorData(jsonText);
+}
+
+export function mapPregenFolder(filesAsJsonTexts) {
+  return filesAsJsonTexts.map(t => mapPregenToActorData(t));
 }
