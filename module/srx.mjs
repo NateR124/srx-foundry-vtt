@@ -53,6 +53,7 @@ import { SrxCharacterSheet } from "./apps/actor-sheet.mjs";
 import { SrxThreatSheet } from "./apps/threat-sheet.mjs";
 import { SrxItemSheet } from "./apps/item-sheet.mjs";
 import { SrxVehicleSheet } from "./apps/vehicle-sheet.mjs";
+import { SrxHostSheet } from "./apps/host-sheet.mjs";
 import { registerVisionModes } from "./canvas/vision.mjs";
 import { registerDiceSoNice, styleSrxDice } from "./dice/dice-so-nice.mjs";
 import {
@@ -145,8 +146,7 @@ Hooks.once("init", () => {
   Actors.registerSheet("srx", SrxVehicleSheet, {
     types: ["vehicle"], makeDefault: true, label: "SRX.Sheet.vehicle"
   });
-  // Host reuses threat sheet for now (no dedicated host sheet yet)
-  Actors.registerSheet("srx", SrxThreatSheet, {
+  Actors.registerSheet("srx", SrxHostSheet, {
     types: ["host"], makeDefault: true, label: "SRX.Sheet.host"
   });
   Items.registerSheet("srx", SrxItemSheet, { makeDefault: true, label: "SRX.Sheet.item" });
