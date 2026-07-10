@@ -168,10 +168,7 @@ export function pointInCone(origin, facingDeg, point, rangeMeters = 20) {
   if (along <= 0 || along > range) {
     return { inside: false, along, lateral, halfWidth: 0 };
   }
-  const halfWidth = along / 2; // width = length/2 → half-width from centerline = length/4?
-  // "width = half the length at any point (10 m out → 5 m wide)" → full width = along/2,
-  // so half-width from centerline = along/4.
-  // Wait: 10m out → 5m wide means the cone is 5m across, so ±2.5m from centerline = along/4.
+  // Width = half length at any point (10 m → 5 m wide) → half-width from centerline = along/4
   const halfW = along / 4;
   return {
     inside: lateral <= halfW + 1e-9,
@@ -179,6 +176,41 @@ export function pointInCone(origin, facingDeg, point, rangeMeters = 20) {
     lateral,
     halfWidth: halfW
   };
+}
+
+/**
+ * Triangle vertices for the shotgun cone (matches pointInCone geometry).
+ * Apex at origin; far edge width = range/2 → corners ± range/4 from centerline.
+ * @param {{ x: number, y: number }} origin
+ * @param {number} facingDeg - 0 = north (−y)
+ * @param {number} rangeMeters
+ * @returns {[{x:number,y:number},{x:number,y:number},{x:number,y:number}]}
+ */
+export function coneTriangleMeters(origin, facingDeg, rangeMeters = 20) {
+  const range = Math.max(0, Number(rangeMeters) || 0);
+  const ox = Number(origin.x) || 0;
+  const oy = Number(origin.y) || 0;
+  const rad = ((Number(facingDeg) || 0) * Math.PI) / 180;
+  const fx = Math.sin(rad);
+  const fy = -Math.cos(rad);
+  const px = -fy;
+  const py = fx;
+  const halfW = range / 4;
+  const tipX = ox + range * fx;
+  const tipY = oy + range * fy;
+  return [
+    { x: ox, y: oy },
+    { x: tipX + halfW * px, y: tipY + halfW * py },
+    { x: tipX - halfW * px, y: tipY - halfW * py }
+  ];
+}
+
+/**
+ * Token facing: Foundry rotation (0 = east, clockwise) → compass degrees (0 = north).
+ * @param {number} foundryRotation
+ */
+export function foundryRotationToCompass(foundryRotation = 0) {
+  return ((Number(foundryRotation) || 0) + 90 + 360) % 360;
 }
 
 /**

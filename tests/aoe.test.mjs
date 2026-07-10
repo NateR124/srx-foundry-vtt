@@ -9,6 +9,8 @@ import {
   blastBand,
   blastDvForBand,
   pointInCone,
+  coneTriangleMeters,
+  foundryRotationToCompass,
   classifyBlastTargets,
   classifyConeTargets,
   isAoeMode,
@@ -96,9 +98,7 @@ describe("shotgun cone", () => {
   });
 
   it("excludes points outside half-width", () => {
-    // at 8m along, full width = 4m → half-width 2m from centerline
-    // Wait: width = half length → at 8m, width 4m, half-width 2m
-    // Our code uses along/4 = 2 for half-width — correct
+    // at 8m along, width 4m → half-width 2m
     const r = pointInCone({ x: 0, y: 0 }, 0, { x: 3, y: -8 }, 20);
     expect(r.inside).toBe(false);
   });
@@ -121,6 +121,25 @@ describe("shotgun cone", () => {
     );
     expect(hits.map((h) => h.id)).toEqual(["a"]);
     expect(hits[0].dv).toBe(9);
+  });
+
+  it("triangle matches far-edge width range/2", () => {
+    const tri = coneTriangleMeters({ x: 0, y: 0 }, 0, 20);
+    expect(tri).toHaveLength(3);
+    // Apex at origin
+    expect(tri[0]).toEqual({ x: 0, y: 0 });
+    // Far edge at y = -20; half-width 5 → corners at x = ±5
+    expect(tri[1].y).toBeCloseTo(-20);
+    expect(tri[2].y).toBeCloseTo(-20);
+    const xs = [tri[1].x, tri[2].x].sort((a, b) => a - b);
+    expect(xs[0]).toBeCloseTo(-5);
+    expect(xs[1]).toBeCloseTo(5);
+  });
+
+  it("converts Foundry rotation to compass", () => {
+    expect(foundryRotationToCompass(0)).toBe(90); // east
+    expect(foundryRotationToCompass(90)).toBe(180); // south
+    expect(foundryRotationToCompass(270)).toBe(0); // north
   });
 });
 

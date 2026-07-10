@@ -10,16 +10,18 @@ import {
   defaultBlastRadii,
   resolveScatter
 } from "../rules/aoe.mjs";
+import { resolveTn } from "../rules/dice.mjs";
 import {
   pickPointOnCanvas,
   placeBlastRegions,
+  placeConeRegion,
   tokensInBlast,
   tokensInCone,
+  tokenCompassFacing,
   rollScatterSum,
   rollScatterDirection,
   scatterOffsetPixels,
-  resolveModeBlastDv,
-  metersToPixels
+  resolveModeBlastDv
 } from "../canvas/aoe.mjs";
 import {
   applyDamageToActor,
@@ -186,22 +188,7 @@ async function rollBlastAttack(attacker, item, mode) {
   }
 
   // Master card listing targets + per-target resist buttons
-  const rows = affected.map((t) => {
-    const bandLabel = t.band === "full"
-      ? game.i18n.localize("SRX.Aoe.bandFull")
-      : game.i18n.localize("SRX.Aoe.bandHalf");
-    return `<li data-token-id="${t.id}">
-      <strong>${foundry.utils.escapeHTML(t.actor.name)}</strong>
-      — ${bandLabel}, DV ${t.dv}${dvType}
-      <button type="button" class="srx-combat-btn" data-combat-action="aoeResist"
-        data-actor-uuid="${t.actor.uuid}"
-        data-dv="${t.dv}" data-dv-type="${dvType}"
-        data-element="${mode.element || ""}"
-        data-band="${t.band}">
-        ${game.i18n.localize("SRX.Combat.resist")}
-      </button>
-    </li>`;
-  }).join("");
+  const rows = affected.map((t) => aoeTargetRow(t, dvType, mode.element || "")).join("");
 
   const msg = await foundry.documents.ChatMessage.create({
     speaker,
@@ -288,35 +275,30 @@ async function rollConeAttack(attacker, item, mode) {
 
   if (combatant) await spendCombatantAction(combatant, actionCost);
 
-  const affected = tokensInCone(token, range, fullDv)
+  const facing = tokenCompassFacing(token);
+  const affected = tokensInCone(token, range, fullDv, facing)
     .filter((t) => t.actor);
 
-  // Draw a simple cone region for visualization
+  // Polygon cone region (matches membership math)
   try {
     if (game.user.isGM || attacker.isOwner) {
-      const origin = token.center ?? {
+      const originPx = token.center ?? {
         x: token.document.x + (token.w ?? 50) / 2,
         y: token.document.y + (token.h ?? 50) / 2
       };
-      // Approximate cone as a circle sector isn't native — place a circle of radius=range as hint
-      // (true cone shape requires polygon; pure membership uses math)
-      await canvas.scene.createEmbeddedDocuments("Region", [{
-        name: `${item.name} (cone ~${range}m)`,
-        color: "#ddaa00",
-        shapes: [{
-          type: "circle",
-          x: origin.x,
-          y: origin.y,
-          radius: metersToPixels(range)
-        }],
+      await placeConeRegion({
+        originPx,
+        facingCompassDeg: facing,
+        rangeMeters: range,
+        name: item.name,
         flags: {
-          srx: {
-            aoe: true,
-            band: "cone",
-            note: "Membership uses cone math, not this circle alone"
-          }
+          itemUuid: item.uuid,
+          attackerUuid: attacker.uuid,
+          fullDv,
+          dvType,
+          element: mode.element || ""
         }
-      }]);
+      });
     }
   } catch (err) {
     console.warn("SRX | cone region", err);
@@ -330,14 +312,7 @@ async function rollConeAttack(attacker, item, mode) {
     });
   }
 
-  const rows = affected.map((t) => `<li>
-    <strong>${foundry.utils.escapeHTML(t.actor.name)}</strong> — DV ${t.dv}${dvType}
-    <button type="button" class="srx-combat-btn" data-combat-action="aoeResist"
-      data-actor-uuid="${t.actor.uuid}" data-dv="${t.dv}" data-dv-type="${dvType}"
-      data-element="${mode.element || ""}" data-band="full">
-      ${game.i18n.localize("SRX.Combat.resist")}
-    </button>
-  </li>`).join("");
+  const rows = affected.map((t) => aoeTargetRow(t, dvType, mode.element || "")).join("");
 
   const msg = await foundry.documents.ChatMessage.create({
     speaker,
@@ -368,6 +343,65 @@ async function rollConeAttack(attacker, item, mode) {
 }
 
 /**
+ * HTML row for one AOE target on the master card.
+ */
+function aoeTargetRow(t, dvType, element) {
+  const bandLabel = t.band === "half"
+    ? game.i18n.localize("SRX.Aoe.bandHalf")
+    : game.i18n.localize("SRX.Aoe.bandFull");
+  return `<li data-token-id="${t.id}">
+    <strong>${foundry.utils.escapeHTML(t.actor.name)}</strong>
+    — ${bandLabel}, DV ${t.dv}${dvType}
+    <button type="button" class="srx-combat-btn" data-combat-action="aoeResist"
+      data-actor-uuid="${t.actor.uuid}"
+      data-dv="${t.dv}" data-dv-type="${dvType}"
+      data-element="${element || ""}"
+      data-band="${t.band}">
+      ${game.i18n.localize("SRX.Combat.resist")}
+    </button>
+  </li>`;
+}
+
+/**
+ * Cover / confined options before AOE resistance (p. 123).
+ * Good Cover → Leverage on resist; confined → Liability.
+ * @returns {Promise<null|{ goodCover: boolean, confined: boolean }>}
+ */
+export async function promptAoeResistCover({ goodCover = false, confined = false } = {}) {
+  const result = await foundry.applications.api.DialogV2.wait({
+    window: { title: game.i18n.localize("SRX.Aoe.resistOptions") },
+    position: { width: 360 },
+    content: `<div class="srx roll-config">
+      <p class="hint">${game.i18n.localize("SRX.Aoe.resistOptionsHint")}</p>
+      <div class="form-group">
+        <label><input type="checkbox" name="goodCover" ${goodCover ? "checked" : ""}>
+          ${game.i18n.localize("SRX.Aoe.goodCover")}</label>
+      </div>
+      <div class="form-group">
+        <label><input type="checkbox" name="confined" ${confined ? "checked" : ""}>
+          ${game.i18n.localize("SRX.Aoe.confined")}</label>
+      </div>
+    </div>`,
+    buttons: [
+      {
+        action: "ok",
+        label: game.i18n.localize("SRX.Combat.resist"),
+        icon: "fa-solid fa-shield",
+        default: true,
+        callback: (_ev, button) => ({
+          goodCover: button.form.elements.goodCover.checked,
+          confined: button.form.elements.confined.checked
+        })
+      },
+      { action: "cancel", label: game.i18n.localize("Cancel") }
+    ],
+    rejectClose: false
+  });
+  if (!result || result === "cancel") return null;
+  return result;
+}
+
+/**
  * AOE damage resistance: Body + Armor + Defense Score; Good Cover → Leverage (dialog).
  */
 export async function resistAoeDamage({
@@ -375,13 +409,22 @@ export async function resistAoeDamage({
   dv,
   dvType = "P",
   element = "",
-  goodCover = false
+  goodCover = false,
+  confined = false,
+  skipCoverPrompt = false
 } = {}) {
   const defender = await fromUuid(actorUuid);
   if (!defender) return null;
   if (!defender.isOwner && !game.user.isGM) {
     ui.notifications.warn(game.i18n.localize("SRX.Combat.notDefender"));
     return null;
+  }
+
+  let cover = { goodCover, confined };
+  if (!skipCoverPrompt) {
+    const picked = await promptAoeResistCover(cover);
+    if (!picked) return null;
+    cover = picked;
   }
 
   const bod = defender.system.attributes?.bod?.value ?? defender.system.body ?? 1;
@@ -399,14 +442,13 @@ export async function resistAoeDamage({
   });
   if (!config) return null;
 
-  // Good Cover → force Leverage on resist (p. 123)
+  // Prefer explicit TN from roll dialog; otherwise apply cover/confined (p. 123)
   let tn = config.tn;
-  if (goodCover || config.leverage) {
-    // If they didn't pick leverage, apply Good Cover leverage unless liability also set
-    if (goodCover && !config.liability) {
-      const { resolveTn } = await import("../rules/dice.mjs");
-      tn = resolveTn({ leverage: true, liability: !!config.liability });
-    }
+  if (!config.leverage && !config.liability && (cover.goodCover || cover.confined)) {
+    tn = resolveTn({
+      leverage: cover.goodCover,
+      liability: cover.confined
+    });
   }
 
   let resistHits = 0;
@@ -497,8 +539,8 @@ export function registerAoeChatHooks() {
             actorUuid: btn.dataset.actorUuid,
             dv: Number(btn.dataset.dv) || 0,
             dvType: btn.dataset.dvType || "P",
-            element: btn.dataset.element || "",
-            goodCover: btn.dataset.band === "goodCover"
+            element: btn.dataset.element || ""
+            // Cover prompt always shown (Good Cover / confined)
           });
         } catch (err) {
           console.error("SRX | aoeResist", err);

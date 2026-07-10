@@ -7,7 +7,9 @@ import {
   aoeShape,
   classifyBlastTargets,
   classifyConeTargets,
+  coneTriangleMeters,
   defaultBlastRadii,
+  foundryRotationToCompass,
   offsetByScatter,
   parseDualDv,
   scatterDiceCount,
@@ -16,15 +18,19 @@ import {
 } from "../rules/aoe.mjs";
 import { evaluateDv } from "../rules/formulas.mjs";
 
+/** Pixels per grid meter on the active canvas. */
+export function distancePixels() {
+  return canvas?.dimensions?.distancePixels
+    ?? (canvas?.dimensions?.size / (canvas?.grid?.distance || 1))
+    ?? 100;
+}
+
 /**
  * Grid distance (meters) → canvas pixels.
  * @param {number} meters
  */
 export function metersToPixels(meters) {
-  const distPx = canvas?.dimensions?.distancePixels
-    ?? (canvas?.dimensions?.size / (canvas?.grid?.distance || 1))
-    ?? 100;
-  return (Number(meters) || 0) * distPx;
+  return (Number(meters) || 0) * distancePixels();
 }
 
 /**
@@ -32,9 +38,7 @@ export function metersToPixels(meters) {
  * Token centers are in pixels; convert using distancePixels.
  */
 export function pixelsToMeters(px, py) {
-  const distPx = canvas?.dimensions?.distancePixels
-    ?? (canvas?.dimensions?.size / (canvas?.grid?.distance || 1))
-    ?? 100;
+  const distPx = distancePixels();
   return { x: (Number(px) || 0) / distPx, y: (Number(py) || 0) / distPx };
 }
 
@@ -122,19 +126,91 @@ export async function placeBlastRegions(opts) {
 }
 
 /**
- * Interactive placement: user picks a point, then we create regions at that point
- * (optionally after scatter). Uses core region placement when available, else click.
+ * Polygon shape for a shotgun cone (pixel space).
+ * @param {{ x: number, y: number }} originPx
+ * @param {number} facingCompassDeg - 0 = north
+ * @param {number} rangeMeters
+ */
+export function conePolygonShape(originPx, facingCompassDeg, rangeMeters) {
+  const originM = pixelsToMeters(originPx.x, originPx.y);
+  const triM = coneTriangleMeters(originM, facingCompassDeg, rangeMeters);
+  const distPx = distancePixels();
+  // Foundry polygon shapes: flat [x0,y0,x1,y1,…] in pixel coords
+  const points = [];
+  for (const p of triM) {
+    points.push(p.x * distPx, p.y * distPx);
+  }
+  return { type: "polygon", points };
+}
+
+/**
+ * Place a cone Template Region on the scene.
+ * @returns {Promise<RegionDocument[]>}
+ */
+export async function placeConeRegion({
+  originPx,
+  facingCompassDeg,
+  rangeMeters,
+  name = "Cone",
+  flags = {}
+} = {}) {
+  const scene = canvas?.scene;
+  if (!scene) throw new Error("No active scene");
+  return scene.createEmbeddedDocuments("Region", [{
+    name: `${name} (${rangeMeters}m cone)`,
+    color: "#ddaa00",
+    shapes: [conePolygonShape(originPx, facingCompassDeg, rangeMeters)],
+    flags: {
+      srx: {
+        ...flags,
+        aoe: true,
+        band: "cone",
+        rangeMeters,
+        facing: facingCompassDeg
+      }
+    }
+  }]);
+}
+
+/**
+ * Snap pixel point to grid center when a grid is active.
+ * @param {{ x: number, y: number }} pt
+ */
+export function snapPointToGrid(pt) {
+  if (!canvas?.grid || canvas.grid.type === 0) return { x: pt.x, y: pt.y };
+  try {
+    // v12+ getCenterPoint / getTopLeftPoint
+    if (typeof canvas.grid.getCenterPoint === "function") {
+      const c = canvas.grid.getCenterPoint(pt);
+      return { x: c.x, y: c.y };
+    }
+    if (typeof canvas.grid.getCenter === "function") {
+      const [x, y] = canvas.grid.getCenter(pt.x, pt.y);
+      return { x, y };
+    }
+  } catch (_e) {
+    /* ignore */
+  }
+  return { x: pt.x, y: pt.y };
+}
+
+/**
+ * Interactive placement: left-click aim point, right-click / Escape cancel.
+ * Snaps to grid center when possible.
  *
  * @returns {Promise<{ x: number, y: number }|null>} pixel center
  */
-export async function pickPointOnCanvas({ hint = "Choose blast center" } = {}) {
+export async function pickPointOnCanvas({
+  hint = "Choose blast center",
+  snap = true
+} = {}) {
   if (!canvas?.ready) {
     ui.notifications.warn(game.i18n.localize("SRX.Aoe.noCanvas"));
     return null;
   }
   ui.notifications.info(hint);
 
-  // Prefer placeRegion ephemeral if available (v14)
+  // Try core placeRegion first (nice preview); fall back to click capture
   if (typeof canvas.regions?.placeRegion === "function") {
     try {
       const region = await canvas.regions.placeRegion({
@@ -147,33 +223,77 @@ export async function pickPointOnCanvas({ hint = "Choose blast center" } = {}) {
         }],
         restriction: { enabled: false }
       }, { create: false });
-      if (!region) return null;
-      // Ephemeral region has shapes with absolute coords after place
-      const shape = region.shapes?.[0] ?? region._source?.shapes?.[0];
-      if (shape && shape.x != null) {
-        return { x: shape.x, y: shape.y };
+      if (region) {
+        const shape = region.shapes?.[0] ?? region._source?.shapes?.[0];
+        if (shape && shape.x != null) {
+          const pt = { x: shape.x, y: shape.y };
+          return snap ? snapPointToGrid(pt) : pt;
+        }
+        const b = region.bounds;
+        if (b) {
+          const pt = { x: b.x + b.width / 2, y: b.y + b.height / 2 };
+          return snap ? snapPointToGrid(pt) : pt;
+        }
       }
-      // bounds center
-      const b = region.bounds;
-      if (b) return { x: b.x + b.width / 2, y: b.y + b.height / 2 };
     } catch (err) {
       console.warn("SRX | placeRegion fallback to click", err);
     }
   }
 
   return new Promise((resolve) => {
-    const handler = (event) => {
-      canvas.stage.off("click", handler);
-      const pos = event?.data?.getLocalPosition?.(canvas.stage)
-        ?? canvas?.mousePosition
-        ?? null;
+    const prevCursor = canvas.app?.view?.style?.cursor;
+    if (canvas.app?.view) canvas.app.view.style.cursor = "crosshair";
+
+    const cleanup = () => {
+      canvas.stage.off("pointerdown", onPointer);
+      window.removeEventListener("keydown", onKey);
+      if (canvas.app?.view && prevCursor !== undefined) {
+        canvas.app.view.style.cursor = prevCursor || "";
+      }
+    };
+
+    const onKey = (ev) => {
+      if (ev.key === "Escape") {
+        cleanup();
+        ui.notifications.info(game.i18n.localize("SRX.Aoe.pickCancelled"));
+        resolve(null);
+      }
+    };
+
+    const onPointer = (event) => {
+      // right button → cancel
+      const btn = event.data?.button ?? event.button;
+      if (btn === 2) {
+        event.stopPropagation?.();
+        cleanup();
+        ui.notifications.info(game.i18n.localize("SRX.Aoe.pickCancelled"));
+        resolve(null);
+        return;
+      }
+      if (btn !== 0 && btn !== undefined) return;
+
+      const pos = event.data?.global
+        ? canvas.stage.toLocal(event.data.global)
+        : (event.data?.getLocalPosition?.(canvas.stage)
+          ?? canvas.mousePosition
+          ?? null);
+      cleanup();
       if (!pos) {
         resolve(null);
         return;
       }
-      resolve({ x: pos.x, y: pos.y });
+      const pt = { x: pos.x, y: pos.y };
+      resolve(snap ? snapPointToGrid(pt) : pt);
     };
-    canvas.stage.on("click", handler);
+
+    // Prevent context menu during pick
+    const onContext = (ev) => {
+      ev.preventDefault();
+    };
+    canvas.app?.view?.addEventListener("contextmenu", onContext, { once: true });
+
+    canvas.stage.on("pointerdown", onPointer);
+    window.addEventListener("keydown", onKey);
   });
 }
 
@@ -219,20 +339,20 @@ export function tokensInBlast(centerPx, fullRadius, halfRadius, fullDv, halfDv) 
  */
 export function tokensInCone(originToken, rangeMeters, dv, facingDeg = null) {
   const originM = tokenCenterMeters(originToken);
-  // Foundry token rotation: 0 = east, degrees clockwise — convert to our 0=north compass
-  // Foundry: 0° east, 90° south. Our scatter: 0° north.
-  // facing compass = Foundry rotation + 90 (east→south→… wait)
-  // Foundry rotation 0 = right (+x) = east = our 90°.
-  // ourDeg = foundryRotation + 90? foundry 0 → our 90; foundry 90 (south) → our 180 → our = foundry + 90.
   const fRot = facingDeg != null
     ? facingDeg
-    : ((originToken.document?.rotation ?? originToken.rotation ?? 0) + 90);
+    : foundryRotationToCompass(originToken.document?.rotation ?? originToken.rotation ?? 0);
   const targets = sceneTokenTargets().filter((t) => t.id !== originToken.id);
   const classified = classifyConeTargets(originM, fRot, targets, rangeMeters, dv);
   return classified.map((c) => {
     const src = targets.find((t) => t.id === c.id);
-    return { ...c, token: src?.token, actor: src?.actor };
+    return { ...c, token: src?.token, actor: src?.actor, facing: fRot };
   });
+}
+
+/** Compass facing for a token (0 = north). */
+export function tokenCompassFacing(token) {
+  return foundryRotationToCompass(token.document?.rotation ?? token.rotation ?? 0);
 }
 
 /**
@@ -274,9 +394,7 @@ export async function rollScatterDirection() {
  * @param {number} degrees
  */
 export function scatterOffsetPixels(aimPx, scatterMeters, degrees) {
-  const distPx = canvas?.dimensions?.distancePixels
-    ?? (canvas?.dimensions?.size / (canvas?.grid?.distance || 1))
-    ?? 100;
+  const distPx = distancePixels();
   const aimM = { x: aimPx.x / distPx, y: aimPx.y / distPx };
   const endM = offsetByScatter(aimM, scatterMeters, degrees);
   return { x: endM.x * distPx, y: endM.y * distPx };
@@ -307,5 +425,7 @@ export {
   aoeShape,
   defaultBlastRadii,
   resolveScatter,
-  scatterDiceCount
+  scatterDiceCount,
+  foundryRotationToCompass,
+  coneTriangleMeters
 };
