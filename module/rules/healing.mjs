@@ -34,13 +34,14 @@ export function resolveStabilizeTest({ hits = 0, threshold = 1 } = {}) {
  * @param {number} threshold - Base threshold for the test (defaults to 2 unless customized)
  * @returns {{ success: boolean, boxesHealed: number }}
  */
-export function resolveFirstAidTest({ hits = 0, threshold = 2 } = {}) {
-  const th = Math.max(1, Number(threshold) || 1);
+export function resolveFirstAidTest({ hits = 0, threshold = 0 } = {}) {
+  // SRX research: LOG+Biotech; each hit heals one box (system shock subtracts later).
+  // Threshold 0 → every hit counts; optional threshold for difficult conditions.
+  const th = Math.max(0, Number(threshold) || 0);
   const h = Math.max(0, Number(hits) || 0);
-  const success = h >= th;
-  return { success, boxesHealed: success ? h : 0 }; // First aid typically heals 1 box per hit on success, or net hits. Using total hits if successful, per some SR6 rules, but let's stick to net hits to be safe, or just total hits? Standard SR6 First Aid heals 1 box per hit.
-  // Wait, SR6 Core p.120 says "A First Aid Test uses Logic + Biotech. Every hit heals one box of damage."
-  // It does not specify a threshold, so it might be a simple test. We will use threshold = 0 for standard or just check hits > 0.
+  const success = h > th || (th === 0 && h > 0);
+  const boxesHealed = th === 0 ? h : Math.max(0, h - th);
+  return { success: boxesHealed > 0, boxesHealed };
 }
 
 /**

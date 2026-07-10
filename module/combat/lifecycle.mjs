@@ -202,6 +202,12 @@ export async function runDyingTest(actor, { traumaPatch = false } = {}) {
         hits: result.totalHits,
         threshold: result.threshold
       })}</p>
+      <button type="button" class="srx-combat-btn" data-combat-action="stabilize" data-actor-uuid="${actor.uuid}">
+        ${game.i18n.localize("SRX.Healing.Stabilize")}
+      </button>
+      <button type="button" class="srx-combat-btn" data-combat-action="firstAid" data-actor-uuid="${actor.uuid}">
+        ${game.i18n.localize("SRX.Healing.FirstAid")}
+      </button>
     </div>`
   });
 }

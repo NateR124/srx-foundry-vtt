@@ -1,57 +1,67 @@
 import { SRXRoll } from "../dice/srx-roll.mjs";
-import { applyDamageToActor } from "./damage.mjs";
 import {
   stabilizeThreshold,
   resolveStabilizeTest,
   resolveFirstAidTest
 } from "../rules/healing.mjs";
+import { syncCharacterStatuses } from "./damage.mjs";
 
 /**
- * Register Hooks for Healing Actions in the chat pipeline.
- * // TODO(integrate): import { registerHealingHooks } from "./combat/healing.mjs";
- * // TODO(integrate): registerHealingHooks();
+ * Register chat buttons for Stabilize / First Aid (HTMLElement hooks, v13+).
  */
 export function registerHealingHooks() {
-  Hooks.on("renderChatMessage", (message, html, data) => {
-    // Listen for Stabilize action clicks on dying chat cards or UI buttons
-    html.on("click", ".srx-combat-btn[data-combat-action='stabilize']", async (ev) => {
-      ev.preventDefault();
-      const targetUuid = ev.currentTarget.dataset.actorUuid;
-      if (!targetUuid) return;
-      const targetToken = await fromUuid(targetUuid);
-      const targetActor = targetToken?.actor ?? targetToken;
-      
-      if (!targetActor) return;
-      
-      // Determine the healer (first controlled token or assigned character)
-      const healer = canvas?.tokens?.controlled[0]?.actor ?? game.user.character;
-      if (!healer) {
-        ui.notifications.warn(game.i18n.localize("SRX.Healing.SelectHealerWarning") ?? "Select a healer token to use Stabilize.");
-        return;
-      }
-      
-      await rollStabilize(healer, targetActor);
+  Hooks.on("renderChatMessageHTML", (message, html) => {
+    const root = html instanceof HTMLElement ? html : html?.[0];
+    if (!root) return;
+
+    root.querySelectorAll("[data-combat-action='stabilize']").forEach((btn) => {
+      btn.addEventListener("click", async (ev) => {
+        ev.preventDefault();
+        try {
+          const target = await actorFromUuid(btn.dataset.actorUuid);
+          if (!target) return;
+          const healer = currentHealer();
+          if (!healer) {
+            ui.notifications.warn(game.i18n.localize("SRX.Healing.SelectHealerWarning"));
+            return;
+          }
+          await rollStabilize(healer, target);
+        } catch (err) {
+          console.error("SRX | stabilize", err);
+          ui.notifications.error(err.message);
+        }
+      });
     });
 
-    // Listen for First Aid action clicks
-    html.on("click", ".srx-combat-btn[data-combat-action='firstAid']", async (ev) => {
-      ev.preventDefault();
-      const targetUuid = ev.currentTarget.dataset.actorUuid;
-      if (!targetUuid) return;
-      const targetToken = await fromUuid(targetUuid);
-      const targetActor = targetToken?.actor ?? targetToken;
-      
-      if (!targetActor) return;
-      
-      const healer = canvas?.tokens?.controlled[0]?.actor ?? game.user.character;
-      if (!healer) {
-        ui.notifications.warn(game.i18n.localize("SRX.Healing.SelectHealerWarning") ?? "Select a healer token to use First Aid.");
-        return;
-      }
-      
-      await rollFirstAid(healer, targetActor);
+    root.querySelectorAll("[data-combat-action='firstAid']").forEach((btn) => {
+      btn.addEventListener("click", async (ev) => {
+        ev.preventDefault();
+        try {
+          const target = await actorFromUuid(btn.dataset.actorUuid);
+          if (!target) return;
+          const healer = currentHealer();
+          if (!healer) {
+            ui.notifications.warn(game.i18n.localize("SRX.Healing.SelectHealerWarning"));
+            return;
+          }
+          await rollFirstAid(healer, target);
+        } catch (err) {
+          console.error("SRX | firstAid", err);
+          ui.notifications.error(err.message);
+        }
+      });
     });
   });
+}
+
+function currentHealer() {
+  return canvas?.tokens?.controlled?.[0]?.actor ?? game.user.character ?? null;
+}
+
+async function actorFromUuid(uuid) {
+  if (!uuid) return null;
+  const doc = await fromUuid(uuid);
+  return doc?.actor ?? doc;
 }
 
 /**
@@ -124,7 +134,7 @@ export async function rollFirstAid(healer, target) {
   const biotech = healer.system.skills?.biotech?.value ?? 0;
   const pool = Math.max(0, log + biotech);
 
-  const threshold = 2; // Default First Aid threshold or could be 0 if every hit heals
+  const threshold = 0; // each hit heals one box (conditions can raise threshold later)
 
   const roll = SRXRoll.fromPool({
     pool,
@@ -165,18 +175,10 @@ export async function rollFirstAid(healer, target) {
   });
   
   if (result.success && result.boxesHealed > 0) {
-    // Apply negative damage to heal
-    // applyDamageToActor supports positive amounts. If damage is a simple subtract, we need to handle healing.
-    // Let's manually reduce the track. 
-    // Wait, applying damage is for damage. To heal, we should probably update the value.
+    // First Aid outline: heal Physical boxes (stun path can be added later)
     const phys = target.system.monitors?.physical?.value ?? 0;
-    const stun = target.system.monitors?.stun?.value ?? 0;
-
-    // Heal physical first, then stun, or whatever the rules say. 
-    // First aid usually targets a specific track. For outline, let's heal Physical.
-    const healAmount = result.boxesHealed;
-    const newPhys = Math.max(0, phys - healAmount);
-    
+    const newPhys = Math.max(0, phys - result.boxesHealed);
     await target.update({ "system.monitors.physical.value": newPhys });
+    await syncCharacterStatuses(target);
   }
 }
