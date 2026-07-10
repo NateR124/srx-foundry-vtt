@@ -107,6 +107,7 @@ Hooks.once("ready", () => {
   registerAoeChatHooks();
   registerTimedHooks();
   // TODO(integrate): registerHealingHooks();
+  // TODO(integrate): registerMatrixHooks();
   console.log("SRX | Ready (M2 combat pipeline active)");
 });
 
