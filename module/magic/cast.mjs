@@ -16,6 +16,7 @@ import { applyDamageToActor, damageSummary, resolveDamageApplication } from "../
 import { addSustained, sustainCount, sustainPenaltyForActor } from "./sustain.mjs";
 import { spendCombatantAction, combatantForActor } from "../combat/actions.mjs";
 import { requestGmAction } from "../net/socket.mjs";
+import { isAutomationOff } from "../settings/automation.mjs";
 import { SRX } from "../config.mjs";
 
 /**
@@ -225,7 +226,10 @@ async function resolveSpellOnTarget(caster, spell, force, config, target) {
       }
     }
 
-    if (target.isOwner || game.user.isGM) {
+    if (isAutomationOff("damageApply")) {
+      // Automation "off": report only, never write monitors
+      summary = `${damageSummary(amount)} — ${game.i18n.localize("SRX.Combat.manualApply")}`;
+    } else if (target.isOwner || game.user.isGM) {
       const result = await applyDamageToActor(target, amount);
       summary = damageSummary({
         physical: amount.physical,

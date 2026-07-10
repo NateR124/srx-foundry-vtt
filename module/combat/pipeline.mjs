@@ -14,6 +14,7 @@ import {
 } from "./damage.mjs";
 import { applyElementalAftermath } from "./lifecycle.mjs";
 import { requestGmAction } from "../net/socket.mjs";
+import { isAutomationOff, shouldAuto } from "../settings/automation.mjs";
 
 /**
  * Enhance weapon attack: after a successful hit, post a combat card with
@@ -168,7 +169,7 @@ export async function resistDamageFromCard(message) {
   // The resolution lives ONLY on this defender-authored message. Writing it
   // to the attack-outcome message would fail for players: ChatMessage grants
   // update rights to its author alone, and that card belongs to the attacker.
-  return foundry.documents.ChatMessage.create({
+  const resistMsg = await foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor: defender }),
     content: `<div class="srx chat-card"><p>${game.i18n.format("SRX.Combat.resistResult", {
       name: defender.name,
@@ -189,6 +190,13 @@ export async function resistDamageFromCard(message) {
       }
     }
   });
+
+  // Automation "auto": apply as soon as the resistance is resolved,
+  // skipping the Apply-damage button click
+  if (resistMsg && shouldAuto("damageApply")) {
+    await applyDamageFromCard(resistMsg);
+  }
+  return resistMsg;
 }
 
 /**
@@ -226,6 +234,17 @@ export async function applyDamageFromCard(message) {
 
   const defender = await fromUuid(defenderUuid);
   if (!defender) return null;
+
+  // Automation "off": the system never writes monitors — report only
+  if (isAutomationOff("damageApply")) {
+    return foundry.documents.ChatMessage.create({
+      speaker: foundry.documents.ChatMessage.getSpeaker({ actor: defender }),
+      content: `<div class="srx chat-card"><p>${game.i18n.format("SRX.Combat.autoOffManual", {
+        name: defender.name,
+        summary: damageSummary(resolved)
+      })}</p></div>`
+    });
+  }
 
   // Elemental riders: acid duration / catch fire (from parent attackOutcome)
   let element = flag?.element ?? "";

@@ -36,6 +36,7 @@ import {
   markFiredFirearm,
   spendCombatantAction
 } from "./actions.mjs";
+import { isAutomationOff } from "../settings/automation.mjs";
 import { SRX } from "../config.mjs";
 
 /**
@@ -107,6 +108,16 @@ async function rollBlastAttack(attacker, item, mode) {
   });
   if (!aimPx) return null;
 
+  // Automation "off": no scatter mechanics — detonate at the aimed point
+  // and let the GM adjudicate deviation manually
+  if (isAutomationOff("scatter")) {
+    await foundry.documents.ChatMessage.create({
+      speaker: foundry.documents.ChatMessage.getSpeaker({ actor: attacker }),
+      content: `<div class="srx chat-card"><p>${game.i18n.localize("SRX.Aoe.scatterOff")}</p></div>`
+    });
+    return resolveBlastAt(attacker, item, mode, aimPx);
+  }
+
   // Scatter sum (threshold)
   const scatter = await rollScatterSum(delivery, detonation);
 
@@ -154,6 +165,19 @@ async function rollBlastAttack(attacker, item, mode) {
       content: `<div class="srx chat-card"><p class="success">${game.i18n.localize("SRX.Aoe.directHit")}</p></div>`
     });
   }
+
+  return resolveBlastAt(attacker, item, mode, centerPx);
+}
+
+/**
+ * Detonate a blast at a pixel center: place regions, classify targets,
+ * post the master card. Shared by the scatter path and the scatter-off path.
+ */
+async function resolveBlastAt(attacker, item, mode, centerPx) {
+  const combatant = combatantForActor(attacker);
+  const speaker = foundry.documents.ChatMessage.getSpeaker({ actor: attacker });
+  const { fullRadius, halfRadius } = defaultBlastRadii(mode);
+  const { fullDv, halfDv, dvType } = resolveModeBlastDv(mode, attacker);
 
   // Place visual regions (players relay through the GM executor)
   try {
@@ -478,6 +502,17 @@ export async function resistAoeDamage({
     elemental: !!element,
     aoe: true
   });
+
+  // Automation "off": report the resolution, never write monitors
+  if (isAutomationOff("damageApply")) {
+    return foundry.documents.ChatMessage.create({
+      speaker: foundry.documents.ChatMessage.getSpeaker({ actor: defender }),
+      content: `<div class="srx chat-card"><p>${game.i18n.format("SRX.Combat.autoOffManual", {
+        name: defender.name,
+        summary: damageSummary(resolved)
+      })}</p></div>`
+    });
+  }
 
   // Ownership was gated at entry (only the defender's owner or the GM rolls
   // this resistance), so damage can always be applied directly here.

@@ -176,6 +176,8 @@ export async function clearSuppressOnPhaseStart(combatant) {
  * @param {Actor} actor
  */
 export async function checkSuppressPhaseStart(actor) {
+  const { isAutomationOff } = await import("../settings/automation.mjs");
+  if (isAutomationOff("suppress")) return;
   const token = actor.getActiveTokens?.()?.[0];
   if (!token) return;
   const pos = tokenCenterMeters(token);

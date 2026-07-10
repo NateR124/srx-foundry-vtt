@@ -174,6 +174,8 @@ export async function runToxinResistance(actor, {
  */
 export async function processTimedEffects(worldTime) {
   if (!game.user.isGM) return;
+  const { isAutomationOff } = await import("../settings/automation.mjs");
+  if (isAutomationOff("toxinSchedule")) return;
   const queue = getTimedQueue();
   if (!queue.length) return;
 

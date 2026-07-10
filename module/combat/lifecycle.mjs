@@ -81,6 +81,8 @@ export async function clearOnFire(actor) {
  */
 export async function processCombatTurnEndForActor(actor, { traumaPatch = false } = {}) {
   if (!actor) return [];
+  const { isAutomationOff } = await import("../settings/automation.mjs");
+  if (isAutomationOff("statusTicks")) return [];
   const messages = [];
 
   // --- Dying ---
@@ -248,6 +250,8 @@ export async function runCombatTurnEnd(combat) {
 export async function processActionPhaseEndStatuses(combatant) {
   const actor = combatant?.actor;
   if (!actor || !game.user.isGM) return;
+  const { isAutomationOff } = await import("../settings/automation.mjs");
+  if (isAutomationOff("statusTicks")) return;
 
   for (const [statusId, def] of Object.entries(PHASE_SHAKE_OFF)) {
     if (!actorHasStatus(actor, statusId)) continue;
