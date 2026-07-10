@@ -108,6 +108,7 @@ Hooks.once("ready", () => {
   registerTimedHooks();
   // TODO(integrate): registerHealingHooks();
   // TODO(integrate): registerMatrixHooks();
+  // TODO(integrate): registerVehicleHooks();
   console.log("SRX | Ready (M2 combat pipeline active)");
 });
 

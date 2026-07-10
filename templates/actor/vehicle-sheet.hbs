@@ -1,0 +1,31 @@
+<form autocomplete="off">
+  <header class="sheet-header">
+    <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64"/>
+    <h1><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+  </header>
+  <div class="sheet-body">
+    <h2>Vehicle Stats</h2>
+    <div class="grid grid-2col">
+      <label>Handling</label>
+      <input type="number" name="system.handling" value="{{system.handling}}">
+      
+      <label>Speed</label>
+      <input type="number" name="system.speed" value="{{system.speed}}">
+      
+      <label>Acceleration</label>
+      <input type="number" name="system.acceleration" value="{{system.acceleration}}">
+      
+      <label>Body</label>
+      <input type="number" name="system.body" value="{{system.body}}">
+      
+      <label>Armor</label>
+      <input type="number" name="system.armor" value="{{system.armor}}">
+      
+      <label>Pilot</label>
+      <input type="number" name="system.pilot" value="{{system.pilot}}">
+      
+      <label>Sensor</label>
+      <input type="number" name="system.sensor" value="{{system.sensor}}">
+    </div>
+  </div>
+</form>
