@@ -47,7 +47,9 @@ export function mapThreatToActorData(entry) {
 
     // Formula DVs ("(F+3)P Fire") arrive with dv.n = null — evaluate against
     // the threat rating instead of silently importing a 0-damage attack.
-    let dv = Number(atk.dv?.n);
+    // NOTE: Number(null) is 0, not NaN, so null must be checked explicitly.
+    const rawN = atk.dv?.n;
+    let dv = rawN == null ? NaN : Number(rawN);
     if (!Number.isFinite(dv)) {
       const evaluated = evalDvFormula(atk.dv?.raw, tr);
       if (evaluated != null) {

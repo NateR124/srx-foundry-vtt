@@ -11,6 +11,7 @@ import {
   createSustainedEffect
 } from "../module/rules/magic.mjs";
 import { nextInitiativePass, lateJoinerInitiative } from "../module/rules/combat.mjs";
+import { mapThreatToActorData } from "../module/import/threats/parse-threats.mjs";
 
 describe("Magic-0 Force clamp (mundanes could cast at Force 20)", () => {
   it("clamps to 1 when Magic is 0", () => {
@@ -65,6 +66,28 @@ describe("Sustain merge keyed by spellUuid (same-name spells merged wrongly)", (
     });
     expect(e.warding).toBe(3);
     expect(e.targetUuids).toEqual(["T1", "T2"]);
+  });
+});
+
+describe("Threat formula DVs with dv.n null (Number(null) === 0 trap)", () => {
+  it("evaluates (F+3) at F = TR when n is null", () => {
+    const data = mapThreatToActorData({
+      name: "Toxic Mage",
+      threatRating: 4,
+      attacks: [{ name: "Acid Spray", pool: 8, dv: { n: null, raw: "(F+3)P", type: "P/S" }, action: "complex" }]
+    });
+    expect(data.system.attacks[0].dv).toBe(7); // TR 4 + 3 — NOT 0
+    expect(data.system.attacks[0].dvType).toBe("PS");
+    expect(data.system.notes).toContain("Formula DVs");
+  });
+  it("keeps explicit numeric DVs untouched, including 0", () => {
+    const data = mapThreatToActorData({
+      name: "Drone",
+      threatRating: 2,
+      attacks: [{ name: "Ram", pool: 6, dv: { n: 0, raw: "0", type: "S" } }]
+    });
+    expect(data.system.attacks[0].dv).toBe(0);
+    expect(data.system.notes).not.toContain("Formula DVs");
   });
 });
 

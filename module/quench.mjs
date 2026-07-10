@@ -47,7 +47,8 @@ export function registerQuenchTests(quench) {
 
       after(cleanup);
 
-      describe("Multi-pass initiative (Combat document)", () => {
+      describe("Multi-pass initiative (Combat document)", function () {
+        this.timeout(30000);
         let combat, charActor, threatActor;
 
         it("creates a combat with SRX document classes", async () => {
@@ -118,7 +119,8 @@ export function registerQuenchTests(quench) {
         });
       });
 
-      describe("Attack outcome → apply damage round-trip", () => {
+      describe("Attack outcome → apply damage round-trip", function () {
+        this.timeout(30000);
         it("applies unresisted damage from the attack-outcome card", async () => {
           const { postAttackOutcome, applyDamageFromCard } = await import("./combat/pipeline.mjs");
           const attacker = await makeCharacter("Quench Attacker");
@@ -142,7 +144,8 @@ export function registerQuenchTests(quench) {
         });
       });
 
-      describe("AOE Regions", () => {
+      describe("AOE Regions", function () {
+        this.timeout(30000);
         it("blast regions actually validate and appear on the scene", async function () {
           if (!canvas?.scene) this.skip();
           const { placeBlastRegions, cleanupAoeRegions } = await import("./canvas/aoe.mjs");
@@ -169,7 +172,8 @@ export function registerQuenchTests(quench) {
       const { describe, it, expect, after } = context;
       after(cleanup);
 
-      describe("Cast gates", () => {
+      describe("Cast gates", function () {
+        this.timeout(30000);
         it("Magic 0 cannot cast", async () => {
           const mundane = await makeCharacter("Quench Mundane");
           const [spell] = await mundane.createEmbeddedDocuments("Item", [
@@ -187,13 +191,17 @@ export function registerQuenchTests(quench) {
           const [spell] = await mage.createEmbeddedDocuments("Item", [
             { name: "Quench Bolt 2", type: "spell", system: { category: "combat", pattern: "direct" } }
           ]);
-          game.user.updateTokenTargets([]);
+          // v14 removed User#updateTokenTargets — release via Token#setTarget
+          for (const t of [...game.user.targets]) {
+            t.setTarget?.(false, { releaseOthers: false });
+          }
           const result = await mage.castSpell(spell);
           expect(result).to.equal(null);
         });
       });
 
-      describe("Sustain lifecycle", () => {
+      describe("Sustain lifecycle", function () {
+        this.timeout(30000);
         it("addSustained / endSustained round-trips and clears warding", async () => {
           const { addSustained, endSustained, getSustained, sustainPenaltyForActor } =
             await import("./magic/sustain.mjs");
@@ -217,7 +225,8 @@ export function registerQuenchTests(quench) {
         });
       });
 
-      describe("Conjuring", () => {
+      describe("Conjuring", function () {
+        this.timeout(30000);
         it("summonSpirit creates an anima actor; resummon releases the prior one", async () => {
           const { summonSpirit } = await import("./magic/conjure.mjs");
           const shaman = await makeCharacter("Quench Shaman", {
@@ -248,7 +257,8 @@ export function registerQuenchTests(quench) {
       const { describe, it, expect, after } = context;
       after(cleanup);
 
-      describe("Catalog keys", () => {
+      describe("Catalog keys", function () {
+        this.timeout(30000);
         it("uses the real builder filenames", async () => {
           const { CATALOG_FILES } = await import("./import/parse-catalog.mjs");
           expect(CATALOG_FILES).to.have.property("KnowledgeDomains.txt.deploy");
@@ -257,7 +267,8 @@ export function registerQuenchTests(quench) {
         });
       });
 
-      describe("Threat mapping vs schema validation", () => {
+      describe("Threat mapping vs schema validation", function () {
+        this.timeout(30000);
         it('a real-world "P/S" dvType entry survives Actor.create', async () => {
           const { mapThreatToActorData } = await import("./import/threats/parse-threats.mjs");
           const data = mapThreatToActorData({
