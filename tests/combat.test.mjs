@@ -14,7 +14,12 @@ import {
   visibilityAttackMod,
   coverDefenseBonus,
   composeAttackModifiers,
-  effectiveDefenseScore
+  effectiveDefenseScore,
+  dyingResistanceThreshold,
+  resolveDyingTest,
+  mergeAcidBurn,
+  tickAcidBurn,
+  shouldCatchFire
 } from "../module/rules/combat.mjs";
 import { resolveDamageApplication } from "../module/combat/damage.mjs";
 import { resolveTn } from "../module/rules/dice.mjs";
@@ -213,5 +218,47 @@ describe("full damage pipeline helper", () => {
     expect(r.afterResistance).toBe(7);
     expect(r.physical).toBe(7);
     expect(r.stun).toBe(7);
+  });
+});
+
+describe("dying resistance", () => {
+  it("threshold is max(1, phys − health)", () => {
+    expect(dyingResistanceThreshold(12, 12)).toBe(1);
+    expect(dyingResistanceThreshold(15, 12)).toBe(3);
+    expect(dyingResistanceThreshold(5, 12)).toBe(1);
+  });
+
+  it("stabilizes on enough hits; fails with +1 damage", () => {
+    expect(resolveDyingTest({ hits: 2, threshold: 2 })).toEqual({
+      success: true, totalHits: 2, threshold: 2, damageOnFail: 0
+    });
+    expect(resolveDyingTest({ hits: 0, threshold: 2, traumaPatchHits: 2 })).toEqual({
+      success: true, totalHits: 2, threshold: 2, damageOnFail: 0
+    });
+    expect(resolveDyingTest({ hits: 1, threshold: 3 })).toEqual({
+      success: false, totalHits: 1, threshold: 3, damageOnFail: 1
+    });
+  });
+});
+
+describe("acid and fire riders", () => {
+  it("acid duration is max(new damage, remaining turns)", () => {
+    expect(mergeAcidBurn(null, 4)).toEqual({ turnsRemaining: 4 });
+    expect(mergeAcidBurn({ turnsRemaining: 2 }, 5)).toEqual({ turnsRemaining: 5 });
+    expect(mergeAcidBurn({ turnsRemaining: 6 }, 2)).toEqual({ turnsRemaining: 6 });
+    expect(mergeAcidBurn({ turnsRemaining: 3 }, 0)).toEqual({ turnsRemaining: 3 });
+  });
+
+  it("acid ticks 1P and decrements duration", () => {
+    expect(tickAcidBurn({ turnsRemaining: 3 })).toEqual({
+      damage: 1, next: { turnsRemaining: 2 }
+    });
+    expect(tickAcidBurn({ turnsRemaining: 0 }).damage).toBe(0);
+  });
+
+  it("catch fire when fire damage exceeds Agility", () => {
+    expect(shouldCatchFire(5, 4)).toBe(true);
+    expect(shouldCatchFire(4, 4)).toBe(false);
+    expect(shouldCatchFire(0, 3)).toBe(false);
   });
 });

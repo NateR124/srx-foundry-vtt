@@ -300,3 +300,72 @@ export function effectiveDefenseScore(baseDs, opts = {}) {
   if (opts.sizeMod) ds += Number(opts.sizeMod) || 0;
   return Math.max(1, ds);
 }
+
+/**
+ * Dying resistance threshold: max(1, Physical damage − Physical Health) (p. 135).
+ * @param {number} physicalDamage
+ * @param {number} physicalHealthMax
+ */
+export function dyingResistanceThreshold(physicalDamage, physicalHealthMax) {
+  return Math.max(1, (Number(physicalDamage) || 0) - (Number(physicalHealthMax) || 0));
+}
+
+/**
+ * Resolve a Body + Willpower dying resistance test.
+ * Trauma patch adds +2 free hits (p. 350 / p. 135).
+ * Fail → +1 unresisted Physical; success → stabilize (lose Dying).
+ * @returns {{ success: boolean, totalHits: number, threshold: number, damageOnFail: number }}
+ */
+export function resolveDyingTest({ hits = 0, threshold = 1, traumaPatchHits = 0 } = {}) {
+  const th = Math.max(1, Number(threshold) || 1);
+  const total = Math.max(0, Number(hits) || 0) + Math.max(0, Number(traumaPatchHits) || 0);
+  const success = total >= th;
+  return {
+    success,
+    totalHits: total,
+    threshold: th,
+    damageOnFail: success ? 0 : 1
+  };
+}
+
+/**
+ * Acid burn state: 1P unresisted each Combat Turn for (acid damage taken) turns.
+ * New acid does not raise the per-turn damage; duration = max(new dmg, remaining) (p. 131).
+ * @param {{ turnsRemaining?: number }|null} current
+ * @param {number} acidDamageTaken - final acid damage this hit (post-resistance)
+ */
+export function mergeAcidBurn(current, acidDamageTaken) {
+  const dmg = Math.max(0, Number(acidDamageTaken) || 0);
+  const rem = Math.max(0, Number(current?.turnsRemaining) || 0);
+  if (dmg <= 0) return rem > 0 ? { turnsRemaining: rem } : { turnsRemaining: 0 };
+  return { turnsRemaining: Math.max(dmg, rem) };
+}
+
+/**
+ * One acid tick at end of Combat Turn.
+ * @returns {{ damage: number, next: { turnsRemaining: number } }}
+ */
+export function tickAcidBurn(state) {
+  const rem = Math.max(0, Number(state?.turnsRemaining) || 0);
+  if (rem <= 0) return { damage: 0, next: { turnsRemaining: 0 } };
+  return { damage: 1, next: { turnsRemaining: rem - 1 } };
+}
+
+/**
+ * Catch fire if final fire damage taken > Agility (p. 132).
+ * @param {number} fireDamageTaken
+ * @param {number} agility
+ */
+export function shouldCatchFire(fireDamageTaken, agility) {
+  return (Number(fireDamageTaken) || 0) > (Number(agility) || 0);
+}
+
+/**
+ * Statuses that prompt a shake-off test at end of the affected combatant's Action Phase.
+ * Dazed/Impaired: BOD+WIL(3); Frightened: WIL+CHA(3) (p. 134–135 research).
+ */
+export const PHASE_SHAKE_OFF = {
+  dazed: { pool: ["bod", "wil"], threshold: 3 },
+  impaired: { pool: ["bod", "wil"], threshold: 3 },
+  frightened: { pool: ["wil", "cha"], threshold: 3 }
+};

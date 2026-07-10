@@ -10,6 +10,7 @@
 
 import { lateJoinerInitiative, freshActionEconomy } from "../rules/combat.mjs";
 import { onActionPhaseEnd } from "./actions.mjs";
+import { processActionPhaseEndStatuses, runCombatTurnEnd } from "./lifecycle.mjs";
 
 /**
  * @extends {Combatant}
@@ -110,7 +111,8 @@ export class SrxCombat extends Combat {
    * end of Combat Turn → re-roll initiative.
    */
   async nextRound() {
-    // End of Combat Turn: full re-roll
+    // End of Combat Turn: dying / acid / fire ticks, then re-roll initiative
+    await runCombatTurnEnd(this);
     await this.setupNewCombatTurn({ skipReroll: false });
     // Bump Foundry round counter for UI
     return this.update({ round: (this.round || 0) + 1, turn: 0 });
@@ -131,6 +133,7 @@ export class SrxCombat extends Combat {
     if (current) {
       await current.setFlag("srx", "actedThisPass", true);
       await onActionPhaseEnd(current);
+      await processActionPhaseEndStatuses(current);
       await current.setFlag("srx", "actionEconomy", freshActionEconomy());
     }
 

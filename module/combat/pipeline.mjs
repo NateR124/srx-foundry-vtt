@@ -12,6 +12,7 @@ import {
   damageSummary,
   resolveDamageApplication
 } from "./damage.mjs";
+import { applyElementalAftermath } from "./lifecycle.mjs";
 import { requestGmAction } from "../net/socket.mjs";
 
 /**
@@ -220,10 +221,19 @@ export async function applyDamageFromCard(message) {
     });
   }
 
-  const result = await applyDamageToActor(defender, {
+  const amount = {
     physical: resolved.physical,
     stun: resolved.stun
-  });
+  };
+  const result = await applyDamageToActor(defender, amount);
+
+  // Elemental riders: acid duration / catch fire (from parent attackOutcome)
+  let element = flag?.element ?? "";
+  if (!element && flag?.type === "resistResult" && flag.parentMessageId) {
+    const parent = game.messages.get(flag.parentMessageId);
+    element = parent?.flags?.srx?.element ?? "";
+  }
+  if (element) await applyElementalAftermath(defender, amount, element);
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor: defender }),
