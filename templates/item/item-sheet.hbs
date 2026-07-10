@@ -1,0 +1,126 @@
+<div class="srx item-sheet-body">
+  <header class="sheet-header">
+    <img class="portrait" src="{{item.img}}" data-action="editImage" data-edit="img" alt="{{item.name}}">
+    <input class="charname" type="text" name="name" value="{{item.name}}">
+    <span class="item-type">{{localize (srxConcat "TYPES.Item." type)}}</span>
+  </header>
+
+  <div class="item-fields">
+
+    <div class="form-group">
+      <label>{{localize "SRX.Item.summary"}}</label>
+      <input type="text" name="system.summary" value="{{system.summary}}">
+    </div>
+
+    {{#if (srxEq type "weapon")}}
+      <div class="form-row">
+        <label>{{localize "SRX.Item.skill"}}
+          <select name="system.skill">
+            {{#each weaponSkills}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+          </select>
+        </label>
+        <label>{{localize "SRX.Item.category"}}<input type="text" name="system.category" value="{{system.category}}"></label>
+        <label>{{localize "SRX.Item.range"}}<input type="text" name="system.range" value="{{system.range}}"></label>
+      </div>
+      <div class="form-row">
+        <label>{{localize "SRX.Item.properties"}}<input type="text" name="system.properties" value="{{system.properties}}"></label>
+        <label>{{localize "SRX.Item.cost"}}<input type="number" name="system.cost" value="{{system.cost}}" step="1" min="0"></label>
+      </div>
+
+      <h3>{{localize "SRX.Item.attackModes"}}
+        <a class="item-control" data-action="addAttackMode"><i class="fa-solid fa-plus"></i></a>
+      </h3>
+      {{#each attackModes}}
+      <fieldset class="attack-mode">
+        <div class="form-row">
+          <label>{{localize "SRX.Item.modeName"}}<input type="text" name="system.attackModes.{{this.idx}}.name" value="{{this.name}}"></label>
+          <label>{{localize "SRX.Item.action"}}
+            <select name="system.attackModes.{{this.idx}}.action">
+              {{#each ../attackActions}}<option value="{{this.key}}" {{#if (srxEq this.key ../this.action)}}selected{{/if}}>{{this.key}}</option>{{/each}}
+            </select>
+          </label>
+          <label>{{localize "SRX.Item.fireMode"}}
+            <select name="system.attackModes.{{this.idx}}.fireMode">
+              {{#each ../fireModes}}<option value="{{this.key}}" {{#if (srxEq this.key ../this.fireMode)}}selected{{/if}}>{{#if this.key}}{{this.key}}{{else}}—{{/if}}</option>{{/each}}
+            </select>
+          </label>
+          <label>{{localize "SRX.Item.accuracy"}}<input type="number" name="system.attackModes.{{this.idx}}.acc" value="{{this.acc}}" step="1"></label>
+        </div>
+        <div class="form-row">
+          <label>{{localize "SRX.Item.dv"}}<input type="text" name="system.attackModes.{{this.idx}}.dv" value="{{this.dv}}" placeholder="7 / BOD-3"></label>
+          <label>{{localize "SRX.Item.dvType"}}
+            <select name="system.attackModes.{{this.idx}}.dvType">
+              {{#each ../damageTypes}}<option value="{{this.key}}" {{#if (srxEq this.key ../this.dvType)}}selected{{/if}}>{{this.key}}</option>{{/each}}
+            </select>
+          </label>
+          <label>{{localize "SRX.Item.dvMin"}}<input type="number" name="system.attackModes.{{this.idx}}.dvMin" value="{{this.dvMin}}" step="1"></label>
+          <label>{{localize "SRX.Item.dvMax"}}<input type="number" name="system.attackModes.{{this.idx}}.dvMax" value="{{this.dvMax}}" step="1"></label>
+          <label>{{localize "SRX.Item.element"}}<input type="text" name="system.attackModes.{{this.idx}}.element" value="{{this.element}}"></label>
+          <a class="item-control" data-action="removeAttackMode" data-index="{{this.idx}}"><i class="fa-solid fa-trash"></i></a>
+        </div>
+      </fieldset>
+      {{/each}}
+    {{/if}}
+
+    {{#if (srxEq type "armor")}}
+      <div class="form-row">
+        <label>{{localize "SRX.Item.rating"}}<input type="number" name="system.rating" value="{{system.rating}}" step="1" min="0"></label>
+        <label>{{localize "SRX.Item.hardened"}}<input type="number" name="system.hardened" value="{{system.hardened}}" step="1" min="0"></label>
+        <label>{{localize "SRX.Item.heavy"}}<input type="checkbox" name="system.heavy" {{#if system.heavy}}checked{{/if}}></label>
+        <label>{{localize "SRX.Item.shield"}}<input type="checkbox" name="system.shield" {{#if system.shield}}checked{{/if}}></label>
+        <label>{{localize "SRX.Item.cost"}}<input type="number" name="system.cost" value="{{system.cost}}" step="1" min="0"></label>
+      </div>
+    {{/if}}
+
+    {{#if (srxEq type "gear")}}
+      <div class="form-row">
+        <label>{{localize "SRX.Item.subtype"}}<input type="text" name="system.subtype" value="{{system.subtype}}"></label>
+        <label>{{localize "SRX.Item.rating"}}<input type="number" name="system.rating" value="{{system.rating}}" step="1" min="0"></label>
+        <label>{{localize "SRX.Item.quantity"}}<input type="number" name="system.quantity" value="{{system.quantity}}" step="1" min="0"></label>
+        <label>{{localize "SRX.Item.cost"}}<input type="number" name="system.cost" value="{{system.cost}}" step="1" min="0"></label>
+      </div>
+    {{/if}}
+
+    {{#if (srxEq type "talent")}}
+      <div class="form-row">
+        <label>{{localize "SRX.Item.talentCategory"}}
+          <select name="system.category">
+            {{#each talentCategories}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+          </select>
+        </label>
+        <label>{{localize "SRX.Item.karma"}}<input type="number" name="system.karma" value="{{system.karma}}" step="1" min="0"></label>
+        <label>{{localize "SRX.Item.level"}}<input type="number" name="system.level" value="{{system.level}}" step="1" min="0"></label>
+        <label>{{localize "SRX.Item.option"}}<input type="text" name="system.option" value="{{system.option}}"></label>
+        <label>{{localize "SRX.Item.edgeAction"}}<input type="checkbox" name="system.isEdgeAction" {{#if system.isEdgeAction}}checked{{/if}}></label>
+      </div>
+    {{/if}}
+
+    {{#if (srxEq type "contact")}}
+      <div class="form-group"><label>{{localize "SRX.Item.savvy"}}</label><input type="text" name="system.savvy" value="{{system.savvy}}"></div>
+      <div class="form-group"><label>{{localize "SRX.Item.meetPlaces"}}</label><input type="text" name="system.meetPlaces" value="{{system.meetPlaces}}"></div>
+    {{/if}}
+
+    {{#if (srxEq type "knowledge")}}
+      <div class="form-group">
+        <label>{{localize "SRX.Item.kind"}}</label>
+        <select name="system.kind">
+          {{#each knowledgeKinds}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+        </select>
+      </div>
+    {{/if}}
+
+    {{#if (srxHasLegality type)}}
+      <div class="form-group">
+        <label>{{localize "SRX.Item.legality"}}</label>
+        <select name="system.legality">
+          {{#each legalities}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+        </select>
+      </div>
+    {{/if}}
+
+    <div class="form-group description">
+      <label>{{localize "SRX.Item.description"}}</label>
+      <textarea name="system.description" rows="8">{{system.description}}</textarea>
+    </div>
+  </div>
+</div>

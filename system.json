@@ -1,0 +1,56 @@
+{
+  "id": "srx",
+  "title": "SRX — Shadowrun Edition X (Unofficial)",
+  "description": "An unofficial, free fan-made Foundry VTT system for SRX (Shadowrun Edition X). Shadowrun is a registered trademark of The Topps Company, Inc. This project is not published, endorsed by, or affiliated with The Topps Company, Catalyst Game Labs, or the SRX team. No rules text, artwork, or other proprietary material from any Shadowrun product or the SRX rulebook is included. Playing requires the free SRX rulebook, available separately from the SRX team.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14.364"
+  },
+  "authors": [
+    {
+      "name": "Nate"
+    }
+  ],
+  "esmodules": ["module/srx.mjs"],
+  "styles": ["styles/srx.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "character": {
+        "htmlFields": ["details.biography"]
+      }
+    },
+    "Item": {
+      "weapon": { "htmlFields": ["description"] },
+      "armor": { "htmlFields": ["description"] },
+      "gear": { "htmlFields": ["description"] },
+      "talent": { "htmlFields": ["description"] },
+      "trait": { "htmlFields": ["description"] },
+      "contact": { "htmlFields": ["description"] },
+      "knowledge": { "htmlFields": ["description"] }
+    }
+  },
+  "grid": {
+    "distance": 1,
+    "units": "m"
+  },
+  "primaryTokenAttribute": "monitors.physical",
+  "secondaryTokenAttribute": "monitors.stun",
+  "socket": true,
+  "flags": {
+    "hotReload": {
+      "extensions": ["css", "hbs", "json"],
+      "paths": ["templates", "styles", "lang"]
+    }
+  },
+  "url": "",
+  "manifest": "",
+  "download": ""
+}

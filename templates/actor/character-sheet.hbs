@@ -1,0 +1,291 @@
+<div class="srx character-sheet-body">
+
+  {{!-- Header --}}
+  <header class="sheet-header">
+    <img class="portrait" src="{{actor.img}}" data-action="editImage" data-edit="img" alt="{{actor.name}}">
+    <div class="header-fields">
+      <input class="charname" type="text" name="name" value="{{actor.name}}" placeholder="{{localize 'SRX.Sheet.name'}}">
+      <div class="header-row">
+        <label>{{localize "SRX.Sheet.metatype"}}
+          <select name="system.details.metatype">
+            {{#each metatypes}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+          </select>
+        </label>
+        {{#if metatypeChoice}}
+        <label>{{localize "SRX.Sheet.metatypeChoice"}} ({{metatypeChoice.amount}})
+          <select name="system.details.metatypeChoice">
+            <option value="">{{localize "SRX.Metatype.choiceNone"}}</option>
+            {{#each metatypeChoice.options}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+          </select>
+        </label>
+        {{/if}}
+        <label>{{localize "SRX.Sheet.archetype"}}
+          <input type="text" name="system.details.archetype" value="{{system.details.archetype}}">
+        </label>
+        <label>{{localize "SRX.Sheet.lifestyle"}}
+          <select name="system.details.lifestyle">
+            {{#each lifestyles}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+          </select>
+        </label>
+        <label>{{localize "SRX.Sheet.nuyen"}}
+          <input type="number" name="system.details.nuyen" value="{{system.details.nuyen}}" step="1">
+        </label>
+        <label>{{localize "SRX.Sheet.karmaEarned"}}
+          <input type="number" name="system.details.karma.earned" value="{{system.details.karma.earned}}" step="1">
+        </label>
+        <label>{{localize "SRX.Sheet.karmaSpent"}}
+          <input type="number" name="system.details.karma.spent" value="{{system.details.karma.spent}}" step="1">
+        </label>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Tabs --}}
+  <nav class="sheet-tabs">
+    <a class="{{#if (srxEq activeTab 'main')}}active{{/if}}" data-action="selectTab" data-tab="main">{{localize "SRX.Tab.main"}}</a>
+    <a class="{{#if (srxEq activeTab 'talents')}}active{{/if}}" data-action="selectTab" data-tab="talents">{{localize "SRX.Tab.talents"}}</a>
+    <a class="{{#if (srxEq activeTab 'gear')}}active{{/if}}" data-action="selectTab" data-tab="gear">{{localize "SRX.Tab.gear"}}</a>
+    <a class="{{#if (srxEq activeTab 'bio')}}active{{/if}}" data-action="selectTab" data-tab="bio">{{localize "SRX.Tab.bio"}}</a>
+  </nav>
+
+  {{!-- MAIN TAB --}}
+  <section class="tab-main {{#unless (srxEq activeTab 'main')}}hidden{{/unless}}">
+    <div class="main-grid">
+
+      <div class="col attributes-col">
+        <h3>{{localize "SRX.Sheet.attributes"}}</h3>
+        {{#each attributes}}
+        <div class="attribute-row">
+          <a class="rollable" data-action="rollAttribute" data-attribute="{{this.key}}" title="{{localize 'SRX.Sheet.rollAttribute'}}">{{this.abbr}}</a>
+          <input type="number" name="system.attributes.{{this.key}}.base" value="{{this.base}}" step="1" min="0">
+          <span class="aug" title="{{this.augTitle}}">({{this.value}})</span>
+        </div>
+        {{/each}}
+        {{#if maximaViolations.length}}
+        <div class="state-banner maxima">
+          <span>{{localize "SRX.Metatype.maximaTitle"}}</span>
+          {{#each maximaViolations}}<div class="maxima-detail">{{this}}</div>{{/each}}
+        </div>
+        {{/if}}
+
+        <h3>{{localize "SRX.Sheet.special"}}</h3>
+        <div class="attribute-row">
+          <span>{{localize "SRX.Attribute.qui"}}</span>
+          <input type="number" name="system.special.quickness.base" value="{{system.special.quickness.base}}" step="1" min="0">
+          <span class="aug">({{system.special.quickness.value}})</span>
+        </div>
+        <div class="attribute-row">
+          <span>{{localize "SRX.Attribute.mag"}}</span>
+          <input type="number" name="system.special.magic.base" value="{{system.special.magic.base}}" step="1" min="0">
+          <span class="aug">({{system.special.magic.value}})</span>
+        </div>
+        <div class="attribute-row">
+          <span>{{localize "SRX.Attribute.res"}}</span>
+          <input type="number" name="system.special.resonance.base" value="{{system.special.resonance.base}}" step="1" min="0">
+          <span class="aug">({{system.special.resonance.value}})</span>
+        </div>
+        <div class="attribute-row">
+          <span>{{localize "SRX.Attribute.ess"}}</span>
+          <input type="number" name="system.special.essence" value="{{system.special.essence}}" step="0.01">
+        </div>
+        <div class="attribute-row">
+          <span>{{localize "SRX.Sheet.firewall"}}</span>
+          <input type="number" name="system.matrix.firewall" value="{{system.matrix.firewall}}" step="1" min="0">
+        </div>
+
+        <h3>{{localize "SRX.Sheet.edge"}}</h3>
+        <div class="edge-row">
+          <input type="number" name="system.special.edge.rating" value="{{system.special.edge.rating}}" step="1" min="0" max="7" title="{{localize 'SRX.Sheet.edgeRating'}}">
+          <div class="pips">
+            {{#each edgePips}}
+            <a class="pip {{#if this.filled}}filled{{/if}}" data-action="setEdge" data-index="{{this.index}}"></a>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+
+      <div class="col derived-col">
+        <h3>{{localize "SRX.Sheet.derived"}}</h3>
+        <div class="derived-grid">
+          <div class="derived-stat">
+            <a data-action="rollInitiative" class="rollable" title="{{localize 'SRX.Roll.initiative'}}">
+              <b>{{system.derived.initiative.dice}}d6+{{system.derived.initiative.bonus}}</b>
+            </a>
+            <span>{{localize "SRX.Derived.initiative"}}</span>
+          </div>
+          <div class="derived-stat"><b>{{system.derived.accelerator}}</b><span>{{localize "SRX.Derived.accelerator"}}</span></div>
+          <div class="derived-stat"><b>{{system.derived.defenseScore}}</b><span>{{localize "SRX.Derived.defenseScore"}}</span></div>
+          <div class="derived-stat"><b>{{system.derived.matrixDefenseScore}}</b><span>{{localize "SRX.Derived.matrixDefenseScore"}}</span></div>
+          <div class="derived-stat"><b>{{system.derived.woundedLimit}}</b><span>{{localize "SRX.Derived.woundedLimit"}}</span></div>
+          <div class="derived-stat"><b>{{system.derived.movement}}m</b><span>{{localize "SRX.Derived.movement"}}</span></div>
+          <div class="derived-stat">
+            <a data-action="rollResistance" class="rollable" title="{{localize 'SRX.Roll.damageResistance'}}"><b>{{system.derived.armor}}</b></a>
+            <span>{{localize "SRX.Derived.armor"}}</span>
+          </div>
+          <div class="derived-stat"><b>{{system.derived.unarmedDv}}S</b><span>{{localize "SRX.Derived.unarmedDv"}}</span></div>
+        </div>
+        <div class="derived-mods">
+          <span class="mods-label">{{localize "SRX.Sheet.mods"}}:</span>
+          <label>{{localize "SRX.Derived.armor"}} <input type="number" name="system.derivedMods.armor" value="{{system.derivedMods.armor}}" step="1"></label>
+          <label>{{localize "SRX.Item.hardened"}} <input type="number" name="system.derivedMods.hardened" value="{{system.derivedMods.hardened}}" step="1"></label>
+          <label>{{localize "SRX.Derived.woundedLimit"}} <input type="number" name="system.derivedMods.woundedLimit" value="{{system.derivedMods.woundedLimit}}" step="1"></label>
+        </div>
+
+        <h3>{{localize "SRX.Sheet.monitors"}}</h3>
+        {{#each monitors}}
+        <div class="monitor">
+          <span class="monitor-label">{{localize (srxConcat "SRX.Monitor." this.track)}} ({{this.value}}/{{this.max}})</span>
+          <div class="boxes">
+            {{#each this.boxes}}
+            <a class="box {{#if this.filled}}filled{{/if}}" data-action="setMonitor" data-track="{{../track}}" data-index="{{this.index}}"></a>
+            {{/each}}
+          </div>
+          <label class="system-shock">{{localize "SRX.Monitor.systemShock"}}
+            <input type="number" name="system.monitors.{{this.track}}.systemShock" value="{{this.systemShock}}" step="1" min="0">
+          </label>
+        </div>
+        {{/each}}
+        {{#if system.derived.states.dead}}<p class="state-banner dead">{{localize "SRX.State.dead"}}</p>
+        {{else if system.derived.states.dying}}<p class="state-banner dying">{{localize "SRX.State.dying"}}</p>
+        {{else if system.derived.states.unconscious}}<p class="state-banner unconscious">{{localize "SRX.State.unconscious"}}</p>
+        {{else if system.derived.states.wounded}}<p class="state-banner wounded">{{localize "SRX.State.wounded"}}</p>{{/if}}
+
+        <h3>{{localize "SRX.Sheet.weapons"}}
+          <a class="item-control" data-action="createItem" data-type="weapon" title="{{localize 'SRX.Sheet.createItem'}}"><i class="fa-solid fa-plus"></i></a>
+        </h3>
+        <ul class="item-list weapons">
+          {{#each items.weapons}}
+          <li>
+            <span class="item-name" data-action="editItem" data-item-id="{{this.item.id}}">{{this.item.name}}</span>
+            <span class="modes">
+              {{#each this.modes}}
+              <a class="rollable mode" data-action="rollWeapon" data-item-id="{{../item.id}}" data-mode="{{this.idx}}">
+                {{#if this.fireMode}}{{this.fireMode}}{{else}}{{localize "SRX.Item.attack"}}{{/if}}
+              </a>
+              {{/each}}
+            </span>
+            <a class="item-control" data-action="deleteItem" data-item-id="{{this.item.id}}"><i class="fa-solid fa-trash"></i></a>
+          </li>
+          {{/each}}
+        </ul>
+
+        <h3>{{localize "SRX.Sheet.armor"}}
+          <a class="item-control" data-action="createItem" data-type="armor" title="{{localize 'SRX.Sheet.createItem'}}"><i class="fa-solid fa-plus"></i></a>
+        </h3>
+        <ul class="item-list armor">
+          {{#each items.armor}}
+          <li>
+            <a class="equip {{#if this.system.equipped}}equipped{{/if}}" data-action="toggleEquip" data-item-id="{{this.id}}" title="{{localize 'SRX.Sheet.equip'}}"><i class="fa-solid fa-shield-halved"></i></a>
+            <span class="item-name" data-action="editItem" data-item-id="{{this.id}}">{{this.name}}</span>
+            <span class="rating">{{this.system.rating}}{{#if this.system.heavy}} · {{localize "SRX.Item.heavy"}}{{/if}}{{#if this.system.hardened}} · H{{this.system.hardened}}{{/if}}</span>
+            <a class="item-control" data-action="deleteItem" data-item-id="{{this.id}}"><i class="fa-solid fa-trash"></i></a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <div class="col skills-col">
+        <h3>{{localize "SRX.Sheet.skills"}}</h3>
+        <table class="skills-table">
+          <tr><th></th><th>{{localize "SRX.Sheet.skillRating"}}</th><th>{{localize "SRX.Sheet.pool"}}</th></tr>
+          {{#each skills}}
+          <tr>
+            <td>
+              <a class="rollable" data-action="rollSkill" data-skill="{{this.key}}">{{this.label}}</a>
+              <span class="linked">{{this.linked}}</span>
+              {{#if this.linkedAlt}}<a class="rollable linked alt" data-action="rollSkill" data-skill="{{this.key}}" data-attr="{{this.linkedAlt}}" title="{{localize 'SRX.Sheet.rollAltAttribute'}}">/{{this.linkedAltAbbr}}</a>{{/if}}
+            </td>
+            <td><input type="number" name="system.skills.{{this.key}}.rating" value="{{this.rating}}" step="1" min="0" max="9"></td>
+            <td class="pool">{{this.pool}}</td>
+          </tr>
+          {{/each}}
+        </table>
+      </div>
+    </div>
+  </section>
+
+  {{!-- TALENTS TAB --}}
+  <section class="tab-talents {{#unless (srxEq activeTab 'talents')}}hidden{{/unless}}">
+    <h3>{{localize "SRX.Sheet.talents"}}
+      <a class="item-control" data-action="createItem" data-type="talent"><i class="fa-solid fa-plus"></i></a>
+    </h3>
+    <ul class="item-list talents">
+      {{#each items.talents}}
+      <li>
+        <span class="item-name" data-action="editItem" data-item-id="{{this.id}}">{{this.name}}</span>
+        <span class="category">{{localize (srxConcat "SRX.TalentCategory." this.system.category)}}</span>
+        <span class="summary">{{this.system.summary}}</span>
+        <a class="item-control" data-action="postItem" data-item-id="{{this.id}}"><i class="fa-solid fa-comment"></i></a>
+        <a class="item-control" data-action="deleteItem" data-item-id="{{this.id}}"><i class="fa-solid fa-trash"></i></a>
+      </li>
+      {{/each}}
+    </ul>
+    <h3>{{localize "SRX.Sheet.traits"}}
+      <a class="item-control" data-action="createItem" data-type="trait"><i class="fa-solid fa-plus"></i></a>
+    </h3>
+    <ul class="item-list traits">
+      {{#each items.traits}}
+      <li>
+        <span class="item-name" data-action="editItem" data-item-id="{{this.id}}">{{this.name}}</span>
+        <span class="summary">{{this.system.summary}}</span>
+        <a class="item-control" data-action="deleteItem" data-item-id="{{this.id}}"><i class="fa-solid fa-trash"></i></a>
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+
+  {{!-- GEAR TAB --}}
+  <section class="tab-gear {{#unless (srxEq activeTab 'gear')}}hidden{{/unless}}">
+    <h3>{{localize "SRX.Sheet.gear"}}
+      <a class="item-control" data-action="createItem" data-type="gear"><i class="fa-solid fa-plus"></i></a>
+    </h3>
+    <ul class="item-list gear">
+      {{#each items.gear}}
+      <li>
+        <span class="item-name" data-action="editItem" data-item-id="{{this.id}}">{{this.name}}</span>
+        <span class="qty">×{{this.system.quantity}}</span>
+        <span class="summary">{{this.system.summary}}</span>
+        <a class="item-control" data-action="deleteItem" data-item-id="{{this.id}}"><i class="fa-solid fa-trash"></i></a>
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+
+  {{!-- BIO TAB --}}
+  <section class="tab-bio {{#unless (srxEq activeTab 'bio')}}hidden{{/unless}}">
+    <div class="bio-grid">
+      <div>
+        <h3>{{localize "SRX.Sheet.contacts"}}
+          <a class="item-control" data-action="createItem" data-type="contact"><i class="fa-solid fa-plus"></i></a>
+        </h3>
+        <ul class="item-list contacts">
+          {{#each items.contacts}}
+          <li>
+            <span class="item-name" data-action="editItem" data-item-id="{{this.id}}">{{this.name}}</span>
+            <span class="summary">{{this.system.savvy}}</span>
+            <a class="item-control" data-action="deleteItem" data-item-id="{{this.id}}"><i class="fa-solid fa-trash"></i></a>
+          </li>
+          {{/each}}
+        </ul>
+        <h3>{{localize "SRX.Sheet.knowledge"}}
+          <a class="item-control" data-action="createItem" data-type="knowledge"><i class="fa-solid fa-plus"></i></a>
+        </h3>
+        <ul class="item-list knowledge">
+          {{#each items.knowledge}}
+          <li>
+            <span class="item-name" data-action="editItem" data-item-id="{{this.id}}">{{this.name}}</span>
+            <span class="category">{{localize (srxConcat "SRX.Knowledge." this.system.kind)}}</span>
+            <a class="item-control" data-action="deleteItem" data-item-id="{{this.id}}"><i class="fa-solid fa-trash"></i></a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+      <div>
+        <h3>{{localize "SRX.Sheet.biography"}}</h3>
+        {{!-- Simple editable biography (rich editor lands with the full sheet pass) --}}
+        <textarea name="system.details.biography" rows="16">{{system.details.biography}}</textarea>
+        <div class="biography-preview">{{{biographyHTML}}}</div>
+      </div>
+    </div>
+  </section>
+</div>

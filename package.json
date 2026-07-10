@@ -1,0 +1,14 @@
+{
+  "name": "srx-foundry-system",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Dev tooling for the SRX Foundry VTT system (the system itself ships as plain ES modules).",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.0"
+  }
+}

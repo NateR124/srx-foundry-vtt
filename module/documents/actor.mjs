@@ -1,0 +1,185 @@
+import { SRX } from "../config.mjs";
+import { SRXRoll } from "../dice/srx-roll.mjs";
+import { promptRollConfig } from "../apps/roll-dialog.mjs";
+import { evaluateDv } from "../rules/formulas.mjs";
+
+export class SrxActor extends foundry.documents.Actor {
+  /** @override — flat keys for roll formulas (initiative: (@qui)d6 + @accel). */
+  getRollData() {
+    // super.getRollData() returns the LIVE system object in v14 — copy before
+    // augmenting or the flat keys pollute actor.system until the next prep.
+    const data = { ...super.getRollData() };
+    const sys = this.system;
+    if (this.type === "character") {
+      for (const key of Object.keys(SRX.attributes)) data[key] = sys.attributes[key].value;
+      data.qui = sys.special.quickness.value;
+      data.accel = sys.derived?.accelerator ?? 1;
+      data.ds = sys.derived?.defenseScore ?? 1;
+    }
+    return data;
+  }
+
+  /** Localized label helper. */
+  #label(key) {
+    return game.i18n.localize(key);
+  }
+
+  /** Shared roll-flow: dialog → SRXRoll → chat. */
+  async #rollPool({ title, parts, threshold = null, thresholdLabel = "", flavor = "", extraContext = {} }) {
+    const config = await promptRollConfig({ title, parts, threshold, thresholdLabel });
+    if (!config) return null;
+
+    const speaker = foundry.documents.ChatMessage.getSpeaker({ actor: this });
+
+    // Pool reduced to 0 or less = automatic failure (p. 9) — no roll.
+    if (config.pool <= 0) {
+      return foundry.documents.ChatMessage.create({
+        speaker,
+        content: `<div class="srx chat-card roll-card"><header class="card-header"><h3>${foundry.utils.escapeHTML(title)}</h3></header><div class="threshold-row failure">${game.i18n.localize("SRX.Roll.autoFail")}</div></div>`
+      });
+    }
+
+    // Buying hits skips the roll entirely (p. 10).
+    if (config.buyHits !== null && config.buyHits !== undefined) {
+      const content = await foundry.applications.handlebars.renderTemplate(
+        "systems/srx/templates/chat/buy-hits-card.hbs",
+        { title, pool: config.pool, hits: config.buyHits, threshold: config.threshold }
+      );
+      return foundry.documents.ChatMessage.create({ speaker, content });
+    }
+
+    const roll = SRXRoll.fromPool({
+      pool: config.pool,
+      tn: config.tn,
+      hitMods: config.hitMods,
+      threshold: config.threshold,
+      flavor: flavor || title,
+      context: { parts: config.parts, actorName: this.name, ...extraContext }
+    });
+    await roll.evaluate();
+    return roll.toChat({ speaker });
+  }
+
+  /** Attribute-only test (p. 16): two attributes, or one attribute × 2. */
+  async rollAttribute(key, { secondKey = null } = {}) {
+    const sys = this.system;
+    const first = sys.attributes[key] ?? sys.special[key];
+    if (!first) return null;
+    const second = secondKey ? (sys.attributes[secondKey] ?? sys.special[secondKey]) : first;
+    const label = this.#label(SRX.attributes[key]?.label ?? `SRX.Attribute.${key}`);
+    const secondLabel = secondKey
+      ? this.#label(SRX.attributes[secondKey]?.label ?? `SRX.Attribute.${secondKey}`)
+      : label;
+    return this.#rollPool({
+      title: `${label} + ${secondLabel}`,
+      parts: [
+        { label, value: first.value },
+        { label: `${secondLabel}${secondKey ? "" : " ×2"}`, value: second.value }
+      ]
+    });
+  }
+
+  /** Resolve an attribute key (incl. mag/res specials) to its augmented value. */
+  #attrValue(attrKey) {
+    if (this.system.attributes[attrKey]) return this.system.attributes[attrKey].value;
+    const special = attrKey === "mag" ? "magic" : attrKey === "res" ? "resonance" : attrKey;
+    return this.system.special[special]?.value ?? 0;
+  }
+
+  /**
+   * Skill test: skill + linked attribute. `attrKey` overrides the default
+   * pairing (dual-linked skills like Athletics AGI/BOD; GM substitutions).
+   */
+  async rollSkill(key, { attrKey = null } = {}) {
+    const skill = this.system.skills[key];
+    const def = SRX.skills[key];
+    if (!skill || !def) return null;
+    const attr = attrKey ?? def.linked;
+    const skillLabel = this.#label(def.label);
+    const attrLabel = this.#label(SRX.attributes[attr]?.label ?? `SRX.Attribute.${attr}`);
+    return this.#rollPool({
+      title: `${skillLabel} + ${attrLabel}`,
+      parts: [
+        { label: attrLabel, value: this.#attrValue(attr) },
+        { label: skillLabel, value: skill.value }
+      ]
+    });
+  }
+
+  /**
+   * Weapon attack: skill + AGI + mode accuracy, threshold = target's Defense
+   * Score when exactly one token is targeted (tie = hit, p. 120).
+   */
+  async rollWeaponAttack(item, modeIndex = 0) {
+    if (item.type !== "weapon") return null;
+    const mode = item.system.attackModes[modeIndex] ?? item.system.attackModes[0];
+    if (!mode) return null;
+
+    const def = SRX.skills[item.system.skill];
+    const skill = this.system.skills[item.system.skill];
+    const attrKey = def?.linked ?? "agi";
+    const attr = this.system.attributes[attrKey];
+
+    // Target Defense Score as threshold, if a single target is selected.
+    let threshold = null;
+    const targets = [...(game.user?.targets ?? [])];
+    if (targets.length === 1) threshold = targets[0].actor?.system?.derived?.defenseScore ?? null;
+
+    const dv = evaluateDv(mode.dv, {
+      bod: this.system.attributes.bod.value,
+      agi: this.system.attributes.agi.value
+    }, { min: mode.dvMin, max: mode.dvMax });
+
+    return this.#rollPool({
+      title: `${item.name}${mode.name ? ` (${mode.name})` : ""}`,
+      parts: [
+        { label: this.#label(SRX.attributes[attrKey]?.label ?? "SRX.Attribute.agi"), value: attr?.value ?? 0 },
+        { label: this.#label(def?.label ?? "SRX.Skill.firearms"), value: skill?.value ?? 0 },
+        { label: game.i18n.localize("SRX.Item.accuracy"), value: mode.acc || 0 }
+      ],
+      threshold,
+      thresholdLabel: game.i18n.localize("SRX.Roll.targetDefense"),
+      extraContext: {
+        dv,
+        dvType: mode.dvType,
+        element: mode.element,
+        fireMode: mode.fireMode,
+        action: mode.action
+      }
+    });
+  }
+
+  /** Damage resistance: Body + Armor, tagged for AOE Defense-Score bonus later (M2). */
+  async rollDamageResistance() {
+    const sys = this.system;
+    return this.#rollPool({
+      title: game.i18n.localize("SRX.Roll.damageResistance"),
+      parts: [
+        { label: this.#label("SRX.Attribute.bod"), value: sys.attributes.bod.value },
+        { label: game.i18n.localize("SRX.Item.armor"), value: sys.derived?.armor ?? 0 }
+      ]
+    });
+  }
+
+  /**
+   * Spend one Edge point (max 1 per test is enforced socially in M1).
+   * Not yet wired to sheet UI — Edge is tracked via the sheet pips; these
+   * methods are the macro/API surface (game.actors...) until the Edge-talent
+   * chat buttons land (M1 remainder / M2).
+   */
+  async spendEdge() {
+    const edge = this.system.special.edge;
+    if (edge.value <= 0) {
+      ui.notifications.warn(game.i18n.localize("SRX.Edge.none"));
+      return false;
+    }
+    await this.update({ "system.special.edge.value": edge.value - 1 });
+    return true;
+  }
+
+  async regainEdge(amount = 1) {
+    const edge = this.system.special.edge;
+    const value = Math.min(edge.rating, edge.value + amount);
+    await this.update({ "system.special.edge.value": value });
+  }
+}

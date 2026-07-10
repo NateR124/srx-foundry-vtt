@@ -1,0 +1,13 @@
+<div class="srx chat-card roll-card buy-hits">
+  <header class="card-header"><h3>{{title}}</h3></header>
+  <div class="result-row">
+    <span class="hits"><b>{{hits}}</b> {{localize "SRX.Roll.hitsBought"}}</span>
+    <span class="detail">({{pool}} {{localize "SRX.Roll.dice"}})</span>
+  </div>
+  {{#if (srxNotNull threshold)}}
+  <div class="threshold-row {{#if (srxGte hits threshold)}}success{{else}}failure{{/if}}">
+    {{#if (srxGte hits threshold)}}{{localize "SRX.Roll.success"}}{{else}}{{localize "SRX.Roll.failure"}}{{/if}}
+    ({{localize "SRX.Roll.threshold"}} {{threshold}})
+  </div>
+  {{/if}}
+</div>

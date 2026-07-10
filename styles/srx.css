@@ -1,0 +1,275 @@
+/* SRX system styles — themed via Foundry core CSS variables so light/dark both work. */
+
+/* ---------- Sheet shell ---------- */
+.srx.sheet .window-content {
+  overflow-y: auto;
+}
+
+.srx .sheet-header {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+.srx .sheet-header .portrait {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border: 1px solid var(--color-border, #888);
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+.srx .sheet-header .header-fields { flex: 1; min-width: 0; }
+.srx .sheet-header .charname {
+  width: 100%;
+  font-size: 1.5em;
+  font-weight: 700;
+  border: none;
+  border-bottom: 1px solid var(--color-border, #888);
+  background: transparent;
+}
+.srx .header-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin-top: 4px;
+  font-size: 0.85em;
+}
+.srx .header-row label { display: flex; align-items: center; gap: 4px; white-space: nowrap; }
+.srx .header-row input[type="number"] { width: 70px; }
+.srx .item-type { font-size: 0.8em; opacity: 0.7; align-self: center; }
+
+/* ---------- Tabs ---------- */
+.srx .sheet-tabs {
+  display: flex;
+  gap: 2px;
+  border-bottom: 2px solid var(--color-border, #888);
+  margin-bottom: 8px;
+}
+.srx .sheet-tabs a {
+  padding: 4px 12px;
+  cursor: pointer;
+  border-radius: 4px 4px 0 0;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.06em;
+}
+.srx .sheet-tabs a.active {
+  background: var(--color-warm-2, #b8342c);
+  color: #fff;
+  font-weight: 700;
+}
+.srx section.hidden { display: none; }
+
+/* ---------- Main grid ---------- */
+.srx .main-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr 260px;
+  gap: 14px;
+}
+.srx .col h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border, #888);
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 10px 0 4px;
+}
+
+.srx .attribute-row {
+  display: grid;
+  grid-template-columns: 1fr 56px 40px;
+  align-items: center;
+  gap: 6px;
+  padding: 1px 0;
+}
+.srx .attribute-row .aug { opacity: 0.75; font-variant-numeric: tabular-nums; }
+
+.srx .rollable { cursor: pointer; }
+.srx .rollable:hover { text-shadow: 0 0 6px var(--color-shadow-primary, #ff6666); }
+
+/* ---------- Edge ---------- */
+.srx .edge-row { display: flex; align-items: center; gap: 8px; }
+.srx .edge-row input { width: 44px; }
+.srx .pips { display: flex; gap: 3px; }
+.srx .pip {
+  width: 14px; height: 14px;
+  border: 1px solid var(--color-border, #888);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.srx .pip.filled { background: var(--color-warm-2, #b8342c); }
+
+/* ---------- Derived ---------- */
+.srx .derived-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+.srx .derived-stat {
+  text-align: center;
+  border: 1px solid var(--color-border, #888);
+  border-radius: 4px;
+  padding: 4px 2px;
+}
+.srx .derived-stat b { display: block; font-size: 1.2em; font-variant-numeric: tabular-nums; }
+.srx .derived-stat span { font-size: 0.65em; text-transform: uppercase; letter-spacing: 0.04em; opacity: 0.8; }
+
+/* ---------- Monitors ---------- */
+.srx .monitor { margin: 4px 0; }
+.srx .monitor-label { font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.05em; }
+.srx .boxes { display: flex; flex-wrap: wrap; gap: 2px; margin: 2px 0; }
+.srx .box {
+  width: 16px; height: 16px;
+  border: 1px solid var(--color-border, #888);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.srx .box.filled { background: var(--color-warm-2, #b8342c); }
+.srx .system-shock { font-size: 0.75em; display: flex; align-items: center; gap: 4px; }
+.srx .system-shock input { width: 44px; }
+
+.srx .state-banner {
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 2px;
+  border-radius: 3px;
+  margin: 4px 0;
+}
+.srx .state-banner.wounded { background: #8a6d1a33; border: 1px solid #8a6d1a; }
+.srx .state-banner.maxima { background: #8a6d1a33; border: 1px solid #8a6d1a; font-size: 0.8em; }
+.srx .state-banner.maxima .maxima-detail { font-weight: 400; text-transform: none; letter-spacing: normal; }
+.srx .state-banner.unconscious,
+.srx .state-banner.dying { background: #a33b3b33; border: 1px solid #a33b3b; }
+.srx .state-banner.dead { background: #00000055; border: 1px solid #000; }
+
+/* ---------- Skills ---------- */
+.srx .skills-table { width: 100%; border-collapse: collapse; font-size: 0.88em; }
+.srx .skills-table th { text-align: left; font-size: 0.75em; text-transform: uppercase; opacity: 0.7; }
+.srx .skills-table td { padding: 1px 4px 1px 0; }
+.srx .skills-table input { width: 46px; }
+.srx .skills-table .linked { font-size: 0.72em; opacity: 0.6; }
+.srx .skills-table .linked.alt { opacity: 0.85; }
+
+.srx .derived-mods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  align-items: center;
+  font-size: 0.72em;
+  margin-top: 4px;
+  opacity: 0.9;
+}
+.srx .derived-mods .mods-label { text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.7; }
+.srx .derived-mods label { display: flex; align-items: center; gap: 3px; }
+.srx .derived-mods input { width: 40px; }
+.srx .skills-table .pool { text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+/* ---------- Item lists ---------- */
+.srx .item-list { list-style: none; margin: 0 0 8px; padding: 0; }
+.srx .item-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 0;
+  border-bottom: 1px dotted var(--color-border, #66666655);
+}
+.srx .item-list .item-name { cursor: pointer; font-weight: 600; }
+.srx .item-list .summary { flex: 1; font-size: 0.82em; opacity: 0.75; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.srx .item-list .category, .srx .item-list .qty, .srx .item-list .rating { font-size: 0.8em; opacity: 0.8; }
+.srx .item-control { cursor: pointer; opacity: 0.6; }
+.srx .item-control:hover { opacity: 1; }
+.srx .item-list .equip { opacity: 0.35; cursor: pointer; }
+.srx .item-list .equip.equipped { opacity: 1; color: var(--color-warm-2, #b8342c); }
+.srx .item-list .mode {
+  border: 1px solid var(--color-border, #888);
+  border-radius: 3px;
+  padding: 0 6px;
+  font-size: 0.8em;
+  margin-right: 2px;
+}
+
+/* ---------- Bio ---------- */
+.srx .bio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.srx .bio-grid textarea { width: 100%; }
+.srx .biography-preview { font-size: 0.9em; opacity: 0.9; }
+
+/* ---------- Item sheet ---------- */
+.srx .item-fields .form-group { margin: 6px 0; }
+.srx .item-fields .form-group label { display: block; font-size: 0.8em; text-transform: uppercase; opacity: 0.75; }
+.srx .item-fields .form-group input[type="text"], .srx .item-fields textarea { width: 100%; }
+.srx .form-row { display: flex; flex-wrap: wrap; gap: 8px 14px; margin: 6px 0; align-items: flex-end; }
+.srx .form-row label { display: flex; flex-direction: column; font-size: 0.8em; }
+.srx .form-row input[type="number"] { width: 64px; }
+.srx fieldset.attack-mode { border: 1px solid var(--color-border, #888); border-radius: 4px; margin: 4px 0; padding: 4px 8px; }
+
+/* ---------- Roll dialog ---------- */
+.srx.roll-config .pool-parts, .srx .roll-config .pool-parts {
+  font-size: 0.85em;
+  opacity: 0.85;
+  margin: 2px 0 8px;
+}
+
+/* ---------- Chat cards ---------- */
+.srx.chat-card { font-size: 0.9em; }
+.srx.chat-card .card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--color-border, #888);
+  margin-bottom: 4px;
+}
+.srx.chat-card .card-header h3 { flex: 1; margin: 0; border: none; }
+.srx.chat-card .actor-name { font-size: 0.8em; opacity: 0.7; }
+.srx.chat-card .pool-parts { font-size: 0.8em; opacity: 0.8; margin: 2px 0; }
+.srx.chat-card .pool-parts .part { margin-right: 8px; }
+
+.srx.chat-card .dice-row { display: flex; flex-wrap: wrap; gap: 3px; margin: 4px 0; }
+.srx.chat-card .die {
+  width: 22px; height: 22px;
+  display: grid; place-items: center;
+  border: 1px solid var(--color-border, #888);
+  border-radius: 3px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.55;
+}
+.srx.chat-card .die.hit { opacity: 1; background: #3e7d5a33; border-color: #3e7d5a; }
+/* Crit Dice: distinguished by shape (diamond-ish border) AND color — not color alone. */
+.srx.chat-card .die.crit-die {
+  border-width: 2px;
+  border-style: double;
+  border-color: var(--color-warm-2, #b8342c);
+  border-radius: 50%;
+}
+.srx.chat-card .die.crit-die.one { background: #a33b3b33; opacity: 1; }
+
+.srx.chat-card .result-row { display: flex; align-items: baseline; gap: 8px; }
+.srx.chat-card .hits { font-size: 1.05em; }
+.srx.chat-card .detail { font-size: 0.8em; opacity: 0.75; }
+
+.srx.chat-card .banner {
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 3px;
+  padding: 2px;
+  margin: 4px 0;
+}
+.srx.chat-card .banner.crit { background: #3e7d5a33; border: 1px solid #3e7d5a; }
+.srx.chat-card .banner.glitch { background: #8a6d1a33; border: 1px solid #8a6d1a; }
+.srx.chat-card .banner.critical-glitch { background: #a33b3b44; border: 1px solid #a33b3b; }
+
+.srx.chat-card .threshold-row { font-weight: 600; margin-top: 2px; }
+.srx.chat-card .threshold-row.success { color: #3e7d5a; }
+.srx.chat-card .threshold-row.failure { color: #a33b3b; }
+.srx.chat-card .dv-row { margin-top: 2px; font-size: 0.9em; }
+.srx.chat-card .dv-row .element, .srx.chat-card .dv-row .fire-mode {
+  margin-left: 6px; font-size: 0.85em; opacity: 0.8;
+}
+.srx.chat-card .summary { font-style: italic; opacity: 0.85; }

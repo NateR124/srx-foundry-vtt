@@ -1,0 +1,53 @@
+<div class="srx chat-card roll-card">
+  <header class="card-header">
+    <h3>{{flavor}}</h3>
+    {{#if context.actorName}}<span class="actor-name">{{context.actorName}}</span>{{/if}}
+  </header>
+
+  {{#if context.parts}}
+  <div class="pool-parts">
+    {{#each context.parts}}<span class="part">{{this.label}} {{srxSigned this.value}}</span>{{/each}}
+  </div>
+  {{/if}}
+
+  <div class="dice-row">
+    {{#each result.critDice}}
+      <span class="die crit-die {{#if (srxIsHit this ../result.tn)}}hit{{/if}} {{#if (srxEq this 1)}}one{{/if}}" title="{{localize 'SRX.Roll.critDie'}}">{{this}}</span>
+    {{/each}}
+    {{#each result.normalDice}}
+      <span class="die {{#if (srxIsHit this ../result.tn)}}hit{{/if}}">{{this}}</span>
+    {{/each}}
+  </div>
+
+  <div class="result-row">
+    <span class="hits"><b>{{result.hits}}</b> {{localize "SRX.Roll.hits"}}</span>
+    {{#if result.critBonus}}<span class="detail">({{result.baseHits}} + {{result.critBonus}} {{localize "SRX.Roll.crit"}})</span>{{/if}}
+    {{#if result.hitMods}}<span class="detail">({{srxSigned result.hitMods}} {{localize "SRX.Roll.hitMods"}})</span>{{/if}}
+    {{#unless (srxEq result.tn 5)}}<span class="detail tn">{{localize "SRX.Roll.tn"}} {{result.tn}}+</span>{{/unless}}
+  </div>
+
+  {{#if result.isCrit}}<div class="banner crit">{{localize "SRX.Roll.criticalHit"}}</div>{{/if}}
+  {{#if result.isCriticalGlitch}}
+    <div class="banner critical-glitch">{{localize "SRX.Roll.criticalGlitch"}}</div>
+  {{else if result.isGlitch}}
+    <div class="banner glitch">{{localize "SRX.Roll.glitch"}}</div>
+  {{/if}}
+
+  {{#if (srxNotNull result.threshold)}}
+  <div class="threshold-row {{#if result.success}}success{{else}}failure{{/if}}">
+    {{#if result.success}}
+      {{localize "SRX.Roll.success"}} — {{result.netHits}} {{localize "SRX.Roll.netHits"}}
+    {{else}}
+      {{localize "SRX.Roll.failure"}} ({{localize "SRX.Roll.threshold"}} {{result.threshold}})
+    {{/if}}
+  </div>
+  {{/if}}
+
+  {{#if context.dv}}
+  <div class="dv-row">
+    {{localize "SRX.Item.dv"}}: <b>{{context.dv}}{{context.dvType}}</b>
+    {{#if context.element}}<span class="element">{{context.element}}</span>{{/if}}
+    {{#if context.fireMode}}<span class="fire-mode">{{context.fireMode}}</span>{{/if}}
+  </div>
+  {{/if}}
+</div>

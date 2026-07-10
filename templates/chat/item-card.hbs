@@ -1,0 +1,8 @@
+<div class="srx chat-card item-card">
+  <header class="card-header">
+    <img src="{{item.img}}" alt="{{item.name}}" width="36" height="36">
+    <h3>{{item.name}}</h3>
+  </header>
+  {{#if system.summary}}<p class="summary">{{system.summary}}</p>{{/if}}
+  {{#if system.description}}<div class="description">{{{system.description}}}</div>{{/if}}
+</div>
