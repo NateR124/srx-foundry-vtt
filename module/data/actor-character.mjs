@@ -2,6 +2,7 @@ import { SRX } from "../config.mjs";
 import * as derived from "../rules/derived.mjs";
 import * as metatype from "../rules/metatype.mjs";
 import { resolveVisionEnhancements } from "../canvas/vision.mjs";
+import { aggregateStatusMods, statusIdsFromActor } from "../rules/statuses.mjs";
 
 const fields = foundry.data.fields;
 
@@ -175,11 +176,25 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
       woundedLimit: wl
     });
 
+    // Status mechanics (wounded/impaired/immobilized/hobbled/…) from active effects
+    const statusMods = aggregateStatusMods(statusIdsFromActor(this.parent));
+    const useStatusDs = statusMods.statuses.size > 0;
+    const baseMove = derived.movementRate({
+      base: SRX.baseMovement,
+      metatypeMod: meta.movement
+    });
+
     this.derived = {
       accelerator: derived.accelerator({ rea: a.rea.value, log: a.log.value }),
       defenseScore: derived.defenseScore(
         { rea: a.rea.value, int: a.int.value },
-        { heavyArmor: wornHeavy, wounded: states.wounded }
+        {
+          heavyArmor: wornHeavy,
+          // Avoid double-counting wounded when the status effect is present
+          wounded: useStatusDs ? false : states.wounded,
+          statusDsMod: statusMods.dsMod,
+          dsForce: statusMods.dsForce
+        }
       ),
       matrixDefenseScore: derived.matrixDefenseScore({
         log: a.log.value,
@@ -188,7 +203,8 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
       }),
       woundedLimit: wl,
       deathThreshold: derived.deathThreshold(physicalMax),
-      movement: derived.movementRate({ base: SRX.baseMovement, metatypeMod: meta.movement }),
+      movement: Math.floor(baseMove * (statusMods.movementMult ?? 1)),
+      movementBase: baseMove,
       unarmedDv: derived.unarmedDv({ bod: a.bod.value }),
       armor: wornRating + naturalArmor + this.derivedMods.armor,
       hardenedArmor: wornHardened + this.derivedMods.hardened,
@@ -200,7 +216,19 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
       visionKeys: resolveVisionEnhancements(meta.vision, this.vision)
         .filter((v) => v.active)
         .map((v) => v.key),
-      states
+      states,
+      status: {
+        hitMod: statusMods.hitMod,
+        hitModExceptResistance: statusMods.hitModExceptResistance,
+        liability: statusMods.liability,
+        liabilityExceptResistance: statusMods.liabilityExceptResistance,
+        noInterrupt: statusMods.noInterrupt,
+        noMove: statusMods.noMove,
+        attackedByLeverage: statusMods.attackedByLeverage,
+        meleeAttackedByLeverage: statusMods.meleeAttackedByLeverage,
+        proneCover: statusMods.proneCover,
+        ids: [...statusMods.statuses]
+      }
     };
 
     // Unaugmented ratings vs the metatype maxima table (p. 13). Advisory —

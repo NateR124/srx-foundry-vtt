@@ -26,6 +26,10 @@ describe("defenseScore = max(1, ceil((REA+INT)/3))", () => {
     expect(defenseScore({ rea: 4, int: 6 }, { heavyArmor: true })).toBe(3);
     expect(defenseScore({ rea: 1, int: 1 }, { heavyArmor: true, wounded: true })).toBe(1);
   });
+  it("applies statusDsMod and dsForce", () => {
+    expect(defenseScore({ rea: 4, int: 5 }, { statusDsMod: -2 })).toBe(1); // ceil(9/3)=3 −2
+    expect(defenseScore({ rea: 6, int: 6 }, { dsForce: 1 })).toBe(1);
+  });
 });
 
 describe("matrixDefenseScore = ceil((LOG+Software+firewall)/3)", () => {

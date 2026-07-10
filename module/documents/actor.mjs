@@ -182,6 +182,9 @@ export class SrxActor extends foundry.documents.Actor {
       coverDefault = "none";
     }
 
+    // Attacker status hit mods (Wounded / Prone / etc.)
+    const atkStatusHit = this.system.derived?.status?.hitMod ?? 0;
+
     const config = await promptAttackConfig({
       title: `${item.name}${mode.name ? ` (${mode.name})` : ""}`,
       parts,
@@ -190,10 +193,20 @@ export class SrxActor extends foundry.documents.Actor {
         recoil: isFirearm && firedLastPhase(combatant),
         fullDefense: defender ? hasFullDefense(defender) : false,
         inMeleeRanged: false,
-        cover: coverDefault
+        cover: coverDefault,
+        immobilized: !!defender?.system?.derived?.status?.ids?.includes?.("immobilized")
+          || !!defender?.system?.derived?.status?.ids?.includes?.("unconscious")
+          || !!defender?.system?.derived?.status?.ids?.includes?.("paralyzed"),
+        prone: !!defender?.system?.derived?.status?.proneCover
+          || !!defender?.system?.derived?.status?.ids?.includes?.("prone")
       }
     });
     if (!config) return null;
+
+    // Bake status hit mod into config (except resistance — this is an attack)
+    if (atkStatusHit) {
+      config.hitMods = (config.hitMods || 0) + atkStatusHit;
+    }
 
     // Spend action only after the player confirms the attack (soft-fail if already spent)
     if (combatant) {

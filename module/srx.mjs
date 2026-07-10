@@ -12,7 +12,7 @@ import {
 import { SrxActor } from "./documents/actor.mjs";
 import { SrxItem } from "./documents/item.mjs";
 import { SrxCombat, SrxCombatant, registerCombatHooks } from "./combat/combat.mjs";
-import { registerStatusEffects } from "./combat/statuses.mjs";
+import { registerStatusEffects, registerStatusHooks } from "./combat/statuses.mjs";
 import { registerPipelineHooks } from "./combat/pipeline.mjs";
 import { registerTrackerHooks } from "./combat/tracker.mjs";
 import { registerLifecycleChatHooks } from "./combat/lifecycle.mjs";
@@ -83,6 +83,7 @@ Hooks.once("init", () => {
 
   // Status effects + vision
   registerStatusEffects();
+  registerStatusHooks();
   registerVisionModes();
 
   // Sheets

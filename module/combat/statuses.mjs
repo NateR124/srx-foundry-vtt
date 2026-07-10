@@ -1,7 +1,9 @@
 /**
- * SRX status effects (rulebook pp. 411–412 / combat chapter).
- * Registered into CONFIG.statusEffects on init.
+ * SRX status effects (rulebook pp. 134–136 / 411–412).
+ * Registered into CONFIG.statusEffects on init; implied statuses applied via hooks.
  */
+
+import { STATUS_MECHANICS, directImplies, expandStatusSet } from "../rules/statuses.mjs";
 
 /** Closed registry of 15 core statuses + ids used by the system. */
 export const SRX_STATUSES = [
@@ -105,22 +107,116 @@ export function registerStatusEffects() {
   const keep = (CONFIG.statusEffects ?? []).filter(
     (s) => s.id === "dead" || s.id === "unconscious" || s.id === "sleep"
   );
-  // Prefer our unconscious over core if both exist
-  const ours = SRX_STATUSES.map((s) => ({
-    id: s.id,
-    name: s.name,
-    img: s.img,
-    description: s.description,
-    // AE V2–friendly flags for later duration scheduling
-    statuses: [s.id]
-  }));
+  const ours = SRX_STATUSES.map((s) => {
+    const mech = STATUS_MECHANICS[s.id] ?? {};
+    return {
+      id: s.id,
+      name: s.name,
+      img: s.img,
+      description: s.description,
+      statuses: [s.id],
+      // Hint data for modules / debugging (not all applied as AE changes)
+      flags: {
+        srx: {
+          implies: mech.implies ?? [],
+          dsMod: mech.dsMod ?? 0,
+          dsForce: mech.dsForce ?? null,
+          hitMod: mech.hitMod ?? 0,
+          movementMult: mech.movementMult ?? 1
+        }
+      }
+    };
+  });
   const ids = new Set(ours.map((s) => s.id));
   CONFIG.statusEffects = [...ours, ...keep.filter((s) => !ids.has(s.id))];
 
-  // Map special status effects Foundry expects
   CONFIG.specialStatusEffects = foundry.utils.mergeObject(CONFIG.specialStatusEffects ?? {}, {
     BLIND: "blinded",
     INVISIBLE: "invisible",
     DEFEATED: "dead"
   });
+}
+
+/**
+ * When a status is applied, also apply implied statuses (Dazed→Hobbled, etc.).
+ * When removed, drop implied only if nothing else still requires them.
+ */
+export function registerStatusHooks() {
+  Hooks.on("createActiveEffect", async (effect, _options, userId) => {
+    if (game.user.id !== userId) return;
+    const actor = effect.parent;
+    if (!actor || actor.documentName !== "Actor") return;
+    const added = statusesOf(effect);
+    if (!added.length) return;
+
+    const toAdd = new Set();
+    for (const id of added) {
+      for (const imp of expandStatusSet([id])) {
+        if (!added.includes(imp) && !actorHasStatus(actor, imp)) toAdd.add(imp);
+      }
+    }
+    for (const id of toAdd) {
+      // Only apply direct chain members that are pure implies of what was added
+      if (isImpliedByAny(id, added)) {
+        await actor.toggleStatusEffect(id, { active: true }).catch(() => null);
+      }
+    }
+  });
+
+  Hooks.on("deleteActiveEffect", async (effect, _options, userId) => {
+    if (game.user.id !== userId) return;
+    const actor = effect.parent;
+    if (!actor || actor.documentName !== "Actor") return;
+    const removed = statusesOf(effect);
+    if (!removed.length) return;
+
+    // Recompute required implies from remaining statuses
+    const remaining = [];
+    for (const e of actor.effects) {
+      if (e.id === effect.id || e.disabled) continue;
+      remaining.push(...statusesOf(e));
+    }
+    const stillNeeded = expandStatusSet(remaining);
+    for (const id of removed) {
+      for (const imp of directImplies(id)) {
+        if (stillNeeded.has(imp)) continue;
+        // Don't remove if another remaining status directly/transitively needs it
+        if (actorHasStatus(actor, imp) && !stillNeeded.has(imp)) {
+          await actor.toggleStatusEffect(imp, { active: false }).catch(() => null);
+        }
+      }
+      // Also drop transitive implies of removed that are no longer needed
+      for (const imp of expandStatusSet(removed)) {
+        if (removed.includes(imp)) continue;
+        if (!stillNeeded.has(imp) && actorHasStatus(actor, imp)) {
+          await actor.toggleStatusEffect(imp, { active: false }).catch(() => null);
+        }
+      }
+    }
+  });
+}
+
+function statusesOf(effect) {
+  const s = effect.statuses;
+  if (!s) return [];
+  if (typeof s.has === "function") return [...s];
+  if (Array.isArray(s)) return [...s];
+  return [];
+}
+
+function actorHasStatus(actor, id) {
+  return actor.effects?.some((e) => {
+    if (e.disabled) return false;
+    const s = e.statuses;
+    if (!s) return false;
+    if (typeof s.has === "function") return s.has(id);
+    return Array.isArray(s) && s.includes(id);
+  });
+}
+
+function isImpliedByAny(imp, roots) {
+  for (const r of roots) {
+    if (expandStatusSet([r]).has(imp) && r !== imp) return true;
+  }
+  return false;
 }

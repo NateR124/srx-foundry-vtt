@@ -19,10 +19,28 @@ export function accelerator({ rea, log }) {
  * Minimum 1 even while unconscious. Heavy armor (−1) and Wounded (−1)
  * penalties apply on top; the floor of 1 applies after penalties.
  */
-export function defenseScore({ rea, int }, { heavyArmor = false, wounded = false } = {}) {
+/**
+ * @param {{ rea: number, int: number }} attrs
+ * @param {object} [opts]
+ * @param {boolean} [opts.heavyArmor]
+ * @param {boolean} [opts.wounded] - legacy; prefer statusDsMod from aggregateStatusMods
+ * @param {number} [opts.statusDsMod] - sum of status DS deltas (e.g. impaired −2, wounded −1)
+ * @param {number|null} [opts.dsForce] - force base DS (immobilized/unconscious → 1)
+ */
+export function defenseScore({ rea, int }, {
+  heavyArmor = false,
+  wounded = false,
+  statusDsMod = 0,
+  dsForce = null
+} = {}) {
+  if (dsForce != null) {
+    // Floor still applies; cover is applied outside this function
+    return Math.max(1, Number(dsForce) || 1);
+  }
   let ds = ceilDiv(rea + int, 3);
   if (heavyArmor) ds -= 1;
   if (wounded) ds -= 1;
+  ds += Number(statusDsMod) || 0;
   return Math.max(1, ds);
 }
 
