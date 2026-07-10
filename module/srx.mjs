@@ -16,8 +16,10 @@ import { registerStatusEffects } from "./combat/statuses.mjs";
 import { registerPipelineHooks } from "./combat/pipeline.mjs";
 import { registerTrackerHooks } from "./combat/tracker.mjs";
 import { registerLifecycleChatHooks } from "./combat/lifecycle.mjs";
+import { registerAoeChatHooks } from "./combat/aoe.mjs";
 import { registerTimedHooks } from "./time/scheduler.mjs";
 import { registerSocket } from "./net/socket.mjs";
+import * as aoeRules from "./rules/aoe.mjs";
 import { SRXRoll } from "./dice/srx-roll.mjs";
 import { SrxCharacterSheet } from "./apps/actor-sheet.mjs";
 import { SrxThreatSheet } from "./apps/threat-sheet.mjs";
@@ -40,7 +42,7 @@ Hooks.once("init", () => {
   console.log("SRX | Initializing Shadowrun Edition X system");
 
   CONFIG.SRX = SRX;
-  game.srx = { SRXRoll, rules, derived, combatRules, openCatalogImport };
+  game.srx = { SRXRoll, rules, derived, combatRules, aoe: aoeRules, openCatalogImport };
 
   // Documents
   CONFIG.Actor.documentClass = SrxActor;
@@ -101,6 +103,7 @@ Hooks.once("ready", () => {
   registerPipelineHooks();
   registerTrackerHooks();
   registerLifecycleChatHooks();
+  registerAoeChatHooks();
   registerTimedHooks();
   console.log("SRX | Ready (M2 combat pipeline active)");
 });

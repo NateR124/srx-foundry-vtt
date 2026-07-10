@@ -43,9 +43,13 @@ export class WeaponData extends foundry.abstract.TypeDataModel {
           dvMin: new fields.NumberField({ required: false, integer: true, nullable: true, initial: null }),
           dvMax: new fields.NumberField({ required: false, integer: true, nullable: true, initial: null }),
           dvType: new fields.StringField({ required: true, initial: "P", choices: () => Object.keys(SRX.damageTypes) }),
-          element: new fields.StringField({ required: true, blank: true, initial: "" })
+          element: new fields.StringField({ required: true, blank: true, initial: "" }),
+          // AOE: "" | "blast" | "cone" (also inferred from mode name); radii in meters
+          aoe: new fields.StringField({ required: true, blank: true, initial: "" }),
+          fullRadius: new fields.NumberField({ required: false, integer: true, min: 0, nullable: true, initial: null }),
+          halfRadius: new fields.NumberField({ required: false, integer: true, min: 0, nullable: true, initial: null })
         }),
-        { initial: [{ name: "", action: "major", fireMode: "", acc: 0, dv: "", dvMin: null, dvMax: null, dvType: "P", element: "" }] }
+        { initial: [{ name: "", action: "major", fireMode: "", acc: 0, dv: "", dvMin: null, dvMax: null, dvType: "P", element: "", aoe: "", fullRadius: null, halfRadius: null }] }
       )
     };
   }

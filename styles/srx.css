@@ -397,6 +397,22 @@
 }
 .srx-econ-btn.spent, .srx-econ-btn:disabled { opacity: 0.4; }
 
+/* AOE cards */
+.srx.aoe-card ul.aoe-targets {
+  list-style: none;
+  margin: 0.4em 0;
+  padding: 0;
+}
+.srx.aoe-card ul.aoe-targets li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.25em 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-border-light-primary, #666) 40%, transparent);
+}
+.srx.aoe-card ul.aoe-targets li:last-child { border-bottom: none; }
+
 /* ---------- Attack dialog ---------- */
 .srx.attack-config fieldset {
   border: 1px solid var(--color-border, #888);

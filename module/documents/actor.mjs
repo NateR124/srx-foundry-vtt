@@ -4,6 +4,8 @@ import { promptRollConfig } from "../apps/roll-dialog.mjs";
 import { promptAttackConfig } from "../apps/attack-dialog.mjs";
 import { evaluateDv } from "../rules/formulas.mjs";
 import { postAttackOutcome } from "../combat/pipeline.mjs";
+import { rollAoeAttack } from "../combat/aoe.mjs";
+import { isAoeMode } from "../rules/aoe.mjs";
 import {
   combatantForActor,
   firedLastPhase,
@@ -141,12 +143,16 @@ export class SrxActor extends foundry.documents.Actor {
     const mode = item.system.attackModes[modeIndex] ?? item.system.attackModes[0];
     if (!mode) return null;
 
+    // AOE modes (grenade blast, shotgun shot, etc.) use Template Regions + scatter
+    if (isAoeMode(mode, item.system)) {
+      return rollAoeAttack(this, item, mode, modeIndex);
+    }
+
     const def = SRX.skills[item.system.skill];
     const skill = this.system.skills[item.system.skill];
     const attrKey = def?.linked ?? "agi";
     const attr = this.system.attributes[attrKey];
     const isFirearm = item.system.skill === "firearms";
-    const isRanged = isFirearm || item.system.skill === "projectileWeapons";
 
     let defender = null;
     const targets = [...(game.user?.targets ?? [])];
@@ -225,7 +231,7 @@ export class SrxActor extends foundry.documents.Actor {
           baseDv: dv,
           dvType: mode.dvType || "P",
           element: mode.element || "",
-          aoe: /aoe/i.test(mode.name || ""),
+          aoe: false,
           // Pass pre-composed threshold so Close Call isn't double-counted
           defenseScoreOverride: threshold
         });
