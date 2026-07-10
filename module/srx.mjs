@@ -244,3 +244,9 @@ Hooks.on("renderChatMessageHTML", (message, html) => {
     });
   });
 });
+
+/** Quench Testing integration */
+Hooks.on("quenchReady", async (quench) => {
+  const { registerQuenchTests } = await import("./quench.mjs");
+  registerQuenchTests(quench);
+});
