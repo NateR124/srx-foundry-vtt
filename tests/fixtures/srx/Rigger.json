@@ -1,0 +1,1789 @@
+{
+  "srxVersion": "3.07",
+  "source": "Rigger.srx.deploy",
+  "task": "task-2-srx-parser",
+  "entries": [
+    {
+      "version": 3.07,
+      "meta": {
+        "nextInstanceId": 4632,
+        "name": "",
+        "player": "",
+        "archetype": "Rigger",
+        "uiFlags": [
+          "False",
+          "True",
+          "False",
+          "False",
+          "False",
+          "True"
+        ],
+        "rawTrackers": {
+          "karma": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "counters": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "lifestyle": "Lifestyle Adv: 0",
+          "header42": "False",
+          "header43": "0"
+        },
+        "matrixConnection": "DNI",
+        "edge": 2,
+        "activeDcc": "Ares Copilot",
+        "activeCommlink": "Sony Emperor Commlink"
+      },
+      "priorities": {
+        "a": "Resources",
+        "b": "Metatype",
+        "c": "Skills",
+        "d": "Attributes",
+        "e": "Magic/Resonance"
+      },
+      "metatype": {
+        "name": "Dwarf",
+        "metatypeAttributeChoice": "Logic"
+      },
+      "tradition": {
+        "magicType": "Magic",
+        "name": ""
+      },
+      "attributes": {
+        "body": {
+          "rating": 2,
+          "karma": 0,
+          "flag": "False"
+        },
+        "agility": {
+          "rating": 4,
+          "karma": 0,
+          "flag": "False"
+        },
+        "reaction": {
+          "rating": 4,
+          "karma": 0,
+          "flag": "False"
+        },
+        "willpower": {
+          "rating": 4,
+          "karma": 0,
+          "flag": "False"
+        },
+        "logic": {
+          "rating": 4,
+          "karma": 0,
+          "flag": "False"
+        },
+        "intuition": {
+          "rating": 1,
+          "karma": 0,
+          "flag": "False"
+        },
+        "charisma": {
+          "rating": 2,
+          "karma": 0,
+          "flag": "False"
+        }
+      },
+      "skills": {
+        "athletics": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "biotech": {
+          "rating": 1,
+          "karma": 0,
+          "specialization": ""
+        },
+        "channeling": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "closeCombat": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "con": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "conjuring": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "driving": {
+          "rating": 5,
+          "karma": 0,
+          "specialization": ""
+        },
+        "engineering": {
+          "rating": 4,
+          "karma": 0,
+          "specialization": ""
+        },
+        "firearms": {
+          "rating": 4,
+          "karma": 0,
+          "specialization": ""
+        },
+        "hacking": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "influence": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "insight": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "mysticism": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "outdoors": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "perception": {
+          "rating": 1,
+          "karma": 0,
+          "specialization": ""
+        },
+        "piloting": {
+          "rating": 4,
+          "karma": 0,
+          "specialization": ""
+        },
+        "projectileWeapons": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "software": {
+          "rating": 5,
+          "karma": 0,
+          "specialization": ""
+        },
+        "sorcery": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        },
+        "stealth": {
+          "rating": 1,
+          "karma": 0,
+          "specialization": ""
+        },
+        "threading": {
+          "rating": 0,
+          "karma": 0,
+          "specialization": ""
+        }
+      },
+      "talents": [
+        {
+          "name": "General Talents",
+          "slug": "general-talents",
+          "category": "General",
+          "subtype": "Heading",
+          "gateway": true,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Edge: Close Call",
+          "slug": "edge-close-call",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Edge: Hustle",
+          "slug": "edge-hustle",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Edge: Increased Edge",
+          "slug": "edge-increased-edge",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 12,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Edge: Second Chance",
+          "slug": "edge-second-chance",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Expertise: Vehicle",
+          "slug": "expertise-vehicle",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 12,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Knowledgeable",
+          "slug": "knowledgeable",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Spending Money",
+          "slug": "spending-money",
+          "category": "General",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 2,
+          "karmaCost": 2,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Vehicle Talents",
+          "slug": "vehicle-talents",
+          "category": "Vehicle",
+          "subtype": "Heading",
+          "gateway": true,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 0,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Adaptive AI",
+          "slug": "adaptive-ai",
+          "category": "Vehicle",
+          "subtype": "Autopilot",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 16,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Edge: Drone Master",
+          "slug": "edge-drone-master",
+          "category": "Vehicle",
+          "subtype": "Autopilot",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 4,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Evasion Autosoft",
+          "slug": "evasion-autosoft",
+          "category": "Vehicle",
+          "subtype": "Autopilot",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 12,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Force Crash",
+          "slug": "force-crash",
+          "category": "Vehicle",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 4,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Grease Monkey",
+          "slug": "grease-monkey",
+          "category": "Vehicle",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 5,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Junkyard Dog",
+          "slug": "junkyard-dog",
+          "category": "Vehicle",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 9,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Juryrig",
+          "slug": "juryrig",
+          "category": "Vehicle",
+          "subtype": null,
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 4,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Optimized Processing",
+          "slug": "optimized-processing",
+          "category": "Vehicle",
+          "subtype": "Autopilot",
+          "gateway": false,
+          "option": null,
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 15,
+          "flags": [
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Targeting Autosoft",
+          "slug": "targeting-autosoft",
+          "category": "Vehicle",
+          "subtype": "Autopilot",
+          "gateway": false,
+          "option": "Firearms",
+          "option2": null,
+          "rank": 1,
+          "karmaCost": 10,
+          "flags": [
+            "True",
+            "False"
+          ]
+        }
+      ],
+      "spells": [],
+      "anima": [],
+      "augmentations": [
+        {
+          "name": "Senseware",
+          "slug": "senseware",
+          "category": "Senseware",
+          "subcategory": "Heading",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 0,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Eyeware",
+          "slug": "eyeware",
+          "category": "Senseware",
+          "subcategory": "Subheading",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 0,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Smartlink (Implanted)",
+          "slug": "smartlink-implanted",
+          "category": "Senseware",
+          "subcategory": "Eyeware",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0.3,
+          "cost": 12000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Headware",
+          "slug": "headware",
+          "category": "Headware",
+          "subcategory": "Heading",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 0,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Control Rig",
+          "slug": "control-rig",
+          "category": "Headware",
+          "subcategory": null,
+          "option": null,
+          "option2": null,
+          "rating": 2,
+          "essence": 1.5,
+          "cost": 85000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "DNI (Direct Neural Interface)",
+          "slug": "dni-direct-neural-interface",
+          "category": "Headware",
+          "subcategory": null,
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0.05,
+          "cost": 0,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Mnemonic Enhancer",
+          "slug": "mnemonic-enhancer",
+          "category": "Headware",
+          "subcategory": null,
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0.2,
+          "cost": 24000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Bodyware",
+          "slug": "bodyware",
+          "category": "Bodyware",
+          "subcategory": "Heading",
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 0,
+          "cost": 0,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Reaction Enhancers",
+          "slug": "reaction-enhancers",
+          "category": "Bodyware",
+          "subcategory": null,
+          "option": null,
+          "option2": null,
+          "rating": 2,
+          "essence": 1,
+          "cost": 46000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        },
+        {
+          "name": "Wired Reflexes",
+          "slug": "wired-reflexes",
+          "category": "Bodyware",
+          "subcategory": null,
+          "option": null,
+          "option2": null,
+          "rating": 1,
+          "essence": 1,
+          "cost": 24000,
+          "grade": 0,
+          "flags": [
+            "False",
+            "0",
+            "True",
+            "False"
+          ]
+        }
+      ],
+      "armor": [
+        {
+          "name": "Actioneer Business Clothes",
+          "slug": "actioneer-business-clothes",
+          "category": null,
+          "subcategory": null,
+          "instanceId": 4264,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 1500,
+          "modCode": 0,
+          "flags": [
+            "False",
+            "0",
+            "False"
+          ]
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Pistols",
+          "slug": "pistols",
+          "category": null,
+          "type": "Heading",
+          "instanceId": 1233,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Machine",
+          "slug": "machine",
+          "category": null,
+          "type": "Subheading",
+          "instanceId": 4243,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Ceska Black Scorpion",
+          "slug": "ceska-black-scorpion",
+          "category": null,
+          "type": "Firearms",
+          "instanceId": 4233,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 850,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Ammo",
+          "slug": "ammo",
+          "category": null,
+          "type": "Heading",
+          "instanceId": 267,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Bullet (Regular Round)",
+          "slug": "bullet-regular-round",
+          "category": null,
+          "type": "Ammo",
+          "instanceId": 257,
+          "quantity": 500,
+          "option": null,
+          "notes": "",
+          "cost": 500,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        },
+        {
+          "name": "Gel Round",
+          "slug": "gel-round",
+          "category": null,
+          "type": "Ammo",
+          "instanceId": 398,
+          "quantity": 100,
+          "option": null,
+          "notes": "",
+          "cost": 200,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            "True",
+            "False",
+            "0"
+          ],
+          "attachments": []
+        }
+      ],
+      "gear": [
+        {
+          "name": "Matrix Devices",
+          "slug": "matrix-devices",
+          "category": "Matrix Devices",
+          "subcategory": "Heading",
+          "instanceId": 4630,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Commlinks",
+          "slug": "commlinks",
+          "category": "Matrix Devices",
+          "subcategory": "Subheading",
+          "instanceId": 4631,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Sony Emperor Commlink",
+          "slug": "sony-emperor-commlink",
+          "category": "Matrix Devices",
+          "subcategory": "Matrix Devices",
+          "instanceId": 4629,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 4000,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Electronics",
+          "slug": "electronics",
+          "category": "Electronics",
+          "subcategory": "Heading",
+          "instanceId": 278,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Certified Credstick",
+          "slug": "certified-credstick",
+          "category": "Electronics",
+          "subcategory": "Electronics",
+          "instanceId": 279,
+          "rating": 1,
+          "quantity": 2,
+          "variant": null,
+          "notes": "",
+          "cost": 50,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Datachip",
+          "slug": "datachip",
+          "category": "Electronics",
+          "subcategory": "Electronics",
+          "instanceId": 277,
+          "rating": 1,
+          "quantity": 2,
+          "variant": null,
+          "notes": "",
+          "cost": 10,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "RFID Tag",
+          "slug": "rfid-tag",
+          "category": "Electronics",
+          "subcategory": "Electronics",
+          "instanceId": 1706,
+          "rating": 1,
+          "quantity": 2,
+          "variant": null,
+          "notes": "",
+          "cost": 200,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Audio & Optical Devices",
+          "slug": "audio-optical-devices",
+          "category": "Audio & Optical Devices",
+          "subcategory": "Heading",
+          "instanceId": 2421,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Optical Devices",
+          "slug": "optical-devices",
+          "category": "Audio & Optical Devices",
+          "subcategory": "Subheading",
+          "instanceId": 2422,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Glasses",
+          "slug": "glasses",
+          "category": "Audio & Optical Devices",
+          "subcategory": "Optical Device",
+          "instanceId": 2419,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 2050,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [
+            0,
+            1,
+            4
+          ],
+          "mods": []
+        },
+        {
+          "name": "Breaking & Entering Gear",
+          "slug": "breaking-entering-gear",
+          "category": "Breaking & Entering Gear",
+          "subcategory": "Heading",
+          "instanceId": 11,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Fake SIN",
+          "slug": "fake-sin",
+          "category": "Breaking & Entering Gear",
+          "subcategory": "Breaking & Entering Gear",
+          "instanceId": 10,
+          "rating": 2,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": true,
+          "flags": [
+            "0",
+            "False",
+            "True"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Miniwelder",
+          "slug": "miniwelder",
+          "category": "Breaking & Entering Gear",
+          "subcategory": "Breaking & Entering Gear",
+          "instanceId": 1255,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": true,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Tools & Survival Gear",
+          "slug": "tools-survival-gear",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Heading",
+          "instanceId": 281,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Electrical Tools",
+          "slug": "electrical-tools",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Tools & Survival Gear",
+          "instanceId": 1362,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 750,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Flashlight",
+          "slug": "flashlight",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Tools & Survival Gear",
+          "instanceId": 411,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 20,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Forensics Kit",
+          "slug": "forensics-kit",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Tools & Survival Gear",
+          "instanceId": 1531,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 2000,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Mechanic's Kit",
+          "slug": "mechanics-kit",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Tools & Survival Gear",
+          "instanceId": 1253,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 6000,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Mechanic's Tools",
+          "slug": "mechanics-tools",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Tools & Survival Gear",
+          "instanceId": 1254,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": true,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Medkit",
+          "slug": "medkit",
+          "category": "Tools & Survival Gear",
+          "subcategory": "Tools & Survival Gear",
+          "instanceId": 283,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 500,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Biotech",
+          "slug": "biotech",
+          "category": "Biotech",
+          "subcategory": "Heading",
+          "instanceId": 285,
+          "rating": 1,
+          "quantity": 1,
+          "variant": null,
+          "notes": "",
+          "cost": 0,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Stim Patch",
+          "slug": "stim-patch",
+          "category": "Biotech",
+          "subcategory": "Biotech",
+          "instanceId": 312,
+          "rating": 1,
+          "quantity": 2,
+          "variant": null,
+          "notes": "",
+          "cost": 400,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        },
+        {
+          "name": "Trauma Patch",
+          "slug": "trauma-patch",
+          "category": "Biotech",
+          "subcategory": "Biotech",
+          "instanceId": 313,
+          "rating": 1,
+          "quantity": 2,
+          "variant": null,
+          "notes": "",
+          "cost": 200,
+          "free": false,
+          "flags": [
+            "0",
+            "False",
+            "False"
+          ],
+          "enhancements": [],
+          "mods": []
+        }
+      ],
+      "magicalGear": [],
+      "vehicles": [
+        {
+          "name": "Drone Command Consoles",
+          "slug": "drone-command-consoles",
+          "category": "Drone Command Consoles",
+          "subcategory": "Heading",
+          "instanceId": 4154,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            ""
+          ],
+          "mods": [],
+          "mounts": []
+        },
+        {
+          "name": "Ares Copilot",
+          "slug": "ares-copilot",
+          "category": "Drone Command Consoles",
+          "subcategory": "DCC",
+          "instanceId": 4153,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 30000,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            ""
+          ],
+          "mods": [],
+          "mounts": []
+        },
+        {
+          "name": "Groundcraft",
+          "slug": "groundcraft",
+          "category": "Groundcraft",
+          "subcategory": "Heading",
+          "instanceId": 4231,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            ""
+          ],
+          "mods": [],
+          "mounts": []
+        },
+        {
+          "name": "Trucks & Vans",
+          "slug": "trucks-vans",
+          "category": "Groundcraft",
+          "subcategory": "Subheading",
+          "instanceId": 4230,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            ""
+          ],
+          "mods": [],
+          "mounts": []
+        },
+        {
+          "name": "GMC Bulldog Step-Van",
+          "slug": "gmc-bulldog-step-van",
+          "category": "Groundcraft",
+          "subcategory": "Trucks & Vans",
+          "instanceId": 1143,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 37500,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            ""
+          ],
+          "mods": [
+            [
+              "10",
+              "False",
+              "False",
+              "6000",
+              "0",
+              "0",
+              "",
+              ""
+            ]
+          ],
+          "mounts": [
+            {
+              "kind": "custom",
+              "flags": [
+                "False",
+                "4",
+                "Rotating",
+                "True",
+                "False",
+                "False",
+                "False",
+                "False"
+              ]
+            },
+            {
+              "kind": "empty"
+            },
+            {
+              "kind": "empty"
+            },
+            {
+              "kind": "empty"
+            },
+            {
+              "kind": "empty"
+            }
+          ]
+        },
+        {
+          "name": "Terrestrial Drones",
+          "slug": "terrestrial-drones",
+          "category": "Terrestrial Drones",
+          "subcategory": "Heading",
+          "instanceId": 1172,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            ""
+          ],
+          "mods": [],
+          "mounts": []
+        },
+        {
+          "name": "Minidrones (Terrestrial)",
+          "slug": "minidrones-terrestrial",
+          "category": "Terrestrial Drones",
+          "subcategory": "Subheading",
+          "instanceId": 4197,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            ""
+          ],
+          "mods": [],
+          "mounts": []
+        },
+        {
+          "name": "Renraku Gerbil",
+          "slug": "renraku-gerbil",
+          "category": "Terrestrial Drones",
+          "subcategory": "Minidrones (Terrestrial)",
+          "instanceId": 4194,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 1500,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            ""
+          ],
+          "mods": [],
+          "mounts": []
+        },
+        {
+          "name": "Drones (Terrestrial)",
+          "slug": "drones-terrestrial",
+          "category": "Terrestrial Drones",
+          "subcategory": "Subheading",
+          "instanceId": 1966,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            ""
+          ],
+          "mods": [],
+          "mounts": []
+        },
+        {
+          "name": "Steel Lynx",
+          "slug": "steel-lynx",
+          "category": "Terrestrial Drones",
+          "subcategory": "Drones (Terrestrial)",
+          "instanceId": 2330,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 67000,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            ""
+          ],
+          "mods": [],
+          "mounts": [
+            {
+              "kind": "builtIn",
+              "flags": [
+                "False",
+                "False",
+                "False"
+              ]
+            },
+            {
+              "kind": "builtIn",
+              "flags": [
+                "False",
+                "False",
+                "False"
+              ]
+            },
+            {
+              "kind": "builtIn",
+              "flags": [
+                "False",
+                "False",
+                "False"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Aerial Drones",
+          "slug": "aerial-drones",
+          "category": "Aerial Drones",
+          "subcategory": "Heading",
+          "instanceId": 1178,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            ""
+          ],
+          "mods": [],
+          "mounts": []
+        },
+        {
+          "name": "Minidrones (Aerial)",
+          "slug": "minidrones-aerial",
+          "category": "Aerial Drones",
+          "subcategory": "Subheading",
+          "instanceId": 1221,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            ""
+          ],
+          "mods": [],
+          "mounts": []
+        },
+        {
+          "name": "MCT Fly-Spy",
+          "slug": "mct-fly-spy",
+          "category": "Aerial Drones",
+          "subcategory": "Minidrones (Aerial)",
+          "instanceId": 2399,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 7500,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            ""
+          ],
+          "mods": [],
+          "mounts": []
+        },
+        {
+          "name": "Drones (Aerial)",
+          "slug": "drones-aerial",
+          "category": "Aerial Drones",
+          "subcategory": "Subheading",
+          "instanceId": 2577,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 0,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            ""
+          ],
+          "mods": [],
+          "mounts": []
+        },
+        {
+          "name": "MCT-Nissan Roto-Drone",
+          "slug": "mct-nissan-roto-drone",
+          "category": "Aerial Drones",
+          "subcategory": "Drones (Aerial)",
+          "instanceId": 2346,
+          "quantity": 1,
+          "option": null,
+          "notes": "",
+          "cost": 45000,
+          "flags": [
+            "False",
+            "0",
+            "False",
+            ""
+          ],
+          "mods": [],
+          "mounts": [
+            {
+              "kind": "builtIn",
+              "flags": [
+                "False",
+                "False",
+                "False"
+              ]
+            },
+            {
+              "kind": "empty"
+            }
+          ]
+        }
+      ],
+      "contacts": [
+        {
+          "name": "Fixer",
+          "slug": "fixer",
+          "values": [
+            "",
+            "",
+            "False",
+            "False"
+          ],
+          "notes": "\n\n"
+        },
+        {
+          "name": "Mechanic",
+          "slug": "mechanic",
+          "values": [
+            "",
+            "",
+            "False",
+            "False"
+          ],
+          "notes": "\n\n"
+        }
+      ],
+      "traits": [],
+      "knowledge": [
+        {
+          "name": "History",
+          "slug": "history",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "Military & Law Enforcement",
+          "slug": "military-law-enforcement",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "Sciences",
+          "slug": "sciences",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "Security Systems & Protocols",
+          "slug": "security-systems-protocols",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "Vehicles & Drones",
+          "slug": "vehicles-drones",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "Weapons",
+          "slug": "weapons",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "Languages",
+          "slug": "languages",
+          "isLanguage": false,
+          "values": [
+            "",
+            "False",
+            "False",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "English",
+          "slug": "english",
+          "isLanguage": true,
+          "values": [
+            "",
+            "False",
+            "True",
+            "",
+            "",
+            "0",
+            "True"
+          ],
+          "notes": ""
+        }
+      ],
+      "personal": {
+        "legalName": "",
+        "height": "",
+        "weight": "",
+        "age": "",
+        "aliases": "",
+        "gender": "",
+        "description": "You are a master of machines, commanding a stable of drones that can handle everything from stealthy infiltration to front-line combat. With an experienced mechanic's touch, you fine-tune your gear until it runs better than anything off the shelf. Your drones can operate independently with deadly precision, thanks to advanced AI and customized loadouts. But when it's time to take the wheel, you don't hesitate to jack in. Your control rig melds mind to machine, letting you 'become' the vehicle. Your honed reflexes can let you speed through oncoming traffic or veer over the side of an on-ramp to fly through the air and land smoothly on the ground, leaving your pursuit in the dust. Whether you're leading the charge or making the getaway, you and your machines move as one.\n\nKeep in mind, your drones are more than capable of operating on their own. The one exception is high-speed chases - when you need a fast getaway, you should 'jump into' your van with your control rig to drive, as you're much better than the autopilot. Otherwise, you don't need to jump into your drones. Just give them commands, and they'll be effective - whether it's your battle drones gunning down enemies or your spy drones sneaking into a facility to scout around."
+      },
+      "notes": "",
+      "unknown": []
+    }
+  ]
+}
