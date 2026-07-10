@@ -14,14 +14,16 @@ export function maxForce(magic) {
 }
 
 /**
- * Clamp chosen Force to 1…maxForce (or 1 if Magic 0 for testing edge cases).
+ * Clamp chosen Force to 1…maxForce. Magic 0 clamps to 1 — a caster with no
+ * Magic never gets an unclamped Force (the glue layer refuses the cast
+ * outright; this is defense in depth for direct API calls).
  * @param {number} force
  * @param {number} magic
  */
 export function clampForce(force, magic) {
   const max = maxForce(magic);
   const f = Math.floor(Number(force) || 0);
-  if (max <= 0) return Math.max(1, f); // allow GM override / non-casters testing
+  if (max <= 0) return 1;
   return Math.min(Math.max(1, f), max);
 }
 
@@ -45,22 +47,25 @@ export function spellAffectsTarget(nf) {
 
 /**
  * Combat direct-mana DV from Net Force.
- * Manabolt-style default: NF + 1. Configurable via formula key.
+ * Manabolt-style default: NF + 1. Accepts any `nf`, `nf+k`, `nf-k`, `nf*k`
+ * (imported catalogs produce e.g. `nf+6` for F+6 spells like Acid Stream —
+ * an unrecognized formula must not silently collapse to nf+1).
  * @param {number} nf
- * @param {"nf"|"nf+1"|"nf*2"} [formula]
+ * @param {string} [formula]
  */
 export function spellDamageFromNetForce(nf, formula = "nf+1") {
   const n = Math.max(0, Number(nf) || 0);
-  switch (String(formula).toLowerCase()) {
-    case "nf":
-      return n;
-    case "nf*2":
-    case "2nf":
-      return n * 2;
-    case "nf+1":
-    default:
-      return n > 0 ? n + 1 : 0;
+  const f = String(formula).toLowerCase().replace(/\s+/g, "");
+  if (f === "nf") return n;
+  if (f === "2nf") return n * 2;
+  const m = f.match(/^nf([+\-*])(\d+)$/);
+  if (m) {
+    const k = Number(m[2]);
+    if (m[1] === "*") return n * k;
+    if (n <= 0) return 0; // NF 0 → no effect regardless of adder
+    return Math.max(0, m[1] === "+" ? n + k : n - k);
   }
+  return n > 0 ? n + 1 : 0;
 }
 
 /**
@@ -168,7 +173,9 @@ export function createSustainedEffect({
   force = 1,
   netForce: nf = 1,
   targetUuid = null,
-  duration = "sustained"
+  targetUuids = null,
+  duration = "sustained",
+  warding = 0
 } = {}) {
   return {
     id: id || `sust-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`,
@@ -177,7 +184,10 @@ export function createSustainedEffect({
     force: Number(force) || 1,
     netForce: Number(nf) || 0,
     targetUuid,
+    targetUuids: Array.isArray(targetUuids) ? targetUuids : (targetUuid ? [targetUuid] : []),
     duration,
+    // Aegis: warding bonus applied to the target, cleared when this ends
+    warding: Number(warding) || 0,
     startedAt: Date.now()
   };
 }
@@ -193,13 +203,17 @@ export function dropSustainedEffect(list, id) {
 
 /**
  * Highest-Force instance wins for duplicate same spell on same target (p. 218).
+ * Keyed by spellUuid when both entries carry one (different spells can share
+ * a display name); spellName is the fallback for hand-built entries.
  * @param {object[]} list
  * @param {object} incoming
  */
 export function mergeDuplicateSustain(list, incoming) {
   const next = [...(list ?? [])];
   const same = next.findIndex(
-    (e) => e.spellName === incoming.spellName
+    (e) => (e.spellUuid && incoming.spellUuid
+      ? e.spellUuid === incoming.spellUuid
+      : e.spellName === incoming.spellName)
       && e.targetUuid === incoming.targetUuid
   );
   if (same >= 0) {

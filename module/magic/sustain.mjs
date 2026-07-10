@@ -10,8 +10,36 @@ import {
   sustainDicePenalty
 } from "../rules/magic.mjs";
 import { SRXRoll } from "../dice/srx-roll.mjs";
+import { requestGmAction } from "../net/socket.mjs";
 
 const FLAG = "sustained";
+
+/**
+ * Clear per-target side effects tied to sustained entries (Aegis warding).
+ * Without this the wardingBonus flag outlives its spell permanently.
+ * @param {object[]} removed - sustain entries being dropped
+ */
+async function clearLinkedEffects(removed) {
+  for (const entry of removed ?? []) {
+    if (!entry?.warding || !entry.targetUuid) continue;
+    try {
+      const doc = await fromUuid(entry.targetUuid);
+      const target = doc?.actor ?? doc;
+      if (!target) continue;
+      if (target.isOwner || game.user.isGM) {
+        await target.unsetFlag("srx", "wardingBonus").catch(() => null);
+      } else {
+        await requestGmAction("setSrxFlag", {
+          uuid: target.uuid,
+          key: "wardingBonus",
+          value: null
+        });
+      }
+    } catch (err) {
+      console.warn("SRX | clear linked sustain effect", err);
+    }
+  }
+}
 
 /**
  * @param {Actor} actor
@@ -54,8 +82,10 @@ export async function addSustained(caster, effectData) {
  * @param {string} id
  */
 export async function endSustained(caster, id) {
-  const next = dropSustainedEffect(getSustained(caster), id);
+  const list = getSustained(caster);
+  const next = dropSustainedEffect(list, id);
   await caster.setFlag("srx", FLAG, next);
+  await clearLinkedEffects(list.filter((e) => e.id === id));
   return next;
 }
 
@@ -64,7 +94,9 @@ export async function endSustained(caster, id) {
  * @param {Actor} caster
  */
 export async function endAllSustained(caster) {
+  const list = getSustained(caster);
   await caster.unsetFlag("srx", FLAG).catch(() => null);
+  await clearLinkedEffects(list);
 }
 
 /**

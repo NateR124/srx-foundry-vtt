@@ -28,7 +28,7 @@ export async function promptCastConfig({
       </div>
       <div class="form-group">
         <label>${game.i18n.localize("SRX.Roll.diceMod")}</label>
-        <input type="number" name="diceMod" value="${sustainPen}" step="1">
+        <input type="number" name="diceMod" value="0" step="1">
         <p class="hint">${game.i18n.format("SRX.Magic.sustainHint", { count: sustainCount, pen: sustainPen })}</p>
       </div>
       <div class="form-group">

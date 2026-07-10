@@ -34,7 +34,8 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
       magicBind: SrxCharacterSheet.#onMagicBind,
       magicNegate: SrxCharacterSheet.#onMagicNegate,
       magicAegis: SrxCharacterSheet.#onMagicAegis,
-      magicAssense: SrxCharacterSheet.#onMagicAssense
+      magicAssense: SrxCharacterSheet.#onMagicAssense,
+      endSustain: SrxCharacterSheet.#onEndSustain
     }
   };
 
@@ -120,10 +121,12 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
       foci: byType("focus")
     };
 
+    const sustained = actor.getFlag("srx", "sustained") ?? [];
     context.magic = {
       astralState: actor.getFlag("srx", "astralState") ?? "physical",
       qiUses: actor.getFlag("srx", "qiUses") ?? 0,
-      sustainCount: (actor.getFlag("srx", "sustained") ?? []).length
+      sustainCount: sustained.length,
+      sustained
     };
 
     context.metatypes = Object.entries(SRX.metatypes).map(([key, def]) => ({
@@ -437,5 +440,14 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
       return null;
     }
     return assenseTarget(this.document, t, "living");
+  }
+
+  /** Voluntarily drop one sustained spell (free — Negate is for others'). */
+  static async #onEndSustain(_event, target) {
+    const id = target.closest("[data-sustain-id]")?.dataset.sustainId;
+    if (!id) return null;
+    const { endSustained } = await import("../magic/sustain.mjs");
+    await endSustained(this.document, id);
+    return this.render();
   }
 }

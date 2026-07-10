@@ -80,6 +80,19 @@ export async function applyDamageToActor(actor, amount) {
     "system.monitors.stun.value": next.stun
   });
   await syncCharacterStatuses(actor);
+
+  // Taking damage while Wounded forces a BOD+WIL (1) sustaining check —
+  // failure drops all sustained spells (p. 218). No-op without sustains.
+  const tookDamage = (amount.physical || 0) > 0 || (amount.stun || 0) > 0;
+  if (tookDamage && actor.system.derived?.states?.wounded) {
+    try {
+      const { checkSustainOnWound } = await import("../magic/sustain.mjs");
+      await checkSustainOnWound(actor);
+    } catch (err) {
+      console.warn("SRX | sustain wound check", err);
+    }
+  }
+
   return { before, after: monitorStateFromActor(actor) };
 }
 

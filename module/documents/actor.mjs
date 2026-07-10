@@ -15,6 +15,7 @@ import {
   spendCombatantAction
 } from "../combat/actions.mjs";
 import { castSpell as castSpellPipeline } from "../magic/cast.mjs";
+import { sustainPenaltyForActor } from "../magic/sustain.mjs";
 
 export class SrxActor extends foundry.documents.Actor {
   /** @override — flat keys for roll formulas (initiative: (@qui)d6 + @accel). */
@@ -35,6 +36,18 @@ export class SrxActor extends foundry.documents.Actor {
   /** Localized label helper. */
   #label(key) {
     return game.i18n.localize(key);
+  }
+
+  /**
+   * Sustaining spells: −2 dice each on all NON-resistance tests (p. 218).
+   * Resistance rolls (damage resist, dying, magic resist) build their pools
+   * outside these helpers and correctly skip this.
+   */
+  #sustainParts() {
+    const pen = sustainPenaltyForActor(this);
+    return pen
+      ? [{ label: game.i18n.localize("SRX.Magic.sustainPenalty"), value: pen }]
+      : [];
   }
 
   /** Shared roll-flow: dialog → SRXRoll → chat. Returns the ChatMessage. */
@@ -104,7 +117,8 @@ export class SrxActor extends foundry.documents.Actor {
       title: `${label} + ${secondLabel}`,
       parts: [
         { label, value: first.value },
-        { label: `${secondLabel}${secondKey ? "" : " ×2"}`, value: second.value }
+        { label: `${secondLabel}${secondKey ? "" : " ×2"}`, value: second.value },
+        ...this.#sustainParts()
       ]
     });
   }
@@ -131,7 +145,8 @@ export class SrxActor extends foundry.documents.Actor {
       title: `${skillLabel} + ${attrLabel}`,
       parts: [
         { label: attrLabel, value: this.#attrValue(attr) },
-        { label: skillLabel, value: skill.value }
+        { label: skillLabel, value: skill.value },
+        ...this.#sustainParts()
       ]
     });
   }
@@ -173,7 +188,8 @@ export class SrxActor extends foundry.documents.Actor {
     const parts = [
       { label: this.#label(SRX.attributes[attrKey]?.label ?? "SRX.Attribute.agi"), value: attr?.value ?? 0 },
       { label: this.#label(def?.label ?? "SRX.Skill.firearms"), value: skill?.value ?? 0 },
-      { label: game.i18n.localize("SRX.Item.accuracy"), value: mode.acc || 0 }
+      { label: game.i18n.localize("SRX.Item.accuracy"), value: mode.acc || 0 },
+      ...this.#sustainParts()
     ];
 
     let coverDefault = "none";

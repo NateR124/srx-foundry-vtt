@@ -297,6 +297,18 @@
         <button type="button" data-action="magicAegis">{{localize "SRX.Mysticism.aegis"}}</button>
         <button type="button" data-action="magicAssense">{{localize "SRX.Astral.assense"}}</button>
       </div>
+      {{#if magic.sustained.length}}
+      <h3>{{localize "SRX.Magic.sustainedHeader"}}</h3>
+      <ul class="item-list sustained-spells">
+        {{#each magic.sustained}}
+        <li data-sustain-id="{{this.id}}">
+          <span class="item-name">{{this.spellName}} (F{{this.force}})</span>
+          <span class="summary">NF {{this.netForce}}{{#if this.warding}} · {{localize "SRX.Mysticism.aegis"}} +{{this.warding}}{{/if}}</span>
+          <a class="item-control" data-action="endSustain" title="{{localize 'SRX.Magic.endSustain'}}"><i class="fa-solid fa-xmark"></i></a>
+        </li>
+        {{/each}}
+      </ul>
+      {{/if}}
       <h3>{{localize "SRX.Sheet.spells"}}
         <a class="item-control" data-action="createItem" data-type="spell"><i class="fa-solid fa-plus"></i></a>
       </h3>

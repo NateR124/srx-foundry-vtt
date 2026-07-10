@@ -10,6 +10,7 @@ import { SRXRoll } from "../dice/srx-roll.mjs";
 import { rollDrain } from "./cast.mjs";
 import { endSustained, getSustained } from "./sustain.mjs";
 import { spendCombatantAction, combatantForActor } from "../combat/actions.mjs";
+import { requestGmAction } from "../net/socket.mjs";
 import { SRX } from "../config.mjs";
 
 /**
@@ -26,16 +27,20 @@ import { SRX } from "../config.mjs";
 export async function castNegate(caster, { targetForce = null } = {}) {
   if (!caster) return null;
   const magic = caster.system.special?.magic?.value ?? 0;
+  if (magic <= 0) {
+    ui.notifications.warn(game.i18n.localize("SRX.Magic.noMagic"));
+    return null;
+  }
   const sc = (await import("./sustain.mjs")).sustainCount(caster);
   const config = await promptCastConfig({
     title: game.i18n.localize("SRX.Mysticism.negate"),
-    magic: magic || 6,
-    defaultForce: Math.min(magic || 3, 4),
+    magic,
+    defaultForce: Math.min(magic, 4),
     sustainCount: sc
   });
   if (!config) return null;
 
-  const force = clampForce(config.force, magic || config.force);
+  const force = clampForce(config.force, magic);
   const combatant = combatantForActor(caster);
   if (combatant) await spendCombatantAction(combatant, "complex");
 
@@ -109,8 +114,12 @@ export async function castNegate(caster, { targetForce = null } = {}) {
   if (result.ended) {
     if (endLocalSustain) await endSustained(caster, endLocalSustain);
     if (targetActor?.getFlag?.("srx", "anima")) {
-      // Disrupt anima — delete if GM
-      if (game.user.isGM) await targetActor.delete().catch(() => null);
+      // Disrupt anima — players relay the delete through the GM executor
+      if (game.user.isGM) {
+        await targetActor.delete().catch(() => null);
+      } else {
+        await requestGmAction("deleteAnima", { actorUuid: targetActor.uuid });
+      }
     }
   }
 
@@ -138,15 +147,19 @@ export async function castNegate(caster, { targetForce = null } = {}) {
 export async function castAegis(caster) {
   if (!caster) return null;
   const magic = caster.system.special?.magic?.value ?? 0;
+  if (magic <= 0) {
+    ui.notifications.warn(game.i18n.localize("SRX.Magic.noMagic"));
+    return null;
+  }
   const sc = (await import("./sustain.mjs")).sustainCount(caster);
   const config = await promptCastConfig({
     title: game.i18n.localize("SRX.Mysticism.aegis"),
-    magic: magic || 6,
+    magic,
     defaultForce: 3,
     sustainCount: sc
   });
   if (!config) return null;
-  const force = clampForce(config.force, magic || config.force);
+  const force = clampForce(config.force, magic);
   const combatant = combatantForActor(caster);
   if (combatant) await spendCombatantAction(combatant, "complex");
 
@@ -158,15 +171,25 @@ export async function castAegis(caster) {
   const fakeSpell = { system: { drainSkill: "mysticism", physicalDrain: false, duration: "sustained" } };
   await rollDrain(caster, fakeSpell, force, config);
 
+  // `warding` links the flag to this sustain so ending it clears the bonus
   await (await import("./sustain.mjs")).addSustained(caster, {
     spellName: "Aegis",
     force,
     netForce: force,
     targetUuid: target?.uuid ?? caster.uuid,
-    duration: "sustained"
+    duration: "sustained",
+    warding: bonus
   });
   if (target) {
-    await target.setFlag("srx", "wardingBonus", bonus);
+    if (target.isOwner || game.user.isGM) {
+      await target.setFlag("srx", "wardingBonus", bonus);
+    } else {
+      await requestGmAction("setSrxFlag", {
+        uuid: target.uuid,
+        key: "wardingBonus",
+        value: bonus
+      });
+    }
   }
 
   return foundry.documents.ChatMessage.create({

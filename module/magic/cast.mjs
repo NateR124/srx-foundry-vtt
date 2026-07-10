@@ -15,6 +15,7 @@ import { SRXRoll } from "../dice/srx-roll.mjs";
 import { applyDamageToActor, damageSummary, resolveDamageApplication } from "../combat/damage.mjs";
 import { addSustained, sustainCount, sustainPenaltyForActor } from "./sustain.mjs";
 import { spendCombatantAction, combatantForActor } from "../combat/actions.mjs";
+import { requestGmAction } from "../net/socket.mjs";
 import { SRX } from "../config.mjs";
 
 /**
@@ -30,22 +31,33 @@ export async function castSpell(caster, spell) {
 
   const magic = caster.system.special?.magic?.value ?? 0;
   if (magic <= 0) {
+    // Hard stop: Magic 0 means no spellcasting — without this, Force clamps
+    // against itself and a mundane can cast at any Force.
     ui.notifications.warn(game.i18n.localize("SRX.Magic.noMagic"));
-    // Allow GM override by continuing with max 1 for testing? Prefer hard stop.
-    // return null;
+    return null;
   }
 
   const sys = spell.system;
+  const pattern = sys.pattern || "direct";
+  const targets = [...(game.user?.targets ?? [])];
+
+  // Non-self spells need explicit targets: resolving an untargeted Manabolt
+  // "on self" (the old fallback) damaged the caster with their own spell.
+  if (pattern !== "self" && targets.length === 0) {
+    ui.notifications.warn(game.i18n.localize("SRX.Magic.selectTargets"));
+    return null;
+  }
+
   const sc = sustainCount(caster);
   const config = await promptCastConfig({
     title: spell.name,
-    magic: magic || 6, // allow cast dialog even if Magic 0 for GM sandbox
-    defaultForce: Math.min(magic || 1, 5),
+    magic,
+    defaultForce: Math.min(magic, 5),
     sustainCount: sc
   });
   if (!config) return null;
 
-  const force = clampForce(config.force, magic || config.force);
+  const force = clampForce(config.force, magic);
   const combatant = combatantForActor(caster);
   if (combatant) {
     const cost = /complex/i.test(sys.action || "complex") ? "complex" : "major";
@@ -53,12 +65,10 @@ export async function castSpell(caster, spell) {
   }
 
   const speaker = foundry.documents.ChatMessage.getSpeaker({ actor: caster });
-  const targets = [...(game.user?.targets ?? [])];
-  const pattern = sys.pattern || "direct";
 
   // --- Resolve per target ---
   const outcomes = [];
-  if (pattern === "self" || targets.length === 0) {
+  if (pattern === "self") {
     outcomes.push(await resolveSpellOnTarget(caster, spell, force, config, caster));
   } else {
     for (const t of targets) {
@@ -66,6 +76,22 @@ export async function castSpell(caster, spell) {
       if (!def) continue;
       outcomes.push(await resolveSpellOnTarget(caster, spell, force, config, def));
     }
+  }
+
+  // --- Sustain: ONE entry per cast, not one per target (a three-ally buff
+  // is a single sustained spell, −2 dice — not −6) ---
+  const affected = outcomes.filter((o) => o?.affected);
+  if (sys.duration === "sustained" && affected.length) {
+    const single = affected.length === 1 ? affected[0] : null;
+    await addSustained(caster, {
+      spellUuid: spell.uuid,
+      spellName: spell.name,
+      force,
+      netForce: single?.netForce ?? force,
+      targetUuid: single?.targetUuid ?? null,
+      targetUuids: affected.map((o) => o.targetUuid),
+      duration: "sustained"
+    });
   }
 
   // --- Drain (always after effects, original Force) ---
@@ -118,11 +144,13 @@ async function resolveSpellOnTarget(caster, spell, force, config, target) {
     const agi = caster.system.attributes?.agi?.value ?? 0;
     const sorcery = caster.system.skills?.sorcery?.value ?? 0;
     const statusHit = caster.system.derived?.status?.hitMod ?? 0;
-    const pool = Math.max(0, agi + sorcery + (config.diceMod || 0));
+    const sustainPen = sustainPenaltyForActor(caster);
+    const pool = Math.max(0, agi + sorcery + sustainPen + (config.diceMod || 0));
     const ds = target.system.derived?.defenseScore
       ?? target.system.defenseScore
       ?? 1;
     const tn = resolveTn({ leverage: config.leverage, liability: config.liability });
+    attackHits = 0;
     if (pool > 0) {
       const roll = SRXRoll.fromPool({
         pool,
@@ -132,7 +160,8 @@ async function resolveSpellOnTarget(caster, spell, force, config, target) {
         context: {
           parts: [
             { label: game.i18n.localize("SRX.Attribute.agi"), value: agi },
-            { label: game.i18n.localize("SRX.Skill.sorcery"), value: sorcery }
+            { label: game.i18n.localize("SRX.Skill.sorcery"), value: sorcery },
+            ...(sustainPen ? [{ label: game.i18n.localize("SRX.Magic.sustainPenalty"), value: sustainPen }] : [])
           ],
           actorName: caster.name,
           threshold: ds
@@ -143,9 +172,11 @@ async function resolveSpellOnTarget(caster, spell, force, config, target) {
         speaker: foundry.documents.ChatMessage.getSpeaker({ actor: caster })
       });
       attackHits = roll.srx?.hits ?? 0;
-      if (attackHits < ds) {
-        return { targetName, targetUuid: target.uuid, affected: false, netForce: 0, miss: true };
-      }
+    }
+    // The miss check must apply to a 0-dice pool too — otherwise a caster
+    // with no pool "auto-hits" at full Force by skipping the roll entirely.
+    if (attackHits < ds) {
+      return { targetName, targetUuid: target.uuid, affected: false, netForce: 0, miss: true };
     }
   }
 
@@ -203,7 +234,16 @@ async function resolveSpellOnTarget(caster, spell, force, config, target) {
       });
       summary += ` → P${result.after.physical}/S${result.after.stun}`;
     } else {
-      summary = damageSummary(amount) + " (pending apply)";
+      // Player casting at a GM-owned NPC: apply through the GM executor —
+      // the old "(pending apply)" left no button and no request, so the
+      // spell simply did nothing.
+      await requestGmAction("applyDamage", {
+        defenderUuid: target.uuid,
+        physical: amount.physical,
+        stun: amount.stun,
+        element: sys.element || ""
+      });
+      summary = damageSummary(amount);
     }
   } else if (category === "detection") {
     summary = game.i18n.format("SRX.Magic.detectionNf", { nf });
@@ -213,16 +253,8 @@ async function resolveSpellOnTarget(caster, spell, force, config, target) {
     summary = game.i18n.format("SRX.Magic.netForceLine", { nf, force });
   }
 
-  // Sustain
+  // Sustain registration happens once per cast in castSpell, not per target
   if (sys.duration === "sustained" && spellAffectsTarget(nf)) {
-    await addSustained(caster, {
-      spellUuid: spell.uuid,
-      spellName: spell.name,
-      force,
-      netForce: nf,
-      targetUuid: target.uuid,
-      duration: "sustained"
-    });
     summary += ` · ${game.i18n.localize("SRX.Magic.sustaining")}`;
   }
 
@@ -272,13 +304,21 @@ async function rollMagicResistance(target, attrKey, spellName) {
     pool = 1;
   }
 
+  const parts = [{ label, value: pool }];
+  // Aegis warding: +Force dice on magic resistance while the ward holds
+  const warding = Number(target.getFlag?.("srx", "wardingBonus")) || 0;
+  if (warding > 0) {
+    pool += warding;
+    parts.push({ label: game.i18n.localize("SRX.Mysticism.aegis"), value: warding });
+  }
+
   if (pool <= 0) return 0;
   const roll = SRXRoll.fromPool({
     pool,
     tn: 5,
     flavor: game.i18n.format("SRX.Magic.resist", { spell: spellName }),
     context: {
-      parts: [{ label, value: pool }],
+      parts,
       actorName: target.name
     }
   });
@@ -297,9 +337,11 @@ export async function rollDrain(caster, spell, force, castConfig = {}) {
   const skillKey = spell.system.drainSkill || "sorcery";
   const skill = caster.system.skills?.[skillKey]?.value ?? 0;
   const sustainPen = sustainPenaltyForActor(caster);
-  // Drain is not a resistance test — sustain −2 applies; status hit mods apply
+  // Drain is not a resistance test — sustain −2 applies; status hit mods
+  // apply. The dialog's diceMod is a situational modifier for the CAST roll
+  // and deliberately does not leak into the Drain pool.
   const statusHit = caster.system.derived?.status?.hitMod ?? 0;
-  const pool = Math.max(0, magic + skill + (castConfig.diceMod ?? sustainPen));
+  const pool = Math.max(0, magic + skill + sustainPen);
 
   let drainHits = 0;
   if (pool > 0) {
@@ -314,7 +356,8 @@ export async function rollDrain(caster, spell, force, castConfig = {}) {
       context: {
         parts: [
           { label: game.i18n.localize("SRX.Attribute.mag"), value: magic },
-          { label: game.i18n.localize(SRX.skills[skillKey]?.label ?? skillKey), value: skill }
+          { label: game.i18n.localize(SRX.skills[skillKey]?.label ?? skillKey), value: skill },
+          ...(sustainPen ? [{ label: game.i18n.localize("SRX.Magic.sustainPenalty"), value: sustainPen }] : [])
         ],
         actorName: caster.name
       }

@@ -16,7 +16,29 @@ import { SRXRoll } from "../dice/srx-roll.mjs";
 import { applyDamageToActor } from "../combat/damage.mjs";
 import { sustainPenaltyForActor } from "./sustain.mjs";
 import { spendCombatantAction, combatantForActor } from "../combat/actions.mjs";
+import { requestGmAction } from "../net/socket.mjs";
 import { SRX } from "../config.mjs";
+
+/**
+ * Create the anima actor, as GM directly or via the GM executor for players
+ * (actor creation is GM-only in default setups — without the relay a player's
+ * summon took the Drain and produced nothing).
+ * @returns {Promise<Actor|null>}
+ */
+async function createAnimaActor(conjurer, data) {
+  if (game.user.isGM) {
+    const [doc] = await Actor.createDocuments([data]);
+    if (conjurer.ownership) {
+      await doc.update({ ownership: foundry.utils.duplicate(conjurer.ownership) });
+    }
+    return doc;
+  }
+  const uuid = await requestGmAction("createAnima", {
+    data,
+    conjurerUuid: conjurer.uuid
+  });
+  return uuid ? fromUuid(uuid) : null;
+}
 
 /**
  * Summon a spirit (shaman): Complex, Drain Magic+Conjuring, spawn threat actor.
@@ -30,8 +52,23 @@ export async function summonSpirit(conjurer, {
 } = {}) {
   if (!conjurer) return null;
   const magic = conjurer.system.special?.magic?.value ?? 0;
-  const force = clampSpiritForce(requestedForce, magic || requestedForce);
+  if (magic <= 0) {
+    ui.notifications.warn(game.i18n.localize("SRX.Magic.noMagic"));
+    return null;
+  }
+  const force = clampSpiritForce(requestedForce, magic);
   const intuition = conjurer.system.attributes?.int?.value ?? 1;
+
+  // One spirit at a time (p. 251): a new summon releases the previous one
+  const priorUuid = conjurer.getFlag("srx", "activeSpiritUuid");
+  if (priorUuid) {
+    const prior = await fromUuid(priorUuid).catch(() => null);
+    if (prior) {
+      if (game.user.isGM) await prior.delete().catch(() => null);
+      else await requestGmAction("deleteAnima", { actorUuid: priorUuid });
+      ui.notifications.info(game.i18n.format("SRX.Conjure.priorReleased", { name: prior.name }));
+    }
+  }
 
   const combatant = combatantForActor(conjurer);
   if (combatant) await spendCombatantAction(combatant, "complex");
@@ -58,25 +95,29 @@ export async function summonSpirit(conjurer, {
   });
   data.flags.srx.conjurerUuid = conjurer.uuid;
   data.flags.srx.serviceHours = spiritServiceHours(intuition);
-  data.flags.srx.expiresAt = Date.now() + spiritServiceHours(intuition) * 3600 * 1000;
+  // World-time expiry (seconds) — informational for the GM until automated
+  data.flags.srx.expiresAtWorldTime = (game.time?.worldTime ?? 0)
+    + spiritServiceHours(intuition) * 3600;
 
-  let anima = null;
-  if (game.user.isGM || conjurer.isOwner) {
-    // Only GM can create actors in many setups — request GM if needed
-    if (game.user.isGM) {
-      const [doc] = await Actor.createDocuments([data]);
-      anima = doc;
-      // Ownership to conjurer's owners
-      if (conjurer.ownership) {
-        await doc.update({ ownership: foundry.utils.duplicate(conjurer.ownership) });
-      }
-    } else {
-      ui.notifications.info(game.i18n.localize("SRX.Conjure.needGm"));
-    }
-  }
+  const anima = await createAnimaActor(conjurer, data);
 
   // Track on conjurer (one spirit at a time)
   await conjurer.setFlag("srx", "activeSpiritUuid", anima?.uuid ?? null);
+
+  // Only announce a summon that actually produced a spirit — the Drain was
+  // real either way, so a failed creation (no GM online) says so.
+  if (!anima) {
+    return foundry.documents.ChatMessage.create({
+      speaker: foundry.documents.ChatMessage.getSpeaker({ actor: conjurer }),
+      content: `<div class="srx chat-card"><p class="failure">${game.i18n.localize("SRX.Conjure.needGm")}</p>
+        <p>${game.i18n.format("SRX.Magic.drainResult", {
+          name: conjurer.name,
+          hits: drain.hits,
+          base: force,
+          taken: drain.afterHits
+        })}</p></div>`
+    });
+  }
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor: conjurer }),
@@ -95,7 +136,7 @@ export async function summonSpirit(conjurer, {
         base: force,
         taken: drain.afterHits
       })}</p>
-      ${anima ? `<p>${game.i18n.format("SRX.Conjure.actorCreated", { name: anima.name })}</p>` : ""}
+      <p>${game.i18n.format("SRX.Conjure.actorCreated", { name: anima.name })}</p>
     </div>`
   });
 }
@@ -110,9 +151,13 @@ export async function bindElemental(conjurer, {
 } = {}) {
   if (!conjurer) return null;
   const magic = conjurer.system.special?.magic?.value ?? 0;
+  if (magic <= 0) {
+    ui.notifications.warn(game.i18n.localize("SRX.Magic.noMagic"));
+    return null;
+  }
   const conjuring = conjurer.system.skills?.conjuring?.value ?? 0;
-  const force = clampElementalForce(requestedForce, magic || requestedForce * 2);
-  const bound = conjurer.getFlag("srx", "boundElementals") ?? [];
+  const force = clampElementalForce(requestedForce, magic);
+  const bound = foundry.utils.duplicate(conjurer.getFlag("srx", "boundElementals") ?? []);
   if (bound.length >= maxBoundElementals(conjuring)) {
     ui.notifications.warn(game.i18n.localize("SRX.Conjure.boundFull"));
     return null;
@@ -131,17 +176,17 @@ export async function bindElemental(conjurer, {
   data.flags.srx.dormant = false;
   data.flags.srx.bound = true;
 
-  let anima = null;
-  if (game.user.isGM) {
-    const [doc] = await Actor.createDocuments([data]);
-    anima = doc;
-    if (conjurer.ownership) {
-      await doc.update({ ownership: foundry.utils.duplicate(conjurer.ownership) });
-    }
-    bound.push({ uuid: doc.uuid, form, force });
+  const anima = await createAnimaActor(conjurer, data);
+  if (anima) {
+    bound.push({ uuid: anima.uuid, form, force });
     await conjurer.setFlag("srx", "boundElementals", bound);
-  } else {
-    ui.notifications.info(game.i18n.localize("SRX.Conjure.needGm"));
+  }
+
+  if (!anima) {
+    return foundry.documents.ChatMessage.create({
+      speaker: foundry.documents.ChatMessage.getSpeaker({ actor: conjurer }),
+      content: `<div class="srx chat-card"><p class="failure">${game.i18n.localize("SRX.Conjure.needGm")}</p></div>`
+    });
   }
 
   return foundry.documents.ChatMessage.create({

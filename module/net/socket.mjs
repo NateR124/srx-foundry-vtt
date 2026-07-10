@@ -107,6 +107,26 @@ export function registerSocket() {
     return result;
   });
 
+  // Built-in: anima (spirit/elemental) actor lifecycle for player conjurers.
+  // Actor creation/deletion is GM-only; both are scoped to anima-flagged data.
+  registerGmHandler("createAnima", async (payload) => {
+    const data = payload.data;
+    if (!data?.flags?.srx?.anima) throw new Error("Not an anima actor");
+    const [doc] = await Actor.createDocuments([data]);
+    const conjurer = payload.conjurerUuid ? await fromUuid(payload.conjurerUuid) : null;
+    if (conjurer?.ownership) {
+      await doc.update({ ownership: foundry.utils.duplicate(conjurer.ownership) });
+    }
+    return doc.uuid;
+  });
+
+  registerGmHandler("deleteAnima", async (payload) => {
+    const doc = await fromUuid(payload.actorUuid);
+    if (!doc?.getFlag?.("srx", "anima")) throw new Error("Not an anima actor");
+    await doc.delete();
+    return true;
+  });
+
   // Built-in: scene Regions are GM-only embedded documents; players placing
   // SRX templates (blast, cone, suppress) relay creation here. Every region
   // is stamped with an srx flag so cleanup can find system-owned regions.
