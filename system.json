@@ -2,7 +2,7 @@
   "id": "srx",
   "title": "SRX — Shadowrun Edition X (Unofficial)",
   "description": "An unofficial, free fan-made Foundry VTT system for SRX (Shadowrun Edition X). Shadowrun is a registered trademark of The Topps Company, Inc. This project is not published, endorsed by, or affiliated with The Topps Company, Catalyst Game Labs, or the SRX team. No rules text, artwork, or other proprietary material from any Shadowrun product or the SRX rulebook is included. Playing requires the free SRX rulebook, available separately from the SRX team.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "compatibility": {
     "minimum": "14",
     "verified": "14.364"
@@ -12,8 +12,12 @@
       "name": "Nate"
     }
   ],
-  "esmodules": ["module/srx.mjs"],
-  "styles": ["styles/srx.css"],
+  "esmodules": [
+    "module/srx.mjs"
+  ],
+  "styles": [
+    "styles/srx.css"
+  ],
   "languages": [
     {
       "lang": "en",
@@ -24,24 +28,64 @@
   "documentTypes": {
     "Actor": {
       "character": {
-        "htmlFields": ["details.biography"]
+        "htmlFields": [
+          "details.biography"
+        ]
       },
       "threat": {
-        "htmlFields": ["notes"]
+        "htmlFields": [
+          "notes"
+        ]
       },
       "host": {},
       "vehicle": {}
     },
     "Item": {
-      "weapon": { "htmlFields": ["description"] },
-      "armor": { "htmlFields": ["description"] },
-      "gear": { "htmlFields": ["description"] },
-      "talent": { "htmlFields": ["description"] },
-      "trait": { "htmlFields": ["description"] },
-      "contact": { "htmlFields": ["description"] },
-      "knowledge": { "htmlFields": ["description"] },
-      "spell": { "htmlFields": ["description"] },
-      "focus": { "htmlFields": ["description"] }
+      "weapon": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "armor": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "gear": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "talent": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "trait": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "contact": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "knowledge": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "spell": {
+        "htmlFields": [
+          "description"
+        ]
+      },
+      "focus": {
+        "htmlFields": [
+          "description"
+        ]
+      }
     }
   },
   "grid": {
@@ -53,8 +97,16 @@
   "socket": true,
   "flags": {
     "hotReload": {
-      "extensions": ["css", "hbs", "json"],
-      "paths": ["templates", "styles", "lang"]
+      "extensions": [
+        "css",
+        "hbs",
+        "json"
+      ],
+      "paths": [
+        "templates",
+        "styles",
+        "lang"
+      ]
     }
   },
   "url": "",
