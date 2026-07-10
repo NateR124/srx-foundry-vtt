@@ -105,6 +105,9 @@
     {{#if showMagicTab}}
     <a class="{{#if (srxEq activeTab 'magic')}}active{{/if}}" data-action="selectTab" data-tab="magic">{{localize "SRX.Tab.magic"}}</a>
     {{/if}}
+    {{#if showMatrixTab}}
+    <a class="{{#if (srxEq activeTab 'matrix')}}active{{/if}}" data-action="selectTab" data-tab="matrix">{{localize "SRX.Tab.matrix"}}</a>
+    {{/if}}
     <a class="{{#if (srxEq activeTab 'bio')}}active{{/if}}" data-action="selectTab" data-tab="bio">{{localize "SRX.Tab.bio"}}</a>
   </nav>
 
@@ -382,6 +385,67 @@
   {{/if}}
 
   {{!-- BIO TAB --}}
+  {{!-- MATRIX TAB (M5) — hackers/deckers cockpit --}}
+  <section class="tab-matrix {{#unless (srxEq activeTab 'matrix')}}hidden{{/unless}}">
+    <div class="matrix-panel">
+      <div class="matrix-status">
+        <div class="stat" data-tooltip="{{localize 'SRX.Derived.matrixDefenseScore'}}">
+          <label>{{localize "SRX.Host.mds"}}</label>
+          <b>{{matrix.mds}}</b>
+        </div>
+        <div class="stat" data-tooltip="{{localize 'SRX.Matrix.osHint'}}">
+          <label>{{localize "SRX.Matrix.os"}}</label>
+          <b>{{matrix.state.os}}</b>
+        </div>
+        <div class="stat">
+          <label>{{localize "SRX.Matrix.interface"}}</label>
+          <b>{{matrix.modeLabel}}{{#if matrix.state.hotSim}} · {{localize "SRX.Matrix.hotSim"}}{{/if}}</b>
+        </div>
+        {{#if matrix.state.silent}}
+        <span class="vision-tag active">{{localize "SRX.Matrix.runSilent"}}</span>
+        {{/if}}
+      </div>
+
+      <div class="matrix-actions">
+        {{#if matrix.online}}
+        <button type="button" data-action="matrixDisconnect" data-tooltip="{{localize 'SRX.Matrix.osHint'}}">
+          <i class="fa-solid fa-power-off"></i> {{localize "SRX.Matrix.disconnect"}}
+        </button>
+        <button type="button" data-action="matrixSwitch">
+          <i class="fa-solid fa-arrows-rotate"></i> {{localize "SRX.Matrix.switchInterface"}}
+        </button>
+        <button type="button" data-action="matrixSilent">
+          <i class="fa-solid fa-eye-slash"></i> {{localize "SRX.Matrix.runSilent"}}
+        </button>
+        <button type="button" data-action="matrixDefense" data-tooltip="{{localize 'SRX.Matrix.matrixDefenseApplied'}}">
+          <i class="fa-solid fa-shield-halved"></i> {{localize "SRX.Matrix.matrixDefense"}}
+        </button>
+        {{else}}
+        <button type="button" data-action="matrixConnect" data-tooltip="{{localize 'SRX.Matrix.hotSimHint'}}">
+          <i class="fa-solid fa-wifi"></i> {{localize "SRX.Matrix.connect"}}
+        </button>
+        {{/if}}
+      </div>
+
+      {{#if matrix.online}}
+      <div class="matrix-actions">
+        <button type="button" data-action="matrixHack">
+          <i class="fa-solid fa-terminal"></i> {{localize "SRX.Matrix.hackingTest"}}
+        </button>
+        <button type="button" data-action="matrixData">
+          <i class="fa-solid fa-magnifying-glass"></i> {{localize "SRX.Matrix.dataProcessing"}}
+        </button>
+      </div>
+      {{#if matrix.mods.hackingLiability}}
+      <p class="hint">{{localize "SRX.Matrix.notHotSimFact"}}</p>
+      {{/if}}
+      {{#if matrix.mods.testBonus}}
+      <p class="hint">{{localize "SRX.Matrix.vrFact"}}</p>
+      {{/if}}
+      {{/if}}
+    </div>
+  </section>
+
   <section class="tab-bio {{#unless (srxEq activeTab 'bio')}}hidden{{/unless}}">
     {{#unless isBuild}}
     <div class="bio-identity">

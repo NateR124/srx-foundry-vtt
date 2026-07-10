@@ -135,6 +135,9 @@ export async function onActionPhaseStart(combatant, phaseKey) {
   }
   const actor = combatant.actor;
   if (actor) await clearFullDefense(actor);
+  // Matrix Defense expires the same way (p. 145); direct unset avoids a
+  // combat↔matrix import cycle
+  if (actor) await actor.unsetFlag("srx", "matrixDefense").catch(() => null);
 
   // Whether they fired in their previous phase (set by onActionPhaseEnd)
   const prevFired = !!combatant.getFlag("srx", "firedThisPhasePending");

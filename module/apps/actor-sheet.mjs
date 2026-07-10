@@ -1,6 +1,7 @@
 import { SRX } from "../config.mjs";
 import { restoreNullNumbers } from "./form-utils.mjs";
 import { oneTimeGrants } from "../rules/metatype.mjs";
+import { getMatrixState, personaMds, personaInterfaceMods } from "../matrix/persona.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
@@ -37,7 +38,14 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
       magicAssense: SrxCharacterSheet.#onMagicAssense,
       endSustain: SrxCharacterSheet.#onEndSustain,
       toggleMode: SrxCharacterSheet.#onToggleMode,
-      toggleFocusActive: SrxCharacterSheet.#onToggleFocusActive
+      toggleFocusActive: SrxCharacterSheet.#onToggleFocusActive,
+      matrixConnect: SrxCharacterSheet.#onMatrixConnect,
+      matrixDisconnect: SrxCharacterSheet.#onMatrixDisconnect,
+      matrixSwitch: SrxCharacterSheet.#onMatrixSwitch,
+      matrixSilent: SrxCharacterSheet.#onMatrixSilent,
+      matrixDefense: SrxCharacterSheet.#onMatrixDefense,
+      matrixHack: SrxCharacterSheet.#onMatrixHack,
+      matrixData: SrxCharacterSheet.#onMatrixData
     }
   };
 
@@ -77,6 +85,31 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
     // reachable while setting a caster up)
     const showMagicTab = (sys.special.magic.value ?? 0) > 0 || isBuild;
     if (!showMagicTab && this.#activeTab === "magic") this.#activeTab = "main";
+
+    // Matrix tab: hackers/deckers only in Play (UX-FIELD-CLASSIFICATION §C:
+    // hide Firewall/matrix for non-hackers); Build always shows it
+    const showMatrixTab = isBuild
+      || (sys.skills.hacking?.value ?? 0) > 0
+      || (sys.skills.software?.value ?? 0) > 0
+      || (sys.matrix?.firewall ?? 0) > 0;
+    if (!showMatrixTab && this.#activeTab === "matrix") this.#activeTab = "main";
+    context.showMatrixTab = showMatrixTab;
+
+    {
+      const mState = getMatrixState(actor);
+      const mMods = personaInterfaceMods(actor);
+      context.matrix = {
+        state: mState,
+        mods: mMods,
+        online: mMods.online,
+        mds: personaMds(actor),
+        modeLabel: game.i18n.localize(
+          mState.mode === "vr" ? "SRX.Matrix.modeVr"
+            : mState.mode === "ar" ? "SRX.Matrix.modeAr"
+              : "SRX.Matrix.modeOffline"
+        )
+      };
+    }
 
     context.actor = actor;
     context.system = sys;
@@ -504,6 +537,44 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
     const { endSustained } = await import("../magic/sustain.mjs");
     await endSustained(this.document, id);
     return this.render();
+  }
+
+  static async #onMatrixConnect() {
+    const { promptConnectConfig } = await import("./matrix-dialog.mjs");
+    const { connectMatrix } = await import("../matrix/persona.mjs");
+    const config = await promptConnectConfig();
+    if (!config) return null;
+    return connectMatrix(this.document, config);
+  }
+
+  static async #onMatrixDisconnect() {
+    const { disconnectMatrix } = await import("../matrix/persona.mjs");
+    return disconnectMatrix(this.document);
+  }
+
+  static async #onMatrixSwitch() {
+    const { switchInterface } = await import("../matrix/persona.mjs");
+    return switchInterface(this.document);
+  }
+
+  static async #onMatrixSilent() {
+    const { toggleRunSilent } = await import("../matrix/persona.mjs");
+    return toggleRunSilent(this.document);
+  }
+
+  static async #onMatrixDefense() {
+    const { matrixDefenseAction } = await import("../matrix/persona.mjs");
+    return matrixDefenseAction(this.document);
+  }
+
+  static async #onMatrixHack() {
+    const { rollHackingTest } = await import("../matrix/actions.mjs");
+    return rollHackingTest(this.document);
+  }
+
+  static async #onMatrixData() {
+    const { rollDataProcessing } = await import("../matrix/actions.mjs");
+    return rollDataProcessing(this.document);
   }
 
   /** Flip between the Play cockpit and the Build (edit-everything) view. */

@@ -1,32 +1,77 @@
-<form autocomplete="off" class="srx host-sheet">
+<div class="srx host-sheet-body">
   <header class="sheet-header">
-    <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64" alt="">
-    <h1><input name="name" type="text" value="{{actor.name}}" placeholder="Host name"></h1>
+    <img class="portrait" src="{{actor.img}}" data-action="editImage" data-edit="img" alt="{{actor.name}}">
+    <div class="header-fields">
+      <input class="charname" type="text" name="name" value="{{actor.name}}">
+      <div class="host-statline">
+        <label class="host-rating">{{localize "SRX.Host.rating"}}
+          <input type="number" name="system.hostRating" value="{{system.hostRating}}" min="1" step="1">
+        </label>
+        <span class="stat" data-tooltip="{{localize 'SRX.Derived.matrixDefenseScore'}}">
+          <label>{{localize "SRX.Host.mds"}}</label><b>{{mds}}</b>
+        </span>
+        <label>{{localize "SRX.Host.hostType"}}
+          <select name="system.type">
+            <option value="wireless" {{#if (srxEq system.type "wireless")}}selected{{/if}}>{{localize "SRX.Host.wireless"}}</option>
+            <option value="wired" {{#if (srxEq system.type "wired")}}selected{{/if}}>{{localize "SRX.Host.wired"}}</option>
+          </select>
+        </label>
+        <button type="button" class="firewall-roll" data-action="rollFirewall"
+                data-tooltip="{{localize 'SRX.Host.firewallHint'}}">
+          <i class="fa-solid fa-shield-halved"></i>
+          {{localize "SRX.Host.firewallRoll"}} ({{firewallPool}}d)
+        </button>
+      </div>
+    </div>
   </header>
 
-  <div class="sheet-body">
-    <h2>Matrix Host</h2>
-    <div class="grid grid-2col">
-      <label>Host Rating
-        <input type="number" name="system.hostRating" value="{{system.hostRating}}" min="1" step="1">
+  <section class="host-body">
+    <h3>{{localize "SRX.Host.overrides"}}</h3>
+    <div class="item-grid host-overrides">
+      {{#each systems}}
+      <label>{{this.label}}
+        <input type="number" name="system.overrides.{{this.key}}" value="{{this.value}}" min="1" step="1" placeholder="{{../system.hostRating}}">
       </label>
-      <label>Type
-        <select name="system.type">
-          <option value="wireless" {{#if (srxEq system.type "wireless")}}selected{{/if}}>Wireless</option>
-          <option value="wired" {{#if (srxEq system.type "wired")}}selected{{/if}}>Wired</option>
-        </select>
-      </label>
+      {{/each}}
     </div>
 
-    <h3>Baseline attributes (from rating / overrides)</h3>
-    <div class="grid grid-4col">
-      <div><label>Attack</label><div>{{attributes.attack}}</div></div>
-      <div><label>Sleaze</label><div>{{attributes.sleaze}}</div></div>
-      <div><label>Data Proc</label><div>{{attributes.dataProcessing}}</div></div>
-      <div><label>Firewall</label><div>{{attributes.firewall}}</div></div>
+    <h3 class="section-header">{{localize "SRX.Host.icLadder"}}
+      <span>
+        {{#unless ladder.length}}
+        <a class="item-control" data-action="loadExampleLadder">{{localize "SRX.Host.loadExample"}}</a>
+        {{/unless}}
+        <a class="item-control" data-action="addLadderRow"><i class="fa-solid fa-plus"></i> {{localize "SRX.Host.addRow"}}</a>
+      </span>
+    </h3>
+    <div class="ic-ladder">
+      {{#each ladder}}
+      <div class="ladder-row">
+        <label>{{localize "SRX.Host.osThreshold"}}
+          <input type="number" name="system.icLadder.{{this.idx}}.os" value="{{this.os}}" min="0" step="1">
+        </label>
+        <label class="grow">{{localize "SRX.Host.icList"}}
+          <input type="text" name="system.icLadder.{{this.idx}}._icText" value="{{this.icText}}" placeholder="grey, bouncer">
+        </label>
+        <a class="item-control" data-action="removeLadderRow" data-index="{{this.idx}}"><i class="fa-solid fa-trash"></i></a>
+      </div>
+      {{/each}}
     </div>
 
-    <h3>IC ladder</h3>
-    <p class="notes">{{icCount}} OS threshold row(s). Full IC ladder play is a later milestone.</p>
-  </div>
-</form>
+    <h3 class="section-header">{{localize "SRX.Host.icDefs"}}
+      <a class="item-control" data-action="addIcDef"><i class="fa-solid fa-plus"></i> {{localize "SRX.Host.addRow"}}</a>
+    </h3>
+    <div class="ic-defs">
+      {{#each icDefs}}
+      <div class="ladder-row">
+        <label class="grow">IC
+          <input type="text" name="system.icDefinitions.{{this.idx}}.name" value="{{this.name}}">
+        </label>
+        <label class="grow">{{localize "SRX.Host.damageSpec"}}
+          <input type="text" name="system.icDefinitions.{{this.idx}}.damage" value="{{this.damage}}" placeholder="6+OS S">
+        </label>
+        <a class="item-control" data-action="removeIcDef" data-index="{{this.idx}}"><i class="fa-solid fa-trash"></i></a>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+</div>

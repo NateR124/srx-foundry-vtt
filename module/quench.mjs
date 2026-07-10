@@ -352,4 +352,100 @@ export function registerQuenchTests(quench) {
     },
     { displayName: "SRX: Import integration (schema-validated creation)" }
   );
+
+  quench.registerBatch("srx.matrix.integration",
+    (context) => {
+      const { describe, it, expect, after } = context;
+
+      after(cleanup);
+
+      describe("Persona state (flags.srx.matrix)", function () {
+        this.timeout(30000);
+        let decker;
+
+        it("connect sets interface state; VR applies Paralyzed", async () => {
+          decker = await makeCharacter("Quench Decker", {
+            system: {
+              attributes: { log: { base: 5 } },
+              skills: { hacking: { rating: 4 }, software: { rating: 4 } },
+              matrix: { firewall: 3 }
+            }
+          });
+          const { connectMatrix, getMatrixState } = await import("./matrix/persona.mjs");
+          await connectMatrix(decker, { mode: "vr", hotSim: true });
+          const state = getMatrixState(decker);
+          expect(state.mode).to.equal("vr");
+          expect(state.hotSim).to.equal(true);
+          const paralyzed = decker.effects.some((e) =>
+            e.statuses?.has?.("paralyzed") || e.statuses?.includes?.("paralyzed"));
+          expect(paralyzed).to.equal(true);
+        });
+
+        it("MDS derives from LOG + Software + firewall; Matrix Defense buffs +1", async () => {
+          const { personaMds, matrixDefenseAction } = await import("./matrix/persona.mjs");
+          // ceil((5 + 4 + 3) / 3) = 4
+          expect(decker.system.derived.matrixDefenseScore).to.equal(4);
+          expect(personaMds(decker)).to.equal(4);
+          await matrixDefenseAction(decker);
+          expect(personaMds(decker)).to.equal(5);
+        });
+
+        it("failed hacking bookkeeping: OS increments; disconnect resets it and clears VR", async () => {
+          const { addOverwatch, disconnectMatrix, getMatrixState } = await import("./matrix/persona.mjs");
+          await addOverwatch(decker, 2);
+          expect(getMatrixState(decker).os).to.equal(2);
+          await disconnectMatrix(decker);
+          const state = getMatrixState(decker);
+          expect(state.os).to.equal(0);
+          expect(state.mode).to.equal("offline");
+          const paralyzed = decker.effects.some((e) =>
+            e.statuses?.has?.("paralyzed") || e.statuses?.includes?.("paralyzed"));
+          expect(paralyzed).to.equal(false);
+          const disconnected = decker.effects.some((e) =>
+            e.statuses?.has?.("disconnected") || e.statuses?.includes?.("disconnected"));
+          expect(disconnected).to.equal(true);
+        });
+      });
+
+      describe("Host document + IC pipeline data", function () {
+        this.timeout(30000);
+        let host;
+
+        it("host validates with IC ladder and per-system overrides; MDS reads them", async () => {
+          host = await Actor.create({
+            name: "Quench Host",
+            type: "host",
+            system: {
+              hostRating: 4,
+              overrides: { dronesVehicles: 6 },
+              icLadder: [
+                { os: 1, ic: ["grey"] },
+                { os: 4, ic: ["grey", "bouncer"] }
+              ],
+              icDefinitions: [{ name: "grey", damage: "6+OS S" }]
+            }
+          });
+          CLEANUP.actors.push(host.id);
+          const { hostMdsForSystem, getActiveIC, resolveIcDamage } =
+            await import("./rules/matrix.mjs");
+          expect(hostMdsForSystem(host.system)).to.equal(4);
+          expect(hostMdsForSystem(host.system, "dronesVehicles")).to.equal(6);
+          expect(getActiveIC(5, host.system.icLadder)).to.deep.equal(["grey", "bouncer"]);
+          expect(resolveIcDamage(host.system.icDefinitions[0].damage, 2))
+            .to.deep.equal({ dv: 8, type: "S" });
+        });
+
+        it("host sheet renders the M5 tooling (ladder editor + firewall roll)", async () => {
+          const sheet = host.sheet;
+          await sheet.render(true);
+          await new Promise((r) => setTimeout(r, 200));
+          expect(sheet.element.querySelector("[data-action='rollFirewall']")).to.not.equal(null);
+          expect(sheet.element.querySelector("input[name='system.icLadder.0._icText']")).to.not.equal(null);
+          expect(sheet.element.querySelector("input[name='system.overrides.dronesVehicles']")).to.not.equal(null);
+          await sheet.close();
+        });
+      });
+    },
+    { displayName: "SRX: Matrix integration (persona state, host + IC data)" }
+  );
 }
