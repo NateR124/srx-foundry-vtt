@@ -1,34 +1,38 @@
 # SRX — Shadowrun Edition X (Unofficial Foundry VTT System)
 
-An unofficial, free, fan-made game system for [Foundry Virtual Tabletop](https://foundryvtt.com) (v14+) implementing **SRX — Shadowrun Edition X**, the free fan-made streamlined edition of Shadowrun.
+An unofficial, free, fan-made game system for [Foundry Virtual Tabletop](https://foundryvtt.com) (**v14+**) implementing **SRX — Shadowrun Edition X**, the free fan-made streamlined edition of Shadowrun.
 
-**Status: early development (M1 — dice engine + character sheet).** See `docs/PLAN.md` in the planning repo for the roadmap.
+**Status (2026-07):** integration branch `feature/m2-combat` — **M0–M2 table-ready**, **M3 import + M4 magic** usable, **M5/M6 seeds** only. See [RULES-STATUS.md](RULES-STATUS.md). Architect handoff: outer repo `docs/HANDOFF.md`.
 
 ## What works
 
-- SRX dice-pool tests: Crit Dice (first two dice), critical hits (+3 hits), glitches/critical glitches, Leverage/Liability target numbers, hits modifiers, buy-hits, thresholds and net hits — with a pre-roll dialog and a chat card.
-- Character sheet: attributes with augmented values (+3 cap), the 21 skills, derived stats (Initiative, Accelerator, Defense Score, Matrix Defense Score, Wounded Limit, movement, unarmed DV), dual condition monitors with System Shock, Edge tracker.
-- Items: weapons (multi-attack-mode, DV formulas like `BOD-3`), armor (worn/highest-only, hardened, heavy), gear, talents, traits, contacts, knowledge domains.
+- **Dice:** SRX pools, Crit Dice, criticals, glitch, Leverage/Liability, hit mods, buy-hits, thresholds — pre-roll dialog + chat card + Edge spends.
+- **Characters:** attributes (augmented +3 cap), 21 skills, derived stats, dual monitors + System Shock, Edge, vision modes, Magic tab.
+- **Combat:** multi-pass initiative, attack→resist→apply, cover, called shots, suppress MVP, AOE via Template Regions, statuses, healing, automation-level settings.
+- **Magic:** spell items, cast/drain/sustain, rest, Qi, spirit/elemental MVP, astral perception/projection, Negate/Aegis.
+- **Import:** GM catalog import from Character Builder `.txt.deploy` files (full parser set); pregen/threat JSON mappers for tooling/tests.
+- **Seeds:** Matrix `host` and `vehicle` actor types + pure rules (not full play loops yet).
 
-## Installation
+## Install (local review)
 
-To install in Foundry VTT:
-1. Copy the manifest URL: `https://raw.githubusercontent.com/OWNER/REPO/main/system.json` (Replace OWNER/REPO with the actual repo path when published)
-2. In Foundry, go to Game Systems -> Install System.
-3. Paste the manifest URL and click Install.
+1. Copy or symlink this folder to Foundry `Data/systems/srx` (folder name should match system `id`: `srx`).
+2. Launch Foundry v14+, create a world using **SRX - Shadowrun Edition X (Unofficial)**.
+3. Optional: `npm install && npm test` for pure rules tests (no Foundry required).
 
-## Content
+Public manifest URL is not published yet.
 
-This repository ships **no SRX or Shadowrun content** — no rules text, stats, art, or logos. Game data is created in-app or (in a later milestone) imported from your own copy of the freely distributed SRX Character Builder data files.
+## Content policy
+
+This repository ships **no SRX or Shadowrun rules text, stats, artwork, or logos**. Catalog data is imported from **your** copy of the free SRX Character Builder data files. Playing requires the free SRX rulebook from the SRX team.
 
 ## Development
 
 ```bash
 npm install
-npm test        # vitest — pure rules-layer tests
+npm test        # vitest — pure rules + import parsers
 ```
 
-The rules math lives in `module/rules/` as pure functions with no Foundry dependencies; everything Foundry-facing wraps it.
+Rules math lives in `module/rules/` as pure functions (no Foundry imports); Foundry-facing code wraps it under `module/combat`, `module/magic`, `module/apps`, etc.
 
 ## Legal
 
