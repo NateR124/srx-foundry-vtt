@@ -18,6 +18,7 @@ import { sustainPenaltyForActor } from "./sustain.mjs";
 import { spendCombatantAction, combatantForActor } from "../combat/actions.mjs";
 import { requestGmAction } from "../net/socket.mjs";
 import { SRX } from "../config.mjs";
+import { cardHtml, detail, esc, line, noticeCard } from "../chat/cards.mjs";
 
 /**
  * Create the anima actor, as GM directly or via the GM executor for players
@@ -66,7 +67,15 @@ export async function summonSpirit(conjurer, {
     if (prior) {
       if (game.user.isGM) await prior.delete().catch(() => null);
       else await requestGmAction("deleteAnima", { actorUuid: priorUuid });
-      ui.notifications.info(game.i18n.format("SRX.Conjure.priorReleased", { name: prior.name }));
+      // A spirit vanishing is table-visible — chat notice, not a private toast
+      await foundry.documents.ChatMessage.create({
+        speaker: foundry.documents.ChatMessage.getSpeaker({ actor: conjurer }),
+        content: noticeCard({
+          variant: "magic-card",
+          icon: "ghost",
+          text: game.i18n.format("SRX.Conjure.priorReleased", { name: esc(prior.name) })
+        })
+      });
     }
   }
 
@@ -81,7 +90,12 @@ export async function summonSpirit(conjurer, {
   if (stun >= stunMax) {
     return foundry.documents.ChatMessage.create({
       speaker: foundry.documents.ChatMessage.getSpeaker({ actor: conjurer }),
-      content: `<div class="srx chat-card"><p class="failure">${game.i18n.localize("SRX.Conjure.failedUnconscious")}</p></div>`
+      content: noticeCard({
+        variant: "magic-card",
+        icon: "ghost",
+        tone: "failure",
+        text: game.i18n.localize("SRX.Conjure.failedUnconscious")
+      })
     });
   }
 
@@ -109,35 +123,48 @@ export async function summonSpirit(conjurer, {
   if (!anima) {
     return foundry.documents.ChatMessage.create({
       speaker: foundry.documents.ChatMessage.getSpeaker({ actor: conjurer }),
-      content: `<div class="srx chat-card"><p class="failure">${game.i18n.localize("SRX.Conjure.needGm")}</p>
-        <p>${game.i18n.format("SRX.Magic.drainResult", {
-          name: conjurer.name,
-          hits: drain.hits,
-          base: force,
-          taken: drain.afterHits
-        })}</p></div>`
+      content: cardHtml({
+        variant: "magic-card",
+        icon: "ghost",
+        title: game.i18n.localize("SRX.Conjure.summonSpirit"),
+        subtitle: esc(conjurer.name),
+        body: [
+          line(game.i18n.localize("SRX.Conjure.needGm"), "failure"),
+          line(game.i18n.format("SRX.Magic.drainResult", {
+            name: esc(conjurer.name),
+            hits: drain.hits,
+            base: force,
+            taken: drain.afterHits
+          }))
+        ]
+      })
     });
   }
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor: conjurer }),
-    content: `<div class="srx chat-card">
-      <header class="card-header"><h3>${game.i18n.localize("SRX.Conjure.summonSpirit")}</h3></header>
-      <p>${game.i18n.format("SRX.Conjure.summoned", {
-        name: conjurer.name,
-        form,
-        force,
-        services: svc,
-        hours: spiritServiceHours(intuition)
-      })}</p>
-      <p>${game.i18n.format("SRX.Magic.drainResult", {
-        name: conjurer.name,
-        hits: drain.hits,
-        base: force,
-        taken: drain.afterHits
-      })}</p>
-      <p>${game.i18n.format("SRX.Conjure.actorCreated", { name: anima.name })}</p>
-    </div>`
+    content: cardHtml({
+      variant: "magic-card",
+      icon: "ghost",
+      title: game.i18n.localize("SRX.Conjure.summonSpirit"),
+      subtitle: esc(conjurer.name),
+      body: [
+        line(game.i18n.format("SRX.Conjure.summoned", {
+          name: esc(conjurer.name),
+          form: esc(form),
+          force,
+          services: svc,
+          hours: spiritServiceHours(intuition)
+        })),
+        line(game.i18n.format("SRX.Magic.drainResult", {
+          name: esc(conjurer.name),
+          hits: drain.hits,
+          base: force,
+          taken: drain.afterHits
+        })),
+        detail(game.i18n.format("SRX.Conjure.actorCreated", { name: esc(anima.name) }))
+      ]
+    })
   });
 }
 
@@ -185,26 +212,36 @@ export async function bindElemental(conjurer, {
   if (!anima) {
     return foundry.documents.ChatMessage.create({
       speaker: foundry.documents.ChatMessage.getSpeaker({ actor: conjurer }),
-      content: `<div class="srx chat-card"><p class="failure">${game.i18n.localize("SRX.Conjure.needGm")}</p></div>`
+      content: noticeCard({
+        variant: "magic-card",
+        icon: "link",
+        tone: "failure",
+        text: game.i18n.localize("SRX.Conjure.needGm")
+      })
     });
   }
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor: conjurer }),
-    content: `<div class="srx chat-card">
-      <header class="card-header"><h3>${game.i18n.localize("SRX.Conjure.bindElemental")}</h3></header>
-      <p>${game.i18n.format("SRX.Conjure.bound", {
-        name: conjurer.name,
-        form,
-        force
-      })}</p>
-      <p>${game.i18n.format("SRX.Magic.drainResult", {
-        name: conjurer.name,
-        hits: drain.hits,
-        base: force,
-        taken: drain.afterHits
-      })}</p>
-    </div>`
+    content: cardHtml({
+      variant: "magic-card",
+      icon: "link",
+      title: game.i18n.localize("SRX.Conjure.bindElemental"),
+      subtitle: esc(conjurer.name),
+      body: [
+        line(game.i18n.format("SRX.Conjure.bound", {
+          name: esc(conjurer.name),
+          form: esc(form),
+          force
+        })),
+        line(game.i18n.format("SRX.Magic.drainResult", {
+          name: esc(conjurer.name),
+          hits: drain.hits,
+          base: force,
+          taken: drain.afterHits
+        }))
+      ]
+    })
   });
 }
 

@@ -228,13 +228,20 @@ export function snapPointToGrid(pt) {
 
 /**
  * Interactive placement: left-click aim point, right-click / Escape cancel.
- * Snaps to grid center when possible.
+ * Snaps to grid center when possible. The aim preview shows the real outer
+ * blast footprint so players aim with the area, not a point
+ * (docs/UX-AOE-CANVAS.md).
  *
+ * @param {object} [opts]
+ * @param {string} [opts.hint]
+ * @param {boolean} [opts.snap]
+ * @param {number} [opts.radiusMeters] - outer AOE radius for the aim preview
  * @returns {Promise<{ x: number, y: number }|null>} pixel center
  */
 export async function pickPointOnCanvas({
   hint = "Choose blast center",
-  snap = true
+  snap = true,
+  radiusMeters = 0.5
 } = {}) {
   if (!canvas?.ready) {
     ui.notifications.warn(game.i18n.localize("SRX.Aoe.noCanvas"));
@@ -242,19 +249,21 @@ export async function pickPointOnCanvas({
   }
   ui.notifications.info(hint);
 
-  // Try core placeRegion first (nice preview); fall back to click capture
+  // Try core placeRegion first (footprint preview + measurements); fall back
+  // to click capture with a cursor-following circle
   if (typeof canvas.regions?.placeRegion === "function") {
     try {
       const region = await canvas.regions.placeRegion({
         name: "SRX AOE aim",
+        color: "#ff2200",
         shapes: [{
           type: "circle",
           x: 0,
           y: 0,
-          radius: metersToPixels(0.5)
+          radius: metersToPixels(Math.max(radiusMeters, 0.5))
         }],
         restriction: { enabled: false }
-      }, { create: false });
+      }, { create: false, allowRotation: false });
       if (region) {
         const shape = region.shapes?.[0] ?? region._source?.shapes?.[0];
         if (shape && shape.x != null) {
@@ -276,8 +285,28 @@ export async function pickPointOnCanvas({
     const prevCursor = canvas.app?.view?.style?.cursor;
     if (canvas.app?.view) canvas.app.view.style.cursor = "crosshair";
 
+    // Cursor-following footprint preview (PIXI 7 Graphics API)
+    const radiusPx = metersToPixels(Math.max(radiusMeters, 0.5));
+    const preview = new PIXI.Graphics();
+    preview.eventMode = "none";
+    canvas.stage.addChild(preview);
+    const drawAt = (pos) => {
+      preview.clear();
+      preview.lineStyle(2, 0xff2200, 0.8)
+        .beginFill(0xff2200, 0.12)
+        .drawCircle(pos.x, pos.y, radiusPx)
+        .endFill();
+    };
+    if (canvas.mousePosition) drawAt(snap ? snapPointToGrid(canvas.mousePosition) : canvas.mousePosition);
+    const onMove = (event) => {
+      const pos = event.data?.global ? canvas.stage.toLocal(event.data.global) : null;
+      if (pos) drawAt(snap ? snapPointToGrid(pos) : pos);
+    };
+
     const cleanup = () => {
       canvas.stage.off("pointerdown", onPointer);
+      canvas.stage.off("pointermove", onMove);
+      preview.destroy();
       window.removeEventListener("keydown", onKey);
       if (canvas.app?.view && prevCursor !== undefined) {
         canvas.app.view.style.cursor = prevCursor || "";
@@ -325,6 +354,7 @@ export async function pickPointOnCanvas({
     canvas.app?.view?.addEventListener("contextmenu", onContext, { once: true });
 
     canvas.stage.on("pointerdown", onPointer);
+    canvas.stage.on("pointermove", onMove);
     window.addEventListener("keydown", onKey);
   });
 }

@@ -6,6 +6,7 @@
 import { SRX } from "../config.mjs";
 import { evaluateRoll } from "../rules/dice.mjs";
 import { SRXRoll } from "./srx-roll.mjs";
+import { cardHtml, esc, line } from "../chat/cards.mjs";
 
 /** Message flag path for Edge spends on a single test. */
 const EDGE_FLAG = "edgeSpent";
@@ -60,10 +61,13 @@ export async function useCloseCall(actor, message = null) {
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-    content: `<div class="srx chat-card edge-card">
-      <header class="card-header"><h3>${game.i18n.localize("SRX.Edge.closeCall")}</h3></header>
-      <p>${game.i18n.format("SRX.Edge.closeCallApplied", { name: actor.name, bonus: 2 })}</p>
-    </div>`
+    content: cardHtml({
+      variant: "edge-card",
+      icon: "bolt",
+      title: game.i18n.localize("SRX.Edge.closeCall"),
+      subtitle: esc(actor.name),
+      body: line(game.i18n.format("SRX.Edge.closeCallApplied", { name: esc(actor.name), bonus: 2 }))
+    })
   });
 }
 
@@ -104,10 +108,13 @@ export async function useHustle(actor, message, dieIndex = 0) {
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-    content: `<div class="srx chat-card edge-card">
-      <header class="card-header"><h3>${game.i18n.localize("SRX.Edge.hustle")}</h3></header>
-      <p>${game.i18n.format("SRX.Edge.hustleApplied", { name: actor.name, die: idx + 1 })}</p>
-    </div>`
+    content: cardHtml({
+      variant: "edge-card",
+      icon: "bolt",
+      title: game.i18n.localize("SRX.Edge.hustle"),
+      subtitle: esc(actor.name),
+      body: line(game.i18n.format("SRX.Edge.hustleApplied", { name: esc(actor.name), die: idx + 1 }))
+    })
   });
 }
 
@@ -188,14 +195,17 @@ export async function useSecondChance(actor, message, which = "normal") {
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-    content: `<div class="srx chat-card edge-card">
-      <header class="card-header"><h3>${game.i18n.localize("SRX.Edge.secondChance")}</h3></header>
-      <p>${game.i18n.format("SRX.Edge.secondChanceApplied", {
-        name: actor.name,
+    content: cardHtml({
+      variant: "edge-card",
+      icon: "bolt",
+      title: game.i18n.localize("SRX.Edge.secondChance"),
+      subtitle: esc(actor.name),
+      body: line(game.i18n.format("SRX.Edge.secondChanceApplied", {
+        name: esc(actor.name),
         which: game.i18n.localize(which === "crit" ? "SRX.Edge.rerollCrit" : "SRX.Edge.rerollNormal"),
         hits: result.hits
-      })}</p>
-    </div>`
+      }))
+    })
   });
 }
 

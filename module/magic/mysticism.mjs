@@ -12,6 +12,7 @@ import { endSustained, getSustained } from "./sustain.mjs";
 import { spendCombatantAction, combatantForActor } from "../combat/actions.mjs";
 import { requestGmAction } from "../net/socket.mjs";
 import { SRX } from "../config.mjs";
+import { cardHtml, esc, line } from "../chat/cards.mjs";
 
 /**
  * Negate an ongoing magical effect. Targets a selected actor's sustained spell
@@ -125,18 +126,21 @@ export async function castNegate(caster, { targetForce = null } = {}) {
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor: caster }),
-    content: `<div class="srx chat-card">
-      <header class="card-header"><h3>${game.i18n.localize("SRX.Mysticism.negate")}</h3></header>
-      <p>${game.i18n.format("SRX.Mysticism.negateResult", {
-        name: caster.name,
+    content: cardHtml({
+      variant: "magic-card",
+      icon: "ban",
+      title: game.i18n.localize("SRX.Mysticism.negate"),
+      subtitle: esc(caster.name),
+      body: line(game.i18n.format("SRX.Mysticism.negateResult", {
+        name: esc(caster.name),
         hits,
         targetForce: tForce,
         remaining: result.remainingForce,
         ended: result.ended
           ? game.i18n.localize("SRX.Mysticism.ended")
           : game.i18n.localize("SRX.Mysticism.weakened")
-      })}</p>
-    </div>`
+      }), result.ended ? "success" : "")
+    })
   });
 }
 
@@ -194,12 +198,16 @@ export async function castAegis(caster) {
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor: caster }),
-    content: `<div class="srx chat-card">
-      <p>${game.i18n.format("SRX.Mysticism.aegisApplied", {
-        caster: caster.name,
-        target: target?.name ?? caster.name,
+    content: cardHtml({
+      variant: "magic-card",
+      icon: "shield-heart",
+      title: game.i18n.localize("SRX.Mysticism.aegis"),
+      subtitle: esc(caster.name),
+      body: line(game.i18n.format("SRX.Mysticism.aegisApplied", {
+        caster: esc(caster.name),
+        target: esc(target?.name ?? caster.name),
         bonus
-      })}</p>
-    </div>`
+      }))
+    })
   });
 }

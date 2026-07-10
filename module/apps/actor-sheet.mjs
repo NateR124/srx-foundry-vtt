@@ -445,14 +445,36 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
 
   static async #onMagicSummon() {
     const { summonSpirit } = await import("../magic/conjure.mjs");
-    const force = this.document.system.special?.magic?.value ?? 3;
-    return summonSpirit(this.document, { force: Math.min(force, 4), form: "Spirit" });
+    const { promptConjureConfig } = await import("./conjure-dialog.mjs");
+    const magic = this.document.system.special?.magic?.value ?? 0;
+    if (magic <= 0) {
+      ui.notifications.warn(game.i18n.localize("SRX.Magic.noMagic"));
+      return null;
+    }
+    const config = await promptConjureConfig({
+      title: game.i18n.localize("SRX.Conjure.summonSpirit"),
+      magic,
+      kind: "spirit"
+    });
+    if (!config) return null;
+    return summonSpirit(this.document, config);
   }
 
   static async #onMagicBind() {
     const { bindElemental } = await import("../magic/conjure.mjs");
-    const force = Math.floor((this.document.system.special?.magic?.value ?? 4) / 2) || 1;
-    return bindElemental(this.document, { force, form: "Elemental" });
+    const { promptConjureConfig } = await import("./conjure-dialog.mjs");
+    const magic = this.document.system.special?.magic?.value ?? 0;
+    if (magic <= 0) {
+      ui.notifications.warn(game.i18n.localize("SRX.Magic.noMagic"));
+      return null;
+    }
+    const config = await promptConjureConfig({
+      title: game.i18n.localize("SRX.Conjure.bindElemental"),
+      magic,
+      kind: "elemental"
+    });
+    if (!config) return null;
+    return bindElemental(this.document, config);
   }
 
   static async #onMagicNegate() {

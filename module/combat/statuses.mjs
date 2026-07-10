@@ -28,13 +28,16 @@ export const SRX_STATUSES = [
   {
     id: "dying",
     name: "SRX.Status.dying",
-    img: "icons/svg/skull.svg",
+    // NOT skull.svg — the retained core "dead" status uses it; dying must
+    // read differently from dead at token scale
+    img: "icons/svg/degen.svg",
     description: "SRX.Status.dyingHint"
   },
   {
     id: "fatigued",
     name: "SRX.Status.fatigued",
-    img: "icons/svg/falling.svg",
+    // NOT falling.svg — that's prone's icon
+    img: "icons/svg/downgrade.svg",
     description: "SRX.Status.fatiguedHint"
   },
   {
@@ -46,31 +49,34 @@ export const SRX_STATUSES = [
   {
     id: "grabbed",
     name: "SRX.Status.grabbed",
-    img: "icons/svg/target.svg",
+    // target.svg read as "being targeted", not held
+    img: "icons/svg/padlock.svg",
     description: "SRX.Status.grabbedHint"
   },
   {
     id: "hobbled",
     name: "SRX.Status.hobbled",
-    img: "icons/svg/wingfoot.svg",
+    // wingfoot means FAST — the opposite of hobbled
+    img: "icons/svg/leg.svg",
     description: "SRX.Status.hobbledHint"
   },
   {
     id: "immobilized",
     name: "SRX.Status.immobilized",
-    img: "icons/svg/paralysis.svg",
+    img: "icons/svg/anchor.svg",
     description: "SRX.Status.immobilizedHint"
   },
   {
     id: "impaired",
     name: "SRX.Status.impaired",
-    img: "icons/svg/aura.svg",
+    img: "icons/svg/down.svg",
     description: "SRX.Status.impairedHint"
   },
   {
     id: "paralyzed",
     name: "SRX.Status.paralyzed",
-    img: "icons/svg/lightning.svg",
+    // lightning read as shock damage; paralysis is the literal glyph
+    img: "icons/svg/paralysis.svg",
     description: "SRX.Status.paralyzedHint"
   },
   {

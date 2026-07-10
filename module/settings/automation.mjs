@@ -5,21 +5,23 @@
 export const AUTOMATION_LEVELS = ["off", "prompt", "auto"];
 
 export const AUTOMATION_SUBSYSTEMS = [
-  { key: "damageApply", label: "SRX.Settings.autoDamage", default: "prompt" },
-  { key: "statusTicks", label: "SRX.Settings.autoStatusTicks", default: "auto" },
-  { key: "scatter", label: "SRX.Settings.autoScatter", default: "auto" },
-  { key: "toxinSchedule", label: "SRX.Settings.autoToxin", default: "prompt" },
-  { key: "suppress", label: "SRX.Settings.autoSuppress", default: "prompt" }
+  { key: "damageApply", label: "SRX.Settings.autoDamage", hint: "SRX.Settings.autoDamageHint", default: "prompt" },
+  { key: "statusTicks", label: "SRX.Settings.autoStatusTicks", hint: "SRX.Settings.autoStatusTicksHint", default: "auto" },
+  { key: "scatter", label: "SRX.Settings.autoScatter", hint: "SRX.Settings.autoScatterHint", default: "auto" },
+  { key: "toxinSchedule", label: "SRX.Settings.autoToxin", hint: "SRX.Settings.autoToxinHint", default: "prompt" },
+  { key: "suppress", label: "SRX.Settings.autoSuppress", hint: "SRX.Settings.autoSuppressHint", default: "prompt" }
 ];
 
 /**
- * Register world settings for automation knobs.
+ * Register world settings for automation knobs. Each hint states concretely
+ * what Off / Prompt / Automatic do for that subsystem — only damageApply
+ * distinguishes Prompt from Automatic today; the hints say so honestly.
  */
 export function registerAutomationSettings() {
   for (const sub of AUTOMATION_SUBSYSTEMS) {
     game.settings.register("srx", `auto.${sub.key}`, {
       name: sub.label,
-      hint: "SRX.Settings.autoHint",
+      hint: sub.hint,
       scope: "world",
       config: true,
       type: String,

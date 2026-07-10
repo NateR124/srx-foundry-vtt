@@ -13,6 +13,7 @@ import {
   tickAcidBurn
 } from "../rules/combat.mjs";
 import { applyDamageToActor } from "./damage.mjs";
+import { actionButton, cardHtml, esc, line, noticeCard, wireGuardedClick } from "../chat/cards.mjs";
 
 /**
  * Actor currently has a given status id active.
@@ -100,17 +101,25 @@ export async function processCombatTurnEndForActor(actor, { traumaPatch = false 
       await actor.setFlag("srx", "acidBurn", next);
       messages.push(await foundry.documents.ChatMessage.create({
         speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-        content: `<div class="srx chat-card">
-          <header class="card-header"><h3>${game.i18n.localize("SRX.Combat.acidTick")}</h3></header>
-          <p>${game.i18n.format("SRX.Combat.acidTickResult", {
-            name: actor.name,
+        content: cardHtml({
+          variant: "combat-card",
+          icon: "droplet",
+          title: game.i18n.localize("SRX.Combat.acidTick"),
+          subtitle: esc(actor.name),
+          body: line(game.i18n.format("SRX.Combat.acidTickResult", {
+            name: esc(actor.name),
             damage,
             remaining: next.turnsRemaining
-          })}</p>
-          ${next.turnsRemaining > 0
-            ? `<button type="button" class="srx-combat-btn" data-combat-action="wipeAcid" data-actor-uuid="${actor.uuid}">${game.i18n.localize("SRX.Combat.wipeAcid")}</button>`
-            : ""}
-        </div>`
+          })),
+          actions: next.turnsRemaining > 0
+            ? [actionButton({
+              action: "wipeAcid",
+              label: game.i18n.localize("SRX.Combat.wipeAcid"),
+              data: { "actor-uuid": actor.uuid },
+              primary: true
+            })]
+            : []
+        })
       }));
     } else {
       await actor.setFlag("srx", "acidBurn", next);
@@ -122,13 +131,19 @@ export async function processCombatTurnEndForActor(actor, { traumaPatch = false 
     await applyDamageToActor(actor, { physical: 1, stun: 1 });
     messages.push(await foundry.documents.ChatMessage.create({
       speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-      content: `<div class="srx chat-card">
-        <header class="card-header"><h3>${game.i18n.localize("SRX.Combat.fireTick")}</h3></header>
-        <p>${game.i18n.format("SRX.Combat.fireTickResult", { name: actor.name })}</p>
-        <button type="button" class="srx-combat-btn" data-combat-action="smotherFire" data-actor-uuid="${actor.uuid}">
-          ${game.i18n.localize("SRX.Combat.smotherFire")}
-        </button>
-      </div>`
+      content: cardHtml({
+        variant: "combat-card",
+        icon: "fire",
+        title: game.i18n.localize("SRX.Combat.fireTick"),
+        subtitle: esc(actor.name),
+        body: line(game.i18n.format("SRX.Combat.fireTickResult", { name: esc(actor.name) })),
+        actions: [actionButton({
+          action: "smotherFire",
+          label: game.i18n.localize("SRX.Combat.smotherFire"),
+          data: { "actor-uuid": actor.uuid },
+          primary: true
+        })]
+      })
     }));
   }
 
@@ -183,34 +198,47 @@ export async function runDyingTest(actor, { traumaPatch = false } = {}) {
     // Stay unconscious if physical still ≥ max
     return foundry.documents.ChatMessage.create({
       speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-      content: `<div class="srx chat-card">
-        <header class="card-header"><h3>${game.i18n.localize("SRX.Combat.dyingTest")}</h3></header>
-        <p class="success">${game.i18n.format("SRX.Combat.dyingStabilized", {
-          name: actor.name,
+      content: cardHtml({
+        variant: "combat-card",
+        icon: "skull",
+        title: game.i18n.localize("SRX.Combat.dyingTest"),
+        subtitle: esc(actor.name),
+        body: line(game.i18n.format("SRX.Combat.dyingStabilized", {
+          name: esc(actor.name),
           hits: result.totalHits,
           threshold: result.threshold
-        })}</p>
-      </div>`
+        }), "success")
+      })
     });
   }
 
   await applyDamageToActor(actor, { physical: 1, stun: 1 });
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-    content: `<div class="srx chat-card">
-      <header class="card-header"><h3>${game.i18n.localize("SRX.Combat.dyingTest")}</h3></header>
-      <p class="failure">${game.i18n.format("SRX.Combat.dyingFailed", {
-        name: actor.name,
+    content: cardHtml({
+      variant: "combat-card",
+      icon: "skull",
+      title: game.i18n.localize("SRX.Combat.dyingTest"),
+      subtitle: esc(actor.name),
+      body: line(game.i18n.format("SRX.Combat.dyingFailed", {
+        name: esc(actor.name),
         hits: result.totalHits,
         threshold: result.threshold
-      })}</p>
-      <button type="button" class="srx-combat-btn" data-combat-action="stabilize" data-actor-uuid="${actor.uuid}">
-        ${game.i18n.localize("SRX.Healing.Stabilize")}
-      </button>
-      <button type="button" class="srx-combat-btn" data-combat-action="firstAid" data-actor-uuid="${actor.uuid}">
-        ${game.i18n.localize("SRX.Healing.FirstAid")}
-      </button>
-    </div>`
+      }), "failure"),
+      actions: [
+        actionButton({
+          action: "stabilize",
+          label: game.i18n.localize("SRX.Healing.Stabilize"),
+          data: { "actor-uuid": actor.uuid },
+          primary: true
+        }),
+        actionButton({
+          action: "firstAid",
+          label: game.i18n.localize("SRX.Healing.FirstAid"),
+          data: { "actor-uuid": actor.uuid }
+        })
+      ]
+    })
   });
 }
 
@@ -257,18 +285,23 @@ export async function processActionPhaseEndStatuses(combatant) {
     if (!actorHasStatus(actor, statusId)) continue;
     await foundry.documents.ChatMessage.create({
       speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-      content: `<div class="srx chat-card">
-        <header class="card-header"><h3>${game.i18n.localize(`SRX.Status.${statusId}`)}</h3></header>
-        <p>${game.i18n.format("SRX.Combat.shakeOffPrompt", {
-          name: actor.name,
+      content: cardHtml({
+        variant: "combat-card",
+        icon: "arrows-rotate",
+        title: game.i18n.localize(`SRX.Status.${statusId}`),
+        subtitle: esc(actor.name),
+        body: line(game.i18n.format("SRX.Combat.shakeOffPrompt", {
+          name: esc(actor.name),
           status: game.i18n.localize(`SRX.Status.${statusId}`),
           threshold: def.threshold
-        })}</p>
-        <button type="button" class="srx-combat-btn" data-combat-action="shakeOff"
-          data-actor-uuid="${actor.uuid}" data-status="${statusId}">
-          ${game.i18n.localize("SRX.Combat.shakeOff")}
-        </button>
-      </div>`,
+        })),
+        actions: [actionButton({
+          action: "shakeOff",
+          label: game.i18n.localize("SRX.Combat.shakeOff"),
+          data: { "actor-uuid": actor.uuid, status: statusId },
+          primary: true
+        })]
+      }),
       flags: {
         srx: {
           type: "shakeOff",
@@ -320,19 +353,23 @@ export async function runShakeOff(actor, statusId) {
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-    content: `<div class="srx chat-card">
-      <p>${success
-        ? game.i18n.format("SRX.Combat.shakeOffSuccess", {
-          name: actor.name,
+    content: cardHtml({
+      variant: "combat-card",
+      icon: "arrows-rotate",
+      title: game.i18n.localize("SRX.Combat.shakeOff"),
+      subtitle: esc(actor.name),
+      body: success
+        ? line(game.i18n.format("SRX.Combat.shakeOffSuccess", {
+          name: esc(actor.name),
           status: game.i18n.localize(`SRX.Status.${statusId}`)
-        })
-        : game.i18n.format("SRX.Combat.shakeOffFail", {
-          name: actor.name,
+        }), "success")
+        : line(game.i18n.format("SRX.Combat.shakeOffFail", {
+          name: esc(actor.name),
           status: game.i18n.localize(`SRX.Status.${statusId}`),
           hits,
           threshold: def.threshold
-        })}</p>
-    </div>`
+        }), "failure")
+    })
   });
 }
 
@@ -348,28 +385,39 @@ export function registerLifecycleChatHooks() {
       const action = btn.dataset.combatAction;
       if (!["wipeAcid", "smotherFire", "shakeOff"].includes(action)) return;
 
-      btn.addEventListener("click", async (ev) => {
-        ev.preventDefault();
-        try {
-          const uuid = btn.dataset.actorUuid;
-          const actor = uuid ? await fromUuid(uuid) : null;
-          if (!actor) return;
-          if (!actor.isOwner && !game.user.isGM) {
-            ui.notifications.warn(game.i18n.localize("SRX.Combat.notOwner"));
-            return;
-          }
-          if (action === "wipeAcid") {
-            await clearAcidBurn(actor);
-            ui.notifications.info(game.i18n.format("SRX.Combat.acidCleared", { name: actor.name }));
-          } else if (action === "smotherFire") {
-            await clearOnFire(actor);
-            ui.notifications.info(game.i18n.format("SRX.Combat.fireCleared", { name: actor.name }));
-          } else if (action === "shakeOff") {
-            await runShakeOff(actor, btn.dataset.status);
-          }
-        } catch (err) {
-          console.error("SRX | lifecycle chat", err);
-          ui.notifications.error(err.message);
+      wireGuardedClick(btn, async () => {
+        const uuid = btn.dataset.actorUuid;
+        const actor = uuid ? await fromUuid(uuid) : null;
+        if (!actor) return;
+        if (!actor.isOwner && !game.user.isGM) {
+          ui.notifications.warn(game.i18n.localize("SRX.Combat.notOwner"));
+          return;
+        }
+        // Cleared statuses are table-visible outcomes — chat, not a private toast
+        if (action === "wipeAcid") {
+          await clearAcidBurn(actor);
+          await foundry.documents.ChatMessage.create({
+            speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
+            content: noticeCard({
+              variant: "combat-card",
+              icon: "droplet-slash",
+              tone: "success",
+              text: game.i18n.format("SRX.Combat.acidCleared", { name: esc(actor.name) })
+            })
+          });
+        } else if (action === "smotherFire") {
+          await clearOnFire(actor);
+          await foundry.documents.ChatMessage.create({
+            speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
+            content: noticeCard({
+              variant: "combat-card",
+              icon: "fire-extinguisher",
+              tone: "success",
+              text: game.i18n.format("SRX.Combat.fireCleared", { name: esc(actor.name) })
+            })
+          });
+        } else if (action === "shakeOff") {
+          await runShakeOff(actor, btn.dataset.status);
         }
       });
     });

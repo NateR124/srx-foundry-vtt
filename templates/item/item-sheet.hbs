@@ -9,11 +9,11 @@
 
     <div class="form-group">
       <label>{{localize "SRX.Item.summary"}}</label>
-      <input type="text" name="system.summary" value="{{system.summary}}">
+      <input type="text" name="system.summary" value="{{system.summary}}" placeholder="{{localize 'SRX.Item.summaryHint'}}">
     </div>
 
     {{#if (srxEq type "weapon")}}
-      <div class="form-row">
+      <div class="item-grid">
         <label>{{localize "SRX.Item.skill"}}
           <select name="system.skill">
             {{#each weaponSkills}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
@@ -21,18 +21,20 @@
         </label>
         <label>{{localize "SRX.Item.category"}}<input type="text" name="system.category" value="{{system.category}}"></label>
         <label>{{localize "SRX.Item.range"}}<input type="text" name="system.range" value="{{system.range}}"></label>
-      </div>
-      <div class="form-row">
         <label>{{localize "SRX.Item.properties"}}<input type="text" name="system.properties" value="{{system.properties}}"></label>
-        <label>{{localize "SRX.Item.cost"}}<input type="number" name="system.cost" value="{{system.cost}}" step="1" min="0"></label>
       </div>
 
-      <h3>{{localize "SRX.Item.attackModes"}}
-        <a class="item-control" data-action="addAttackMode"><i class="fa-solid fa-plus"></i></a>
+      <h3 class="section-header">{{localize "SRX.Item.attackModes"}}
+        <a class="item-control add-mode" data-action="addAttackMode">
+          <i class="fa-solid fa-plus"></i> {{localize "SRX.Item.addMode"}}
+        </a>
       </h3>
       {{#each attackModes}}
       <fieldset class="attack-mode">
-        <div class="form-row">
+        <legend>{{#if this.name}}{{this.name}}{{else}}{{localize "SRX.Item.attackMode"}}{{/if}}</legend>
+        <a class="item-control mode-delete" data-action="removeAttackMode" data-index="{{this.idx}}"
+           data-tooltip="{{localize 'SRX.Sheet.deleteItem'}}"><i class="fa-solid fa-trash"></i></a>
+        <div class="item-grid">
           <label>{{localize "SRX.Item.modeName"}}<input type="text" name="system.attackModes.{{this.idx}}.name" value="{{this.name}}"></label>
           <label>{{localize "SRX.Item.action"}}
             <select name="system.attackModes.{{this.idx}}.action">
@@ -45,8 +47,6 @@
             </select>
           </label>
           <label>{{localize "SRX.Item.accuracy"}}<input type="number" name="system.attackModes.{{this.idx}}.acc" value="{{this.acc}}" step="1"></label>
-        </div>
-        <div class="form-row">
           <label>{{localize "SRX.Item.dv"}}<input type="text" name="system.attackModes.{{this.idx}}.dv" value="{{this.dv}}" placeholder="7 / BOD-3"></label>
           <label>{{localize "SRX.Item.dvType"}}
             <select name="system.attackModes.{{this.idx}}.dvType">
@@ -56,33 +56,30 @@
           <label>{{localize "SRX.Item.dvMin"}}<input type="number" name="system.attackModes.{{this.idx}}.dvMin" value="{{this.dvMin}}" step="1"></label>
           <label>{{localize "SRX.Item.dvMax"}}<input type="number" name="system.attackModes.{{this.idx}}.dvMax" value="{{this.dvMax}}" step="1"></label>
           <label>{{localize "SRX.Item.element"}}<input type="text" name="system.attackModes.{{this.idx}}.element" value="{{this.element}}"></label>
-          <a class="item-control" data-action="removeAttackMode" data-index="{{this.idx}}"><i class="fa-solid fa-trash"></i></a>
         </div>
       </fieldset>
       {{/each}}
     {{/if}}
 
     {{#if (srxEq type "armor")}}
-      <div class="form-row">
+      <div class="item-grid">
         <label>{{localize "SRX.Item.rating"}}<input type="number" name="system.rating" value="{{system.rating}}" step="1" min="0"></label>
         <label>{{localize "SRX.Item.hardened"}}<input type="number" name="system.hardened" value="{{system.hardened}}" step="1" min="0"></label>
-        <label>{{localize "SRX.Item.heavy"}}<input type="checkbox" name="system.heavy" {{#if system.heavy}}checked{{/if}}></label>
-        <label>{{localize "SRX.Item.shield"}}<input type="checkbox" name="system.shield" {{#if system.shield}}checked{{/if}}></label>
-        <label>{{localize "SRX.Item.cost"}}<input type="number" name="system.cost" value="{{system.cost}}" step="1" min="0"></label>
+        <label class="check"><input type="checkbox" name="system.heavy" {{#if system.heavy}}checked{{/if}}> {{localize "SRX.Item.heavy"}}</label>
+        <label class="check"><input type="checkbox" name="system.shield" {{#if system.shield}}checked{{/if}}> {{localize "SRX.Item.shield"}}</label>
       </div>
     {{/if}}
 
     {{#if (srxEq type "gear")}}
-      <div class="form-row">
+      <div class="item-grid">
         <label>{{localize "SRX.Item.subtype"}}<input type="text" name="system.subtype" value="{{system.subtype}}"></label>
         <label>{{localize "SRX.Item.rating"}}<input type="number" name="system.rating" value="{{system.rating}}" step="1" min="0"></label>
         <label>{{localize "SRX.Item.quantity"}}<input type="number" name="system.quantity" value="{{system.quantity}}" step="1" min="0"></label>
-        <label>{{localize "SRX.Item.cost"}}<input type="number" name="system.cost" value="{{system.cost}}" step="1" min="0"></label>
       </div>
     {{/if}}
 
     {{#if (srxEq type "talent")}}
-      <div class="form-row">
+      <div class="item-grid">
         <label>{{localize "SRX.Item.talentCategory"}}
           <select name="system.category">
             {{#each talentCategories}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
@@ -91,26 +88,29 @@
         <label>{{localize "SRX.Item.karma"}}<input type="number" name="system.karma" value="{{system.karma}}" step="1" min="0"></label>
         <label>{{localize "SRX.Item.level"}}<input type="number" name="system.level" value="{{system.level}}" step="1" min="0"></label>
         <label>{{localize "SRX.Item.option"}}<input type="text" name="system.option" value="{{system.option}}"></label>
-        <label>{{localize "SRX.Item.edgeAction"}}<input type="checkbox" name="system.isEdgeAction" {{#if system.isEdgeAction}}checked{{/if}}></label>
+        <label class="check"><input type="checkbox" name="system.isEdgeAction" {{#if system.isEdgeAction}}checked{{/if}}> {{localize "SRX.Item.edgeAction"}}</label>
       </div>
     {{/if}}
 
     {{#if (srxEq type "contact")}}
-      <div class="form-group"><label>{{localize "SRX.Item.savvy"}}</label><input type="text" name="system.savvy" value="{{system.savvy}}"></div>
-      <div class="form-group"><label>{{localize "SRX.Item.meetPlaces"}}</label><input type="text" name="system.meetPlaces" value="{{system.meetPlaces}}"></div>
+      <div class="item-grid">
+        <label>{{localize "SRX.Item.savvy"}}<input type="text" name="system.savvy" value="{{system.savvy}}"></label>
+        <label>{{localize "SRX.Item.meetPlaces"}}<input type="text" name="system.meetPlaces" value="{{system.meetPlaces}}"></label>
+      </div>
     {{/if}}
 
     {{#if (srxEq type "knowledge")}}
-      <div class="form-group">
-        <label>{{localize "SRX.Item.kind"}}</label>
-        <select name="system.kind">
-          {{#each knowledgeKinds}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
-        </select>
+      <div class="item-grid">
+        <label>{{localize "SRX.Item.kind"}}
+          <select name="system.kind">
+            {{#each knowledgeKinds}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+          </select>
+        </label>
       </div>
     {{/if}}
 
     {{#if (srxEq type "spell")}}
-      <div class="form-row">
+      <div class="item-grid">
         <label>{{localize "SRX.Magic.category"}}
           <select name="system.category">
             {{#each spellCategories}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
@@ -126,8 +126,6 @@
             {{#each spellDurations}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.key}}</option>{{/each}}
           </select>
         </label>
-      </div>
-      <div class="form-row">
         <label>{{localize "SRX.Magic.resistanceAttr"}}<input type="text" name="system.resistanceAttr" value="{{system.resistanceAttr}}" placeholder="wil"></label>
         <label>{{localize "SRX.Magic.dvFormula"}}<input type="text" name="system.dvFormula" value="{{system.dvFormula}}" placeholder="nf+1"></label>
         <label>{{localize "SRX.Item.dvType"}}
@@ -135,49 +133,49 @@
             {{#each damageTypes}}<option value="{{this.key}}" {{#if (srxEq this.key ../system.dvType)}}selected{{/if}}>{{this.key}}</option>{{/each}}
           </select>
         </label>
-        <label>{{localize "SRX.Magic.physicalDrain"}}<input type="checkbox" name="system.physicalDrain" {{#if system.physicalDrain}}checked{{/if}}></label>
-      </div>
-      <div class="form-row">
         <label>{{localize "SRX.Item.range"}}<input type="text" name="system.range" value="{{system.range}}"></label>
         <label>{{localize "SRX.Item.element"}}<input type="text" name="system.element" value="{{system.element}}"></label>
         <label>{{localize "SRX.Magic.keywords"}}<input type="text" name="system.keywords" value="{{system.keywords}}"></label>
+        <label class="check"><input type="checkbox" name="system.physicalDrain" {{#if system.physicalDrain}}checked{{/if}}> {{localize "SRX.Magic.physicalDrain"}}</label>
       </div>
     {{/if}}
 
     {{#if (srxEq type "focus")}}
-      <div class="form-row">
+      <div class="item-grid">
         <label>{{localize "SRX.Focus.type"}}
           <select name="system.focusType">
             {{#each focusTypes}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.key}}</option>{{/each}}
           </select>
         </label>
         <label>{{localize "SRX.Magic.force"}}<input type="number" name="system.force" value="{{system.force}}" step="1" min="1"></label>
-        <label>{{localize "SRX.Focus.greater"}}<input type="checkbox" name="system.greater" {{#if system.greater}}checked{{/if}}></label>
-        <label>{{localize "SRX.Focus.bonded"}}<input type="checkbox" name="system.bonded" {{#if system.bonded}}checked{{/if}}></label>
-        <label>{{localize "SRX.Focus.active"}}<input type="checkbox" name="system.active" {{#if system.active}}checked{{/if}}></label>
-      </div>
-      <div class="form-group">
-        <label>{{localize "SRX.Focus.imbued"}}</label>
-        <input type="text" name="system.imbued" value="{{system.imbued}}">
-      </div>
-      <div class="form-group">
-        <label>{{localize "SRX.Item.cost"}}</label>
-        <input type="number" name="system.cost" value="{{system.cost}}" step="1" min="0">
+        <label>{{localize "SRX.Focus.imbued"}}<input type="text" name="system.imbued" value="{{system.imbued}}"></label>
+        <label class="check"><input type="checkbox" name="system.greater" {{#if system.greater}}checked{{/if}}> {{localize "SRX.Focus.greater"}}</label>
+        <label class="check"><input type="checkbox" name="system.bonded" {{#if system.bonded}}checked{{/if}}> {{localize "SRX.Focus.bonded"}}</label>
+        <label class="check"><input type="checkbox" name="system.active" {{#if system.active}}checked{{/if}}> {{localize "SRX.Focus.active"}}</label>
       </div>
     {{/if}}
 
-    {{#if (srxHasLegality type)}}
-      <div class="form-group">
-        <label>{{localize "SRX.Item.legality"}}</label>
-        <select name="system.legality">
-          {{#each legalities}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
-        </select>
+    {{#if showFreezer}}
+    <details class="freezer">
+      <summary>{{localize "SRX.Item.costLegality"}}</summary>
+      <div class="item-grid">
+        {{#if hasCost}}
+        <label>{{localize "SRX.Item.cost"}}<input type="number" name="system.cost" value="{{system.cost}}" step="1" min="0"></label>
+        {{/if}}
+        {{#if (srxHasLegality type)}}
+        <label>{{localize "SRX.Item.legality"}}
+          <select name="system.legality">
+            {{#each legalities}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+          </select>
+        </label>
+        {{/if}}
       </div>
+    </details>
     {{/if}}
 
     <div class="form-group description">
       <label>{{localize "SRX.Item.description"}}</label>
-      <textarea name="system.description" rows="8">{{system.description}}</textarea>
+      <prose-mirror name="system.description" value="{{system.description}}" toggled>{{{descriptionHTML}}}</prose-mirror>
     </div>
   </div>
 </div>

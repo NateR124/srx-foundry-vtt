@@ -63,6 +63,16 @@ export class SrxItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
     if (item.type === "weapon") {
       context.attackModes = item.system.attackModes.map((m, idx) => ({ ...m, idx }));
     }
+
+    // Freezer fold (cost & legality) — only for types that carry either
+    context.hasCost = ["weapon", "armor", "gear", "focus"].includes(item.type);
+    context.showFreezer = context.hasCost || ["weapon", "armor", "gear"].includes(item.type);
+
+    // Read-first description: the toggled <prose-mirror> shows enriched HTML
+    // until the user clicks to edit (docs/UX-ITEM-SHEETS.md).
+    context.descriptionHTML = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+      item.system.description, { secrets: item.isOwner, relativeTo: item }
+    );
     return context;
   }
 

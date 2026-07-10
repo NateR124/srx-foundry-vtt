@@ -5,6 +5,11 @@ import { composeAttackModifiers, coverDefenseBonus, effectiveDefenseScore } from
  * Combat attack dialog: pool + Leverage/Liability + situational combat mods
  * (visibility, recoil, cover, off-hand, take aim, Full Defense on target).
  *
+ * Layout per docs/UX-ACTION-DIALOGS.md: live summary strip (pool · TN ·
+ * hit mod · effective DS) driven by the same rules functions as the roll;
+ * attack/defense fieldsets up front (defense pre-filled from combat state);
+ * Cold overrides behind the Advanced fold.
+ *
  * @param {object} config
  * @param {string} config.title
  * @param {Array<{label: string, value: number}>} config.parts
@@ -29,6 +34,12 @@ export async function promptAttackConfig({
   const content = `
     <div class="srx roll-config attack-config">
       <p class="pool-parts">${foundry.utils.escapeHTML(partsText || "—")}</p>
+      <p class="dialog-summary">
+        <span><b data-preview="pool">${basePool}</b> ${game.i18n.localize("SRX.Roll.dice")}</span>
+        <span class="detail" data-preview="tn">${game.i18n.format("SRX.Dialog.tn", { tn: 5 })}</span>
+        <span class="detail" data-preview="hits"></span>
+        <span class="detail" data-preview="ds"></span>
+      </p>
 
       <fieldset>
         <legend>${game.i18n.localize("SRX.Combat.modsAttack")}</legend>
@@ -59,6 +70,7 @@ export async function promptAttackConfig({
 
       <fieldset>
         <legend>${game.i18n.localize("SRX.Combat.modsDefense")}</legend>
+        <p class="hint">${game.i18n.localize("SRX.Combat.defensePrefilled")}</p>
         <div class="form-group">
           <label>${game.i18n.localize("SRX.Combat.cover")}</label>
           <select name="cover">
@@ -68,43 +80,47 @@ export async function promptAttackConfig({
             <option value="total" ${defaults.cover === "total" ? "selected" : ""}>${game.i18n.localize("SRX.Combat.coverTotal")}</option>
           </select>
         </div>
-        <div class="form-group"><label><input type="checkbox" name="prone"> ${game.i18n.localize("SRX.Combat.prone")}</label></div>
+        <div class="form-group"><label><input type="checkbox" name="prone" ${checked("prone")}> ${game.i18n.localize("SRX.Combat.prone")}</label></div>
         <div class="form-group"><label><input type="checkbox" name="fullDefense" ${checked("fullDefense")}> ${game.i18n.localize("SRX.Combat.fullDefense")}</label></div>
-        <div class="form-group"><label><input type="checkbox" name="immobilized"> ${game.i18n.localize("SRX.Combat.immobilized")}</label></div>
+        <div class="form-group"><label><input type="checkbox" name="immobilized" ${checked("immobilized")}> ${game.i18n.localize("SRX.Combat.immobilized")}</label></div>
       </fieldset>
 
-      <div class="form-group">
-        <label>${game.i18n.localize("SRX.Roll.diceMod")}</label>
-        <input type="number" name="diceMod" value="0" step="1">
-      </div>
-      <div class="form-group">
-        <label>${game.i18n.localize("SRX.Roll.tn")}</label>
-        <select name="tnMode">
-          <option value="auto">${game.i18n.localize("SRX.Combat.tnAuto")}</option>
-          <option value="normal">${game.i18n.localize("SRX.Roll.tnNormal")}</option>
-          <option value="leverage">${game.i18n.localize("SRX.Roll.leverage")}</option>
-          <option value="liability">${game.i18n.localize("SRX.Roll.liability")}</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>${game.i18n.localize("SRX.Roll.hitMods")}</label>
-        <input type="number" name="hitMods" value="0" step="1">
-      </div>
-      <div class="form-group">
-        <label>${game.i18n.localize("SRX.Roll.threshold")} (${game.i18n.localize("SRX.Roll.targetDefense")})</label>
-        <input type="number" name="threshold" value="${baseDefenseScore ?? ""}" step="1" min="1" placeholder="—">
-        <p class="hint">${game.i18n.localize("SRX.Combat.thresholdHint")}</p>
-      </div>
-      <div class="form-group">
-        <label>${game.i18n.localize("SRX.Roll.buyHits")}</label>
-        <input type="checkbox" name="buyHits">
-      </div>
+      <details class="advanced">
+        <summary>${game.i18n.localize("SRX.Dialog.advanced")}</summary>
+        <div class="form-group">
+          <label>${game.i18n.localize("SRX.Roll.diceMod")}</label>
+          <input type="number" name="diceMod" value="0" step="1">
+        </div>
+        <div class="form-group">
+          <label>${game.i18n.localize("SRX.Roll.tn")}</label>
+          <select name="tnMode">
+            <option value="auto">${game.i18n.localize("SRX.Combat.tnAuto")}</option>
+            <option value="normal">${game.i18n.localize("SRX.Roll.tnNormal")}</option>
+            <option value="leverage">${game.i18n.localize("SRX.Roll.leverage")}</option>
+            <option value="liability">${game.i18n.localize("SRX.Roll.liability")}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>${game.i18n.localize("SRX.Roll.hitMods")}</label>
+          <input type="number" name="hitMods" value="0" step="1">
+        </div>
+        <div class="form-group">
+          <label>${game.i18n.localize("SRX.Roll.threshold")} (${game.i18n.localize("SRX.Roll.targetDefense")})</label>
+          <input type="number" name="threshold" value="${baseDefenseScore ?? ""}" step="1" min="1" placeholder="—">
+          <p class="hint">${game.i18n.localize("SRX.Combat.thresholdHint")}</p>
+        </div>
+        <div class="form-group">
+          <label>${game.i18n.localize("SRX.Roll.buyHits")}</label>
+          <input type="checkbox" name="buyHits">
+        </div>
+      </details>
     </div>`;
 
   const result = await foundry.applications.api.DialogV2.wait({
     window: { title },
     position: { width: 420 },
     content,
+    render: (_event, dialog) => wireAttackPreview(dialog, { basePool, baseDefenseScore }),
     buttons: [
       {
         action: "roll",
@@ -222,4 +238,82 @@ export async function promptAttackConfig({
       dvMod: composed.dvMod || 0
     }
   };
+}
+
+/**
+ * Live summary strip: pool, TN (composed Leverage/Liability or override),
+ * hit-mod total, and the effective Defense Score after cover / prone / Full
+ * Defense / immobilized — same math the submit path runs, so the preview and
+ * the roll cannot disagree. Also gates dependent inputs (visibility
+ * mitigation, Buy Hits under Liability).
+ * @param {HTMLElement|object} dialog - DialogV2 instance (or root element)
+ * @param {{basePool: number, baseDefenseScore: number|null}} ctx
+ */
+function wireAttackPreview(dialog, { basePool, baseDefenseScore }) {
+  const root = dialog instanceof HTMLElement ? dialog : dialog?.element;
+  const form = root?.querySelector("form");
+  if (!form) return;
+
+  const update = () => {
+    const el = form.elements;
+    const composed = composeAttackModifiers({
+      offHand: el.offHand.checked,
+      inMeleeRanged: el.inMeleeRanged.checked,
+      unseen: el.unseen.checked,
+      recoil: el.recoil.checked,
+      takeAim: el.takeAim.checked,
+      calledShot: el.calledShot?.value ?? "none",
+      visibility: el.visibility.value,
+      visibilityMitigated: el.visibilityMitigated.checked,
+      extraHitMods: Number(el.hitMods.value) || 0,
+      extraDice: Number(el.diceMod.value) || 0
+    });
+
+    let leverage = composed.leverage;
+    let liability = composed.liability;
+    const tnMode = el.tnMode.value;
+    if (tnMode === "normal") { leverage = false; liability = false; }
+    else if (tnMode === "leverage") { leverage = true; liability = false; }
+    else if (tnMode === "liability") { leverage = false; liability = true; }
+    const tn = resolveTn({ leverage, liability });
+    const pool = Math.max(0, basePool + composed.diceMod);
+
+    const baseDs = el.threshold.value === ""
+      ? (baseDefenseScore ?? null)
+      : Math.max(1, Number(el.threshold.value));
+    const ds = baseDs == null ? null : effectiveDefenseScore(baseDs, {
+      cover: el.cover.value,
+      prone: el.prone.checked,
+      fullDefense: el.fullDefense.checked,
+      immobilized: el.immobilized.checked,
+      closeCallBonus: 0
+    });
+
+    const poolEl = root.querySelector("[data-preview='pool']");
+    if (poolEl) poolEl.textContent = pool;
+    const tnEl = root.querySelector("[data-preview='tn']");
+    if (tnEl) tnEl.textContent = game.i18n.format("SRX.Dialog.tn", { tn });
+    const hitsEl = root.querySelector("[data-preview='hits']");
+    if (hitsEl) {
+      hitsEl.textContent = composed.hitMods
+        ? game.i18n.format("SRX.Dialog.hitModPreview", {
+          n: `${composed.hitMods > 0 ? "+" : ""}${composed.hitMods}`
+        })
+        : "";
+    }
+    const dsEl = root.querySelector("[data-preview='ds']");
+    if (dsEl) {
+      dsEl.textContent = ds == null ? "" : game.i18n.format("SRX.Dialog.vs", { n: ds });
+    }
+
+    // Dependent inputs
+    el.visibilityMitigated.disabled = el.visibility.value === "none";
+    if (el.visibilityMitigated.disabled) el.visibilityMitigated.checked = false;
+    el.buyHits.disabled = liability;
+    if (liability) el.buyHits.checked = false;
+  };
+
+  form.addEventListener("input", update);
+  form.addEventListener("change", update);
+  update();
 }

@@ -1,5 +1,6 @@
 /**
- * Combat tracker UI hooks: pass label + action-economy controls.
+ * Combat tracker UI hooks: pass banner + action-economy chips.
+ * Design reference: docs/UX-COMBAT-TRACKER.md.
  */
 
 import {
@@ -23,20 +24,19 @@ export function registerTrackerHooks() {
     const combat = game.combat;
     const pass = combat.getFlag("srx", "pass") ?? 1;
 
-    // Pass banner at top of tracker
+    // Pass banner at top of tracker (rules hint lives in the tooltip)
     const list = root.querySelector(".combat-tracker, ol, .directory-list") ?? root;
-    if (!root.querySelector(".srx-pass-banner")) {
-      const banner = document.createElement("div");
+    let banner = root.querySelector(".srx-pass-banner");
+    if (!banner) {
+      banner = document.createElement("div");
       banner.className = "srx-pass-banner";
-      banner.innerHTML = `<strong>${game.i18n.format("SRX.Combat.passBanner", { pass })}</strong>
-        <span class="detail">${game.i18n.localize("SRX.Combat.passHint")}</span>`;
+      banner.dataset.tooltip = game.i18n.localize("SRX.Combat.passHint");
       list.parentElement?.insertBefore(banner, list) ?? root.prepend(banner);
-    } else {
-      const b = root.querySelector(".srx-pass-banner strong");
-      if (b) b.textContent = game.i18n.format("SRX.Combat.passBanner", { pass });
     }
+    banner.innerHTML = passBannerHtml(pass);
 
-    // Per-combatant action economy chips (only where the user can act)
+    // Per-combatant action economy chips (only where the user can act;
+    // read-only enemy economy would leak GM information)
     root.querySelectorAll(".combatant").forEach((li) => {
       const id = li.dataset.combatantId;
       if (!id || li.querySelector(".srx-economy")) return;
@@ -73,26 +73,53 @@ export function registerTrackerHooks() {
   // permission to write other combatants' flags.
 }
 
+function passBannerHtml(pass) {
+  const pips = Array.from({ length: 4 }, (_, i) =>
+    `<span class="pass-pip${i < pass ? " filled" : ""}"></span>`).join("");
+  return `<span class="pass-pips">${pips}</span>
+    <strong>${game.i18n.format("SRX.Combat.passBanner", { pass })}</strong>`;
+}
+
+/**
+ * Chips answer "what can I still do this phase?" — availability and the Minor
+ * pips derive from canTakeAction so the display cannot drift from what a
+ * click actually allows.
+ */
 function economyHtml(economy, combatantId) {
   const e = economy ?? freshActionEconomy();
-  const chip = (action, label, spent) => {
+
+  const chip = ({ action, label, hintKey, icon = "", extra = "" }) => {
     const available = action === "fullDefense"
       ? canTakeAction(e, "major")
       : canTakeAction(e, action);
-    const cls = spent || !available ? "spent" : "";
-    return `<button type="button" class="srx-econ-btn ${cls}" data-srx-action="${action}" data-combatant-id="${combatantId}" ${!available ? "disabled" : ""}>${label}</button>`;
+    return `<button type="button" class="srx-econ-btn${available ? "" : " spent"}"
+      data-srx-action="${action}" data-combatant-id="${combatantId}"
+      data-tooltip="${game.i18n.localize(hintKey)}" ${available ? "" : "disabled"}>${
+      icon ? `<i class="fa-solid ${icon}"></i> ` : ""}${label}${extra}</button>`;
   };
 
-  const majorSpent = e.major || e.complex;
-  const complexSpent = e.complex;
-  const minorLabel = `Min ${e.minor}/2`;
+  // Minor pips show what remains under the CURRENT cap (2, or 1 with a Major)
+  const minorCap = e.complex ? 0 : (e.major ? 1 : 2);
+  const minorLeft = Math.max(0, minorCap - (e.minor || 0));
+  const minorPips = "●".repeat(minorLeft) + "○".repeat(Math.max(0, 2 - minorLeft));
 
   return `
     <span class="srx-econ-label">${game.i18n.localize("SRX.Combat.actions")}</span>
-    ${chip("major", "Maj", majorSpent)}
-    ${chip("minor", minorLabel, e.complex || (e.major ? e.minor >= 1 : e.minor >= 2))}
-    ${chip("complex", "Cpx", complexSpent)}
-    ${chip("free", "Free", e.free)}
-    ${chip("fullDefense", "Full Def", majorSpent)}
+    ${chip({ action: "major", label: game.i18n.localize("SRX.Combat.actionMajor"), hintKey: "SRX.Combat.actionMajorHint" })}
+    ${chip({
+      action: "minor",
+      label: game.i18n.localize("SRX.Combat.actionMinor"),
+      extra: ` <span class="pips">${minorPips}</span>`,
+      hintKey: "SRX.Combat.actionMinorHint"
+    })}
+    ${chip({ action: "complex", label: game.i18n.localize("SRX.Combat.actionComplex"), hintKey: "SRX.Combat.actionComplexHint" })}
+    ${chip({ action: "free", label: game.i18n.localize("SRX.Combat.actionFree"), hintKey: "SRX.Combat.actionFreeHint" })}
+    <span class="srx-econ-sep"></span>
+    ${chip({
+      action: "fullDefense",
+      label: game.i18n.localize("SRX.Combat.fullDefenseShort"),
+      icon: "fa-shield",
+      hintKey: "SRX.Combat.fullDefenseHint"
+    })}
   `;
 }

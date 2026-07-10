@@ -13,6 +13,7 @@ import { foundryRotationToCompass, tokenCenterMeters, metersToPixels } from "../
 import { resolveDefenderCover } from "../canvas/cover.mjs";
 import { combatantForActor, markFiredFirearm, spendCombatantAction } from "./actions.mjs";
 import { requestGmAction } from "../net/socket.mjs";
+import { actionButton, cardHtml, esc, line } from "../chat/cards.mjs";
 const FLAG_ZONE = "suppressZone";
 const FLAG_WORLD = "suppressZones";
 
@@ -100,15 +101,18 @@ export async function startSuppressiveFire(firer, {
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor: firer }),
-    content: `<div class="srx chat-card">
-      <header class="card-header"><h3>${game.i18n.localize("SRX.Suppress.title")}</h3></header>
-      <p>${game.i18n.format("SRX.Suppress.started", {
-        name: firer.name,
+    content: cardHtml({
+      variant: "combat-card",
+      icon: "gun",
+      title: game.i18n.localize("SRX.Suppress.title"),
+      subtitle: esc(firer.name),
+      body: line(game.i18n.format("SRX.Suppress.started", {
+        name: esc(firer.name),
         dv: state.dv,
         width: zone.widthM,
         depth: zone.depthM
-      })}</p>
-    </div>`
+      }))
+    })
   });
 }
 
@@ -196,13 +200,19 @@ export async function checkSuppressPhaseStart(actor) {
 
     await foundry.documents.ChatMessage.create({
       speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-      content: `<div class="srx chat-card">
-        <p>${game.i18n.format("SRX.Suppress.hit", { name: actor.name, dv: z.dv })}</p>
-        <button type="button" class="srx-combat-btn" data-combat-action="aoeResist"
-          data-actor-uuid="${actor.uuid}" data-dv="${z.dv}" data-dv-type="P" data-element="">
-          ${game.i18n.localize("SRX.Combat.resist")}
-        </button>
-      </div>`
+      content: cardHtml({
+        variant: "combat-card",
+        icon: "gun",
+        title: game.i18n.localize("SRX.Suppress.title"),
+        subtitle: esc(actor.name),
+        body: line(game.i18n.format("SRX.Suppress.hit", { name: esc(actor.name), dv: z.dv })),
+        actions: [actionButton({
+          action: "aoeResist",
+          label: game.i18n.localize("SRX.Combat.resist"),
+          data: { "actor-uuid": actor.uuid, dv: z.dv, "dv-type": "P", element: "" },
+          primary: true
+        })]
+      })
     });
   }
 }

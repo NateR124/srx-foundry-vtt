@@ -16,6 +16,7 @@ import {
 } from "../combat/actions.mjs";
 import { castSpell as castSpellPipeline } from "../magic/cast.mjs";
 import { sustainPenaltyForActor } from "../magic/sustain.mjs";
+import { cardHtml, esc } from "../chat/cards.mjs";
 
 export class SrxActor extends foundry.documents.Actor {
   /** @override — flat keys for roll formulas (initiative: (@qui)d6 + @accel). */
@@ -61,7 +62,13 @@ export class SrxActor extends foundry.documents.Actor {
     if (config.pool <= 0) {
       return foundry.documents.ChatMessage.create({
         speaker,
-        content: `<div class="srx chat-card roll-card"><header class="card-header"><h3>${foundry.utils.escapeHTML(title)}</h3></header><div class="threshold-row failure">${game.i18n.localize("SRX.Roll.autoFail")}</div></div>`
+        content: cardHtml({
+          variant: "roll-card",
+          icon: "dice",
+          title: esc(title),
+          subtitle: esc(this.name),
+          body: `<div class="threshold-row failure">${game.i18n.localize("SRX.Roll.autoFail")}</div>`
+        })
       });
     }
 
@@ -293,7 +300,13 @@ export class SrxActor extends foundry.documents.Actor {
     if (config.pool <= 0) {
       return foundry.documents.ChatMessage.create({
         speaker,
-        content: `<div class="srx chat-card roll-card"><header class="card-header"><h3>${foundry.utils.escapeHTML(title)}</h3></header><div class="threshold-row failure">${game.i18n.localize("SRX.Roll.autoFail")}</div></div>`
+        content: cardHtml({
+          variant: "roll-card",
+          icon: "dice",
+          title: esc(title),
+          subtitle: esc(this.name),
+          body: `<div class="threshold-row failure">${game.i18n.localize("SRX.Roll.autoFail")}</div>`
+        })
       });
     }
 

@@ -1,6 +1,8 @@
-<div class="srx chat-card attack-outcome">
+<div class="srx chat-card combat-card attack-outcome">
   <header class="card-header">
+    <i class="fa-solid fa-crosshairs card-icon"></i>
     <h3>{{localize "SRX.Combat.hit"}}</h3>
+    <span class="actor-name">{{attackerName}}</span>
   </header>
   <p>
     <b>{{attackerName}}</b> → <b>{{defenderName}}</b>
@@ -16,8 +18,8 @@
     {{#if element}}<span class="element">{{element}}</span>{{/if}}
     {{#if aoe}}<span class="fire-mode">AOE</span>{{/if}}
   </div>
-  <div class="combat-actions">
-    <button type="button" class="srx-combat-btn" data-combat-action="resist">
+  <div class="card-actions">
+    <button type="button" class="srx-combat-btn primary" data-combat-action="resist">
       {{localize "SRX.Combat.resist"}}
     </button>
     <button type="button" class="srx-combat-btn" data-combat-action="applyUnresisted">

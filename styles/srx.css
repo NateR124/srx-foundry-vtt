@@ -316,7 +316,86 @@
 .srx .form-row { display: flex; flex-wrap: wrap; gap: 8px 14px; margin: 6px 0; align-items: flex-end; }
 .srx .form-row label { display: flex; flex-direction: column; font-size: 0.8em; }
 .srx .form-row input[type="number"] { width: 64px; }
-.srx fieldset.attack-mode { border: 1px solid var(--color-border, #888); border-radius: 4px; margin: 4px 0; padding: 4px 8px; }
+
+/* Item stat-block grid (docs/UX-ITEM-SHEETS.md): aligned label/input pairs;
+   checkbox flags flow inline as .check chips */
+.srx .item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 6px 14px;
+  margin: 6px 0;
+  align-items: end;
+}
+.srx .item-grid label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  opacity: 0.85;
+}
+.srx .item-grid label input, .srx .item-grid label select { font-size: 1rem; }
+.srx .item-grid label.check {
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  align-self: center;
+  padding-top: 12px;
+}
+.srx .section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+.srx .section-header .add-mode {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+.srx .section-header .add-mode:hover { opacity: 1; }
+
+.srx fieldset.attack-mode {
+  position: relative;
+  border: 1px solid var(--color-border, #888);
+  border-radius: 4px;
+  margin: 4px 0;
+  padding: 4px 8px;
+}
+.srx fieldset.attack-mode legend {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+  padding: 0 4px;
+}
+.srx fieldset.attack-mode .mode-delete {
+  position: absolute;
+  top: -10px;
+  right: 6px;
+  font-size: 0.8em;
+  opacity: 0.6;
+}
+.srx fieldset.attack-mode .mode-delete:hover { opacity: 1; }
+
+/* Freezer fold (cost & legality) — same idiom as dialog Advanced folds */
+.srx .item-fields details.freezer { margin: 8px 0 2px; }
+.srx .item-fields details.freezer summary {
+  cursor: pointer;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.75;
+}
+.srx .item-fields details.freezer summary:hover { opacity: 1; }
+
+/* Read-first description editor */
+.srx .item-fields .description prose-mirror {
+  display: block;
+  min-height: 80px;
+  font-size: 0.95em;
+}
 
 /* ---------- Roll dialog ---------- */
 .srx.roll-config .pool-parts, .srx .roll-config .pool-parts {
@@ -325,17 +404,37 @@
   margin: 2px 0 8px;
 }
 
-/* ---------- Chat cards ---------- */
-.srx.chat-card { font-size: 0.9em; }
+/* ---------- Chat cards ----------
+   Anatomy built by module/chat/cards.mjs (see docs/UX-CHAT-CARDS.md):
+   header (icon · title · subtitle) → body → banner → action row.
+   Variant classes set the category accent; icon + title always accompany
+   the color so it is never the only signal. */
+.srx.chat-card { font-size: 0.9em; --srx-accent: var(--color-border, #888); }
+.srx.chat-card.combat-card, .srx.chat-card.aoe-card { --srx-accent: #a33b3b; }
+.srx.chat-card.magic-card { --srx-accent: #7b4fa0; }
+.srx.chat-card.edge-card { --srx-accent: #b8860b; }
+.srx.chat-card.heal-card { --srx-accent: #3e7d5a; }
+.srx.chat-card.time-card { --srx-accent: #8a6d1a; }
+.srx.chat-card.matrix-card { --srx-accent: #2e7d8a; }
+
 .srx.chat-card .card-header {
   display: flex;
   align-items: center;
   gap: 8px;
-  border-bottom: 1px solid var(--color-border, #888);
+  border-bottom: 1px solid var(--srx-accent);
   margin-bottom: 4px;
 }
 .srx.chat-card .card-header h3 { flex: 1; margin: 0; border: none; }
+.srx.chat-card .card-icon { color: var(--srx-accent); font-size: 0.9em; flex: 0 0 auto; }
 .srx.chat-card .actor-name { font-size: 0.8em; opacity: 0.7; }
+.srx.chat-card p { margin: 3px 0; }
+.srx.chat-card p.success { color: #3e7d5a; font-weight: 600; }
+.srx.chat-card p.failure { color: #a33b3b; font-weight: 600; }
+
+/* Compact one-line notices (state toggles, no-targets, automation-off) */
+.srx.chat-card.notice-card .notice { margin: 2px 0; }
+.srx.chat-card.notice-card .notice.warning { color: #8a6d1a; font-weight: 600; }
+.srx.chat-card.notice-card .card-icon { opacity: 0.85; }
 .srx.chat-card .pool-parts { font-size: 0.8em; opacity: 0.8; margin: 2px 0; }
 .srx.chat-card .pool-parts .part { margin-right: 8px; }
 
@@ -375,6 +474,10 @@
 .srx.chat-card .banner.crit { background: #3e7d5a33; border: 1px solid #3e7d5a; }
 .srx.chat-card .banner.glitch { background: #8a6d1a33; border: 1px solid #8a6d1a; }
 .srx.chat-card .banner.critical-glitch { background: #a33b3b44; border: 1px solid #a33b3b; }
+.srx.chat-card .banner.success { background: #3e7d5a33; border: 1px solid #3e7d5a; }
+.srx.chat-card .banner.failure { background: #a33b3b33; border: 1px solid #a33b3b; }
+.srx.chat-card .banner.warning { background: #8a6d1a33; border: 1px solid #8a6d1a; }
+.srx.chat-card .banner.info { background: #3e6a9a22; border: 1px solid #3e6a9a; }
 
 .srx.chat-card .threshold-row { font-weight: 600; margin-top: 2px; }
 .srx.chat-card .threshold-row.success { color: #3e7d5a; }
@@ -460,22 +563,49 @@
   font-size: 0.85em;
   margin: 6px 0;
 }
-.srx.catalog-import-body .import-log pre {
-  max-height: 200px;
+.srx.catalog-import-body .import-summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  margin: 6px 0;
+  border: 1px solid #3e7d5a;
+  border-radius: 4px;
+  background: #3e7d5a33;
+  font-weight: 600;
+}
+.srx.catalog-import-body .import-log .log-lines {
+  list-style: none;
+  max-height: 220px;
   overflow: auto;
-  font-size: 0.8em;
+  font-size: 0.82em;
   background: #00000022;
-  padding: 6px;
+  margin: 4px 0;
+  padding: 6px 8px;
   border-radius: 4px;
 }
+.srx.catalog-import-body .log-lines li {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 1px 0;
+}
+.srx.catalog-import-body .log-lines li i { flex: 0 0 14px; text-align: center; }
+.srx.catalog-import-body .log-lines .log-info i { opacity: 0.55; }
+.srx.catalog-import-body .log-lines .log-success i { color: #3e7d5a; }
+.srx.catalog-import-body .log-lines .log-warn { color: #8a6d1a; }
+.srx.catalog-import-body .log-lines .log-error { color: #a33b3b; font-weight: 600; }
 
 /* ---------- Combat chat ---------- */
-.srx.chat-card.attack-outcome .combat-actions,
+/* .combat-actions kept as an alias for older templates; builder emits .card-actions */
+.srx.chat-card .card-actions,
 .srx.chat-card .combat-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
   margin-top: 6px;
+  padding-top: 4px;
+  border-top: 1px dashed var(--color-border, #888);
 }
 .srx.chat-card .srx-combat-btn {
   font-size: 0.8em;
@@ -483,15 +613,105 @@
   height: auto;
   width: auto;
 }
+.srx.chat-card .srx-combat-btn.primary {
+  border-color: var(--srx-accent);
+  font-weight: 600;
+}
+.srx.chat-card .srx-combat-btn:disabled { opacity: 0.45; }
 
-/* ---------- Threat sheet ---------- */
+/* ---------- Threat sheet ----------
+   Play = GM cockpit (readouts + Intent clicks, no inputs); Build = stat entry.
+   Monitor boxes / state banners / mode toggle reuse the shared .srx styles.
+   Design reference: docs/UX-THREAT-SHEET.md. */
 .srx.threat-sheet-body .hint {
   font-size: 0.8em;
   opacity: 0.75;
 }
+.srx.threat-sheet-body .name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.srx.threat-sheet-body .charname.display {
+  margin: 0;
+  border: none;
+  font-size: 1.4em;
+  flex: 1;
+}
+.srx.threat-sheet-body .threat-tr {
+  display: inline-block;
+  font-size: 0.8em;
+  padding: 1px 8px;
+  border: 1px solid var(--color-border, #888);
+  border-radius: 10px;
+  opacity: 0.85;
+}
+.srx.threat-sheet-body .threat-statline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 8px 0;
+}
+.srx.threat-sheet-body .threat-statline .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 56px;
+  padding: 4px 10px;
+  border: 1px solid var(--color-border, #888);
+  border-radius: 4px;
+}
+.srx.threat-sheet-body .threat-statline .stat label {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.75;
+}
+.srx.threat-sheet-body .threat-statline .stat span {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+.srx.threat-sheet-body .threat-statline .stat.big span { font-size: 1.5em; }
+.srx.threat-sheet-body .threat-statline .stat .hardened {
+  font-size: 0.7em;
+  opacity: 0.8;
+}
+/* The box that tips the threat into Wounded */
+.srx .box.wounded-mark {
+  border-left-width: 3px;
+  border-left-style: double;
+  border-left-color: #8a6d1a;
+}
+.srx.threat-sheet-body .threat-attacks {
+  list-style: none;
+  margin: 4px 0;
+  padding: 0;
+}
+.srx.threat-sheet-body .attack-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  padding: 3px 6px;
+  border-bottom: 1px solid #8884;
+}
+.srx.threat-sheet-body .attack-row .attack-stat {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.srx.threat-sheet-body .threat-notes {
+  font-size: 0.9em;
+  margin: 4px 0;
+}
 
-/* ---------- Combat tracker ---------- */
+/* ---------- Combat tracker ----------
+   Pass banner with pass pips; economy chips answer "what's left this phase"
+   (docs/UX-COMBAT-TRACKER.md). !important needed to fit core tracker button
+   chrome. */
 .srx-pass-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   padding: 4px 8px;
   margin: 4px;
   border: 1px solid var(--color-border, #888);
@@ -499,25 +719,47 @@
   font-size: 0.85em;
   background: #3e6a9a22;
 }
-.srx-pass-banner .detail { display: block; opacity: 0.75; font-size: 0.9em; }
+.srx-pass-banner .pass-pips { display: inline-flex; gap: 3px; }
+.srx-pass-banner .pass-pip {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border, #888);
+}
+.srx-pass-banner .pass-pip.filled { background: #3e6a9a; border-color: #3e6a9a; }
+
 .srx-economy {
   display: flex;
   flex-wrap: wrap;
-  gap: 2px;
+  gap: 3px;
   align-items: center;
   padding: 2px 4px 4px 28px;
   font-size: 0.7em;
 }
 .srx-econ-label { opacity: 0.65; margin-right: 2px; text-transform: uppercase; }
 .srx-econ-btn {
-  font-size: 0.7em !important;
-  line-height: 1.1 !important;
-  padding: 1px 4px !important;
+  font-size: 0.72em !important;
+  line-height: 1.2 !important;
+  padding: 1px 6px !important;
   height: auto !important;
   width: auto !important;
   min-width: 0 !important;
+  white-space: nowrap;
 }
-.srx-econ-btn.spent, .srx-econ-btn:disabled { opacity: 0.4; }
+.srx-econ-btn i { font-size: 0.9em; }
+/* inline-block keeps the parent's line-through from striking the pips */
+.srx-econ-btn .pips { display: inline-block; letter-spacing: 1px; }
+.srx-econ-btn.spent, .srx-econ-btn:disabled {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+.srx-econ-sep {
+  width: 1px;
+  align-self: stretch;
+  margin: 1px 3px;
+  background: var(--color-border, #888);
+  opacity: 0.5;
+}
 
 /* AOE cards */
 .srx.aoe-card ul.aoe-targets {
@@ -535,12 +777,49 @@
 }
 .srx.aoe-card ul.aoe-targets li:last-child { border-bottom: none; }
 
-/* ---------- Attack dialog ---------- */
-.srx.attack-config fieldset {
+/* ---------- Action dialogs (roll / attack / cast / conjure) ----------
+   Shared skin for all .srx.roll-config dialogs (docs/UX-ACTION-DIALOGS.md):
+   summary strip → common inputs → fieldsets → Advanced fold. */
+.srx.roll-config fieldset {
   border: 1px solid var(--color-border, #888);
   border-radius: 4px;
   margin: 6px 0;
   padding: 4px 8px;
 }
-.srx.attack-config legend { font-size: 0.8em; text-transform: uppercase; opacity: 0.8; }
-.srx.attack-config .hint { font-size: 0.75em; opacity: 0.7; margin: 0; }
+.srx.roll-config legend { font-size: 0.8em; text-transform: uppercase; opacity: 0.8; }
+.srx.roll-config .hint { font-size: 0.75em; opacity: 0.7; margin: 0 0 4px; }
+
+/* Live summary strip — the "what am I about to roll" line */
+.srx.roll-config .dialog-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: baseline;
+  padding: 4px 8px;
+  margin: 4px 0 8px;
+  border: 1px solid var(--color-border, #888);
+  border-radius: 4px;
+  background: #3e6a9a22;
+}
+.srx.roll-config .dialog-summary b { font-size: 1.2em; }
+.srx.roll-config .dialog-summary .detail { font-size: 0.85em; opacity: 0.85; }
+
+/* Auto-applied facts (sustain penalty, drain type) — information, not inputs */
+.srx.roll-config .fact {
+  font-size: 0.85em;
+  font-style: italic;
+  opacity: 0.85;
+  margin: 2px 0 6px;
+}
+
+/* Cold overrides fold */
+.srx.roll-config details.advanced { margin: 6px 0 2px; }
+.srx.roll-config details.advanced summary {
+  cursor: pointer;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.75;
+  margin-bottom: 4px;
+}
+.srx.roll-config details.advanced summary:hover { opacity: 1; }

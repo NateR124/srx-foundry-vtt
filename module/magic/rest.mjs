@@ -4,6 +4,7 @@
 
 import { applyRest } from "../rules/rest.mjs";
 import { endAllSustained } from "./sustain.mjs";
+import { cardHtml, esc, line } from "../chat/cards.mjs";
 
 /**
  * Prompt and apply rest for selected/assigned character.
@@ -70,14 +71,19 @@ export async function restActor(actor = null) {
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor: a }),
-    content: `<div class="srx chat-card">
-      <header class="card-header"><h3>${game.i18n.localize("SRX.Rest.title")}</h3></header>
-      <p>${game.i18n.format("SRX.Rest.done", {
-        name: a.name,
-        kind: game.i18n.localize(kind === "full" ? "SRX.Rest.full" : "SRX.Rest.short")
-      })}</p>
-      <ul>${result.notes.map((n) => `<li>${foundry.utils.escapeHTML(n)}</li>`).join("")}</ul>
-    </div>`
+    content: cardHtml({
+      variant: "heal-card",
+      icon: "bed",
+      title: game.i18n.localize("SRX.Rest.title"),
+      subtitle: esc(a.name),
+      body: [
+        line(game.i18n.format("SRX.Rest.done", {
+          name: esc(a.name),
+          kind: game.i18n.localize(kind === "full" ? "SRX.Rest.full" : "SRX.Rest.short")
+        })),
+        `<ul>${result.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>`
+      ]
+    })
   });
 }
 

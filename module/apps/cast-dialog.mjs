@@ -2,6 +2,11 @@ import { clampForce, maxForce, sustainDicePenalty } from "../rules/magic.mjs";
 
 /**
  * Spell cast dialog: Force picker + optional mods.
+ *
+ * Layout per docs/UX-ACTION-DIALOGS.md: Force is the decision (autofocus,
+ * Magic/max hint); the auto-applied sustain penalty is shown as a fact, not an
+ * input; Cold overrides (hit mods, TN) live behind the Advanced fold.
+ *
  * @param {object} opts
  * @param {string} opts.title
  * @param {number} opts.magic
@@ -26,23 +31,28 @@ export async function promptCastConfig({
         <label>${game.i18n.localize("SRX.Magic.force")}</label>
         <input type="number" name="force" value="${initial}" min="1" max="${Math.max(1, max)}" step="1" autofocus>
       </div>
+      ${sustainCount > 0
+        ? `<p class="fact">${game.i18n.format("SRX.Magic.sustainHint", { count: sustainCount, pen: sustainPen })}</p>`
+        : ""}
       <div class="form-group">
         <label>${game.i18n.localize("SRX.Roll.diceMod")}</label>
         <input type="number" name="diceMod" value="0" step="1">
-        <p class="hint">${game.i18n.format("SRX.Magic.sustainHint", { count: sustainCount, pen: sustainPen })}</p>
       </div>
-      <div class="form-group">
-        <label>${game.i18n.localize("SRX.Roll.hitMods")}</label>
-        <input type="number" name="hitMods" value="0" step="1">
-      </div>
-      <div class="form-group">
-        <label>${game.i18n.localize("SRX.Roll.tn")}</label>
-        <select name="tnMode">
-          <option value="normal">${game.i18n.localize("SRX.Roll.tnNormal")}</option>
-          <option value="leverage">${game.i18n.localize("SRX.Roll.leverage")}</option>
-          <option value="liability">${game.i18n.localize("SRX.Roll.liability")}</option>
-        </select>
-      </div>
+      <details class="advanced">
+        <summary>${game.i18n.localize("SRX.Dialog.advanced")}</summary>
+        <div class="form-group">
+          <label>${game.i18n.localize("SRX.Roll.hitMods")}</label>
+          <input type="number" name="hitMods" value="0" step="1">
+        </div>
+        <div class="form-group">
+          <label>${game.i18n.localize("SRX.Roll.tn")}</label>
+          <select name="tnMode">
+            <option value="normal">${game.i18n.localize("SRX.Roll.tnNormal")}</option>
+            <option value="leverage">${game.i18n.localize("SRX.Roll.leverage")}</option>
+            <option value="liability">${game.i18n.localize("SRX.Roll.liability")}</option>
+          </select>
+        </div>
+      </details>
     </div>`;
 
   const result = await foundry.applications.api.DialogV2.wait({

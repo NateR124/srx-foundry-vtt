@@ -3,6 +3,7 @@
  */
 
 import { canTakeAction, freshActionEconomy, spendAction } from "../rules/combat.mjs";
+import { cardHtml, esc, line } from "../chat/cards.mjs";
 
 /**
  * Find the combatant for an actor in the active combat.
@@ -70,10 +71,13 @@ export async function useFullDefense(actor) {
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-    content: `<div class="srx chat-card">
-      <header class="card-header"><h3>${game.i18n.localize("SRX.Combat.fullDefense")}</h3></header>
-      <p>${game.i18n.format("SRX.Combat.fullDefenseApplied", { name: actor.name })}</p>
-    </div>`
+    content: cardHtml({
+      variant: "combat-card",
+      icon: "shield",
+      title: game.i18n.localize("SRX.Combat.fullDefense"),
+      subtitle: esc(actor.name),
+      body: line(game.i18n.format("SRX.Combat.fullDefenseApplied", { name: esc(actor.name) }))
+    })
   });
 }
 

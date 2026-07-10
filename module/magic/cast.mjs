@@ -18,6 +18,7 @@ import { spendCombatantAction, combatantForActor } from "../combat/actions.mjs";
 import { requestGmAction } from "../net/socket.mjs";
 import { isAutomationOff } from "../settings/automation.mjs";
 import { SRX } from "../config.mjs";
+import { cardHtml, esc, line } from "../chat/cards.mjs";
 
 /**
  * Cast a spell item from an actor.
@@ -101,19 +102,22 @@ export async function castSpell(caster, spell) {
   // Master card
   const lines = outcomes.filter(Boolean).map((o) => {
     if (!o.affected) {
-      return `<li>${foundry.utils.escapeHTML(o.targetName)}: ${game.i18n.localize("SRX.Magic.noEffect")}</li>`;
+      return `<li>${esc(o.targetName)}: ${game.i18n.localize("SRX.Magic.noEffect")}</li>`;
     }
-    return `<li><strong>${foundry.utils.escapeHTML(o.targetName)}</strong> —
+    return `<li><strong>${esc(o.targetName)}</strong> —
       ${game.i18n.format("SRX.Magic.netForceLine", { nf: o.netForce, force })}
       ${o.summary ? ` — ${o.summary}` : ""}</li>`;
   }).join("");
 
   return foundry.documents.ChatMessage.create({
     speaker,
-    content: `<div class="srx chat-card magic-card">
-      <header class="card-header"><h3>${foundry.utils.escapeHTML(spell.name)} (F${force})</h3></header>
-      <ul class="magic-outcomes">${lines || `<li>${game.i18n.localize("SRX.Magic.noTargets")}</li>`}</ul>
-    </div>`,
+    content: cardHtml({
+      variant: "magic-card",
+      icon: "wand-sparkles",
+      title: `${esc(spell.name)} (F${force})`,
+      subtitle: esc(caster.name),
+      body: `<ul class="magic-outcomes">${lines || `<li>${game.i18n.localize("SRX.Magic.noTargets")}</li>`}</ul>`
+    }),
     flags: {
       srx: {
         type: "spellCast",
@@ -391,15 +395,18 @@ export async function rollDrain(caster, spell, force, castConfig = {}) {
 
   await foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor: caster }),
-    content: `<div class="srx chat-card">
-      <header class="card-header"><h3>${game.i18n.localize("SRX.Magic.drainTest")}</h3></header>
-      <p>${game.i18n.format("SRX.Magic.drainResult", {
-        name: caster.name,
+    content: cardHtml({
+      variant: "magic-card",
+      icon: "brain",
+      title: game.i18n.localize("SRX.Magic.drainTest"),
+      subtitle: esc(caster.name),
+      body: line(game.i18n.format("SRX.Magic.drainResult", {
+        name: esc(caster.name),
         hits: drainHits,
         base: drain.incoming,
         taken: drain.afterHits
-      })}</p>
-    </div>`
+      }), drain.afterHits > 0 ? "failure" : "success")
+    })
   });
 
   return drain;

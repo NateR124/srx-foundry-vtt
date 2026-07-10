@@ -1,29 +1,46 @@
-<div class="srx threat-sheet-body">
+<div class="srx threat-sheet-body {{#if isBuild}}mode-build{{else}}mode-play{{/if}}">
   <header class="sheet-header">
     <img class="portrait" src="{{actor.img}}" data-action="editImage" data-edit="img" alt="{{actor.name}}">
     <div class="header-fields">
-      <input class="charname" type="text" name="name" value="{{actor.name}}">
-      <div class="header-row">
-        <label>{{localize "SRX.Threat.rating"}}
-          <input type="number" name="system.threatRating" value="{{system.threatRating}}" min="1" max="6">
-        </label>
-        <label>{{localize "SRX.Derived.defenseScore"}}
-          <input type="number" name="system.defenseScore" value="{{system.defenseScore}}" min="1">
-        </label>
-        <label>{{localize "SRX.Threat.body"}}
-          <input type="number" name="system.body" value="{{system.body}}" min="1">
-        </label>
-        <label>{{localize "SRX.Item.armor"}}
-          <input type="number" name="system.armor" value="{{system.armor}}" min="0">
-        </label>
-        <label>{{localize "SRX.Item.hardened"}}
-          <input type="number" name="system.hardened" value="{{system.hardened}}" min="0">
-        </label>
+      <div class="name-row">
+        {{#if isBuild}}
+        <input class="charname" type="text" name="name" value="{{actor.name}}">
+        {{else}}
+        <h1 class="charname display">{{actor.name}}</h1>
+        {{/if}}
+        {{#if editable}}
+        <a class="mode-toggle {{#if isBuild}}building{{/if}}" data-action="toggleMode"
+           title="{{#if isBuild}}{{localize 'SRX.Sheet.modeToPlay'}}{{else}}{{localize 'SRX.Sheet.modeToBuild'}}{{/if}}">
+          <i class="fa-solid {{#if isBuild}}fa-hammer{{else}}fa-dice-d6{{/if}}"></i>
+          {{#if isBuild}}{{localize "SRX.Sheet.modeBuild"}}{{else}}{{localize "SRX.Sheet.modePlay"}}{{/if}}
+        </a>
+        {{/if}}
       </div>
+      <span class="threat-tr" data-tooltip="{{localize 'SRX.Threat.rating'}}">{{localize "SRX.Threat.trShort"}} {{system.threatRating}}</span>
     </div>
   </header>
 
+  {{#if isBuild}}
+  {{!-- Build: stat entry (Cold — prep time) --}}
   <section>
+    <div class="header-row">
+      <label>{{localize "SRX.Threat.rating"}}
+        <input type="number" name="system.threatRating" value="{{system.threatRating}}" min="1" max="6">
+      </label>
+      <label>{{localize "SRX.Derived.defenseScore"}}
+        <input type="number" name="system.defenseScore" value="{{system.defenseScore}}" min="1">
+      </label>
+      <label>{{localize "SRX.Threat.body"}}
+        <input type="number" name="system.body" value="{{system.body}}" min="1">
+      </label>
+      <label>{{localize "SRX.Item.armor"}}
+        <input type="number" name="system.armor" value="{{system.armor}}" min="0">
+      </label>
+      <label>{{localize "SRX.Item.hardened"}}
+        <input type="number" name="system.hardened" value="{{system.hardened}}" min="0">
+      </label>
+    </div>
+
     <h3>{{localize "SRX.Threat.initiative"}}</h3>
     <div class="form-row">
       <label>{{localize "SRX.Threat.initDice"}}
@@ -49,25 +66,62 @@
         <input type="number" name="system.woundedLimit" value="{{system.woundedLimit}}" min="1">
       </label>
     </div>
-    {{#if system.derived.wounded}}<p class="state-banner wounded">{{localize "SRX.State.wounded"}}</p>{{/if}}
-    {{#if system.derived.defeated}}<p class="state-banner dead">{{localize "SRX.State.dead"}}</p>{{/if}}
 
-    <h3>{{localize "SRX.Sheet.weapons"}}</h3>
-    <ul class="item-list">
+    <h3>{{localize "SRX.Sheet.biography"}}</h3>
+    <textarea name="system.notes" rows="4">{{system.notes}}</textarea>
+  </section>
+
+  {{else}}
+  {{!-- Play: GM cockpit — readouts and Intent clicks only, no form inputs --}}
+  <section>
+    <div class="threat-statline">
+      <div class="stat big" data-tooltip="{{localize 'SRX.Derived.defenseScore'}}">
+        <label>{{localize "SRX.Threat.dsShort"}}</label>
+        <span>{{system.defenseScore}}</span>
+      </div>
+      <div class="stat" data-tooltip="{{localize 'SRX.Item.armor'}}{{#if system.hardened}} · {{localize 'SRX.Item.hardened'}} {{system.hardened}}{{/if}}">
+        <label>{{localize "SRX.Item.armor"}}</label>
+        <span>{{system.armor}}{{#if system.hardened}}<b class="hardened">/{{system.hardened}}</b>{{/if}}</span>
+      </div>
+      <div class="stat" data-tooltip="{{localize 'SRX.Threat.body'}}">
+        <label>{{localize "SRX.Threat.body"}}</label>
+        <span>{{system.body}}</span>
+      </div>
+      <div class="stat" data-tooltip="{{localize 'SRX.Threat.initiative'}}">
+        <label>{{localize "SRX.Threat.initShort"}}</label>
+        <span>{{system.initiative.dice}}d6{{#if system.initiative.bonus}}+{{system.initiative.bonus}}{{/if}}</span>
+      </div>
+    </div>
+
+    <div class="monitor threat-health">
+      <span class="monitor-label">{{localize "SRX.Threat.damage"}} ({{system.health.value}}/{{system.health.max}})</span>
+      <div class="boxes">
+        {{#each healthBoxes}}
+        <a class="box {{#if this.filled}}filled{{/if}} {{#if this.woundedMark}}wounded-mark{{/if}}"
+           data-action="setHealth" data-index="{{this.index}}" data-tooltip="{{this.index}}"></a>
+        {{/each}}
+      </div>
+    </div>
+    {{#if system.derived.defeated}}<p class="state-banner dead">{{localize "SRX.State.dead"}}</p>
+    {{else if system.derived.wounded}}<p class="state-banner wounded">{{localize "SRX.State.wounded"}}</p>{{/if}}
+
+    <h3>{{localize "SRX.Threat.attacks"}}</h3>
+    <ul class="item-list threat-attacks">
       {{#each attacks}}
       <li>
-        <span class="item-name">{{this.name}}</span>
-        <span class="modes">
-          <a class="rollable mode" data-action="rollAttack" data-index="{{this.idx}}">
-            {{this.pool}}d · {{this.dv}}{{this.dvType}}
-          </a>
-        </span>
+        <a class="rollable attack-row" data-action="rollAttack" data-index="{{this.idx}}">
+          <span class="item-name">{{this.name}}</span>
+          <span class="attack-stat">{{this.pool}}d · {{this.dv}}{{this.dvType}}{{#if this.element}} · {{this.element}}{{/if}}</span>
+        </a>
       </li>
       {{/each}}
     </ul>
     <p class="hint">{{localize "SRX.Threat.attacksHint"}}</p>
 
+    {{#if notesHTML}}
     <h3>{{localize "SRX.Sheet.biography"}}</h3>
-    <textarea name="system.notes" rows="4">{{system.notes}}</textarea>
+    <div class="threat-notes">{{{notesHTML}}}</div>
+    {{/if}}
   </section>
+  {{/if}}
 </div>

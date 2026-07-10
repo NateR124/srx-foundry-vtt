@@ -15,6 +15,7 @@ import {
 import { applyElementalAftermath } from "./lifecycle.mjs";
 import { requestGmAction } from "../net/socket.mjs";
 import { isAutomationOff, shouldAuto } from "../settings/automation.mjs";
+import { actionButton, cardHtml, detail, esc, line, noticeCard, wireGuardedClick } from "../chat/cards.mjs";
 
 /**
  * Enhance weapon attack: after a successful hit, post a combat card with
@@ -171,14 +172,22 @@ export async function resistDamageFromCard(message) {
   // update rights to its author alone, and that card belongs to the attacker.
   const resistMsg = await foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor: defender }),
-    content: `<div class="srx chat-card"><p>${game.i18n.format("SRX.Combat.resistResult", {
-      name: defender.name,
-      hits: resistHits,
-      summary: damageSummary(resolved)
-    })}</p>
-    <button type="button" class="srx-combat-btn" data-combat-action="applyDamage">
-      ${game.i18n.localize("SRX.Combat.applyDamage")}
-    </button></div>`,
+    content: cardHtml({
+      variant: "combat-card",
+      icon: "shield-halved",
+      title: game.i18n.localize("SRX.Roll.damageResistance"),
+      subtitle: esc(defender.name),
+      body: line(game.i18n.format("SRX.Combat.resistResult", {
+        name: esc(defender.name),
+        hits: resistHits,
+        summary: damageSummary(resolved)
+      })),
+      actions: [actionButton({
+        action: "applyDamage",
+        label: game.i18n.localize("SRX.Combat.applyDamage"),
+        primary: true
+      })]
+    }),
     flags: {
       srx: {
         type: "resistResult",
@@ -239,10 +248,15 @@ export async function applyDamageFromCard(message) {
   if (isAutomationOff("damageApply")) {
     return foundry.documents.ChatMessage.create({
       speaker: foundry.documents.ChatMessage.getSpeaker({ actor: defender }),
-      content: `<div class="srx chat-card"><p>${game.i18n.format("SRX.Combat.autoOffManual", {
-        name: defender.name,
-        summary: damageSummary(resolved)
-      })}</p></div>`
+      content: noticeCard({
+        variant: "combat-card",
+        icon: "triangle-exclamation",
+        tone: "warning",
+        text: game.i18n.format("SRX.Combat.autoOffManual", {
+          name: esc(defender.name),
+          summary: damageSummary(resolved)
+        })
+      })
     });
   }
 
@@ -272,14 +286,19 @@ export async function applyDamageFromCard(message) {
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor: defender }),
-    content: `<div class="srx chat-card">
-      <header class="card-header"><h3>${game.i18n.localize("SRX.Combat.damageApplied")}</h3></header>
-      <p>${defender.name}: ${damageSummary(resolved)}</p>
-      <p class="detail">${game.i18n.format("SRX.Combat.monitorState", {
-        physical: result.after.physical,
-        stun: result.after.stun
-      })}</p>
-    </div>`
+    content: cardHtml({
+      variant: "combat-card",
+      icon: "heart-crack",
+      title: game.i18n.localize("SRX.Combat.damageApplied"),
+      subtitle: esc(defender.name),
+      body: [
+        line(`${esc(defender.name)}: ${damageSummary(resolved)}`),
+        detail(game.i18n.format("SRX.Combat.monitorState", {
+          physical: result.after.physical,
+          stun: result.after.stun
+        }))
+      ]
+    })
   });
 }
 
@@ -292,21 +311,16 @@ export function registerPipelineHooks() {
     if (!root) return;
 
     root.querySelectorAll("[data-combat-action]").forEach((btn) => {
-      btn.addEventListener("click", async (ev) => {
-        ev.preventDefault();
-        const action = btn.dataset.combatAction;
-        try {
-          if (action === "resist") await resistDamageFromCard(message);
-          else if (action === "applyDamage") {
-            const mid = btn.dataset.messageId;
-            const msg = mid ? game.messages.get(mid) : message;
-            await applyDamageFromCard(msg ?? message);
-          } else if (action === "applyUnresisted") {
-            await applyDamageFromCard(message);
-          }
-        } catch (err) {
-          console.error("SRX | Combat pipeline", err);
-          ui.notifications.error(err.message);
+      const action = btn.dataset.combatAction;
+      if (!["resist", "applyDamage", "applyUnresisted"].includes(action)) return;
+      wireGuardedClick(btn, async () => {
+        if (action === "resist") await resistDamageFromCard(message);
+        else if (action === "applyDamage") {
+          const mid = btn.dataset.messageId;
+          const msg = mid ? game.messages.get(mid) : message;
+          await applyDamageFromCard(msg ?? message);
+        } else if (action === "applyUnresisted") {
+          await applyDamageFromCard(message);
         }
       });
     });

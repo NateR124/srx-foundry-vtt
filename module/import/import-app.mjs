@@ -4,6 +4,9 @@
  * sidecars; we parse in-browser and create world Items/Actors in folders.
  * Including the spell-resolution JSON enriches spells during the same run.
  * Re-imports skip documents that already exist in the target folder.
+ *
+ * UX: structured log (per-line status icons), running state on the submit
+ * button, and a summary banner after the run (docs/UX-SURFACE-BACKLOG.md §8).
  */
 
 import { CATALOG_FILES } from "./parse-catalog.mjs";
@@ -40,13 +43,24 @@ export class SrxCatalogImportApp extends HandlebarsApplicationMixin(ApplicationV
   /** @type {File[]} */
   #files = [];
 
-  /** @type {string[]} */
+  /** @type {Array<{level: "info"|"success"|"warn"|"error", text: string}>} */
   #log = [];
+
+  /** @type {{created: number, skipped: number}|null} */
+  #summary = null;
+
+  #running = false;
+
+  #pushLog(level, text) {
+    this.#log.push({ level, text });
+  }
 
   async _prepareContext() {
     return {
       files: this.#files.map((f) => f.name),
       log: this.#log,
+      running: this.#running,
+      summary: this.#summary,
       catalogs: Object.keys(CATALOG_FILES)
     };
   }
@@ -59,7 +73,8 @@ export class SrxCatalogImportApp extends HandlebarsApplicationMixin(ApplicationV
     input.accept = ".deploy,.txt,text/plain,.json,application/json";
     input.onchange = async () => {
       this.#files = [...(input.files ?? [])];
-      this.#log = [`Selected ${this.#files.length} file(s).`];
+      this.#log = [{ level: "info", text: `Selected ${this.#files.length} file(s).` }];
+      this.#summary = null;
       this.render();
     };
     input.click();
@@ -98,7 +113,7 @@ export class SrxCatalogImportApp extends HandlebarsApplicationMixin(ApplicationV
             created += 1;
           } catch (err) {
             console.error("SRX | actor import failed", doc.name, err);
-            this.#log.push(`ERROR actor "${doc.name}": ${err.message}`);
+            this.#pushLog("error", `Actor "${doc.name}": ${err.message}`);
           }
         }
       }
@@ -107,126 +122,138 @@ export class SrxCatalogImportApp extends HandlebarsApplicationMixin(ApplicationV
   }
 
   static async #onSubmit(_event, _form, _formData) {
+    if (this.#running) return;
+    // Inline validation — the form itself reports the problem (UX-NOTIFICATIONS policy)
     if (!game.user.isGM) {
-      ui.notifications.error(game.i18n.localize("SRX.Import.gmOnly"));
+      this.#pushLog("error", game.i18n.localize("SRX.Import.gmOnly"));
+      this.render();
       return;
     }
     if (!this.#files.length) {
-      ui.notifications.warn(game.i18n.localize("SRX.Import.noFiles"));
+      this.#pushLog("warn", game.i18n.localize("SRX.Import.noFiles"));
+      this.render();
       return;
     }
 
     this.#log = [];
-    const byName = Object.fromEntries(this.#files.map((f) => [f.name, f]));
+    this.#summary = null;
+    this.#running = true;
+    this.render();
+
     let totalCreated = 0;
     let totalSkipped = 0;
+    try {
+      const byName = Object.fromEntries(this.#files.map((f) => [f.name, f]));
 
-    const knownFiles = new Set(Object.keys(CATALOG_FILES));
-    for (const filename of Object.keys(byName)) {
-      if (!knownFiles.has(filename) && !filename.endsWith(".json")) {
-        this.#log.push(`Skip unknown file: ${filename}`);
-      }
-    }
-
-    // --- Phase 0: parse JSON files; spell-resolution sidecars become the
-    // enrichment index that the Spells TSV parser consumes below ---
-    const parsedJson = new Map();
-    let resolutionIndex = null;
-    for (const [filename, file] of Object.entries(byName)) {
-      if (!filename.endsWith(".json")) continue;
-      try {
-        const data = JSON.parse(await file.text());
-        parsedJson.set(filename, data);
-        if (SrxCatalogImportApp.#isResolutionJson(data)) {
-          resolutionIndex ??= {};
-          for (const e of data.entries) resolutionIndex[e.slug] = e;
-          this.#log.push(`Spell resolution index from ${filename}: ${data.entries.length} entries.`);
+      const knownFiles = new Set(Object.keys(CATALOG_FILES));
+      for (const filename of Object.keys(byName)) {
+        if (!knownFiles.has(filename) && !filename.endsWith(".json")) {
+          this.#pushLog("warn", `Skip unknown file: ${filename}`);
         }
-      } catch (_e) {
-        this.#log.push(`ERROR ${filename}: Invalid JSON`);
       }
-    }
 
-    for (const [filename, file] of Object.entries(byName)) {
-      if (knownFiles.has(filename)) {
-        const def = CATALOG_FILES[filename];
+      // --- Phase 0: parse JSON files; spell-resolution sidecars become the
+      // enrichment index that the Spells TSV parser consumes below ---
+      const parsedJson = new Map();
+      let resolutionIndex = null;
+      for (const [filename, file] of Object.entries(byName)) {
+        if (!filename.endsWith(".json")) continue;
         try {
-          const text = await file.text();
-          const entries = def.parser(text, resolutionIndex ?? undefined);
-          this.#log.push(`Parsed ${filename}: ${entries.length} entries.`);
-
-          let folder = game.folders.find(
-            (f) => f.type === "Item" && f.name === def.packLabel
-          );
-          if (!folder) {
-            folder = await Folder.create({ name: def.packLabel, type: "Item", sorting: "a" });
+          const data = JSON.parse(await file.text());
+          parsedJson.set(filename, data);
+          if (SrxCatalogImportApp.#isResolutionJson(data)) {
+            resolutionIndex ??= {};
+            for (const e of data.entries) resolutionIndex[e.slug] = e;
+            this.#pushLog("info", `Spell resolution index from ${filename}: ${data.entries.length} entries.`);
           }
-
-          // Re-import must not double the world: skip entries whose type+name
-          // already exists in the target folder
-          const existing = new Set(folder.contents.map((i) => `${i.type}:${i.name}`));
-          const fresh = entries.filter((e) => !existing.has(`${e.type}:${e.name}`));
-          const skipped = entries.length - fresh.length;
-          totalSkipped += skipped;
-
-          const docs = fresh.map((e) => ({
-            name: e.name, type: e.type, folder: folder.id, system: e.system, flags: e.flags || {}
-          }));
-          const CHUNK = 50;
-          for (let i = 0; i < docs.length; i += CHUNK) {
-            const slice = docs.slice(i, i + CHUNK);
-            await Item.createDocuments(slice);
-            totalCreated += slice.length;
-          }
-          this.#log.push(`Created ${docs.length} ${def.itemType} items in "${def.packLabel}"${skipped ? ` (${skipped} already present, skipped)` : ""}.`);
-        } catch (err) {
-          console.error("SRX | Import failed", filename, err);
-          this.#log.push(`ERROR ${filename}: ${err.message}`);
-        }
-      } else if (filename.endsWith(".json")) {
-        try {
-          const data = parsedJson.get(filename);
-          if (!data) continue; // invalid JSON, already logged
-          if (SrxCatalogImportApp.#isResolutionJson(data)) continue; // consumed above
-
-          let actorPayloads = [];
-          const entriesArr = Array.isArray(data.entries) ? data.entries : null;
-          if (entriesArr?.length && SrxCatalogImportApp.#looksPregen(entriesArr[0])) {
-            // Every pregen in the file, not just entries[0]
-            actorPayloads = entriesArr.map((e) => mapPregenToActorData({ entries: [e] }));
-          } else if (SrxCatalogImportApp.#looksPregen(data)) {
-            actorPayloads = [mapPregenToActorData(data)];
-          } else if (entriesArr || data.threatRating || Array.isArray(data)) {
-            actorPayloads = mapThreatCatalog(data);
-          } else {
-            this.#log.push(`Skip ${filename}: unrecognized JSON format`);
-            continue;
-          }
-
-          this.#log.push(`Parsed ${filename}: ${actorPayloads.length} actors.`);
-          let folder = game.folders.find((f) => f.type === "Actor" && f.name === "Imported Actors");
-          if (!folder) {
-            folder = await Folder.create({ name: "Imported Actors", type: "Actor", sorting: "a" });
-          }
-
-          const existing = new Set(folder.contents.map((a) => a.name));
-          const fresh = actorPayloads.filter((p) => !existing.has(p.name));
-          const skipped = actorPayloads.length - fresh.length;
-          totalSkipped += skipped;
-
-          const docs = fresh.map((a) => ({ ...a, folder: folder.id }));
-          const created = await this.#createActorsRobustly(docs);
-          totalCreated += created;
-          this.#log.push(`Created ${created} actors${skipped ? ` (${skipped} already present, skipped)` : ""}.`);
-        } catch (err) {
-          console.error("SRX | Import failed", filename, err);
-          this.#log.push(`ERROR ${filename}: ${err.message}`);
+        } catch (_e) {
+          this.#pushLog("error", `${filename}: Invalid JSON`);
         }
       }
-      this.render();
+
+      for (const [filename, file] of Object.entries(byName)) {
+        if (knownFiles.has(filename)) {
+          const def = CATALOG_FILES[filename];
+          try {
+            const text = await file.text();
+            const entries = def.parser(text, resolutionIndex ?? undefined);
+            this.#pushLog("info", `Parsed ${filename}: ${entries.length} entries.`);
+
+            let folder = game.folders.find(
+              (f) => f.type === "Item" && f.name === def.packLabel
+            );
+            if (!folder) {
+              folder = await Folder.create({ name: def.packLabel, type: "Item", sorting: "a" });
+            }
+
+            // Re-import must not double the world: skip entries whose type+name
+            // already exists in the target folder
+            const existing = new Set(folder.contents.map((i) => `${i.type}:${i.name}`));
+            const fresh = entries.filter((e) => !existing.has(`${e.type}:${e.name}`));
+            const skipped = entries.length - fresh.length;
+            totalSkipped += skipped;
+
+            const docs = fresh.map((e) => ({
+              name: e.name, type: e.type, folder: folder.id, system: e.system, flags: e.flags || {}
+            }));
+            const CHUNK = 50;
+            for (let i = 0; i < docs.length; i += CHUNK) {
+              const slice = docs.slice(i, i + CHUNK);
+              await Item.createDocuments(slice);
+              totalCreated += slice.length;
+            }
+            this.#pushLog("success", `Created ${docs.length} ${def.itemType} items in "${def.packLabel}"${skipped ? ` (${skipped} already present, skipped)` : ""}.`);
+          } catch (err) {
+            console.error("SRX | Import failed", filename, err);
+            this.#pushLog("error", `${filename}: ${err.message}`);
+          }
+        } else if (filename.endsWith(".json")) {
+          try {
+            const data = parsedJson.get(filename);
+            if (!data) continue; // invalid JSON, already logged
+            if (SrxCatalogImportApp.#isResolutionJson(data)) continue; // consumed above
+
+            let actorPayloads = [];
+            const entriesArr = Array.isArray(data.entries) ? data.entries : null;
+            if (entriesArr?.length && SrxCatalogImportApp.#looksPregen(entriesArr[0])) {
+              // Every pregen in the file, not just entries[0]
+              actorPayloads = entriesArr.map((e) => mapPregenToActorData({ entries: [e] }));
+            } else if (SrxCatalogImportApp.#looksPregen(data)) {
+              actorPayloads = [mapPregenToActorData(data)];
+            } else if (entriesArr || data.threatRating || Array.isArray(data)) {
+              actorPayloads = mapThreatCatalog(data);
+            } else {
+              this.#pushLog("warn", `Skip ${filename}: unrecognized JSON format`);
+              continue;
+            }
+
+            this.#pushLog("info", `Parsed ${filename}: ${actorPayloads.length} actors.`);
+            let folder = game.folders.find((f) => f.type === "Actor" && f.name === "Imported Actors");
+            if (!folder) {
+              folder = await Folder.create({ name: "Imported Actors", type: "Actor", sorting: "a" });
+            }
+
+            const existing = new Set(folder.contents.map((a) => a.name));
+            const fresh = actorPayloads.filter((p) => !existing.has(p.name));
+            const skipped = actorPayloads.length - fresh.length;
+            totalSkipped += skipped;
+
+            const docs = fresh.map((a) => ({ ...a, folder: folder.id }));
+            const created = await this.#createActorsRobustly(docs);
+            totalCreated += created;
+            this.#pushLog("success", `Created ${created} actors${skipped ? ` (${skipped} already present, skipped)` : ""}.`);
+          } catch (err) {
+            console.error("SRX | Import failed", filename, err);
+            this.#pushLog("error", `${filename}: ${err.message}`);
+          }
+        }
+        this.render();
+      }
+    } finally {
+      this.#running = false;
     }
 
-    this.#log.push(game.i18n.format("SRX.Import.done", { count: totalCreated }));
+    this.#summary = { created: totalCreated, skipped: totalSkipped };
     ui.notifications.info(game.i18n.format("SRX.Import.done", { count: totalCreated }));
     this.render();
   }

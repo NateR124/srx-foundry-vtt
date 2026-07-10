@@ -5,7 +5,7 @@
   </p>
 
   <div class="form-group">
-    <button type="button" data-action="pickFiles">
+    <button type="button" data-action="pickFiles" {{#if running}}disabled{{/if}}>
       <i class="fa-solid fa-folder-open"></i> {{localize "SRX.Import.pickFiles"}}
     </button>
   </div>
@@ -17,16 +17,33 @@
   {{/if}}
 
   <div class="form-footer">
-    <button type="submit">
+    <button type="submit" {{#if running}}disabled{{/if}}>
+      {{#if running}}
+      <i class="fa-solid fa-spinner fa-spin"></i> {{localize "SRX.Import.running"}}
+      {{else}}
       <i class="fa-solid fa-file-import"></i> {{localize "SRX.Import.run"}}
+      {{/if}}
     </button>
   </div>
+
+  {{#if summary}}
+  <p class="import-summary">
+    <i class="fa-solid fa-check"></i>
+    {{localize "SRX.Import.summary" created=summary.created skipped=summary.skipped}}
+  </p>
+  {{/if}}
 
   {{#if log.length}}
   <div class="import-log">
     <h3>{{localize "SRX.Import.log"}}</h3>
-    <pre>{{#each log}}{{this}}
-{{/each}}</pre>
+    <ul class="log-lines">
+      {{#each log}}
+      <li class="log-{{this.level}}">
+        <i class="fa-solid {{#if (srxEq this.level 'success')}}fa-check{{else if (srxEq this.level 'error')}}fa-xmark{{else if (srxEq this.level 'warn')}}fa-triangle-exclamation{{else}}fa-circle-info{{/if}}"></i>
+        {{this.text}}
+      </li>
+      {{/each}}
+    </ul>
   </div>
   {{/if}}
 </div>

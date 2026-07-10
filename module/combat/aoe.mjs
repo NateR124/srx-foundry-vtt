@@ -38,6 +38,7 @@ import {
 } from "./actions.mjs";
 import { isAutomationOff } from "../settings/automation.mjs";
 import { SRX } from "../config.mjs";
+import { actionButton, cardHtml, detail, esc, line, noticeCard, wireGuardedClick } from "../chat/cards.mjs";
 
 /**
  * Full AOE attack from a weapon mode (grenade blast or shotgun cone).
@@ -102,9 +103,10 @@ async function rollBlastAttack(attacker, item, mode) {
 
   if (combatant) await spendCombatantAction(combatant, actionCost);
 
-  // Pick aim point
+  // Pick aim point — preview shows the real outer footprint
   const aimPx = await pickPointOnCanvas({
-    hint: game.i18n.localize("SRX.Aoe.pickCenter")
+    hint: game.i18n.localize("SRX.Aoe.pickCenter"),
+    radiusMeters: Math.max(fullRadius, halfRadius)
   });
   if (!aimPx) return null;
 
@@ -113,7 +115,12 @@ async function rollBlastAttack(attacker, item, mode) {
   if (isAutomationOff("scatter")) {
     await foundry.documents.ChatMessage.create({
       speaker: foundry.documents.ChatMessage.getSpeaker({ actor: attacker }),
-      content: `<div class="srx chat-card"><p>${game.i18n.localize("SRX.Aoe.scatterOff")}</p></div>`
+      content: noticeCard({
+        variant: "combat-card",
+        icon: "triangle-exclamation",
+        tone: "warning",
+        text: game.i18n.localize("SRX.Aoe.scatterOff")
+      })
     });
     return resolveBlastAt(attacker, item, mode, aimPx);
   }
@@ -152,17 +159,25 @@ async function rollBlastAttack(attacker, item, mode) {
     centerPx = scatterOffsetPixels(aimPx, outcome.scatterMeters, dir.degrees);
     await foundry.documents.ChatMessage.create({
       speaker,
-      content: `<div class="srx chat-card">
-        <p>${game.i18n.format("SRX.Aoe.scattered", {
+      content: noticeCard({
+        variant: "combat-card",
+        icon: "location-crosshairs",
+        tone: "warning",
+        text: game.i18n.format("SRX.Aoe.scattered", {
           meters: outcome.scatterMeters,
           dir: dir.label
-        })}</p>
-      </div>`
+        })
+      })
     });
   } else {
     await foundry.documents.ChatMessage.create({
       speaker,
-      content: `<div class="srx chat-card"><p class="success">${game.i18n.localize("SRX.Aoe.directHit")}</p></div>`
+      content: noticeCard({
+        variant: "combat-card",
+        icon: "bullseye",
+        tone: "success",
+        text: game.i18n.localize("SRX.Aoe.directHit")
+      })
     });
   }
 
@@ -209,7 +224,11 @@ async function resolveBlastAt(attacker, item, mode, centerPx) {
   if (!affected.length) {
     return foundry.documents.ChatMessage.create({
       speaker,
-      content: `<div class="srx chat-card"><p>${game.i18n.localize("SRX.Aoe.noTargets")}</p></div>`
+      content: noticeCard({
+        variant: "combat-card",
+        icon: "circle-info",
+        text: game.i18n.localize("SRX.Aoe.noTargets")
+      })
     });
   }
 
@@ -218,21 +237,29 @@ async function resolveBlastAt(attacker, item, mode, centerPx) {
 
   const msg = await foundry.documents.ChatMessage.create({
     speaker,
-    content: `<div class="srx chat-card aoe-card">
-      <header class="card-header"><h3>${foundry.utils.escapeHTML(item.name)} — ${game.i18n.localize("SRX.Aoe.blast")}</h3></header>
-      <p>${game.i18n.format("SRX.Aoe.blastSummary", {
-        full: fullRadius,
-        half: halfRadius,
-        fullDv,
-        halfDv,
-        type: dvType
-      })}</p>
-      <ul class="aoe-targets">${rows}</ul>
-      <button type="button" class="srx-combat-btn" data-combat-action="aoeResistAll"
-        data-message-id="{{id}}">
-        ${game.i18n.localize("SRX.Aoe.resistAll")}
-      </button>
-    </div>`,
+    content: cardHtml({
+      variant: "aoe-card",
+      icon: "burst",
+      title: `${esc(item.name)} — ${game.i18n.localize("SRX.Aoe.blast")}`,
+      subtitle: esc(attacker.name),
+      body: [
+        line(game.i18n.format("SRX.Aoe.blastSummary", {
+          full: fullRadius,
+          half: halfRadius,
+          fullDv,
+          halfDv,
+          type: dvType
+        })),
+        `<ul class="aoe-targets">${rows}</ul>`
+      ],
+      // The resist-all handler falls back to the message the button lives on,
+      // so the card needs no self-referencing message id.
+      actions: [actionButton({
+        action: "aoeResistAll",
+        label: game.i18n.localize("SRX.Aoe.resistAll"),
+        primary: true
+      })]
+    }),
     flags: {
       srx: {
         type: "aoeBlast",
@@ -250,12 +277,6 @@ async function resolveBlastAt(attacker, item, mode, centerPx) {
       }
     }
   });
-
-  // Fix resist-all message id (created after)
-  if (msg) {
-    const html = msg.content.replace('data-message-id="{{id}}"', `data-message-id="${msg.id}"`);
-    if (html !== msg.content) await msg.update({ content: html });
-  }
 
   if (item.system.skill === "firearms" && combatant) {
     await markFiredFirearm(combatant);
@@ -332,7 +353,11 @@ async function rollConeAttack(attacker, item, mode) {
   if (!affected.length) {
     return foundry.documents.ChatMessage.create({
       speaker,
-      content: `<div class="srx chat-card"><p>${game.i18n.localize("SRX.Aoe.noTargets")}</p></div>`
+      content: noticeCard({
+        variant: "combat-card",
+        icon: "circle-info",
+        text: game.i18n.localize("SRX.Aoe.noTargets")
+      })
     });
   }
 
@@ -340,10 +365,13 @@ async function rollConeAttack(attacker, item, mode) {
 
   const msg = await foundry.documents.ChatMessage.create({
     speaker,
-    content: `<div class="srx chat-card aoe-card">
-      <header class="card-header"><h3>${foundry.utils.escapeHTML(item.name)} — ${game.i18n.localize("SRX.Aoe.cone")}</h3></header>
-      <ul class="aoe-targets">${rows}</ul>
-    </div>`,
+    content: cardHtml({
+      variant: "aoe-card",
+      icon: "burst",
+      title: `${esc(item.name)} — ${game.i18n.localize("SRX.Aoe.cone")}`,
+      subtitle: esc(attacker.name),
+      body: `<ul class="aoe-targets">${rows}</ul>`
+    }),
     flags: {
       srx: {
         type: "aoeCone",
@@ -374,15 +402,19 @@ function aoeTargetRow(t, dvType, element) {
     ? game.i18n.localize("SRX.Aoe.bandHalf")
     : game.i18n.localize("SRX.Aoe.bandFull");
   return `<li data-token-id="${t.id}">
-    <strong>${foundry.utils.escapeHTML(t.actor.name)}</strong>
+    <strong>${esc(t.actor.name)}</strong>
     — ${bandLabel}, DV ${t.dv}${dvType}
-    <button type="button" class="srx-combat-btn" data-combat-action="aoeResist"
-      data-actor-uuid="${t.actor.uuid}"
-      data-dv="${t.dv}" data-dv-type="${dvType}"
-      data-element="${element || ""}"
-      data-band="${t.band}">
-      ${game.i18n.localize("SRX.Combat.resist")}
-    </button>
+    ${actionButton({
+      action: "aoeResist",
+      label: game.i18n.localize("SRX.Combat.resist"),
+      data: {
+        "actor-uuid": t.actor.uuid,
+        dv: t.dv,
+        "dv-type": dvType,
+        element: element || "",
+        band: t.band
+      }
+    })}
   </li>`;
 }
 
@@ -507,10 +539,15 @@ export async function resistAoeDamage({
   if (isAutomationOff("damageApply")) {
     return foundry.documents.ChatMessage.create({
       speaker: foundry.documents.ChatMessage.getSpeaker({ actor: defender }),
-      content: `<div class="srx chat-card"><p>${game.i18n.format("SRX.Combat.autoOffManual", {
-        name: defender.name,
-        summary: damageSummary(resolved)
-      })}</p></div>`
+      content: noticeCard({
+        variant: "combat-card",
+        icon: "triangle-exclamation",
+        tone: "warning",
+        text: game.i18n.format("SRX.Combat.autoOffManual", {
+          name: esc(defender.name),
+          summary: damageSummary(resolved)
+        })
+      })
     });
   }
 
@@ -522,17 +559,23 @@ export async function resistAoeDamage({
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor: defender }),
-    content: `<div class="srx chat-card">
-      <p>${game.i18n.format("SRX.Combat.resistResult", {
-        name: defender.name,
-        hits: resistHits,
-        summary: damageSummary(resolved)
-      })}</p>
-      <p class="detail">${game.i18n.format("SRX.Combat.monitorState", {
-        physical: result.after.physical,
-        stun: result.after.stun
-      })}</p>
-    </div>`
+    content: cardHtml({
+      variant: "combat-card",
+      icon: "shield-halved",
+      title: game.i18n.localize("SRX.Roll.damageResistance"),
+      subtitle: esc(defender.name),
+      body: [
+        line(game.i18n.format("SRX.Combat.resistResult", {
+          name: esc(defender.name),
+          hits: resistHits,
+          summary: damageSummary(resolved)
+        })),
+        detail(game.i18n.format("SRX.Combat.monitorState", {
+          physical: result.after.physical,
+          stun: result.after.stun
+        }))
+      ]
+    })
   });
 }
 
@@ -561,34 +604,22 @@ export function registerAoeChatHooks() {
     if (!root) return;
 
     root.querySelectorAll("[data-combat-action='aoeResist']").forEach((btn) => {
-      btn.addEventListener("click", async (ev) => {
-        ev.preventDefault();
-        try {
-          await resistAoeDamage({
-            actorUuid: btn.dataset.actorUuid,
-            dv: Number(btn.dataset.dv) || 0,
-            dvType: btn.dataset.dvType || "P",
-            element: btn.dataset.element || ""
-            // Cover prompt always shown (Good Cover / confined)
-          });
-        } catch (err) {
-          console.error("SRX | aoeResist", err);
-          ui.notifications.error(err.message);
-        }
+      wireGuardedClick(btn, async () => {
+        await resistAoeDamage({
+          actorUuid: btn.dataset.actorUuid,
+          dv: Number(btn.dataset.dv) || 0,
+          dvType: btn.dataset.dvType || "P",
+          element: btn.dataset.element || ""
+          // Cover prompt always shown (Good Cover / confined)
+        });
       });
     });
 
     root.querySelectorAll("[data-combat-action='aoeResistAll']").forEach((btn) => {
-      btn.addEventListener("click", async (ev) => {
-        ev.preventDefault();
-        try {
-          const mid = btn.dataset.messageId;
-          const msg = mid ? game.messages.get(mid) : message;
-          await resistAllFromAoeCard(msg ?? message);
-        } catch (err) {
-          console.error("SRX | aoeResistAll", err);
-          ui.notifications.error(err.message);
-        }
+      wireGuardedClick(btn, async () => {
+        const mid = btn.dataset.messageId;
+        const msg = mid ? game.messages.get(mid) : message;
+        await resistAllFromAoeCard(msg ?? message);
       });
     });
   });

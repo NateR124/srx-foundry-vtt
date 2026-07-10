@@ -10,6 +10,7 @@ import {
 } from "../rules/astral.mjs";
 import { SRXRoll } from "../dice/srx-roll.mjs";
 import { SRX } from "../config.mjs";
+import { cardHtml, esc, line, noticeCard } from "../chat/cards.mjs";
 
 /**
  * Current astral state flag.
@@ -36,12 +37,14 @@ export async function toggleAstralPerception(actor) {
   // Unconscious clears perception — handled via status hooks if we add later
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-    content: `<div class="srx chat-card">
-      <p>${game.i18n.format(
+    content: noticeCard({
+      variant: "magic-card",
+      icon: next === "perceiving" ? "eye" : "eye-slash",
+      text: game.i18n.format(
         next === "perceiving" ? "SRX.Astral.perceptionOn" : "SRX.Astral.perceptionOff",
-        { name: actor.name }
-      )}</p>
-    </div>`
+        { name: esc(actor.name) }
+      )
+    })
   });
 }
 
@@ -62,9 +65,11 @@ export async function toggleAstralProjection(actor) {
     await actor.toggleStatusEffect("paralyzed", { active: false }).catch(() => null);
     return foundry.documents.ChatMessage.create({
       speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-      content: `<div class="srx chat-card"><p>${game.i18n.format("SRX.Astral.projectionOff", {
-        name: actor.name
-      })}</p></div>`
+      content: noticeCard({
+        variant: "magic-card",
+        icon: "moon",
+        text: game.i18n.format("SRX.Astral.projectionOff", { name: esc(actor.name) })
+      })
     });
   }
 
@@ -88,13 +93,15 @@ export async function toggleAstralProjection(actor) {
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-    content: `<div class="srx chat-card">
-      <p>${game.i18n.format("SRX.Astral.projectionOn", {
-        name: actor.name,
+    content: noticeCard({
+      variant: "magic-card",
+      icon: "moon",
+      text: game.i18n.format("SRX.Astral.projectionOn", {
+        name: esc(actor.name),
         hours: budgetH,
         usedMin: used
-      })}</p>
-    </div>`
+      })
+    })
   });
 }
 
@@ -148,15 +155,18 @@ export async function assenseTarget(observer, target, kind = "living") {
   const band = assensingBand(hits);
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor: observer }),
-    content: `<div class="srx chat-card">
-      <header class="card-header"><h3>${game.i18n.localize("SRX.Astral.assense")}</h3></header>
-      <p>${game.i18n.format("SRX.Astral.assenseResult", {
-        observer: observer.name,
-        target: target.name,
+    content: cardHtml({
+      variant: "magic-card",
+      icon: "magnifying-glass",
+      title: game.i18n.localize("SRX.Astral.assense"),
+      subtitle: esc(observer.name),
+      body: line(game.i18n.format("SRX.Astral.assenseResult", {
+        observer: esc(observer.name),
+        target: esc(target.name),
         hits,
         band: game.i18n.localize(`SRX.Astral.band.${band}`)
-      })}</p>
-    </div>`
+      }))
+    })
   });
 }
 

@@ -9,6 +9,7 @@ import { SRXRoll } from "../dice/srx-roll.mjs";
 import { applyDamageToActor } from "../combat/damage.mjs";
 import { sustainPenaltyForActor } from "./sustain.mjs";
 import { SRX } from "../config.mjs";
+import { cardHtml, esc, line } from "../chat/cards.mjs";
 
 /**
  * Use a Qi-keyword power: auto Force from escalation, roll Drain, bump counter.
@@ -74,15 +75,20 @@ export async function useQiPower(actor, {
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-    content: `<div class="srx chat-card">
-      <header class="card-header"><h3>${foundry.utils.escapeHTML(powerName)}</h3></header>
-      <p>${game.i18n.format("SRX.Qi.used", {
-        name: actor.name,
-        force,
-        hits: drainHits,
-        taken: drain.afterHits
-      })}</p>
-      ${effectSummary ? `<p>${foundry.utils.escapeHTML(effectSummary)}</p>` : ""}
-    </div>`
+    content: cardHtml({
+      variant: "magic-card",
+      icon: "hand-sparkles",
+      title: esc(powerName),
+      subtitle: esc(actor.name),
+      body: [
+        line(game.i18n.format("SRX.Qi.used", {
+          name: esc(actor.name),
+          force,
+          hits: drainHits,
+          taken: drain.afterHits
+        })),
+        effectSummary ? line(esc(effectSummary)) : ""
+      ]
+    })
   });
 }

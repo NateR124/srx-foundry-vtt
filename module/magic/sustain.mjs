@@ -11,6 +11,7 @@ import {
 } from "../rules/magic.mjs";
 import { SRXRoll } from "../dice/srx-roll.mjs";
 import { requestGmAction } from "../net/socket.mjs";
+import { esc, noticeCard } from "../chat/cards.mjs";
 
 const FLAG = "sustained";
 
@@ -136,9 +137,12 @@ export async function checkSustainOnWound(actor) {
     await endAllSustained(actor);
     return foundry.documents.ChatMessage.create({
       speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-      content: `<div class="srx chat-card"><p class="failure">${game.i18n.format("SRX.Magic.sustainDropped", {
-        name: actor.name
-      })}</p></div>`
+      content: noticeCard({
+        variant: "magic-card",
+        icon: "link-slash",
+        tone: "failure",
+        text: game.i18n.format("SRX.Magic.sustainDropped", { name: esc(actor.name) })
+      })
     });
   }
   return null;
@@ -160,9 +164,12 @@ export function registerSustainHooks() {
         await endAllSustained(actor);
         await foundry.documents.ChatMessage.create({
           speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-          content: `<div class="srx chat-card"><p>${game.i18n.format("SRX.Magic.sustainDropped", {
-            name: actor.name
-          })}</p></div>`
+          content: noticeCard({
+            variant: "magic-card",
+            icon: "link-slash",
+            tone: "failure",
+            text: game.i18n.format("SRX.Magic.sustainDropped", { name: esc(actor.name) })
+          })
         });
       }
     }

@@ -6,6 +6,7 @@ import {
 } from "../rules/healing.mjs";
 import { syncCharacterStatuses } from "./damage.mjs";
 import { registerGmHandler, requestGmAction } from "../net/socket.mjs";
+import { wireGuardedClick } from "../chat/cards.mjs";
 
 /**
  * Apply a healing outcome to the target, relaying through the GM executor
@@ -44,40 +45,28 @@ export function registerHealingHooks() {
     if (!root) return;
 
     root.querySelectorAll("[data-combat-action='stabilize']").forEach((btn) => {
-      btn.addEventListener("click", async (ev) => {
-        ev.preventDefault();
-        try {
-          const target = await actorFromUuid(btn.dataset.actorUuid);
-          if (!target) return;
-          const healer = currentHealer();
-          if (!healer) {
-            ui.notifications.warn(game.i18n.localize("SRX.Healing.SelectHealerWarning"));
-            return;
-          }
-          await rollStabilize(healer, target);
-        } catch (err) {
-          console.error("SRX | stabilize", err);
-          ui.notifications.error(err.message);
+      wireGuardedClick(btn, async () => {
+        const target = await actorFromUuid(btn.dataset.actorUuid);
+        if (!target) return;
+        const healer = currentHealer();
+        if (!healer) {
+          ui.notifications.warn(game.i18n.localize("SRX.Healing.SelectHealerWarning"));
+          return;
         }
+        await rollStabilize(healer, target);
       });
     });
 
     root.querySelectorAll("[data-combat-action='firstAid']").forEach((btn) => {
-      btn.addEventListener("click", async (ev) => {
-        ev.preventDefault();
-        try {
-          const target = await actorFromUuid(btn.dataset.actorUuid);
-          if (!target) return;
-          const healer = currentHealer();
-          if (!healer) {
-            ui.notifications.warn(game.i18n.localize("SRX.Healing.SelectHealerWarning"));
-            return;
-          }
-          await rollFirstAid(healer, target);
-        } catch (err) {
-          console.error("SRX | firstAid", err);
-          ui.notifications.error(err.message);
+      wireGuardedClick(btn, async () => {
+        const target = await actorFromUuid(btn.dataset.actorUuid);
+        if (!target) return;
+        const healer = currentHealer();
+        if (!healer) {
+          ui.notifications.warn(game.i18n.localize("SRX.Healing.SelectHealerWarning"));
+          return;
         }
+        await rollFirstAid(healer, target);
       });
     });
   });

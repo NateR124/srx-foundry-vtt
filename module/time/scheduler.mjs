@@ -13,6 +13,7 @@ import {
 } from "../rules/timed.mjs";
 import { SRXRoll } from "../dice/srx-roll.mjs";
 import { applyDamageToActor } from "../combat/damage.mjs";
+import { cardHtml, esc, line, noticeCard } from "../chat/cards.mjs";
 
 const SETTING_KEY = "timedEffects";
 
@@ -84,13 +85,15 @@ export async function exposeToToxin(actor, {
   } else {
     await foundry.documents.ChatMessage.create({
       speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-      content: `<div class="srx chat-card">
-        <p>${game.i18n.format("SRX.Time.toxinScheduled", {
-          name: actor.name,
-          toxin: toxinName,
+      content: noticeCard({
+        variant: "time-card",
+        icon: "hourglass-start",
+        text: game.i18n.format("SRX.Time.toxinScheduled", {
+          name: esc(actor.name),
+          toxin: esc(toxinName),
           minutes: Math.round(onset / 60)
-        })}</p>
-      </div>`
+        })
+      })
     });
   }
 
@@ -140,12 +143,18 @@ export async function runToxinResistance(actor, {
     }
     return foundry.documents.ChatMessage.create({
       speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-      content: `<div class="srx chat-card"><p class="success">${game.i18n.format("SRX.Time.toxinResisted", {
-        name: actor.name,
-        toxin: toxinName,
-        hits,
-        power
-      })}</p></div>`
+      content: cardHtml({
+        variant: "time-card",
+        icon: "biohazard",
+        title: esc(toxinName),
+        subtitle: esc(actor.name),
+        body: line(game.i18n.format("SRX.Time.toxinResisted", {
+          name: esc(actor.name),
+          toxin: esc(toxinName),
+          hits,
+          power
+        }), "success")
+      })
     });
   }
 
@@ -159,12 +168,18 @@ export async function runToxinResistance(actor, {
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-    content: `<div class="srx chat-card"><p class="failure">${game.i18n.format("SRX.Time.toxinFailed", {
-      name: actor.name,
-      toxin: toxinName,
-      hits,
-      power
-    })}</p></div>`
+    content: cardHtml({
+      variant: "time-card",
+      icon: "biohazard",
+      title: esc(toxinName),
+      subtitle: esc(actor.name),
+      body: line(game.i18n.format("SRX.Time.toxinFailed", {
+        name: esc(actor.name),
+        toxin: esc(toxinName),
+        hits,
+        power
+      }), "failure")
+    })
   });
 }
 
@@ -253,10 +268,14 @@ async function fireTimedEffect(effect) {
       await actor.toggleStatusEffect("sick", { active: false }).catch(() => null);
       await foundry.documents.ChatMessage.create({
         speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-        content: `<div class="srx chat-card"><p>${game.i18n.format("SRX.Time.toxinExpired", {
-          name: actor.name,
-          toxin: effect.payload.toxinName ?? effect.label
-        })}</p></div>`
+        content: noticeCard({
+          variant: "time-card",
+          icon: "hourglass-end",
+          text: game.i18n.format("SRX.Time.toxinExpired", {
+            name: esc(actor.name),
+            toxin: esc(effect.payload.toxinName ?? effect.label)
+          })
+        })
       });
       return null;
     }
