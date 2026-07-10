@@ -1,0 +1,32 @@
+<form autocomplete="off" class="srx host-sheet">
+  <header class="sheet-header">
+    <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64" alt="">
+    <h1><input name="name" type="text" value="{{actor.name}}" placeholder="Host name"></h1>
+  </header>
+
+  <div class="sheet-body">
+    <h2>Matrix Host</h2>
+    <div class="grid grid-2col">
+      <label>Host Rating
+        <input type="number" name="system.hostRating" value="{{system.hostRating}}" min="1" step="1">
+      </label>
+      <label>Type
+        <select name="system.type">
+          <option value="wireless" {{#if (srxEq system.type "wireless")}}selected{{/if}}>Wireless</option>
+          <option value="wired" {{#if (srxEq system.type "wired")}}selected{{/if}}>Wired</option>
+        </select>
+      </label>
+    </div>
+
+    <h3>Baseline attributes (from rating / overrides)</h3>
+    <div class="grid grid-4col">
+      <div><label>Attack</label><div>{{attributes.attack}}</div></div>
+      <div><label>Sleaze</label><div>{{attributes.sleaze}}</div></div>
+      <div><label>Data Proc</label><div>{{attributes.dataProcessing}}</div></div>
+      <div><label>Firewall</label><div>{{attributes.firewall}}</div></div>
+    </div>
+
+    <h3>IC ladder</h3>
+    <p class="notes">{{icCount}} OS threshold row(s). Full IC ladder play is a later milestone.</p>
+  </div>
+</form>

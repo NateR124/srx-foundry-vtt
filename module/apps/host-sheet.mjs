@@ -1,33 +1,40 @@
-const { DocumentSheetV2 } = foundry.applications.api;
+const { HandlebarsApplicationMixin } = foundry.applications.api;
+const { ActorSheetV2 } = foundry.applications.sheets;
 
-export class SrxHostSheet extends DocumentSheetV2 {
+/**
+ * Minimal matrix host actor sheet (M9 seed).
+ */
+export class SrxHostSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   static DEFAULT_OPTIONS = {
-    classes: ["srx", "sheet", "actor", "host"],
+    classes: ["srx", "sheet", "host"],
     position: { width: 500, height: 600 },
-    actions: {}
+    window: { resizable: true },
+    form: { submitOnChange: true }
   };
 
   static PARTS = {
-    header: { template: "systems/srx/templates/apps/actor-header.hbs" },
-    body: { template: "systems/srx/templates/apps/actor-host-sheet.hbs" }
+    body: {
+      template: "systems/srx/templates/actor/host-sheet.hbs"
+    }
   };
 
+  /** @override */
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
     const actor = this.document;
     const sys = actor.system;
-
+    context.actor = actor;
     context.system = sys;
-    context.rating = sys.hostRating;
-    
-    // Core Matrix attributes derived from rating for SRX rules
+    const rating = Number(sys.hostRating) || 0;
+    // SRX hosts often use rating as the baseline for ASPD attributes until overrides exist
     context.attributes = {
-      attack: sys.hostRating,
-      sleaze: sys.hostRating,
-      dataProcessing: sys.hostRating,
-      firewall: sys.hostRating
+      attack: sys.overrides?.weaponsCyberware ?? rating,
+      sleaze: sys.overrides?.alarmsDoors ?? rating,
+      dataProcessing: sys.overrides?.filesDatabases ?? rating,
+      firewall: sys.overrides?.systemAdministration ?? rating
     };
-
+    context.icLadder = Array.isArray(sys.icLadder) ? sys.icLadder : [];
+    context.icCount = context.icLadder.length;
     return context;
   }
 }

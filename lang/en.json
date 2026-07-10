@@ -173,6 +173,7 @@
   "SRX.Import.noFiles": "No files selected.",
   "SRX.Import.gmOnly": "Only the GM can import catalog content.",
   "SRX.Import.done": "Import finished — {count} items created.",
+  "SRX.Import.jsonActors": "JSON files may be pregen character exports or threat catalogs (in addition to .txt.deploy catalog files).",
 
   "SRX.Item.summary": "Summary",
   "SRX.Item.description": "Description",
