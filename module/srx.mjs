@@ -19,6 +19,7 @@ import { registerLifecycleChatHooks } from "./combat/lifecycle.mjs";
 import { registerAoeChatHooks } from "./combat/aoe.mjs";
 import { registerTimedHooks } from "./time/scheduler.mjs";
 import { registerSocket } from "./net/socket.mjs";
+// TODO(integrate): import { registerHealingHooks } from "./combat/healing.mjs";
 import * as aoeRules from "./rules/aoe.mjs";
 import { SRXRoll } from "./dice/srx-roll.mjs";
 import { SrxCharacterSheet } from "./apps/actor-sheet.mjs";
@@ -105,6 +106,7 @@ Hooks.once("ready", () => {
   registerLifecycleChatHooks();
   registerAoeChatHooks();
   registerTimedHooks();
+  // TODO(integrate): registerHealingHooks();
   console.log("SRX | Ready (M2 combat pipeline active)");
 });
 
