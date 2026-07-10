@@ -35,7 +35,9 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
       magicNegate: SrxCharacterSheet.#onMagicNegate,
       magicAegis: SrxCharacterSheet.#onMagicAegis,
       magicAssense: SrxCharacterSheet.#onMagicAssense,
-      endSustain: SrxCharacterSheet.#onEndSustain
+      endSustain: SrxCharacterSheet.#onEndSustain,
+      toggleMode: SrxCharacterSheet.#onToggleMode,
+      toggleFocusActive: SrxCharacterSheet.#onToggleFocusActive
     }
   };
 
@@ -45,17 +47,48 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
 
   #activeTab = "main";
 
+  /**
+   * Play/Build mode (UX-FIELD-CLASSIFICATION): Play is the cockpit — intent
+   * buttons and readouts; Build exposes the Cold/Internal inputs. Remembered
+   * per actor per client (a mode is a viewing preference, not actor data).
+   */
+  #mode = null;
+
+  get sheetMode() {
+    if (this.#mode) return this.#mode;
+    try {
+      this.#mode = window.localStorage.getItem(`srx.sheetMode.${this.document.id}`) ?? "play";
+    } catch (_e) {
+      this.#mode = "play";
+    }
+    return this.#mode;
+  }
+
   /** @override */
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
     const actor = this.document;
     const sys = actor.system;
 
+    const mode = this.isEditable ? this.sheetMode : "play";
+    const isBuild = mode === "build";
+
+    // Magic tab is hidden for Magic 0 (Build still shows it so the tab is
+    // reachable while setting a caster up)
+    const showMagicTab = (sys.special.magic.value ?? 0) > 0 || isBuild;
+    if (!showMagicTab && this.#activeTab === "magic") this.#activeTab = "main";
+
     context.actor = actor;
     context.system = sys;
     context.config = SRX;
     context.activeTab = this.#activeTab;
     context.editable = this.isEditable;
+    context.mode = mode;
+    context.isBuild = isBuild;
+    context.showMagicTab = showMagicTab;
+    context.metatypeLabel = game.i18n.localize(
+      (SRX.metatypes[sys.details.metatype] ?? SRX.metatypes.human).label
+    );
 
     context.attributes = Object.entries(SRX.attributes).map(([key, def]) => {
       const attr = sys.attributes[key];
@@ -448,6 +481,24 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
     if (!id) return null;
     const { endSustained } = await import("../magic/sustain.mjs");
     await endSustained(this.document, id);
+    return this.render();
+  }
+
+  /** Flip between the Play cockpit and the Build (edit-everything) view. */
+  static async #onToggleMode() {
+    const next = this.sheetMode === "play" ? "build" : "play";
+    this.#mode = next;
+    try {
+      window.localStorage.setItem(`srx.sheetMode.${this.document.id}`, next);
+    } catch (_e) { /* private browsing — keep in-memory only */ }
+    return this.render();
+  }
+
+  /** Intent toggle: activate/deactivate a focus (UX classification §K). */
+  static async #onToggleFocusActive(_event, target) {
+    const item = this.document.items.get(target.dataset.itemId);
+    if (!item || item.type !== "focus") return null;
+    await item.update({ "system.active": !item.system.active });
     return this.render();
   }
 }

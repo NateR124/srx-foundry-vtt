@@ -28,7 +28,12 @@ function resolvePlaywright() {
 const { chromium } = resolvePlaywright();
 
 const URL = "http://localhost:30000";
-const BATCHES = ["srx.combat.integration", "srx.magic.integration", "srx.import.integration"];
+const BATCHES = [
+  "srx.combat.integration",
+  "srx.magic.integration",
+  "srx.sheet.integration",
+  "srx.import.integration"
+];
 
 const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });

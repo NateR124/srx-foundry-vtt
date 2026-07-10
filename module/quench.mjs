@@ -252,6 +252,67 @@ export function registerQuenchTests(quench) {
     { displayName: "SRX: Magic integration (gates, sustain, conjuring)" }
   );
 
+  quench.registerBatch("srx.sheet.integration",
+    (context) => {
+      const { describe, it, expect, after } = context;
+      after(cleanup);
+
+      describe("Play/Build mode", function () {
+        this.timeout(30000);
+        let actor, sheet;
+
+        it("renders in Play mode by default: no base/rating inputs", async () => {
+          actor = await makeCharacter("Quench Sheet Char", {
+            system: { special: { magic: { base: 3 } } }
+          });
+          try {
+            window.localStorage.removeItem(`srx.sheetMode.${actor.id}`);
+          } catch (_e) { /* ignore */ }
+          sheet = actor.sheet;
+          await sheet.render(true);
+          await new Promise((r) => setTimeout(r, 300));
+          const root = sheet.element.querySelector(".character-sheet-body");
+          expect(root.classList.contains("mode-play")).to.equal(true);
+          expect(sheet.element.querySelector("input[name='system.attributes.bod.base']")).to.equal(null);
+          expect(sheet.element.querySelector("input[name='system.skills.firearms.rating']")).to.equal(null);
+          expect(sheet.element.querySelector("input[name='system.derivedMods.armor']")).to.equal(null);
+          // Chrome strip present with monitors + edge pips
+          expect(sheet.element.querySelector(".chrome-strip .monitor")).to.not.equal(null);
+          expect(sheet.element.querySelector(".chrome-strip .pip")).to.not.equal(null);
+          // Caster → magic tab visible
+          expect(sheet.element.querySelector("[data-tab='magic']")).to.not.equal(null);
+        });
+
+        it("Build mode exposes the Cold/Internal inputs", async () => {
+          sheet.element.querySelector("[data-action='toggleMode']").click();
+          await new Promise((r) => setTimeout(r, 400));
+          const root = sheet.element.querySelector(".character-sheet-body");
+          expect(root.classList.contains("mode-build")).to.equal(true);
+          expect(sheet.element.querySelector("input[name='system.attributes.bod.base']")).to.not.equal(null);
+          expect(sheet.element.querySelector("input[name='system.skills.firearms.rating']")).to.not.equal(null);
+          expect(sheet.element.querySelector("select[name='system.details.metatype']")).to.not.equal(null);
+          // Back to play for cleanliness
+          sheet.element.querySelector("[data-action='toggleMode']").click();
+          await new Promise((r) => setTimeout(r, 300));
+          await sheet.close();
+        });
+
+        it("Magic 0 hides the Magic tab in Play mode", async () => {
+          const mundane = await makeCharacter("Quench Sheet Mundane");
+          try {
+            window.localStorage.removeItem(`srx.sheetMode.${mundane.id}`);
+          } catch (_e) { /* ignore */ }
+          const s = mundane.sheet;
+          await s.render(true);
+          await new Promise((r) => setTimeout(r, 300));
+          expect(s.element.querySelector("[data-tab='magic']")).to.equal(null);
+          await s.close();
+        });
+      });
+    },
+    { displayName: "SRX: Sheet integration (Play/Build modes)" }
+  );
+
   quench.registerBatch("srx.import.integration",
     (context) => {
       const { describe, it, expect, after } = context;

@@ -39,6 +39,63 @@
 .srx .header-row input[type="number"] { width: 70px; }
 .srx .item-type { font-size: 0.8em; opacity: 0.7; align-self: center; }
 
+/* ---------- Play/Build mode ---------- */
+.srx .name-row { display: flex; align-items: center; gap: 8px; }
+.srx .mode-toggle {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 10px;
+  border: 1px solid var(--color-border, #888);
+  border-radius: 12px;
+  font-size: 0.72em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  opacity: 0.85;
+}
+.srx .mode-toggle:hover { opacity: 1; }
+.srx .mode-toggle.building {
+  background: var(--color-warm-2, #b8342c);
+  color: #fff;
+  border-color: var(--color-warm-2, #b8342c);
+}
+.srx .play-identity { align-items: center; }
+.srx .identity-tag {
+  padding: 1px 8px;
+  border: 1px solid var(--color-border, #888);
+  border-radius: 10px;
+  font-size: 0.95em;
+  opacity: 0.85;
+}
+.srx .play-identity .nuyen { margin-left: auto; }
+.srx .bio-identity { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+
+/* ---------- Chrome strip (monitors + edge + banners, all tabs) ---------- */
+.srx .chrome-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px 20px;
+  padding: 6px 8px;
+  margin-bottom: 6px;
+  border: 1px solid var(--color-border, #88888855);
+  border-radius: 6px;
+  background: #00000012;
+}
+.srx .chrome-monitors { display: flex; flex-wrap: wrap; gap: 4px 20px; flex: 1; }
+.srx .chrome-strip .monitor { margin: 0; }
+.srx .chrome-edge { display: flex; align-items: center; gap: 6px; padding-top: 2px; }
+.srx .chrome-edge .edge-label {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.srx .chrome-edge input { width: 40px; }
+.srx .chrome-strip .state-banner { flex-basis: 100%; margin: 0; }
+.srx .system-shock.display { font-size: 0.75em; opacity: 0.8; }
+
 /* ---------- Tabs ---------- */
 .srx .sheet-tabs {
   display: flex;
@@ -64,10 +121,14 @@
 /* ---------- Main grid ---------- */
 .srx .main-grid {
   display: grid;
-  grid-template-columns: 200px 1fr 260px;
+  grid-template-columns: 300px 1fr;
   gap: 14px;
 }
-.srx .col h3 {
+.srx .col h3,
+.srx .magic-panel h3,
+.srx .tab-talents h3,
+.srx .tab-gear h3,
+.srx .bio-grid h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,6 +147,17 @@
   padding: 1px 0;
 }
 .srx .attribute-row .aug { opacity: 0.75; font-variant-numeric: tabular-nums; }
+
+/* Play cockpit: no base inputs — the augmented value IS the number */
+.srx .mode-play .attribute-row { grid-template-columns: 1fr 44px; }
+.srx .mode-play .attribute-row .aug {
+  opacity: 1;
+  font-weight: 700;
+  font-size: 1.15em;
+  text-align: right;
+}
+.srx .mode-play .attribute-row .rollable { font-weight: 600; }
+.srx .mode-play .skills-table .pool { font-size: 1.05em; }
 
 .srx .rollable { cursor: pointer; }
 .srx .rollable:hover { text-shadow: 0 0 6px var(--color-shadow-primary, #ff6666); }
