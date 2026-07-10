@@ -75,6 +75,13 @@ export class SrxCatalogImportApp extends HandlebarsApplicationMixin(ApplicationV
     const byName = Object.fromEntries(this.#files.map((f) => [f.name, f]));
     let totalCreated = 0;
 
+    const knownFiles = new Set(Object.keys(CATALOG_FILES));
+    for (const filename of Object.keys(byName)) {
+      if (!knownFiles.has(filename)) {
+        this.#log.push(`Skip unknown file: ${filename}`);
+      }
+    }
+
     for (const [filename, def] of Object.entries(CATALOG_FILES)) {
       const file = byName[filename];
       if (!file) {
@@ -103,7 +110,8 @@ export class SrxCatalogImportApp extends HandlebarsApplicationMixin(ApplicationV
           name: e.name,
           type: e.type,
           folder: folder.id,
-          system: e.system
+          system: e.system,
+          flags: e.flags || {}
         }));
         const CHUNK = 50;
         for (let i = 0; i < docs.length; i += CHUNK) {

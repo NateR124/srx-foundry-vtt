@@ -166,10 +166,9 @@ export function parseTalents(text) {
   });
 }
 
+import { catalogParsers } from "./full/index.mjs";
+
 /** Map builder filenames to parsers. */
 export const CATALOG_FILES = {
-  "Weapons.txt.deploy": { parser: parseWeapons, packLabel: "SRX Weapons", itemType: "weapon" },
-  "Armor.txt.deploy": { parser: parseArmor, packLabel: "SRX Armor", itemType: "armor" },
-  "Gear.txt.deploy": { parser: parseGear, packLabel: "SRX Gear", itemType: "gear" },
-  "Talents.txt.deploy": { parser: parseTalents, packLabel: "SRX Talents", itemType: "talent" }
+  ...catalogParsers
 };
