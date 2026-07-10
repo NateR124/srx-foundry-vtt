@@ -2,6 +2,7 @@ import { SRX } from "../config.mjs";
 import { SRXRoll } from "../dice/srx-roll.mjs";
 import { promptRollConfig } from "../apps/roll-dialog.mjs";
 import { evaluateDv } from "../rules/formulas.mjs";
+import { postAttackOutcome } from "../combat/pipeline.mjs";
 
 export class SrxActor extends foundry.documents.Actor {
   /** @override — flat keys for roll formulas (initiative: (@qui)d6 + @accel). */
@@ -24,7 +25,7 @@ export class SrxActor extends foundry.documents.Actor {
     return game.i18n.localize(key);
   }
 
-  /** Shared roll-flow: dialog → SRXRoll → chat. */
+  /** Shared roll-flow: dialog → SRXRoll → chat. Returns the ChatMessage. */
   async #rollPool({ title, parts, threshold = null, thresholdLabel = "", flavor = "", extraContext = {} }) {
     const config = await promptRollConfig({ title, parts, threshold, thresholdLabel });
     if (!config) return null;
@@ -45,7 +46,24 @@ export class SrxActor extends foundry.documents.Actor {
         "systems/srx/templates/chat/buy-hits-card.hbs",
         { title, pool: config.pool, hits: config.buyHits, threshold: config.threshold }
       );
-      return foundry.documents.ChatMessage.create({ speaker, content });
+      const msg = await foundry.documents.ChatMessage.create({ speaker, content });
+      // Synthetic srx result for buy-hits so attack pipeline can continue
+      msg.rolls = [{
+        srx: {
+          hits: config.buyHits,
+          tn: config.tn ?? 5,
+          baseHits: config.buyHits,
+          critBonus: 0,
+          hitMods: 0,
+          isCrit: false,
+          isGlitch: false,
+          isCriticalGlitch: false,
+          threshold: config.threshold,
+          success: config.threshold != null ? config.buyHits >= config.threshold : null,
+          netHits: config.threshold != null ? config.buyHits - config.threshold : null
+        }
+      }];
+      return msg;
     }
 
     const roll = SRXRoll.fromPool({
@@ -109,6 +127,7 @@ export class SrxActor extends foundry.documents.Actor {
   /**
    * Weapon attack: skill + AGI + mode accuracy, threshold = target's Defense
    * Score when exactly one token is targeted (tie = hit, p. 120).
+   * On a hit, posts an attack-outcome card with Resist / Apply buttons.
    */
   async rollWeaponAttack(item, modeIndex = 0) {
     if (item.type !== "weapon") return null;
@@ -120,17 +139,23 @@ export class SrxActor extends foundry.documents.Actor {
     const attrKey = def?.linked ?? "agi";
     const attr = this.system.attributes[attrKey];
 
-    // Target Defense Score as threshold, if a single target is selected.
+    let defender = null;
     let threshold = null;
     const targets = [...(game.user?.targets ?? [])];
-    if (targets.length === 1) threshold = targets[0].actor?.system?.derived?.defenseScore ?? null;
+    if (targets.length === 1) {
+      defender = targets[0].actor;
+      threshold = defender?.effectiveDefenseScore
+        ?? defender?.system?.derived?.defenseScore
+        ?? defender?.system?.defenseScore
+        ?? null;
+    }
 
     const dv = evaluateDv(mode.dv, {
       bod: this.system.attributes.bod.value,
       agi: this.system.attributes.agi.value
     }, { min: mode.dvMin, max: mode.dvMax });
 
-    return this.#rollPool({
+    const msg = await this.#rollPool({
       title: `${item.name}${mode.name ? ` (${mode.name})` : ""}`,
       parts: [
         { label: this.#label(SRX.attributes[attrKey]?.label ?? "SRX.Attribute.agi"), value: attr?.value ?? 0 },
@@ -147,6 +172,71 @@ export class SrxActor extends foundry.documents.Actor {
         action: mode.action
       }
     });
+
+    // Extract roll result from the chat message for the outcome card
+    if (defender && msg?.rolls?.[0]) {
+      const roll = msg.rolls[0];
+      const result = roll.srx ?? null;
+      if (result) {
+        await postAttackOutcome({
+          attacker: this,
+          defender,
+          item,
+          mode,
+          rollResult: result,
+          baseDv: dv,
+          dvType: mode.dvType || "P",
+          element: mode.element || "",
+          aoe: /aoe/i.test(mode.name || "")
+        });
+      }
+    }
+    return msg;
+  }
+
+  /** Threat flat-pool attack against a targeted token. */
+  async rollThreatAttack(index = 0) {
+    if (this.type !== "threat") return null;
+    const atk = this.system.attacks[index];
+    if (!atk) return null;
+
+    let defender = null;
+    let threshold = null;
+    const targets = [...(game.user?.targets ?? [])];
+    if (targets.length === 1) {
+      defender = targets[0].actor;
+      threshold = defender?.effectiveDefenseScore
+        ?? defender?.system?.derived?.defenseScore
+        ?? defender?.system?.defenseScore
+        ?? null;
+    }
+
+    const msg = await this.#rollPool({
+      title: `${this.name}: ${atk.name}`,
+      parts: [{ label: atk.name, value: atk.pool }],
+      threshold,
+      thresholdLabel: game.i18n.localize("SRX.Roll.targetDefense"),
+      extraContext: {
+        dv: atk.dv,
+        dvType: atk.dvType,
+        element: atk.element,
+        action: atk.action
+      }
+    });
+
+    if (defender && msg?.rolls?.[0]?.srx) {
+      await postAttackOutcome({
+        attacker: this,
+        defender,
+        item: { name: atk.name },
+        mode: atk,
+        rollResult: msg.rolls[0].srx,
+        baseDv: atk.dv,
+        dvType: atk.dvType || "P",
+        element: atk.element || ""
+      });
+    }
+    return msg;
   }
 
   /** Damage resistance: Body + Armor, tagged for AOE Defense-Score bonus later (M2). */

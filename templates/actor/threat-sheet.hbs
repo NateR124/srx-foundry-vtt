@@ -1,0 +1,73 @@
+<div class="srx threat-sheet-body">
+  <header class="sheet-header">
+    <img class="portrait" src="{{actor.img}}" data-action="editImage" data-edit="img" alt="{{actor.name}}">
+    <div class="header-fields">
+      <input class="charname" type="text" name="name" value="{{actor.name}}">
+      <div class="header-row">
+        <label>{{localize "SRX.Threat.rating"}}
+          <input type="number" name="system.threatRating" value="{{system.threatRating}}" min="1" max="6">
+        </label>
+        <label>{{localize "SRX.Derived.defenseScore"}}
+          <input type="number" name="system.defenseScore" value="{{system.defenseScore}}" min="1">
+        </label>
+        <label>{{localize "SRX.Threat.body"}}
+          <input type="number" name="system.body" value="{{system.body}}" min="1">
+        </label>
+        <label>{{localize "SRX.Item.armor"}}
+          <input type="number" name="system.armor" value="{{system.armor}}" min="0">
+        </label>
+        <label>{{localize "SRX.Item.hardened"}}
+          <input type="number" name="system.hardened" value="{{system.hardened}}" min="0">
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h3>{{localize "SRX.Threat.initiative"}}</h3>
+    <div class="form-row">
+      <label>{{localize "SRX.Threat.initDice"}}
+        <input type="number" name="system.initiative.dice" value="{{system.initiative.dice}}" min="0">
+      </label>
+      <label>{{localize "SRX.Derived.accelerator"}}
+        <input type="number" name="system.initiative.bonus" value="{{system.initiative.bonus}}">
+      </label>
+      <label>{{localize "SRX.Attribute.rea"}}
+        <input type="number" name="system.reaction" value="{{system.reaction}}" min="0">
+      </label>
+    </div>
+
+    <h3>{{localize "SRX.Sheet.monitors"}}</h3>
+    <div class="form-row">
+      <label>{{localize "SRX.Threat.damage"}}
+        <input type="number" name="system.health.value" value="{{system.health.value}}" min="0">
+      </label>
+      <label>{{localize "SRX.Threat.healthMax"}}
+        <input type="number" name="system.health.max" value="{{system.health.max}}" min="1">
+      </label>
+      <label>{{localize "SRX.Derived.woundedLimit"}}
+        <input type="number" name="system.woundedLimit" value="{{system.woundedLimit}}" min="1">
+      </label>
+    </div>
+    {{#if system.derived.wounded}}<p class="state-banner wounded">{{localize "SRX.State.wounded"}}</p>{{/if}}
+    {{#if system.derived.defeated}}<p class="state-banner dead">{{localize "SRX.State.dead"}}</p>{{/if}}
+
+    <h3>{{localize "SRX.Sheet.weapons"}}</h3>
+    <ul class="item-list">
+      {{#each attacks}}
+      <li>
+        <span class="item-name">{{this.name}}</span>
+        <span class="modes">
+          <a class="rollable mode" data-action="rollAttack" data-index="{{this.idx}}">
+            {{this.pool}}d · {{this.dv}}{{this.dvType}}
+          </a>
+        </span>
+      </li>
+      {{/each}}
+    </ul>
+    <p class="hint">{{localize "SRX.Threat.attacksHint"}}</p>
+
+    <h3>{{localize "SRX.Sheet.biography"}}</h3>
+    <textarea name="system.notes" rows="4">{{system.notes}}</textarea>
+  </section>
+</div>

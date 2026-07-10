@@ -25,6 +25,9 @@
     "Actor": {
       "character": {
         "htmlFields": ["details.biography"]
+      },
+      "threat": {
+        "htmlFields": ["notes"]
       }
     },
     "Item": {

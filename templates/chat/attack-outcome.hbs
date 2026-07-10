@@ -1,0 +1,27 @@
+<div class="srx chat-card attack-outcome">
+  <header class="card-header">
+    <h3>{{localize "SRX.Combat.hit"}}</h3>
+  </header>
+  <p>
+    <b>{{attackerName}}</b> → <b>{{defenderName}}</b>
+    {{#if weaponName}}({{weaponName}}){{/if}}
+  </p>
+  <div class="result-row">
+    <span>{{hits}} {{localize "SRX.Roll.hits"}} vs DS {{defenseScore}}</span>
+    <span class="detail">{{localize "SRX.Combat.netHits"}}: {{netHits}}</span>
+  </div>
+  <div class="dv-row">
+    {{localize "SRX.Item.dv"}}:
+    <b>{{totalDv}}{{dvType}}</b>
+    {{#if element}}<span class="element">{{element}}</span>{{/if}}
+    {{#if aoe}}<span class="fire-mode">AOE</span>{{/if}}
+  </div>
+  <div class="combat-actions">
+    <button type="button" class="srx-combat-btn" data-combat-action="resist">
+      {{localize "SRX.Combat.resist"}}
+    </button>
+    <button type="button" class="srx-combat-btn" data-combat-action="applyUnresisted">
+      {{localize "SRX.Combat.applyUnresisted"}}
+    </button>
+  </div>
+</div>

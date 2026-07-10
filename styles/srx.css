@@ -346,3 +346,24 @@
   padding: 6px;
   border-radius: 4px;
 }
+
+/* ---------- Combat chat ---------- */
+.srx.chat-card.attack-outcome .combat-actions,
+.srx.chat-card .combat-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+.srx.chat-card .srx-combat-btn {
+  font-size: 0.8em;
+  padding: 2px 8px;
+  height: auto;
+  width: auto;
+}
+
+/* ---------- Threat sheet ---------- */
+.srx.threat-sheet-body .hint {
+  font-size: 0.8em;
+  opacity: 0.75;
+}

@@ -5,13 +5,19 @@
 
 import { SRX } from "./config.mjs";
 import { CharacterData } from "./data/actor-character.mjs";
+import { ThreatData } from "./data/actor-threat.mjs";
 import {
   WeaponData, ArmorData, GearData, TalentData, TraitData, ContactData, KnowledgeData
 } from "./data/items.mjs";
 import { SrxActor } from "./documents/actor.mjs";
 import { SrxItem } from "./documents/item.mjs";
+import { SrxCombat, SrxCombatant, registerCombatHooks } from "./combat/combat.mjs";
+import { registerStatusEffects } from "./combat/statuses.mjs";
+import { registerPipelineHooks } from "./combat/pipeline.mjs";
+import { registerSocket } from "./net/socket.mjs";
 import { SRXRoll } from "./dice/srx-roll.mjs";
 import { SrxCharacterSheet } from "./apps/actor-sheet.mjs";
+import { SrxThreatSheet } from "./apps/threat-sheet.mjs";
 import { SrxItemSheet } from "./apps/item-sheet.mjs";
 import { registerVisionModes } from "./canvas/vision.mjs";
 import { registerDiceSoNice, styleSrxDice } from "./dice/dice-so-nice.mjs";
@@ -25,19 +31,23 @@ import {
 import { registerImportSettings, openCatalogImport } from "./import/import-app.mjs";
 import * as rules from "./rules/dice.mjs";
 import * as derived from "./rules/derived.mjs";
+import * as combatRules from "./rules/combat.mjs";
 
 Hooks.once("init", () => {
   console.log("SRX | Initializing Shadowrun Edition X system");
 
   CONFIG.SRX = SRX;
-  game.srx = { SRXRoll, rules, derived, openCatalogImport };
+  game.srx = { SRXRoll, rules, derived, combatRules, openCatalogImport };
 
   // Documents
   CONFIG.Actor.documentClass = SrxActor;
   CONFIG.Item.documentClass = SrxItem;
+  CONFIG.Combat.documentClass = SrxCombat;
+  CONFIG.Combatant.documentClass = SrxCombatant;
 
   // Data models
   CONFIG.Actor.dataModels.character = CharacterData;
+  CONFIG.Actor.dataModels.threat = ThreatData;
   CONFIG.Item.dataModels.weapon = WeaponData;
   CONFIG.Item.dataModels.armor = ArmorData;
   CONFIG.Item.dataModels.gear = GearData;
@@ -49,10 +59,11 @@ Hooks.once("init", () => {
   // Dice
   CONFIG.Dice.rolls.push(SRXRoll);
 
-  // Initiative: (Quickness)d6 summed + Accelerator. Multi-pass handling is M2.
-  CONFIG.Combat.initiative = { formula: "(@qui)d6 + @accel", decimals: 0 };
+  // Initiative formula (Combatant._getInitiativeRoll overrides for sum logic)
+  CONFIG.Combat.initiative = { formula: "1d6", decimals: 0 };
 
-  // Vision / detection modes (low-light, thermo, ultrasound)
+  // Status effects + vision
+  registerStatusEffects();
   registerVisionModes();
 
   // Sheets
@@ -60,9 +71,12 @@ Hooks.once("init", () => {
   Actors.registerSheet("srx", SrxCharacterSheet, {
     types: ["character"], makeDefault: true, label: "SRX.Sheet.character"
   });
+  Actors.registerSheet("srx", SrxThreatSheet, {
+    types: ["threat"], makeDefault: true, label: "SRX.Sheet.threat"
+  });
   Items.registerSheet("srx", SrxItemSheet, { makeDefault: true, label: "SRX.Sheet.item" });
 
-  // Handlebars helpers (srx-prefixed to avoid collisions)
+  // Handlebars helpers
   Handlebars.registerHelper({
     srxEq: (a, b) => a === b,
     srxGte: (a, b) => Number(a) >= Number(b),
@@ -78,7 +92,14 @@ Hooks.once("setup", () => {
   registerImportSettings();
 });
 
-/** Dice So Nice — Crit Dice material/edge distinct from pool dice. */
+Hooks.once("ready", () => {
+  registerSocket();
+  registerCombatHooks();
+  registerPipelineHooks();
+  console.log("SRX | Ready (M2 combat pipeline active)");
+});
+
+/** Dice So Nice */
 Hooks.once("diceSoNiceReady", (dice3d) => {
   registerDiceSoNice(dice3d);
 });
@@ -87,17 +108,13 @@ Hooks.on("diceSoNiceRollStart", (messageId, context) => {
   styleSrxDice(messageId, context);
 });
 
-/**
- * Edge talent buttons on roll chat cards.
- * Uses renderChatMessageHTML (HTMLElement, not jQuery) per v13+ API.
- */
+/** Edge talent buttons on roll chat cards */
 Hooks.on("renderChatMessageHTML", (message, html) => {
   const root = html instanceof HTMLElement ? html : html?.[0];
   if (!root) return;
   const card = root.querySelector?.(".srx.roll-card") ?? root.querySelector?.(".srx.chat-card.roll-card");
   if (!card) return;
 
-  // Hide Edge buttons if already spent
   if (!canSpendEdgeOnMessage(message)) {
     card.querySelectorAll(".edge-actions").forEach((el) => {
       el.classList.add("spent");
