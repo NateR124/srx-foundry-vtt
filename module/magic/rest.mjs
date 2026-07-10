@@ -60,6 +60,13 @@ export async function restActor(actor = null) {
   if (result.clearSustained) {
     await endAllSustained(a);
   }
+  // Full rest resets astral projection budget
+  if (kind === "full") {
+    await a.setFlag("srx", "projectionMinutesUsed", 0);
+    if ((a.getFlag("srx", "astralState") ?? "physical") === "projecting") {
+      await a.setFlag("srx", "astralState", "physical");
+    }
+  }
 
   return foundry.documents.ChatMessage.create({
     speaker: foundry.documents.ChatMessage.getSpeaker({ actor: a }),

@@ -45,6 +45,7 @@
     <a class="{{#if (srxEq activeTab 'main')}}active{{/if}}" data-action="selectTab" data-tab="main">{{localize "SRX.Tab.main"}}</a>
     <a class="{{#if (srxEq activeTab 'talents')}}active{{/if}}" data-action="selectTab" data-tab="talents">{{localize "SRX.Tab.talents"}}</a>
     <a class="{{#if (srxEq activeTab 'gear')}}active{{/if}}" data-action="selectTab" data-tab="gear">{{localize "SRX.Tab.gear"}}</a>
+    <a class="{{#if (srxEq activeTab 'magic')}}active{{/if}}" data-action="selectTab" data-tab="magic">{{localize "SRX.Tab.magic"}}</a>
     <a class="{{#if (srxEq activeTab 'bio')}}active{{/if}}" data-action="selectTab" data-tab="bio">{{localize "SRX.Tab.bio"}}</a>
   </nav>
 
@@ -274,6 +275,57 @@
       </li>
       {{/each}}
     </ul>
+  </section>
+
+  {{!-- MAGIC TAB --}}
+  <section class="tab-magic {{#unless (srxEq activeTab 'magic')}}hidden{{/unless}}">
+    <div class="magic-panel">
+      <p class="detail">{{localize "SRX.Magic.sheetHint"}}
+        · Magic <b>{{system.special.magic.value}}</b>
+        · Astral: <b>{{magic.astralState}}</b>
+        · Qi uses: <b>{{magic.qiUses}}</b>
+        · Sustaining: <b>{{magic.sustainCount}}</b>
+      </p>
+      <div class="magic-actions form-row">
+        <button type="button" data-action="magicRest">{{localize "SRX.Rest.title"}}</button>
+        <button type="button" data-action="magicPerceive">{{localize "SRX.Astral.perceptionToggle"}}</button>
+        <button type="button" data-action="magicProject">{{localize "SRX.Astral.projectionToggle"}}</button>
+        <button type="button" data-action="magicQi">{{localize "SRX.Qi.use"}}</button>
+        <button type="button" data-action="magicSummon">{{localize "SRX.Conjure.summonSpirit"}}</button>
+        <button type="button" data-action="magicBind">{{localize "SRX.Conjure.bindElemental"}}</button>
+        <button type="button" data-action="magicNegate">{{localize "SRX.Mysticism.negate"}}</button>
+        <button type="button" data-action="magicAegis">{{localize "SRX.Mysticism.aegis"}}</button>
+        <button type="button" data-action="magicAssense">{{localize "SRX.Astral.assense"}}</button>
+      </div>
+      <h3>{{localize "SRX.Sheet.spells"}}
+        <a class="item-control" data-action="createItem" data-type="spell"><i class="fa-solid fa-plus"></i></a>
+      </h3>
+      <ul class="item-list spells">
+        {{#each items.spells}}
+        <li>
+          <span class="item-name" data-action="editItem" data-item-id="{{this.id}}">{{this.name}}</span>
+          <span class="summary">{{this.system.category}} · {{this.system.pattern}}</span>
+          <a class="rollable" data-action="castSpell" data-item-id="{{this.id}}">{{localize "SRX.Magic.cast"}}</a>
+          <a class="item-control" data-action="deleteItem" data-item-id="{{this.id}}"><i class="fa-solid fa-trash"></i></a>
+        </li>
+        {{/each}}
+      </ul>
+      <h3>{{localize "SRX.Sheet.foci"}}
+        <a class="item-control" data-action="createItem" data-type="focus"><i class="fa-solid fa-plus"></i></a>
+      </h3>
+      <ul class="item-list foci">
+        {{#each items.foci}}
+        <li>
+          <span class="item-name" data-action="editItem" data-item-id="{{this.id}}">{{this.name}}</span>
+          <span class="summary">F{{this.system.force}} · {{this.system.focusType}}
+            {{#if this.system.active}}· active{{/if}}
+            {{#if this.system.bonded}}· bonded{{/if}}
+          </span>
+          <a class="item-control" data-action="deleteItem" data-item-id="{{this.id}}"><i class="fa-solid fa-trash"></i></a>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
   </section>
 
   {{!-- BIO TAB --}}

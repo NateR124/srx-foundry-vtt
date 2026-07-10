@@ -24,7 +24,17 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
       createItem: SrxCharacterSheet.#onCreateItem,
       editItem: SrxCharacterSheet.#onEditItem,
       deleteItem: SrxCharacterSheet.#onDeleteItem,
-      postItem: SrxCharacterSheet.#onPostItem
+      postItem: SrxCharacterSheet.#onPostItem,
+      castSpell: SrxCharacterSheet.#onCastSpell,
+      magicRest: SrxCharacterSheet.#onMagicRest,
+      magicPerceive: SrxCharacterSheet.#onMagicPerceive,
+      magicProject: SrxCharacterSheet.#onMagicProject,
+      magicQi: SrxCharacterSheet.#onMagicQi,
+      magicSummon: SrxCharacterSheet.#onMagicSummon,
+      magicBind: SrxCharacterSheet.#onMagicBind,
+      magicNegate: SrxCharacterSheet.#onMagicNegate,
+      magicAegis: SrxCharacterSheet.#onMagicAegis,
+      magicAssense: SrxCharacterSheet.#onMagicAssense
     }
   };
 
@@ -105,7 +115,15 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
       talents: byType("talent"),
       traits: byType("trait"),
       contacts: byType("contact"),
-      knowledge: byType("knowledge")
+      knowledge: byType("knowledge"),
+      spells: byType("spell"),
+      foci: byType("focus")
+    };
+
+    context.magic = {
+      astralState: actor.getFlag("srx", "astralState") ?? "physical",
+      qiUses: actor.getFlag("srx", "qiUses") ?? 0,
+      sustainCount: (actor.getFlag("srx", "sustained") ?? []).length
     };
 
     context.metatypes = Object.entries(SRX.metatypes).map(([key, def]) => ({
@@ -359,5 +377,65 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
 
   static #onPostItem(event, target) {
     return this.document.items.get(target.dataset.itemId)?.toChatCard();
+  }
+
+  static #onCastSpell(event, target) {
+    const item = this.document.items.get(target.dataset.itemId);
+    return item ? this.document.castSpell(item) : null;
+  }
+
+  static async #onMagicRest() {
+    const { restActor } = await import("../magic/rest.mjs");
+    return restActor(this.document);
+  }
+
+  static async #onMagicPerceive() {
+    const { toggleAstralPerception } = await import("../magic/astral.mjs");
+    return toggleAstralPerception(this.document);
+  }
+
+  static async #onMagicProject() {
+    const { toggleAstralProjection } = await import("../magic/astral.mjs");
+    return toggleAstralProjection(this.document);
+  }
+
+  static async #onMagicQi() {
+    const { useQiPower } = await import("../magic/qi.mjs");
+    return useQiPower(this.document, {
+      powerName: game.i18n.localize("SRX.Qi.use"),
+      effectSummary: game.i18n.localize("SRX.Qi.genericEffect")
+    });
+  }
+
+  static async #onMagicSummon() {
+    const { summonSpirit } = await import("../magic/conjure.mjs");
+    const force = this.document.system.special?.magic?.value ?? 3;
+    return summonSpirit(this.document, { force: Math.min(force, 4), form: "Spirit" });
+  }
+
+  static async #onMagicBind() {
+    const { bindElemental } = await import("../magic/conjure.mjs");
+    const force = Math.floor((this.document.system.special?.magic?.value ?? 4) / 2) || 1;
+    return bindElemental(this.document, { force, form: "Elemental" });
+  }
+
+  static async #onMagicNegate() {
+    const { castNegate } = await import("../magic/mysticism.mjs");
+    return castNegate(this.document);
+  }
+
+  static async #onMagicAegis() {
+    const { castAegis } = await import("../magic/mysticism.mjs");
+    return castAegis(this.document);
+  }
+
+  static async #onMagicAssense() {
+    const { assenseTarget } = await import("../magic/astral.mjs");
+    const t = [...(game.user?.targets ?? [])][0]?.actor;
+    if (!t) {
+      ui.notifications.warn(game.i18n.localize("SRX.Astral.needTarget"));
+      return null;
+    }
+    return assenseTarget(this.document, t, "living");
   }
 }

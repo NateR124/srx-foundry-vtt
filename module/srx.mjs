@@ -18,6 +18,15 @@ import { registerSustainHooks } from "./magic/sustain.mjs";
 import { restActor } from "./magic/rest.mjs";
 import { useQiPower } from "./magic/qi.mjs";
 import { summonSpirit, bindElemental } from "./magic/conjure.mjs";
+import * as astralRules from "./rules/astral.mjs";
+import * as mysticismRules from "./rules/mysticism.mjs";
+import {
+  toggleAstralPerception,
+  toggleAstralProjection,
+  assenseTarget,
+  registerAstralHooks
+} from "./magic/astral.mjs";
+import { castNegate, castAegis } from "./magic/mysticism.mjs";
 import { SrxActor } from "./documents/actor.mjs";
 import { SrxItem } from "./documents/item.mjs";
 import { SrxCombat, SrxCombatant, registerCombatHooks } from "./combat/combat.mjs";
@@ -74,6 +83,13 @@ Hooks.once("init", () => {
     useQiPower,
     summonSpirit,
     bindElemental,
+    astral: astralRules,
+    mysticism: mysticismRules,
+    toggleAstralPerception,
+    toggleAstralProjection,
+    assenseTarget,
+    castNegate,
+    castAegis,
     openCatalogImport
   };
 
@@ -144,8 +160,9 @@ Hooks.once("ready", () => {
   registerHealingHooks();
   registerMagicHooks();
   registerSustainHooks();
+  registerAstralHooks();
   registerTimedHooks();
-  console.log("SRX | Ready (M2 combat + M4 magic cast/drain/sustain)");
+  console.log("SRX | Ready (M2 combat + M4 magic)");
 });
 
 /** Dice So Nice */
