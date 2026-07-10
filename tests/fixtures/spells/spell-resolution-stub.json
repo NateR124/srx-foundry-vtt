@@ -1,0 +1,38 @@
+{
+  "entries": [
+    {
+      "slug": "acid-stream",
+      "name": "Acid Stream",
+      "category": "combat",
+      "resolution": "attack",
+      "castTest": { "pool": "agi+sorcery" },
+      "resistance": null,
+      "damage": { "raw": "(F+6)", "type": "P", "element": "acid" },
+      "template": null,
+      "duration": { "sustained": false },
+      "targets": { "count": 1 }
+    },
+    {
+      "slug": "agony",
+      "name": "Agony",
+      "category": "illusion",
+      "resolution": "utility",
+      "resistance": { "pool": ["wil"] },
+      "damage": null,
+      "template": { "shape": "circle", "radius": { "raw": "Fx2" } },
+      "duration": { "sustained": true },
+      "targets": { "count": null }
+    },
+    {
+      "slug": "alertness",
+      "name": "Alertness",
+      "category": "detection",
+      "resolution": "buff",
+      "resistance": null,
+      "damage": null,
+      "template": null,
+      "duration": { "sustained": true },
+      "targets": { "count": 1 }
+    }
+  ]
+}

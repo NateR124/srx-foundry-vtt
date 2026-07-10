@@ -1,4 +1,5 @@
 import * as parsers from "./sidecar-parsers.mjs";
+import { enrichSpellEntry } from "./spell-enrich.mjs";
 
 function getWeaponSkill(raw) {
   const s = String(raw || "").toLowerCase();
@@ -85,10 +86,10 @@ function mapDvFormula(raw) {
 }
 
 function wrap(parser, itemType, catalogType) {
-  return function(text) {
+  return function(text, resolutionIndex) {
     const rawEntries = parser(text);
     return rawEntries.map(entry => {
-      const out = {
+      let out = {
         name: entry.name,
         type: itemType || "gear",
         system: {
@@ -167,6 +168,10 @@ function wrap(parser, itemType, catalogType) {
         out.system.isEdgeAction = /^Edge:/i.test(entry.name);
       } else {
         out.system.cost = entry.cost || 0;
+      }
+
+      if (itemType === "spell" && resolutionIndex) {
+        out = enrichSpellEntry(out, resolutionIndex);
       }
 
       return out;
