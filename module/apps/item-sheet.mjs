@@ -56,6 +56,9 @@ export class SrxItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
     context.spellDurations = (SRX.spellDurations ?? []).map((key) => ({
       key, selected: item.system.duration === key
     }));
+    context.focusTypes = (SRX.focusTypes ?? []).map((key) => ({
+      key, selected: item.system.focusType === key
+    }));
 
     if (item.type === "weapon") {
       context.attackModes = item.system.attackModes.map((m, idx) => ({ ...m, idx }));

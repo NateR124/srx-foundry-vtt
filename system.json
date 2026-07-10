@@ -38,7 +38,8 @@
       "trait": { "htmlFields": ["description"] },
       "contact": { "htmlFields": ["description"] },
       "knowledge": { "htmlFields": ["description"] },
-      "spell": { "htmlFields": ["description"] }
+      "spell": { "htmlFields": ["description"] },
+      "focus": { "htmlFields": ["description"] }
     }
   },
   "grid": {

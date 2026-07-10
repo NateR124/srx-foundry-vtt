@@ -7,11 +7,17 @@ import { SRX } from "./config.mjs";
 import { CharacterData } from "./data/actor-character.mjs";
 import { ThreatData } from "./data/actor-threat.mjs";
 import {
-  WeaponData, ArmorData, GearData, TalentData, TraitData, ContactData, KnowledgeData, SpellData
+  WeaponData, ArmorData, GearData, TalentData, TraitData, ContactData, KnowledgeData,
+  SpellData, FocusData
 } from "./data/items.mjs";
 import * as magicRules from "./rules/magic.mjs";
+import * as qiRules from "./rules/qi.mjs";
+import * as conjuringRules from "./rules/conjuring.mjs";
 import { castSpell, registerMagicHooks } from "./magic/cast.mjs";
 import { registerSustainHooks } from "./magic/sustain.mjs";
+import { restActor } from "./magic/rest.mjs";
+import { useQiPower } from "./magic/qi.mjs";
+import { summonSpirit, bindElemental } from "./magic/conjure.mjs";
 import { SrxActor } from "./documents/actor.mjs";
 import { SrxItem } from "./documents/item.mjs";
 import { SrxCombat, SrxCombatant, registerCombatHooks } from "./combat/combat.mjs";
@@ -61,7 +67,13 @@ Hooks.once("init", () => {
     startSuppressiveFire,
     automationLevel,
     magic: magicRules,
+    qi: qiRules,
+    conjuring: conjuringRules,
     castSpell,
+    rest: restActor,
+    useQiPower,
+    summonSpirit,
+    bindElemental,
     openCatalogImport
   };
 
@@ -82,6 +94,7 @@ Hooks.once("init", () => {
   CONFIG.Item.dataModels.contact = ContactData;
   CONFIG.Item.dataModels.knowledge = KnowledgeData;
   CONFIG.Item.dataModels.spell = SpellData;
+  CONFIG.Item.dataModels.focus = FocusData;
 
   // Dice
   CONFIG.Dice.rolls.push(SRXRoll);

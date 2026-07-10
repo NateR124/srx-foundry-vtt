@@ -173,3 +173,27 @@ export class SpellData extends foundry.abstract.TypeDataModel {
     };
   }
 }
+
+/**
+ * Magical focus — bonded/active toggles; Force rating.
+ */
+export class FocusData extends foundry.abstract.TypeDataModel {
+  static defineSchema() {
+    return {
+      ...descriptionSchema(),
+      ...costSchema(),
+      focusType: new fields.StringField({
+        required: true,
+        initial: "power",
+        choices: () => SRX.focusTypes
+      }),
+      force: new fields.NumberField({
+        required: true, integer: true, min: 1, initial: 1, nullable: false
+      }),
+      greater: new fields.BooleanField({ initial: false }),
+      bonded: new fields.BooleanField({ initial: false }),
+      active: new fields.BooleanField({ initial: false }),
+      imbued: new fields.StringField({ required: true, blank: true, initial: "" })
+    };
+  }
+}

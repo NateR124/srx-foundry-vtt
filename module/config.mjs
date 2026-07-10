@@ -60,6 +60,11 @@ SRX.spellPatterns = ["direct", "ranged", "touch", "self", "area"];
 /** Duration classes (p. 219). */
 SRX.spellDurations = ["instantaneous", "sustained", "timed", "permanent"];
 
+/** Focus type keys (subset; expand with catalog). */
+SRX.focusTypes = [
+  "power", "qi", "sorcery", "conjuring", "weapon", "sustaining", "spell", "spirit", "adept"
+];
+
 /**
  * Metatypes (p. 12) — attribute modifiers, unaugmented maxima (p. 13),
  * vision, health modifier (both tracks), movement modifier, extras.

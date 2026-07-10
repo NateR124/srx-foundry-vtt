@@ -149,14 +149,16 @@ async function resolveSpellOnTarget(caster, spell, force, config, target) {
     }
   }
 
-  // Magic resistance → Net Force
+  // Magic resistance → Net Force (direct/area mana). Ranged hurled energy skips this.
   const resistAttr = sys.resistanceAttr || "";
-  if (resistAttr && pattern !== "self") {
+  if (resistAttr && pattern !== "self" && pattern !== "ranged") {
     resistHits = await rollMagicResistance(target, resistAttr, spell.name);
   }
 
-  const nf = netForce(force, resistHits);
-  if (!spellAffectsTarget(nf) && pattern !== "self" && resistAttr) {
+  const nf = pattern === "ranged"
+    ? force
+    : netForce(force, resistHits);
+  if (pattern !== "ranged" && pattern !== "self" && resistAttr && !spellAffectsTarget(nf)) {
     return { targetName, targetUuid: target.uuid, affected: false, netForce: 0, resistHits };
   }
 
@@ -165,27 +167,26 @@ async function resolveSpellOnTarget(caster, spell, force, config, target) {
 
   // Combat damage
   if (category === "combat" && (pattern === "direct" || pattern === "ranged" || pattern === "area")) {
-    const baseDv = spellDamageFromNetForce(nf, sys.dvFormula || "nf+1");
-    // Ranged: net hits on attack can add damage for hurled energy — book says net hits add damage
-    let netHits = 0;
-    if (pattern === "ranged" && attackHits != null) {
+    let amount;
+    if (pattern === "ranged") {
+      // Hurled energy: base DV from Force formula, + net hits, then Body+Armor resist
+      const baseDv = spellDamageFromNetForce(force, sys.dvFormula === "nf+1" ? "nf" : (sys.dvFormula || "nf"));
       const ds = target.system.derived?.defenseScore ?? 1;
-      netHits = Math.max(0, attackHits - ds);
-    }
-    const resolved = resolveDamageApplication({
-      baseDv,
-      netHits: pattern === "ranged" ? netHits : 0,
-      resistHits: 0, // damage resistance separate for hurled; direct mana often skips armor
-      dvType: sys.dvType || "S",
-      hardened: pattern === "ranged" ? (target.system.derived?.hardenedArmor ?? 0) : 0,
-      elemental: !!sys.element,
-      aoe: pattern === "area"
-    });
-
-    // Direct mana: typically no armor; apply full after NF conversion
-    let amount = { physical: resolved.physical, stun: resolved.stun };
-    if (pattern === "direct" || pattern === "area") {
-      const dmg = baseDv;
+      const netHits = attackHits != null ? Math.max(0, attackHits - ds) : 0;
+      const dmgResistHits = await rollDamageResistance(target, spell.name);
+      const resolved = resolveDamageApplication({
+        baseDv,
+        netHits,
+        resistHits: dmgResistHits,
+        dvType: sys.dvType || "P",
+        hardened: target.system.derived?.hardenedArmor ?? 0,
+        elemental: !!sys.element,
+        aoe: false
+      });
+      amount = { physical: resolved.physical, stun: resolved.stun };
+    } else {
+      // Direct / area mana: Net Force → DV; typically no armor
+      const dmg = spellDamageFromNetForce(nf, sys.dvFormula || "nf+1");
       if ((sys.dvType || "S") === "P") {
         amount = { physical: dmg, stun: dmg };
       } else {
@@ -233,6 +234,30 @@ async function resolveSpellOnTarget(caster, spell, force, config, target) {
     resistHits,
     summary
   };
+}
+
+async function rollDamageResistance(target, spellName) {
+  const bod = target.system.attributes?.bod?.value ?? target.system.body ?? 1;
+  const armor = target.system.derived?.armor ?? target.system.armor ?? 0;
+  const pool = Math.max(0, bod + armor);
+  if (pool <= 0) return 0;
+  const roll = SRXRoll.fromPool({
+    pool,
+    tn: 5,
+    flavor: game.i18n.format("SRX.Magic.damageResist", { spell: spellName }),
+    context: {
+      parts: [
+        { label: game.i18n.localize("SRX.Attribute.bod"), value: bod },
+        { label: game.i18n.localize("SRX.Item.armor"), value: armor }
+      ],
+      actorName: target.name
+    }
+  });
+  await roll.evaluate();
+  await roll.toChat({
+    speaker: foundry.documents.ChatMessage.getSpeaker({ actor: target })
+  });
+  return roll.srx?.hits ?? 0;
 }
 
 async function rollMagicResistance(target, attrKey, spellName) {
