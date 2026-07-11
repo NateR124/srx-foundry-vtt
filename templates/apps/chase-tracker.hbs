@@ -1,0 +1,75 @@
+<div class="srx chase-tracker-body">
+  {{#unless hasCombat}}
+  <p class="fact">{{localize "SRX.Vehicle.chaseNoCombat"}}</p>
+  {{else}}
+
+  <section class="chase-controls">
+    <div class="form-row">
+      <label>{{localize "SRX.Vehicle.chaseArea"}}
+        <select name="area">
+          <option value="cluttered" {{#if (srxEq state.area "cluttered")}}selected{{/if}}>{{localize "SRX.Vehicle.areaCluttered"}}</option>
+          <option value="standard" {{#if (srxEq state.area "standard")}}selected{{/if}}>{{localize "SRX.Vehicle.areaStandard"}}</option>
+          <option value="open" {{#if (srxEq state.area "open")}}selected{{/if}}>{{localize "SRX.Vehicle.areaOpen"}}</option>
+        </select>
+      </label>
+      <label>{{localize "SRX.Vehicle.hazardThreshold"}}
+        <input type="number" name="hazardThreshold" value="{{state.hazardThreshold}}" min="0" step="1">
+      </label>
+    </div>
+    <div class="chase-env-line">
+      <span><b>{{localize "SRX.Vehicle.environment"}}:</b> {{envLabel}}</span>
+      <span><b>{{localize "SRX.Vehicle.hazard"}}:</b> {{hazardLabel}}</span>
+    </div>
+    <div class="chase-buttons">
+      <button type="button" data-action="rollEnvironment">
+        <i class="fa-solid fa-dice-d6"></i> {{localize "SRX.Vehicle.rollEnvironment"}}
+      </button>
+      <button type="button" class="primary" data-action="resolve">
+        <i class="fa-solid fa-flag-checkered"></i> {{localize "SRX.Vehicle.chaseResolve"}}
+      </button>
+    </div>
+  </section>
+
+  <table class="chase-grid">
+    <thead>
+      <tr>
+        <th>{{localize "SRX.Sheet.name"}}</th>
+        <th>{{localize "SRX.Vehicle.chaseRole"}}</th>
+        <th>{{localize "SRX.Vehicle.chaseRange"}}</th>
+        <th>{{localize "SRX.Vehicle.speed"}}</th>
+        <th>{{localize "SRX.Roll.hits"}}</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each vehicles}}
+      <tr data-vehicle-row="{{this.id}}" data-uuid="{{this.uuid}}">
+        <td class="chase-name">{{this.name}}</td>
+        <td>
+          <select name="role">
+            <option value="none" {{#if (srxEq this.role "none")}}selected{{/if}}>{{localize "SRX.Vehicle.roleNone"}}</option>
+            <option value="quarry" {{#if (srxEq this.role "quarry")}}selected{{/if}}>{{localize "SRX.Vehicle.roleQuarry"}}</option>
+            <option value="pursuer" {{#if (srxEq this.role "pursuer")}}selected{{/if}}>{{localize "SRX.Vehicle.rolePursuer"}}</option>
+          </select>
+        </td>
+        <td>
+          <select name="range">
+            <option value="close" {{#if (srxEq this.range "close")}}selected{{/if}}>{{localize "SRX.Vehicle.rangeClose"}}</option>
+            <option value="medium" {{#if (srxEq this.range "medium")}}selected{{/if}}>{{localize "SRX.Vehicle.rangeMedium"}}</option>
+            <option value="long" {{#if (srxEq this.range "long")}}selected{{/if}}>{{localize "SRX.Vehicle.rangeLong"}}</option>
+          </select>
+        </td>
+        <td class="chase-speed">{{this.speed}}</td>
+        <td><input type="number" name="hits" value="0" min="0" step="1" class="chase-hits"></td>
+        <td>
+          <button type="button" data-action="rollRow" title="{{localize 'SRX.Vehicle.handlingTest'}}">
+            <i class="fa-solid fa-dice-d6"></i>
+          </button>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <p class="fact chase-hint">{{localize "SRX.Vehicle.chaseHint"}}</p>
+  {{/unless}}
+</div>
