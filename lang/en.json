@@ -816,7 +816,7 @@
   "SRX.Chargen.step.resources": "Resources",
   "SRX.Chargen.step.talents": "Talents",
   "SRX.Chargen.step.review": "Review",
-  "SRX.Chargen.category": "Category",
+  "SRX.Chargen.categoryHeader": "Category",
   "SRX.Chargen.category.metatype": "Metatype",
   "SRX.Chargen.category.attributes": "Attributes",
   "SRX.Chargen.category.skills": "Skills",
