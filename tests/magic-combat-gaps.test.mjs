@@ -8,7 +8,8 @@ import {
   safeActiveFociLimit,
   fociOverLimit,
   fociOverLimitStunPerHour,
-  focusEffectChanges
+  focusEffectChanges,
+  focusCascade
 } from "../module/rules/foci.mjs";
 import { compileFlatEffects } from "../module/rules/effects.mjs";
 import { accrueProjectionMinutes } from "../module/rules/astral.mjs";
@@ -77,11 +78,69 @@ describe("Focus effect changes → flat-effect contract", () => {
   });
 
   it("every mapped focus type compiles cleanly (no unknown keys)", () => {
-    for (const focusType of ["sorcery", "conjuring", "channeling", "mysticism", "willpower", "protective"]) {
+    for (const focusType of ["sorcery", "conjuring", "channeling", "mysticism", "willpower", "protective", "power"]) {
       const compiled = compileFlatEffects(focusEffectChanges({ focusType }));
       expect(compiled.ok).toBe(true);
       expect(compiled.changes.length).toBe(1);
     }
+  });
+
+  it("Power focus grants +1 Magic (attr.mag → special.magic.bonus), not +Force", () => {
+    const changes = focusEffectChanges({ focusType: "power", force: 8 });
+    expect(changes).toEqual([{ key: "attr.mag", value: 1 }]);
+    const compiled = compileFlatEffects(changes);
+    expect(compiled.ok).toBe(true);
+    expect(compiled.changes[0].key).toBe("system.special.magic.bonus");
+    expect(compiled.changes[0].value).toBe("1");
+  });
+});
+
+describe("Focus deactivation cascades (pp. 359–362)", () => {
+  it("Spell focus ends sustained instances of its imbued spell (by name or uuid)", () => {
+    const sustained = [
+      { id: "a", spellName: "Fireball" },
+      { id: "b", spellName: "Heal" },
+      { id: "c", spellUuid: "Actor.x.Item.fb", spellName: "Flame" }
+    ];
+    expect(focusCascade({ focusType: "spell", imbued: "Fireball" }, { sustained }))
+      .toEqual({ endSustainIds: ["a"], dismissSpiritUuids: [] });
+    expect(focusCascade({ focusType: "spell", imbued: "Actor.x.Item.fb" }, { sustained }).endSustainIds)
+      .toEqual(["c"]);
+    // No imbued spell → nothing cascades.
+    expect(focusCascade({ focusType: "spell", imbued: "" }, { sustained }).endSustainIds).toEqual([]);
+  });
+
+  it("Sustaining focus drops the one power it holds (via focus flag)", () => {
+    expect(focusCascade({ focusType: "sustaining", heldSustainId: "s1" }, {}).endSustainIds)
+      .toEqual(["s1"]);
+    expect(focusCascade({ focusType: "sustaining", heldSustainId: null }, {}).endSustainIds)
+      .toEqual([]);
+  });
+
+  it("Spirit focus dismisses the active spirit, honouring form match", () => {
+    // No form named → dismiss the (only) active spirit.
+    expect(focusCascade({ focusType: "spirit", imbued: "" }, { activeSpiritUuid: "S" }))
+      .toEqual({ endSustainIds: [], dismissSpiritUuids: ["S"] });
+    // Form matches → dismiss.
+    expect(focusCascade(
+      { focusType: "spirit", imbued: "Wolf" },
+      { activeSpiritUuid: "S", activeSpiritForm: "Wolf" }
+    ).dismissSpiritUuids).toEqual(["S"]);
+    // Form mismatch → leave it (spirit summoned by other means).
+    expect(focusCascade(
+      { focusType: "spirit", imbued: "Bear" },
+      { activeSpiritUuid: "S", activeSpiritForm: "Wolf" }
+    ).dismissSpiritUuids).toEqual([]);
+    // No active spirit → nothing.
+    expect(focusCascade({ focusType: "spirit", imbued: "" }, { activeSpiritUuid: null }).dismissSpiritUuids)
+      .toEqual([]);
+  });
+
+  it("non-cascading focus types plan nothing", () => {
+    expect(focusCascade({ focusType: "power" }, { activeSpiritUuid: "S", sustained: [{ id: "a" }] }))
+      .toEqual({ endSustainIds: [], dismissSpiritUuids: [] });
+    expect(focusCascade({ focusType: "sorcery" }, {}))
+      .toEqual({ endSustainIds: [], dismissSpiritUuids: [] });
   });
 });
 

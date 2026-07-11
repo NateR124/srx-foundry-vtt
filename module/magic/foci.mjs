@@ -24,10 +24,16 @@
 import { compileFlatEffects } from "../rules/effects.mjs";
 import {
   focusEffectChanges,
+  focusCascade,
   focusTransition,
   safeActiveFociLimit,
   fociOverLimit
 } from "../rules/foci.mjs";
+// Read-only imports of other lanes' exported helpers — do NOT edit those files.
+// endSustained/getSustained come from the effects lane's sustain.mjs; dismissSpirit
+// is our own conjure.mjs helper (routes deletion through the GM executor).
+import { getSustained, endSustained } from "./sustain.mjs";
+import { dismissSpirit } from "./conjure.mjs";
 import { esc, line, noticeCard } from "../chat/cards.mjs";
 
 const EFFECT_FLAG = "focusEffect";
@@ -177,6 +183,56 @@ export async function deactivateFocus(item) {
 }
 
 /**
+ * Cascade the dependent effects of a focus that has just been deactivated or
+ * unbonded (pp. 359–362): Spell focus ends its sustained spell(s); Sustaining
+ * focus drops its sustained power; Spirit focus dismisses the summoned spirit.
+ * Calls the effects lane's endSustained and our conjure lane's dismissSpirit —
+ * never re-implements them.
+ * @param {Item} item
+ */
+export async function cascadeFocusDeactivation(item) {
+  const actor = item?.actor;
+  if (!actor) return;
+
+  const activeSpiritUuid = actor.getFlag?.("srx", "activeSpiritUuid") ?? null;
+  const spiritDoc = activeSpiritUuid
+    ? await fromUuid(activeSpiritUuid).catch(() => null)
+    : null;
+
+  const plan = focusCascade(
+    {
+      focusType: item.system?.focusType,
+      imbued: item.system?.imbued,
+      heldSustainId: item.getFlag?.("srx", "sustainingId") ?? null
+    },
+    {
+      sustained: getSustained(actor),
+      activeSpiritUuid,
+      activeSpiritForm: spiritDoc?.getFlag?.("srx", "form") ?? null
+    }
+  );
+
+  for (const id of plan.endSustainIds) {
+    await endSustained(actor, id).catch(() => null);
+  }
+  // The held-power link is spent once its sustain ends.
+  if (item.getFlag?.("srx", "sustainingId")) {
+    await item.unsetFlag("srx", "sustainingId").catch(() => null);
+  }
+
+  for (const uuid of plan.dismissSpiritUuids) {
+    const spirit = uuid === activeSpiritUuid
+      ? spiritDoc
+      : await fromUuid(uuid).catch(() => null);
+    if (spirit?.getFlag?.("srx", "anima")) {
+      await dismissSpirit(spirit, {
+        reason: game.i18n.localize("SRX.Foci.deactivateCascade")
+      });
+    }
+  }
+}
+
+/**
  * Keep focus Active Effects and rules-invariants in sync with item state, and
  * expose a macro/API surface. Wire from the system init.
  */
@@ -199,8 +255,11 @@ export function registerFociHooks() {
       return;
     }
     await syncFocusEffect(item);
-    if (foundry.utils.hasProperty(changes, "system.active") && item.system?.active) {
-      await warnIfOverLimit(item.actor);
+    if (foundry.utils.hasProperty(changes, "system.active")) {
+      if (item.system?.active) await warnIfOverLimit(item.actor);
+      // Deactivation (or unbond, which also clears active) cascades to the
+      // dependent spells/spirits the focus was holding.
+      else await cascadeFocusDeactivation(item);
     }
   });
 
@@ -219,6 +278,11 @@ export function registerFociHooks() {
     activate: activateFocus,
     deactivate: deactivateFocus,
     sync: syncFocusEffect,
-    activeCount: activeFocusCount
+    activeCount: activeFocusCount,
+    cascade: cascadeFocusDeactivation,
+    // The cast/effects lane calls this when a Sustaining focus takes over a
+    // power, so deactivating the focus can drop exactly that sustained entry.
+    holdSustain: (item, sustainId) =>
+      item?.setFlag?.("srx", "sustainingId", sustainId ?? null)
   };
 }
