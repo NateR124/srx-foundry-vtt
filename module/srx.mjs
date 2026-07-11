@@ -53,6 +53,7 @@ import { registerFociHooks } from "./magic/foci.mjs";
 import { registerConjureHooks } from "./magic/conjure.mjs";
 import { registerAstralTimeHooks } from "./magic/astral-time.mjs";
 import { registerSuppressMovementHooks } from "./canvas/suppress-movement.mjs";
+import { registerChargenHooks } from "./chargen/hooks.mjs";
 import { SRXRoll } from "./dice/srx-roll.mjs";
 import { SrxCharacterSheet } from "./apps/actor-sheet.mjs";
 import { SrxThreatSheet } from "./apps/threat-sheet.mjs";
@@ -192,6 +193,7 @@ Hooks.once("ready", () => {
   registerConjureHooks();
   registerAstralTimeHooks();
   registerSuppressMovementHooks();
+  registerChargenHooks();
   console.log("SRX | Ready (M2 combat + M3 import + M4 magic + M5 matrix + M6 vehicles + effects/foci/spirits)");
 });
 

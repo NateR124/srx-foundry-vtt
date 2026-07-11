@@ -18,7 +18,8 @@
   "styles": [
     "styles/srx.css",
     "styles/matrix.css",
-    "styles/vehicle.css"
+    "styles/vehicle.css",
+    "styles/chargen.css"
   ],
   "languages": [
     {
