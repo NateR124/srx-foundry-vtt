@@ -102,10 +102,66 @@ export function focusEffectChanges(focus = {}) {
     case "mysticism":  return [{ key: "skill.mysticism", value: 1 }];
     case "willpower":  return [{ key: "attr.wil", value: 1 }];
     case "protective": return [{ key: "derived.armor", value: 2 }];
+    // Power Focus grants "+1 augmentation Magic attribute" (digest
+    // magic-mysticism-channeling-foci.md, p. 353). SRX foci are fixed-Force
+    // (Power = Force 8) and grant a flat +1, unlike classic Shadowrun's
+    // variable-Force power focus that added its Force — so the magnitude is 1,
+    // NOT the focus rating. attr.mag → system.special.magic.bonus (effects lane).
+    case "power":      return [{ key: "attr.mag", value: 1 }];
     case "skill":
       // Skill focus aligned to one skill at crafting (imbued = skill key).
       return imbued ? [{ key: `skill.${imbued}`, value: 1 }] : [];
     default:
       return [];
   }
+}
+
+/**
+ * Plan the dependent-effect cascade when a focus is deactivated/unbonded
+ * (pp. 359–362): a Spell focus ends the sustained spell(s) cast with it; a
+ * Sustaining focus drops the one power it sustains; a Spirit focus dismisses the
+ * spirit(s) summoned with it. Pure — returns ids/uuids for the glue to act on.
+ *
+ * @param {{ focusType?: string, imbued?: string, heldSustainId?: string|null }} focus
+ * @param {object} ctx
+ * @param {object[]} [ctx.sustained] - the caster's sustained-effect entries
+ * @param {string|null} [ctx.activeSpiritUuid] - the conjurer's active spirit
+ * @param {string|null} [ctx.activeSpiritForm] - that spirit's form (for match)
+ * @returns {{ endSustainIds: string[], dismissSpiritUuids: string[] }}
+ */
+export function focusCascade(
+  { focusType, imbued, heldSustainId = null } = {},
+  { sustained = [], activeSpiritUuid = null, activeSpiritForm = null } = {}
+) {
+  const type = String(focusType || "").toLowerCase();
+  const imb = String(imbued || "").trim();
+  const endSustainIds = [];
+  const dismissSpiritUuids = [];
+
+  switch (type) {
+    case "spell":
+      // The focus only casts its imbued spell, so any sustained instance of
+      // that spell held by this caster was cast with the focus.
+      if (imb) {
+        for (const e of sustained) {
+          if (e && (e.spellName === imb || e.spellUuid === imb)) endSustainIds.push(e.id);
+        }
+      }
+      break;
+    case "sustaining":
+      // A Sustaining focus holds exactly one power; the cast flow records its
+      // sustain id on the focus (flags.srx.sustainingId).
+      if (heldSustainId) endSustainIds.push(heldSustainId);
+      break;
+    case "spirit":
+      // One spirit at a time (p. 251); dismiss it, matching form when the focus
+      // names a specific spirit form.
+      if (activeSpiritUuid && (!imb || !activeSpiritForm || activeSpiritForm === imb)) {
+        dismissSpiritUuids.push(activeSpiritUuid);
+      }
+      break;
+    default:
+      break;
+  }
+  return { endSustainIds, dismissSpiritUuids };
 }
