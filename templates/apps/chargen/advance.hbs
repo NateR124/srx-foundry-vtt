@@ -1,0 +1,118 @@
+{{!-- SRX Karma advancement panel. Costs/validation: module/rules/karma.mjs --}}
+<div class="srx advance-panel">
+
+  <header class="advance-header">
+    <div class="karma-summary">
+      <label class="karma-earned">{{localize "SRX.Advance.earned"}}
+        <input type="number" name="system.details.karma.earned" value="{{earned}}" min="0" step="1" {{#unless editable}}disabled{{/unless}}>
+      </label>
+      <span class="karma-stat">{{localize "SRX.Advance.spent"}}: <b>{{spent}}</b></span>
+      <span class="karma-stat balance">{{localize "SRX.Advance.balance"}}: <b>{{balance}}</b></span>
+    </div>
+  </header>
+
+  {{#unless editable}}
+  <p class="chargen-note">{{localize "SRX.Advance.notOwner"}}</p>
+  {{/unless}}
+
+  <section class="advance-grid">
+
+    <div class="advance-col">
+      <h3>{{localize "SRX.Advance.attributes"}}</h3>
+      <table class="advance-attributes">
+        <tbody>
+          {{#each attributes}}
+          <tr>
+            <th>{{this.abbr}}</th>
+            <td class="rating">{{this.rating}}</td>
+            <td class="buy">
+              {{#if this.atMax}}<span class="atmax">{{localize "SRX.Advance.atMax"}}</span>
+              {{else}}
+              <button type="button" data-action="raiseAttribute" data-key="{{this.key}}" {{#unless this.canRaise}}disabled{{/unless}}>
+                +1 <span class="cost">({{this.cost}})</span>
+              </button>
+              {{/if}}
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="advance-col">
+      <h3>{{localize "SRX.Advance.skills"}}</h3>
+      <table class="advance-skills">
+        <tbody>
+          {{#each skills}}
+          <tr>
+            <th>{{this.label}}</th>
+            <td class="rating">{{this.rating}}</td>
+            <td class="buy">
+              {{#if this.atMax}}<span class="atmax">{{localize "SRX.Advance.atMax"}}</span>
+              {{else}}
+              <button type="button" data-action="raiseSkill" data-key="{{this.key}}" {{#unless this.canRaise}}disabled{{/unless}}>
+                +1 <span class="cost">({{this.cost}})</span>
+              </button>
+              {{/if}}
+            </td>
+            <td class="spec">
+              {{#each this.specializations}}<span class="spec-tag">{{this}}</span>{{/each}}
+              {{#if this.canSpecialize}}
+              <input type="text" data-spec-for="{{this.key}}" placeholder="{{localize 'SRX.Advance.specPlaceholder'}}">
+              <button type="button" data-action="buySpec" data-key="{{this.key}}">+ {{localize "SRX.Advance.spec"}} <span class="cost">({{this.specCost}})</span></button>
+              {{/if}}
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+  <section class="advance-extra">
+    <div class="advance-knowledge">
+      <h3>{{localize "SRX.Advance.knowledge"}}</h3>
+      <div class="knowledge-add">
+        <input type="text" name="knowledgeName" placeholder="{{localize 'SRX.Advance.knowledgePlaceholder'}}">
+        <select name="knowledgeKind">
+          <option value="domain">{{localize "SRX.Advance.domain"}}</option>
+          <option value="language">{{localize "SRX.Advance.language"}}</option>
+        </select>
+        <button type="button" data-action="buyKnowledge">+ {{localize "SRX.Advance.add"}} <span class="cost">({{knowledgeCost}})</span></button>
+      </div>
+    </div>
+
+    <div class="advance-talents">
+      <h3>{{localize "SRX.Advance.talents"}}</h3>
+      {{#unless hasCatalog}}
+      <p class="chargen-note">{{localize "SRX.Advance.noTalentCatalog"}}</p>
+      {{else}}
+      <div class="talent-list">
+        {{#each talents}}
+        <div class="talent-row {{#if this.owned}}owned{{/if}}">
+          <span class="t-name">{{this.name}}</span>
+          <span class="t-karma">{{this.cost}}k</span>
+          {{#if this.owned}}<span class="owned-tag">{{localize "SRX.Advance.owned"}}</span>
+          {{else}}
+          <button type="button" data-action="buyTalent" data-item-id="{{this.id}}" {{#unless this.canBuy}}disabled{{/unless}}>{{localize "SRX.Advance.buy"}}</button>
+          {{/if}}
+        </div>
+        {{/each}}
+      </div>
+      {{/unless}}
+    </div>
+  </section>
+
+  {{#if ledger.length}}
+  <section class="advance-ledger">
+    <h3>{{localize "SRX.Advance.ledger"}}</h3>
+    <ul>
+      {{#each ledger}}
+      <li><span class="l-label">{{this.label}}</span> <span class="l-cost">−{{this.cost}}</span></li>
+      {{/each}}
+    </ul>
+  </section>
+  {{/if}}
+
+</div>
