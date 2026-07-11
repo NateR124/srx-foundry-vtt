@@ -22,14 +22,18 @@ import { getMatrixState } from "./persona.mjs";
 const L = (k, d = {}) => game.i18n.format(k, d);
 const T = (k) => game.i18n.localize(k);
 
-/** Build the extra panels' HTML for a character actor. */
+/** Build the extra panels' HTML for a character actor. Each panel is built
+ * defensively so a single failure cannot blank the whole depth section. */
 function panelsHtml(actor) {
   const online = getMatrixState(actor).mode !== "offline";
+  const safe = (fn) => {
+    try { return fn() || ""; } catch (err) { console.error("SRX | matrix panel build", err); return ""; }
+  };
   return [
-    technomancyPanel(actor, online),
-    programsPanel(actor),
-    accessPanel(actor),
-    devicesPanel(actor)
+    safe(() => technomancyPanel(actor, online)),
+    safe(() => programsPanel(actor)),
+    safe(() => accessPanel(actor)),
+    safe(() => devicesPanel(actor))
   ].filter(Boolean).join("");
 }
 
@@ -127,13 +131,19 @@ function devicesPanel(actor) {
 export function injectMatrixPanels(actor, root, rerender) {
   try {
     if (!actor || actor.type !== "character") return;
-    const panel = root?.querySelector?.(".tab-matrix .matrix-panel");
-    if (!panel || panel.querySelector(".matrix-subpanel")) return; // already injected
+    // The Matrix tab is the anchor. Prefer the inner `.matrix-panel` wrapper,
+    // but fall back to `.tab-matrix` itself — the merged sheet does not always
+    // wrap the cockpit in `.matrix-panel`, and requiring it silently produced
+    // zero panels (live-smoke bug). Anchoring on the tab is resilient to that.
+    const tab = root?.querySelector?.(".tab-matrix");
+    if (!tab) return;
+    if (tab.querySelector(".matrix-depth")) return; // idempotent — already injected
+    const anchor = tab.querySelector(".matrix-panel") ?? tab;
 
     const container = document.createElement("div");
     container.className = "matrix-depth";
     container.innerHTML = panelsHtml(actor);
-    panel.appendChild(container);
+    anchor.appendChild(container);
 
     wire(actor, container, rerender);
   } catch (err) {
