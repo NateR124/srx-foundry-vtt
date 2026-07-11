@@ -28,6 +28,28 @@
       "path": "lang/en.json"
     }
   ],
+  "packs": [
+    {
+      "name": "srx-guides",
+      "label": "SRX — Guides & Quick-Start",
+      "path": "packs/srx-guides",
+      "type": "JournalEntry",
+      "system": "srx",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "SRX — Help & Onboarding",
+      "sorting": "m",
+      "packs": [
+        "srx-guides"
+      ]
+    }
+  ],
   "documentTypes": {
     "Actor": {
       "character": {
