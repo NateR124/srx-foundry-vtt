@@ -1,0 +1,74 @@
+/* SRX M6 Vehicles depth — chase tracker, weapon mounts, mount builder.
+   Merged into styles/srx.css by the orchestrator at integration. */
+
+/* Weapon mounts (play mode) */
+.vehicle-sheet-body .mount-list {
+  list-style: none;
+  margin: 0.25rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.vehicle-sheet-body .mount-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.vehicle-sheet-body .mount-row .mount-name {
+  font-weight: 600;
+  flex: 1 1 auto;
+}
+.vehicle-sheet-body .mount-row .mount-meta {
+  opacity: 0.75;
+  font-size: 0.85em;
+}
+.vehicle-sheet-body .mount-row .mount-fire {
+  flex: 0 0 auto;
+}
+
+/* Mount builder (build mode) */
+.vehicle-sheet-body .mount-builder .mount-edit {
+  align-items: flex-end;
+  gap: 0.4rem;
+}
+.vehicle-sheet-body .mount-builder .mount-remove {
+  flex: 0 0 auto;
+}
+
+/* Chase Tracker sub-app */
+.chase-tracker-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.5rem;
+}
+.chase-tracker-body .chase-env-line {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 0.9em;
+}
+.chase-tracker-body .chase-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+.chase-tracker-body .chase-grid {
+  width: 100%;
+  border-collapse: collapse;
+}
+.chase-tracker-body .chase-grid th,
+.chase-tracker-body .chase-grid td {
+  padding: 0.15rem 0.3rem;
+  text-align: left;
+  vertical-align: middle;
+}
+.chase-tracker-body .chase-grid .chase-hits {
+  width: 3.5rem;
+}
+.chase-tracker-body .chase-grid .chase-speed {
+  text-align: center;
+}
+.chase-tracker-body .chase-hint {
+  opacity: 0.75;
+  font-size: 0.82em;
+}

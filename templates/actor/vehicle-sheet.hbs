@@ -180,6 +180,83 @@
       </label>
       {{/if}}
     </div>
+
+    <h3>{{localize "SRX.Vehicle.mounts"}}</h3>
+    {{#if mounts.length}}
+    <ul class="mount-list">
+      {{#each mounts}}
+      <li class="mount-row">
+        <span class="mount-name">{{#if this.name}}{{this.name}}{{else}}{{localize "SRX.Vehicle.mount"}}{{/if}}</span>
+        <span class="mount-meta">{{localize (srxConcat "SRX.Vehicle.mountType_" this.mountType)}} · {{this.dv}}{{this.dvType}}</span>
+        <button type="button" class="mount-fire" data-action="fireMount" data-mount-id="{{this.id}}" data-relation="any">
+          <i class="fa-solid fa-crosshairs"></i> {{localize "SRX.Vehicle.fireMount"}}
+        </button>
+      </li>
+      {{/each}}
+    </ul>
+    {{else}}
+    <p class="fact">{{localize "SRX.Vehicle.mountsNone"}}</p>
+    {{/if}}
+
+    <h3>{{localize "SRX.Vehicle.squad"}}</h3>
+    <div class="matrix-actions">
+      <button type="button" data-action="openChaseTracker" {{#unless inCombat}}disabled{{/unless}}>
+        <i class="fa-solid fa-flag-checkered"></i> {{localize "SRX.Vehicle.chaseTracker"}}
+      </button>
+      <button type="button" data-action="openRepair">
+        <i class="fa-solid fa-wrench"></i> {{localize "SRX.Vehicle.repair"}}
+      </button>
+      {{#if hasCharacter}}
+      <button type="button" data-action="rollDcc">
+        <i class="fa-solid fa-network-wired"></i> {{localize "SRX.Vehicle.dccInitiative"}}
+      </button>
+      {{#if assignedToDcc}}
+      <button type="button" data-action="removeDcc">
+        <i class="fa-solid fa-link-slash"></i> {{localize "SRX.Vehicle.dccRemove"}}
+      </button>
+      {{else}}
+      <button type="button" data-action="assignDcc">
+        <i class="fa-solid fa-link"></i> {{localize "SRX.Vehicle.dccAssign"}}
+      </button>
+      {{/if}}
+      {{/if}}
+    </div>
+  </section>
+  {{/if}}
+
+  {{#if isBuild}}
+  <section class="mount-builder">
+    <h3>{{localize "SRX.Vehicle.mounts"}}</h3>
+    {{#each mounts}}
+    <div class="form-row mount-edit" data-mount-id="{{this.id}}">
+      <label>{{localize "SRX.Sheet.name"}}
+        <input type="text" name="flags.srx.mounts.{{this.id}}.name" value="{{this.name}}">
+      </label>
+      <label>{{localize "SRX.Vehicle.mountType"}}
+        <select name="flags.srx.mounts.{{this.id}}.mountType">
+          {{#each ../mountTypes}}
+          <option value="{{this}}" {{#if (srxEq ../mountType this)}}selected{{/if}}>{{localize (srxConcat "SRX.Vehicle.mountType_" this)}}</option>
+          {{/each}}
+        </select>
+      </label>
+      <label>{{localize "SRX.Item.skill"}}
+        <select name="flags.srx.mounts.{{this.id}}.skill">
+          <option value="firearms" {{#if (srxEq this.skill "firearms")}}selected{{/if}}>{{localize "SRX.Skill.firearms"}}</option>
+          <option value="projectileWeapons" {{#if (srxEq this.skill "projectileWeapons")}}selected{{/if}}>{{localize "SRX.Skill.projectileWeapons"}}</option>
+          <option value="closeCombat" {{#if (srxEq this.skill "closeCombat")}}selected{{/if}}>{{localize "SRX.Skill.closeCombat"}}</option>
+        </select>
+      </label>
+      <label>{{localize "SRX.Item.dv"}}
+        <input type="number" name="flags.srx.mounts.{{this.id}}.dv" value="{{this.dv}}" min="0">
+      </label>
+      <button type="button" class="mount-remove" data-action="removeMount" data-mount-id="{{this.id}}" title="{{localize 'SRX.Vehicle.mountRemove'}}">
+        <i class="fa-solid fa-trash"></i>
+      </button>
+    </div>
+    {{/each}}
+    <button type="button" data-action="addMount">
+      <i class="fa-solid fa-plus"></i> {{localize "SRX.Vehicle.mountAdd"}}
+    </button>
   </section>
   {{/if}}
 </div>

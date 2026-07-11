@@ -14,6 +14,7 @@ import {
 import { promptMatrixConfig } from "../apps/matrix-dialog.mjs";
 import { applyDamageToActor } from "../combat/damage.mjs";
 import { combatantForActor, spendCombatantAction } from "../combat/actions.mjs";
+import { effectiveAutopilotRating } from "./dcc.mjs";
 import { actionButton, cardHtml, detail, esc, line, noticeCard } from "../chat/cards.mjs";
 
 function modeLabel(mode) {
@@ -90,7 +91,7 @@ export async function rollVehicleTest(vehicle, { type = "handling" } = {}) {
   const pool = controlPool(mode, {
     reaction: operator?.system.attributes?.rea?.value ?? 0,
     skill: operator?.system.skills?.[sys.skill]?.value ?? 0
-  }, { autopilotRating: sys.autopilot.rating });
+  }, { autopilotRating: effectiveAutopilotRating(vehicle) });
 
   const statBonus = type === "speed" ? sys.derived.effectiveSpeed : sys.handling;
   const parts = mode === "autopilot"
@@ -151,7 +152,7 @@ export async function rollRam(vehicle) {
   const pool = controlPool(sys.controlMode, {
     reaction: operator?.system.attributes?.rea?.value ?? 0,
     skill: operator?.system.skills?.[sys.skill]?.value ?? 0
-  }, { autopilotRating: sys.autopilot.rating });
+  }, { autopilotRating: effectiveAutopilotRating(vehicle) });
 
   const parts = [
     { label: game.i18n.localize("SRX.Attribute.rea"), value: pool.attribute },

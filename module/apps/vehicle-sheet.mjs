@@ -21,7 +21,15 @@ export class SrxVehicleSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       rollSpeed: SrxVehicleSheet.#onRollSpeed,
       rollRam: SrxVehicleSheet.#onRollRam,
       rollCrash: SrxVehicleSheet.#onRollCrash,
-      rollEnvironment: SrxVehicleSheet.#onRollEnvironment
+      rollEnvironment: SrxVehicleSheet.#onRollEnvironment,
+      openChaseTracker: SrxVehicleSheet.#onOpenChaseTracker,
+      openRepair: SrxVehicleSheet.#onOpenRepair,
+      assignDcc: SrxVehicleSheet.#onAssignDcc,
+      removeDcc: SrxVehicleSheet.#onRemoveDcc,
+      rollDcc: SrxVehicleSheet.#onRollDcc,
+      addMount: SrxVehicleSheet.#onAddMount,
+      removeMount: SrxVehicleSheet.#onRemoveMount,
+      fireMount: SrxVehicleSheet.#onFireMount
     }
   };
 
@@ -70,6 +78,15 @@ export class SrxVehicleSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       jumpedIn: "SRX.Vehicle.modeJumpedIn",
       autopilot: "SRX.Vehicle.modeAutopilot"
     }[sys.controlMode] ?? "SRX.Vehicle.modeAutopilot");
+
+    // M6 depth: mounts, DCC assignment, chase/repair helpers
+    const { listMounts } = await import("../vehicle/mounts.mjs");
+    const { isAssignedToDcc } = await import("../vehicle/dcc.mjs");
+    context.mounts = listMounts(actor);
+    context.mountTypes = ["forward", "backward", "rotating", "heavy"];
+    context.assignedToDcc = isAssignedToDcc(actor);
+    context.hasCharacter = !!game.user.character;
+    context.inCombat = !!game.combat;
     return context;
   }
 
@@ -118,6 +135,65 @@ export class SrxVehicleSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   static async #onRollEnvironment(_event, target) {
     const { rollChaseEnvironment } = await import("../vehicle/actions.mjs");
     return rollChaseEnvironment(target.dataset.area ?? "standard");
+  }
+
+  static async #onOpenChaseTracker() {
+    const { openChaseTracker } = await import("./chase-tracker.mjs");
+    return openChaseTracker();
+  }
+
+  static async #onOpenRepair() {
+    const { openRepairDialog } = await import("../vehicle/repair.mjs");
+    return openRepairDialog(this.document);
+  }
+
+  static async #onAssignDcc() {
+    const rigger = game.user.character;
+    if (!rigger) {
+      ui.notifications.warn(game.i18n.localize("SRX.Vehicle.dccNoCharacter"));
+      return null;
+    }
+    const { assignDrone } = await import("../vehicle/dcc.mjs");
+    const res = await assignDrone(rigger, this.document);
+    this.render();
+    return res;
+  }
+
+  static async #onRemoveDcc() {
+    const rigger = game.user.character;
+    if (!rigger) return null;
+    const { removeDrone } = await import("../vehicle/dcc.mjs");
+    await removeDrone(rigger, this.document);
+    return this.render();
+  }
+
+  static async #onRollDcc() {
+    const rigger = game.user.character;
+    if (!rigger) {
+      ui.notifications.warn(game.i18n.localize("SRX.Vehicle.dccNoCharacter"));
+      return null;
+    }
+    const { rollDccInitiative } = await import("../vehicle/dcc.mjs");
+    return rollDccInitiative(rigger);
+  }
+
+  static async #onAddMount() {
+    const { addMount } = await import("../vehicle/mounts.mjs");
+    await addMount(this.document);
+    return this.render();
+  }
+
+  static async #onRemoveMount(_event, target) {
+    const { removeMount } = await import("../vehicle/mounts.mjs");
+    await removeMount(this.document, target.dataset.mountId);
+    return this.render();
+  }
+
+  static async #onFireMount(_event, target) {
+    const { fireMount } = await import("../vehicle/mounts.mjs");
+    return fireMount(this.document, target.dataset.mountId, {
+      targetRelation: target.dataset.relation ?? "any"
+    });
   }
 }
 
