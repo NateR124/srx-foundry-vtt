@@ -57,11 +57,18 @@ describe("compileEffectString (route through compileFlatEffects)", () => {
 });
 
 describe("FLAT_EFFECT_KEYS coverage", () => {
-  it("covers all seven attributes and all 21 skills", () => {
+  it("covers all attributes and all 21 skills", () => {
     const keys = Object.keys(FLAT_EFFECT_KEYS);
     const attrs = keys.filter((k) => k.startsWith("attr."));
     const skills = keys.filter((k) => k.startsWith("skill."));
-    expect(attrs.length).toBe(8); // 7 real + str alias
+    // 7 core + str alias + qui/mag/res special attributes (contract v0.2)
+    expect(attrs.length).toBe(11);
     expect(skills.length).toBe(21);
+  });
+
+  it("v0.2 adds special-attribute and health-track keys", () => {
+    for (const k of ["attr.qui", "attr.mag", "attr.res", "health.stun", "health.physical"]) {
+      expect(FLAT_EFFECT_KEYS[k]).toBeDefined();
+    }
   });
 });

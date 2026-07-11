@@ -81,3 +81,84 @@ export function compileEffectString(text) {
   const compiled = compileFlatEffects(effects);
   return { ...compiled, unsupported };
 }
+
+/**
+ * The builder TSVs already carry MACHINE-READABLE effect columns
+ * (Talents/Ware `effects: [{ key, value }]` — see sidecar-parsers.mjs
+ * EFFECT_KEYS_TALENT / EFFECT_KEYS_WARE). This map turns those catalog labels
+ * — talents use display case ("BOD", "Close Combat", "Stun Health"), 'ware use
+ * camelCase ("bod", "closeCombat", "stunHealth") — into effect-contract keys.
+ * Normalisation lowercases and strips non-alphanumerics so both cases collapse
+ * to one entry. Only keys with a REAL actor field are listed; everything else
+ * (Defense Score, Movement Rate, Accelerator, vision, elemental resistances,
+ * Essence cost, Lifestyle) has no schema slot and is reported as unsupported
+ * rather than invented (EFFECTS.md rule 2).
+ * @type {Record<string, string>}
+ */
+export const CATALOG_KEY_MAP = (() => {
+  const norm = (s) => String(s).toLowerCase().replace(/[^a-z0-9]/g, "");
+  const map = {};
+  const add = (label, key) => { map[norm(label)] = key; };
+
+  // Core + special attributes
+  for (const key of Object.keys(SRX.attributes)) add(key, `attr.${key}`);
+  add("qui", "attr.qui");
+  add("mag", "attr.mag");
+  add("res", "attr.res");
+
+  // All 21 skills — the camelCase key already normalises to the same token as
+  // the talent's spaced display label ("Close Combat" → "closecombat").
+  for (const key of Object.keys(SRX.skills)) add(key, `skill.${key}`);
+
+  // Derived / monitor bonuses
+  add("armor", "derived.armor");
+  add("hardenedArmor", "derived.hardened");
+  add("woundedLimit", "derived.woundedLimit");
+  add("stunHealth", "health.stun");
+  add("physicalHealth", "health.physical");
+  return map;
+})();
+
+/**
+ * Map one structured catalog effect column to a contract key.
+ * @param {string} rawKey - catalog label ("BOD", "closeCombat", "Stun Health")
+ * @returns {string|null}
+ */
+export function mapCatalogKey(rawKey) {
+  const token = String(rawKey ?? "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  return CATALOG_KEY_MAP[token] ?? null;
+}
+
+/**
+ * Map a catalog item's structured `effects: [{ key, value }]` array onto
+ * contract-key descriptors. Zero-valued columns (e.g. Enhanced Speed's
+ * Movement Rate 0) carry no bonus and are dropped silently; anything the
+ * contract cannot express is returned under `unsupported` for coverage
+ * reporting.
+ * @param {{ key: string, value: number }[]} catalogEffects
+ * @returns {{ effects: {key: string, value: number}[], unsupported: {raw: string, value: number}[] }}
+ */
+export function mapCatalogEffects(catalogEffects) {
+  const effects = [];
+  const unsupported = [];
+  for (const fx of catalogEffects ?? []) {
+    const value = Number(fx?.value);
+    if (!Number.isFinite(value) || value === 0) continue;
+    const key = mapCatalogKey(fx.key);
+    if (key && FLAT_EFFECT_KEYS[key]) effects.push({ key, value });
+    else unsupported.push({ raw: fx.key, value });
+  }
+  return { effects, unsupported };
+}
+
+/**
+ * Compile a catalog item's structured effect columns straight to Foundry AE
+ * change rows — the structured-data twin of {@link compileEffectString}.
+ * @param {{ key: string, value: number }[]} catalogEffects
+ * @returns {{ ok: boolean, changes: object[], unknown: string[], unsupported: {raw: string, value: number}[] }}
+ */
+export function compileCatalogEffects(catalogEffects) {
+  const { effects, unsupported } = mapCatalogEffects(catalogEffects);
+  const compiled = compileFlatEffects(effects);
+  return { ...compiled, unsupported };
+}
