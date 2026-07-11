@@ -16,7 +16,9 @@
     "module/srx.mjs"
   ],
   "styles": [
-    "styles/srx.css"
+    "styles/srx.css",
+    "styles/matrix.css",
+    "styles/vehicle.css"
   ],
   "languages": [
     {

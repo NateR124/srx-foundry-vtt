@@ -48,6 +48,11 @@ import * as vehicleRules from "./rules/vehicle.mjs";
 import { startSuppressiveFire } from "./combat/suppress.mjs";
 import { registerMatrixHooks } from "./matrix/hooks.mjs";
 import { registerVehicleHooks } from "./vehicle/hooks.mjs";
+import { registerActiveEffectHooks } from "./active-effect/hooks.mjs";
+import { registerFociHooks } from "./magic/foci.mjs";
+import { registerConjureHooks } from "./magic/conjure.mjs";
+import { registerAstralTimeHooks } from "./magic/astral-time.mjs";
+import { registerSuppressMovementHooks } from "./canvas/suppress-movement.mjs";
 import { SRXRoll } from "./dice/srx-roll.mjs";
 import { SrxCharacterSheet } from "./apps/actor-sheet.mjs";
 import { SrxThreatSheet } from "./apps/threat-sheet.mjs";
@@ -182,7 +187,12 @@ Hooks.once("ready", () => {
   registerMatrixHooks();
   registerVehicleHooks();
   registerTimedHooks();
-  console.log("SRX | Ready (M2 combat + M3 import + M4 magic + M5/M6 seeds)");
+  registerActiveEffectHooks();
+  registerFociHooks();
+  registerConjureHooks();
+  registerAstralTimeHooks();
+  registerSuppressMovementHooks();
+  console.log("SRX | Ready (M2 combat + M3 import + M4 magic + M5 matrix + M6 vehicles + effects/foci/spirits)");
 });
 
 /** Dice So Nice */
