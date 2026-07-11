@@ -75,9 +75,10 @@ export function registerMatrixHooks() {
 
   // --- Character-sheet Matrix-tab depth panels ---------------------------
   Hooks.on("renderSrxCharacterSheet", (app, html) => {
-    const root = html instanceof HTMLElement ? html : html?.[0] ?? app?.element;
-    if (!root) return;
-    injectMatrixPanels(app.document, root, () => app.render(false));
+    const root = html instanceof HTMLElement ? html : (html?.[0] ?? app?.element);
+    const actor = app?.document ?? app?.actor;
+    if (!root || !actor) return;
+    injectMatrixPanels(actor, root, () => app.render(false));
   });
 
   // --- Keep sprite capacity in sync with Register Sprite talents ---------
