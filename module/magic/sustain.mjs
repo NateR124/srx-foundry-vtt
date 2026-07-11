@@ -12,8 +12,35 @@ import {
 import { SRXRoll } from "../dice/srx-roll.mjs";
 import { requestGmAction } from "../net/socket.mjs";
 import { esc, noticeCard } from "../chat/cards.mjs";
+import {
+  SUSTAIN_FLAG_KEY,
+  reconcileSustainEffects
+} from "../active-effect/sustain-effects.mjs";
 
 const FLAG = "sustained";
+
+/**
+ * Synchronise the caster's sustain AEs to match its sustain flag list.
+ * No-op on actors the current user cannot mutate (the penalty still works off
+ * the flag). Best-effort — a failed AE write never breaks sustain tracking.
+ * @param {Actor} caster
+ */
+async function syncSustainEffects(caster) {
+  if (!caster?.effects) return;
+  if (!(caster.isOwner || game.user?.isGM)) return;
+  const existing = [];
+  for (const ae of caster.effects) {
+    const sid = ae.getFlag?.("srx", SUSTAIN_FLAG_KEY);
+    if (sid) existing.push({ id: ae.id, sustainId: sid });
+  }
+  const { toCreate, toDeleteIds } = reconcileSustainEffects(getSustained(caster), existing);
+  try {
+    if (toDeleteIds.length) await caster.deleteEmbeddedDocuments("ActiveEffect", toDeleteIds);
+    if (toCreate.length) await caster.createEmbeddedDocuments("ActiveEffect", toCreate);
+  } catch (err) {
+    console.warn("SRX | sustain AE sync failed", err);
+  }
+}
 
 /**
  * Clear per-target side effects tied to sustained entries (Aegis warding).
@@ -74,6 +101,7 @@ export async function addSustained(caster, effectData) {
   const entry = createSustainedEffect(effectData);
   const next = mergeDuplicateSustain(getSustained(caster), entry);
   await caster.setFlag("srx", FLAG, next);
+  await syncSustainEffects(caster);
   return entry;
 }
 
@@ -86,6 +114,7 @@ export async function endSustained(caster, id) {
   const list = getSustained(caster);
   const next = dropSustainedEffect(list, id);
   await caster.setFlag("srx", FLAG, next);
+  await syncSustainEffects(caster);
   await clearLinkedEffects(list.filter((e) => e.id === id));
   return next;
 }
@@ -97,6 +126,7 @@ export async function endSustained(caster, id) {
 export async function endAllSustained(caster) {
   const list = getSustained(caster);
   await caster.unsetFlag("srx", FLAG).catch(() => null);
+  await syncSustainEffects(caster);
   await clearLinkedEffects(list);
 }
 
@@ -152,6 +182,27 @@ export async function checkSustainOnWound(actor) {
  * End all sustains when unconscious status applied.
  */
 export function registerSustainHooks() {
+  // Removing a sustain's token indicator (token HUD / effects panel) ends that
+  // sustained spell. The AE is already gone here, so we only drop the flag —
+  // never call syncSustainEffects, which would loop.
+  Hooks.on("deleteActiveEffect", async (effect, _opts, userId) => {
+    if (game.user.id !== userId) return;
+    const actor = effect.parent;
+    if (!actor || actor.documentName !== "Actor") return;
+    const sid = effect.getFlag?.("srx", SUSTAIN_FLAG_KEY);
+    if (!sid) return;
+    const list = getSustained(actor);
+    if (!list.some((e) => e.id === sid)) return; // our own cleanup handled it
+    // Guard the flag write: if the AE went away as part of the actor being
+    // deleted, setFlag can reject — the sustain record is moot anyway.
+    try {
+      await actor.setFlag("srx", FLAG, dropSustainedEffect(list, sid));
+      await clearLinkedEffects(list.filter((e) => e.id === sid));
+    } catch (err) {
+      console.warn("SRX | sustain indicator cleanup", err);
+    }
+  });
+
   Hooks.on("createActiveEffect", async (effect, _opts, userId) => {
     if (game.user.id !== userId) return;
     const actor = effect.parent;

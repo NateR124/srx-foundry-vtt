@@ -19,6 +19,13 @@ export const FLAT_EFFECT_KEYS = {
   ])),
   // STR does not exist in SRX (folded into BOD, p. 12) — legacy-content alias
   "attr.str": { path: "system.attributes.bod.bonus", mode: "add", notes: "alias — SRX has no STR; maps to BOD" },
+  // Special attributes that also fold their .bonus through augmented() in
+  // CharacterData#prepareDerivedData (quickness/magic/resonance loop). Ware and
+  // magical talents (Wired Reflexes → QUI, Initiation → MAG, Submersion → RES)
+  // drive these columns; added to the contract v0.2 (see docs/EFFECTS.md).
+  "attr.qui": { path: "system.special.quickness.bonus", mode: "add", notes: "Quickness (special attr) — folded via augmented()" },
+  "attr.mag": { path: "system.special.magic.bonus", mode: "add", notes: "Magic (special attr) — folded via augmented()" },
+  "attr.res": { path: "system.special.resonance.bonus", mode: "add", notes: "Resonance (special attr) — folded via augmented()" },
   // All 21 skills — bulk AE generation needs full coverage, not a sample
   ...Object.fromEntries(Object.keys(SRX.skills).map((key) => [
     `skill.${key}`,
@@ -27,6 +34,11 @@ export const FLAT_EFFECT_KEYS = {
   "derived.armor": { path: "system.derivedMods.armor", mode: "add" },
   "derived.hardened": { path: "system.derivedMods.hardened", mode: "add" },
   "derived.woundedLimit": { path: "system.derivedMods.woundedLimit", mode: "add" },
+  // Condition-monitor maxima bonuses (otherMods on each track's healthTrack
+  // call). Built Tough / Will To Live (talents) and Bone Lacing / Platelet
+  // Factories ('ware) drive these — contract v0.2.
+  "health.stun": { path: "system.monitors.stun.bonus", mode: "add", notes: "Stun Health track maximum bonus" },
+  "health.physical": { path: "system.monitors.physical.bonus", mode: "add", notes: "Physical Health track maximum bonus" },
   "edge.rating": { path: "system.special.edge.rating", mode: "add", notes: "careful — rating not value" }
 };
 
