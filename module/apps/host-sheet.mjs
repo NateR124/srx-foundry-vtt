@@ -23,7 +23,8 @@ export class SrxHostSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       removeLadderRow: SrxHostSheet.#onRemoveLadderRow,
       addIcDef: SrxHostSheet.#onAddIcDef,
       removeIcDef: SrxHostSheet.#onRemoveIcDef,
-      loadExampleLadder: SrxHostSheet.#onLoadExampleLadder
+      loadExampleLadder: SrxHostSheet.#onLoadExampleLadder,
+      toggleSpider: SrxHostSheet.#onToggleSpider
     }
   };
 
@@ -52,7 +53,44 @@ export class SrxHostSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       icText: (row.ic ?? []).join(", ")
     }));
     context.icDefs = (sys.icDefinitions ?? []).map((d, idx) => ({ ...d, idx }));
+    // Spider presence + intruder Overwatch tracking (p. 152). Stored as a flag
+    // because HostData's schema is hub-frozen; the sheet owns the tooling.
+    context.spiderPresent = !!actor.getFlag("srx", "spiderPresent");
+    context.intruders = Object.entries(sys.intruders ?? {}).map(([id, os]) => ({ id, os }));
     return context;
+  }
+
+  /**
+   * Append a spider / intruder panel to the host body (M5 depth). Injected at
+   * render time so the hub-frozen host template does not need editing.
+   */
+  _onRender(context, options) {
+    super._onRender?.(context, options);
+    try {
+      const root = this.element;
+      const body = root?.querySelector?.(".host-body");
+      if (!body || body.querySelector(".host-spider")) return;
+
+      const intruderRows = context.intruders.length
+        ? context.intruders.map((i) => `<li>${i.id} · OS ${i.os}</li>`).join("")
+        : `<li class="empty">—</li>`;
+      const panel = document.createElement("section");
+      panel.className = "host-spider";
+      panel.innerHTML = `
+        <h3>${game.i18n.localize("SRX.Host.access")}</h3>
+        <button type="button" class="spider-toggle ${context.spiderPresent ? "active" : ""}" data-action="toggleSpider">
+          <i class="fa-solid fa-user-secret"></i> ${game.i18n.localize("SRX.Host.spider")}
+        </button>
+        <ul class="item-list host-intruders">${intruderRows}</ul>`;
+      body.appendChild(panel);
+    } catch (err) {
+      console.error("SRX | host spider panel", err);
+    }
+  }
+
+  static async #onToggleSpider() {
+    const active = !this.document.getFlag("srx", "spiderPresent");
+    await this.document.setFlag("srx", "spiderPresent", active);
   }
 
   /**

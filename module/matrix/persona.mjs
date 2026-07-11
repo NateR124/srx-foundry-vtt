@@ -18,7 +18,14 @@ const DEFAULT_STATE = Object.freeze({
   hotSim: false,
   silent: false,
   os: 0,
-  linkLocked: false
+  linkLocked: false,
+  // "device" (decker) | "livingPersona" (technomancer) — set at connect;
+  // cannot change without disconnect/reconnect (p. 141 / p. 183).
+  connection: "device",
+  // [Echo] uses since the last full night's rest (technomancy p. 176).
+  echoUses: 0,
+  // Living-Persona brick lockout — hours you cannot reconnect (p. 183).
+  lockoutHours: 0
 });
 
 /** @returns {{mode: string, hotSim: boolean, silent: boolean, os: number, linkLocked: boolean}} */
@@ -32,11 +39,23 @@ export async function setMatrixState(actor, patch) {
   return next;
 }
 
-/** Effective persona MDS including the Matrix Defense action buff (p. 145). */
-export function personaMds(actor) {
+/**
+ * Effective persona MDS: base derived MDS + the Matrix Defense action buff
+ * (p. 145) + any self-buff administered-program bonuses (CCD/Encryption/…,
+ * which stack — RULINGS-NEEDED R18). Optional `systemKey` selects per-system
+ * program bonuses (e.g. PDS +1 vs weapons&cyberware only).
+ */
+export function personaMds(actor, systemKey = null) {
   const base = actor?.system?.derived?.matrixDefenseScore ?? 1;
   const buff = actor?.getFlag("srx", "matrixDefense")?.active ? 1 : 0;
-  return base + buff;
+  const programs = actor?.getFlag("srx", "matrixPrograms") ?? [];
+  let programBonus = 0;
+  for (const p of programs) {
+    if (p?.effect !== "mds") continue;
+    if (p.systemTag && systemKey && p.systemTag !== systemKey) continue;
+    programBonus += Number(p.mdsBonus) || 0;
+  }
+  return base + buff + programBonus;
 }
 
 export function hasMatrixDefense(actor) {
@@ -58,12 +77,12 @@ async function syncVrParalysis(actor, mode) {
  * Connect (Complex): choose AR/VR + hot-sim; online at end of the NEXT
  * Combat Turn (p. 144) — timing is on the card, not automated.
  */
-export async function connectMatrix(actor, { mode = "ar", hotSim = false } = {}) {
+export async function connectMatrix(actor, { mode = "ar", hotSim = false, connection = "device" } = {}) {
   if (!actor) return null;
   const combatant = combatantForActor(actor);
   if (combatant) await spendCombatantAction(combatant, "complex");
 
-  await setMatrixState(actor, { mode, hotSim, linkLocked: false });
+  await setMatrixState(actor, { mode, hotSim, connection, linkLocked: false });
   await actor.toggleStatusEffect("disconnected", { active: false }).catch(() => null);
   await syncVrParalysis(actor, mode);
 
@@ -95,7 +114,15 @@ export async function disconnectMatrix(actor) {
   const combatant = combatantForActor(actor);
   if (combatant) await spendCombatantAction(combatant, "complex");
 
-  await setMatrixState(actor, { ...DEFAULT_STATE });
+  // Disconnected ends all administered programs and Access; OS resets (p. 150).
+  const { clearAccessState } = await import("./access.mjs");
+  const { endAllPrograms } = await import("./programs.mjs");
+  await endAllPrograms(actor, { reason: "disconnected" }).catch(() => null);
+  await clearAccessState(actor).catch(() => null);
+
+  // Preserve any Living-Persona lockout timer across a graceful disconnect.
+  const lockoutHours = getMatrixState(actor).lockoutHours ?? 0;
+  await setMatrixState(actor, { ...DEFAULT_STATE, lockoutHours });
   await actor.toggleStatusEffect("disconnected", { active: true }).catch(() => null);
   await syncVrParalysis(actor, "offline");
 

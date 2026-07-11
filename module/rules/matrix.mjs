@@ -1,7 +1,15 @@
 /**
- * Core Matrix rules (SRX pp. 137–153). Pure functions only — no Foundry
- * globals. Research digest: docs/research/matrix-hacking.md.
+ * Core Matrix rules (SRX pp. 137–153) plus M5-depth: Access/marks,
+ * administered programs, devices, and technomancy (Fading, Net Level, Echo,
+ * Threading substitution). Pure functions only — no Foundry globals.
+ * Research digests: docs/research/matrix-hacking.md, docs/research/technomancy.md.
+ *
+ * Rounding: every division rounds UP (RULINGS-NEEDED R1, p. 10 global rule) —
+ * including the many Resonance/2, Level/2, Resonance/3 cap/count formulas here,
+ * which the book does not individually re-specify.
  */
+
+import { ceilDiv } from "./dice.mjs";
 
 /** The 7 system tags (p. 141). Keys match HostData.overrides field names. */
 export const MATRIX_SYSTEMS = [
@@ -208,4 +216,314 @@ export function exampleIcLadder() {
     { os: 3, ic: ["grey"] },
     { os: 4, ic: ["grey", "bouncer"] }
   ];
+}
+
+/** Unattended device MDS: Logic 3, Software 3 → MDS 2, plus firewall (p. 151). */
+export function unattendedDeviceMds({ firewall = 0 } = {}) {
+  return Math.max(1, ceilDiv(6 + (Number(firewall) || 0), 3));
+}
+
+/**
+ * Device MDS from explicit ratings, else the unattended fallback. Owned
+ * devices inherit their owner's MDS (persona/host); pass that as `ownerMds`.
+ */
+export function deviceMds({ ownerMds = null, firewall = 0, unattended = false } = {}) {
+  if (!unattended && ownerMds != null) return Math.max(1, Number(ownerMds) || 1);
+  return unattendedDeviceMds({ firewall });
+}
+
+/* -------------------------------------------- */
+/*  Access & marks (pp. 148–149, 153, 162)      */
+/* -------------------------------------------- */
+
+/** Quiet Entry grants marks = Hacking / 3, round up (p. 162). */
+export function quietEntryMarks(hacking = 0) {
+  return Math.max(0, ceilDiv(Number(hacking) || 0, 3));
+}
+
+/** Infiltrate Host (technomancer) grants marks = Level / 2 (p. 182). */
+export function infiltrateMarks(level = 0) {
+  return Math.max(0, ceilDiv(Number(level) || 0, 2));
+}
+
+/**
+ * Spend marks 1:1 to add hits after seeing a roll (Quiet Entry, p. 162):
+ * capped by marks held and by how many more hits you actually want.
+ * @returns {{ spent: number, hits: number, marksLeft: number }}
+ */
+export function spendMarks({ marks = 0, want = 0 } = {}) {
+  const spent = Math.max(0, Math.min(marks, want));
+  return { spent, hits: spent, marksLeft: marks - spent };
+}
+
+/* -------------------------------------------- */
+/*  Administered programs (p. 153)              */
+/* -------------------------------------------- */
+
+/**
+ * Cumulative maintenance penalty: −2 dice to ALL other tests per maintained
+ * program (excluding resistance tests). Each assigned agent/sprite removes one
+ * program's penalty; Multi-tasking (Software talent) ignores one more (p. 153,
+ * p. 172). Returns a non-positive dice modifier.
+ * @param {object} o
+ * @param {number} o.programs      - count of administered programs maintained
+ * @param {number} [o.agents]      - programs covered by an agent/sprite
+ * @param {number} [o.multitasking]- programs ignored by Multi-tasking
+ */
+export function maintenancePenalty({ programs = 0, agents = 0, multitasking = 0 } = {}) {
+  const penalized = Math.max(0, programs - Math.max(0, agents) - Math.max(0, multitasking));
+  return penalized === 0 ? 0 : -2 * penalized;
+}
+
+/**
+ * Ending a Program (p. 153): the affected icon's owner rolls a firewall test
+ * (Logic + Software, or host HR × 3) and ends the effect if hits ≥ Program
+ * Threshold. Losing required Access also ends it (handled by the caller).
+ */
+export function endProgramContest({ defenderHits = 0, programThreshold = 1 } = {}) {
+  return { ended: defenderHits >= Math.max(1, programThreshold) };
+}
+
+/**
+ * Duplicate Programs (p. 153–154): the same administered program stacked on a
+ * target keeps only the instance with the highest-magnitude bonus/penalty
+ * while durations overlap.
+ * @param {number[]} values - signed bonus/penalty of each overlapping instance
+ * @returns {number} the surviving value (0 when none)
+ */
+export function dominantDuplicate(values = []) {
+  let best = 0;
+  for (const v of values) {
+    if (Math.abs(v) > Math.abs(best)) best = v;
+  }
+  return best;
+}
+
+/** Aggregate MDS bonuses stack (RULINGS-NEEDED R18 — no anti-stack language). */
+export function aggregateMdsBonuses(bonuses = []) {
+  return bonuses.reduce((n, b) => n + (Number(b) || 0), 0);
+}
+
+/* -------------------------------------------- */
+/*  Technomancy — Threading substitution (p.174)*/
+/* -------------------------------------------- */
+
+/**
+ * Connected through the Living Persona, a technomancer may substitute
+ * Threading for Hacking/Software and Intuition for Logic — including in
+ * derived values (MDS) and talent prerequisites (p. 174–175). Connecting
+ * through a device disables substitution and action-requiring Threading
+ * talents. Liability on Threading tests when NOT in hot-sim (p. 142).
+ * @param {object} o
+ * @param {"none"|"device"|"livingPersona"} [o.connection]
+ * @param {boolean} [o.hotSim]
+ */
+export function threadingSubstitution({ connection = "livingPersona", hotSim = false } = {}) {
+  const living = connection === "livingPersona";
+  return {
+    canSubstitute: living,
+    skill: living ? "threading" : null,
+    attr: living ? "int" : null,
+    // Threading/Living-Persona Hacking tests take Liability outside hot-sim
+    liability: connection !== "none" && !hotSim,
+    // Action-requiring Threading talents are unavailable through a device
+    threadingActionsBlocked: connection === "device"
+  };
+}
+
+/* -------------------------------------------- */
+/*  Technomancy — Levels & Fading (p. 175)      */
+/* -------------------------------------------- */
+
+/**
+ * Max Level a Threading talent may be used at = Resonance, or Resonance +
+ * Threading/2 with Resonant Persona (over-Resonance uses turn Fading Physical).
+ */
+export function maxThreadingLevel({ resonance = 0, threading = 0, resonantPersona = false } = {}) {
+  const base = Math.max(0, Number(resonance) || 0);
+  return resonantPersona ? base + ceilDiv(Number(threading) || 0, 2) : base;
+}
+
+/**
+ * Fading resolution (p. 175). Base damage = Level; the Fading test
+ * (Resonance + Threading) reduces it hit-for-hit; remainder hits the Stun
+ * track (Physical for over-Resonance uses of Resonant Persona — R21). System
+ * Shock rises by the damage taken.
+ *
+ * Edge: Bypass Protections (R20): total Fading = Level + 1d6, unreducible,
+ * Physical — pass { bypassProtections: true, d6 } and hits are ignored.
+ *
+ * @param {object} o
+ * @param {number} o.level
+ * @param {number} [o.hits]              - Fading-test hits (Res + Threading)
+ * @param {boolean} [o.overResonance]    - Level exceeded Resonance
+ * @param {boolean} [o.resonantPersona]  - owns Resonant Persona
+ * @param {boolean} [o.physical]         - talent states Physical Fading outright
+ * @param {boolean} [o.bypassProtections]
+ * @param {number} [o.d6]                - the d6 for Bypass Protections
+ * @returns {{ damage: number, type: "P"|"S", systemShock: number }}
+ */
+export function resolveFading({
+  level = 0,
+  hits = 0,
+  overResonance = false,
+  resonantPersona = false,
+  physical = false,
+  bypassProtections = false,
+  d6 = 0
+} = {}) {
+  if (bypassProtections) {
+    const dmg = Math.max(0, (Number(level) || 0) + (Number(d6) || 0));
+    return { damage: dmg, type: "P", systemShock: dmg };
+  }
+  const damage = Math.max(0, (Number(level) || 0) - Math.max(0, hits));
+  const isPhysical = physical || (resonantPersona && overResonance);
+  return { damage, type: isPhysical ? "P" : "S", systemShock: damage };
+}
+
+/** Fading test pool = Resonance + Threading (+ Fading specialization) (p. 175). */
+export function fadingPool({ resonance = 0, threading = 0, specialization = 0 } = {}) {
+  return Math.max(0, (Number(resonance) || 0) + (Number(threading) || 0) + (Number(specialization) || 0));
+}
+
+/* -------------------------------------------- */
+/*  Technomancy — Net Level & Echo (pp. 175–176)*/
+/* -------------------------------------------- */
+
+/**
+ * Net Level opposed resolution: the defender's resist hits subtract from the
+ * attacker's chosen Level (NOT from attacker hits). Effect gate = Net Level ≥ 1.
+ */
+export function netLevel({ level = 0, defenderHits = 0 } = {}) {
+  const raw = (Number(level) || 0) - Math.max(0, defenderHits);
+  return { netLevel: Math.max(0, raw), applies: raw >= 1 };
+}
+
+/**
+ * [Echo] universal rule (R23): required Level = 2 + 2 × (Echo uses since the
+ * last full night's rest, not counting this use). Echo Mastery lowers the
+ * count by 1 (floor 0).
+ */
+export function echoRequiredLevel(priorUses = 0, { echoMastery = false } = {}) {
+  const count = Math.max(0, (Number(priorUses) || 0) - (echoMastery ? 1 : 0));
+  return 2 + 2 * count;
+}
+
+/* -------------------------------------------- */
+/*  Technomancy — caps, counts, validators      */
+/* -------------------------------------------- */
+
+/** Generic purchase/target cap = attribute / divisor, round up (global R1). */
+export function resonanceCap(resonance = 0, divisor = 2) {
+  return Math.max(0, ceilDiv(Number(resonance) || 0, Math.max(1, divisor)));
+}
+
+/** Fork targets = Resonance / 3 (p. 182). */
+export function forkTargetCount(resonance = 0) {
+  return resonanceCap(resonance, 3);
+}
+
+/** MMRI (control-rig) effective rating cap = Resonance / 2 (p. 184). */
+export function mmriRatingCap(resonance = 0) {
+  return resonanceCap(resonance, 2);
+}
+
+/** Threading-talent Karma cap = 30 × Resonance (Submersion excluded) (p. 175). */
+export function threadingKarmaCap(resonance = 0) {
+  return 30 * Math.max(0, Number(resonance) || 0);
+}
+
+/**
+ * Sum Threading-talent karma toward the 30×Resonance cap; Submersion's karma
+ * does not count (p. 175, p. 188).
+ * @param {Array<{karma:number, name?:string, excluded?:boolean}>} talents
+ */
+export function threadingKarmaSpent(talents = []) {
+  return talents.reduce((sum, t) => {
+    if (t?.excluded || /submersion/i.test(t?.name ?? "")) return sum;
+    return sum + (Number(t?.karma) || 0);
+  }, 0);
+}
+
+/** Over the Threading-talent Karma cap? (Resonance loss can trigger this.) */
+export function overThreadingKarmaCap({ resonance = 0, talents = [] } = {}) {
+  return threadingKarmaSpent(talents) > threadingKarmaCap(resonance);
+}
+
+/**
+ * Resonance/Essence cap: unaugmented Resonance may never exceed the UNROUNDED
+ * Essence (p. 174). Resonance is an integer.
+ */
+export function resonanceEssenceOk({ resonance = 0, essence = 6 } = {}) {
+  return (Number(resonance) || 0) <= (Number(essence) || 0);
+}
+
+/** Burnout: unaugmented Resonance at 0 → permanent loss of technomancy (p. 174). */
+export function isBurnedOut(unaugmentedResonance = 1) {
+  return (Number(unaugmentedResonance) || 0) <= 0;
+}
+
+/**
+ * Living Persona brick conversion (p. 183): a would-be device brick instead
+ * deals unresisted Physical damage = the effect's net hits AND locks the
+ * technomancer out of Living-Persona connection for that many hours.
+ */
+export function livingPersonaBrick({ netHits = 0 } = {}) {
+  const n = Math.max(0, Number(netHits) || 0);
+  return { physical: n, lockoutHours: n };
+}
+
+/* -------------------------------------------- */
+/*  Artifices (pp. 188–191)                     */
+/* -------------------------------------------- */
+
+/** General artifice cost = Level² × 2,000¥ (p. 188). */
+export function artificeCost(level = 1) {
+  const l = Math.max(0, Number(level) || 0);
+  return l * l * 2000;
+}
+
+/** Artificing vessel cost ≈ Level² × 1,000¥ (p. 178). */
+export function artificeVesselCost(level = 1) {
+  const l = Math.max(0, Number(level) || 0);
+  return l * l * 1000;
+}
+
+/** Artificing ritual cost: days = Level, Karma = Level (p. 178). */
+export function artificeCraft(level = 1) {
+  const l = Math.max(0, Number(level) || 0);
+  return { days: l, karma: l };
+}
+
+/**
+ * Safely-active artifice limit = Willpower / 2 (+1 with Master Artificer,
+ * p. 189). Beyond it: Liability on resistance + Fading tests and 1 unresisted
+ * Stun/hour per excess artifice.
+ */
+export function artificeActiveLimit({ wil = 0, masterArtificer = false } = {}) {
+  return resonanceCap(wil, 2) + (masterArtificer ? 1 : 0);
+}
+
+export function artificeOverLimit({ active = 0, limit = 0 } = {}) {
+  const excess = Math.max(0, (Number(active) || 0) - (Number(limit) || 0));
+  return { over: excess > 0, liability: excess > 0, stunPerHour: excess };
+}
+
+/** Max craft Level = Threading (+1 spec), or Threading×1.5 with Master Artificer (p. 178/184). */
+export function artificeMaxCraftLevel({ threading = 0, specialization = false, masterArtificer = false } = {}) {
+  const eff = (Number(threading) || 0) + (specialization ? 1 : 0);
+  return masterArtificer ? ceilDiv(eff * 3, 2) : eff;
+}
+
+/* -------------------------------------------- */
+/*  Submersion (p. 188)                         */
+/* -------------------------------------------- */
+
+/**
+ * Submersion nuyen cost. Second factor is the OLD (pre-raise) Resonance
+ * (RULINGS-NEEDED R22): cost = newAugmentedResonance × oldResonance × 1,000¥.
+ */
+export function submersionCost({ resonance = 1 } = {}) {
+  const old = Math.max(0, Number(resonance) || 0);
+  return (old + 1) * old * 1000;
 }

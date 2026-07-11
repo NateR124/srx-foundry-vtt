@@ -13,8 +13,10 @@ import {
   resolveHackingOutcome,
   resolveIcDamage,
   biofeedbackResistPool,
+  threadingSubstitution,
   IC_CATALOG
 } from "../rules/matrix.mjs";
+import { maintenanceMod as programMaintenanceMod } from "./programs.mjs";
 import { promptMatrixConfig } from "../apps/matrix-dialog.mjs";
 import { promptRollConfig } from "../apps/roll-dialog.mjs";
 import {
@@ -60,15 +62,28 @@ export async function rollHackingTest(actor) {
     return null;
   }
 
-  const log = actor.system.attributes?.log?.value ?? 0;
-  const hacking = actor.system.skills?.hacking?.value ?? 0;
   const statusHit = actor.system.derived?.status?.hitMod ?? 0;
   const target = matrixTarget();
 
+  // Technomancer on a Living Persona substitutes Threading for Hacking and
+  // Intuition for Logic (p. 174–175); the test still counts as a Hacking test,
+  // so Failing-at-Hacking (OS/IC/spotted) below fires unchanged.
+  const sub = threadingSubstitution({ connection: state.connection, hotSim: state.hotSim });
+  const attrValue = sub.canSubstitute
+    ? (actor.system.attributes?.int?.value ?? 0)
+    : (actor.system.attributes?.log?.value ?? 0);
+  const skillValue = sub.canSubstitute
+    ? (actor.system.skills?.threading?.value ?? 0)
+    : (actor.system.skills?.hacking?.value ?? 0);
+  // Maintaining administered programs is −2 per program to all other tests
+  // (excluding resistance tests) — a Hacking test is an "other test" (p. 153).
+  const mMod = programMaintenanceMod(actor);
+
   const parts = [
-    { label: game.i18n.localize("SRX.Attribute.log"), value: log },
-    { label: game.i18n.localize("SRX.Skill.hacking"), value: hacking },
-    ...(iface.testBonus ? [{ label: game.i18n.localize("SRX.Matrix.vrBonus"), value: iface.testBonus }] : [])
+    { label: game.i18n.localize(sub.canSubstitute ? "SRX.Attribute.int" : "SRX.Attribute.log"), value: attrValue },
+    { label: game.i18n.localize(sub.canSubstitute ? "SRX.Skill.threading" : "SRX.Skill.hacking"), value: skillValue },
+    ...(iface.testBonus ? [{ label: game.i18n.localize("SRX.Matrix.vrBonus"), value: iface.testBonus }] : []),
+    ...(mMod < 0 ? [{ label: game.i18n.localize("SRX.Matrix.programsHeading"), value: mMod }] : [])
   ];
   const facts = [];
   if (iface.hackingLiability) facts.push(game.i18n.localize("SRX.Matrix.notHotSimFact"));
