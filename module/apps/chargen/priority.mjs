@@ -364,9 +364,14 @@ export function assembleCharacter(selection = {}) {
   const leftover = Math.max(0, resAvail - (selection.nuyenSpent ?? 0));
   const nuyen = Math.min(leftover, CARRYOVER_CAP);
 
-  const special = { essence: selection.essence ?? 6 };
-  if (selection.awakened === "magic") special.magic = { base: magicRating };
-  else if (selection.awakened === "resonance") special.resonance = { base: magicRating };
+  // Set BOTH special attributes explicitly so re-building an existing actor
+  // (e.g. switching an awakened concept to mundane) clears the stale rating
+  // rather than leaving it behind via Actor.update's merge.
+  const special = {
+    essence: selection.essence ?? 6,
+    magic: { base: selection.awakened === "magic" ? magicRating : 0 },
+    resonance: { base: selection.awakened === "resonance" ? magicRating : 0 }
+  };
 
   const system = {
     details: {

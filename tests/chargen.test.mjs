@@ -353,5 +353,12 @@ describe("assembleCharacter", () => {
     });
     // elf int pick doesn't touch WIL; unaug WIL 5, priority A max 6, essence 6 → 5
     expect(mage.system.special.magic).toEqual({ base: 5 });
+    expect(mage.system.special.resonance).toEqual({ base: 0 });
+  });
+
+  it("clears both special attributes for a mundane build (rebuild safety)", () => {
+    const { system } = assembleCharacter({ ...sel, awakened: null });
+    expect(system.special.magic).toEqual({ base: 0 });
+    expect(system.special.resonance).toEqual({ base: 0 });
   });
 });

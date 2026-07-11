@@ -95,8 +95,12 @@ function injectLaunchButton(app, element) {
 
 /** Wire the M7 chargen/advancement launch button onto character sheets. */
 export function registerChargenHooks() {
-  // ApplicationV2 render hook: `render${ClassName}`. The SRX character sheet
-  // class is SrxCharacterSheet.
+  // ApplicationV2 render hook: `render${ClassName}`, emitted per class in the
+  // inheritance chain and called as (application, element, context, options).
+  // Verified against Foundry v14.364 source
+  // (client/applications/api/application.mjs #callHooks / _doEvent, hookArgs
+  // `[this.#element, ...handlerArgs]`). The SRX character-sheet class is
+  // SrxCharacterSheet, so `renderSrxCharacterSheet` fires with the root element.
   Hooks.on("renderSrxCharacterSheet", injectLaunchButton);
 
   // Expose openers for macros/console.
