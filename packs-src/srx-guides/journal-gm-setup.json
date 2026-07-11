@@ -1,0 +1,71 @@
+{
+  "name": "SRX GM Setup Guide",
+  "_id": "srxgmsetup00001a",
+  "_key": "!journal!srxgmsetup00001a",
+  "flags": {},
+  "sort": 200000,
+  "ownership": { "default": 2 },
+  "folder": null,
+  "pages": [
+    {
+      "name": "Install the System",
+      "type": "text",
+      "_id": "srxgspg00000001a",
+      "_key": "!journal.pages!srxgmsetup00001a.srxgspg00000001a",
+      "title": { "show": true, "level": 1 },
+      "sort": 100000,
+      "ownership": { "default": -1 },
+      "flags": {},
+      "system": {},
+      "text": {
+        "format": 1,
+        "content": "<p>SRX is an <strong>unofficial, free, fan-made</strong> game system for Foundry VTT v14. It ships mechanics as code and <strong>no rules text, stats, art, or logos</strong> — you bring your own data from the free SRX Character Builder.</p><h2>Install by manifest URL (recommended)</h2><ol><li>In the Foundry setup screen open <strong>Game Systems → Install System</strong>.</li><li>Paste the SRX manifest URL into the <em>Manifest URL</em> field and click <em>Install</em>. (The current manifest URL is listed in the project README.)</li><li>Create a new <strong>World</strong> and pick <em>SRX — Shadowrun Edition X (Unofficial)</em> as its game system.</li></ol><h2>Install manually (offline / development)</h2><ol><li>Copy or symlink the system folder into your Foundry data at <code>Data/systems/srx</code>. The folder name must be <code>srx</code> to match the system id.</li><li>Restart Foundry; the system appears in the list.</li></ol><h2>Compatibility</h2><p>Built and verified against <strong>Foundry v14</strong>. It uses v14-era APIs (ApplicationV2 sheets, Data Models, Template Regions for area effects, Active Effects), so v13 and earlier are not supported.</p>"
+      }
+    },
+    {
+      "name": "Import Your Catalog",
+      "type": "text",
+      "_id": "srxgspg00000002a",
+      "_key": "!journal.pages!srxgmsetup00001a.srxgspg00000002a",
+      "title": { "show": true, "level": 1 },
+      "sort": 200000,
+      "ownership": { "default": -1 },
+      "flags": {},
+      "system": {},
+      "text": {
+        "format": 1,
+        "content": "<p>The system ships with <strong>empty compendiums by design</strong>. Weapons, armour, gear, talents, spells, 'ware, vehicles, and the rest come from <em>your</em> copy of the free SRX Character Builder data.</p><h2>Open the importer</h2><p>As the GM, go to <strong>Game Settings → Configure Settings → SRX Content Import</strong> and click <em>Import Catalog…</em>. (Macro equivalent: <code>game.srx.openCatalogImport()</code>.)</p><h2>Point it at your builder data</h2><ol><li>Click <em>Choose files…</em> and select one or more <code>.txt.deploy</code> files from your Character Builder <em>Load Data</em> folder — Weapons, Armor, Gear, Talents, Spells, Ware, Vehicles, and related tables.</li><li>Click <em>Import selected catalogs</em>. The log reports how many items were created and how many were skipped as already present.</li><li>Re-importing is safe: existing items are de-duplicated rather than doubled.</li></ol><p>Imported catalog items land as world Items. Numeric effect columns become real <strong>Active Effects</strong> automatically, so adding, say, a piece of augmentation to an actor applies its bonuses without extra work.</p><h2>Matrix talents</h2><p>Hacking, Software, and Threading talents come from the same builder <em>Talents</em> file. Run <code>game.srx.pickAndImportMatrixTalents()</code> from a macro (or the script console) to create the Matrix talent set in its own folder; it is idempotent on re-import.</p><h2>Characters &amp; threats from JSON</h2><p>The importer also accepts JSON exports: pregenerated characters and threat/NPC catalogs import as ready-to-play actors alongside the <code>.txt.deploy</code> catalogs.</p>"
+      }
+    },
+    {
+      "name": "Build a Character",
+      "type": "text",
+      "_id": "srxgspg00000003a",
+      "_key": "!journal.pages!srxgmsetup00001a.srxgspg00000003a",
+      "title": { "show": true, "level": 1 },
+      "sort": 300000,
+      "ownership": { "default": -1 },
+      "flags": {},
+      "system": {},
+      "text": {
+        "format": 1,
+        "content": "<p>SRX includes a guided character builder and a Karma advancement panel, both launched from the same place.</p><h2>Launch the wizard</h2><p>Create a new <strong>character</strong> actor and open its sheet. Click the <strong>Create / Advance</strong> button (the little user-gear icon the system adds to the sheet). A chooser offers two paths:</p><ul><li><strong>Build a new character</strong> — the priority wizard.</li><li><strong>Advance an existing character</strong> — the Karma panel.</li></ul><p>Macros: <code>game.srx.openChargen(actor)</code>, <code>game.srx.openAdvance(actor)</code>, or <code>game.srx.openChargenChooser(actor)</code>.</p><h2>Priority build</h2><ol><li>Assign the SRX priorities across metatype, attributes, magic/resonance, skills, and resources.</li><li>Spend the point pools each priority grants; the wizard validates legality as you go and flags an unbalanced build.</li><li>Buy talents and knowledge from your imported catalog (import first — see the previous page).</li><li>Commit. The wizard writes a <strong>legal, playable actor</strong>: attributes, skills, special ratings, and starting gear.</li></ol><h2>Karma advancement</h2><p>After play, reopen <em>Create / Advance → Advance</em>. Spend earned Karma on attributes, skills, specialisations, knowledge, and talents. Every purchase is validated against caps and available Karma, and recorded in a running <strong>Karma ledger</strong> on the sheet so you can audit spend over a campaign.</p>"
+      }
+    },
+    {
+      "name": "Table-Ready Checklist",
+      "type": "text",
+      "_id": "srxgspg00000004a",
+      "_key": "!journal.pages!srxgmsetup00001a.srxgspg00000004a",
+      "title": { "show": true, "level": 1 },
+      "sort": 400000,
+      "ownership": { "default": -1 },
+      "flags": {},
+      "system": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Before your first session:</p><ul><li><strong>System installed</strong> and a world created on it.</li><li><strong>Catalog imported</strong> from your builder data (weapons, gear, talents, spells at minimum).</li><li><strong>Player characters built</strong> via the wizard or imported from pregen JSON, and assigned to players.</li><li><strong>A few threats</strong> imported for opposition.</li><li><strong>Automation level chosen</strong> under <em>Game Settings → Configure Settings → SRX</em> — how much the system auto-applies vs. prompts. The defaults are a good starting point.</li></ul><h2>Run the tutorial fight</h2><p>New to the combat loop? Open the <strong>SRX Quick-Start — The 15-Minute Fight</strong> journal and run it once solo. It walks the attack → defend → resist → apply cycle end to end with two tokens.</p><h2>Content &amp; legal note</h2><p>This system bundles no SRX or Shadowrun rules text, statistics, artwork, or logos. All catalog content comes from data <em>you</em> supply. Shadowrun is a trademark of The Topps Company, Inc.; this is an unofficial fan project, not affiliated with Topps, Catalyst Game Labs, or the SRX team, and it will be modified or withdrawn on request of any rights holder.</p>"
+      }
+    }
+  ]
+}
