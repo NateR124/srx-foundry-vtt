@@ -193,8 +193,14 @@ export function registerSustainHooks() {
     if (!sid) return;
     const list = getSustained(actor);
     if (!list.some((e) => e.id === sid)) return; // our own cleanup handled it
-    await actor.setFlag("srx", FLAG, dropSustainedEffect(list, sid));
-    await clearLinkedEffects(list.filter((e) => e.id === sid));
+    // Guard the flag write: if the AE went away as part of the actor being
+    // deleted, setFlag can reject — the sustain record is moot anyway.
+    try {
+      await actor.setFlag("srx", FLAG, dropSustainedEffect(list, sid));
+      await clearLinkedEffects(list.filter((e) => e.id === sid));
+    } catch (err) {
+      console.warn("SRX | sustain indicator cleanup", err);
+    }
   });
 
   Hooks.on("createActiveEffect", async (effect, _opts, userId) => {
