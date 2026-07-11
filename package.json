@@ -6,7 +6,8 @@
   "description": "Dev tooling for the SRX Foundry VTT system (the system itself ships as plain ES modules).",
   "scripts": {
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "build:packs": "node scripts/build-packs.mjs"
   },
   "devDependencies": {
     "jsdom": "^27.0.1",

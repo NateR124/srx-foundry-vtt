@@ -1,3 +1,5 @@
 node_modules/
 content-build/
 *.zip
+# Compiled compendium packs (build artifact — sources live in packs-src/)
+/packs/

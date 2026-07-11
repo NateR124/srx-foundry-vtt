@@ -42,18 +42,37 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build compendium packs
+        run: |
+          # Compile packs-src/** -> packs/** (JSON sources -> LevelDB). The
+          # foundryvtt-cli is not a repo dependency, so install it on demand
+          # without touching package-lock.json. If there are no pack sources,
+          # this is a no-op and produces no packs/ directory.
+          if [ -d packs-src ]; then
+            npm install --no-save @foundryvtt/foundryvtt-cli
+            npm run build:packs
+          else
+            echo "no packs-src/ — skipping pack build"
+          fi
+
       - name: Zip release
         run: |
           # Foundry install zip: system.json at the ARCHIVE ROOT (no wrapper
-          # folder) — the installer extracts straight into Data/systems/srx
+          # folder) — the installer extracts straight into Data/systems/srx.
+          # `packs` holds the compiled LevelDB compendia built above.
           mkdir stage
-          for p in module templates styles lang assets ui system.json package.json README.md LICENSE LICENSE.md; do
+          for p in module templates styles lang packs assets ui system.json package.json README.md LICENSE LICENSE.md; do
             if [ -e "$p" ]; then cp -r "$p" stage/; fi
           done
           cd stage && zip -r ../srx.zip . && cd ..
 
       - name: Create release with assets
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: |
             srx.zip

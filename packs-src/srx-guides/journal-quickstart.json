@@ -1,0 +1,86 @@
+{
+  "name": "SRX Quick-Start — The 15-Minute Fight",
+  "_id": "srxqstart000001a",
+  "_key": "!journal!srxqstart000001a",
+  "flags": {},
+  "sort": 100000,
+  "ownership": { "default": 2 },
+  "folder": null,
+  "pages": [
+    {
+      "name": "Before You Sit Down",
+      "type": "text",
+      "_id": "srxqspg00000001a",
+      "_key": "!journal.pages!srxqstart000001a.srxqspg00000001a",
+      "title": { "show": true, "level": 1 },
+      "sort": 100000,
+      "ownership": { "default": -1 },
+      "flags": {},
+      "system": {},
+      "text": {
+        "format": 1,
+        "content": "<p>This is a fifteen-minute on-ramp: two combatants, one back alley, one goal — see the SRX combat loop resolve end to end so the rest of the system makes sense. You do <em>not</em> need to know the rules to run it. The system does the arithmetic; you make the calls.</p><h2>What you need first</h2><ul><li>Foundry VTT v14 with the <strong>SRX (Unofficial)</strong> system installed and a world created on it. (See the companion <em>SRX GM Setup Guide</em> if you have not done this yet.)</li><li>One player character. The fastest path is the <strong>Create / Advance</strong> button on a fresh character sheet — the priority wizard hands you a legal runner in a couple of minutes. A hand-built sheet works just as well.</li><li>One opponent. Import a threat from the catalog, or make a second character and treat it as the bad guy. Anything with an attack and a health track will do.</li></ul><p><strong>No rules text is bundled with this system.</strong> Playing SRX requires the free SRX rulebook from the SRX team; this guide only teaches the Foundry tooling.</p><h2>The scene in one line</h2><p>Your runner rounds a corner into a dead-end alley and a waiting ganger opens up. Fight or talk — but this walkthrough assumes you fight.</p>"
+      }
+    },
+    {
+      "name": "Set the Table",
+      "type": "text",
+      "_id": "srxqspg00000002a",
+      "_key": "!journal.pages!srxqstart000001a.srxqspg00000002a",
+      "title": { "show": true, "level": 1 },
+      "sort": 200000,
+      "ownership": { "default": -1 },
+      "flags": {},
+      "system": {},
+      "text": {
+        "format": 1,
+        "content": "<h2>1. Make a scene</h2><p>Create any Scene (a blank battlemap is fine) and activate it. Grid units default to <strong>metres</strong>, which is what SRX ranges assume — you do not need to change anything.</p><h2>2. Drop two tokens</h2><p>Drag your runner and the ganger onto the canvas a short distance apart. Each token's bars show the two SRX condition monitors: <strong>Physical</strong> (primary) and <strong>Stun</strong> (secondary). Watching those bars fall is how you read the fight at a glance.</p><h2>3. Add both to the Combat Tracker</h2><p>Select both tokens and click the <em>Toggle Combat State</em> sword, or right-click a token and add it to combat. They now appear in the tracker on the right.</p><p class=\"srx-tip\"><strong>Tip:</strong> keep the character sheets open side by side. The sheet's <em>Roll</em> buttons — attributes, skills, and each equipped weapon — are your main controls once the shooting starts.</p>"
+      }
+    },
+    {
+      "name": "Rolling Initiative",
+      "type": "text",
+      "_id": "srxqspg00000003a",
+      "_key": "!journal.pages!srxqstart000001a.srxqspg00000003a",
+      "title": { "show": true, "level": 1 },
+      "sort": 300000,
+      "ownership": { "default": -1 },
+      "flags": {},
+      "system": {},
+      "text": {
+        "format": 1,
+        "content": "<p>SRX uses <strong>multi-pass initiative</strong>: fast characters act more than once per Combat Turn. The system handles this for you.</p><h2>Roll it</h2><p>Click <em>Roll All</em> (or roll each combatant) in the Combat Tracker. SRX overrides Foundry's default formula, so each combatant gets an initiative score from their own attributes plus initiative dice — no house formula to type in.</p><h2>Read the passes</h2><ul><li>Everyone acts in descending initiative order. That is <strong>Pass 1</strong>.</li><li>When the pass ends, the system re-evaluates: any combatant whose score is still above zero acts again in <strong>Pass 2</strong>, and so on. A wired-up samurai may take two or three actions before a plain ganger takes their second.</li><li>Advance with the tracker's <em>Next Turn</em> / <em>Next Round</em> controls. Scores re-roll at the start of each new Combat Turn automatically.</li></ul><p>You do not track any of this by hand — just keep clicking <em>Next</em> and act on whoever is highlighted.</p>"
+      }
+    },
+    {
+      "name": "The Fight, Blow by Blow",
+      "type": "text",
+      "_id": "srxqspg00000004a",
+      "_key": "!journal.pages!srxqstart000001a.srxqspg00000004a",
+      "title": { "show": true, "level": 1 },
+      "sort": 400000,
+      "ownership": { "default": -1 },
+      "flags": {},
+      "system": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Here is one full exchange. The pattern — <strong>attack → defend → resist → apply</strong> — is the spine of every SRX fight.</p><h2>1. The attacker shoots</h2><p>On the runner's turn, click the equipped weapon's <em>Roll</em> button on the sheet. A pre-roll dialog opens: confirm range, called shot, recoil, and any situational modifiers, then roll. A chat card reports the hits.</p><h2>2. The defender answers</h2><p>The attack card offers the target a <strong>defence</strong> roll. The defender (or the GM on their behalf) rolls to dodge; the card compares hits and shows whether the shot lands and by how much.</p><h2>3. The target resists damage</h2><p>If the shot connects, the card produces a <strong>damage-resistance</strong> button authored for the defender. Rolling it soaks part of the incoming damage with Body and armour.</p><h2>4. Apply the result</h2><p>The final card carries an <strong>Apply</strong> button. Because damage crosses ownership boundaries, the system routes the change through a GM executor so it works even when a player targets the GM's ganger — the ganger's Physical (or Stun) monitor drops, and the token bar updates.</p><p class=\"srx-tip\"><strong>Automation knobs:</strong> under <em>Game Settings → Configure Settings → SRX</em> you can dial how much the system does for you — from full auto-apply to manual, roll-only prompts. Leave it on the defaults for this fight.</p><h2>5. Repeat</h2><p>The ganger returns fire on their turn using the same four steps. Run passes until one monitor fills up.</p>"
+      }
+    },
+    {
+      "name": "Edge, Glitches & Wrapping Up",
+      "type": "text",
+      "_id": "srxqspg00000005a",
+      "_key": "!journal.pages!srxqstart000001a.srxqspg00000005a",
+      "title": { "show": true, "level": 1 },
+      "sort": 500000,
+      "ownership": { "default": -1 },
+      "flags": {},
+      "system": {},
+      "text": {
+        "format": 1,
+        "content": "<h2>Spending Edge</h2><p>Every roll dialog exposes the SRX <strong>Edge</strong> options — buy automatic hits, push extra dice, re-roll, and so on. When a shot absolutely has to land, spend Edge from the dialog before you roll; the chat card itemises what you spent.</p><h2>Glitches</h2><p>Watch the chat card's dice readout. A <strong>glitch</strong> (a swarm of ones) flags on the card even on a successful roll; a <strong>critical glitch</strong> means something goes wrong regardless of hits. Narrate the jam, the ricochet, the dropped clip — the card tells you when.</p><h2>Downing a combatant</h2><p>When a monitor fills, the target is out — unconscious on Stun, dying on Physical. Overflow, dying countdowns, and first-aid all have system support:</p><ul><li>Open the downed sheet and use <strong>First Aid / Stabilise</strong>; like damage, healing routes through the GM executor so a medic can patch a teammate they do not own.</li><li>In-combat world time advances with the round flow, so bleed-out and similar timers tick on their own.</li></ul><h2>You did it</h2><p>That is the whole loop. Everything else in SRX — magic, the Matrix, vehicles, character advancement — hangs off this same <em>declare → roll → resist → apply</em> rhythm. When you are ready for more:</p><ul><li><strong>Magic:</strong> cast from the sheet's Magic tab; drain, sustaining penalties, and spirits are automated.</li><li><strong>Matrix:</strong> a persona/hacking loop with programs, marks, devices, and technomancy on the Matrix tab.</li><li><strong>Vehicles &amp; drones:</strong> a cockpit sheet plus a chase tracker that resolves range each turn.</li><li><strong>Advancement:</strong> the <em>Create / Advance</em> button's Karma panel spends Karma on attributes, skills, and talents with a running ledger.</li></ul><p>See the <em>SRX GM Setup Guide</em> for install, catalog import, and character creation details.</p>"
+      }
+    }
+  ]
+}
