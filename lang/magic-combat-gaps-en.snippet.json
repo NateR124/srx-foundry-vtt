@@ -1,0 +1,17 @@
+{
+  "SRX.Foci.bonded": "{name} bonds {focus} ({hours}h of contemplation).",
+  "SRX.Foci.notBonded": "A focus must be bonded before it can be activated.",
+  "SRX.Foci.overLimit": "{name} has {over} focus/foci over the safe limit ({limit}): Liability on resistance & Drain tests, and 1 unresisted Stun/hour per focus over.",
+  "SRX.Healing.SystemShock": "System Shock",
+  "SRX.Healing.SystemShockThrottle": "System Shock absorbs {throttled} box(es) of {name}'s healing.",
+  "SRX.Astral.budgetTitle": "Astral Projection",
+  "SRX.Astral.budgetFatal": "{name} overstays the projection budget — the astral form ceases and the body dies.",
+  "SRX.Astral.budgetLow": "{name}'s projection budget is nearly spent ({minutes} min left).",
+  "SRX.Conjure.useService": "Use Service",
+  "SRX.Conjure.dismiss": "Dismiss",
+  "SRX.Conjure.dismissed": "{name} departs. {reason}",
+  "SRX.Conjure.dismissedManual": "Dismissed by the conjurer.",
+  "SRX.Conjure.serviceUsed": "{name} performs a service ({remaining} remaining). {reason}",
+  "SRX.Conjure.servicesSpent": "Its services are spent.",
+  "SRX.Conjure.timeExpired": "Its time is up."
+}

@@ -56,6 +56,25 @@ export function applyProjectionSpend(budgetMinutes, spentMinutes) {
 }
 
 /**
+ * Accrue elapsed world-time against the projection budget (p. 276). Exceeding
+ * the budget is fatal — the astral form ceases and the body dies.
+ * @param {number} usedMinutes - minutes already spent this rest-cycle
+ * @param {number} deltaSeconds - world-time seconds elapsed while projecting
+ * @param {number} budgetMinutes - total allowed minutes (Magic × 2 × 60)
+ * @returns {{ used: number, remaining: number, exceeded: boolean }}
+ */
+export function accrueProjectionMinutes(usedMinutes, deltaSeconds, budgetMinutes) {
+  const used = Math.max(0, Number(usedMinutes) || 0)
+    + Math.max(0, Number(deltaSeconds) || 0) / 60;
+  const budget = Math.max(0, Number(budgetMinutes) || 0);
+  return {
+    used,
+    remaining: Math.max(0, budget - used),
+    exceeded: used >= budget
+  };
+}
+
+/**
  * Astral Armor while projecting = Willpower (p. 276).
  * @param {number} wil
  */
