@@ -4,9 +4,37 @@ import {
   resolveStabilizeTest,
   resolveFirstAidTest
 } from "../rules/healing.mjs";
+import { applyHealingThrottle } from "../rules/system-shock.mjs";
 import { syncCharacterStatuses } from "./damage.mjs";
 import { registerGmHandler, requestGmAction } from "../net/socket.mjs";
-import { wireGuardedClick } from "../chat/cards.mjs";
+import { cardHtml, esc, line, wireGuardedClick } from "../chat/cards.mjs";
+
+/**
+ * Heal one condition track, throttled by that track's System Shock (p. 130):
+ * the boxes removed are first reduced by current System Shock, then System
+ * Shock rises by the boxes actually healed. Applies to First Aid and magical
+ * healing (NOT natural recovery). Returns what actually happened for messaging.
+ * @param {Actor} target
+ * @param {"physical"|"stun"} track
+ * @param {number} rawBoxes
+ * @returns {Promise<{ healed: number, throttled: number }>}
+ */
+async function healTrackThrottled(target, track, rawBoxes) {
+  const monitor = target.system.monitors?.[track];
+  if (!monitor || rawBoxes <= 0) return { healed: 0, throttled: 0 };
+  const shock = monitor.systemShock ?? 0;
+  const { healed, systemShock, throttled } = applyHealingThrottle(rawBoxes, shock);
+  const update = {};
+  if (healed > 0) {
+    update[`system.monitors.${track}.value`] = Math.max(0, (monitor.value ?? 0) - healed);
+  }
+  // System Shock only rises when boxes were actually removed
+  if (systemShock !== shock) {
+    update[`system.monitors.${track}.systemShock`] = systemShock;
+  }
+  if (Object.keys(update).length) await target.update(update);
+  return { healed, throttled };
+}
 
 /**
  * Apply a healing outcome to the target, relaying through the GM executor
@@ -20,14 +48,30 @@ async function applyHealingOutcome(target, outcome) {
   if (outcome.stabilized) {
     await target.toggleStatusEffect("dying", { active: false }).catch(() => null);
   }
-  if (outcome.physicalHealed > 0) {
-    const phys = target.system.monitors?.physical?.value ?? 0;
-    await target.update({
-      "system.monitors.physical.value": Math.max(0, phys - outcome.physicalHealed)
-    });
+  const phys = await healTrackThrottled(target, "physical", outcome.physicalHealed ?? 0);
+  const stun = await healTrackThrottled(target, "stun", outcome.stunHealed ?? 0);
+  if (phys.healed > 0 || stun.healed > 0) {
     await syncCharacterStatuses(target);
   }
-  return true;
+  // Surface System Shock throttling so a "0 healed" result is not mistaken for
+  // a bug — this is the mechanic doing its job.
+  const throttled = phys.throttled + stun.throttled;
+  if (throttled > 0) {
+    await foundry.documents.ChatMessage.create({
+      speaker: foundry.documents.ChatMessage.getSpeaker({ actor: target }),
+      content: cardHtml({
+        variant: "heal-card",
+        icon: "heart-crack",
+        title: game.i18n.localize("SRX.Healing.SystemShock"),
+        subtitle: esc(target.name),
+        body: line(game.i18n.format("SRX.Healing.SystemShockThrottle", {
+          name: esc(target.name),
+          throttled
+        }))
+      })
+    });
+  }
+  return { physicalHealed: phys.healed, stunHealed: stun.healed, throttled };
 }
 
 /**

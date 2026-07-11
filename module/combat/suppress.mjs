@@ -176,6 +176,31 @@ export async function clearSuppressOnPhaseStart(combatant) {
 }
 
 /**
+ * Post the suppress AOE resist card for one actor caught by one zone.
+ * Shared by the phase-start check and the token-movement trigger.
+ * @param {Actor} actor
+ * @param {object} zone - a stored suppress zone (has `dv`)
+ */
+export async function fireSuppressResist(actor, zone) {
+  await foundry.documents.ChatMessage.create({
+    speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
+    content: cardHtml({
+      variant: "combat-card",
+      icon: "gun",
+      title: game.i18n.localize("SRX.Suppress.title"),
+      subtitle: esc(actor.name),
+      body: line(game.i18n.format("SRX.Suppress.hit", { name: esc(actor.name), dv: zone.dv })),
+      actions: [actionButton({
+        action: "aoeResist",
+        label: game.i18n.localize("SRX.Combat.resist"),
+        data: { "actor-uuid": actor.uuid, dv: zone.dv, "dv-type": "P", element: "" },
+        primary: true
+      })]
+    })
+  });
+}
+
+/**
  * Check if actor is hit by any suppress zone at phase start (no cover).
  * @param {Actor} actor
  */
@@ -198,22 +223,7 @@ export async function checkSuppressPhaseStart(actor) {
       startsPhaseInZone: true
     })) continue;
 
-    await foundry.documents.ChatMessage.create({
-      speaker: foundry.documents.ChatMessage.getSpeaker({ actor }),
-      content: cardHtml({
-        variant: "combat-card",
-        icon: "gun",
-        title: game.i18n.localize("SRX.Suppress.title"),
-        subtitle: esc(actor.name),
-        body: line(game.i18n.format("SRX.Suppress.hit", { name: esc(actor.name), dv: z.dv })),
-        actions: [actionButton({
-          action: "aoeResist",
-          label: game.i18n.localize("SRX.Combat.resist"),
-          data: { "actor-uuid": actor.uuid, dv: z.dv, "dv-type": "P", element: "" },
-          primary: true
-        })]
-      })
-    });
+    await fireSuppressResist(actor, z);
   }
 }
 
