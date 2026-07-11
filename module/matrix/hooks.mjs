@@ -15,8 +15,17 @@ import { wireGuardedClick } from "../chat/cards.mjs";
 import { registerGmHandler } from "../net/socket.mjs";
 import { injectMatrixPanels } from "./tab-ui.mjs";
 import { syncSpriteCapacity, isTechnomancer } from "./technomancy.mjs";
+import { pickAndImportMatrixTalents, importMatrixTalents } from "./import.mjs";
 
 export function registerMatrixHooks() {
+  // Expose the Matrix talent-catalog importer as a macro/console entry point.
+  // registerMatrixHooks() runs in the "ready" hook, where game.srx already
+  // exists, so this augments it without editing the hub (module/srx.mjs).
+  if (game.srx) {
+    game.srx.importMatrixTalents = importMatrixTalents;
+    game.srx.pickAndImportMatrixTalents = pickAndImportMatrixTalents;
+  }
+
   // --- GM executor: toggle a status on a document a player doesn't own.
   // Scoped like the other srx relays; used by administered program effects
   // (Blackout → Blinded, Sleep/Body Lock → Paralyzed, …).
