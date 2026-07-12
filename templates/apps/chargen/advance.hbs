@@ -2,12 +2,13 @@
 <div class="srx advance-panel">
 
   <header class="advance-header">
-    <div class="karma-summary">
-      <label class="karma-earned">{{localize "SRX.Advance.earned"}}
+    <div class="chargen-tiles karma-header">
+      <div class="chargen-tile big balance"><b>{{balance}}</b><span>{{localize "SRX.Advance.available"}}</span></div>
+      <div class="chargen-tile"><b>{{spent}}</b><span>{{localize "SRX.Advance.spent"}}</span></div>
+      <label class="chargen-tile earned-tile">
         <input type="number" name="system.details.karma.earned" value="{{earned}}" min="0" step="1" {{#unless editable}}disabled{{/unless}}>
+        <span>{{localize "SRX.Advance.earnedShort"}}</span>
       </label>
-      <span class="karma-stat">{{localize "SRX.Advance.spent"}}: <b>{{spent}}</b></span>
-      <span class="karma-stat balance">{{localize "SRX.Advance.balance"}}: <b>{{balance}}</b></span>
     </div>
   </header>
 
@@ -18,7 +19,7 @@
   <section class="advance-grid">
 
     <div class="advance-col">
-      <h3>{{localize "SRX.Advance.attributes"}}</h3>
+      <div class="section-label">{{localize "SRX.Advance.attributes"}}</div>
       <table class="advance-attributes">
         <tbody>
           {{#each attributes}}
@@ -40,7 +41,7 @@
     </div>
 
     <div class="advance-col">
-      <h3>{{localize "SRX.Advance.skills"}}</h3>
+      <div class="section-label">{{localize "SRX.Advance.skills"}}</div>
       <table class="advance-skills">
         <tbody>
           {{#each skills}}
@@ -72,7 +73,7 @@
 
   <section class="advance-extra">
     <div class="advance-knowledge">
-      <h3>{{localize "SRX.Advance.knowledge"}}</h3>
+      <div class="section-label">{{localize "SRX.Advance.knowledge"}}</div>
       <div class="knowledge-add">
         <input type="text" name="knowledgeName" placeholder="{{localize 'SRX.Advance.knowledgePlaceholder'}}">
         <select name="knowledgeKind">
@@ -84,7 +85,7 @@
     </div>
 
     <div class="advance-talents">
-      <h3>{{localize "SRX.Advance.talents"}}</h3>
+      <div class="section-label">{{localize "SRX.Advance.talents"}}</div>
       {{#unless hasCatalog}}
       <p class="chargen-note">{{localize "SRX.Advance.noTalentCatalog"}}</p>
       {{else}}
@@ -106,7 +107,7 @@
 
   {{#if ledger.length}}
   <section class="advance-ledger">
-    <h3>{{localize "SRX.Advance.ledger"}}</h3>
+    <div class="section-label">{{localize "SRX.Advance.ledger"}}</div>
     <ul>
       {{#each ledger}}
       <li><span class="l-label">{{this.label}}</span> <span class="l-cost">−{{this.cost}}</span></li>

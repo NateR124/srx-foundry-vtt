@@ -37,9 +37,17 @@
   "SRX.Chargen.attribute": "Attribute",
   "SRX.Chargen.base": "Base",
   "SRX.Chargen.withMetatype": "+ Metatype",
+  "SRX.Chargen.total": "Total",
   "SRX.Chargen.max": "Max",
 
+  "SRX.Chargen.prioritiesComplete": "All five priorities assigned — you're good to continue.",
+  "SRX.Chargen.nextNeedsPriorities": "Assign all five priorities first.",
+
   "SRX.Chargen.metatypeHint": "Choose a metatype available at your Metatype priority.",
+  "SRX.Chargen.metatypeAvailable": "Available here",
+  "SRX.Chargen.metatypeElsewhere": "at other priorities",
+  "SRX.Chargen.grantsKarma": "Grants {karma} talent Karma — spend it on the Talents step.",
+  "SRX.Chargen.maxima": "Attribute maxima for this metatype (post-modifier caps).",
   "SRX.Chargen.metatypeChoice": "Attribute choice",
 
   "SRX.Chargen.attributeCostHint": "Ratings 2–4 cost 1 point each; 5–6 cost 2 each. Cap 6 before metatype modifiers.",
@@ -82,6 +90,7 @@
   "SRX.Chargen.nuyen": "Nuyen",
   "SRX.Chargen.knowledgeSlots": "Knowledge domains",
   "SRX.Chargen.contactSlots": "Contacts",
+  "SRX.Chargen.review.identity": "Identity",
 
   "SRX.Chargen.back": "Back",
   "SRX.Chargen.next": "Next",
@@ -111,8 +120,10 @@
   "SRX.Advance.title": "Karma Advancement",
   "SRX.Advance.titleFor": "Advancement — {name}",
   "SRX.Advance.earned": "Karma earned",
+  "SRX.Advance.earnedShort": "Earned",
   "SRX.Advance.spent": "Spent",
   "SRX.Advance.balance": "Balance",
+  "SRX.Advance.available": "Available",
   "SRX.Advance.notOwner": "You don't own this character — you can't spend its Karma.",
   "SRX.Advance.attributes": "Attributes",
   "SRX.Advance.skills": "Skills",

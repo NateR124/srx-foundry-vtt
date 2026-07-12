@@ -14,7 +14,7 @@
   <section class="chargen-body">
 
     {{#if (srxEq step "priorities")}}
-    <h2>{{localize "SRX.Chargen.step.priorities"}}</h2>
+    <div class="step-title">{{localize "SRX.Chargen.step.priorities"}}</div>
     <p class="hint">{{localize "SRX.Chargen.prioritiesHint"}}</p>
     <table class="priority-grid">
       <thead>
@@ -27,38 +27,47 @@
         {{#each priorities.categories}}
         <tr>
           <th class="cat">{{this.label}}
-            <select name="priority.{{this.key}}">
-              <option value="">—</option>
-              {{#each ../priorities.rows}}
-              <option value="{{this}}" {{#if (srxEq this ../this.value)}}selected{{/if}}>{{this}}</option>
-              {{/each}}
-            </select>
+            <span class="cat-pick {{#unless this.value}}unset{{/unless}}">{{#if this.value}}{{this.value}}{{else}}—{{/if}}</span>
           </th>
           {{#each this.cells}}
-          <td class="{{#if this.selected}}picked{{/if}}">{{this.text}}</td>
+          <td class="pri-cell {{#if this.selected}}picked{{/if}}"
+              data-action="pickPriority" data-cat="{{../key}}" data-row="{{this.row}}">{{this.text}}</td>
           {{/each}}
         </tr>
         {{/each}}
       </tbody>
     </table>
-    {{#unless verdict.legal}}
-    <p class="chargen-note">{{localize "SRX.Chargen.assignAll"}}</p>
-    {{/unless}}
+    {{#if priorities.complete}}
+    <p class="chargen-ok"><i class="fa-solid fa-circle-check"></i> {{localize "SRX.Chargen.prioritiesComplete"}}</p>
+    {{else}}
+    <p class="chargen-note"><i class="fa-solid fa-circle-exclamation"></i> {{localize "SRX.Chargen.assignAll"}}</p>
+    {{/if}}
     {{/if}}
 
     {{#if (srxEq step "metatype")}}
-    <h2>{{localize "SRX.Chargen.step.metatype"}}</h2>
+    <div class="step-title">{{localize "SRX.Chargen.step.metatype"}}</div>
     <p class="hint">{{localize "SRX.Chargen.metatypeHint"}} ({{localize "SRX.Chargen.priority"}} {{metatype.priority}})</p>
+    <p class="hint meta-avail">{{localize "SRX.Chargen.metatypeAvailable"}}: <b>{{metatype.availableNames}}</b>{{#if metatype.elsewhereNames}} · {{localize "SRX.Chargen.metatypeElsewhere"}}: {{metatype.elsewhereNames}}{{/if}}</p>
     <div class="metatype-list">
       {{#each metatype.list}}
       <label class="metatype-option {{#if this.selected}}picked{{/if}}">
         <input type="radio" name="metatype" value="{{this.key}}" {{#if this.selected}}checked{{/if}}>
+        <span class="opt-check"><i class="fa-solid fa-circle-check"></i></span>
         <span class="mt-name">{{this.label}}</span>
         <span class="mt-mods">{{this.mods}}</span>
         {{#if (srxNotNull this.karma)}}<span class="mt-karma">{{this.karma}} {{localize "SRX.Chargen.karma"}}</span>{{/if}}
       </label>
       {{/each}}
     </div>
+    {{#if metatype.grantLabel}}<p class="chargen-ok grant"><i class="fa-solid fa-award"></i> {{metatype.grantLabel}}</p>{{/if}}
+    {{#if metatype.maxima.length}}
+    <div class="chargen-tiles maxima-strip">
+      {{#each metatype.maxima}}
+      <div class="chargen-tile"><b>{{this.value}}</b><span>{{this.abbr}}</span></div>
+      {{/each}}
+    </div>
+    <p class="hint">{{localize "SRX.Chargen.maxima"}}</p>
+    {{/if}}
     {{#if metatype.choice}}
     <div class="form-group">
       <label>{{localize "SRX.Chargen.metatypeChoice"}} ({{metatype.choice.amount}})</label>
@@ -73,24 +82,30 @@
     {{/if}}
 
     {{#if (srxEq step "attributes")}}
-    <h2>{{localize "SRX.Chargen.step.attributes"}}</h2>
-    <p class="budget {{#if attributes.over}}over{{/if}}">
-      {{localize "SRX.Chargen.points"}}: <b>{{attributes.spent}}</b> / {{attributes.available}}
-      ({{localize "SRX.Chargen.remaining"}}: {{attributes.remaining}})
+    <div class="step-title">{{localize "SRX.Chargen.step.attributes"}}</div>
+    <p class="budget chargen-budget {{#if attributes.over}}over{{/if}}" data-kind="attr" data-available="{{attributes.available}}">
+      {{localize "SRX.Chargen.points"}}: <b class="b-spent">{{attributes.spent}}</b> / {{attributes.available}}
+      (<span class="b-remaining">{{attributes.remaining}}</span> {{localize "SRX.Chargen.remaining"}})
     </p>
     <table class="attribute-grid">
       <thead><tr>
-        <th>{{localize "SRX.Chargen.attribute"}}</th>
+        <th class="col-attr">{{localize "SRX.Chargen.attribute"}}</th>
         <th>{{localize "SRX.Chargen.base"}}</th>
-        <th>{{localize "SRX.Chargen.withMetatype"}}</th>
+        <th>{{localize "SRX.Chargen.total"}}</th>
         <th>{{localize "SRX.Chargen.max"}}</th>
       </tr></thead>
       <tbody>
         {{#each attributes.rows}}
         <tr>
-          <th>{{this.abbr}}</th>
-          <td><input type="number" name="attr.{{this.key}}" value="{{this.base}}" min="1" max="6" step="1"></td>
-          <td class="unaug">{{this.unaug}}</td>
+          <th class="col-attr"><b>{{this.abbr}}</b> <span class="attr-name">{{this.label}}</span></th>
+          <td class="base-cell">
+            <span class="stepper">
+              <a class="step-btn" data-action="stepAttr" data-key="{{this.key}}" data-delta="-1" title="−1">−</a>
+              <input type="number" name="attr.{{this.key}}" value="{{this.base}}" min="1" max="6" step="1">
+              <a class="step-btn" data-action="stepAttr" data-key="{{this.key}}" data-delta="1" title="+1">+</a>
+            </span>
+          </td>
+          <td class="unaug">{{this.unaug}}{{#if this.modLabel}} <span class="mod">{{this.modLabel}}</span>{{/if}}</td>
           <td class="max">{{this.max}}</td>
         </tr>
         {{/each}}
@@ -100,7 +115,7 @@
     {{/if}}
 
     {{#if (srxEq step "magic")}}
-    <h2>{{localize "SRX.Chargen.step.magic"}}</h2>
+    <div class="step-title">{{localize "SRX.Chargen.step.magic"}}</div>
     {{#if magic.mundane}}
     <p class="hint">{{localize "SRX.Chargen.mundane"}}</p>
     {{else}}
@@ -117,30 +132,36 @@
       <label>{{localize "SRX.Chargen.essence"}}</label>
       <input type="number" name="essence" value="{{magic.essence}}" min="0" max="6" step="0.05">
     </div>
-    <p class="magic-readout">
-      {{localize "SRX.Chargen.rating"}} = min(WIL {{magic.wil}}, {{localize "SRX.Chargen.max"}} {{magic.max}},
-      ⌊Essence⌋ {{magic.essence}}) = <b>{{magic.rating}}</b>
-    </p>
+    <div class="chargen-tiles">
+      <div class="chargen-tile big"><b>{{magic.rating}}</b><span>{{localize "SRX.Chargen.rating"}}</span></div>
+    </div>
+    <p class="hint magic-readout">= min(WIL {{magic.wil}}, {{localize "SRX.Chargen.max"}} {{magic.max}}, ⌊Essence⌋ {{magic.essence}})</p>
     <p class="hint">{{localize "SRX.Chargen.karmaPool"}}: {{magic.karma}} ({{localize "SRX.Chargen.restrictedKarma"}})</p>
     {{/if}}
     {{/if}}
 
     {{#if (srxEq step "skills")}}
-    <h2>{{localize "SRX.Chargen.step.skills"}}</h2>
-    <p class="budget {{#if skills.over}}over{{/if}}">
-      {{localize "SRX.Chargen.points"}}: <b>{{skills.spent}}</b> / {{skills.available}}
-      ({{localize "SRX.Chargen.remaining"}}: {{skills.remaining}})
+    <div class="step-title">{{localize "SRX.Chargen.step.skills"}}</div>
+    <p class="budget chargen-budget {{#if skills.over}}over{{/if}}" data-kind="skill" data-available="{{skills.available}}">
+      {{localize "SRX.Chargen.points"}}: <b class="b-spent">{{skills.spent}}</b> / {{skills.available}}
+      (<span class="b-remaining">{{skills.remaining}}</span> {{localize "SRX.Chargen.remaining"}})
     </p>
     <table class="skill-grid">
       <tbody>
         {{#each skills.rows}}
         <tr>
           <th>{{this.label}} <span class="linked">{{this.linked}}</span></th>
-          <td><input type="number" name="skill.{{this.key}}" value="{{this.rating}}" min="0" max="6" step="1"></td>
+          <td class="base-cell">
+            <span class="stepper">
+              <a class="step-btn" data-action="stepSkill" data-key="{{this.key}}" data-delta="-1" title="−1">−</a>
+              <input type="number" name="skill.{{this.key}}" value="{{this.rating}}" min="0" max="6" step="1">
+              <a class="step-btn" data-action="stepSkill" data-key="{{this.key}}" data-delta="1" title="+1">+</a>
+            </span>
+          </td>
           <td class="spec-cell">
             {{#each this.specializations}}
             <span class="spec-tag">{{this}}
-              <a data-action="removeSpec" data-skill="{{../this.key}}" data-index="{{@index}}" title="{{localize 'SRX.Chargen.removeSpec'}}">×</a>
+              <a data-action="removeSpec" data-skill="{{../key}}" data-index="{{@index}}" title="{{localize 'SRX.Chargen.removeSpec'}}">×</a>
             </span>
             {{/each}}
             {{#if this.canSpecialize}}
@@ -158,20 +179,19 @@
     {{/if}}
 
     {{#if (srxEq step "resources")}}
-    <h2>{{localize "SRX.Chargen.step.resources"}}</h2>
+    <div class="step-title">{{localize "SRX.Chargen.step.resources"}}</div>
     <p class="hint">{{localize "SRX.Chargen.resourcesHint"}}</p>
-    <div class="form-group">
-      <label>{{localize "SRX.Chargen.nuyenBudget"}}</label>
-      <span>{{resources.available}}¥</span>
+    <div class="chargen-tiles">
+      <div class="chargen-tile"><b>{{resources.available}}¥</b><span>{{localize "SRX.Chargen.nuyenBudget"}}</span></div>
+      <div class="chargen-tile"><b>{{resources.carryover}}¥</b><span>{{localize "SRX.Chargen.carryover"}}</span></div>
     </div>
     <div class="form-group">
       <label>{{localize "SRX.Chargen.nuyenSpent"}}</label>
       <input type="number" name="nuyenSpent" value="{{resources.spent}}" min="0" step="100">
     </div>
-    <p class="magic-readout">
-      {{localize "SRX.Chargen.carryover"}}: <b>{{resources.carryover}}¥</b>
-      {{#if resources.forfeited}}<span class="warn">({{resources.forfeited}}¥ {{localize "SRX.Chargen.forfeited"}})</span>{{/if}}
-    </p>
+    {{#if resources.forfeited}}
+    <p class="magic-readout"><span class="warn">{{resources.forfeited}}¥ {{localize "SRX.Chargen.forfeited"}}</span></p>
+    {{/if}}
     <div class="form-group">
       <label>{{localize "SRX.Chargen.lifestyle"}}</label>
       <select name="lifestyle">
@@ -183,7 +203,7 @@
     {{/if}}
 
     {{#if (srxEq step "talents")}}
-    <h2>{{localize "SRX.Chargen.step.talents"}}</h2>
+    <div class="step-title">{{localize "SRX.Chargen.step.talents"}}</div>
     {{#unless talents.hasCatalog}}
     <p class="chargen-note">{{localize "SRX.Chargen.noTalentCatalog"}}</p>
     {{else}}
@@ -195,6 +215,7 @@
       {{#each talents.catalog}}
       <label class="talent-option {{#if this.chosen}}picked{{/if}}">
         <input type="checkbox" name="talent.{{this.id}}" data-item-id="{{this.id}}" {{#if this.chosen}}checked{{/if}}>
+        <span class="opt-check"><i class="fa-solid fa-circle-check"></i></span>
         <span class="t-name">{{this.name}}</span>
         <span class="t-karma">{{this.karma}}k</span>
         <select data-pool-for="{{this.id}}" class="t-pool">
@@ -209,11 +230,11 @@
     {{/if}}
 
     {{#if (srxEq step "review")}}
-    <h2>{{localize "SRX.Chargen.step.review"}}</h2>
+    <div class="step-title">{{localize "SRX.Chargen.step.review"}}</div>
     {{#if review.legal}}
-    <p class="verdict legal">{{localize "SRX.Chargen.legal"}}</p>
+    <p class="verdict legal"><i class="fa-solid fa-circle-check"></i> {{localize "SRX.Chargen.legal"}}</p>
     {{else}}
-    <p class="verdict illegal">{{localize "SRX.Chargen.illegal"}}</p>
+    <p class="verdict illegal"><i class="fa-solid fa-circle-xmark"></i> {{localize "SRX.Chargen.illegal"}}</p>
     <ul class="problem-list">{{#each review.problems}}<li>{{this}}</li>{{/each}}</ul>
     {{/if}}
     {{#if review.warnings.length}}
@@ -224,14 +245,51 @@
     <ul class="warning-list">{{#each review.wellRounded}}<li>{{this}}</li>{{/each}}</ul>
     {{/if}}
 
-    <dl class="review-summary">
-      <dt>{{localize "SRX.Chargen.metatype"}}</dt><dd>{{review.summary.metatype}}</dd>
-      <dt>{{localize "SRX.Chargen.lifestyle"}}</dt><dd>{{review.summary.lifestyle}} (Fake SIN {{review.fakeSin}})</dd>
-      <dt>{{localize "SRX.Chargen.nuyen"}}</dt><dd>{{review.summary.nuyen}}¥</dd>
-      {{#if review.summary.awakened}}<dt>{{localize "SRX.Chargen.rating"}}</dt><dd>{{review.summary.awakened}} {{review.summary.magicRating}}</dd>{{/if}}
-      <dt>{{localize "SRX.Chargen.knowledgeSlots"}}</dt><dd>{{review.summary.knowledgeDomainSlots}}</dd>
-      <dt>{{localize "SRX.Chargen.contactSlots"}}</dt><dd>{{review.summary.contactSlots}}</dd>
-    </dl>
+    <div class="review-recap">
+      <div class="recap-block">
+        <div class="section-label">{{localize "SRX.Chargen.review.identity"}}</div>
+        <dl class="review-summary">
+          <dt>{{localize "SRX.Chargen.metatype"}}</dt><dd>{{review.metatypeLabel}}</dd>
+          {{#if review.awakenedLabel}}<dt>{{localize "SRX.Chargen.rating"}}</dt><dd>{{review.awakenedLabel}} {{review.summary.magicRating}}</dd>{{/if}}
+          <dt>{{localize "SRX.Chargen.lifestyle"}}</dt><dd>{{review.lifestyleLabel}} (Fake SIN {{review.fakeSin}})</dd>
+          <dt>{{localize "SRX.Chargen.nuyen"}}</dt><dd>{{review.summary.nuyen}}¥</dd>
+          <dt>{{localize "SRX.Chargen.knowledgeSlots"}}</dt><dd>{{review.summary.knowledgeDomainSlots}}</dd>
+          <dt>{{localize "SRX.Chargen.contactSlots"}}</dt><dd>{{review.summary.contactSlots}}</dd>
+        </dl>
+        <div class="priorities-recap">
+          {{#each review.priorities}}<span class="pri-chip">{{this.label}} <b>{{this.row}}</b></span>{{/each}}
+        </div>
+      </div>
+
+      <div class="recap-block">
+        <div class="section-label">{{localize "SRX.Chargen.step.attributes"}}</div>
+        <div class="attr-recap">
+          {{#each review.attributes}}
+          <div class="chargen-tile"><b>{{this.value}}</b><span>{{this.abbr}}</span></div>
+          {{/each}}
+        </div>
+      </div>
+
+      {{#if review.skills.length}}
+      <div class="recap-block">
+        <div class="section-label">{{localize "SRX.Chargen.step.skills"}}</div>
+        <ul class="skill-recap">
+          {{#each review.skills}}
+          <li><span class="sk-name">{{this.label}}</span> <b>{{this.rating}}</b>{{#if this.specs}} <span class="sk-spec">({{this.specs}})</span>{{/if}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      {{/if}}
+
+      {{#if review.talents.length}}
+      <div class="recap-block">
+        <div class="section-label">{{localize "SRX.Chargen.step.talents"}}</div>
+        <ul class="talent-recap">
+          {{#each review.talents}}<li><span class="t-name">{{this.name}}</span> <span class="t-karma">{{this.karma}}k</span></li>{{/each}}
+        </ul>
+      </div>
+      {{/if}}
+    </div>
     {{/if}}
 
   </section>
@@ -243,7 +301,8 @@
       <i class="fa-solid fa-user-check"></i> {{localize "SRX.Chargen.create"}}
     </button>
     {{else}}
-    <button type="button" class="next" data-action="next">{{localize "SRX.Chargen.next"}} <i class="fa-solid fa-arrow-right"></i></button>
+    {{#if blockNext}}<span class="next-hint">{{localize "SRX.Chargen.nextNeedsPriorities"}}</span>{{/if}}
+    <button type="button" class="next" data-action="next" {{#if blockNext}}disabled{{/if}}>{{localize "SRX.Chargen.next"}} <i class="fa-solid fa-arrow-right"></i></button>
     {{/if}}
   </footer>
 
