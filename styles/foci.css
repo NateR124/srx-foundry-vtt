@@ -1,0 +1,138 @@
+/* ============================================================================
+ * SRX foci panel — Magic tab (docs/UX-FOCI.md)
+ *
+ * Scoped to `.srx .item-list.foci` and its header so nothing here leaks into
+ * the other item lists. Matches the compact character-sheet aesthetic: dotted
+ * rows, restrained small-caps header, warm-red intent accent. The active toggle
+ * is the one Intent control; the safe-limit readout and over-limit flag are
+ * pure Display. Loaded via system.json "styles" (see INTEGRATE-foci.md).
+ *
+ * Warning tone (amber) is deliberately distinct from the interactive warm-red
+ * accent so "you are over your safe limit" never reads as "clickable."
+ * ==========================================================================*/
+
+:root {
+  --srx-foci-warn: #c08a2e;
+}
+
+/* ---------- Header: title + "active N / safe L" readout ---------- */
+/* The h3 already inherits the restrained small-caps header rule from srx.css
+   (.magic-panel h3); we only add the count badge and keep spacing tight. */
+.srx .foci-count {
+  font-size: 0.78em;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  opacity: 0.8;
+  padding: 0 6px;
+  margin-left: auto;
+  border: 1px solid var(--color-border, #888);
+  border-radius: 10px;
+  white-space: nowrap;
+}
+/* When over the safe limit the readout turns amber and loses its muting so the
+   player sees the hazard before the chat warning fires. */
+.srx .foci-count.over {
+  opacity: 1;
+  color: var(--srx-foci-warn);
+  border-color: var(--srx-foci-warn);
+  font-weight: 600;
+}
+/* Push the Build "+" control back to the far right after the count badge. */
+.srx .foci-header .item-control { margin-left: 8px; }
+
+/* One-line hazard hint under the header, only when over limit. */
+.srx .foci-overlimit-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 2px 0 6px;
+  font-size: 0.8em;
+  color: var(--srx-foci-warn);
+  opacity: 0.95;
+}
+.srx .foci-overlimit-note i { flex: 0 0 auto; }
+
+/* ---------- Focus rows ---------- */
+.srx .item-list.foci .summary { flex: 0 1 auto; }
+
+/* Bonded / bond chip and the over-limit marker ride the right edge, mirroring
+   the weapon-mode chip alignment so the list scans in a single column. */
+.srx .item-list.foci .focus-tags {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
+.srx .focus-chip {
+  font-size: 0.72em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1px 7px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border, #888);
+  white-space: nowrap;
+}
+/* Bonded is a settled state — read-only, muted. */
+.srx .focus-chip.bonded {
+  opacity: 0.7;
+  cursor: default;
+}
+/* Unbonded is an Intent: a focus must be bonded before it can be activated
+   (p.296), so offer the bond here rather than making the player fail the
+   activate toggle first. */
+.srx .focus-chip.unbonded {
+  cursor: pointer;
+  opacity: 0.85;
+  border-style: dashed;
+}
+.srx .focus-chip.unbonded:hover {
+  opacity: 1;
+  border-color: var(--color-warm-2, #b8342c);
+  background: rgba(140, 140, 140, 0.12);
+}
+
+.srx .item-list.foci .over-icon {
+  color: var(--srx-foci-warn);
+  font-size: 0.9em;
+}
+
+/* ---------- The active toggle (the one Intent control) ---------- */
+/* Replaces the ambiguous reused ".equip" wand with an explicit on/off toggle:
+   a bordered chip whose lit state (accent border + glow + solid icon) makes
+   "this focus is projecting its bonus right now" obvious at a glance. */
+.srx .item-list.foci .focus-toggle {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--color-border, #888);
+  border-radius: 6px;
+  opacity: 0.55;
+  cursor: pointer;
+  transition: opacity 0.1s ease, border-color 0.1s ease, box-shadow 0.1s ease;
+}
+.srx .item-list.foci .focus-toggle:hover { opacity: 0.9; }
+.srx .item-list.foci .focus-toggle.active {
+  opacity: 1;
+  color: var(--color-warm-2, #b8342c);
+  border-color: var(--color-warm-2, #b8342c);
+  box-shadow: 0 0 5px var(--color-shadow-primary, rgba(255, 102, 102, 0.5));
+}
+/* Unbonded focus: the toggle is disabled-looking. The click still routes
+   through the glue (which reverts + warns), but the affordance says "not yet." */
+.srx .item-list.foci .focus-toggle.locked {
+  opacity: 0.3;
+  border-style: dashed;
+  cursor: not-allowed;
+}
+.srx .item-list.foci .focus-toggle.locked:hover { opacity: 0.4; }
+
+/* Over-limit active rows get a faint amber wash so the excess is visible in the
+   list body, not only in the header count. */
+.srx .item-list.foci li.over-limit {
+  background: rgba(192, 138, 46, 0.08);
+}

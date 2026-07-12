@@ -99,6 +99,50 @@ export function activeFocusCount(actor) {
 }
 
 /**
+ * Presentation data for the Magic-tab foci panel (see docs/UX-FOCI.md).
+ * Pure read over the actor's items — attach the result to the sheet render
+ * context and drive the active-toggle list + the "active N / safe L" readout
+ * from it, so the safe-limit is visible *before* a player trips it (today it
+ * only surfaces as a chat warning after the fact).
+ *
+ * Over-limit is a *global* state: the p.297 penalty scales with how many active
+ * foci exceed Willpower/2 and applies Liability to every resistance/Drain test,
+ * so each active focus is flagged when the actor is over — not an arbitrary
+ * "these specific ones." The Master Craftsman talent (+1 safe focus) is not
+ * auto-detected here, matching {@link warnIfOverLimit}; see UX-FOCI.md
+ * follow-ups.
+ *
+ * @param {Actor} actor
+ * @returns {{ foci: Array<{id:string,name:string,force:number,focusType:string,
+ *   bonded:boolean,active:boolean,grantsBonus:boolean,overLimit:boolean}>,
+ *   activeCount:number, safeLimit:number, over:number }}
+ */
+export function fociPanelData(actor) {
+  const wil = actor?.system?.attributes?.wil?.value ?? 0;
+  const safeLimit = safeActiveFociLimit(wil);
+  const foci = [...(actor?.items ?? [])]
+    .filter((i) => i.type === "focus")
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map((f) => {
+      const sys = f.system ?? {};
+      return {
+        id: f.id,
+        name: f.name,
+        force: sys.force ?? 0,
+        focusType: sys.focusType ?? "",
+        bonded: !!sys.bonded,
+        active: !!(sys.active && sys.bonded),
+        grantsBonus: focusEffectChanges(sys).length > 0,
+        overLimit: false
+      };
+    });
+  const activeCount = foci.filter((f) => f.active).length;
+  const over = fociOverLimit(activeCount, safeLimit);
+  if (over > 0) for (const f of foci) f.overLimit = f.active;
+  return { foci, activeCount, safeLimit, over };
+}
+
+/**
  * Warn (chat) if the actor is over the safe active-focus limit.
  * @param {Actor} actor
  */
@@ -279,6 +323,7 @@ export function registerFociHooks() {
     deactivate: deactivateFocus,
     sync: syncFocusEffect,
     activeCount: activeFocusCount,
+    panelData: fociPanelData,
     cascade: cascadeFocusDeactivation,
     // The cast/effects lane calls this when a Sustaining focus takes over a
     // power, so deactivating the focus can drop exactly that sustained entry.
