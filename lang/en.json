@@ -935,5 +935,15 @@
   "SRX.Foci.bond": "Bond",
   "SRX.Foci.bondHint": "Bond this focus (Force hours of contemplation) so it can be activated.",
   "SRX.Foci.bondedHint": "Bonded — ready to activate.",
-  "SRX.Foci.bondFirst": "Bond this focus before it can be activated."
+  "SRX.Foci.bondFirst": "Bond this focus before it can be activated.",
+  "SRX.Chargen.total": "Total",
+  "SRX.Chargen.prioritiesComplete": "All five priorities assigned — you're good to continue.",
+  "SRX.Chargen.nextNeedsPriorities": "Assign all five priorities first.",
+  "SRX.Chargen.metatypeAvailable": "Available here",
+  "SRX.Chargen.metatypeElsewhere": "at other priorities",
+  "SRX.Chargen.grantsKarma": "Grants {karma} talent Karma — spend it on the Talents step.",
+  "SRX.Chargen.maxima": "Attribute maxima for this metatype (post-modifier caps).",
+  "SRX.Chargen.review.identity": "Identity",
+  "SRX.Advance.earnedShort": "Earned",
+  "SRX.Advance.available": "Available"
 }
