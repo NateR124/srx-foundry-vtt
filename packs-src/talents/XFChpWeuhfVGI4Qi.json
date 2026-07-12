@@ -1,0 +1,66 @@
+{
+  "_id": "XFChpWeuhfVGI4Qi",
+  "name": "Homunculus",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism / Artificing",
+    "description": "Make Animate spell permanent, gaining animated object as servant",
+    "category": "mysticism",
+    "subgroup": "Artificing",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Homunculus",
+        "srxId": 460,
+        "category": "Mysticism",
+        "subcategory": "Artificing",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Artificing",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": "Touch",
+        "duration": "Permanent",
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Animate (Spell)",
+        "prereq": {
+          "kind": "spell",
+          "name": "Animate"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Make Animate spell permanent, gaining animated object as servant",
+        "effects": [],
+        "slug": "homunculus"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!XFChpWeuhfVGI4Qi"
+}

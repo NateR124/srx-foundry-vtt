@@ -1,0 +1,55 @@
+{
+  "_id": "udeDkfgA3gWwQqWX",
+  "name": "Smuggling Compartment (Off-Leg)",
+  "type": "gear",
+  "system": {
+    "summary": "Cyberlimbs / Cyberlegs",
+    "description": "Small hidden compartment",
+    "subtype": "Cyberleg Upgrade",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Smuggling Compartment (Off-Leg)",
+        "srxId": 3078,
+        "category": "Cyberlimbs",
+        "subcategory": "Cyberlegs",
+        "cost": 2000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Smuggling Compartment (Off-Leg)Cyberleg Upgrade",
+        "type": "Cyberleg Upgrade",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0",
+          "value": 0,
+          "scale": []
+        },
+        "parentContainer": "Cyberleg (Off-Leg)",
+        "prereq": "DNI (Direct Neural Interface),Cyberleg (Off-Leg)",
+        "incompatible": [],
+        "grants": [],
+        "description": "Small hidden compartment",
+        "effects": [],
+        "slug": "smuggling-compartment-off-leg",
+        "variantOf": "cyberleg-off-leg"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!udeDkfgA3gWwQqWX"
+}

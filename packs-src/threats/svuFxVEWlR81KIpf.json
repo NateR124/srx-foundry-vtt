@@ -1,0 +1,74 @@
+{
+  "_id": "svuFxVEWlR81KIpf",
+  "name": "TROLL BODYGUARD",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 3,
+      "bonus": 4
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 16
+    },
+    "armor": 23,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist (Reach: 2m)",
+        "pool": 13,
+        "dv": 6,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "(Reach: 2m)",
+        "pool": 14,
+        "dv": 11,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Predator V",
+        "pool": 15,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ingram Smartgun X Major (BF) 15 9P",
+        "pool": 14,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Ton of Bricks</strong>: Once per fight, when the troll bodyguard takes damage, they can reduce the damage by 5.</li><li><strong>Protect the Principal</strong>: Once per fight, when another target within 2 meters of the bodyguard is hit by an attack, the bodyguard can have the attack hit them instead. The attack hits the bodyguard with the same number of net hits that it had against the original target. The bodyguard gains Leverage on their damage resistance test against the attack. BODYGUARD</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The bodyguard does not suffer</li><li><strong>recoil penalties.</strong>: </li><li><strong>Improved Crit</strong>: On Armor tests, the bodyguard scores</li><li><strong>a critical hit with their Crit Dice on a 5 or a 6.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "troll-bodyguard"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "TROLL BODYGUARD"
+  },
+  "_key": "!actors!svuFxVEWlR81KIpf"
+}

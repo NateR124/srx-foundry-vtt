@@ -1,0 +1,30 @@
+{
+  "_id": "cCSFp57dOsrPsFkI",
+  "name": "Arms Dealer",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Procures all manner of weapons or explosives",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Arms Dealer",
+        "srxId": 10002,
+        "type": "Contact",
+        "type2": null,
+        "description": "Procures all manner of weapons or explosives",
+        "slug": "arms-dealer"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!cCSFp57dOsrPsFkI"
+}

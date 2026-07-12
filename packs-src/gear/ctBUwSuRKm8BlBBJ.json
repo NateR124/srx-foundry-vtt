@@ -1,0 +1,45 @@
+{
+  "_id": "ctBUwSuRKm8BlBBJ",
+  "name": "Vision Magnification",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Vision Enhancement",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Vision Magnification",
+        "srxId": 8518,
+        "cost": 1000,
+        "properties": [],
+        "options": [],
+        "type": "Vision Enhancement",
+        "maxRating": null,
+        "isVisionEnhancement": true,
+        "isWeapon": false,
+        "isExoticWeapon": false,
+        "nuyenMultiplier": null,
+        "requiresMount": false,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": null,
+        "attackSpecialization": null,
+        "attacks": [],
+        "slug": "vision-magnification"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ctBUwSuRKm8BlBBJ"
+}

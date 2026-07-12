@@ -1,0 +1,49 @@
+{
+  "_id": "vW6WB1RBETAjEVtm",
+  "name": "Health",
+  "type": "gear",
+  "system": {
+    "summary": "Artifices",
+    "description": "",
+    "subtype": "Artifice",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Health",
+        "srxId": 9096,
+        "category": "Artifices",
+        "cost": 2000,
+        "costDisplay": "32,000",
+        "properties": [],
+        "options": [],
+        "type": "Artifice",
+        "type2": "Artificing Gear",
+        "type3": "Health",
+        "fixedRating": 4,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [],
+        "alwaysUnique": true,
+        "slug": "health"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!vW6WB1RBETAjEVtm"
+}

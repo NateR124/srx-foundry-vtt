@@ -1,0 +1,116 @@
+{
+  "_id": "YN8fNvcMFD6bPnX3",
+  "name": "Ares Dragon",
+  "type": "gear",
+  "system": {
+    "summary": "Rotorcraft",
+    "description": "",
+    "subtype": "Rotorcraft",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 220000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Ares Dragon",
+        "srxId": 7546,
+        "category": "Rotorcraft",
+        "cost": 220000,
+        "properties": [],
+        "options": [],
+        "type": "Rotorcraft",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Piloting",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 2,
+          "speed": 6,
+          "body": 14,
+          "armor": 10,
+          "health": 18,
+          "defenseScoreMod": null,
+          "autoRating": 2,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Perception,Piloting",
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "R",
+              "heavy": true
+            },
+            "builtIn": null
+          },
+          {
+            "index": 2,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": null
+          },
+          {
+            "index": 3,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": null
+          },
+          {
+            "index": 4,
+            "mount": {
+              "orientation": "FB",
+              "heavy": false
+            },
+            "builtIn": null
+          },
+          {
+            "index": 5,
+            "mount": {
+              "orientation": "FB",
+              "heavy": false
+            },
+            "builtIn": null
+          }
+        ],
+        "slug": "ares-dragon"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!YN8fNvcMFD6bPnX3"
+}

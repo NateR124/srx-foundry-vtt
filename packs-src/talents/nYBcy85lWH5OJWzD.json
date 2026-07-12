@@ -1,0 +1,64 @@
+{
+  "_id": "nYBcy85lWH5OJWzD",
+  "name": "Well Connected",
+  "type": "talent",
+  "system": {
+    "summary": "Social",
+    "description": "1 contact gains +6 on tests",
+    "category": "social",
+    "subgroup": "",
+    "karma": 3,
+    "option": "List Contacts",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Well Connected",
+        "srxId": 207,
+        "category": "Social",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [
+          "List Contacts"
+        ],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "1 contact gains +6 on tests",
+        "effects": [],
+        "slug": "well-connected"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!nYBcy85lWH5OJWzD"
+}

@@ -1,0 +1,66 @@
+{
+  "_id": "PRl1X2W1hGoNaH6g",
+  "name": "TOXIC SHAMAN: AVENGER",
+  "type": "threat",
+  "system": {
+    "threatRating": 5,
+    "initiative": {
+      "dice": 4,
+      "bonus": 7
+    },
+    "defenseScore": 5,
+    "health": {
+      "value": 0,
+      "max": 14
+    },
+    "armor": 20,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Machete",
+        "pool": 15,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "(Spell)",
+        "pool": 17,
+        "dv": 11,
+        "dvType": "P",
+        "element": "acid",
+        "action": "major"
+      },
+      {
+        "name": "Toxic Wave (Spell)",
+        "pool": 0,
+        "dv": 10,
+        "dvType": "P",
+        "element": "acid",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Leach Energy</strong>: Once per Combat Turn, at the end of any enemy’s Action Phase, the toxic shaman can cast the Weaken Spell at Force 5 and affect a target within 30m. If the spell succeeds, the shaman heals 3 damage.</li><li><strong>Polluted Force Field</strong>: This is a sustained Force 7</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic</strong>: </li></ul><h3>Formula DVs (evaluated at F = TR)</h3><ul><li><strong>(Spell)</strong>: (F+6)P Acid</li><li><strong>Toxic Wave (Spell)</strong>: (F+5)P Acid</li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "toxic-shaman-avenger"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "TOXIC SHAMAN: AVENGER"
+  },
+  "_key": "!actors!PRl1X2W1hGoNaH6g"
+}

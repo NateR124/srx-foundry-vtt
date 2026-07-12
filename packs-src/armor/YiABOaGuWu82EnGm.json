@@ -1,0 +1,39 @@
+{
+  "_id": "YiABOaGuWu82EnGm",
+  "name": "Lined Coat",
+  "type": "armor",
+  "system": {
+    "summary": "",
+    "description": "",
+    "rating": 9,
+    "hardened": 0,
+    "heavy": false,
+    "shield": false,
+    "equipped": false,
+    "cost": 2200
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "armor",
+      "catalogData": {
+        "name": "Lined Coat",
+        "srxId": 4014,
+        "cost": 2200,
+        "properties": [],
+        "options": [],
+        "rating": 9,
+        "hardened": 0,
+        "heavy": false,
+        "shield": false,
+        "slug": "lined-coat"
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!YiABOaGuWu82EnGm"
+}

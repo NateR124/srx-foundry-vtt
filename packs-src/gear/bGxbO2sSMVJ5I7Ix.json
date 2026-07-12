@@ -1,0 +1,55 @@
+{
+  "_id": "bGxbO2sSMVJ5I7Ix",
+  "name": "Sony CIY-720 Cyberdeck",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Cyberdecks",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 150000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Sony CIY-720 Cyberdeck",
+        "srxId": 6026,
+        "category": "Matrix Devices",
+        "subcategory": "Cyberdecks",
+        "cost": 150000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Cyberdecks",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": 3,
+        "matrix": {
+          "dataProcessing": "1",
+          "firewall": "6",
+          "hotSimFirewall": "3",
+          "hackingTests": "2",
+          "agents": "4",
+          "rank": "23",
+          "modCapacity": "3"
+        },
+        "installedEnhancements": [],
+        "slug": "sony-ciy-720-cyberdeck"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!bGxbO2sSMVJ5I7Ix"
+}

@@ -1,0 +1,100 @@
+{
+  "_id": "h8Bil7VMspSjoKXm",
+  "name": "Renault-Fiat Fokker Tundra-9",
+  "type": "gear",
+  "system": {
+    "summary": "Fixed-Wing Aircraft",
+    "description": "",
+    "subtype": "Fixed-Wing Aircraft",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 200000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Renault-Fiat Fokker Tundra-9",
+        "srxId": 7556,
+        "category": "Fixed-Wing Aircraft",
+        "cost": 200000,
+        "properties": [],
+        "options": [],
+        "type": "Fixed-Wing Aircraft",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Piloting",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 2,
+          "speed": 10,
+          "body": 12,
+          "armor": 8,
+          "health": 16,
+          "defenseScoreMod": null,
+          "autoRating": 3,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Perception,Piloting",
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "R",
+              "heavy": true
+            },
+            "builtIn": null
+          },
+          {
+            "index": 2,
+            "mount": {
+              "orientation": "FB",
+              "heavy": false
+            },
+            "builtIn": null
+          },
+          {
+            "index": 3,
+            "mount": {
+              "orientation": "FB",
+              "heavy": false
+            },
+            "builtIn": null
+          }
+        ],
+        "slug": "renault-fiat-fokker-tundra-9"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!h8Bil7VMspSjoKXm"
+}

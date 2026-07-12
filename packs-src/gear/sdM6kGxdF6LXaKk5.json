@@ -1,0 +1,76 @@
+{
+  "_id": "sdM6kGxdF6LXaKk5",
+  "name": "Mounted Exotic Weapon - Shiawase Arms Blazer",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Mounted Weapon",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 7500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Mounted Exotic Weapon - Shiawase Arms Blazer",
+        "srxId": 8539,
+        "cost": 7500,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Mounted Weapon",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": true,
+        "isExoticWeapon": true,
+        "nuyenMultiplier": null,
+        "requiresMount": true,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": "Projectile Weapons",
+        "attackSpecialization": "Exotic Weapon - Sprayer",
+        "attacks": [
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": -1,
+            "dv": {
+              "raw": "10",
+              "value": 10,
+              "type": "P",
+              "element": "Fire",
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "attackType": "AOE",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": null,
+            "dv": {
+              "raw": "6",
+              "value": 6,
+              "type": "P",
+              "element": "Fire",
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "mounted-exotic-weapon-shiawase-arms-blazer"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!sdM6kGxdF6LXaKk5"
+}

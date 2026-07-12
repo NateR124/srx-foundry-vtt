@@ -1,0 +1,84 @@
+{
+  "_id": "GshcQ5q6KxmVW8GP",
+  "name": "Cessna C750",
+  "type": "gear",
+  "system": {
+    "summary": "Fixed-Wing Aircraft",
+    "description": "",
+    "subtype": "Fixed-Wing Aircraft",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 80000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Cessna C750",
+        "srxId": 7554,
+        "category": "Fixed-Wing Aircraft",
+        "cost": 80000,
+        "properties": [],
+        "options": [],
+        "type": "Fixed-Wing Aircraft",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Piloting",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 1,
+          "speed": 8,
+          "body": 8,
+          "armor": 6,
+          "health": 14,
+          "defenseScoreMod": null,
+          "autoRating": 2,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Perception,Piloting",
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "F",
+              "heavy": false
+            },
+            "builtIn": null
+          }
+        ],
+        "slug": "cessna-c750"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!GshcQ5q6KxmVW8GP"
+}

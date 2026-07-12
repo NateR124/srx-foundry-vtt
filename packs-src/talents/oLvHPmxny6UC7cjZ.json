@@ -1,0 +1,66 @@
+{
+  "_id": "oLvHPmxny6UC7cjZ",
+  "name": "Edge: Hold it Together Baby",
+  "type": "talent",
+  "system": {
+    "summary": "Vehicle",
+    "description": "Continue to operate a totaled vehicle, but suffer penalty to Driving or Piloting tests and Defense Score",
+    "category": "vehicle",
+    "subgroup": "",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": true
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Edge: Hold it Together Baby",
+        "srxId": 357,
+        "category": "Vehicle",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": "TRUE",
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Engineering 4",
+        "prereq": {
+          "kind": "rating",
+          "subject": "Engineering",
+          "min": 4
+        },
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Continue to operate a totaled vehicle, but suffer penalty to Driving or Piloting tests and Defense Score",
+        "effects": [],
+        "slug": "edge-hold-it-together-baby"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!oLvHPmxny6UC7cjZ"
+}

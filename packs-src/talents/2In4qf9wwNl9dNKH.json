@@ -1,0 +1,63 @@
+{
+  "_id": "2In4qf9wwNl9dNKH",
+  "name": "Renascence",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism / Metamagic",
+    "description": "Use debilitating or controlling spell for extended duration",
+    "category": "mysticism",
+    "subgroup": "Metamagic",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Renascence",
+        "srxId": 476,
+        "category": "Mysticism",
+        "subcategory": "Metamagic",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Metamagic",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": "TRUE",
+        "action": null,
+        "range": "Touch",
+        "duration": "(F) days",
+        "resistance": "Special",
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Use debilitating or controlling spell for extended duration",
+        "effects": [],
+        "slug": "renascence"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!2In4qf9wwNl9dNKH"
+}

@@ -1,0 +1,66 @@
+{
+  "_id": "PnqoHh1MBAG4AuAP",
+  "name": "Synthacardium",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "+1 Body, Phys & Stun Health; Improved Crit on Athletics tests, Leverage to avoid fatigue damage",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 48000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Synthacardium",
+        "srxId": 3123,
+        "category": "Bodyware",
+        "cost": 48000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Synthacardium",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.2",
+          "value": 0.2,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [],
+        "grants": [],
+        "description": "+1 Body, Phys & Stun Health; Improved Crit on Athletics tests, Leverage to avoid fatigue damage",
+        "effects": [
+          {
+            "key": "bod",
+            "value": 1
+          },
+          {
+            "key": "stunHealth",
+            "value": 1
+          },
+          {
+            "key": "physicalHealth",
+            "value": 1
+          }
+        ],
+        "slug": "synthacardium"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!PnqoHh1MBAG4AuAP"
+}

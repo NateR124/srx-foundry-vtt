@@ -1,0 +1,67 @@
+{
+  "_id": "XUsoNWwTPUqsaC60",
+  "name": "Backseat Driver",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / Drones & Vehicles",
+    "description": "Take over vehicle or drone",
+    "category": "hacking",
+    "subgroup": "Drones & Vehicles",
+    "karma": 3,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Backseat Driver",
+        "srxId": 211,
+        "category": "Hacking",
+        "subcategory": "Drones & Vehicles",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Drones & Vehicles",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "Complex",
+        "administered": "Yes",
+        "access": "Yes",
+        "prereqRaw": "Hack Access (Hacking Talent)",
+        "prereq": {
+          "kind": "talent",
+          "name": "Hack Access",
+          "categoryHint": "Hacking Talent"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "Take over vehicle or drone",
+        "effects": [],
+        "slug": "backseat-driver"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!XUsoNWwTPUqsaC60"
+}

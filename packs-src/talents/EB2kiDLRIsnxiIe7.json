@@ -1,0 +1,63 @@
+{
+  "_id": "EB2kiDLRIsnxiIe7",
+  "name": "Drain Soul",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism / Astral",
+    "description": "(Net Force x 1.5)P damage and increase target's Stitching Shock",
+    "category": "mysticism",
+    "subgroup": "Astral",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Drain Soul",
+        "srxId": 454,
+        "category": "Mysticism",
+        "subcategory": "Astral",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Astral",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": "TRUE",
+        "edgeUsage": null,
+        "hasDrainFading": "TRUE",
+        "action": "Major",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "resistance": "WIL",
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "(Net Force x 1.5)P damage and increase target's Stitching Shock",
+        "effects": [],
+        "slug": "drain-soul"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!EB2kiDLRIsnxiIe7"
+}

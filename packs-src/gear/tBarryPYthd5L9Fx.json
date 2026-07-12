@@ -1,0 +1,52 @@
+{
+  "_id": "tBarryPYthd5L9Fx",
+  "name": "Gas Mask",
+  "type": "gear",
+  "system": {
+    "summary": "Tools & Survival Gear",
+    "description": "",
+    "subtype": "Tools & Survival Gear",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 450
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Gas Mask",
+        "srxId": 6130,
+        "category": "Tools & Survival Gear",
+        "cost": 450,
+        "properties": [],
+        "options": [],
+        "type": "Tools & Survival Gear",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "gas-mask"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!tBarryPYthd5L9Fx"
+}

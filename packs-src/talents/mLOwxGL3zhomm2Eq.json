@@ -1,0 +1,31 @@
+{
+  "_id": "mLOwxGL3zhomm2Eq",
+  "name": "Greedy",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Take unnecessary risks on a run to try to grab additional paydata or loot",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Greedy",
+        "srxId": 10527,
+        "type": "Trait",
+        "type2": null,
+        "description": "Take unnecessary risks on a run to try to grab additional paydata or loot",
+        "options": [],
+        "slug": "greedy"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!mLOwxGL3zhomm2Eq"
+}

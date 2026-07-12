@@ -1,0 +1,47 @@
+{
+  "_id": "nXK96vQBSHEqvJ2d",
+  "name": "Detect Life",
+  "type": "spell",
+  "system": {
+    "summary": "Detection",
+    "description": "Sense presence of living beings",
+    "category": "detection",
+    "pattern": "self",
+    "duration": "sustained",
+    "range": "Self",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Detection"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Detect Life",
+        "srxId": 1521,
+        "category": "Detection",
+        "description": "Sense presence of living beings",
+        "range": {
+          "raw": "Self",
+          "special": "Self"
+        },
+        "duration": "Sustained",
+        "resistance": "WIL+CHA",
+        "attack": null,
+        "slug": "detect-life"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "y93WvYSQK8mAWRAI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!nXK96vQBSHEqvJ2d"
+}

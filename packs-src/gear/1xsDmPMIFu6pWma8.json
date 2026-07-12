@@ -1,0 +1,55 @@
+{
+  "_id": "1xsDmPMIFu6pWma8",
+  "name": "Tactical Computer",
+  "type": "gear",
+  "system": {
+    "summary": "Headware",
+    "description": "+1 to ranged attacks",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 15000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Tactical Computer",
+        "srxId": 3041,
+        "category": "Headware",
+        "cost": 15000,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "dictionaryName": "Tactical Computer",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.6",
+          "value": 0.6,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface),Smartlink (Implanted)",
+        "incompatible": [],
+        "grants": [],
+        "description": "+1 to ranged attacks",
+        "effects": [],
+        "slug": "tactical-computer"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!1xsDmPMIFu6pWma8"
+}

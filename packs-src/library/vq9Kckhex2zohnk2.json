@@ -1,0 +1,32 @@
+{
+  "_id": "vq9Kckhex2zohnk2",
+  "name": "Or'zet",
+  "type": "knowledge",
+  "system": {
+    "summary": "Languages",
+    "description": "You can fluently speak and understand this language",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "Or'zet",
+        "srxId": 10040,
+        "subcategory": "Languages",
+        "type": "Language",
+        "type2": null,
+        "description": "You can fluently speak and understand this language",
+        "freePool": "Languages",
+        "slug": "orzet"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!vq9Kckhex2zohnk2"
+}

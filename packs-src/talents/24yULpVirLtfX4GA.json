@@ -1,0 +1,67 @@
+{
+  "_id": "24yULpVirLtfX4GA",
+  "name": "Skilled Sprayer",
+  "type": "talent",
+  "system": {
+    "summary": "Weapons / PW (Exotic Weapon - Sprayer)",
+    "description": "+1 DV to Exotic Weapon - Sprayer weapons",
+    "category": "weapons",
+    "subgroup": "PW (Exotic Weapon - Sprayer)",
+    "karma": 6,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Skilled Sprayer",
+        "srxId": 161,
+        "category": "Weapons",
+        "subcategory": "PW (Exotic Weapon - Sprayer)",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "PW (Exotic Weapon - Sprayer)",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Exotic Weapon - Sprayer (General Talent)",
+        "prereq": {
+          "kind": "talent",
+          "name": "Exotic Weapon - Sprayer",
+          "categoryHint": "General Talent"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 6
+        },
+        "description": "+1 DV to Exotic Weapon - Sprayer weapons",
+        "effects": [],
+        "slug": "skilled-sprayer"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!24yULpVirLtfX4GA"
+}

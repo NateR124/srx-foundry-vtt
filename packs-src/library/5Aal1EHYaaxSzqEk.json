@@ -1,0 +1,44 @@
+{
+  "_id": "5Aal1EHYaaxSzqEk",
+  "name": "Street Doc",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "archetype",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "archetype",
+      "catalogData": {
+        "name": "Street Doc",
+        "srxId": 11019,
+        "noFlare": true,
+        "isCustom": false,
+        "isDossierGroup": false,
+        "parent": null,
+        "flares": [
+          {
+            "name": null,
+            "metatypes": [
+              "Dwarf",
+              "Ork"
+            ],
+            "appIndex": 24
+          }
+        ],
+        "slug": "street-doc"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "82fke5ZPHOqEvVwG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!5Aal1EHYaaxSzqEk"
+}

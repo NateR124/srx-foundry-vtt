@@ -1,0 +1,128 @@
+{
+  "_id": "wRn417QcjYHVwaXP",
+  "name": "Steel Lynx",
+  "type": "gear",
+  "system": {
+    "summary": "Drones (Terrestrial)",
+    "description": "",
+    "subtype": "Drones (Terrestrial)",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 67000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Steel Lynx",
+        "srxId": 7586,
+        "category": "Drones (Terrestrial)",
+        "cost": 67000,
+        "properties": [],
+        "options": [],
+        "type": "Drones (Terrestrial)",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 2,
+          "speed": 2,
+          "body": 10,
+          "armor": 9,
+          "health": 16,
+          "defenseScoreMod": null,
+          "autoRating": 3,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Firearms,Perception",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Armor Plating",
+            "value": "Built-In"
+          },
+          {
+            "name": "Combat Vehicle",
+            "value": "Built-In"
+          },
+          {
+            "name": "Smartlink (Vehicle)",
+            "value": "Built-In"
+          }
+        ],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "R",
+              "heavy": true
+            },
+            "builtIn": {
+              "weapon": "Mounted Light Machine Gun",
+              "orientation": "R",
+              "retractable": false,
+              "superior": false
+            }
+          },
+          {
+            "index": 2,
+            "mount": {
+              "orientation": "R",
+              "heavy": false
+            },
+            "builtIn": {
+              "weapon": "Mounted Submachine Gun",
+              "orientation": "R",
+              "retractable": false,
+              "superior": false
+            }
+          },
+          {
+            "index": 3,
+            "mount": {
+              "orientation": "F",
+              "heavy": false
+            },
+            "builtIn": {
+              "weapon": "Mounted Assault Rifle",
+              "orientation": "F",
+              "retractable": false,
+              "superior": false
+            }
+          }
+        ],
+        "slug": "steel-lynx"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!wRn417QcjYHVwaXP"
+}

@@ -1,0 +1,52 @@
+{
+  "_id": "y2YhfFZj93Qrhs8d",
+  "name": "Electronic Countermeasures (ECM)",
+  "type": "gear",
+  "system": {
+    "summary": "Vehicle Talents",
+    "description": "",
+    "subtype": "Utility",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 28000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Electronic Countermeasures (ECM)",
+        "srxId": 6068,
+        "category": "Vehicle Talents",
+        "cost": 28000,
+        "properties": [],
+        "options": [],
+        "type": "Utility",
+        "type2": "Vehicle",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "electronic-countermeasures-ecm"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!y2YhfFZj93Qrhs8d"
+}

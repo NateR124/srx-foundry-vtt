@@ -1,0 +1,60 @@
+{
+  "_id": "U6WqKx82MprAXebO",
+  "name": "Poltergeist",
+  "type": "spell",
+  "system": {
+    "summary": "Manipulation",
+    "description": "Fill area with swirling objects. Medium Visibility Impairment, and targets take (Force+3)S damage.",
+    "category": "manipulation",
+    "pattern": "area",
+    "duration": "sustained",
+    "range": "50m [A]",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+3",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Manipulation"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Poltergeist",
+        "srxId": 1557,
+        "category": "Manipulation",
+        "description": "Fill area with swirling objects. Medium Visibility Impairment, and targets take (Force+3)S damage.",
+        "range": {
+          "raw": "50m [A]",
+          "bands": [
+            50
+          ],
+          "area": true
+        },
+        "duration": "Sustained",
+        "resistance": null,
+        "attack": {
+          "type": "AOE",
+          "accuracy": null,
+          "dv": {
+            "raw": "(F+3)",
+            "force": true,
+            "mod": 3,
+            "type": "S",
+            "element": null
+          }
+        },
+        "slug": "poltergeist"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7UPq2yvvIYDMGwdo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!U6WqKx82MprAXebO"
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "ej0pNw3Mi6JMyrHh",
+  "name": "Incompetent",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Horribly mess up a task that requires the chosen skill",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Incompetent",
+        "srxId": 10530,
+        "type": "Trait",
+        "type2": null,
+        "description": "Horribly mess up a task that requires the chosen skill",
+        "options": [
+          "free text"
+        ],
+        "slug": "incompetent"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ej0pNw3Mi6JMyrHh"
+}

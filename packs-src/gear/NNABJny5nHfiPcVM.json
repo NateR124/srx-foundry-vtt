@@ -1,0 +1,60 @@
+{
+  "_id": "NNABJny5nHfiPcVM",
+  "name": "Novatech Navigator Cyberdeck",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Cyberdecks",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 75000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Novatech Navigator Cyberdeck",
+        "srxId": 6022,
+        "category": "Matrix Devices",
+        "subcategory": "Cyberdecks",
+        "cost": 75000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Cyberdecks",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": 3,
+        "matrix": {
+          "dataProcessing": "1",
+          "firewall": "2",
+          "hotSimFirewall": "1",
+          "hackingTests": "2",
+          "agents": "3",
+          "rank": "19",
+          "modCapacity": "2"
+        },
+        "installedEnhancements": [
+          {
+            "name": "Rootkit",
+            "value": "Y"
+          }
+        ],
+        "slug": "novatech-navigator-cyberdeck"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!NNABJny5nHfiPcVM"
+}

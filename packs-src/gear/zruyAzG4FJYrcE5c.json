@@ -1,0 +1,53 @@
+{
+  "_id": "zruyAzG4FJYrcE5c",
+  "name": "Earbuds",
+  "type": "gear",
+  "system": {
+    "summary": "Audio & Optical Devices / Audio Devices",
+    "description": "",
+    "subtype": "Audio Device",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 50
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Earbuds",
+        "srxId": 6081,
+        "category": "Audio & Optical Devices",
+        "subcategory": "Audio Devices",
+        "cost": 50,
+        "properties": [],
+        "options": [],
+        "type": "Audio Device",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 1,
+        "enhancementType": 1,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "earbuds"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!zruyAzG4FJYrcE5c"
+}

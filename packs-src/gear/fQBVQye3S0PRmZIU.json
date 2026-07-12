@@ -1,0 +1,62 @@
+{
+  "_id": "fQBVQye3S0PRmZIU",
+  "name": "Trauma Damper",
+  "type": "gear",
+  "system": {
+    "summary": "Headware",
+    "description": "+1 Willpower, +2 Wounded Limit",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 44000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Trauma Damper",
+        "srxId": 3044,
+        "category": "Headware",
+        "cost": 44000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Trauma Damper",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.4",
+          "value": 0.4,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [],
+        "grants": [],
+        "description": "+1 Willpower, +2 Wounded Limit",
+        "effects": [
+          {
+            "key": "wil",
+            "value": 1
+          },
+          {
+            "key": "woundedLimit",
+            "value": 2
+          }
+        ],
+        "slug": "trauma-damper"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!fQBVQye3S0PRmZIU"
+}

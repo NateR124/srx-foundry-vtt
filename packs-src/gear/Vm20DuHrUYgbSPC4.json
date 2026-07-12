@@ -1,0 +1,133 @@
+{
+  "_id": "Vm20DuHrUYgbSPC4",
+  "name": "Rover Model 2072",
+  "type": "gear",
+  "system": {
+    "summary": "Trucks & Vans",
+    "description": "",
+    "subtype": "Trucks & Vans",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 60000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Rover Model 2072",
+        "srxId": 7536,
+        "category": "Trucks & Vans",
+        "cost": 60000,
+        "properties": [],
+        "options": [],
+        "type": "Trucks & Vans",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 2,
+          "speed": 4,
+          "body": 14,
+          "armor": 12,
+          "health": 18,
+          "defenseScoreMod": null,
+          "autoRating": 3,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Perception",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Advanced Sensor Array",
+            "value": "2"
+          },
+          {
+            "name": "Anti-Theft System",
+            "value": "Built-In"
+          },
+          {
+            "name": "Combat Vehicle",
+            "value": "Built-In"
+          },
+          {
+            "name": "Increased Structural Integrity",
+            "value": "Built-In"
+          }
+        ],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "R",
+              "heavy": true
+            },
+            "builtIn": null
+          },
+          {
+            "index": 2,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": null
+          },
+          {
+            "index": 3,
+            "mount": {
+              "orientation": "FB",
+              "heavy": false
+            },
+            "builtIn": null
+          },
+          {
+            "index": 4,
+            "mount": {
+              "orientation": "B",
+              "heavy": false
+            },
+            "builtIn": null
+          },
+          {
+            "index": 5,
+            "mount": {
+              "orientation": "B",
+              "heavy": false
+            },
+            "builtIn": null
+          }
+        ],
+        "slug": "rover-model-2072"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Vm20DuHrUYgbSPC4"
+}

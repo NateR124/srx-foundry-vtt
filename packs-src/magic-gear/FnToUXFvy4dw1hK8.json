@@ -1,0 +1,55 @@
+{
+  "_id": "FnToUXFvy4dw1hK8",
+  "name": "Great Form Elemental",
+  "type": "gear",
+  "system": {
+    "summary": "Bound Elementals",
+    "description": "",
+    "subtype": "Bound Elemental",
+    "rating": 6,
+    "quantity": 1,
+    "cost": 10000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Great Form Elemental",
+        "srxId": 9006,
+        "category": "Bound Elementals",
+        "cost": 10000,
+        "costDisplay": "Force x 10,000",
+        "properties": [],
+        "options": [
+          "Air",
+          "Earth",
+          "Fire",
+          "Quintessence",
+          "Water"
+        ],
+        "type": "Bound Elemental",
+        "type2": "Magical Gear",
+        "type3": null,
+        "fixedRating": null,
+        "maxRating": 6,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": "Great Form Binding",
+        "maxQty": 0,
+        "karmaCost": null,
+        "crafted": true,
+        "equipPrereqs": [],
+        "alwaysUnique": true,
+        "slug": "great-form-elemental"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!FnToUXFvy4dw1hK8"
+}

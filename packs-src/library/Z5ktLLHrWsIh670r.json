@@ -1,0 +1,30 @@
+{
+  "_id": "Z5ktLLHrWsIh670r",
+  "name": "Street Kid",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Easily overlooked as they pick up interesting information and rumors on the streets",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Street Kid",
+        "srxId": 10020,
+        "type": "Contact",
+        "type2": null,
+        "description": "Easily overlooked as they pick up interesting information and rumors on the streets",
+        "slug": "street-kid"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Z5ktLLHrWsIh670r"
+}

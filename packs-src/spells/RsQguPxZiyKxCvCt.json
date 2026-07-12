@@ -1,0 +1,49 @@
+{
+  "_id": "RsQguPxZiyKxCvCt",
+  "name": "Sail",
+  "type": "spell",
+  "system": {
+    "summary": "Manipulation",
+    "description": "+1-2 to vehicle's speed",
+    "category": "manipulation",
+    "pattern": "direct",
+    "duration": "sustained",
+    "range": "80m",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Manipulation"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Sail",
+        "srxId": 1563,
+        "category": "Manipulation",
+        "description": "+1-2 to vehicle's speed",
+        "range": {
+          "raw": "80m",
+          "bands": [
+            80
+          ]
+        },
+        "duration": "Sustained",
+        "resistance": null,
+        "attack": null,
+        "slug": "sail"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7UPq2yvvIYDMGwdo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!RsQguPxZiyKxCvCt"
+}

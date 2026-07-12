@@ -1,0 +1,82 @@
+{
+  "_id": "h5sK9fmxKg3NMShr",
+  "name": "Aztechnology Crawler",
+  "type": "gear",
+  "system": {
+    "summary": "Minidrones (Terrestrial)",
+    "description": "",
+    "subtype": "Minidrones (Terrestrial)",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 11500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Aztechnology Crawler",
+        "srxId": 7574,
+        "category": "Minidrones (Terrestrial)",
+        "cost": 11500,
+        "properties": [],
+        "options": [],
+        "type": "Minidrones (Terrestrial)",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)",
+          "+1 to operator's Defense Score",
+          "Movement Rate: 5 meters"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 1,
+          "speed": 0,
+          "body": 3,
+          "armor": 4,
+          "health": 6,
+          "defenseScoreMod": 1,
+          "autoRating": 3,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Perception,Stealth",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Advanced Sensor Array",
+            "value": "1"
+          }
+        ],
+        "mounts": [],
+        "slug": "aztechnology-crawler"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!h5sK9fmxKg3NMShr"
+}

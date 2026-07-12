@@ -1,0 +1,31 @@
+{
+  "_id": "GBrW9cUi3NdQxBlm",
+  "name": "Distinctive Style",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Be easily spotted or remembered",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Distinctive Style",
+        "srxId": 10521,
+        "type": "Trait",
+        "type2": null,
+        "description": "Be easily spotted or remembered",
+        "options": [],
+        "slug": "distinctive-style"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!GBrW9cUi3NdQxBlm"
+}

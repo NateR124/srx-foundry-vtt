@@ -1,0 +1,70 @@
+{
+  "_id": "AkKYd1TmoWox8Z6P",
+  "name": "Exploit",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / Special",
+    "description": "1 free hit on Hacking tests against chosen system",
+    "category": "hacking",
+    "subgroup": "Special",
+    "karma": 4,
+    "option": "Alarms & Doors, Communications & Surveillance, Drones & Vehicles, Files & Databases, Personal & Industrial Equipment, Weapons & Cyberware",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Exploit",
+        "srxId": 231,
+        "category": "Hacking",
+        "subcategory": "Special",
+        "maxQty": 6,
+        "maxQtyForEachOption": 1,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Alarms & Doors",
+          "Communications & Surveillance",
+          "Drones & Vehicles",
+          "Files & Databases",
+          "Personal & Industrial Equipment",
+          "Weapons & Cyberware"
+        ],
+        "options2": [],
+        "type": "Special",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": null,
+        "matrixAction": "Minor",
+        "administered": "Yes",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "1 free hit on Hacking tests against chosen system",
+        "effects": [],
+        "slug": "exploit"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!AkKYd1TmoWox8Z6P"
+}

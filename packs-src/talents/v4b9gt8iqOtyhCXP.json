@@ -1,0 +1,72 @@
+{
+  "_id": "v4b9gt8iqOtyhCXP",
+  "name": "Natural Immunity",
+  "type": "talent",
+  "system": {
+    "summary": "Channeling / Yin",
+    "description": "Leverage on toxin and disease resistance tests",
+    "category": "channeling",
+    "subgroup": "Yin",
+    "karma": 3,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Natural Immunity",
+        "srxId": 518,
+        "category": "Channeling",
+        "subcategory": "Yin",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Yin",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "Leverage on toxin and disease resistance tests",
+        "effects": [
+          {
+            "key": "Disease",
+            "value": 1
+          },
+          {
+            "key": "Toxins",
+            "value": 1
+          }
+        ],
+        "slug": "natural-immunity"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!v4b9gt8iqOtyhCXP"
+}

@@ -1,0 +1,63 @@
+{
+  "_id": "3Jo0qmvi1H1GMvQU",
+  "name": "Overclock",
+  "type": "talent",
+  "system": {
+    "summary": "Software / Data Processing",
+    "description": "If Software ≥ Quickness x2, target with Wired Reflexes gains +2 to Accelerator",
+    "category": "software",
+    "subgroup": "Data Processing",
+    "karma": 10,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Overclock",
+        "srxId": 267,
+        "category": "Software",
+        "subcategory": "Data Processing",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Data Processing",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": null,
+        "matrixAction": "Complex",
+        "administered": "Yes",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 10
+        },
+        "description": "If Software ≥ Quickness x2, target with Wired Reflexes gains +2 to Accelerator",
+        "effects": [],
+        "slug": "overclock"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!3Jo0qmvi1H1GMvQU"
+}

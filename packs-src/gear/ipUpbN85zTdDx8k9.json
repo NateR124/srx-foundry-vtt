@@ -1,0 +1,52 @@
+{
+  "_id": "ipUpbN85zTdDx8k9",
+  "name": "Diguise Kit",
+  "type": "gear",
+  "system": {
+    "summary": "Breaking & Entering Gear",
+    "description": "",
+    "subtype": "Breaking & Entering Gear",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 800
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Diguise Kit",
+        "srxId": 6091,
+        "category": "Breaking & Entering Gear",
+        "cost": 800,
+        "properties": [],
+        "options": [],
+        "type": "Breaking & Entering Gear",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "diguise-kit"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ipUpbN85zTdDx8k9"
+}

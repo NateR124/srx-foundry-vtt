@@ -1,0 +1,52 @@
+{
+  "_id": "ibmwzZCqTHqak1db",
+  "name": "Scanner Scatter Kit",
+  "type": "gear",
+  "system": {
+    "summary": "Breaking & Entering Gear",
+    "description": "",
+    "subtype": "Breaking & Entering Gear",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 3500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Scanner Scatter Kit",
+        "srxId": 6096,
+        "category": "Breaking & Entering Gear",
+        "cost": 3500,
+        "properties": [],
+        "options": [],
+        "type": "Breaking & Entering Gear",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "scanner-scatter-kit"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ibmwzZCqTHqak1db"
+}

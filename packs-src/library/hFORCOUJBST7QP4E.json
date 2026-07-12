@@ -1,0 +1,30 @@
+{
+  "_id": "hFORCOUJBST7QP4E",
+  "name": "Mafia Consiglieri",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Resource on rumors and events with the world of organized crime, and always happy to do a ‘favor’ - for a price",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Mafia Consiglieri",
+        "srxId": 10015,
+        "type": "Contact",
+        "type2": null,
+        "description": "Resource on rumors and events with the world of organized crime, and always happy to do a ‘favor’ - for a price",
+        "slug": "mafia-consiglieri"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!hFORCOUJBST7QP4E"
+}

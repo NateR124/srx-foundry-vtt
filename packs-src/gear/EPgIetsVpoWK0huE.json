@@ -1,0 +1,59 @@
+{
+  "_id": "EPgIetsVpoWK0huE",
+  "name": "Flare Compensation",
+  "type": "gear",
+  "system": {
+    "summary": "Senseware / Eyeware",
+    "description": "Flare Compensation Vision Enhancement",
+    "subtype": "Eyeware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 200
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Flare Compensation",
+        "srxId": 3011,
+        "category": "Senseware",
+        "subcategory": "Eyeware",
+        "cost": 200,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Flare Compensation",
+        "type": "Eyeware",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.2",
+          "value": 0.2,
+          "scale": []
+        },
+        "parentContainer": "Cybereyes",
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "Flare Compensation Vision Enhancement",
+        "effects": [
+          {
+            "key": "flareCompensation",
+            "value": 1
+          }
+        ],
+        "slug": "flare-compensation"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!EPgIetsVpoWK0huE"
+}

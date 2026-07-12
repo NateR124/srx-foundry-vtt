@@ -1,0 +1,40 @@
+{
+  "_id": "Pw6DYgTwIOuRa1pP",
+  "name": "None",
+  "type": "armor",
+  "system": {
+    "summary": "",
+    "description": "",
+    "rating": 0,
+    "hardened": 0,
+    "heavy": false,
+    "shield": false,
+    "equipped": false,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "armor",
+      "catalogData": {
+        "name": "None",
+        "srxId": 4001,
+        "cost": 0,
+        "costDisplay": "Free",
+        "properties": [],
+        "options": [],
+        "rating": 0,
+        "hardened": 0,
+        "heavy": false,
+        "shield": false,
+        "slug": "none"
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Pw6DYgTwIOuRa1pP"
+}

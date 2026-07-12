@@ -1,0 +1,62 @@
+{
+  "_id": "swaZxUeH4ZA1UzV7",
+  "name": "Mind Games",
+  "type": "talent",
+  "system": {
+    "summary": "Social",
+    "description": "When you hit target, use Minor Action to give target -1 on next test",
+    "category": "social",
+    "subgroup": "",
+    "karma": 7,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Mind Games",
+        "srxId": 196,
+        "category": "Social",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 7
+        },
+        "description": "When you hit target, use Minor Action to give target -1 on next test",
+        "effects": [],
+        "slug": "mind-games"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!swaZxUeH4ZA1UzV7"
+}

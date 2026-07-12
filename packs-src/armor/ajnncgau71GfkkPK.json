@@ -1,0 +1,43 @@
+{
+  "_id": "ajnncgau71GfkkPK",
+  "name": "Brute4c Armor Jacket",
+  "type": "armor",
+  "system": {
+    "summary": "",
+    "description": "",
+    "rating": 11,
+    "hardened": 2,
+    "heavy": true,
+    "shield": false,
+    "equipped": false,
+    "cost": 13500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "armor",
+      "catalogData": {
+        "name": "Brute4c Armor Jacket",
+        "srxId": 4007,
+        "cost": 13500,
+        "properties": [
+          "Heavy",
+          "Hardened (2)"
+        ],
+        "options": [],
+        "rating": 11,
+        "hardened": 2,
+        "heavy": true,
+        "shield": false,
+        "slug": "brute4c-armor-jacket",
+        "variantOf": "armor-jacket"
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ajnncgau71GfkkPK"
+}

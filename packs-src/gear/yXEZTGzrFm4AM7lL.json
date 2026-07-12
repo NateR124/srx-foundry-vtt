@@ -1,0 +1,70 @@
+{
+  "_id": "yXEZTGzrFm4AM7lL",
+  "name": "Limbic System Cloning",
+  "type": "gear",
+  "system": {
+    "summary": "Headware",
+    "description": "+1 Charisma, Con, Influence, Insight",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 70000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Limbic System Cloning",
+        "srxId": 3035,
+        "category": "Headware",
+        "cost": 70000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Limbic System Cloning",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.7",
+          "value": 0.7,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [],
+        "grants": [],
+        "description": "+1 Charisma, Con, Influence, Insight",
+        "effects": [
+          {
+            "key": "cha",
+            "value": 1
+          },
+          {
+            "key": "con",
+            "value": 1
+          },
+          {
+            "key": "influence",
+            "value": 1
+          },
+          {
+            "key": "insight",
+            "value": 1
+          }
+        ],
+        "slug": "limbic-system-cloning"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!yXEZTGzrFm4AM7lL"
+}

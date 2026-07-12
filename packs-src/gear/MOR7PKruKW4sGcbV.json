@@ -1,0 +1,54 @@
+{
+  "_id": "MOR7PKruKW4sGcbV",
+  "name": "Cyberdeck",
+  "type": "gear",
+  "system": {
+    "summary": "Headware",
+    "description": "Cyberdeck  implanted in your head",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Cyberdeck",
+        "srxId": 3033,
+        "category": "Headware",
+        "cost": 2000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Cyberdeck",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.1",
+          "value": 0.1,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "Cyberdeck  implanted in your head",
+        "effects": [],
+        "slug": "cyberdeck",
+        "variantOf": "dni-direct-neural-interface"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!MOR7PKruKW4sGcbV"
+}

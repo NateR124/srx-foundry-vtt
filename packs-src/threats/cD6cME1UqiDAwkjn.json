@@ -1,0 +1,74 @@
+{
+  "_id": "cD6cME1UqiDAwkjn",
+  "name": "YAKUZA ENFORCER",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 2,
+      "bonus": 5
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 14,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 13,
+        "dv": 3,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Katana",
+        "pool": 16,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Crusader II Major (SA) 15 7P",
+        "pool": 15,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Yamaha Raiden Major (BF) 16 9P",
+        "pool": 15,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Disciplined Technique</strong>: When the enforcer misses an attack against a target, if they attack the same target again on their next Action Phase, they gain 1 free hit on their attack test.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Ultrasound, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The enforcer does not suffer recoil</li><li><strong>penalties.</strong>: </li><li><strong>Fearless</strong>: The enforcer has Leverage on tests to</li><li><strong>remove, or avoid gaining, the Frightened status.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "yakuza-enforcer"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "YAKUZA ENFORCER"
+  },
+  "_key": "!actors!cD6cME1UqiDAwkjn"
+}

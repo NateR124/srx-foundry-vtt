@@ -1,0 +1,53 @@
+{
+  "_id": "KQ2vzQT8nkGedTmR",
+  "name": "Weapon, Greater",
+  "type": "gear",
+  "system": {
+    "summary": "Foci",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Weapon, Greater",
+        "srxId": 9045,
+        "category": "Foci",
+        "cost": 2000,
+        "costDisplay": "128,000",
+        "properties": [
+          "Restricted"
+        ],
+        "options": [
+          "list of close combat weapons & bows"
+        ],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": null,
+        "fixedRating": 8,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [],
+        "alwaysUnique": true,
+        "slug": "weapon-greater"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!KQ2vzQT8nkGedTmR"
+}

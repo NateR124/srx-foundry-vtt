@@ -1,0 +1,38 @@
+{
+  "_id": "CeJRlbCzGJbxyoTQ",
+  "name": "Rootkit",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Cyberdeck Mod",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 22000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear-enhancement",
+      "catalogData": {
+        "name": "Rootkit",
+        "srxId": 7018,
+        "cost": 22000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "enhancementType": 3,
+        "type": "Cyberdeck Mod",
+        "description": null,
+        "slug": "rootkit"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CfAYFTllX77UHdGc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!CeJRlbCzGJbxyoTQ"
+}

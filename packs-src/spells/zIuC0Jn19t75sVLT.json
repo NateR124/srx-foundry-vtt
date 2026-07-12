@@ -1,0 +1,47 @@
+{
+  "_id": "zIuC0Jn19t75sVLT",
+  "name": "Terrify",
+  "type": "spell",
+  "system": {
+    "summary": "Illusion",
+    "description": "Chosen targets gain Frightened status",
+    "category": "illusion",
+    "pattern": "area",
+    "duration": "sustained",
+    "range": "Force",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Illusion"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Terrify",
+        "srxId": 1573,
+        "category": "Illusion",
+        "description": "Chosen targets gain Frightened status",
+        "range": {
+          "raw": "Force",
+          "force": true
+        },
+        "duration": "Sustained",
+        "resistance": "WIL+CHA",
+        "attack": null,
+        "slug": "terrify"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "dqlrlbNPd7IOtFU1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!zIuC0Jn19t75sVLT"
+}

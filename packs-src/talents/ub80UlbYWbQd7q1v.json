@@ -1,0 +1,31 @@
+{
+  "_id": "ub80UlbYWbQd7q1v",
+  "name": "Low Pain Tolerance",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Gain additional status effect from taking damage",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Low Pain Tolerance",
+        "srxId": 10534,
+        "type": "Trait",
+        "type2": null,
+        "description": "Gain additional status effect from taking damage",
+        "options": [],
+        "slug": "low-pain-tolerance"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ub80UlbYWbQd7q1v"
+}

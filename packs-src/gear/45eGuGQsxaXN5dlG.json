@@ -1,0 +1,55 @@
+{
+  "_id": "45eGuGQsxaXN5dlG",
+  "name": "Cyber Spurs (Off-Hand)",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "Hidden blades built-in to your arm",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 3000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Cyber Spurs (Off-Hand)",
+        "srxId": 3095,
+        "category": "Bodyware",
+        "cost": 3000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Cyber Spurs (Off-Hand)",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.2",
+          "value": 0.2,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Cyberarm (Off-Hand)"
+        ],
+        "grants": [],
+        "description": "Hidden blades built-in to your arm",
+        "effects": [],
+        "slug": "cyber-spurs-off-hand-2"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!45eGuGQsxaXN5dlG"
+}

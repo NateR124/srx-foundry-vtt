@@ -1,0 +1,76 @@
+{
+  "_id": "J5DiR7dmsKoouv2D",
+  "name": "Renraku Gerbil",
+  "type": "gear",
+  "system": {
+    "summary": "Minidrones (Terrestrial)",
+    "description": "",
+    "subtype": "Minidrones (Terrestrial)",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Renraku Gerbil",
+        "srxId": 7575,
+        "category": "Minidrones (Terrestrial)",
+        "cost": 1500,
+        "properties": [],
+        "options": [],
+        "type": "Minidrones (Terrestrial)",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)",
+          "+1 to operator's Defense Score"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 1,
+          "speed": 1,
+          "body": 4,
+          "armor": 6,
+          "health": 4,
+          "defenseScoreMod": 1,
+          "autoRating": 2,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Perception,Stealth",
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [],
+        "slug": "renraku-gerbil"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!J5DiR7dmsKoouv2D"
+}

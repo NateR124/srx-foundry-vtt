@@ -2,7 +2,7 @@
   "id": "srx",
   "title": "SRX — Shadowrun Edition X (Unofficial)",
   "description": "An unofficial, free fan-made Foundry VTT system for SRX (Shadowrun Edition X). Shadowrun is a registered trademark of The Topps Company, Inc. This project is not published, endorsed by, or affiliated with The Topps Company, Catalyst Game Labs, or the SRX team. No rules text, artwork, or other proprietary material from any Shadowrun product or the SRX rulebook is included. Playing requires the free SRX rulebook, available separately from the SRX team.",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "compatibility": {
     "minimum": "14",
     "verified": "14.364"
@@ -40,6 +40,105 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
+    },
+    {
+      "name": "weapons",
+      "label": "SRX Weapons",
+      "path": "packs/weapons",
+      "type": "Item",
+      "system": "srx",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "armor",
+      "label": "SRX Armor",
+      "path": "packs/armor",
+      "type": "Item",
+      "system": "srx",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "gear",
+      "label": "SRX Gear & Augments",
+      "path": "packs/gear",
+      "type": "Item",
+      "system": "srx",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "spells",
+      "label": "SRX Spells",
+      "path": "packs/spells",
+      "type": "Item",
+      "system": "srx",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "magic-gear",
+      "label": "SRX Magic Gear",
+      "path": "packs/magic-gear",
+      "type": "Item",
+      "system": "srx",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "talents",
+      "label": "SRX Talents & Traits",
+      "path": "packs/talents",
+      "type": "Item",
+      "system": "srx",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "library",
+      "label": "SRX Contacts & Knowledge",
+      "path": "packs/library",
+      "type": "Item",
+      "system": "srx",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "pregens",
+      "label": "SRX Pregen Characters",
+      "path": "packs/pregens",
+      "type": "Actor",
+      "system": "srx",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "threats",
+      "label": "SRX Threats & Critters",
+      "path": "packs/threats",
+      "type": "Actor",
+      "system": "srx",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "packFolders": [
@@ -48,6 +147,27 @@
       "sorting": "m",
       "packs": [
         "srx-guides"
+      ]
+    },
+    {
+      "name": "SRX — Rules & Gear",
+      "sorting": "m",
+      "packs": [
+        "weapons",
+        "armor",
+        "gear",
+        "spells",
+        "magic-gear",
+        "talents",
+        "library"
+      ]
+    },
+    {
+      "name": "SRX — NPCs & Pregens",
+      "sorting": "m",
+      "packs": [
+        "pregens",
+        "threats"
       ]
     }
   ],

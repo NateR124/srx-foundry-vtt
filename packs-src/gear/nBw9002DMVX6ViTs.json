@@ -1,0 +1,52 @@
+{
+  "_id": "nBw9002DMVX6ViTs",
+  "name": "Datachip",
+  "type": "gear",
+  "system": {
+    "summary": "Electronics",
+    "description": "",
+    "subtype": "Electronics",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 5
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Datachip",
+        "srxId": 6036,
+        "category": "Electronics",
+        "cost": 5,
+        "properties": [],
+        "options": [],
+        "type": "Electronics",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "datachip"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!nBw9002DMVX6ViTs"
+}

@@ -1,0 +1,71 @@
+{
+  "_id": "e89NHPylzR8xe9hg",
+  "name": "Control Rig",
+  "type": "gear",
+  "system": {
+    "summary": "Headware",
+    "description": "+2 Driving, Piloting; +Rating to Driving, Piloting, Agility, Athletics, Close Combat, Firearms, Projectile Weapons, and Stealth; Can take Biofeedback damage",
+    "subtype": "ware",
+    "rating": 3,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Control Rig",
+        "srxId": 3027,
+        "category": "Headware",
+        "cost": 0,
+        "costDisplay": "Per Rating: 50k/85k/130k",
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Control Rig",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": 3,
+        "uniqueScale": 1,
+        "nuyenScale": [
+          50000,
+          85000,
+          130000
+        ],
+        "essence": {
+          "display": "Per Rating: 1/1.5/2",
+          "value": 0,
+          "scale": [
+            1,
+            1.5,
+            2
+          ]
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "+2 Driving, Piloting; +Rating to Driving, Piloting, Agility, Athletics, Close Combat, Firearms, Projectile Weapons, and Stealth; Can take Biofeedback damage",
+        "effects": [
+          {
+            "key": "driving",
+            "value": 1
+          },
+          {
+            "key": "piloting",
+            "value": 1
+          }
+        ],
+        "slug": "control-rig"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!e89NHPylzR8xe9hg"
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "H1eFx9woPZ5QLH1p",
+  "name": "Shaman",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "archetype",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "archetype",
+      "catalogData": {
+        "name": "Shaman",
+        "srxId": 11008,
+        "noFlare": true,
+        "isCustom": false,
+        "isDossierGroup": false,
+        "parent": "rules-dossier",
+        "flares": [],
+        "slug": "shaman"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "82fke5ZPHOqEvVwG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!H1eFx9woPZ5QLH1p"
+}

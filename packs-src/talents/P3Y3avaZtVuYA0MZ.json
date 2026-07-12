@@ -1,0 +1,67 @@
+{
+  "_id": "P3Y3avaZtVuYA0MZ",
+  "name": "Blaze Hacker",
+  "type": "talent",
+  "system": {
+    "summary": "Metatype",
+    "description": "If you fail Hacking or Threading test, gain 1 free hit on next Hacking or Threading test against target",
+    "category": "metatype",
+    "subgroup": "",
+    "karma": 10,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Blaze Hacker",
+        "srxId": 82,
+        "category": "Metatype",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Metatype Elf",
+        "prereq": {
+          "kind": "metatype",
+          "values": [
+            "Elf"
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 10
+        },
+        "description": "If you fail Hacking or Threading test, gain 1 free hit on next Hacking or Threading test against target",
+        "effects": [],
+        "slug": "blaze-hacker"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!P3Y3avaZtVuYA0MZ"
+}

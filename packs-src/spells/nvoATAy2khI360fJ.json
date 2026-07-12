@@ -1,0 +1,60 @@
+{
+  "_id": "nvoATAy2khI360fJ",
+  "name": "Towering Inferno",
+  "type": "spell",
+  "system": {
+    "summary": "Combat",
+    "description": "Create wall of fire. Targets take (Force+4)P Fire damage.",
+    "category": "combat",
+    "pattern": "area",
+    "duration": "sustained",
+    "range": "50m [A]",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+4",
+    "dvType": "P",
+    "element": "fire",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Combat"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Towering Inferno",
+        "srxId": 1574,
+        "category": "Combat",
+        "description": "Create wall of fire. Targets take (Force+4)P Fire damage.",
+        "range": {
+          "raw": "50m [A]",
+          "bands": [
+            50
+          ],
+          "area": true
+        },
+        "duration": "Sust (1 hour)",
+        "resistance": null,
+        "attack": {
+          "type": "AOE",
+          "accuracy": null,
+          "dv": {
+            "raw": "(F+4)",
+            "force": true,
+            "mod": 4,
+            "type": "P",
+            "element": "Fire"
+          }
+        },
+        "slug": "towering-inferno"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "zZc1PdtmOVQowgGq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!nvoATAy2khI360fJ"
+}

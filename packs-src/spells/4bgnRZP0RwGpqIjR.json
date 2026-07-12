@@ -1,0 +1,47 @@
+{
+  "_id": "4bgnRZP0RwGpqIjR",
+  "name": "Heal",
+  "type": "spell",
+  "system": {
+    "summary": "Health",
+    "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+    "category": "health",
+    "pattern": "touch",
+    "duration": "instantaneous",
+    "range": "Touch",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Health"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Heal",
+        "srxId": 1534,
+        "category": "Health",
+        "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+        "range": {
+          "raw": "Touch",
+          "special": "Touch"
+        },
+        "duration": "Instantaneous",
+        "resistance": null,
+        "attack": null,
+        "slug": "heal"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "81q0dM8ktqbFvvhu",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!4bgnRZP0RwGpqIjR"
+}

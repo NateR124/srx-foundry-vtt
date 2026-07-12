@@ -1,0 +1,63 @@
+{
+  "_id": "i0NmCp7avZYuTBg4",
+  "name": "Melee Weapons Training",
+  "type": "talent",
+  "system": {
+    "summary": "Weapons / CC",
+    "description": "+1 to minimum damage with Close Combat weapons",
+    "category": "weapons",
+    "subgroup": "CC",
+    "karma": 6,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Melee Weapons Training",
+        "srxId": 150,
+        "category": "Weapons",
+        "subcategory": "CC",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "CC",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 6
+        },
+        "description": "+1 to minimum damage with Close Combat weapons",
+        "effects": [],
+        "slug": "melee-weapons-training"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!i0NmCp7avZYuTBg4"
+}

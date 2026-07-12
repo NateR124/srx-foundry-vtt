@@ -1,0 +1,53 @@
+{
+  "_id": "PlDDrwFF56Ww69bd",
+  "name": "Spirit",
+  "type": "gear",
+  "system": {
+    "summary": "Foci",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Spirit",
+        "srxId": 9040,
+        "category": "Foci",
+        "cost": 2000,
+        "costDisplay": "50,000",
+        "properties": [],
+        "options": [
+          "All spirit forms"
+        ],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": null,
+        "fixedRating": 5,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [
+          "Summon Spirit"
+        ],
+        "alwaysUnique": true,
+        "slug": "spirit"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!PlDDrwFF56Ww69bd"
+}

@@ -1,0 +1,53 @@
+{
+  "_id": "eKY647eix6wE6ljm",
+  "name": "Hermes Ikon Commlink",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Commlinks",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 32000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Hermes Ikon Commlink",
+        "srxId": 6013,
+        "category": "Matrix Devices",
+        "subcategory": "Commlinks",
+        "cost": 32000,
+        "properties": [],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Commlinks",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "1",
+          "firewall": "5",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "3",
+          "rank": "11",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "hermes-ikon-commlink"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!eKY647eix6wE6ljm"
+}

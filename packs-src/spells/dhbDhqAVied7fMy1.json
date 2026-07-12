@@ -1,0 +1,47 @@
+{
+  "_id": "dhbDhqAVied7fMy1",
+  "name": "Invisibility",
+  "type": "spell",
+  "system": {
+    "summary": "Illusion",
+    "description": "Target becomes invisible",
+    "category": "illusion",
+    "pattern": "touch",
+    "duration": "sustained",
+    "range": "Touch",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Illusion"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Invisibility",
+        "srxId": 1542,
+        "category": "Illusion",
+        "description": "Target becomes invisible",
+        "range": {
+          "raw": "Touch",
+          "special": "Touch"
+        },
+        "duration": "Sust (1 hour)",
+        "resistance": "Special",
+        "attack": null,
+        "slug": "invisibility"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "dqlrlbNPd7IOtFU1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!dhbDhqAVied7fMy1"
+}

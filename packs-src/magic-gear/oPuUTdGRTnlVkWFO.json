@@ -1,0 +1,53 @@
+{
+  "_id": "oPuUTdGRTnlVkWFO",
+  "name": "Qi, Greater",
+  "type": "gear",
+  "system": {
+    "summary": "Foci",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Qi, Greater",
+        "srxId": 9036,
+        "category": "Foci",
+        "cost": 2000,
+        "costDisplay": "200,000",
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": "Qi",
+        "fixedRating": 10,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [
+          "Expertise: Channeling"
+        ],
+        "alwaysUnique": true,
+        "slug": "qi-greater"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!oPuUTdGRTnlVkWFO"
+}

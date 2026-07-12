@@ -1,0 +1,81 @@
+{
+  "_id": "KtRdSTd8GClh48tX",
+  "name": "Keen",
+  "type": "talent",
+  "system": {
+    "summary": "Metatype",
+    "description": "Remove metatype penalty for chosen attribute",
+    "category": "metatype",
+    "subgroup": "",
+    "karma": 10,
+    "option": "Logic, Intuition, Charisma",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Keen",
+        "srxId": 97,
+        "category": "Metatype",
+        "maxQty": 1,
+        "maxQtyForEachOption": 1,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Logic",
+          "Intuition",
+          "Charisma"
+        ],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Metatype DwarfOrkTroll,At Character Creation Only",
+        "prereq": {
+          "op": "and",
+          "terms": [
+            {
+              "kind": "metatype",
+              "values": [
+                "Dwarf",
+                "Ork",
+                "Troll"
+              ]
+            },
+            {
+              "kind": "chargenOnly"
+            }
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 10
+        },
+        "description": "Remove metatype penalty for chosen attribute",
+        "effects": [],
+        "slug": "keen"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!KtRdSTd8GClh48tX"
+}

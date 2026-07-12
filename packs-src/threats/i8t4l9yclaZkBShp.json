@@ -1,0 +1,74 @@
+{
+  "_id": "i8t4l9yclaZkBShp",
+  "name": "BODYGUARD",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 3,
+      "bonus": 5
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 14
+    },
+    "armor": 19,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 13,
+        "dv": 5,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Combat Knife",
+        "pool": 16,
+        "dv": 5,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Predator V",
+        "pool": 16,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ingram Smartgun X Major (BF) 16 9P",
+        "pool": 15,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Protect the Principal</strong>: Once per fight, when another target within 2 meters of the bodyguard is hit by an attack, the bodyguard can have the attack hit them instead. The attack hits the bodyguard with the same number of net hits that it had against the original target. The bodyguard gains Leverage on their damage resistance test against the attack.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The bodyguard does not suffer</li><li><strong>recoil penalties.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "bodyguard"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "BODYGUARD"
+  },
+  "_key": "!actors!i8t4l9yclaZkBShp"
+}

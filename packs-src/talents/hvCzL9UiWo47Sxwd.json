@@ -1,0 +1,64 @@
+{
+  "_id": "hvCzL9UiWo47Sxwd",
+  "name": "Contraband",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "Can purchase 15,000¥ of Restricted/Illegal gear",
+    "category": "general",
+    "subgroup": "",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Contraband",
+        "srxId": 10,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "At Character Creation Only",
+        "prereq": {
+          "kind": "chargenOnly"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Can purchase 15,000¥ of Restricted/Illegal gear",
+        "effects": [],
+        "slug": "contraband"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!hvCzL9UiWo47Sxwd"
+}

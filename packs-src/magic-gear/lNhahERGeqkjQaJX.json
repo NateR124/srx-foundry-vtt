@@ -1,0 +1,53 @@
+{
+  "_id": "lNhahERGeqkjQaJX",
+  "name": "Spell",
+  "type": "gear",
+  "system": {
+    "summary": "Foci",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Spell",
+        "srxId": 9039,
+        "category": "Foci",
+        "cost": 2000,
+        "costDisplay": "18,000",
+        "properties": [],
+        "options": [
+          "All spells"
+        ],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": null,
+        "fixedRating": 3,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [
+          "Expertise: Sorcery"
+        ],
+        "alwaysUnique": true,
+        "slug": "spell"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!lNhahERGeqkjQaJX"
+}

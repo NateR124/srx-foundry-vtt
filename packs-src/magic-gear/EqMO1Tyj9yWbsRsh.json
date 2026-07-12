@@ -1,0 +1,49 @@
+{
+  "_id": "EqMO1Tyj9yWbsRsh",
+  "name": "Willpower",
+  "type": "gear",
+  "system": {
+    "summary": "Foci",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Willpower",
+        "srxId": 9046,
+        "category": "Foci",
+        "cost": 2000,
+        "costDisplay": "32,000",
+        "properties": [],
+        "options": [],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": "Willpower",
+        "fixedRating": 4,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [],
+        "alwaysUnique": true,
+        "slug": "willpower"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!EqMO1Tyj9yWbsRsh"
+}

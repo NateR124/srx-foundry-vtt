@@ -1,0 +1,60 @@
+{
+  "_id": "buWPx7DsTsrEEVc5",
+  "name": "Mounted Taser",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Mounted Weapon",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1200
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Mounted Taser",
+        "srxId": 8520,
+        "cost": 1200,
+        "properties": [],
+        "options": [],
+        "type": "Mounted Weapon",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": true,
+        "isExoticWeapon": false,
+        "nuyenMultiplier": null,
+        "requiresMount": true,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": "Firearms",
+        "attackSpecialization": "Tasers",
+        "attacks": [
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": "SS",
+            "accuracy": -1,
+            "dv": {
+              "raw": "6",
+              "value": 6,
+              "type": "S",
+              "element": "Electricity",
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "mounted-taser"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!buWPx7DsTsrEEVc5"
+}

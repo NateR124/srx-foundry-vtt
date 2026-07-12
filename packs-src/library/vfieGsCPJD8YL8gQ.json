@@ -1,0 +1,59 @@
+{
+  "_id": "vfieGsCPJD8YL8gQ",
+  "name": "Face",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "archetype",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "archetype",
+      "catalogData": {
+        "name": "Face",
+        "srxId": 11014,
+        "noFlare": false,
+        "isCustom": false,
+        "isDossierGroup": false,
+        "parent": null,
+        "flares": [
+          {
+            "name": "Battle-Tested",
+            "metatypes": [
+              "Human"
+            ],
+            "appIndex": 8
+          },
+          {
+            "name": "Con Artist",
+            "metatypes": [
+              "Elf",
+              "Human"
+            ],
+            "appIndex": 9
+          },
+          {
+            "name": "Infiltrator",
+            "metatypes": [
+              "Elf",
+              "Dwarf"
+            ],
+            "appIndex": 10
+          }
+        ],
+        "slug": "face-2"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "82fke5ZPHOqEvVwG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!vfieGsCPJD8YL8gQ"
+}

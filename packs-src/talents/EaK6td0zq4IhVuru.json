@@ -1,0 +1,68 @@
+{
+  "_id": "EaK6td0zq4IhVuru",
+  "name": "Elemental Body",
+  "type": "talent",
+  "system": {
+    "summary": "Channeling / Yin",
+    "description": "Resistance to chosen damage type",
+    "category": "channeling",
+    "subgroup": "Yin",
+    "karma": 4,
+    "option": "Acid, Cold, Electricity, Fire",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Elemental Body",
+        "srxId": 493,
+        "category": "Channeling",
+        "subcategory": "Yin",
+        "maxQty": 3,
+        "maxQtyForEachOption": 1,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Acid",
+          "Cold",
+          "Electricity",
+          "Fire"
+        ],
+        "options2": [],
+        "type": "Yin",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Resistance to chosen damage type",
+        "effects": [],
+        "slug": "elemental-body"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!EaK6td0zq4IhVuru"
+}

@@ -1,0 +1,47 @@
+{
+  "_id": "93ysbhHDmB8JAeLT",
+  "name": "Increase Reflexes",
+  "type": "spell",
+  "system": {
+    "summary": "Health",
+    "description": "+1 to target's Quickness",
+    "category": "health",
+    "pattern": "touch",
+    "duration": "sustained",
+    "range": "Touch",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Health"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Increase Reflexes",
+        "srxId": 1539,
+        "category": "Health",
+        "description": "+1 to target's Quickness",
+        "range": {
+          "raw": "Touch",
+          "special": "Touch"
+        },
+        "duration": "Sustained",
+        "resistance": null,
+        "attack": null,
+        "slug": "increase-reflexes"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "81q0dM8ktqbFvvhu",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!93ysbhHDmB8JAeLT"
+}

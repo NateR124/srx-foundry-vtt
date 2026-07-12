@@ -1,0 +1,84 @@
+{
+  "_id": "T5bVAv7ZFWQxfl7C",
+  "name": "Honda Spirit",
+  "type": "gear",
+  "system": {
+    "summary": "Cars",
+    "description": "",
+    "subtype": "Cars",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 4500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Honda Spirit",
+        "srxId": 7521,
+        "category": "Cars",
+        "cost": 4500,
+        "properties": [],
+        "options": [],
+        "type": "Cars",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 1,
+          "speed": 2,
+          "body": 6,
+          "armor": 6,
+          "health": 14,
+          "defenseScoreMod": null,
+          "autoRating": 1,
+          "autoDefenseScore": 1,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Perception",
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "FB",
+              "heavy": false
+            },
+            "builtIn": null
+          }
+        ],
+        "slug": "honda-spirit"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!T5bVAv7ZFWQxfl7C"
+}

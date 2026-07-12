@@ -1,0 +1,44 @@
+{
+  "_id": "U6hVuJ532IgtyX6n",
+  "name": "Covert Ops Specialist",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "archetype",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "archetype",
+      "catalogData": {
+        "name": "Covert Ops Specialist",
+        "srxId": 11011,
+        "noFlare": false,
+        "isCustom": false,
+        "isDossierGroup": false,
+        "parent": null,
+        "flares": [
+          {
+            "name": null,
+            "metatypes": [
+              "Elf",
+              "Human"
+            ],
+            "appIndex": 1
+          }
+        ],
+        "slug": "covert-ops-specialist"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "82fke5ZPHOqEvVwG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!U6hVuJ532IgtyX6n"
+}

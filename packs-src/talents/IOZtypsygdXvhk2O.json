@@ -1,0 +1,63 @@
+{
+  "_id": "IOZtypsygdXvhk2O",
+  "name": "Light Feet",
+  "type": "talent",
+  "system": {
+    "summary": "Channeling / Yin",
+    "description": "Run up vertical surfaces or across water. Gain other benefits to climbing, jumping, and falling and avoid tracking.",
+    "category": "channeling",
+    "subgroup": "Yin",
+    "karma": 6,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Light Feet",
+        "srxId": 509,
+        "category": "Channeling",
+        "subcategory": "Yin",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Yin",
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 6
+        },
+        "description": "Run up vertical surfaces or across water. Gain other benefits to climbing, jumping, and falling and avoid tracking.",
+        "effects": [],
+        "slug": "light-feet"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!IOZtypsygdXvhk2O"
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Jyvbhoqv7ZwYueK4",
+  "name": "Swahili",
+  "type": "knowledge",
+  "system": {
+    "summary": "Languages",
+    "description": "You can fluently speak and understand this language",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "Swahili",
+        "srxId": 10046,
+        "subcategory": "Languages",
+        "type": "Language",
+        "type2": null,
+        "description": "You can fluently speak and understand this language",
+        "freePool": "Languages",
+        "slug": "swahili"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Jyvbhoqv7ZwYueK4"
+}

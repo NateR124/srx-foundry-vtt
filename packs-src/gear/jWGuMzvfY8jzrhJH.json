@@ -1,0 +1,55 @@
+{
+  "_id": "jWGuMzvfY8jzrhJH",
+  "name": "Renraku Kraftwerk-8 Cyberdeck",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Cyberdecks",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 85000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Renraku Kraftwerk-8 Cyberdeck",
+        "srxId": 6023,
+        "category": "Matrix Devices",
+        "subcategory": "Cyberdecks",
+        "cost": 85000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Cyberdecks",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": 3,
+        "matrix": {
+          "dataProcessing": "1",
+          "firewall": "4",
+          "hotSimFirewall": "2",
+          "hackingTests": "2",
+          "agents": "3",
+          "rank": "20",
+          "modCapacity": "2"
+        },
+        "installedEnhancements": [],
+        "slug": "renraku-kraftwerk-8-cyberdeck"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!jWGuMzvfY8jzrhJH"
+}

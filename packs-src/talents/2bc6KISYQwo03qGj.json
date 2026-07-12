@@ -1,0 +1,77 @@
+{
+  "_id": "2bc6KISYQwo03qGj",
+  "name": "Master Artificer",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Infusion",
+    "description": "Max Level for artificing increased to Threading x 1.5 and can have 1 additional active artifice",
+    "category": "threading",
+    "subgroup": "Infusion",
+    "karma": 14,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Master Artificer",
+        "srxId": 313,
+        "category": "Threading",
+        "subcategory": "Infusion",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Infusion",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": "Artificing (Threading Talent), Threading 6",
+        "prereq": {
+          "op": "and",
+          "terms": [
+            {
+              "kind": "talent",
+              "name": "Artificing",
+              "categoryHint": "Threading Talent"
+            },
+            {
+              "kind": "rating",
+              "subject": "Threading",
+              "min": 6
+            }
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 14
+        },
+        "description": "Max Level for artificing increased to Threading x 1.5 and can have 1 additional active artifice",
+        "effects": [],
+        "slug": "master-artificer"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!2bc6KISYQwo03qGj"
+}

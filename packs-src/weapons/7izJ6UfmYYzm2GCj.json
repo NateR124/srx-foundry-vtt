@@ -1,0 +1,38 @@
+{
+  "_id": "7izJ6UfmYYzm2GCj",
+  "name": "Flare Compensation",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 100
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon-mod",
+      "catalogData": {
+        "name": "Flare Compensation",
+        "srxId": 5508,
+        "cost": 100,
+        "properties": [],
+        "type": "Modification",
+        "mounts": [],
+        "allMountsRequired": false,
+        "noMount": true,
+        "requiresMod": "Imaging Scope",
+        "slug": "flare-compensation",
+        "variantOf": "imaging-scope"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "rHfaFyA9uk37DvRq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!7izJ6UfmYYzm2GCj"
+}

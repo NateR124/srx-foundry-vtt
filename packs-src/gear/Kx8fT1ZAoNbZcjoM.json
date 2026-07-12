@@ -1,0 +1,55 @@
+{
+  "_id": "Kx8fT1ZAoNbZcjoM",
+  "name": "Hecate's Blessing",
+  "type": "gear",
+  "system": {
+    "summary": "Toxins & Drugs / Drugs",
+    "description": "",
+    "subtype": "Drug",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Hecate's Blessing",
+        "srxId": 6184,
+        "category": "Toxins & Drugs",
+        "subcategory": "Drugs",
+        "cost": 500,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Drug",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "hecates-blessing"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Kx8fT1ZAoNbZcjoM"
+}

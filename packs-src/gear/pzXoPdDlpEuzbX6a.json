@@ -1,0 +1,55 @@
+{
+  "_id": "pzXoPdDlpEuzbX6a",
+  "name": "Adrenaline Pump",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "Temporary physical boost",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 160000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Adrenaline Pump",
+        "srxId": 3089,
+        "category": "Bodyware",
+        "cost": 160000,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "dictionaryName": "Adrenaline Pump",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.8",
+          "value": 0.8,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [],
+        "grants": [],
+        "description": "Temporary physical boost",
+        "effects": [],
+        "slug": "adrenaline-pump"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!pzXoPdDlpEuzbX6a"
+}

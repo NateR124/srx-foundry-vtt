@@ -1,0 +1,67 @@
+{
+  "_id": "dygKDxJ4WAkfRtMd",
+  "name": "Puppet Master",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / Weapons & Cyberware",
+    "description": "Take control of target's cyberlimbs",
+    "category": "hacking",
+    "subgroup": "Weapons & Cyberware",
+    "karma": 3,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Puppet Master",
+        "srxId": 244,
+        "category": "Hacking",
+        "subcategory": "Weapons & Cyberware",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Weapons & Cyberware",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "Complex",
+        "administered": "Yes",
+        "access": "Yes",
+        "prereqRaw": "Hack Access (Hacking Talent)",
+        "prereq": {
+          "kind": "talent",
+          "name": "Hack Access",
+          "categoryHint": "Hacking Talent"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "Take control of target's cyberlimbs",
+        "effects": [],
+        "slug": "puppet-master"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!dygKDxJ4WAkfRtMd"
+}

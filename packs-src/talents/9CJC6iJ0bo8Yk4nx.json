@@ -1,0 +1,67 @@
+{
+  "_id": "9CJC6iJ0bo8Yk4nx",
+  "name": "Black Hammer",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / System Administration",
+    "description": "10P + net hits damage to target in hot-sim. Failure doesn't trigger IC.",
+    "category": "hacking",
+    "subgroup": "System Administration",
+    "karma": 3,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Black Hammer",
+        "srxId": 212,
+        "category": "Hacking",
+        "subcategory": "System Administration",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "System Administration",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "Major",
+        "administered": "No",
+        "access": "Yes",
+        "prereqRaw": "Hack Access (Hacking Talent)",
+        "prereq": {
+          "kind": "talent",
+          "name": "Hack Access",
+          "categoryHint": "Hacking Talent"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "10P + net hits damage to target in hot-sim. Failure doesn't trigger IC.",
+        "effects": [],
+        "slug": "black-hammer"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!9CJC6iJ0bo8Yk4nx"
+}

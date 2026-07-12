@@ -1,0 +1,49 @@
+{
+  "_id": "I9KmdMRk1YxTxkRP",
+  "name": "Clairaudience",
+  "type": "spell",
+  "system": {
+    "summary": "Detection",
+    "description": "Hear sounds at a distant point",
+    "category": "detection",
+    "pattern": "direct",
+    "duration": "sustained",
+    "range": "F x 10m",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Detection"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Clairaudience",
+        "srxId": 1513,
+        "category": "Detection",
+        "description": "Hear sounds at a distant point",
+        "range": {
+          "raw": "F x 10m",
+          "force": true,
+          "mult": 10,
+          "unit": "m"
+        },
+        "duration": "Sust (1 hour)",
+        "resistance": "WIL+CHA",
+        "attack": null,
+        "slug": "clairaudience"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "y93WvYSQK8mAWRAI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!I9KmdMRk1YxTxkRP"
+}

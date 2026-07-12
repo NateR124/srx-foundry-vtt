@@ -1,0 +1,63 @@
+{
+  "_id": "ygywKECVqrV09PtN",
+  "name": "Keen Persona",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Infusion",
+    "description": "Improved Crit on Software tests using Threading skill",
+    "category": "threading",
+    "subgroup": "Infusion",
+    "karma": 8,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Keen Persona",
+        "srxId": 309,
+        "category": "Threading",
+        "subcategory": "Infusion",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Infusion",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 8
+        },
+        "description": "Improved Crit on Software tests using Threading skill",
+        "effects": [],
+        "slug": "keen-persona"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ygywKECVqrV09PtN"
+}

@@ -1,0 +1,58 @@
+{
+  "_id": "omMQOpPPHCeBUm7b",
+  "name": "MCT TACTICAL SECURITY",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 3,
+      "bonus": 4
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 13,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Extendable Baton",
+        "pool": 13,
+        "dv": 4,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "SCK Model 100 Major (SA) 16 8P",
+        "pool": 16,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>MCT TacNet</strong>: This is an administered software program, maintained by an MCT host (p. 102). While it is running, the tactical security officer gains +3 to all ranged attacks, +3 to Perception, +1 to their Defense Score, and +1 Quickness (all bonuses are factored into above stats). MICRODECK SHIELD SEC</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The tactical security officer does</li><li><strong>not suffer recoil penalties.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "mct-tactical-security"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "MCT TACTICAL SECURITY"
+  },
+  "_key": "!actors!omMQOpPPHCeBUm7b"
+}

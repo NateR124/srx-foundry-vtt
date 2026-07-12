@@ -1,0 +1,66 @@
+{
+  "_id": "T6e7m0G10OxZMPEI",
+  "name": "Expertise: Close Combat",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "Can purchase Weapons talents with Close Combat keyword",
+    "category": "general",
+    "subgroup": "",
+    "karma": 12,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Expertise: Close Combat",
+        "srxId": 29,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Close Combat 5",
+        "prereq": {
+          "kind": "rating",
+          "subject": "Close Combat",
+          "min": 5
+        },
+        "grants": [],
+        "cost": {
+          "karma": 12
+        },
+        "description": "Can purchase Weapons talents with Close Combat keyword",
+        "effects": [],
+        "slug": "expertise-close-combat"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!T6e7m0G10OxZMPEI"
+}

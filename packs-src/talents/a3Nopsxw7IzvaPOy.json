@@ -1,0 +1,63 @@
+{
+  "_id": "a3Nopsxw7IzvaPOy",
+  "name": "Wide Burst",
+  "type": "talent",
+  "system": {
+    "summary": "Weapons / F (Burst Fire/Full-Auto Firing Mode)",
+    "description": "When using Burst Fire/Full-Auto firing mode, -1 DV to reroll 1's on attack test",
+    "category": "weapons",
+    "subgroup": "F (Burst Fire/Full-Auto Firing Mode)",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Wide Burst",
+        "srxId": 170,
+        "category": "Weapons",
+        "subcategory": "F (Burst Fire/Full-Auto Firing Mode)",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "F (Burst Fire/Full-Auto Firing Mode)",
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "When using Burst Fire/Full-Auto firing mode, -1 DV to reroll 1's on attack test",
+        "effects": [],
+        "slug": "wide-burst"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!a3Nopsxw7IzvaPOy"
+}

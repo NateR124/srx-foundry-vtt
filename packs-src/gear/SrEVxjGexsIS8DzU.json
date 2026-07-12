@@ -1,0 +1,52 @@
+{
+  "_id": "SrEVxjGexsIS8DzU",
+  "name": "Biomonitor",
+  "type": "gear",
+  "system": {
+    "summary": "Biotech",
+    "description": "",
+    "subtype": "Biotech",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 300
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Biomonitor",
+        "srxId": 6151,
+        "category": "Biotech",
+        "cost": 300,
+        "properties": [],
+        "options": [],
+        "type": "Biotech",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "biomonitor"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!SrEVxjGexsIS8DzU"
+}

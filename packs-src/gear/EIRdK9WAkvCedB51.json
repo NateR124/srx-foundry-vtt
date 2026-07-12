@@ -1,0 +1,53 @@
+{
+  "_id": "EIRdK9WAkvCedB51",
+  "name": "Fairlight Caliban Commlink",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Commlinks",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 95000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Fairlight Caliban Commlink",
+        "srxId": 6017,
+        "category": "Matrix Devices",
+        "subcategory": "Commlinks",
+        "cost": 95000,
+        "properties": [],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Commlinks",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "3",
+          "firewall": "9",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "3",
+          "rank": "15",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "fairlight-caliban-commlink"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!EIRdK9WAkvCedB51"
+}

@@ -1,0 +1,53 @@
+{
+  "_id": "JEMbaYFCJUP762k3",
+  "name": "Shiawase Slimcase-4 Commlink",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Commlinks",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 56000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Shiawase Slimcase-4 Commlink",
+        "srxId": 6015,
+        "category": "Matrix Devices",
+        "subcategory": "Commlinks",
+        "cost": 56000,
+        "properties": [],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Commlinks",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "2",
+          "firewall": "6",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "4",
+          "rank": "13",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "shiawase-slimcase-4-commlink"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!JEMbaYFCJUP762k3"
+}

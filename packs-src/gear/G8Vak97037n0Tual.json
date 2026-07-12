@@ -1,0 +1,74 @@
+{
+  "_id": "G8Vak97037n0Tual",
+  "name": "Mounted Shotgun",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Mounted Weapon",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Mounted Shotgun",
+        "srxId": 8523,
+        "cost": 2500,
+        "properties": [],
+        "options": [],
+        "type": "Mounted Weapon",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": true,
+        "isExoticWeapon": false,
+        "nuyenMultiplier": null,
+        "requiresMount": true,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": "Firearms",
+        "attackSpecialization": "Shotguns",
+        "attacks": [
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": "SS",
+            "accuracy": 0,
+            "dv": {
+              "raw": "9",
+              "value": 9,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "attackType": "AOE",
+            "action": "Major",
+            "fireMode": "SS",
+            "accuracy": null,
+            "dv": {
+              "raw": "5",
+              "value": 5,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "mounted-shotgun"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!G8Vak97037n0Tual"
+}

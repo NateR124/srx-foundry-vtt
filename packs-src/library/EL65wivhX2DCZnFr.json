@@ -1,0 +1,31 @@
+{
+  "_id": "EL65wivhX2DCZnFr",
+  "name": "Seattle",
+  "type": "knowledge",
+  "system": {
+    "summary": "",
+    "description": "All facets of life in Seattle including politics, corporate activity, criminal gangs, nightlife, neighborhoods, law enforcement",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "Seattle",
+        "srxId": 10015,
+        "type": "Knowledge Domain",
+        "type2": null,
+        "description": "All facets of life in Seattle including politics, corporate activity, criminal gangs, nightlife, neighborhoods, law enforcement",
+        "freePool": null,
+        "slug": "seattle"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!EL65wivhX2DCZnFr"
+}

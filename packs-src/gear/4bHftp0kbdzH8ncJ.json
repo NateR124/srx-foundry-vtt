@@ -1,0 +1,53 @@
+{
+  "_id": "4bHftp0kbdzH8ncJ",
+  "name": "Fingertip Compartment",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "Small hidden compartment",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Fingertip Compartment",
+        "srxId": 3100,
+        "category": "Bodyware",
+        "cost": 2000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Fingertip Compartment",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.05",
+          "value": 0.05,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "Small hidden compartment",
+        "effects": [],
+        "slug": "fingertip-compartment-3"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!4bHftp0kbdzH8ncJ"
+}

@@ -1,0 +1,55 @@
+{
+  "_id": "om1CRJtRvmwYmJun",
+  "name": "Synthetic Wrap",
+  "type": "gear",
+  "system": {
+    "summary": "Cyberlimbs / Other Cyberlimbs",
+    "description": "Make cyberskull look life-like. No Liability on Con & Influence tests.",
+    "subtype": "Cyberskull Upgrade",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Synthetic Wrap",
+        "srxId": 3084,
+        "category": "Cyberlimbs",
+        "subcategory": "Other Cyberlimbs",
+        "cost": 2000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Synthetic WrapCyberskull Upgrade",
+        "type": "Cyberskull Upgrade",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0",
+          "value": 0,
+          "scale": []
+        },
+        "parentContainer": "Cyberskull",
+        "prereq": "DNI (Direct Neural Interface),Cyberskull",
+        "incompatible": [],
+        "grants": [],
+        "description": "Make cyberskull look life-like. No Liability on Con & Influence tests.",
+        "effects": [],
+        "slug": "synthetic-wrap-3",
+        "variantOf": "cyberskull"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!om1CRJtRvmwYmJun"
+}

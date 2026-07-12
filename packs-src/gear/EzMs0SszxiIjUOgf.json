@@ -1,0 +1,62 @@
+{
+  "_id": "EzMs0SszxiIjUOgf",
+  "name": "Microphone",
+  "type": "gear",
+  "system": {
+    "summary": "Audio & Optical Devices / Audio Devices",
+    "description": "",
+    "subtype": "Audio Device",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Microphone",
+        "srxId": 6083,
+        "category": "Audio & Optical Devices",
+        "subcategory": "Audio Devices",
+        "cost": 0,
+        "costDisplay": "Per Option: 50/100/350",
+        "properties": [],
+        "options": [
+          "Small",
+          "Large",
+          "Directional"
+        ],
+        "type": "Audio Device",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": 2,
+        "uniqueNuyenScale": [
+          50,
+          100,
+          350
+        ],
+        "capacity": 1,
+        "enhancementType": 1,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "microphone"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!EzMs0SszxiIjUOgf"
+}

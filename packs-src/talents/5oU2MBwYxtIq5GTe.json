@@ -1,0 +1,63 @@
+{
+  "_id": "5oU2MBwYxtIq5GTe",
+  "name": "Fast Reload",
+  "type": "talent",
+  "system": {
+    "summary": "Weapons / PW",
+    "description": "Attacks with projectile weapons require only Major Action",
+    "category": "weapons",
+    "subgroup": "PW",
+    "karma": 6,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Fast Reload",
+        "srxId": 138,
+        "category": "Weapons",
+        "subcategory": "PW",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "PW",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 6
+        },
+        "description": "Attacks with projectile weapons require only Major Action",
+        "effects": [],
+        "slug": "fast-reload"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!5oU2MBwYxtIq5GTe"
+}

@@ -1,0 +1,52 @@
+{
+  "_id": "zg11yfWyAX5WTm90",
+  "name": "Sensor Lock",
+  "type": "gear",
+  "system": {
+    "summary": "Vehicle Talents",
+    "description": "",
+    "subtype": "Utility",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 32000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Sensor Lock",
+        "srxId": 6073,
+        "category": "Vehicle Talents",
+        "cost": 32000,
+        "properties": [],
+        "options": [],
+        "type": "Utility",
+        "type2": "Vehicle",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "sensor-lock"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!zg11yfWyAX5WTm90"
+}

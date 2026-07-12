@@ -1,0 +1,61 @@
+{
+  "_id": "r3Kxbs53QLBBLuVK",
+  "name": "Gamma-Scopolamine",
+  "type": "gear",
+  "system": {
+    "summary": "Toxins & Drugs / Toxins",
+    "description": "",
+    "subtype": "Toxin",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 200
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Gamma-Scopolamine",
+        "srxId": 6165,
+        "category": "Toxins & Drugs",
+        "subcategory": "Toxins",
+        "cost": 200,
+        "costDisplay": "Per Option: 200/2k",
+        "properties": [
+          "Restricted"
+        ],
+        "options": [
+          "S4"
+        ],
+        "type": "Toxin",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": 2,
+        "uniqueNuyenScale": [
+          200,
+          2000
+        ],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "gamma-scopolamine"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!r3Kxbs53QLBBLuVK"
+}

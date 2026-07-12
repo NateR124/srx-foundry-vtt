@@ -1,0 +1,94 @@
+{
+  "_id": "v2Y1cvUgAFghLa2T",
+  "name": "NeoNET Ferret",
+  "type": "gear",
+  "system": {
+    "summary": "Drones (Terrestrial)",
+    "description": "",
+    "subtype": "Drones (Terrestrial)",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 5000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "NeoNET Ferret",
+        "srxId": 7584,
+        "category": "Drones (Terrestrial)",
+        "cost": 5000,
+        "properties": [],
+        "options": [],
+        "type": "Drones (Terrestrial)",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 0,
+          "speed": 1,
+          "body": 4,
+          "armor": 6,
+          "health": 12,
+          "defenseScoreMod": null,
+          "autoRating": 1,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Firearms,Perception",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Smartlink (Vehicle)",
+            "value": "Built-In"
+          }
+        ],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "R",
+              "heavy": false
+            },
+            "builtIn": {
+              "weapon": "Mounted Taser",
+              "orientation": "R",
+              "retractable": false,
+              "superior": true
+            }
+          }
+        ],
+        "slug": "neonet-ferret"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!v2Y1cvUgAFghLa2T"
+}

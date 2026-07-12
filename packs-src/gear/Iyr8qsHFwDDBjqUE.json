@@ -1,0 +1,79 @@
+{
+  "_id": "Iyr8qsHFwDDBjqUE",
+  "name": "Cyberarm",
+  "type": "gear",
+  "system": {
+    "summary": "Cyberlimbs / Cyberarms",
+    "description": "+1 Armor, Athletics, Close Combat, Firearms, Projectile Weapons; +1 unarmed melee DV",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 28000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Cyberarm",
+        "srxId": 3049,
+        "category": "Cyberlimbs",
+        "subcategory": "Cyberarms",
+        "cost": 28000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Cyberarm",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.5",
+          "value": 0.5,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Cyber Gun",
+          "Cyber Spurs",
+          "Gyroarm"
+        ],
+        "grants": [],
+        "description": "+1 Armor, Athletics, Close Combat, Firearms, Projectile Weapons; +1 unarmed melee DV",
+        "effects": [
+          {
+            "key": "athletics",
+            "value": 1
+          },
+          {
+            "key": "closeCombat",
+            "value": 1
+          },
+          {
+            "key": "firearms",
+            "value": 1
+          },
+          {
+            "key": "projectileWeapons",
+            "value": 1
+          },
+          {
+            "key": "armor",
+            "value": 1
+          }
+        ],
+        "slug": "cyberarm"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Iyr8qsHFwDDBjqUE"
+}

@@ -1,0 +1,66 @@
+{
+  "_id": "eoMdiAwEVAE9eIkW",
+  "name": "Savage Spirit",
+  "type": "talent",
+  "system": {
+    "summary": "Conjuring",
+    "description": "Improved Crit on spirit attack tests",
+    "category": "conjuring",
+    "subgroup": "",
+    "karma": 7,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Savage Spirit",
+        "srxId": 429,
+        "category": "Conjuring",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Summon Spirit (Conjuring Talent)",
+        "prereq": {
+          "kind": "talent",
+          "name": "Summon Spirit",
+          "categoryHint": "Conjuring Talent"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 7
+        },
+        "description": "Improved Crit on spirit attack tests",
+        "effects": [],
+        "slug": "savage-spirit"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!eoMdiAwEVAE9eIkW"
+}

@@ -1,0 +1,55 @@
+{
+  "_id": "9Gr0QPNoMY1Q3xne",
+  "name": "Fake SIN",
+  "type": "gear",
+  "system": {
+    "summary": "Breaking & Entering Gear",
+    "description": "",
+    "subtype": "Breaking & Entering Gear",
+    "rating": 9,
+    "quantity": 1,
+    "cost": 700
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Fake SIN",
+        "srxId": 6092,
+        "category": "Breaking & Entering Gear",
+        "cost": 700,
+        "costDisplay": "Rating x Rating x 700",
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Breaking & Entering Gear",
+        "type2": null,
+        "maxRating": 9,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "fake-sin"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!9Gr0QPNoMY1Q3xne"
+}

@@ -1,0 +1,58 @@
+{
+  "_id": "syyZ4ucppChX7GEr",
+  "name": "WEBSPAWN",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 2,
+      "bonus": 4
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 16,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Bite",
+        "pool": 18,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Slash",
+        "pool": 16,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Improved Crit</strong>: On attack tests, the webspawn scores a critical hit with their Crit Dice on a 5 or a 6.</li><li><strong>Ensnare</strong>: The webspawn can exude sticky strands of webbing to wrap around a target. If the webspawn hits a target with its Slash attack, it immediately makes a subdual test: Body + Athletics opposed by the target’s (Body or Agility) + Athletics. If the webspawn wins, the target gains the Grabbed status. If a target gets zero hits on their subdual test, they also gain the Immobilized status as long as they are Grabbed. The target can spend a Major Action to repeat the subdual test. If the target wins, they are no longer Grabbed. The webspawn can only have one target Ensnared at a time.</li><li><strong>Web Strands</strong>: The webspawn shoots a strand of webbing at a target and pulls the target to it. The webspawn makes an attack test with a dice pool of 16 against any target within 30m. On a hit, the target makes an opposed Body + Athletics test against the webspawn. If the webspawn wins, the target is pulled adjacent to the webspawn. SPINDLER</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Low-Light, Thermographic</li></ul>",
+    "tags": [
+      "critter"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "webspawn"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "q9e964oWjMmRYuNH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "WEBSPAWN"
+  },
+  "_key": "!actors!syyZ4ucppChX7GEr"
+}

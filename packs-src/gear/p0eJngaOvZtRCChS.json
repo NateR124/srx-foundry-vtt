@@ -1,0 +1,36 @@
+{
+  "_id": "p0eJngaOvZtRCChS",
+  "name": "Audio Enhancement",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Audio Enhancement",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 17000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear-enhancement",
+      "catalogData": {
+        "name": "Audio Enhancement",
+        "srxId": 7001,
+        "cost": 17000,
+        "properties": [],
+        "options": [],
+        "enhancementType": 1,
+        "type": "Audio Enhancement",
+        "description": null,
+        "slug": "audio-enhancement"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CfAYFTllX77UHdGc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!p0eJngaOvZtRCChS"
+}

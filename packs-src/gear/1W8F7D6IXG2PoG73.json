@@ -1,0 +1,83 @@
+{
+  "_id": "1W8F7D6IXG2PoG73",
+  "name": "Renraku Goldfish",
+  "type": "gear",
+  "system": {
+    "summary": "Minidrones (Aquatic)",
+    "description": "",
+    "subtype": "Minidrones (Aquatic)",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 750
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Renraku Goldfish",
+        "srxId": 7605,
+        "category": "Minidrones (Aquatic)",
+        "cost": 750,
+        "properties": [],
+        "options": [],
+        "type": "Minidrones (Aquatic)",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)",
+          "+1 to operator's Stealth",
+          "+1 to operator's Defense Score",
+          "Movement Rate (swimming): 5 meters"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": 1
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 1,
+          "speed": 0,
+          "body": 1,
+          "armor": 0,
+          "health": -2,
+          "defenseScoreMod": 1,
+          "autoRating": 2,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Perception,Stealth",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Increased Structural Integrity",
+            "value": "Built-In"
+          }
+        ],
+        "mounts": [],
+        "slug": "renraku-goldfish"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!1W8F7D6IXG2PoG73"
+}

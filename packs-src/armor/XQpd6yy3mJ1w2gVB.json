@@ -1,0 +1,43 @@
+{
+  "_id": "XQpd6yy3mJ1w2gVB",
+  "name": "Mortimer of London Great Coat",
+  "type": "armor",
+  "system": {
+    "summary": "",
+    "description": "",
+    "rating": 10,
+    "hardened": 1,
+    "heavy": false,
+    "shield": false,
+    "equipped": false,
+    "cost": 25000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "armor",
+      "catalogData": {
+        "name": "Mortimer of London Great Coat",
+        "srxId": 4015,
+        "cost": 25000,
+        "properties": [
+          "Restricted",
+          "Hardened (1)"
+        ],
+        "options": [],
+        "rating": 10,
+        "hardened": 1,
+        "heavy": false,
+        "shield": false,
+        "slug": "mortimer-of-london-great-coat",
+        "variantOf": "lined-coat"
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!XQpd6yy3mJ1w2gVB"
+}

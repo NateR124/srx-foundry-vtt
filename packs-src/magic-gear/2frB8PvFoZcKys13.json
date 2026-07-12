@@ -1,0 +1,55 @@
+{
+  "_id": "2frB8PvFoZcKys13",
+  "name": "Elemental",
+  "type": "gear",
+  "system": {
+    "summary": "Bound Elementals",
+    "description": "",
+    "subtype": "Bound Elemental",
+    "rating": 3,
+    "quantity": 1,
+    "cost": 3000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Elemental",
+        "srxId": 9005,
+        "category": "Bound Elementals",
+        "cost": 3000,
+        "costDisplay": "Force x 3,000",
+        "properties": [],
+        "options": [
+          "Air",
+          "Earth",
+          "Fire",
+          "Quintessence",
+          "Water"
+        ],
+        "type": "Bound Elemental",
+        "type2": "Magical Gear",
+        "type3": null,
+        "fixedRating": null,
+        "maxRating": 3,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": "Bind Elemental",
+        "maxQty": 0,
+        "karmaCost": null,
+        "crafted": true,
+        "equipPrereqs": [],
+        "alwaysUnique": true,
+        "slug": "elemental"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!2frB8PvFoZcKys13"
+}

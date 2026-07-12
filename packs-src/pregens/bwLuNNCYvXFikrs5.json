@@ -1,0 +1,134 @@
+{
+  "_id": "bwLuNNCYvXFikrs5",
+  "name": "Decker Saboteur (Dwarf)",
+  "type": "character",
+  "system": {
+    "details": {
+      "metatype": "dwarf",
+      "archetype": "Decker Saboteur (Dwarf)",
+      "nuyen": 0
+    },
+    "attributes": {
+      "bod": {
+        "base": 2,
+        "bonus": 0
+      },
+      "agi": {
+        "base": 4,
+        "bonus": 0
+      },
+      "rea": {
+        "base": 2,
+        "bonus": 0
+      },
+      "wil": {
+        "base": 4,
+        "bonus": 0
+      },
+      "log": {
+        "base": 5,
+        "bonus": 0
+      },
+      "int": {
+        "base": 1,
+        "bonus": 0
+      },
+      "cha": {
+        "base": 2,
+        "bonus": 0
+      }
+    },
+    "skills": {
+      "biotech": {
+        "rating": 3,
+        "bonus": 0,
+        "specializations": []
+      },
+      "engineering": {
+        "rating": 3,
+        "bonus": 0,
+        "specializations": []
+      },
+      "firearms": {
+        "rating": 4,
+        "bonus": 0,
+        "specializations": []
+      },
+      "hacking": {
+        "rating": 6,
+        "bonus": 0,
+        "specializations": []
+      },
+      "perception": {
+        "rating": 1,
+        "bonus": 0,
+        "specializations": []
+      },
+      "software": {
+        "rating": 5,
+        "bonus": 0,
+        "specializations": []
+      },
+      "stealth": {
+        "rating": 2,
+        "bonus": 0,
+        "specializations": []
+      }
+    },
+    "special": {
+      "edge": {
+        "rating": 2,
+        "value": 2
+      },
+      "essence": 6,
+      "quickness": {
+        "base": 1,
+        "bonus": 0
+      },
+      "magic": {
+        "base": 1,
+        "bonus": 0
+      },
+      "resonance": {
+        "base": 0,
+        "bonus": 0
+      }
+    },
+    "monitors": {
+      "stun": {
+        "value": 0,
+        "systemShock": 0,
+        "bonus": 0
+      },
+      "physical": {
+        "value": 0,
+        "systemShock": 0,
+        "bonus": 0
+      }
+    },
+    "derivedMods": {
+      "armor": 0,
+      "hardened": 0,
+      "woundedLimit": 0
+    },
+    "vision": {
+      "lowlight": false,
+      "thermographic": false,
+      "ultrasound": false,
+      "flareCompensation": false,
+      "visionMagnification": false
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "Decker Saboteur (Dwarf)",
+    "actorLink": true
+  },
+  "_key": "!actors!bwLuNNCYvXFikrs5"
+}

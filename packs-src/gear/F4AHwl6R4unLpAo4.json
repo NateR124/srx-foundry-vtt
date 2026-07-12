@@ -1,0 +1,53 @@
+{
+  "_id": "F4AHwl6R4unLpAo4",
+  "name": "Autodoc",
+  "type": "gear",
+  "system": {
+    "summary": "Biotech",
+    "description": "",
+    "subtype": "Biotech",
+    "rating": 3,
+    "quantity": 1,
+    "cost": 24000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Autodoc",
+        "srxId": 6150,
+        "category": "Biotech",
+        "cost": 24000,
+        "costDisplay": "Rating x 24,000",
+        "properties": [],
+        "options": [],
+        "type": "Biotech",
+        "type2": null,
+        "maxRating": 3,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "autodoc"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!F4AHwl6R4unLpAo4"
+}

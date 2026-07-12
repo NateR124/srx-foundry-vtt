@@ -1,0 +1,157 @@
+{
+  "_id": "SU3NC1OX4yb2e1Aj",
+  "name": "FN P93 Praetor",
+  "type": "weapon",
+  "system": {
+    "summary": "Automatics / Submachine Guns",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "Submachine Guns",
+    "category": "Automatics",
+    "range": "20/50/100m",
+    "properties": "Illegal",
+    "cost": 2000,
+    "attackModes": [
+      {
+        "name": "Ranged",
+        "action": "major",
+        "fireMode": "SA",
+        "acc": 2,
+        "dv": "7",
+        "dvType": "P",
+        "element": ""
+      },
+      {
+        "name": "Ranged",
+        "action": "major",
+        "fireMode": "BF",
+        "acc": 0,
+        "dv": "8",
+        "dvType": "P",
+        "element": ""
+      },
+      {
+        "name": "Ranged",
+        "action": "complex",
+        "fireMode": "FA",
+        "acc": -2,
+        "dv": "9",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "FN P93 Praetor",
+        "srxId": 4576,
+        "category": "Automatics",
+        "subcategory": "Submachine Guns",
+        "cost": 2000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Firearms",
+        "type2": "Automatics",
+        "type3": "Submachine Guns",
+        "skill": "Firearms",
+        "specialization": "Submachine Guns",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "20/50/100m",
+          "bands": [
+            20,
+            50,
+            100
+          ]
+        },
+        "improvedRange": {
+          "raw": "20/50/150m",
+          "bands": [
+            20,
+            50,
+            150
+          ]
+        },
+        "canMod": true,
+        "mounts": {
+          "barrel": 1,
+          "internal": 1,
+          "side": 0,
+          "stock": 0,
+          "top": 1,
+          "underbarrel": 0,
+          "foldingStock": 1,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [
+          {
+            "name": "Flashlight",
+            "modSlug": "flashlight",
+            "mounts": [
+              4
+            ]
+          }
+        ],
+        "attackModes": [
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": "SA",
+            "accuracy": 2,
+            "dv": {
+              "raw": "7",
+              "value": 7,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": "BF",
+            "accuracy": 0,
+            "dv": {
+              "raw": "8",
+              "value": 8,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": "FA",
+            "accuracy": -2,
+            "dv": {
+              "raw": "9",
+              "value": 9,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "fn-p93-praetor"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "q57iHsbHsOYA6BmX",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!SU3NC1OX4yb2e1Aj"
+}

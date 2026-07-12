@@ -1,0 +1,75 @@
+{
+  "_id": "MVimKvhN3iDnVY3Y",
+  "name": "Adaptable",
+  "type": "talent",
+  "system": {
+    "summary": "Metatype",
+    "description": "Increase Attribute with rating <4",
+    "category": "metatype",
+    "subgroup": "",
+    "karma": 5,
+    "option": "Body, Agility, Reaction, Willpower, Logic, Intuition, Charisma",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Adaptable",
+        "srxId": 78,
+        "category": "Metatype",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Body",
+          "Agility",
+          "Reaction",
+          "Willpower",
+          "Logic",
+          "Intuition",
+          "Charisma"
+        ],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Metatype Human",
+        "prereq": {
+          "kind": "metatype",
+          "values": [
+            "Human"
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 5
+        },
+        "description": "Increase Attribute with rating <4",
+        "effects": [],
+        "slug": "adaptable"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!MVimKvhN3iDnVY3Y"
+}

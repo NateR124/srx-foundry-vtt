@@ -1,0 +1,104 @@
+{
+  "_id": "zZJzrCln7Bxw7VhM",
+  "name": "Ares Duelist",
+  "type": "gear",
+  "system": {
+    "summary": "Drones (Terrestrial)",
+    "description": "",
+    "subtype": "Drones (Terrestrial)",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 26000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Ares Duelist",
+        "srxId": 7578,
+        "category": "Drones (Terrestrial)",
+        "cost": 26000,
+        "properties": [],
+        "options": [],
+        "type": "Drones (Terrestrial)",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)",
+          "Movement Rate: 10 meters",
+          "Run - Minor Action, no Liability on tests"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 1,
+          "speed": 0,
+          "body": 8,
+          "armor": 10,
+          "health": 14,
+          "defenseScoreMod": null,
+          "autoRating": 3,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Athletics,Close Combat,Driving,Perception",
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "R",
+              "heavy": false
+            },
+            "builtIn": {
+              "weapon": "Mounted Sword",
+              "orientation": "R",
+              "retractable": false,
+              "superior": false
+            }
+          },
+          {
+            "index": 2,
+            "mount": {
+              "orientation": "R",
+              "heavy": false
+            },
+            "builtIn": {
+              "weapon": "Mounted Sword",
+              "orientation": "R",
+              "retractable": false,
+              "superior": false
+            }
+          }
+        ],
+        "slug": "ares-duelist"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!zZJzrCln7Bxw7VhM"
+}

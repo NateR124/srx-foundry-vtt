@@ -1,0 +1,31 @@
+{
+  "_id": "JuHPCTr6mqidisGr",
+  "name": "Spellcraft",
+  "type": "knowledge",
+  "system": {
+    "summary": "",
+    "description": "Spell design & effects, astral signatures, alchemy, rituals, famous magicians",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "Spellcraft",
+        "srxId": 10017,
+        "type": "Knowledge Domain",
+        "type2": null,
+        "description": "Spell design & effects, astral signatures, alchemy, rituals, famous magicians",
+        "freePool": null,
+        "slug": "spellcraft"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!JuHPCTr6mqidisGr"
+}

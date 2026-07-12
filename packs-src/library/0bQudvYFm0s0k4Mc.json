@@ -1,0 +1,31 @@
+{
+  "_id": "0bQudvYFm0s0k4Mc",
+  "name": "Weapons",
+  "type": "knowledge",
+  "system": {
+    "summary": "",
+    "description": "Brands & manufacturers, overall quality, weapon designs & repair",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "Weapons",
+        "srxId": 10023,
+        "type": "Knowledge Domain",
+        "type2": null,
+        "description": "Brands & manufacturers, overall quality, weapon designs & repair",
+        "freePool": null,
+        "slug": "weapons"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!0bQudvYFm0s0k4Mc"
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "eHNInVHMEQgeW3zh",
+  "name": "Spanish",
+  "type": "knowledge",
+  "system": {
+    "summary": "Languages",
+    "description": "You can fluently speak and understand this language",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "Spanish",
+        "srxId": 10044,
+        "subcategory": "Languages",
+        "type": "Language",
+        "type2": null,
+        "description": "You can fluently speak and understand this language",
+        "freePool": "Languages",
+        "slug": "spanish"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!eHNInVHMEQgeW3zh"
+}

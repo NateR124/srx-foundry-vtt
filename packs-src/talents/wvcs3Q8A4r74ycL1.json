@@ -1,0 +1,63 @@
+{
+  "_id": "wvcs3Q8A4r74ycL1",
+  "name": "Jam Comms",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / Communications & Surveillance",
+    "description": "Cut off up to (Hacking skill) targets from Matrix communications",
+    "category": "hacking",
+    "subgroup": "Communications & Surveillance",
+    "karma": 3,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Jam Comms",
+        "srxId": 237,
+        "category": "Hacking",
+        "subcategory": "Communications & Surveillance",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Communications & Surveillance",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "Complex",
+        "administered": "Yes",
+        "access": "No",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "Cut off up to (Hacking skill) targets from Matrix communications",
+        "effects": [],
+        "slug": "jam-comms"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!wvcs3Q8A4r74ycL1"
+}

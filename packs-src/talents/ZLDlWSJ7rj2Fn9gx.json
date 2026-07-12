@@ -1,0 +1,64 @@
+{
+  "_id": "ZLDlWSJ7rj2Fn9gx",
+  "name": "Advanced Specialization",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "+1 to one specialization",
+    "category": "general",
+    "subgroup": "",
+    "karma": 9,
+    "option": "Specializations",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Advanced Specialization",
+        "srxId": 2,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Specializations"
+        ],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 9
+        },
+        "description": "+1 to one specialization",
+        "effects": [],
+        "slug": "advanced-specialization"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ZLDlWSJ7rj2Fn9gx"
+}

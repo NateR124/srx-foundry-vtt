@@ -1,0 +1,53 @@
+{
+  "_id": "eleANw21vnxQJTUM",
+  "name": "Trodes",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Connection Devices",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Trodes",
+        "srxId": 6003,
+        "category": "Matrix Devices",
+        "subcategory": "Connection Devices",
+        "cost": 1000,
+        "properties": [],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Connection Devices",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "0",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "trodes"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!eleANw21vnxQJTUM"
+}

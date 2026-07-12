@@ -1,0 +1,66 @@
+{
+  "_id": "ir0GcjhvitDhVKXh",
+  "name": "Expertise: Projectile Weapons",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "Can purchase Weapons talents with Projectile Weapons keyword",
+    "category": "general",
+    "subgroup": "",
+    "karma": 12,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Expertise: Projectile Weapons",
+        "srxId": 36,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Projectile Weapons 5",
+        "prereq": {
+          "kind": "rating",
+          "subject": "Projectile Weapons",
+          "min": 5
+        },
+        "grants": [],
+        "cost": {
+          "karma": 12
+        },
+        "description": "Can purchase Weapons talents with Projectile Weapons keyword",
+        "effects": [],
+        "slug": "expertise-projectile-weapons"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ir0GcjhvitDhVKXh"
+}

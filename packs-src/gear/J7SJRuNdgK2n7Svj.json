@@ -1,0 +1,61 @@
+{
+  "_id": "J7SJRuNdgK2n7Svj",
+  "name": "Thermographic Vision",
+  "type": "gear",
+  "system": {
+    "summary": "Senseware / Eyeware",
+    "description": "Thermographic Vision Enhancement",
+    "subtype": "Eyeware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Thermographic Vision",
+        "srxId": 3017,
+        "category": "Senseware",
+        "subcategory": "Eyeware",
+        "cost": 1500,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Thermographic Vision",
+        "type": "Eyeware",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.2",
+          "value": 0.2,
+          "scale": []
+        },
+        "parentContainer": "Cybereyes",
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Troll Eyes"
+        ],
+        "grants": [],
+        "description": "Thermographic Vision Enhancement",
+        "effects": [
+          {
+            "key": "thermographic",
+            "value": 1
+          }
+        ],
+        "slug": "thermographic-vision"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!J7SJRuNdgK2n7Svj"
+}

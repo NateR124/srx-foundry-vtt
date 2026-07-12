@@ -1,0 +1,31 @@
+{
+  "_id": "7MvSIJtRrvfgmlkt",
+  "name": "Poser",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Terribly fail to impress someone who’s a member of the group you pitifully try to emulate, such as wealthy elven fashionistas or puck rockers",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Poser",
+        "srxId": 10539,
+        "type": "Trait",
+        "type2": null,
+        "description": "Terribly fail to impress someone who’s a member of the group you pitifully try to emulate, such as wealthy elven fashionistas or puck rockers",
+        "options": [],
+        "slug": "poser"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!7MvSIJtRrvfgmlkt"
+}

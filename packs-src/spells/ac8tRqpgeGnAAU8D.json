@@ -1,0 +1,49 @@
+{
+  "_id": "ac8tRqpgeGnAAU8D",
+  "name": "Animate",
+  "type": "spell",
+  "system": {
+    "summary": "Manipulation",
+    "description": "Inanimate object or plant moves and follows your commands",
+    "category": "manipulation",
+    "pattern": "direct",
+    "duration": "sustained",
+    "range": "80m",
+    "action": "complex",
+    "resistanceAttr": "special",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Manipulation"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Animate",
+        "srxId": 1506,
+        "category": "Manipulation",
+        "description": "Inanimate object or plant moves and follows your commands",
+        "range": {
+          "raw": "80m",
+          "bands": [
+            80
+          ]
+        },
+        "duration": "Sust (1 day)",
+        "resistance": "Special",
+        "attack": null,
+        "slug": "animate"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7UPq2yvvIYDMGwdo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ac8tRqpgeGnAAU8D"
+}

@@ -1,0 +1,49 @@
+{
+  "_id": "wMwqIl29btFu6CBS",
+  "name": "Confusion",
+  "type": "spell",
+  "system": {
+    "summary": "Illusion",
+    "description": "Target has Liability on all tests, excluding resistance tests",
+    "category": "illusion",
+    "pattern": "direct",
+    "duration": "timed",
+    "range": "80m",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Illusion"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Confusion",
+        "srxId": 1516,
+        "category": "Illusion",
+        "description": "Target has Liability on all tests, excluding resistance tests",
+        "range": {
+          "raw": "80m",
+          "bands": [
+            80
+          ]
+        },
+        "duration": "10 minutes",
+        "resistance": "WIL+LOG",
+        "attack": null,
+        "slug": "confusion"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "dqlrlbNPd7IOtFU1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!wMwqIl29btFu6CBS"
+}

@@ -1,0 +1,68 @@
+{
+  "_id": "RbHkwR10fb8mhknN",
+  "name": "Stabilized Firing",
+  "type": "talent",
+  "system": {
+    "summary": "Weapons / F",
+    "description": "Fire 1 additional Action Phase without recoil penalty",
+    "category": "weapons",
+    "subgroup": "F",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Stabilized Firing",
+        "srxId": 164,
+        "category": "Weapons",
+        "subcategory": "F",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "F",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Fire 1 additional Action Phase without recoil penalty",
+        "effects": [
+          {
+            "key": "Progressive Recoil Comp",
+            "value": 1
+          }
+        ],
+        "slug": "stabilized-firing"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!RbHkwR10fb8mhknN"
+}

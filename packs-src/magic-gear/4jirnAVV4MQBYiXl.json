@@ -1,0 +1,49 @@
+{
+  "_id": "4jirnAVV4MQBYiXl",
+  "name": "Healing (Crafted)",
+  "type": "gear",
+  "system": {
+    "summary": "Foci (Crafted)",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Healing (Crafted)",
+        "srxId": 9065,
+        "category": "Foci (Crafted)",
+        "cost": 1000,
+        "costDisplay": "16,000",
+        "properties": [],
+        "options": [],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": "Healing",
+        "fixedRating": 4,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": "Enchanting",
+        "maxQty": null,
+        "karmaCost": 0,
+        "crafted": true,
+        "equipPrereqs": [],
+        "alwaysUnique": true,
+        "slug": "healing-crafted"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!4jirnAVV4MQBYiXl"
+}

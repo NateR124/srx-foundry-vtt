@@ -1,0 +1,58 @@
+{
+  "_id": "rQKti8BMR57bAkdj",
+  "name": "DocWagon Contract",
+  "type": "gear",
+  "system": {
+    "summary": "Biotech",
+    "description": "",
+    "subtype": "Biotech",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "DocWagon Contract",
+        "srxId": 6154,
+        "category": "Biotech",
+        "cost": 0,
+        "costDisplay": "Per Option: 15k/50k",
+        "properties": [],
+        "options": [
+          "Platinum"
+        ],
+        "type": "Biotech",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": 2,
+        "uniqueNuyenScale": [
+          15000,
+          50000
+        ],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "docwagon-contract"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!rQKti8BMR57bAkdj"
+}

@@ -1,0 +1,82 @@
+{
+  "_id": "pmjH0lXMrf2vYRO7",
+  "name": "CRIMSON CRUSH GANGER",
+  "type": "threat",
+  "system": {
+    "threatRating": 2,
+    "initiative": {
+      "dice": 2,
+      "bonus": 3
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 14,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 9,
+        "dv": 6,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Spiked Club",
+        "pool": 10,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Power",
+        "pool": 11,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Roomsweeper",
+        "pool": 9,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "(Shot Round)",
+        "pool": 0,
+        "dv": 5,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Staggering Strike</strong>: On all attack tests, the ganger designates one of their Crit Dice as a Slam die. If the Slam die rolls a 6 and their target takes any damage from the attack, the target gains the Impaired status.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light</strong>: </li><li><strong>Mash the Trigger</strong>: The ganger does not suffer recoil</li><li><strong>penalties.</strong>: </li><li><strong>Relentless Focus</strong>: The ganger has Leverage on any</li><li><strong>tests made to end an ongoing effect on them, whether</strong>: </li><li><strong>a status, spell, hacking program, etc…</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "crimson-crush-ganger"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "CRIMSON CRUSH GANGER"
+  },
+  "_key": "!actors!pmjH0lXMrf2vYRO7"
+}

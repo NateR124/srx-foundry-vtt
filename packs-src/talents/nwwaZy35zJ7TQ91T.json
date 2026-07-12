@@ -1,0 +1,70 @@
+{
+  "_id": "nwwaZy35zJ7TQ91T",
+  "name": "Exceptional Attribute",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "Increase maximum rating by 1 in chosen attribute",
+    "category": "general",
+    "subgroup": "",
+    "karma": 10,
+    "option": "Body, Agility, Reaction, Willpower, Logic, Intuition, Charisma",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Exceptional Attribute",
+        "srxId": 27,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Body",
+          "Agility",
+          "Reaction",
+          "Willpower",
+          "Logic",
+          "Intuition",
+          "Charisma"
+        ],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 10
+        },
+        "description": "Increase maximum rating by 1 in chosen attribute",
+        "effects": [],
+        "slug": "exceptional-attribute"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!nwwaZy35zJ7TQ91T"
+}

@@ -1,0 +1,47 @@
+{
+  "_id": "8j88ZxjcnKBMQtlg",
+  "name": "Combat Sense",
+  "type": "spell",
+  "system": {
+    "summary": "Detection",
+    "description": "+1 to target's Defense Score",
+    "category": "detection",
+    "pattern": "touch",
+    "duration": "sustained",
+    "range": "Touch",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Detection"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Combat Sense",
+        "srxId": 1515,
+        "category": "Detection",
+        "description": "+1 to target's Defense Score",
+        "range": {
+          "raw": "Touch",
+          "special": "Touch"
+        },
+        "duration": "Sustained",
+        "resistance": null,
+        "attack": null,
+        "slug": "combat-sense"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "y93WvYSQK8mAWRAI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!8j88ZxjcnKBMQtlg"
+}

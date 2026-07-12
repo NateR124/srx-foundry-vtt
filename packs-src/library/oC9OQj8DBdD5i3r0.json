@@ -1,0 +1,30 @@
+{
+  "_id": "oC9OQj8DBdD5i3r0",
+  "name": "City Official",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Plugged into local politics and megacorp lobbyists",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "City Official",
+        "srxId": 10008,
+        "type": "Contact",
+        "type2": null,
+        "description": "Plugged into local politics and megacorp lobbyists",
+        "slug": "city-official"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!oC9OQj8DBdD5i3r0"
+}

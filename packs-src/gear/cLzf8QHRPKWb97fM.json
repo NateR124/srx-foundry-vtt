@@ -1,0 +1,62 @@
+{
+  "_id": "cLzf8QHRPKWb97fM",
+  "name": "Cat's Eyes",
+  "type": "gear",
+  "system": {
+    "summary": "Senseware / Eyeware",
+    "description": "Low-Light Vision Enhancement",
+    "subtype": "Eyeware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Cat's Eyes",
+        "srxId": 3009,
+        "category": "Senseware",
+        "subcategory": "Eyeware",
+        "cost": 1000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Cat's Eyes",
+        "type": "Eyeware",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.1",
+          "value": 0.1,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [
+          "Cybereyes",
+          "Low-Light Vision"
+        ],
+        "grants": [],
+        "description": "Low-Light Vision Enhancement",
+        "effects": [
+          {
+            "key": "lowLight",
+            "value": 1
+          }
+        ],
+        "slug": "cats-eyes"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!cLzf8QHRPKWb97fM"
+}

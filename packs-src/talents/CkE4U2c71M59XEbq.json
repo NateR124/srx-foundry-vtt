@@ -1,0 +1,31 @@
+{
+  "_id": "CkE4U2c71M59XEbq",
+  "name": "Compassionate",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Show mercy or offer trust when it’s not in your best interest",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Compassionate",
+        "srxId": 10516,
+        "type": "Trait",
+        "type2": null,
+        "description": "Show mercy or offer trust when it’s not in your best interest",
+        "options": [],
+        "slug": "compassionate"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!CkE4U2c71M59XEbq"
+}

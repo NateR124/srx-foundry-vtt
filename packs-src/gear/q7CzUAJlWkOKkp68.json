@@ -1,0 +1,88 @@
+{
+  "_id": "q7CzUAJlWkOKkp68",
+  "name": "Mounted Assault Rifle",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Mounted Weapon",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 5000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Mounted Assault Rifle",
+        "srxId": 8524,
+        "cost": 5000,
+        "properties": [],
+        "options": [],
+        "type": "Mounted Weapon",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": true,
+        "isExoticWeapon": false,
+        "nuyenMultiplier": null,
+        "requiresMount": true,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": "Firearms",
+        "attackSpecialization": "Assault Rifles",
+        "attacks": [
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": "SA",
+            "accuracy": 0,
+            "dv": {
+              "raw": "9",
+              "value": 9,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": "BF",
+            "accuracy": 0,
+            "dv": {
+              "raw": "10",
+              "value": 10,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": "FA",
+            "accuracy": -1,
+            "dv": {
+              "raw": "11",
+              "value": 11,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "mounted-assault-rifle"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!q7CzUAJlWkOKkp68"
+}

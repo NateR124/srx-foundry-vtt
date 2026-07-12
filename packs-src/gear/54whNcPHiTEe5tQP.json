@@ -1,0 +1,75 @@
+{
+  "_id": "54whNcPHiTEe5tQP",
+  "name": "Suzuki Mirage",
+  "type": "gear",
+  "system": {
+    "summary": "Motorbikes",
+    "description": "",
+    "subtype": "Motorbikes",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 16500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Suzuki Mirage",
+        "srxId": 7515,
+        "category": "Motorbikes",
+        "cost": 16500,
+        "properties": [],
+        "options": [],
+        "type": "Motorbikes",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 3,
+          "speed": 6,
+          "body": 6,
+          "armor": 8,
+          "health": 14,
+          "defenseScoreMod": null,
+          "autoRating": 3,
+          "autoDefenseScore": 3,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Perception",
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [],
+        "slug": "suzuki-mirage"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!54whNcPHiTEe5tQP"
+}

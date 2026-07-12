@@ -1,0 +1,63 @@
+{
+  "_id": "5P75aCpAXvlBxGDd",
+  "name": "Mounted Assault Cannon",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Mounted Weapon",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 40000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Mounted Assault Cannon",
+        "srxId": 8528,
+        "cost": 40000,
+        "properties": [
+          "Heavy Mount",
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Mounted Weapon",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": true,
+        "isExoticWeapon": false,
+        "nuyenMultiplier": null,
+        "requiresMount": true,
+        "requiresHeavyMount": true,
+        "prereq": null,
+        "attackSkill": "Firearms",
+        "attackSpecialization": "Assault Cannons",
+        "attacks": [
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": "SS",
+            "accuracy": 0,
+            "dv": {
+              "raw": "16",
+              "value": 16,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "mounted-assault-cannon"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!5P75aCpAXvlBxGDd"
+}

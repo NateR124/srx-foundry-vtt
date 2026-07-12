@@ -1,0 +1,54 @@
+{
+  "_id": "gyMozfPSBI5s5JIw",
+  "name": "Sequencer",
+  "type": "gear",
+  "system": {
+    "summary": "Breaking & Entering Gear",
+    "description": "",
+    "subtype": "Breaking & Entering Gear",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Sequencer",
+        "srxId": 6097,
+        "category": "Breaking & Entering Gear",
+        "cost": 2500,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Breaking & Entering Gear",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "sequencer"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!gyMozfPSBI5s5JIw"
+}

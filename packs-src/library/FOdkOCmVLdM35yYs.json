@@ -1,0 +1,31 @@
+{
+  "_id": "FOdkOCmVLdM35yYs",
+  "name": "Streets",
+  "type": "knowledge",
+  "system": {
+    "summary": "",
+    "description": "Where to buy illegal drugs or other gear, popular nightclubs and rave spots, music & fashion trends, sports teams",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "Streets",
+        "srxId": 10018,
+        "type": "Knowledge Domain",
+        "type2": null,
+        "description": "Where to buy illegal drugs or other gear, popular nightclubs and rave spots, music & fashion trends, sports teams",
+        "freePool": null,
+        "slug": "streets"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!FOdkOCmVLdM35yYs"
+}

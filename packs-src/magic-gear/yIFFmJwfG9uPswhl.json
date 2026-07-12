@@ -1,0 +1,165 @@
+{
+  "_id": "yIFFmJwfG9uPswhl",
+  "name": "Air",
+  "type": "gear",
+  "system": {
+    "summary": "Air",
+    "description": "",
+    "subtype": "anima",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "anima",
+      "catalogData": {
+        "name": "Air",
+        "srxId": 2501,
+        "category": "Air",
+        "kind": "elemental",
+        "animalTotem": null,
+        "spellType": "Detection",
+        "stats": {
+          "quickness": 1,
+          "health": 12,
+          "armor": 4,
+          "defenseScore": 4
+        },
+        "properties": [
+          "Physical Resistance, Electricity Immunity, Fire Vulnerability",
+          "Unphased (can't gain Frightened or Wounded status)"
+        ],
+        "skills": [
+          "Mysticism",
+          "Sorcery"
+        ],
+        "spellAttack": null,
+        "powers": [
+          {
+            "name": "Infuse Mana",
+            "raw": "Infuse Mana (Trait): +Force/2 on Detection spell Drain tests",
+            "action": null,
+            "sustained": false,
+            "duration": null,
+            "resist": null,
+            "text": "+Force/2 on Detection spell Drain tests"
+          },
+          {
+            "name": "Control Element",
+            "raw": "Control Element (Major Action): Air",
+            "action": "Major Action",
+            "sustained": false,
+            "duration": null,
+            "resist": null,
+            "text": "Air"
+          },
+          {
+            "name": "Sustain Spell",
+            "raw": "Sustain Spell (No Action, Sustained): Sustain one Detection spell for you. Spell Force must be ≤ elemental's Force.",
+            "action": "No Action",
+            "sustained": true,
+            "duration": "Sustained",
+            "resist": null,
+            "text": "Sustain one Detection spell for you. Spell Force must be ≤ elemental's Force."
+          }
+        ],
+        "harmonizedSpell": "Lightning Bolt",
+        "attack": {
+          "name": "Jolt",
+          "type": "Melee",
+          "skill": "Close Combat",
+          "action": "Major",
+          "accuracy": 0,
+          "dv": {
+            "raw": "1",
+            "value": 1,
+            "type": "P",
+            "element": "Electricity"
+          }
+        },
+        "evolvedSkill": "Stealth",
+        "evolvedPowers": [
+          {
+            "name": "Banishing Resistance",
+            "raw": "Banishing Resistance (Trait): Double Force vs. Negate",
+            "action": null,
+            "sustained": false,
+            "duration": null,
+            "resist": null,
+            "text": "Double Force vs. Negate"
+          },
+          {
+            "name": "Disappear",
+            "raw": "Disappear (Complex Action, Sustained): Cast Invisibility on self at Force. Extends to Astral Plane.",
+            "action": "Complex Action",
+            "sustained": true,
+            "duration": "Sustained",
+            "resist": null,
+            "text": "Cast Invisibility on self at Force. Extends to Astral Plane."
+          },
+          {
+            "name": "Primary Spell",
+            "raw": "Primary Spell (Complex Action, Sustained): Cast Oxygenate at Force",
+            "action": "Complex Action",
+            "sustained": true,
+            "duration": "Sustained",
+            "resist": null,
+            "text": "Cast Oxygenate at Force"
+          }
+        ],
+        "elementalFormulaePower": {
+          "name": "Elemental Formulae",
+          "raw": "Elemental Formulae (Complex Action, Sustained): 1 SpellType alchemical preparation does not count against limit. Spell Force must be ≤ elemental's Force.",
+          "action": "Complex Action",
+          "sustained": true,
+          "duration": "Sustained",
+          "resist": null,
+          "text": "1 SpellType alchemical preparation does not count against limit. Spell Force must be ≤ elemental's Force."
+        },
+        "greatFormPowers": [
+          {
+            "name": "Control Winds",
+            "raw": "Control Winds (Complex Action, Sustained): Cast Levitate at Force",
+            "action": "Complex Action",
+            "sustained": true,
+            "duration": "Sustained",
+            "resist": null,
+            "text": "Cast Levitate at Force"
+          },
+          {
+            "name": "Electrocute",
+            "raw": "Electrocute (Complex Action): Cast Lightning Storm at Force centered on self. Can't use if already used in this Combat Turn or Turn before.",
+            "action": "Complex Action",
+            "sustained": false,
+            "duration": null,
+            "resist": null,
+            "text": "Cast Lightning Storm at Force centered on self. Can't use if already used in this Combat Turn or Turn before."
+          }
+        ],
+        "greatFormSpellAttack": "Lightning Bolt",
+        "greatFormAttack": {
+          "name": "Cyclone",
+          "type": "Melee",
+          "skill": "Close Combat",
+          "action": "Major",
+          "accuracy": 4,
+          "dv": {
+            "raw": "7",
+            "value": 7,
+            "type": "S",
+            "element": null
+          }
+        },
+        "slug": "air"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "KLZmxSXG65k8ddMa",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!yIFFmJwfG9uPswhl"
+}

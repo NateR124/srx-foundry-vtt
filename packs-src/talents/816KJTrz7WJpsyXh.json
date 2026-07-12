@@ -1,0 +1,65 @@
+{
+  "_id": "816KJTrz7WJpsyXh",
+  "name": "Laser Focus",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Infusion",
+    "description": "Gain Focused Concentration General Talent. Reroll 1 hit instead of reducing 1 hit with Wounded status.",
+    "category": "threading",
+    "subgroup": "Infusion",
+    "karma": 6,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Laser Focus",
+        "srxId": 310,
+        "category": "Threading",
+        "subcategory": "Infusion",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Infusion",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [
+          "Focused Concentration"
+        ],
+        "cost": {
+          "karma": 6
+        },
+        "description": "Gain Focused Concentration General Talent. Reroll 1 hit instead of reducing 1 hit with Wounded status.",
+        "effects": [],
+        "slug": "laser-focus"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!816KJTrz7WJpsyXh"
+}

@@ -1,0 +1,58 @@
+{
+  "_id": "cvEZUNoMZxsBSKTi",
+  "name": "MICRODECK SHIELD SEC",
+  "type": "threat",
+  "system": {
+    "threatRating": 2,
+    "initiative": {
+      "dice": 1,
+      "bonus": 4
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 8
+    },
+    "armor": 15,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Sap",
+        "pool": 9,
+        "dv": 3,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Power",
+        "pool": 10,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Voltshot</strong>: The shield sec injects themselves with a combat drug cocktail. At the start of the next Combat Turn, the shield sec gains +3 to all attack tests, and their Initiative is 2d6+4. In 20 minutes, these effects end, and the shield sec takes 5S unresisted damage.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The shield sec does not suffer</li><li><strong>recoil penalties.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "microdeck-shield-sec"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "MICRODECK SHIELD SEC"
+  },
+  "_key": "!actors!cvEZUNoMZxsBSKTi"
+}

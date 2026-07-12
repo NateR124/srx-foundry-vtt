@@ -1,0 +1,63 @@
+{
+  "_id": "cwv5Q5Bvv1l1x2Up",
+  "name": "[Spell]",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism",
+    "description": "Learn chosen spell to use with Mysticism talents",
+    "category": "mysticism",
+    "subgroup": "",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "[Spell]",
+        "srxId": 478,
+        "category": "Mysticism",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4,
+          "display": "4/8"
+        },
+        "description": "Learn chosen spell to use with Mysticism talents",
+        "effects": [],
+        "slug": "spell-2"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!cwv5Q5Bvv1l1x2Up"
+}

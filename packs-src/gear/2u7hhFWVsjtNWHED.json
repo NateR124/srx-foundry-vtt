@@ -1,0 +1,116 @@
+{
+  "_id": "2u7hhFWVsjtNWHED",
+  "name": "Eurocar Northstar",
+  "type": "gear",
+  "system": {
+    "summary": "SUVs & Crossovers",
+    "description": "",
+    "subtype": "SUVs & Crossovers",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 40000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Eurocar Northstar",
+        "srxId": 7531,
+        "category": "SUVs & Crossovers",
+        "cost": 40000,
+        "properties": [],
+        "options": [],
+        "type": "SUVs & Crossovers",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 1,
+          "speed": 5,
+          "body": 12,
+          "armor": 8,
+          "health": 18,
+          "defenseScoreMod": null,
+          "autoRating": 3,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Perception",
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "R",
+              "heavy": true
+            },
+            "builtIn": null
+          },
+          {
+            "index": 2,
+            "mount": {
+              "orientation": "F",
+              "heavy": false
+            },
+            "builtIn": null
+          },
+          {
+            "index": 3,
+            "mount": {
+              "orientation": "F",
+              "heavy": false
+            },
+            "builtIn": null
+          },
+          {
+            "index": 4,
+            "mount": {
+              "orientation": "B",
+              "heavy": false
+            },
+            "builtIn": null
+          },
+          {
+            "index": 5,
+            "mount": {
+              "orientation": "B",
+              "heavy": false
+            },
+            "builtIn": null
+          }
+        ],
+        "slug": "eurocar-northstar"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!2u7hhFWVsjtNWHED"
+}

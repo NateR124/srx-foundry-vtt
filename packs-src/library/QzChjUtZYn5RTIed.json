@@ -1,0 +1,30 @@
+{
+  "_id": "QzChjUtZYn5RTIed",
+  "name": "Artificer",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Crafts technomantic artifices and is plugged into technomancer community",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Artificer",
+        "srxId": 10003,
+        "type": "Contact",
+        "type2": null,
+        "description": "Crafts technomantic artifices and is plugged into technomancer community",
+        "slug": "artificer"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!QzChjUtZYn5RTIed"
+}

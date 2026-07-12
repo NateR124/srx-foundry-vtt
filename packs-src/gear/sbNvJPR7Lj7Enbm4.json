@@ -1,0 +1,54 @@
+{
+  "_id": "sbNvJPR7Lj7Enbm4",
+  "name": "Cyberears",
+  "type": "gear",
+  "system": {
+    "summary": "Senseware / Earware",
+    "description": "Other earware cyberware costs no Essence",
+    "subtype": "Earware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Cyberears",
+        "srxId": 3005,
+        "category": "Senseware",
+        "subcategory": "Earware",
+        "cost": 2000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Cyberears",
+        "type": "Earware",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.2",
+          "value": 0.2,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "Other earware cyberware costs no Essence",
+        "effects": [],
+        "slug": "cyberears"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!sbNvJPR7Lj7Enbm4"
+}

@@ -1,0 +1,48 @@
+{
+  "_id": "OJQg6irCJI4DzB3u",
+  "name": "Armor Plating",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Armor Plating",
+        "srxId": 8504,
+        "cost": 500,
+        "costDisplay": "Health x 500",
+        "properties": [],
+        "options": [
+          "Integrated"
+        ],
+        "type": "Modification",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": false,
+        "isExoticWeapon": false,
+        "nuyenMultiplier": "Health",
+        "requiresMount": false,
+        "requiresHeavyMount": false,
+        "prereq": "Body 6",
+        "attackSkill": null,
+        "attackSpecialization": null,
+        "attacks": [],
+        "slug": "armor-plating"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!OJQg6irCJI4DzB3u"
+}

@@ -1,0 +1,53 @@
+{
+  "_id": "kRwAHiFVbFMkEtJe",
+  "name": "Meta Link Commlink",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Commlinks",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 800
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Meta Link Commlink",
+        "srxId": 6006,
+        "category": "Matrix Devices",
+        "subcategory": "Commlinks",
+        "cost": 800,
+        "properties": [],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Commlinks",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "3",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "4",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "meta-link-commlink"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!kRwAHiFVbFMkEtJe"
+}

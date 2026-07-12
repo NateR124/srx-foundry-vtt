@@ -1,0 +1,89 @@
+{
+  "_id": "1a1ibzSU7cicoLsd",
+  "name": "Expertise: Machine Savant",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "Gain Expertise: Software and Expertise: Vehicles General Talents",
+    "category": "general",
+    "subgroup": "",
+    "karma": 20,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Expertise: Machine Savant",
+        "srxId": 34,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Software 5, and (Driving 5 or Piloting 5)",
+        "prereq": {
+          "op": "and",
+          "terms": [
+            {
+              "kind": "rating",
+              "subject": "Software",
+              "min": 5
+            },
+            {
+              "op": "or",
+              "terms": [
+                {
+                  "kind": "rating",
+                  "subject": "Driving",
+                  "min": 5
+                },
+                {
+                  "kind": "rating",
+                  "subject": "Piloting",
+                  "min": 5
+                }
+              ]
+            }
+          ]
+        },
+        "grants": [
+          "Expertise: Software",
+          "Expertise: Vehicle"
+        ],
+        "cost": {
+          "karma": 20
+        },
+        "description": "Gain Expertise: Software and Expertise: Vehicles General Talents",
+        "effects": [],
+        "slug": "expertise-machine-savant"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!1a1ibzSU7cicoLsd"
+}

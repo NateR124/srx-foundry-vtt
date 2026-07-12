@@ -1,0 +1,64 @@
+{
+  "_id": "KMJgPomzPX2U8Swc",
+  "name": "Fairlight Excalibur Cyberdeck",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Cyberdecks",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 207000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Fairlight Excalibur Cyberdeck",
+        "srxId": 6029,
+        "category": "Matrix Devices",
+        "subcategory": "Cyberdecks",
+        "cost": 207000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Cyberdecks",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": 3,
+        "matrix": {
+          "dataProcessing": "2",
+          "firewall": "6",
+          "hotSimFirewall": "3",
+          "hackingTests": "2",
+          "agents": "4",
+          "rank": "26",
+          "modCapacity": "4"
+        },
+        "installedEnhancements": [
+          {
+            "name": "Agent",
+            "value": "Y"
+          },
+          {
+            "name": "Malware",
+            "value": "Y"
+          }
+        ],
+        "slug": "fairlight-excalibur-cyberdeck"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!KMJgPomzPX2U8Swc"
+}

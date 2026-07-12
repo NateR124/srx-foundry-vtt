@@ -1,0 +1,50 @@
+{
+  "_id": "tNfdLJfSFxkx9lRm",
+  "name": "Light",
+  "type": "spell",
+  "system": {
+    "summary": "Manipulation",
+    "description": "Create light in area",
+    "category": "manipulation",
+    "pattern": "area",
+    "duration": "timed",
+    "range": "100m [A]",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Manipulation"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Light",
+        "srxId": 1544,
+        "category": "Manipulation",
+        "description": "Create light in area",
+        "range": {
+          "raw": "100m [A]",
+          "bands": [
+            100
+          ],
+          "area": true
+        },
+        "duration": "(Force)hours",
+        "resistance": null,
+        "attack": null,
+        "slug": "light"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7UPq2yvvIYDMGwdo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!tNfdLJfSFxkx9lRm"
+}

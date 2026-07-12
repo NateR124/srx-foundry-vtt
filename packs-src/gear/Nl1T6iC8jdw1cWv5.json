@@ -1,0 +1,59 @@
+{
+  "_id": "Nl1T6iC8jdw1cWv5",
+  "name": "Biometric Security System",
+  "type": "gear",
+  "system": {
+    "summary": "Security & Scanners",
+    "description": "",
+    "subtype": "Security & Scanners",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Biometric Security System",
+        "srxId": 6103,
+        "category": "Security & Scanners",
+        "cost": 0,
+        "costDisplay": "Per Option: 2k/8k",
+        "properties": [],
+        "options": [
+          "Palm/Fingerprint",
+          "DNA"
+        ],
+        "type": "Security & Scanners",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": 2,
+        "uniqueNuyenScale": [
+          2000,
+          8000
+        ],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "biometric-security-system"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Nl1T6iC8jdw1cWv5"
+}

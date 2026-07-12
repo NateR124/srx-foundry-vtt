@@ -1,0 +1,30 @@
+{
+  "_id": "pxvohwwScGNkC0SN",
+  "name": "Talismonger",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Crafts magical foci and is plugged into magic-using community",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Talismonger",
+        "srxId": 10022,
+        "type": "Contact",
+        "type2": null,
+        "description": "Crafts magical foci and is plugged into magic-using community",
+        "slug": "talismonger"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!pxvohwwScGNkC0SN"
+}

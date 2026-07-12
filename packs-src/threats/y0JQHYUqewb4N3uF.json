@@ -1,0 +1,82 @@
+{
+  "_id": "y0JQHYUqewb4N3uF",
+  "name": "HALLOWEENER GANG LEADER",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 3,
+      "bonus": 3
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 15
+    },
+    "armor": 18,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Cyber Spurs",
+        "pool": 12,
+        "dv": 5,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Machete",
+        "pool": 13,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Predator V",
+        "pool": 13,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Colt Cobra TZ-120 Major (SA) 13 8P",
+        "pool": 13,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Colt Cobra TZ-120 Major (SA) 13 8P",
+        "pool": 12,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Give Me Your Best Shot</strong>: When hit by an attack that is not an AOE or spell attack, the gang leader can choose to lower their Defense Score against the attack to 1 to gain Leverage on their next attack against the target that attacked them.</li><li><strong>Twist the Knife</strong>: If the gang leader damages a target with their machete, the target continues to bleed, taking 1P unresisted damage at the end of each Combat Turn. The target can spend a Complex Action to stem the blood flow and stop the ongoing damage. ORK GANGER</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The gang leader does not suffer</li><li><strong>recoil penalties.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "halloweener-gang-leader"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "HALLOWEENER GANG LEADER"
+  },
+  "_key": "!actors!y0JQHYUqewb4N3uF"
+}

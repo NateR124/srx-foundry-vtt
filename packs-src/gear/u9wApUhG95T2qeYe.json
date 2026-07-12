@@ -1,0 +1,52 @@
+{
+  "_id": "u9wApUhG95T2qeYe",
+  "name": "Retinal Scanner Security System",
+  "type": "gear",
+  "system": {
+    "summary": "Security & Scanners",
+    "description": "",
+    "subtype": "Security & Scanners",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 10000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Retinal Scanner Security System",
+        "srxId": 6114,
+        "category": "Security & Scanners",
+        "cost": 10000,
+        "properties": [],
+        "options": [],
+        "type": "Security & Scanners",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "retinal-scanner-security-system"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!u9wApUhG95T2qeYe"
+}

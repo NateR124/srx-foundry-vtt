@@ -1,0 +1,50 @@
+{
+  "_id": "Ika6fTsX1dooBlFF",
+  "name": "RADHOUND",
+  "type": "threat",
+  "system": {
+    "threatRating": 2,
+    "initiative": {
+      "dice": 2,
+      "bonus": 3
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 8
+    },
+    "armor": 9,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Bite",
+        "pool": 10,
+        "dv": 6,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Regeneration</strong>: If the radhound is alive, at the start of each Combat Turn it heals 2 damage. If its current damage is reduced to less than its Health, it immediately regains consciousness. If the radhound’s damage exceeds its Health x 2, it dies.</li><li><strong>Swift</strong>: The radhound can take the Run action as a Minor Action, and the Move Action as a Free action (but can still only take each once per Combat Turn). The radhound does not suffer Liability on tests when they take the Run action.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Low-Light, Thermographic</li><li><strong>Pack Hunter</strong>: A radhound has Leverage on any attack</li><li><strong>tests against a target in melee range of another</strong>: </li><li><strong>radhound.</strong>: </li></ul>",
+    "tags": [
+      "critter"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "radhound"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "q9e964oWjMmRYuNH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "RADHOUND"
+  },
+  "_key": "!actors!Ika6fTsX1dooBlFF"
+}

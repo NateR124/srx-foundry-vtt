@@ -1,0 +1,93 @@
+{
+  "_id": "RMzJkRJ6f5PXvzZV",
+  "name": "Parashield Dart Pistol",
+  "type": "weapon",
+  "system": {
+    "summary": "Exotic Weapons",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "Exotic Weapon - Dart Gun",
+    "category": "Exotic Weapons",
+    "range": "10/20/40m",
+    "properties": "",
+    "cost": 750,
+    "attackModes": [
+      {
+        "name": "Ranged",
+        "action": "major",
+        "fireMode": "",
+        "acc": -1,
+        "dv": "Special",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Parashield Dart Pistol",
+        "srxId": 4614,
+        "category": "Exotic Weapons",
+        "cost": 750,
+        "properties": [],
+        "options": [],
+        "type": "Exotic Weapons",
+        "type2": "Dart Gun",
+        "type3": null,
+        "skill": "Firearms",
+        "specialization": "Exotic Weapon - Dart Gun",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "10/20/40m",
+          "bands": [
+            10,
+            20,
+            40
+          ]
+        },
+        "improvedRange": null,
+        "canMod": true,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 1,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": null,
+            "accuracy": -1,
+            "dv": {
+              "raw": "Special",
+              "special": "Special",
+              "type": null,
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "parashield-dart-pistol"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CxdzX8xPeW6rU3WC",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!RMzJkRJ6f5PXvzZV"
+}

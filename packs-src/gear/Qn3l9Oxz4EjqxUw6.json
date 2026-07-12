@@ -1,0 +1,61 @@
+{
+  "_id": "Qn3l9Oxz4EjqxUw6",
+  "name": "Vision Magnification",
+  "type": "gear",
+  "system": {
+    "summary": "Senseware / Eyeware",
+    "description": "Vision Magnification Enhancement",
+    "subtype": "Eyeware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Vision Magnification",
+        "srxId": 3019,
+        "category": "Senseware",
+        "subcategory": "Eyeware",
+        "cost": 1000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Vision Magnification",
+        "type": "Eyeware",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.2",
+          "value": 0.2,
+          "scale": []
+        },
+        "parentContainer": "Cybereyes",
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Hawk Eyes"
+        ],
+        "grants": [],
+        "description": "Vision Magnification Enhancement",
+        "effects": [
+          {
+            "key": "visionMagnification",
+            "value": 1
+          }
+        ],
+        "slug": "vision-magnification"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Qn3l9Oxz4EjqxUw6"
+}

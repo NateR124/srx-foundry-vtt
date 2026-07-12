@@ -1,0 +1,60 @@
+{
+  "_id": "HvQg8GPIUZzwMMes",
+  "name": "Mounted Exotic Weapon - Pepper Spray",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Mounted Weapon",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 5050
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Mounted Exotic Weapon - Pepper Spray",
+        "srxId": 8538,
+        "cost": 5050,
+        "properties": [],
+        "options": [],
+        "type": "Mounted Weapon",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": true,
+        "isExoticWeapon": true,
+        "nuyenMultiplier": null,
+        "requiresMount": true,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": null,
+        "attackSpecialization": "Exotic Weapon - Sprayer",
+        "attacks": [
+          {
+            "attackType": "AOE",
+            "action": "Major",
+            "fireMode": null,
+            "accuracy": null,
+            "dv": {
+              "raw": "Special",
+              "special": "Special",
+              "type": null,
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "mounted-exotic-weapon-pepper-spray"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!HvQg8GPIUZzwMMes"
+}

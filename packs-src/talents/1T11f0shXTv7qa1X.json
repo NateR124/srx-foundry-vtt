@@ -1,0 +1,86 @@
+{
+  "_id": "1T11f0shXTv7qa1X",
+  "name": "Expertise: Social",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "Can purchase Social talents",
+    "category": "general",
+    "subgroup": "",
+    "karma": 15,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Expertise: Social",
+        "srxId": 37,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Charisma 5, Essence 3, Con 5, Influence 5",
+        "prereq": {
+          "op": "and",
+          "terms": [
+            {
+              "kind": "rating",
+              "subject": "Charisma",
+              "min": 5
+            },
+            {
+              "kind": "rating",
+              "subject": "Essence",
+              "min": 3
+            },
+            {
+              "kind": "rating",
+              "subject": "Con",
+              "min": 5
+            },
+            {
+              "kind": "rating",
+              "subject": "Influence",
+              "min": 5
+            }
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 15
+        },
+        "description": "Can purchase Social talents",
+        "effects": [],
+        "slug": "expertise-social"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!1T11f0shXTv7qa1X"
+}

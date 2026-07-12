@@ -1,0 +1,67 @@
+{
+  "_id": "2ORea3Oz3Em1EEqe",
+  "name": "Edge: High Voltage",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / Weapons & Cyberware",
+    "description": "(Hacking/2)P + net hits electricity damage to target with cyberware",
+    "category": "hacking",
+    "subgroup": "Weapons & Cyberware",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": true
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Edge: High Voltage",
+        "srxId": 227,
+        "category": "Hacking",
+        "subcategory": "Weapons & Cyberware",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Weapons & Cyberware",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": "TRUE",
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "Complex",
+        "administered": "No",
+        "access": "Yes",
+        "prereqRaw": "Hack Access (Hacking Talent)",
+        "prereq": {
+          "kind": "talent",
+          "name": "Hack Access",
+          "categoryHint": "Hacking Talent"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "(Hacking/2)P + net hits electricity damage to target with cyberware",
+        "effects": [],
+        "slug": "edge-high-voltage"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!2ORea3Oz3Em1EEqe"
+}

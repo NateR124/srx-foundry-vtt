@@ -1,0 +1,51 @@
+{
+  "_id": "SXISDdQwd2C07RSt",
+  "name": "Deadly",
+  "type": "gear",
+  "system": {
+    "summary": "Artifices",
+    "description": "",
+    "subtype": "Artifice",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Deadly",
+        "srxId": 9090,
+        "category": "Artifices",
+        "cost": 2000,
+        "costDisplay": "50,000",
+        "properties": [],
+        "options": [
+          "list of firearms"
+        ],
+        "type": "Artifice",
+        "type2": "Artificing Gear",
+        "type3": null,
+        "fixedRating": 5,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [],
+        "alwaysUnique": true,
+        "slug": "deadly"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!SXISDdQwd2C07RSt"
+}

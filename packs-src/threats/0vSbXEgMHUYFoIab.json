@@ -1,0 +1,74 @@
+{
+  "_id": "0vSbXEgMHUYFoIab",
+  "name": "SHAMAN FREELANCER",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 2,
+      "bonus": 3
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 13,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Knife",
+        "pool": 6,
+        "dv": 4,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Viper",
+        "pool": 8,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "(Spell)",
+        "pool": 14,
+        "dv": 8,
+        "dvType": "P",
+        "element": "fire",
+        "action": "major"
+      },
+      {
+        "name": "Toxic Wave (Spell)",
+        "pool": 0,
+        "dv": 8,
+        "dvType": "P",
+        "element": "acid",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation,</li><li><strong>Thermographic, Vision Magnification</strong>: </li></ul><h3>Formula DVs (evaluated at F = TR)</h3><ul><li><strong>(Spell)</strong>: (F+5)P Fire</li><li><strong>Toxic Wave (Spell)</strong>: (F+5)P Acid</li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "shaman-freelancer"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "SHAMAN FREELANCER"
+  },
+  "_key": "!actors!0vSbXEgMHUYFoIab"
+}

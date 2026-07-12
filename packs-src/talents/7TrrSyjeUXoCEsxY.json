@@ -1,0 +1,33 @@
+{
+  "_id": "7TrrSyjeUXoCEsxY",
+  "name": "Allergy",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Suffer a status effect or physical damage from exposure to your allergen",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Allergy",
+        "srxId": 10503,
+        "type": "Trait",
+        "type2": null,
+        "description": "Suffer a status effect or physical damage from exposure to your allergen",
+        "options": [
+          "free text"
+        ],
+        "slug": "allergy"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!7TrrSyjeUXoCEsxY"
+}

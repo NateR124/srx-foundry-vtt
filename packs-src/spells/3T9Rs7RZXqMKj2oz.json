@@ -1,0 +1,47 @@
+{
+  "_id": "3T9Rs7RZXqMKj2oz",
+  "name": "Alertness",
+  "type": "spell",
+  "system": {
+    "summary": "Detection",
+    "description": "Target reroll 1's on Perception tests and gains +2 Accelerator",
+    "category": "detection",
+    "pattern": "touch",
+    "duration": "sustained",
+    "range": "Touch",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Detection"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Alertness",
+        "srxId": 1503,
+        "category": "Detection",
+        "description": "Target reroll 1's on Perception tests and gains +2 Accelerator",
+        "range": {
+          "raw": "Touch",
+          "special": "Touch"
+        },
+        "duration": "Sustained",
+        "resistance": null,
+        "attack": null,
+        "slug": "alertness"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "y93WvYSQK8mAWRAI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!3T9Rs7RZXqMKj2oz"
+}

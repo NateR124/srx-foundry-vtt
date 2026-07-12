@@ -1,0 +1,82 @@
+{
+  "_id": "qTb2p4jK8NKIQt51",
+  "name": "Lockheed Optic-X2",
+  "type": "gear",
+  "system": {
+    "summary": "Minidrones (Aerial)",
+    "description": "",
+    "subtype": "Minidrones (Aerial)",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 15500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Lockheed Optic-X2",
+        "srxId": 7591,
+        "category": "Minidrones (Aerial)",
+        "cost": 15500,
+        "properties": [],
+        "options": [],
+        "type": "Minidrones (Aerial)",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Piloting",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)",
+          "+1 to operator's Stealth",
+          "+1 to operator's Defense Score"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": 1
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 3,
+          "speed": 2,
+          "body": 4,
+          "armor": 4,
+          "health": 6,
+          "defenseScoreMod": 1,
+          "autoRating": 3,
+          "autoDefenseScore": 3,
+          "dccBenefits": null,
+          "autoSkills": "Perception,Piloting,Stealth",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Advanced Sensor Array",
+            "value": "1"
+          }
+        ],
+        "mounts": [],
+        "slug": "lockheed-optic-x2"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!qTb2p4jK8NKIQt51"
+}

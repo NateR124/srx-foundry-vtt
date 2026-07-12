@@ -1,0 +1,76 @@
+{
+  "_id": "Tg6B8Q8l125dSlpD",
+  "name": "Artemis Industries Nightwing",
+  "type": "gear",
+  "system": {
+    "summary": "Fixed-Wing Aircraft",
+    "description": "",
+    "subtype": "Fixed-Wing Aircraft",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 20000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Artemis Industries Nightwing",
+        "srxId": 7552,
+        "category": "Fixed-Wing Aircraft",
+        "cost": 20000,
+        "properties": [],
+        "options": [],
+        "type": "Fixed-Wing Aircraft",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Piloting",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)",
+          "+1 augmentation bonus to operator's Stealth"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": 1,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 3,
+          "speed": 2,
+          "body": 4,
+          "armor": 2,
+          "health": 10,
+          "defenseScoreMod": null,
+          "autoRating": 2,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Perception,Piloting,Stealth",
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [],
+        "slug": "artemis-industries-nightwing"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Tg6B8Q8l125dSlpD"
+}

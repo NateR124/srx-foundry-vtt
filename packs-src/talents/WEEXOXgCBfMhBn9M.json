@@ -1,0 +1,63 @@
+{
+  "_id": "WEEXOXgCBfMhBn9M",
+  "name": "Direct Connection",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / -",
+    "description": "Physically connect to device to gain 1 free hit on Hacking tests against device or to Access its owner. Use programs without Access.",
+    "category": "hacking",
+    "subgroup": "-",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Direct Connection",
+        "srxId": 222,
+        "category": "Hacking",
+        "subcategory": "-",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "-",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": null,
+        "matrixAction": "Major",
+        "administered": "No",
+        "access": "No",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Physically connect to device to gain 1 free hit on Hacking tests against device or to Access its owner. Use programs without Access.",
+        "effects": [],
+        "slug": "direct-connection"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!WEEXOXgCBfMhBn9M"
+}

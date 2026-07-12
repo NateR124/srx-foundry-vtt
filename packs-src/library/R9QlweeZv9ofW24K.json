@@ -1,0 +1,30 @@
+{
+  "_id": "R9QlweeZv9ofW24K",
+  "name": "Beat Cop",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Is plugged into criminal activity and what’s happening on the streets",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Beat Cop",
+        "srxId": 10005,
+        "type": "Contact",
+        "type2": null,
+        "description": "Is plugged into criminal activity and what’s happening on the streets",
+        "slug": "beat-cop"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!R9QlweeZv9ofW24K"
+}

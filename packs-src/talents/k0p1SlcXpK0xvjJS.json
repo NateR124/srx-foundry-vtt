@@ -1,0 +1,31 @@
+{
+  "_id": "k0p1SlcXpK0xvjJS",
+  "name": "Dimwitted",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Horribly mess up a task that requires intelligence",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Dimwitted",
+        "srxId": 10520,
+        "type": "Trait",
+        "type2": null,
+        "description": "Horribly mess up a task that requires intelligence",
+        "options": [],
+        "slug": "dimwitted"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!k0p1SlcXpK0xvjJS"
+}

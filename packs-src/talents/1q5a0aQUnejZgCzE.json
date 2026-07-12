@@ -1,0 +1,63 @@
+{
+  "_id": "1q5a0aQUnejZgCzE",
+  "name": "Multi-tasking",
+  "type": "talent",
+  "system": {
+    "summary": "Software / Data Processing",
+    "description": "Ignore -2 penalty for 1 administered program",
+    "category": "software",
+    "subgroup": "Data Processing",
+    "karma": 8,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Multi-tasking",
+        "srxId": 265,
+        "category": "Software",
+        "subcategory": "Data Processing",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Data Processing",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 8
+        },
+        "description": "Ignore -2 penalty for 1 administered program",
+        "effects": [],
+        "slug": "multi-tasking"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!1q5a0aQUnejZgCzE"
+}

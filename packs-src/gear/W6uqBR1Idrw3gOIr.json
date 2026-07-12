@@ -1,0 +1,36 @@
+{
+  "_id": "W6uqBR1Idrw3gOIr",
+  "name": "Vision Magnification",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Vision Enhancement",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear-enhancement",
+      "catalogData": {
+        "name": "Vision Magnification",
+        "srxId": 7009,
+        "cost": 1000,
+        "properties": [],
+        "options": [],
+        "enhancementType": 2,
+        "type": "Vision Enhancement",
+        "description": null,
+        "slug": "vision-magnification"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CfAYFTllX77UHdGc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!W6uqBR1Idrw3gOIr"
+}

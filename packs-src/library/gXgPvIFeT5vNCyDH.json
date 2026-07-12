@@ -1,0 +1,67 @@
+{
+  "_id": "gXgPvIFeT5vNCyDH",
+  "name": "Street Samurai",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "archetype",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "archetype",
+      "catalogData": {
+        "name": "Street Samurai",
+        "srxId": 11020,
+        "noFlare": false,
+        "isCustom": false,
+        "isDossierGroup": false,
+        "parent": null,
+        "flares": [
+          {
+            "name": "Juggernaut",
+            "metatypes": [
+              "Troll"
+            ],
+            "appIndex": 25
+          },
+          {
+            "name": "Mercenary",
+            "metatypes": [
+              "Ork",
+              "Human"
+            ],
+            "appIndex": 26
+          },
+          {
+            "name": "Resourceful",
+            "metatypes": [
+              "Human",
+              "Elf"
+            ],
+            "appIndex": 27
+          },
+          {
+            "name": "Shadow",
+            "metatypes": [
+              "Elf",
+              "Ork"
+            ],
+            "appIndex": 28
+          }
+        ],
+        "slug": "street-samurai-2"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "82fke5ZPHOqEvVwG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!gXgPvIFeT5vNCyDH"
+}

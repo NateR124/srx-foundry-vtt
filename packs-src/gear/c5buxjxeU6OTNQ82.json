@@ -1,0 +1,66 @@
+{
+  "_id": "c5buxjxeU6OTNQ82",
+  "name": "Cybertorso",
+  "type": "gear",
+  "system": {
+    "summary": "Cyberlimbs / Other Cyberlimbs",
+    "description": "+3 Armor, +2 Hardened Armor, 1 free hit on Armor tests vs. critical hits",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 45000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Cybertorso",
+        "srxId": 3085,
+        "category": "Cyberlimbs",
+        "subcategory": "Other Cyberlimbs",
+        "cost": 45000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Cybertorso",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "1.5",
+          "value": 1.5,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Dermal Plating",
+          "Orthoskin"
+        ],
+        "grants": [],
+        "description": "+3 Armor, +2 Hardened Armor, 1 free hit on Armor tests vs. critical hits",
+        "effects": [
+          {
+            "key": "armor",
+            "value": 3
+          },
+          {
+            "key": "hardenedArmor",
+            "value": 2
+          }
+        ],
+        "slug": "cybertorso"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!c5buxjxeU6OTNQ82"
+}

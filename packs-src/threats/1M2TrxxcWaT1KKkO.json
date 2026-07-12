@@ -1,0 +1,50 @@
+{
+  "_id": "1M2TrxxcWaT1KKkO",
+  "name": "HACKER",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 3,
+      "bonus": 5
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 11,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Ares Viper",
+        "pool": 8,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Vision Magnification,</li><li><strong>Ultrasound</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "hacker"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "HACKER"
+  },
+  "_key": "!actors!1M2TrxxcWaT1KKkO"
+}

@@ -1,0 +1,82 @@
+{
+  "_id": "eaHkv0Mxdv6Bmp9K",
+  "name": "ELITE SECURITY ADEPT",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 3,
+      "bonus": 5
+    },
+    "defenseScore": 5,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 16,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 17,
+        "dv": 5,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Sword",
+        "pool": 17,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Viper",
+        "pool": 17,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Colt Cobra TZ-120 Major (SA) 17 8P",
+        "pool": 16,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Colt Cobra TZ-120 Major (SA) 17 8P",
+        "pool": 15,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Eliminate Threat</strong>: When attacking with a BF or FA firing mode, the elite security adept can suffer a –3 penalty on their attack test to increase their attack’s DV by 2.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The elite security adept does not</li><li><strong>suffer recoil penalties.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "elite-security-adept"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "ELITE SECURITY ADEPT"
+  },
+  "_key": "!actors!eaHkv0Mxdv6Bmp9K"
+}

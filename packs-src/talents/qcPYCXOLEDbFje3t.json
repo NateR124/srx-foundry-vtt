@@ -1,0 +1,31 @@
+{
+  "_id": "qcPYCXOLEDbFje3t",
+  "name": "Code of Honor",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Hold to your code, even when it’s not in your best interest",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Code of Honor",
+        "srxId": 10512,
+        "type": "Trait",
+        "type2": null,
+        "description": "Hold to your code, even when it’s not in your best interest",
+        "options": [],
+        "slug": "code-of-honor"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!qcPYCXOLEDbFje3t"
+}

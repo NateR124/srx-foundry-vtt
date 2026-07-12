@@ -1,0 +1,57 @@
+{
+  "_id": "Qt6tnNraWrZbkkWP",
+  "name": "Virtual Assistant",
+  "type": "gear",
+  "system": {
+    "summary": "Virtual Assistant",
+    "description": "",
+    "subtype": "Utility",
+    "rating": 3,
+    "quantity": 1,
+    "cost": 24000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Virtual Assistant",
+        "srxId": 6077,
+        "category": "Virtual Assistant",
+        "cost": 24000,
+        "costDisplay": "Rating x 24,000",
+        "properties": [],
+        "options": [
+          "Engineering",
+          "Outdoors",
+          "Software"
+        ],
+        "type": "Utility",
+        "type2": null,
+        "maxRating": 3,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "virtual-assistant"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Qt6tnNraWrZbkkWP"
+}

@@ -1,0 +1,70 @@
+{
+  "_id": "QY6Lp3VXy9utiFjB",
+  "name": "Relentless Speed",
+  "type": "talent",
+  "system": {
+    "summary": "Channeling / Yin",
+    "description": "+1 Reaction. Gain Speed Strikes Weapons Talent.",
+    "category": "channeling",
+    "subgroup": "Yin",
+    "karma": 12,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Relentless Speed",
+        "srxId": 531,
+        "category": "Channeling",
+        "subcategory": "Yin",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Yin",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [
+          "Speed Strikes"
+        ],
+        "cost": {
+          "karma": 12
+        },
+        "description": "+1 Reaction. Gain Speed Strikes Weapons Talent.",
+        "effects": [
+          {
+            "key": "REA",
+            "value": 1
+          }
+        ],
+        "slug": "relentless-speed"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!QY6Lp3VXy9utiFjB"
+}

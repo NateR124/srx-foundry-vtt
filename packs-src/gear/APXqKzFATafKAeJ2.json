@@ -1,0 +1,62 @@
+{
+  "_id": "APXqKzFATafKAeJ2",
+  "name": "Orthoskin",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "+Rating to Armor",
+    "subtype": "ware",
+    "rating": 3,
+    "quantity": 1,
+    "cost": 20000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Orthoskin",
+        "srxId": 3107,
+        "category": "Bodyware",
+        "cost": 20000,
+        "costDisplay": "Rating x 20,000",
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Orthoskin",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": 3,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "Rating x 0.2",
+          "value": 0.2,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [
+          "Cybertorso",
+          "Dermal Plating"
+        ],
+        "grants": [],
+        "description": "+Rating to Armor",
+        "effects": [
+          {
+            "key": "armor",
+            "value": 1
+          }
+        ],
+        "slug": "orthoskin"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!APXqKzFATafKAeJ2"
+}

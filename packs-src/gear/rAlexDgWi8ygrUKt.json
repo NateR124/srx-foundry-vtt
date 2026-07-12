@@ -1,0 +1,58 @@
+{
+  "_id": "rAlexDgWi8ygrUKt",
+  "name": "Pathogenic Defense",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "Leverage on disease resistance",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 5000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Pathogenic Defense",
+        "srxId": 3108,
+        "category": "Bodyware",
+        "cost": 5000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Pathogenic Defense",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.1",
+          "value": 0.1,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [],
+        "grants": [],
+        "description": "Leverage on disease resistance",
+        "effects": [
+          {
+            "key": "disease",
+            "value": 1
+          }
+        ],
+        "slug": "pathogenic-defense"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!rAlexDgWi8ygrUKt"
+}

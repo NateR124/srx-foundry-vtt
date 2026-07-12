@@ -1,0 +1,31 @@
+{
+  "_id": "neqBtLaBwLpnPUdj",
+  "name": "SINless",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "You don’t have a fake SIN - your actual SIN may get scanned when you enter a respectable establishment and cause problems",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "SINless",
+        "srxId": 10540,
+        "type": "Trait",
+        "type2": null,
+        "description": "You don’t have a fake SIN - your actual SIN may get scanned when you enter a respectable establishment and cause problems",
+        "options": [],
+        "slug": "sinless"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!neqBtLaBwLpnPUdj"
+}

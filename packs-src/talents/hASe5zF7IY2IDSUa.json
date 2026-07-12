@@ -1,0 +1,33 @@
+{
+  "_id": "hASe5zF7IY2IDSUa",
+  "name": "Addiction",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Use to the point of being impaired for a run, or spend serious nuyen on your habit",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Addiction",
+        "srxId": 10502,
+        "type": "Trait",
+        "type2": null,
+        "description": "Use to the point of being impaired for a run, or spend serious nuyen on your habit",
+        "options": [
+          "free text"
+        ],
+        "slug": "addiction"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!hASe5zF7IY2IDSUa"
+}

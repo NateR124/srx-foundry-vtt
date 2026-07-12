@@ -1,0 +1,53 @@
+{
+  "_id": "udlvKkR4rakDBJcw",
+  "name": "Glasses",
+  "type": "gear",
+  "system": {
+    "summary": "Audio & Optical Devices / Optical Devices",
+    "description": "",
+    "subtype": "Optical Device",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 100
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Glasses",
+        "srxId": 6087,
+        "category": "Audio & Optical Devices",
+        "subcategory": "Optical Devices",
+        "cost": 100,
+        "properties": [],
+        "options": [],
+        "type": "Optical Device",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 99,
+        "enhancementType": 2,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "glasses"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!udlvKkR4rakDBJcw"
+}

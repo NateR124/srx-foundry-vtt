@@ -1,0 +1,35 @@
+{
+  "_id": "Vykeh4irVb66ZNRS",
+  "name": "Adept",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "archetype",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "archetype",
+      "catalogData": {
+        "name": "Adept",
+        "srxId": 11003,
+        "noFlare": true,
+        "isCustom": false,
+        "isDossierGroup": false,
+        "parent": "rules-dossier",
+        "flares": [],
+        "slug": "adept"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "82fke5ZPHOqEvVwG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Vykeh4irVb66ZNRS"
+}

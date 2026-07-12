@@ -1,0 +1,63 @@
+{
+  "_id": "dvKPUWunCFbTPzmV",
+  "name": "Diffusion",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Fading",
+    "description": "Give persona Liability on Hacking or Software tests",
+    "category": "threading",
+    "subgroup": "Fading",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Diffusion",
+        "srxId": 296,
+        "category": "Threading",
+        "subcategory": "Fading",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Fading",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "Complex",
+        "administered": "Yes",
+        "access": "No",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Give persona Liability on Hacking or Software tests",
+        "effects": [],
+        "slug": "diffusion"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!dvKPUWunCFbTPzmV"
+}

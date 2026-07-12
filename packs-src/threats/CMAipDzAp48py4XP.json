@@ -1,0 +1,58 @@
+{
+  "_id": "CMAipDzAp48py4XP",
+  "name": "ROACH MOTHER SPIRIT",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 3,
+      "bonus": 6
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 16
+    },
+    "armor": 16,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Bite",
+        "pool": 14,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Slash (Reach: 3m)",
+        "pool": 17,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Darkness</strong>: The spirit casts the spell Shadow at Force 4. It can only sustain one instance of this spell, but suffers no penalties for sustaining it.</li><li><strong>Grasping Legs</strong>: If the spirit hits a target with its Slash attack, it immediately makes a subdual test: Body + Athletics opposed by the target’s (Body or Agility) + Athletics. If the spirit wins, the target gains the Immobilized status. The spirit can only immobilize 1 target at a time. The target can spend a Major Action to repeat the subdual test. If the target wins, they are no longer Immobilized.</li><li><strong>Terrifying Aura</strong>: Any metahuman that sees the Mother spirit must make a Willpower + Charisma (3) test or gain the Frightened Status. Once a target sees the Mother spirit, they cannot be affected by this power again for 24 hours.</li></ul><h3>Traits</h3><ul><li><strong>Physical, Fire and Cold Resistance</strong>: </li><li><strong>Unphased</strong>: Can’t gain Frightened or Wounded status.</li><li><strong>Toxin &amp; Disease Immunity</strong>: The spirit is immune to</li><li><strong>diseases &amp; toxins other than insecticides.</strong>: </li><li><strong>Banishing Resistance</strong>: When targeted by the Negate</li><li><strong>Mysticism power, double the spirit’s Force.</strong>: </li><li><strong>Dual Natured</strong>: Insect spirits always exist on both the</li><li><strong>astral and physical plane.</strong>: </li><li><strong>Fear of Sunlight</strong>: While in natural sunlight, the spirit</li><li><strong>suffers the Frightened status.</strong>: </li></ul>",
+    "tags": [
+      "critter"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "roach-mother-spirit"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "q9e964oWjMmRYuNH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "ROACH MOTHER SPIRIT"
+  },
+  "_key": "!actors!CMAipDzAp48py4XP"
+}

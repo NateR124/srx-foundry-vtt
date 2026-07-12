@@ -1,0 +1,47 @@
+{
+  "_id": "mtskiVt5mxGIBEhN",
+  "name": "Antidote",
+  "type": "spell",
+  "system": {
+    "summary": "Health",
+    "description": "Cleanse toxins or drugs from target",
+    "category": "health",
+    "pattern": "touch",
+    "duration": "instantaneous",
+    "range": "Touch",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Health"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Antidote",
+        "srxId": 1507,
+        "category": "Health",
+        "description": "Cleanse toxins or drugs from target",
+        "range": {
+          "raw": "Touch",
+          "special": "Touch"
+        },
+        "duration": "Instantaneous",
+        "resistance": null,
+        "attack": null,
+        "slug": "antidote"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "81q0dM8ktqbFvvhu",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!mtskiVt5mxGIBEhN"
+}

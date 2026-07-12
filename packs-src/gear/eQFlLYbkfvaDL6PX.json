@@ -1,0 +1,109 @@
+{
+  "_id": "eQFlLYbkfvaDL6PX",
+  "name": "Federated-Boeing 818",
+  "type": "gear",
+  "system": {
+    "summary": "Fixed-Wing Aircraft",
+    "description": "",
+    "subtype": "Fixed-Wing Aircraft",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1500000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Federated-Boeing 818",
+        "srxId": 7555,
+        "category": "Fixed-Wing Aircraft",
+        "cost": 1500000,
+        "properties": [],
+        "options": [],
+        "type": "Fixed-Wing Aircraft",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Piloting",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)",
+          "-1 to operator's Defense Score"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 0,
+          "speed": 16,
+          "body": 14,
+          "armor": 10,
+          "health": 20,
+          "defenseScoreMod": -1,
+          "autoRating": 2,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Perception,Piloting",
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": null
+          },
+          {
+            "index": 2,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": null
+          },
+          {
+            "index": 3,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": null
+          },
+          {
+            "index": 4,
+            "mount": {
+              "orientation": "B",
+              "heavy": false
+            },
+            "builtIn": null
+          }
+        ],
+        "slug": "federated-boeing-818"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!eQFlLYbkfvaDL6PX"
+}

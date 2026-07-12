@@ -1,0 +1,67 @@
+{
+  "_id": "ZLkgV4HgaRryJ3QR",
+  "name": "Edge: Quiet Entry",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / System Administration",
+    "description": "Gain marks equal to Hacking/3. Use marks to add hits to any Hacking test against host.",
+    "category": "hacking",
+    "subgroup": "System Administration",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": true
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Edge: Quiet Entry",
+        "srxId": 229,
+        "category": "Hacking",
+        "subcategory": "System Administration",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "System Administration",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": "TRUE",
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "Yes",
+        "prereqRaw": "Hack Access (Hacking Talent)",
+        "prereq": {
+          "kind": "talent",
+          "name": "Hack Access",
+          "categoryHint": "Hacking Talent"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Gain marks equal to Hacking/3. Use marks to add hits to any Hacking test against host.",
+        "effects": [],
+        "slug": "edge-quiet-entry"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ZLkgV4HgaRryJ3QR"
+}

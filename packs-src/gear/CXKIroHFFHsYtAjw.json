@@ -1,0 +1,46 @@
+{
+  "_id": "CXKIroHFFHsYtAjw",
+  "name": "Acceleration Enhancement",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Acceleration Enhancement",
+        "srxId": 8501,
+        "cost": 1000,
+        "costDisplay": "Body x 1,000",
+        "properties": [],
+        "options": [],
+        "type": "Modification",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": false,
+        "isExoticWeapon": false,
+        "nuyenMultiplier": "Body",
+        "requiresMount": false,
+        "requiresHeavyMount": false,
+        "prereq": "Speed 1",
+        "attackSkill": null,
+        "attackSpecialization": null,
+        "attacks": [],
+        "slug": "acceleration-enhancement"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!CXKIroHFFHsYtAjw"
+}

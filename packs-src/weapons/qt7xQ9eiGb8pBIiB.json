@@ -1,0 +1,71 @@
+{
+  "_id": "qt7xQ9eiGb8pBIiB",
+  "name": "Arm Slide",
+  "type": "weapon",
+  "system": {
+    "summary": "Other Firearm Accessories",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "",
+    "category": "Other Firearm Accessories",
+    "range": "",
+    "properties": "",
+    "cost": 350,
+    "attackModes": [
+      {
+        "name": "",
+        "action": "major",
+        "fireMode": "",
+        "acc": 0,
+        "dv": "",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Arm Slide",
+        "srxId": 4648,
+        "category": "Other Firearm Accessories",
+        "cost": 350,
+        "properties": [],
+        "options": [],
+        "type": "Accessories",
+        "type2": null,
+        "type3": null,
+        "skill": null,
+        "specialization": null,
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": true,
+        "range": null,
+        "improvedRange": null,
+        "canMod": false,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [],
+        "slug": "arm-slide"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2b0Pp4iKtNl7V58A",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!qt7xQ9eiGb8pBIiB"
+}

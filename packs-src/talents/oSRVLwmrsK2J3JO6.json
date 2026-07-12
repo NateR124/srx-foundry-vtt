@@ -1,0 +1,67 @@
+{
+  "_id": "oSRVLwmrsK2J3JO6",
+  "name": "Watcher",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism / Artificing",
+    "description": "Create simple astral servant",
+    "category": "mysticism",
+    "subgroup": "Artificing",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Watcher",
+        "srxId": 480,
+        "category": "Mysticism",
+        "subcategory": "Artificing",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Artificing",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": "TRUE",
+        "action": null,
+        "range": "Touch",
+        "duration": "(F x 4) hrs",
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Astral Perception (Mysticism Talent)",
+        "prereq": {
+          "kind": "talent",
+          "name": "Astral Perception",
+          "categoryHint": "Mysticism Talent"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Create simple astral servant",
+        "effects": [],
+        "slug": "watcher"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!oSRVLwmrsK2J3JO6"
+}

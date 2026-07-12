@@ -1,0 +1,31 @@
+{
+  "_id": "EpNEhJmsG9IwOtK4",
+  "name": "Weak",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Horribly mess up a task that requires physical strength",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Weak",
+        "srxId": 10547,
+        "type": "Trait",
+        "type2": null,
+        "description": "Horribly mess up a task that requires physical strength",
+        "options": [],
+        "slug": "weak"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!EpNEhJmsG9IwOtK4"
+}

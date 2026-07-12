@@ -1,0 +1,49 @@
+{
+  "_id": "39Ov6VRklKJkZrHQ",
+  "name": "Bind",
+  "type": "spell",
+  "system": {
+    "summary": "Manipulation",
+    "description": "Target gains Immobilized status",
+    "category": "manipulation",
+    "pattern": "direct",
+    "duration": "sustained",
+    "range": "80m",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Manipulation"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Bind",
+        "srxId": 1509,
+        "category": "Manipulation",
+        "description": "Target gains Immobilized status",
+        "range": {
+          "raw": "80m",
+          "bands": [
+            80
+          ]
+        },
+        "duration": "Sustained",
+        "resistance": "WIL+AGI",
+        "attack": null,
+        "slug": "bind"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7UPq2yvvIYDMGwdo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!39Ov6VRklKJkZrHQ"
+}

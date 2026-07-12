@@ -1,0 +1,62 @@
+{
+  "_id": "Y3o2DVC1SsfxsArd",
+  "name": "Mounted Exotic Weapon - Fichetti Pain Inducer",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Mounted Weapon",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 15500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Mounted Exotic Weapon - Fichetti Pain Inducer",
+        "srxId": 8534,
+        "cost": 15500,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Mounted Weapon",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": true,
+        "isExoticWeapon": true,
+        "nuyenMultiplier": null,
+        "requiresMount": true,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": "Firearms",
+        "attackSpecialization": "Exotic Weapon - Beam",
+        "attacks": [
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": 0,
+            "dv": {
+              "raw": "Special",
+              "special": "Special",
+              "type": null,
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "mounted-exotic-weapon-fichetti-pain-inducer"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Y3o2DVC1SsfxsArd"
+}

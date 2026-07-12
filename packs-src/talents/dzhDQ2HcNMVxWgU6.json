@@ -1,0 +1,71 @@
+{
+  "_id": "dzhDQ2HcNMVxWgU6",
+  "name": "Targeting Autosoft",
+  "type": "talent",
+  "system": {
+    "summary": "Vehicle / Autopilot",
+    "description": "+(Software/4) to chosen skill to vehicles on your DCC",
+    "category": "vehicle",
+    "subgroup": "Autopilot",
+    "karma": 10,
+    "option": "Close Combat, Firearms, Projectile Weapons",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Targeting Autosoft",
+        "srxId": 382,
+        "category": "Vehicle",
+        "subcategory": "Autopilot",
+        "maxQty": 1,
+        "maxQtyForEachOption": 1,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Close Combat",
+          "Firearms",
+          "Projectile Weapons"
+        ],
+        "options2": [],
+        "type": "Autopilot",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Software 4",
+        "prereq": {
+          "kind": "rating",
+          "subject": "Software",
+          "min": 4
+        },
+        "grants": [],
+        "cost": {
+          "karma": 10
+        },
+        "description": "+(Software/4) to chosen skill to vehicles on your DCC",
+        "effects": [],
+        "slug": "targeting-autosoft"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!dzhDQ2HcNMVxWgU6"
+}

@@ -1,0 +1,54 @@
+{
+  "_id": "bhjo9EWq7IHomCF9",
+  "name": "Infiltration Kit",
+  "type": "gear",
+  "system": {
+    "summary": "Breaking & Entering Gear",
+    "description": "",
+    "subtype": "Breaking & Entering Gear",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Infiltration Kit",
+        "srxId": 6093,
+        "category": "Breaking & Entering Gear",
+        "cost": 2000,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Breaking & Entering Gear",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "infiltration-kit"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!bhjo9EWq7IHomCF9"
+}

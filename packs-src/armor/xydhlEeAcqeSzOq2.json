@@ -1,0 +1,40 @@
+{
+  "_id": "xydhlEeAcqeSzOq2",
+  "name": "Kevlock Armor Weave",
+  "type": "armor",
+  "system": {
+    "summary": "",
+    "description": "",
+    "rating": 6,
+    "hardened": 0,
+    "heavy": false,
+    "shield": false,
+    "equipped": false,
+    "cost": 9200
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "armor",
+      "catalogData": {
+        "name": "Kevlock Armor Weave",
+        "srxId": 4005,
+        "cost": 9200,
+        "properties": [],
+        "options": [],
+        "rating": 6,
+        "hardened": 0,
+        "heavy": false,
+        "shield": false,
+        "slug": "kevlock-armor-weave",
+        "variantOf": "armor-clothing"
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xydhlEeAcqeSzOq2"
+}

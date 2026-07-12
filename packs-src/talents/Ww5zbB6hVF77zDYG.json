@@ -1,0 +1,67 @@
+{
+  "_id": "Ww5zbB6hVF77zDYG",
+  "name": "Impossible Dodge",
+  "type": "talent",
+  "system": {
+    "summary": "Metatype",
+    "description": "+1 Defense Score against critical hits",
+    "category": "metatype",
+    "subgroup": "",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Impossible Dodge",
+        "srxId": 94,
+        "category": "Metatype",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Metatype Elf",
+        "prereq": {
+          "kind": "metatype",
+          "values": [
+            "Elf"
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "+1 Defense Score against critical hits",
+        "effects": [],
+        "slug": "impossible-dodge"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Ww5zbB6hVF77zDYG"
+}

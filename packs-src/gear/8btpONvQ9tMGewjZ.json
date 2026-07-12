@@ -1,0 +1,108 @@
+{
+  "_id": "8btpONvQ9tMGewjZ",
+  "name": "Lone Star Castle Guard",
+  "type": "gear",
+  "system": {
+    "summary": "Drones (Terrestrial)",
+    "description": "",
+    "subtype": "Drones (Terrestrial)",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 18000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Lone Star Castle Guard",
+        "srxId": 7583,
+        "category": "Drones (Terrestrial)",
+        "cost": 18000,
+        "properties": [],
+        "options": [],
+        "type": "Drones (Terrestrial)",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)",
+          "Movement Rate: 12 meters"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 2,
+          "speed": 0,
+          "body": 6,
+          "armor": 8,
+          "health": 12,
+          "defenseScoreMod": null,
+          "autoRating": 3,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Firearms,Perception",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Smartlink (Vehicle)",
+            "value": "Built-In"
+          }
+        ],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "R",
+              "heavy": false
+            },
+            "builtIn": {
+              "weapon": "Mounted Pistol",
+              "orientation": "R",
+              "retractable": false,
+              "superior": false
+            }
+          },
+          {
+            "index": 2,
+            "mount": {
+              "orientation": "R",
+              "heavy": false
+            },
+            "builtIn": {
+              "weapon": "Mounted Pistol",
+              "orientation": "R",
+              "retractable": false,
+              "superior": false
+            }
+          }
+        ],
+        "slug": "lone-star-castle-guard"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!8btpONvQ9tMGewjZ"
+}

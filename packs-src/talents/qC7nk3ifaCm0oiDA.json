@@ -1,0 +1,64 @@
+{
+  "_id": "qC7nk3ifaCm0oiDA",
+  "name": "Signature Spell",
+  "type": "talent",
+  "system": {
+    "summary": "Sorcery",
+    "description": "+2 to Drain tests with chosen spell",
+    "category": "sorcery",
+    "subgroup": "",
+    "karma": 4,
+    "option": "Spells",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Signature Spell",
+        "srxId": 398,
+        "category": "Sorcery",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Spells"
+        ],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "+2 to Drain tests with chosen spell",
+        "effects": [],
+        "slug": "signature-spell"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!qC7nk3ifaCm0oiDA"
+}

@@ -1,0 +1,60 @@
+{
+  "_id": "N1r6xxkgAHjGMeKh",
+  "name": "Fireball",
+  "type": "spell",
+  "system": {
+    "summary": "Combat",
+    "description": "Ranged AOE attack - DV (F+3)P Fire",
+    "category": "combat",
+    "pattern": "area",
+    "duration": "instantaneous",
+    "range": "50m [A]",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+3",
+    "dvType": "P",
+    "element": "fire",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Combat"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Fireball",
+        "srxId": 1529,
+        "category": "Combat",
+        "description": "Ranged AOE attack - DV (F+3)P Fire",
+        "range": {
+          "raw": "50m [A]",
+          "bands": [
+            50
+          ],
+          "area": true
+        },
+        "duration": "Instantaneous",
+        "resistance": null,
+        "attack": {
+          "type": "AOE",
+          "accuracy": null,
+          "dv": {
+            "raw": "(F+3)",
+            "force": true,
+            "mod": 3,
+            "type": "P",
+            "element": "Fire"
+          }
+        },
+        "slug": "fireball"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "zZc1PdtmOVQowgGq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!N1r6xxkgAHjGMeKh"
+}

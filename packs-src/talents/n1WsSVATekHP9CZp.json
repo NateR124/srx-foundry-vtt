@@ -1,0 +1,31 @@
+{
+  "_id": "n1WsSVATekHP9CZp",
+  "name": "Conspiracy Theorist",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Make a poor decision based on a crazy idea you can’t let go of",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Conspiracy Theorist",
+        "srxId": 10517,
+        "type": "Trait",
+        "type2": null,
+        "description": "Make a poor decision based on a crazy idea you can’t let go of",
+        "options": [],
+        "slug": "conspiracy-theorist"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!n1WsSVATekHP9CZp"
+}

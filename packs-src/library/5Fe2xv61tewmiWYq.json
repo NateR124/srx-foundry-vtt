@@ -1,0 +1,31 @@
+{
+  "_id": "5Fe2xv61tewmiWYq",
+  "name": "Vehicles & Drones",
+  "type": "knowledge",
+  "system": {
+    "summary": "",
+    "description": "Brands & manufacturers, system designs & repair, mechanical engineering",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "Vehicles & Drones",
+        "srxId": 10022,
+        "type": "Knowledge Domain",
+        "type2": null,
+        "description": "Brands & manufacturers, system designs & repair, mechanical engineering",
+        "freePool": null,
+        "slug": "vehicles-drones"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!5Fe2xv61tewmiWYq"
+}

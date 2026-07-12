@@ -1,0 +1,71 @@
+{
+  "_id": "ERUibCIDBbmTHvaz",
+  "name": "Cyberarm (Off-Hand)",
+  "type": "gear",
+  "system": {
+    "summary": "Cyberlimbs / Cyberarms",
+    "description": "+1 Armor, Hardened Armor, Athletics",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 28000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Cyberarm (Off-Hand)",
+        "srxId": 3060,
+        "category": "Cyberlimbs",
+        "subcategory": "Cyberarms",
+        "cost": 28000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Cyberarm (Off-Hand)",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.5",
+          "value": 0.5,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Cyber Gun (Off-Hand)",
+          "Cyber Spurs (Off-Hand)",
+          "Gyroarm (Off-Hand)"
+        ],
+        "grants": [],
+        "description": "+1 Armor, Hardened Armor, Athletics",
+        "effects": [
+          {
+            "key": "athletics",
+            "value": 1
+          },
+          {
+            "key": "armor",
+            "value": 1
+          },
+          {
+            "key": "hardenedArmor",
+            "value": 1
+          }
+        ],
+        "slug": "cyberarm-off-hand"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ERUibCIDBbmTHvaz"
+}

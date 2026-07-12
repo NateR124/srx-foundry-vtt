@@ -1,0 +1,54 @@
+{
+  "_id": "F4sESj2RMNogcJdM",
+  "name": "Synaptic Booster",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "+Rating to Accelerator",
+    "subtype": "ware",
+    "rating": 3,
+    "quantity": 1,
+    "cost": 16000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Synaptic Booster",
+        "srxId": 3121,
+        "category": "Bodyware",
+        "cost": 16000,
+        "costDisplay": "Rating x 16,000",
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Synaptic Booster",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": 3,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "Rating x 0.1",
+          "value": 0.1,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [],
+        "grants": [],
+        "description": "+Rating to Accelerator",
+        "effects": [],
+        "slug": "synaptic-booster"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!F4sESj2RMNogcJdM"
+}

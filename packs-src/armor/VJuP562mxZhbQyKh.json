@@ -1,0 +1,39 @@
+{
+  "_id": "VJuP562mxZhbQyKh",
+  "name": "Armor Clothing",
+  "type": "armor",
+  "system": {
+    "summary": "",
+    "description": "",
+    "rating": 4,
+    "hardened": 0,
+    "heavy": false,
+    "shield": false,
+    "equipped": false,
+    "cost": 450
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "armor",
+      "catalogData": {
+        "name": "Armor Clothing",
+        "srxId": 4004,
+        "cost": 450,
+        "properties": [],
+        "options": [],
+        "rating": 4,
+        "hardened": 0,
+        "heavy": false,
+        "shield": false,
+        "slug": "armor-clothing"
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!VJuP562mxZhbQyKh"
+}

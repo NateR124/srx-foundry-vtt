@@ -1,0 +1,55 @@
+{
+  "_id": "Mh2YRSxHU7lCb61h",
+  "name": "Pain Editor",
+  "type": "gear",
+  "system": {
+    "summary": "Headware",
+    "description": "Can't gain Wounded status",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 85000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Pain Editor",
+        "srxId": 3037,
+        "category": "Headware",
+        "cost": 85000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "dictionaryName": "Pain Editor",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.4",
+          "value": 0.4,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [],
+        "grants": [],
+        "description": "Can't gain Wounded status",
+        "effects": [],
+        "slug": "pain-editor"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Mh2YRSxHU7lCb61h"
+}

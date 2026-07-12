@@ -1,0 +1,54 @@
+{
+  "_id": "4wNZF1FgO4H6NvrF",
+  "name": "Headjammer",
+  "type": "gear",
+  "system": {
+    "summary": "Electronics",
+    "description": "",
+    "subtype": "Electronics",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Headjammer",
+        "srxId": 6041,
+        "category": "Electronics",
+        "cost": 1500,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Electronics",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "headjammer"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!4wNZF1FgO4H6NvrF"
+}

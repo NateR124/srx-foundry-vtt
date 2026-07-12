@@ -1,0 +1,71 @@
+{
+  "_id": "NYSy5ixhLDocFRLO",
+  "name": "Expertise: Magical",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "Gain Expertise in chosen magical skill (can purchase talents). Gain bonus spell/talent based on tradition.",
+    "category": "general",
+    "subgroup": "",
+    "karma": 12,
+    "option": "Sorcery, Conjuring, Mysticism, Channeling",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Expertise: Magical",
+        "srxId": 35,
+        "category": "General",
+        "maxQty": 2,
+        "maxQtyForEachOption": 1,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Sorcery",
+          "Conjuring",
+          "Mysticism",
+          "Channeling"
+        ],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Magic 1",
+        "prereq": {
+          "kind": "rating",
+          "subject": "Magic",
+          "min": 1
+        },
+        "grants": [],
+        "cost": {
+          "karma": 12
+        },
+        "description": "Gain Expertise in chosen magical skill (can purchase talents). Gain bonus spell/talent based on tradition.",
+        "effects": [],
+        "slug": "expertise-magical"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!NYSy5ixhLDocFRLO"
+}

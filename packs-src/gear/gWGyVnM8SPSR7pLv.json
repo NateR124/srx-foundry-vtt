@@ -1,0 +1,52 @@
+{
+  "_id": "gWGyVnM8SPSR7pLv",
+  "name": "Syringe",
+  "type": "gear",
+  "system": {
+    "summary": "Biotech",
+    "description": "",
+    "subtype": "Biotech",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 5
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Syringe",
+        "srxId": 6158,
+        "category": "Biotech",
+        "cost": 5,
+        "properties": [],
+        "options": [],
+        "type": "Biotech",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "syringe"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!gWGyVnM8SPSR7pLv"
+}

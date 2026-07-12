@@ -1,0 +1,49 @@
+{
+  "_id": "r77lFrnJu3hSWsK6",
+  "name": "Penetrating (Crafted)",
+  "type": "gear",
+  "system": {
+    "summary": "Foci (Crafted)",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Penetrating (Crafted)",
+        "srxId": 9069,
+        "category": "Foci (Crafted)",
+        "cost": 1000,
+        "costDisplay": "16,000",
+        "properties": [],
+        "options": [],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": "Penetrating",
+        "fixedRating": 4,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": "Enchanting",
+        "maxQty": null,
+        "karmaCost": 0,
+        "crafted": true,
+        "equipPrereqs": [],
+        "alwaysUnique": true,
+        "slug": "penetrating-crafted"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!r77lFrnJu3hSWsK6"
+}

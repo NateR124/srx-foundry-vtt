@@ -1,0 +1,53 @@
+{
+  "_id": "w9lYiQLATuo6RyfH",
+  "name": "Novatech Himitsu Commlink",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Commlinks",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 75000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Novatech Himitsu Commlink",
+        "srxId": 6016,
+        "category": "Matrix Devices",
+        "subcategory": "Commlinks",
+        "cost": 75000,
+        "properties": [],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Commlinks",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "2",
+          "firewall": "6",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "5",
+          "rank": "14",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "novatech-himitsu-commlink"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!w9lYiQLATuo6RyfH"
+}

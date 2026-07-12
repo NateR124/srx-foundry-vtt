@@ -1,0 +1,94 @@
+{
+  "_id": "2pRC2VH0duGpUxiD",
+  "name": "Northrup Wasp",
+  "type": "gear",
+  "system": {
+    "summary": "Rotorcraft",
+    "description": "",
+    "subtype": "Rotorcraft",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 45000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Northrup Wasp",
+        "srxId": 7550,
+        "category": "Rotorcraft",
+        "cost": 45000,
+        "properties": [],
+        "options": [],
+        "type": "Rotorcraft",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Piloting",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 2,
+          "speed": 7,
+          "body": 6,
+          "armor": 8,
+          "health": 14,
+          "defenseScoreMod": null,
+          "autoRating": 2,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Firearms,Perception,Piloting",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Smartlink (Vehicle)",
+            "value": "Built-In"
+          }
+        ],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "R",
+              "heavy": true
+            },
+            "builtIn": {
+              "weapon": "Mounted Light Machine Gun",
+              "orientation": "R",
+              "retractable": false,
+              "superior": false
+            }
+          }
+        ],
+        "slug": "northrup-wasp"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!2pRC2VH0duGpUxiD"
+}

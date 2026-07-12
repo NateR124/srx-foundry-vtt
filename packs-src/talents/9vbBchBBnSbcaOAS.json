@@ -1,0 +1,63 @@
+{
+  "_id": "9vbBchBBnSbcaOAS",
+  "name": "Staggering Shot/Strike",
+  "type": "talent",
+  "system": {
+    "summary": "Weapons / CC (Clubs, Unarmed), F (Shotguns, Pistols - Single Shot Firing Mode)",
+    "description": "1 Crit Die is Slam Die - if you roll a 6, target gains Impaired status",
+    "category": "weapons",
+    "subgroup": "CC (Clubs, Unarmed), F (Shotguns, Pistols - Single Shot Firing Mode)",
+    "karma": 10,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Staggering Shot/Strike",
+        "srxId": 165,
+        "category": "Weapons",
+        "subcategory": "CC (Clubs, Unarmed), F (Shotguns, Pistols - Single Shot Firing Mode)",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "CC (Clubs, Unarmed), F (Shotguns, Pistols - Single Shot Firing Mode)",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": "TRUE",
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 10
+        },
+        "description": "1 Crit Die is Slam Die - if you roll a 6, target gains Impaired status",
+        "effects": [],
+        "slug": "staggering-shot-strike"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!9vbBchBBnSbcaOAS"
+}

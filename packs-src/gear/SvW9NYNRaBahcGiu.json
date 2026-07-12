@@ -1,0 +1,55 @@
+{
+  "_id": "SvW9NYNRaBahcGiu",
+  "name": "Zen",
+  "type": "gear",
+  "system": {
+    "summary": "Toxins & Drugs / Drugs",
+    "description": "",
+    "subtype": "Drug",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 100
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Zen",
+        "srxId": 6192,
+        "category": "Toxins & Drugs",
+        "subcategory": "Drugs",
+        "cost": 100,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Drug",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "zen"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!SvW9NYNRaBahcGiu"
+}

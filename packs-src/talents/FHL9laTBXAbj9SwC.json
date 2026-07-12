@@ -1,0 +1,70 @@
+{
+  "_id": "FHL9laTBXAbj9SwC",
+  "name": "Submersion",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Infusion",
+    "description": "+1 Resonance",
+    "category": "threading",
+    "subgroup": "Infusion",
+    "karma": 25,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Submersion",
+        "srxId": 336,
+        "category": "Threading",
+        "subcategory": "Infusion",
+        "maxQty": 3,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Infusion",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": "Post Character Creation Only",
+        "prereq": {
+          "kind": "postChargenOnly"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 25
+        },
+        "description": "+1 Resonance",
+        "effects": [
+          {
+            "key": "RES",
+            "value": 1
+          }
+        ],
+        "slug": "submersion"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!FHL9laTBXAbj9SwC"
+}

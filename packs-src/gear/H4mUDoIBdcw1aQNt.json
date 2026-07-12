@@ -1,0 +1,63 @@
+{
+  "_id": "H4mUDoIBdcw1aQNt",
+  "name": "Mounted Sniper Rifle",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Mounted Weapon",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 8000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Mounted Sniper Rifle",
+        "srxId": 8527,
+        "cost": 8000,
+        "properties": [
+          "Heavy Mount",
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Mounted Weapon",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": true,
+        "isExoticWeapon": false,
+        "nuyenMultiplier": null,
+        "requiresMount": true,
+        "requiresHeavyMount": true,
+        "prereq": null,
+        "attackSkill": "Firearms",
+        "attackSpecialization": "Sniper Rifles",
+        "attacks": [
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": "SA",
+            "accuracy": 1,
+            "dv": {
+              "raw": "10",
+              "value": 10,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "mounted-sniper-rifle"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!H4mUDoIBdcw1aQNt"
+}

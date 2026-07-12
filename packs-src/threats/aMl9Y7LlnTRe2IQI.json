@@ -1,0 +1,58 @@
+{
+  "_id": "aMl9Y7LlnTRe2IQI",
+  "name": "AWAKENED GHOUL (ADEPT)",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 3,
+      "bonus": 4
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 13,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Claws",
+        "pool": 14,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Bite",
+        "pool": 12,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Diseased</strong>: If the ghoul damages a target with a melee attack, it delivers the HMHVV III disease, with a Power of 5. The target must make a disease resistance test using Body + Willpower against a threshold of the disease’s Power. If they fail, the target gains the Sick status. This disease onsets 12 hours later, giving the target the Impaired status. The target can repeat the disease resistance test at the end of each day to end the Sick status. After 3 days, if they have not removed the Sick status, the target turns into a ghoul.</li></ul><h3>Traits</h3><ul><li><strong>Dual Natured</strong>: Ghouls always exist on both the astral</li><li><strong>and physical planes, and can interact with anything</strong>: </li><li><strong>on either plane. Their Armor applies to attacks from</strong>: </li><li><strong>both the physical and astral planes.</strong>: </li><li><strong>Aversion to Sunlight</strong>: While in natural sunlight, a</li><li><strong>ghoul suffers Liability on all tests.</strong>: </li><li><strong>Improved Crit</strong>: On attack tests, the ghoul scores a</li><li><strong>critical hit with their Crit Dice on a 5 or a 6.</strong>: </li><li><strong>Pack Hunter</strong>: If one or more of the ghoul’s allies is</li><li><strong>within melee reach of a target, the ghoul gains</strong>: </li><li><strong>Leverage on melee attacks against that target.</strong>: </li></ul>",
+    "tags": [
+      "critter"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "awakened-ghoul-adept"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "q9e964oWjMmRYuNH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "AWAKENED GHOUL (ADEPT)"
+  },
+  "_key": "!actors!aMl9Y7LlnTRe2IQI"
+}

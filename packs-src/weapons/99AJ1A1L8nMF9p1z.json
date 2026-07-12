@@ -1,0 +1,103 @@
+{
+  "_id": "99AJ1A1L8nMF9p1z",
+  "name": "Parashield Dart Rifle",
+  "type": "weapon",
+  "system": {
+    "summary": "Exotic Weapons",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "Exotic Weapon - Dart Gun",
+    "category": "Exotic Weapons",
+    "range": "20/40/80m",
+    "properties": "Two-Handed",
+    "cost": 1400,
+    "attackModes": [
+      {
+        "name": "Ranged",
+        "action": "major",
+        "fireMode": "",
+        "acc": 0,
+        "dv": "Special",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Parashield Dart Rifle",
+        "srxId": 4615,
+        "category": "Exotic Weapons",
+        "cost": 1400,
+        "properties": [
+          "Two-Handed"
+        ],
+        "options": [],
+        "type": "Exotic Weapons",
+        "type2": "Dart Gun",
+        "type3": null,
+        "skill": "Firearms",
+        "specialization": "Exotic Weapon - Dart Gun",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "20/40/80m",
+          "bands": [
+            20,
+            40,
+            80
+          ]
+        },
+        "improvedRange": null,
+        "canMod": true,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 1,
+          "top": 1,
+          "underbarrel": 1,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [
+          {
+            "name": "Laser Sight",
+            "modSlug": "laser-sight",
+            "mounts": [
+              4
+            ]
+          }
+        ],
+        "attackModes": [
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": null,
+            "accuracy": 0,
+            "dv": {
+              "raw": "Special",
+              "special": "Special",
+              "type": null,
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "parashield-dart-rifle"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CxdzX8xPeW6rU3WC",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!99AJ1A1L8nMF9p1z"
+}

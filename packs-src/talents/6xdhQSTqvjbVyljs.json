@@ -1,0 +1,67 @@
+{
+  "_id": "6xdhQSTqvjbVyljs",
+  "name": "Aura Manipulation",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism / Assensing",
+    "description": "Erase astral signature, extend Invisibility and Disguise to astral plane, and slip through Mana Barriers",
+    "category": "mysticism",
+    "subgroup": "Assensing",
+    "karma": 8,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Aura Manipulation",
+        "srxId": 448,
+        "category": "Mysticism",
+        "subcategory": "Assensing",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Assensing",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": "Special",
+        "range": "Touch",
+        "duration": "Special",
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Astral Perception (Mysticism Talent)",
+        "prereq": {
+          "kind": "talent",
+          "name": "Astral Perception",
+          "categoryHint": "Mysticism Talent"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 8
+        },
+        "description": "Erase astral signature, extend Invisibility and Disguise to astral plane, and slip through Mana Barriers",
+        "effects": [],
+        "slug": "aura-manipulation"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!6xdhQSTqvjbVyljs"
+}

@@ -1,0 +1,64 @@
+{
+  "_id": "MotuxkaeVWBsKJi0",
+  "name": "Spending Money",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "Gain 1,000¥",
+    "category": "general",
+    "subgroup": "",
+    "karma": 1,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Spending Money",
+        "srxId": 71,
+        "category": "General",
+        "maxQty": 25,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "At Character Creation Only",
+        "prereq": {
+          "kind": "chargenOnly"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 1
+        },
+        "description": "Gain 1,000¥",
+        "effects": [],
+        "slug": "spending-money"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!MotuxkaeVWBsKJi0"
+}

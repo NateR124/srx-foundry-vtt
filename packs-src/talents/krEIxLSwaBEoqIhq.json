@@ -1,0 +1,67 @@
+{
+  "_id": "krEIxLSwaBEoqIhq",
+  "name": "Edge: Lucky",
+  "type": "talent",
+  "system": {
+    "summary": "Metatype",
+    "description": "Roll 6 on a d6 to get back spent Edge",
+    "category": "metatype",
+    "subgroup": "",
+    "karma": 8,
+    "option": "",
+    "isEdgeAction": true
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Edge: Lucky",
+        "srxId": 87,
+        "category": "Metatype",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": "TRUE",
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Metatype Human",
+        "prereq": {
+          "kind": "metatype",
+          "values": [
+            "Human"
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 8
+        },
+        "description": "Roll 6 on a d6 to get back spent Edge",
+        "effects": [],
+        "slug": "edge-lucky"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!krEIxLSwaBEoqIhq"
+}

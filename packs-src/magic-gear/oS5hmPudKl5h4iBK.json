@@ -1,0 +1,53 @@
+{
+  "_id": "oS5hmPudKl5h4iBK",
+  "name": "Affix Barrier",
+  "type": "gear",
+  "system": {
+    "summary": "Mysticism Talents",
+    "description": "",
+    "subtype": "Permanent Magical Effect",
+    "rating": 15,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Affix Barrier",
+        "srxId": 9010,
+        "category": "Mysticism Talents",
+        "cost": 1000,
+        "costDisplay": "Force x Force x 1,000",
+        "properties": [],
+        "options": [
+          "Mana Barrier",
+          "Magical Lodge",
+          "Wall"
+        ],
+        "type": "Permanent Magical Effect",
+        "type2": "Magical Gear",
+        "type3": null,
+        "fixedRating": null,
+        "maxRating": 15,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": "Affix Barrier",
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": true,
+        "equipPrereqs": [],
+        "alwaysUnique": false,
+        "slug": "affix-barrier"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!oS5hmPudKl5h4iBK"
+}

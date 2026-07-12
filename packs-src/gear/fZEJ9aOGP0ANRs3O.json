@@ -1,0 +1,46 @@
+{
+  "_id": "fZEJ9aOGP0ANRs3O",
+  "name": "Advanced Sensor Array",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 3,
+    "quantity": 1,
+    "cost": 10000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Advanced Sensor Array",
+        "srxId": 8502,
+        "cost": 10000,
+        "costDisplay": "Rating x 10,000",
+        "properties": [],
+        "options": [],
+        "type": "Modification",
+        "maxRating": 3,
+        "isVisionEnhancement": false,
+        "isWeapon": false,
+        "isExoticWeapon": false,
+        "nuyenMultiplier": "Rating",
+        "requiresMount": false,
+        "requiresHeavyMount": false,
+        "prereq": "Body ≥ Rating x2",
+        "attackSkill": null,
+        "attackSpecialization": null,
+        "attacks": [],
+        "slug": "advanced-sensor-array"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!fZEJ9aOGP0ANRs3O"
+}

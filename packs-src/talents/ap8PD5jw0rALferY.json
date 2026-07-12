@@ -1,0 +1,75 @@
+{
+  "_id": "ap8PD5jw0rALferY",
+  "name": "Affix Barrier",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism / Artificing",
+    "description": "Make Mana Barrier or Wall spell permanent",
+    "category": "mysticism",
+    "subgroup": "Artificing",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Affix Barrier",
+        "srxId": 438,
+        "category": "Mysticism",
+        "subcategory": "Artificing",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Artificing",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": "Touch",
+        "duration": "Permanent",
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Mana Barrier or Magical Lodge (Mysticism Talents), or Wall (Spell)",
+        "prereq": {
+          "op": "and",
+          "terms": [
+            {
+              "kind": "special",
+              "value": "Mana Barrier or Magical Lodge (Mysticism Talents)"
+            },
+            {
+              "kind": "spell",
+              "name": "or Wall"
+            }
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Make Mana Barrier or Wall spell permanent",
+        "effects": [],
+        "slug": "affix-barrier"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ap8PD5jw0rALferY"
+}

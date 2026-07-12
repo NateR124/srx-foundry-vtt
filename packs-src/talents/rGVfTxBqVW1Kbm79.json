@@ -1,0 +1,63 @@
+{
+  "_id": "rGVfTxBqVW1Kbm79",
+  "name": "Edge: Clear Channel",
+  "type": "talent",
+  "system": {
+    "summary": "Software / Data Processing",
+    "description": "No noise penalties for 1 icon for (Software) Combat Turns",
+    "category": "software",
+    "subgroup": "Data Processing",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": true
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Edge: Clear Channel",
+        "srxId": 259,
+        "category": "Software",
+        "subcategory": "Data Processing",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Data Processing",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": "TRUE",
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "No noise penalties for 1 icon for (Software) Combat Turns",
+        "effects": [],
+        "slug": "edge-clear-channel"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!rGVfTxBqVW1Kbm79"
+}

@@ -1,0 +1,49 @@
+{
+  "_id": "Qq3ARQcQjSGp6RNg",
+  "name": "FPS, Greater",
+  "type": "gear",
+  "system": {
+    "summary": "Artifices",
+    "description": "",
+    "subtype": "Artifice",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "FPS, Greater",
+        "srxId": 9094,
+        "category": "Artifices",
+        "cost": 2000,
+        "costDisplay": "50,000",
+        "properties": [],
+        "options": [],
+        "type": "Artifice",
+        "type2": "Artificing Gear",
+        "type3": "FPS",
+        "fixedRating": 5,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [],
+        "alwaysUnique": true,
+        "slug": "fps-greater"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Qq3ARQcQjSGp6RNg"
+}

@@ -1,0 +1,49 @@
+{
+  "_id": "l00UurmFIcraqZga",
+  "name": "Influence",
+  "type": "spell",
+  "system": {
+    "summary": "Manipulation",
+    "description": "Convince target to take an action",
+    "category": "manipulation",
+    "pattern": "direct",
+    "duration": "instantaneous",
+    "range": "30m",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Manipulation"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Influence",
+        "srxId": 1541,
+        "category": "Manipulation",
+        "description": "Convince target to take an action",
+        "range": {
+          "raw": "30m",
+          "bands": [
+            30
+          ]
+        },
+        "duration": "Instantaneous",
+        "resistance": "WIL+INT",
+        "attack": null,
+        "slug": "influence"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7UPq2yvvIYDMGwdo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!l00UurmFIcraqZga"
+}

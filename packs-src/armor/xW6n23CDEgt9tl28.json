@@ -1,0 +1,42 @@
+{
+  "_id": "xW6n23CDEgt9tl28",
+  "name": "Armor Jacket",
+  "type": "armor",
+  "system": {
+    "summary": "",
+    "description": "",
+    "rating": 10,
+    "hardened": 2,
+    "heavy": true,
+    "shield": false,
+    "equipped": false,
+    "cost": 1300
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "armor",
+      "catalogData": {
+        "name": "Armor Jacket",
+        "srxId": 4006,
+        "cost": 1300,
+        "properties": [
+          "Heavy",
+          "Hardened (2)"
+        ],
+        "options": [],
+        "rating": 10,
+        "hardened": 2,
+        "heavy": true,
+        "shield": false,
+        "slug": "armor-jacket"
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xW6n23CDEgt9tl28"
+}

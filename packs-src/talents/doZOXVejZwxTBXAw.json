@@ -1,0 +1,63 @@
+{
+  "_id": "doZOXVejZwxTBXAw",
+  "name": "Ballistic Static",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Fading",
+    "description": "Use Interrupt action to force attacker with firearm to Reroll 6's",
+    "category": "threading",
+    "subgroup": "Fading",
+    "karma": 8,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Ballistic Static",
+        "srxId": 287,
+        "category": "Threading",
+        "subcategory": "Fading",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Fading",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "Interrupt",
+        "administered": "No",
+        "access": "No",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 8
+        },
+        "description": "Use Interrupt action to force attacker with firearm to Reroll 6's",
+        "effects": [],
+        "slug": "ballistic-static"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!doZOXVejZwxTBXAw"
+}

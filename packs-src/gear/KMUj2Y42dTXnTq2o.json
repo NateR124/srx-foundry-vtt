@@ -1,0 +1,59 @@
+{
+  "_id": "KMUj2Y42dTXnTq2o",
+  "name": "Mechanical Integration",
+  "type": "gear",
+  "system": {
+    "summary": "Headware",
+    "description": "Instinctive Aim and Sniper Weapons Talents",
+    "subtype": "Tactical Computer Upgrade",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 32000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Mechanical Integration",
+        "srxId": 3042,
+        "category": "Headware",
+        "cost": 32000,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "dictionaryName": "Mechanical Integration",
+        "type": "Tactical Computer Upgrade",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.4",
+          "value": 0.4,
+          "scale": []
+        },
+        "parentContainer": "Tactical Computer",
+        "prereq": "DNI (Direct Neural Interface),Tactical Computer",
+        "incompatible": [],
+        "grants": [
+          "Instinctive Aim",
+          "Sniper"
+        ],
+        "description": "Instinctive Aim and Sniper Weapons Talents",
+        "effects": [],
+        "slug": "mechanical-integration",
+        "variantOf": "tactical-computer"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!KMUj2Y42dTXnTq2o"
+}

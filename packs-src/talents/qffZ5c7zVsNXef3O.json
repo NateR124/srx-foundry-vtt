@@ -1,0 +1,75 @@
+{
+  "_id": "qffZ5c7zVsNXef3O",
+  "name": "Experienced Crafter",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism / Artificing",
+    "description": "Gain 7 Karma to use with Enchanting talent",
+    "category": "mysticism",
+    "subgroup": "Artificing",
+    "karma": 10,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Experienced Crafter",
+        "srxId": 459,
+        "category": "Mysticism",
+        "subcategory": "Artificing",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Artificing",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Enchanting (Mysticism Talent), At Character Creation Only",
+        "prereq": {
+          "op": "and",
+          "terms": [
+            {
+              "kind": "talent",
+              "name": "Enchanting",
+              "categoryHint": "Mysticism Talent"
+            },
+            {
+              "kind": "chargenOnly"
+            }
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 10
+        },
+        "description": "Gain 7 Karma to use with Enchanting talent",
+        "effects": [],
+        "slug": "experienced-crafter"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!qffZ5c7zVsNXef3O"
+}

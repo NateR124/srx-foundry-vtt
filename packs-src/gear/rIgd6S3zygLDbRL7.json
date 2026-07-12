@@ -1,0 +1,52 @@
+{
+  "_id": "rIgd6S3zygLDbRL7",
+  "name": "Mechanical Lock",
+  "type": "gear",
+  "system": {
+    "summary": "Security & Scanners",
+    "description": "",
+    "subtype": "Security & Scanners",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 50
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Mechanical Lock",
+        "srxId": 6109,
+        "category": "Security & Scanners",
+        "cost": 50,
+        "properties": [],
+        "options": [],
+        "type": "Security & Scanners",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "mechanical-lock"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!rIgd6S3zygLDbRL7"
+}

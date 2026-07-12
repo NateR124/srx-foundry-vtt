@@ -1,0 +1,63 @@
+{
+  "_id": "Ju2llGBQTidxd6dl",
+  "name": "Bleeding Shot/Strike",
+  "type": "talent",
+  "system": {
+    "summary": "Weapons / CC (Blades), F (Burst Fire/Full-Auto Firing Mode)",
+    "description": "1 Crit Die is Slashing Die - if you roll a 6, target takes 1P damage every Combat Turn",
+    "category": "weapons",
+    "subgroup": "CC (Blades), F (Burst Fire/Full-Auto Firing Mode)",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Bleeding Shot/Strike",
+        "srxId": 114,
+        "category": "Weapons",
+        "subcategory": "CC (Blades), F (Burst Fire/Full-Auto Firing Mode)",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "CC (Blades), F (Burst Fire/Full-Auto Firing Mode)",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "1 Crit Die is Slashing Die - if you roll a 6, target takes 1P damage every Combat Turn",
+        "effects": [],
+        "slug": "bleeding-shot-strike"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Ju2llGBQTidxd6dl"
+}

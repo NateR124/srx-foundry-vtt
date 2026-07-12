@@ -1,0 +1,53 @@
+{
+  "_id": "yG4JVYCJ0ntpxf2T",
+  "name": "Novum-21",
+  "type": "gear",
+  "system": {
+    "summary": "Toxins & Drugs / Toxins",
+    "description": "",
+    "subtype": "Toxin",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 50
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Novum-21",
+        "srxId": 6169,
+        "category": "Toxins & Drugs",
+        "subcategory": "Toxins",
+        "cost": 50,
+        "properties": [],
+        "options": [],
+        "type": "Toxin",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "novum-21"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!yG4JVYCJ0ntpxf2T"
+}

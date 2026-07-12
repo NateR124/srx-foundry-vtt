@@ -1,0 +1,31 @@
+{
+  "_id": "dpueM54rhqs3PEOY",
+  "name": "Glitchy Cyberware",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Fail at a critical task as your cyberware glitches out for a moment",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Glitchy Cyberware",
+        "srxId": 10526,
+        "type": "Trait",
+        "type2": null,
+        "description": "Fail at a critical task as your cyberware glitches out for a moment",
+        "options": [],
+        "slug": "glitchy-cyberware"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!dpueM54rhqs3PEOY"
+}

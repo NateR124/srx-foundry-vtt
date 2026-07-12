@@ -1,0 +1,72 @@
+{
+  "_id": "FTdGO0KMsEyEnxl8",
+  "name": "Ares Copilot",
+  "type": "gear",
+  "system": {
+    "summary": "Drone Command Consoles",
+    "description": "",
+    "subtype": "DCC",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 30000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Ares Copilot",
+        "srxId": 7502,
+        "category": "Drone Command Consoles",
+        "cost": 30000,
+        "properties": [],
+        "options": [],
+        "type": "DCC",
+        "type2": null,
+        "type3": null,
+        "isDcc": true,
+        "skill": null,
+        "specialProperties": [],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": 1,
+          "dccMaxDrones": 2,
+          "handling": null,
+          "speed": null,
+          "body": null,
+          "armor": null,
+          "health": null,
+          "defenseScoreMod": null,
+          "autoRating": null,
+          "autoDefenseScore": null,
+          "dccBenefits": null,
+          "autoSkills": null,
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [],
+        "slug": "ares-copilot"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!FTdGO0KMsEyEnxl8"
+}

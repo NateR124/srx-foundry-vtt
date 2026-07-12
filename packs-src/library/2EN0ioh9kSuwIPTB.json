@@ -1,0 +1,35 @@
+{
+  "_id": "2EN0ioh9kSuwIPTB",
+  "name": "Rigger",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "archetype",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "archetype",
+      "catalogData": {
+        "name": "Rigger",
+        "srxId": 11007,
+        "noFlare": true,
+        "isCustom": false,
+        "isDossierGroup": false,
+        "parent": "rules-dossier",
+        "flares": [],
+        "slug": "rigger"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "82fke5ZPHOqEvVwG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!2EN0ioh9kSuwIPTB"
+}

@@ -1,0 +1,76 @@
+{
+  "_id": "03oyg2EcixetBnuf",
+  "name": "Expertise: Hacking",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "Can purchase Hacking talents. No impacts from Restricted/Illegal gear when purchasing cyberdecks.",
+    "category": "general",
+    "subgroup": "",
+    "karma": 12,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Expertise: Hacking",
+        "srxId": 33,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Hacking 5, Software 5",
+        "prereq": {
+          "op": "and",
+          "terms": [
+            {
+              "kind": "rating",
+              "subject": "Hacking",
+              "min": 5
+            },
+            {
+              "kind": "rating",
+              "subject": "Software",
+              "min": 5
+            }
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 12
+        },
+        "description": "Can purchase Hacking talents. No impacts from Restricted/Illegal gear when purchasing cyberdecks.",
+        "effects": [],
+        "slug": "expertise-hacking"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!03oyg2EcixetBnuf"
+}

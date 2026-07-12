@@ -1,0 +1,50 @@
+{
+  "_id": "b2s5LwKh4EqWQoo9",
+  "name": "SCRIPT KIDDY, PRO",
+  "type": "threat",
+  "system": {
+    "threatRating": 2,
+    "initiative": {
+      "dice": 2,
+      "bonus": 4
+    },
+    "defenseScore": 2,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 11,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Colt America L36",
+        "pool": 9,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Thermographic Vision, Vision</li><li><strong>Magnification</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "script-kiddy-pro"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "SCRIPT KIDDY, PRO"
+  },
+  "_key": "!actors!b2s5LwKh4EqWQoo9"
+}

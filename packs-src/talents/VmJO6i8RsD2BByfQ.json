@@ -1,0 +1,62 @@
+{
+  "_id": "VmJO6i8RsD2BByfQ",
+  "name": "Salvo",
+  "type": "talent",
+  "system": {
+    "summary": "Vehicle",
+    "description": "Use Two-Weapon Attacks with vehicle with multiple weapons",
+    "category": "vehicle",
+    "subgroup": "",
+    "karma": 7,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Salvo",
+        "srxId": 375,
+        "category": "Vehicle",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 7
+        },
+        "description": "Use Two-Weapon Attacks with vehicle with multiple weapons",
+        "effects": [],
+        "slug": "salvo"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!VmJO6i8RsD2BByfQ"
+}

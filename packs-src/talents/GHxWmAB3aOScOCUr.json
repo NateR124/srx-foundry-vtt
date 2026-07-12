@@ -1,0 +1,31 @@
+{
+  "_id": "GHxWmAB3aOScOCUr",
+  "name": "Combat Paralysis",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Freeze up in battle",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Combat Paralysis",
+        "srxId": 10514,
+        "type": "Trait",
+        "type2": null,
+        "description": "Freeze up in battle",
+        "options": [],
+        "slug": "combat-paralysis"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!GHxWmAB3aOScOCUr"
+}

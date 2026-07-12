@@ -1,0 +1,63 @@
+{
+  "_id": "LhRJhlfa8TGHiA8g",
+  "name": "Healing Hands",
+  "type": "talent",
+  "system": {
+    "summary": "Channeling / Yang",
+    "description": "Heal Stun or Physical damage. Can't target self.",
+    "category": "channeling",
+    "subgroup": "Yang",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Healing Hands",
+        "srxId": 500,
+        "category": "Channeling",
+        "subcategory": "Yang",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Yang",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": "TRUE",
+        "action": "Complex",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Heal Stun or Physical damage. Can't target self.",
+        "effects": [],
+        "slug": "healing-hands"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!LhRJhlfa8TGHiA8g"
+}

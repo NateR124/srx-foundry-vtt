@@ -1,0 +1,45 @@
+{
+  "_id": "fgMfcCXKwH3cd6cF",
+  "name": "Anti-Theft System",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 25000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Anti-Theft System",
+        "srxId": 8503,
+        "cost": 25000,
+        "properties": [],
+        "options": [],
+        "type": "Modification",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": false,
+        "isExoticWeapon": false,
+        "nuyenMultiplier": null,
+        "requiresMount": false,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": null,
+        "attackSpecialization": null,
+        "attacks": [],
+        "slug": "anti-theft-system"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!fgMfcCXKwH3cd6cF"
+}

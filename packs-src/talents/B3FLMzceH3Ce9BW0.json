@@ -1,0 +1,31 @@
+{
+  "_id": "B3FLMzceH3Ce9BW0",
+  "name": "Cowardly",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Gain the Frightened status or fail to help your teammates when they need you",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Cowardly",
+        "srxId": 10518,
+        "type": "Trait",
+        "type2": null,
+        "description": "Gain the Frightened status or fail to help your teammates when they need you",
+        "options": [],
+        "slug": "cowardly"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!B3FLMzceH3Ce9BW0"
+}

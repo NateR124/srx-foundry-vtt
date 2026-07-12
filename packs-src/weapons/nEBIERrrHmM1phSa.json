@@ -1,0 +1,114 @@
+{
+  "_id": "nEBIERrrHmM1phSa",
+  "name": "Shiawase Arms pH",
+  "type": "weapon",
+  "system": {
+    "summary": "Exotic Weapons",
+    "description": "",
+    "skill": "projectileWeapons",
+    "specialization": "Exotic Weapon - Sprayer",
+    "category": "Exotic Weapons",
+    "range": "5/10/20m (Stream), 10m (Cone)",
+    "properties": "Restricted, Two-Handed",
+    "cost": 4500,
+    "attackModes": [
+      {
+        "name": "Ranged",
+        "action": "complex",
+        "fireMode": "",
+        "acc": 0,
+        "dv": "9",
+        "dvType": "P",
+        "element": "Acid"
+      },
+      {
+        "name": "AOE",
+        "action": "complex",
+        "fireMode": "",
+        "acc": 0,
+        "dv": "6",
+        "dvType": "P",
+        "element": "Acid"
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Shiawase Arms pH",
+        "srxId": 4618,
+        "category": "Exotic Weapons",
+        "cost": 4500,
+        "properties": [
+          "Restricted",
+          "Two-Handed"
+        ],
+        "options": [],
+        "type": "Exotic Weapons",
+        "type2": "Sprayer",
+        "type3": null,
+        "skill": "Projectile Weapons",
+        "specialization": "Exotic Weapon - Sprayer",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "5/10/20m (Stream), 10m (Cone)"
+        },
+        "improvedRange": null,
+        "canMod": false,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": 0,
+            "dv": {
+              "raw": "9",
+              "value": 9,
+              "type": "P",
+              "element": "Acid",
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "attackType": "AOE",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": null,
+            "dv": {
+              "raw": "6",
+              "value": 6,
+              "type": "P",
+              "element": "Acid",
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "shiawase-arms-ph"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CxdzX8xPeW6rU3WC",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!nEBIERrrHmM1phSa"
+}

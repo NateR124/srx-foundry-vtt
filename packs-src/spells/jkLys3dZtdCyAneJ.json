@@ -1,0 +1,49 @@
+{
+  "_id": "jkLys3dZtdCyAneJ",
+  "name": "Oxygenate",
+  "type": "spell",
+  "system": {
+    "summary": "Health",
+    "description": "All chosen targets do not need to breathe",
+    "category": "health",
+    "pattern": "area",
+    "duration": "sustained",
+    "range": "5m",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Health"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Oxygenate",
+        "srxId": 1554,
+        "category": "Health",
+        "description": "All chosen targets do not need to breathe",
+        "range": {
+          "raw": "5m",
+          "bands": [
+            5
+          ]
+        },
+        "duration": "Sustained",
+        "resistance": null,
+        "attack": null,
+        "slug": "oxygenate"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "81q0dM8ktqbFvvhu",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!jkLys3dZtdCyAneJ"
+}

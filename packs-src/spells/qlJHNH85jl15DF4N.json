@@ -1,0 +1,49 @@
+{
+  "_id": "qlJHNH85jl15DF4N",
+  "name": "Clairvoyance",
+  "type": "spell",
+  "system": {
+    "summary": "Detection",
+    "description": "View area at a distant point",
+    "category": "detection",
+    "pattern": "direct",
+    "duration": "sustained",
+    "range": "F x 10m",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Detection"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Clairvoyance",
+        "srxId": 1514,
+        "category": "Detection",
+        "description": "View area at a distant point",
+        "range": {
+          "raw": "F x 10m",
+          "force": true,
+          "mult": 10,
+          "unit": "m"
+        },
+        "duration": "Sust (1 hour)",
+        "resistance": "WIL+CHA",
+        "attack": null,
+        "slug": "clairvoyance"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "y93WvYSQK8mAWRAI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!qlJHNH85jl15DF4N"
+}

@@ -1,0 +1,53 @@
+{
+  "_id": "nhrzL4IV6DaCs1Oa",
+  "name": "Flash-pak",
+  "type": "gear",
+  "system": {
+    "summary": "Audio & Optical Devices / Optical Devices",
+    "description": "",
+    "subtype": "Optical Device",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 550
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Flash-pak",
+        "srxId": 6086,
+        "category": "Audio & Optical Devices",
+        "subcategory": "Optical Devices",
+        "cost": 550,
+        "properties": [],
+        "options": [],
+        "type": "Optical Device",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "flash-pak"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!nhrzL4IV6DaCs1Oa"
+}

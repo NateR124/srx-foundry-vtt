@@ -1,0 +1,49 @@
+{
+  "_id": "Ki8tzlM0NXdgh0o1",
+  "name": "Elemental Attunement",
+  "type": "spell",
+  "system": {
+    "summary": "Health",
+    "description": "Chosen targets gain resistance to chosen elemental damage",
+    "category": "health",
+    "pattern": "area",
+    "duration": "sustained",
+    "range": "5m",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Health"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Elemental Attunement",
+        "srxId": 1525,
+        "category": "Health",
+        "description": "Chosen targets gain resistance to chosen elemental damage",
+        "range": {
+          "raw": "5m",
+          "bands": [
+            5
+          ]
+        },
+        "duration": "Sustained",
+        "resistance": null,
+        "attack": null,
+        "slug": "elemental-attunement"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "81q0dM8ktqbFvvhu",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Ki8tzlM0NXdgh0o1"
+}

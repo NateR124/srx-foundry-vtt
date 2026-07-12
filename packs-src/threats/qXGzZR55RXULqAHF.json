@@ -1,0 +1,74 @@
+{
+  "_id": "qXGzZR55RXULqAHF",
+  "name": "SNIPER",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 2,
+      "bonus": 7
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 13,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 13,
+        "dv": 2,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Combat Knife",
+        "pool": 11,
+        "dv": 4,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Predator V",
+        "pool": 16,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ranger Arms SM-5",
+        "pool": 17,
+        "dv": 11,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Precise Shot</strong>: If the sniper is setup in a sitting or prone firing position and using a sniper rifle, their target does not benefit from Partial Cover. TROLL WITH A MACHINE GUN</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification,</strong>: </li><li><strong>Ultrasound</strong>: </li><li><strong>Mash the Trigger</strong>: The sniper does not suffer recoil</li><li><strong>penalties.</strong>: </li><li><strong>Improved Crit</strong>: On attack tests with a sniper rifle, the</li><li><strong>sniper scores a critical hit with their Crit Dice on a 5</strong>: </li><li><strong>or a 6.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "sniper"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "SNIPER"
+  },
+  "_key": "!actors!qXGzZR55RXULqAHF"
+}

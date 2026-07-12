@@ -1,0 +1,72 @@
+{
+  "_id": "ljnU1uHuiE0FfW1J",
+  "name": "Spinrad Global Skirmisher",
+  "type": "gear",
+  "system": {
+    "summary": "Drone Command Consoles",
+    "description": "",
+    "subtype": "DCC",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 160000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Spinrad Global Skirmisher",
+        "srxId": 7508,
+        "category": "Drone Command Consoles",
+        "cost": 160000,
+        "properties": [],
+        "options": [],
+        "type": "DCC",
+        "type2": null,
+        "type3": null,
+        "isDcc": true,
+        "skill": null,
+        "specialProperties": [],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": 7,
+          "dccMaxDrones": 4,
+          "handling": null,
+          "speed": null,
+          "body": null,
+          "armor": null,
+          "health": null,
+          "defenseScoreMod": null,
+          "autoRating": null,
+          "autoDefenseScore": null,
+          "dccBenefits": "Optimized Processing",
+          "autoSkills": null,
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [],
+        "slug": "spinrad-global-skirmisher"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ljnU1uHuiE0FfW1J"
+}

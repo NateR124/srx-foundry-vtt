@@ -1,0 +1,68 @@
+{
+  "_id": "jsFtdeXIlC5gjDxT",
+  "name": "Mental Discipline",
+  "type": "talent",
+  "system": {
+    "summary": "Channeling / Yin",
+    "description": "+1 Willpower, Logic, Intuition, or Charisma",
+    "category": "channeling",
+    "subgroup": "Yin",
+    "karma": 10,
+    "option": "Willpower, Logic, Intuition, Charisma",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Mental Discipline",
+        "srxId": 513,
+        "category": "Channeling",
+        "subcategory": "Yin",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Willpower",
+          "Logic",
+          "Intuition",
+          "Charisma"
+        ],
+        "options2": [],
+        "type": "Yin",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 10
+        },
+        "description": "+1 Willpower, Logic, Intuition, or Charisma",
+        "effects": [],
+        "slug": "mental-discipline"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!jsFtdeXIlC5gjDxT"
+}

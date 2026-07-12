@@ -1,0 +1,58 @@
+{
+  "_id": "qDiVqgIViznxQxLj",
+  "name": "Drone Rigger",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "archetype",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "archetype",
+      "catalogData": {
+        "name": "Drone Rigger",
+        "srxId": 11013,
+        "noFlare": false,
+        "isCustom": false,
+        "isDossierGroup": false,
+        "parent": null,
+        "flares": [
+          {
+            "name": "Assault Commander",
+            "metatypes": [
+              "Dwarf"
+            ],
+            "appIndex": 5
+          },
+          {
+            "name": "Livewire",
+            "metatypes": [
+              "Elf",
+              "Dwarf"
+            ],
+            "appIndex": 6
+          },
+          {
+            "name": "Overwatch",
+            "metatypes": [
+              "Human"
+            ],
+            "appIndex": 7
+          }
+        ],
+        "slug": "drone-rigger"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "82fke5ZPHOqEvVwG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!qDiVqgIViznxQxLj"
+}

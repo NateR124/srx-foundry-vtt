@@ -1,0 +1,63 @@
+{
+  "_id": "rEUMkg8HZ8MkHD3o",
+  "name": "Merciless Hunter",
+  "type": "talent",
+  "system": {
+    "summary": "Weapons / PW (Bows, Crossbows)",
+    "description": "When using bow/crossbow, double ranges and reroll 1 Crit Die if target is Wounded",
+    "category": "weapons",
+    "subgroup": "PW (Bows, Crossbows)",
+    "karma": 9,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Merciless Hunter",
+        "srxId": 151,
+        "category": "Weapons",
+        "subcategory": "PW (Bows, Crossbows)",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "PW (Bows, Crossbows)",
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 9
+        },
+        "description": "When using bow/crossbow, double ranges and reroll 1 Crit Die if target is Wounded",
+        "effects": [],
+        "slug": "merciless-hunter"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!rEUMkg8HZ8MkHD3o"
+}

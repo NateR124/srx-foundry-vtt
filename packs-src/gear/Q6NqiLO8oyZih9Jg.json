@@ -1,0 +1,53 @@
+{
+  "_id": "Q6NqiLO8oyZih9Jg",
+  "name": "Novatech Airware Commlink",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Commlinks",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 46000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Novatech Airware Commlink",
+        "srxId": 6014,
+        "category": "Matrix Devices",
+        "subcategory": "Commlinks",
+        "cost": 46000,
+        "properties": [],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Commlinks",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "2",
+          "firewall": "7",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "2",
+          "rank": "12",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "novatech-airware-commlink"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Q6NqiLO8oyZih9Jg"
+}

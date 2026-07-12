@@ -1,0 +1,69 @@
+{
+  "_id": "MuhYJJ8alzJ7kQf0",
+  "name": "Luxury Lifestyle",
+  "type": "talent",
+  "system": {
+    "summary": "Social",
+    "description": "Gain Luxury lifestyle",
+    "category": "social",
+    "subgroup": "",
+    "karma": 15,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Luxury Lifestyle",
+        "srxId": 195,
+        "category": "Social",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "At Character Creation Only",
+        "prereq": {
+          "kind": "chargenOnly"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 15
+        },
+        "description": "Gain Luxury lifestyle",
+        "effects": [
+          {
+            "key": "Lifestyle",
+            "value": 99
+          }
+        ],
+        "slug": "luxury-lifestyle"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!MuhYJJ8alzJ7kQf0"
+}

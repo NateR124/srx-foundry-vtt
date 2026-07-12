@@ -1,0 +1,90 @@
+{
+  "_id": "FBDzLCQT041n5Yib",
+  "name": "CYBERZOMBIE",
+  "type": "threat",
+  "system": {
+    "threatRating": 5,
+    "initiative": {
+      "dice": 3,
+      "bonus": 9
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 16
+    },
+    "armor": 26,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Cyberspurs",
+        "pool": 18,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Katana",
+        "pool": 20,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Viper",
+        "pool": 20,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ingram Smartgun Major (BF) 20 9P",
+        "pool": 20,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "FN HAR Major (SA) 19 9P",
+        "pool": 19,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "FN HAR Major (SA) 19 9P",
+        "pool": 19,
+        "dv": 11,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Adrenaline Pump</strong>: In combat, the cyberzombie can activate its adrenaline pump with a Free Action (see Adrenaline Pump in the core rulebook).</li><li><strong>Cling to Life</strong>: The first time in a fight that the cyberzombie’s damage equals or exceeds its Health, instead set its damage equal to its Health – 1.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The cyberzombie does not suffer</li><li><strong>recoil penalties.</strong>: </li><li><strong>Improved Crit</strong>: On Armor tests, the cyberzombie</li><li><strong>scores a critical hit with their Crit Dice on a 5 or a 6.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "cyberzombie"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "CYBERZOMBIE"
+  },
+  "_key": "!actors!FBDzLCQT041n5Yib"
+}

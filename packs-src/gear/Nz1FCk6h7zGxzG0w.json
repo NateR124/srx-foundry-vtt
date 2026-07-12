@@ -1,0 +1,62 @@
+{
+  "_id": "Nz1FCk6h7zGxzG0w",
+  "name": "Mounted Exotic Weapon - Monofilament Whip",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Mounted Weapon",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 18000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Mounted Exotic Weapon - Monofilament Whip",
+        "srxId": 8535,
+        "cost": 18000,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Mounted Weapon",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": true,
+        "isExoticWeapon": true,
+        "nuyenMultiplier": null,
+        "requiresMount": true,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": "Close Combat",
+        "attackSpecialization": "Exotic Weapon - Whip",
+        "attacks": [
+          {
+            "attackType": "Melee",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": 1,
+            "dv": {
+              "raw": "9",
+              "value": 9,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "mounted-exotic-weapon-monofilament-whip"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Nz1FCk6h7zGxzG0w"
+}

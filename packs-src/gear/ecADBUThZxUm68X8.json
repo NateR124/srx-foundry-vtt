@@ -1,0 +1,55 @@
+{
+  "_id": "ecADBUThZxUm68X8",
+  "name": "Voice Modulator",
+  "type": "gear",
+  "system": {
+    "summary": "Headware",
+    "description": "Make any sound, imitate voices",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 10000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Voice Modulator",
+        "srxId": 3045,
+        "category": "Headware",
+        "cost": 10000,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "dictionaryName": "Voice Modulator",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.15",
+          "value": 0.15,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "Make any sound, imitate voices",
+        "effects": [],
+        "slug": "voice-modulator"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ecADBUThZxUm68X8"
+}

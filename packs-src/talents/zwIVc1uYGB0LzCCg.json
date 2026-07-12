@@ -1,0 +1,75 @@
+{
+  "_id": "zwIVc1uYGB0LzCCg",
+  "name": "Experienced Artificer",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Infusion",
+    "description": "Gain 7 Karma to use with Artificing talent",
+    "category": "threading",
+    "subgroup": "Infusion",
+    "karma": 10,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Experienced Artificer",
+        "srxId": 302,
+        "category": "Threading",
+        "subcategory": "Infusion",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Infusion",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": "Artificing (Threading Talent), At Character Creation Only",
+        "prereq": {
+          "op": "and",
+          "terms": [
+            {
+              "kind": "talent",
+              "name": "Artificing",
+              "categoryHint": "Threading Talent"
+            },
+            {
+              "kind": "chargenOnly"
+            }
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 10
+        },
+        "description": "Gain 7 Karma to use with Artificing talent",
+        "effects": [],
+        "slug": "experienced-artificer"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!zwIVc1uYGB0LzCCg"
+}

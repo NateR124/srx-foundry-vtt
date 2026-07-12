@@ -1,0 +1,97 @@
+{
+  "_id": "KysFP7G2NNLD1dXr",
+  "name": "Federated-Boeing Commuter",
+  "type": "gear",
+  "system": {
+    "summary": "VTOL & V/STOL",
+    "description": "",
+    "subtype": "VTOL & V/STOL",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 450000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Federated-Boeing Commuter",
+        "srxId": 7558,
+        "category": "VTOL & V/STOL",
+        "cost": 450000,
+        "properties": [],
+        "options": [],
+        "type": "VTOL & V/STOL",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Piloting",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 1,
+          "speed": 12,
+          "body": 12,
+          "armor": 10,
+          "health": 16,
+          "defenseScoreMod": null,
+          "autoRating": 3,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Perception,Piloting",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Anti-Theft System",
+            "value": "Built-In"
+          }
+        ],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": null
+          },
+          {
+            "index": 2,
+            "mount": {
+              "orientation": "B",
+              "heavy": false
+            },
+            "builtIn": null
+          }
+        ],
+        "slug": "federated-boeing-commuter"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!KysFP7G2NNLD1dXr"
+}

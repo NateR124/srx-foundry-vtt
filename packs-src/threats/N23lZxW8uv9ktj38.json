@@ -1,0 +1,82 @@
+{
+  "_id": "N23lZxW8uv9ktj38",
+  "name": "TROLL GANGER",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 2,
+      "bonus": 4
+    },
+    "defenseScore": 2,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 18,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist (Reach: 2m)",
+        "pool": 13,
+        "dv": 6,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Maul (Reach: 2m)",
+        "pool": 14,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Power",
+        "pool": 11,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "HK-227 Major (SA) 11 8P",
+        "pool": 10,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "HK-227 Major (SA) 11 8P",
+        "pool": 9,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Spray n’ Pray</strong>: When attacking with a BF or FA firing mode, the ganger can reduce their attack’s DV by 1 to gain +2 on their attack test.</li><li><strong>Ton of Bricks</strong>: Once per fight, when the troll ganger takes damage, they can reduce the damage by 5. GANG MAGE</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation,</li><li><strong>Thermographic</strong>: </li><li><strong>Mash the Trigger</strong>: The ganger does not suffer recoil</li><li><strong>penalties.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "troll-ganger"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "TROLL GANGER"
+  },
+  "_key": "!actors!N23lZxW8uv9ktj38"
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "eUIyqRBefHzaXBpG",
+  "name": "Gang Boss",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Plugged into criminal underworld and anything happening on the streets",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Gang Boss",
+        "srxId": 10011,
+        "type": "Contact",
+        "type2": null,
+        "description": "Plugged into criminal underworld and anything happening on the streets",
+        "slug": "gang-boss"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!eUIyqRBefHzaXBpG"
+}

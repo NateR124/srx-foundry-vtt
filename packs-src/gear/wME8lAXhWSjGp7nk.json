@@ -1,0 +1,85 @@
+{
+  "_id": "wME8lAXhWSjGp7nk",
+  "name": "Horizon CU^3",
+  "type": "gear",
+  "system": {
+    "summary": "Drones (Aerial)",
+    "description": "",
+    "subtype": "Drones (Aerial)",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1800
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Horizon CU^3",
+        "srxId": 7599,
+        "category": "Drones (Aerial)",
+        "cost": 1800,
+        "properties": [],
+        "options": [],
+        "type": "Drones (Aerial)",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Piloting",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)",
+          "Movement Rate (hover): 10 meters"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 0,
+          "speed": 0,
+          "body": 4,
+          "armor": 4,
+          "health": 8,
+          "defenseScoreMod": null,
+          "autoRating": 1,
+          "autoDefenseScore": 1,
+          "dccBenefits": null,
+          "autoSkills": "Perception,Piloting",
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "R",
+              "heavy": false
+            },
+            "builtIn": null
+          }
+        ],
+        "slug": "horizon-cu-3"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!wME8lAXhWSjGp7nk"
+}

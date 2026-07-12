@@ -1,0 +1,102 @@
+{
+  "_id": "9UdYE4dG0RgmDWSy",
+  "name": "Shiawase Sliver Pistol Crossbow",
+  "type": "weapon",
+  "system": {
+    "summary": "Projectile Weapons / Bows",
+    "description": "",
+    "skill": "projectileWeapons",
+    "specialization": "Archery",
+    "category": "Projectile Weapons",
+    "range": "10/20/40m",
+    "properties": "",
+    "cost": 900,
+    "attackModes": [
+      {
+        "name": "Ranged",
+        "action": "major",
+        "fireMode": "",
+        "acc": 0,
+        "dv": "4",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Shiawase Sliver Pistol Crossbow",
+        "srxId": 4539,
+        "category": "Projectile Weapons",
+        "subcategory": "Bows",
+        "cost": 900,
+        "properties": [],
+        "options": [],
+        "type": "Projectile Weapons",
+        "type2": "Bows",
+        "type3": "Crossbow",
+        "skill": "Projectile Weapons",
+        "specialization": "Archery",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "10/20/40m",
+          "bands": [
+            10,
+            20,
+            40
+          ]
+        },
+        "improvedRange": {
+          "raw": "20/40/80m",
+          "bands": [
+            20,
+            40,
+            80
+          ]
+        },
+        "canMod": true,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 1,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": null,
+            "accuracy": 0,
+            "dv": {
+              "raw": "4",
+              "value": 4,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "shiawase-sliver-pistol-crossbow",
+        "variantOf": "light-crossbow"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "FHMz42ZuuAQogGoV",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!9UdYE4dG0RgmDWSy"
+}

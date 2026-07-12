@@ -1,0 +1,49 @@
+{
+  "_id": "IUg1OaR6bwm4ynAb",
+  "name": "Triangulating",
+  "type": "gear",
+  "system": {
+    "summary": "Artifices",
+    "description": "",
+    "subtype": "Artifice",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Triangulating",
+        "srxId": 9103,
+        "category": "Artifices",
+        "cost": 2000,
+        "costDisplay": "18,000",
+        "properties": [],
+        "options": [],
+        "type": "Artifice",
+        "type2": "Artificing Gear",
+        "type3": "Triangulating",
+        "fixedRating": 3,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [],
+        "alwaysUnique": true,
+        "slug": "triangulating"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!IUg1OaR6bwm4ynAb"
+}

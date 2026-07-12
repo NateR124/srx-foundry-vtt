@@ -1,0 +1,63 @@
+{
+  "_id": "NtEc3NzpbLmG37Bm",
+  "name": "Friendly Fire",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / Drones & Vehicles",
+    "description": "Designate targets that drone cannot attack. Target any number of drones with Access.",
+    "category": "hacking",
+    "subgroup": "Drones & Vehicles",
+    "karma": 3,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Friendly Fire",
+        "srxId": 233,
+        "category": "Hacking",
+        "subcategory": "Drones & Vehicles",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Drones & Vehicles",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "Complex",
+        "administered": "Yes",
+        "access": "Special",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "Designate targets that drone cannot attack. Target any number of drones with Access.",
+        "effects": [],
+        "slug": "friendly-fire"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!NtEc3NzpbLmG37Bm"
+}

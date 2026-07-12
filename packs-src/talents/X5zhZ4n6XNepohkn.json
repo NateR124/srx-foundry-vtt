@@ -1,0 +1,67 @@
+{
+  "_id": "X5zhZ4n6XNepohkn",
+  "name": "Edge: All or Nothing",
+  "type": "talent",
+  "system": {
+    "summary": "Metatype",
+    "description": "1 Crit Die is Chance die - 0 hits on 1, double hits on 2+",
+    "category": "metatype",
+    "subgroup": "",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": true
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Edge: All or Nothing",
+        "srxId": 86,
+        "category": "Metatype",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": "TRUE",
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Metatype Human",
+        "prereq": {
+          "kind": "metatype",
+          "values": [
+            "Human"
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "1 Crit Die is Chance die - 0 hits on 1, double hits on 2+",
+        "effects": [],
+        "slug": "edge-all-or-nothing"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!X5zhZ4n6XNepohkn"
+}

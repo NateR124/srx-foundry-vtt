@@ -1,0 +1,49 @@
+{
+  "_id": "cqbknBowH2nK7LID",
+  "name": "Mindlink",
+  "type": "spell",
+  "system": {
+    "summary": "Detection",
+    "description": "All chosen targets share telepathic connection",
+    "category": "detection",
+    "pattern": "area",
+    "duration": "timed",
+    "range": "(F x 100)m",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Detection"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Mindlink",
+        "srxId": 1553,
+        "category": "Detection",
+        "description": "All chosen targets share telepathic connection",
+        "range": {
+          "raw": "(F x 100)m",
+          "force": true,
+          "mult": 100,
+          "unit": "m"
+        },
+        "duration": "(Force x 2)hours",
+        "resistance": null,
+        "attack": null,
+        "slug": "mindlink"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "y93WvYSQK8mAWRAI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!cqbknBowH2nK7LID"
+}

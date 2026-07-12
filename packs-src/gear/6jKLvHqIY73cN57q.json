@@ -1,0 +1,38 @@
+{
+  "_id": "6jKLvHqIY73cN57q",
+  "name": "Cyberattack",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Cyberdeck Mod",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 20000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear-enhancement",
+      "catalogData": {
+        "name": "Cyberattack",
+        "srxId": 7014,
+        "cost": 20000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "enhancementType": 3,
+        "type": "Cyberdeck Mod",
+        "description": null,
+        "slug": "cyberattack"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CfAYFTllX77UHdGc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!6jKLvHqIY73cN57q"
+}

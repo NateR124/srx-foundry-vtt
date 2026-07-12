@@ -1,0 +1,40 @@
+{
+  "_id": "wfrpkZLghDcfXPq4",
+  "name": "Advanced Gas-vent",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1200
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon-mod",
+      "catalogData": {
+        "name": "Advanced Gas-vent",
+        "srxId": 5501,
+        "cost": 1200,
+        "properties": [],
+        "type": "Modification",
+        "mounts": [
+          0,
+          1
+        ],
+        "allMountsRequired": true,
+        "noMount": false,
+        "requiresMod": null,
+        "slug": "advanced-gas-vent"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "rHfaFyA9uk37DvRq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!wfrpkZLghDcfXPq4"
+}

@@ -1,0 +1,41 @@
+{
+  "_id": "pc5lZCYkpLky6APh",
+  "name": "Flashlight",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 50
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon-mod",
+      "catalogData": {
+        "name": "Flashlight",
+        "srxId": 5504,
+        "cost": 50,
+        "properties": [],
+        "type": "Modification",
+        "mounts": [
+          2,
+          4,
+          5
+        ],
+        "allMountsRequired": false,
+        "noMount": false,
+        "requiresMod": null,
+        "slug": "flashlight"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "rHfaFyA9uk37DvRq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!pc5lZCYkpLky6APh"
+}

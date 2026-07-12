@@ -1,0 +1,75 @@
+{
+  "_id": "cD6UsUcLP4I8sC0U",
+  "name": "Cyberleg",
+  "type": "gear",
+  "system": {
+    "summary": "Cyberlimbs / Cyberlegs",
+    "description": "+2m Movement Rate; +1 Close Combat, Armor, Hardened Armor, unarmed melee DV; +2 Athletics",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 40000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Cyberleg",
+        "srxId": 3072,
+        "category": "Cyberlimbs",
+        "subcategory": "Cyberlegs",
+        "cost": 40000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Cyberleg",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "1",
+          "value": 1,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "+2m Movement Rate; +1 Close Combat, Armor, Hardened Armor, unarmed melee DV; +2 Athletics",
+        "effects": [
+          {
+            "key": "athletics",
+            "value": 2
+          },
+          {
+            "key": "closeCombat",
+            "value": 1
+          },
+          {
+            "key": "armor",
+            "value": 1
+          },
+          {
+            "key": "hardenedArmor",
+            "value": 1
+          },
+          {
+            "key": "movementRate",
+            "value": 2
+          }
+        ],
+        "slug": "cyberleg"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!cD6UsUcLP4I8sC0U"
+}

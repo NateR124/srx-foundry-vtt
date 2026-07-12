@@ -1,0 +1,53 @@
+{
+  "_id": "Kya31AKX5SXkCpmN",
+  "name": "Sleep Regulator",
+  "type": "gear",
+  "system": {
+    "summary": "Headware",
+    "description": "Only sleep 3 hours each night",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 8500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Sleep Regulator",
+        "srxId": 3039,
+        "category": "Headware",
+        "cost": 8500,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Sleep Regulator",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.15",
+          "value": 0.15,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [],
+        "grants": [],
+        "description": "Only sleep 3 hours each night",
+        "effects": [],
+        "slug": "sleep-regulator"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Kya31AKX5SXkCpmN"
+}

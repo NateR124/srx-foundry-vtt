@@ -1,0 +1,59 @@
+{
+  "_id": "rZNdS6IlIt0QL7xj",
+  "name": "Muscle Toner",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "+Rating to Agility",
+    "subtype": "ware",
+    "rating": 3,
+    "quantity": 1,
+    "cost": 43000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Muscle Toner",
+        "srxId": 3106,
+        "category": "Bodyware",
+        "cost": 43000,
+        "costDisplay": "Rating x 43,000",
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Muscle Toner",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": 3,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "Rating x 0.2",
+          "value": 0.2,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [],
+        "grants": [],
+        "description": "+Rating to Agility",
+        "effects": [
+          {
+            "key": "agi",
+            "value": 1
+          }
+        ],
+        "slug": "muscle-toner"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!rZNdS6IlIt0QL7xj"
+}

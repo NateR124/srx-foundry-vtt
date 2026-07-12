@@ -1,0 +1,63 @@
+{
+  "_id": "BydOEWjajX40573A",
+  "name": "Disable Firearm",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / Weapons & Cyberware",
+    "description": "Make firearm unusable, or brick it with Access",
+    "category": "hacking",
+    "subgroup": "Weapons & Cyberware",
+    "karma": 3,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Disable Firearm",
+        "srxId": 223,
+        "category": "Hacking",
+        "subcategory": "Weapons & Cyberware",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Weapons & Cyberware",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "Complex",
+        "administered": "Yes",
+        "access": "Special",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "Make firearm unusable, or brick it with Access",
+        "effects": [],
+        "slug": "disable-firearm"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!BydOEWjajX40573A"
+}

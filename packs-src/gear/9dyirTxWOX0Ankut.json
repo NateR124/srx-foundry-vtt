@@ -1,0 +1,60 @@
+{
+  "_id": "9dyirTxWOX0Ankut",
+  "name": "Cyber Holster (Off-Hand)",
+  "type": "gear",
+  "system": {
+    "summary": "Cyberlimbs / Cyberarms",
+    "description": "Hidden weapon readied with Free Action",
+    "subtype": "Cyberarm Upgrade",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 8500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Cyber Holster (Off-Hand)",
+        "srxId": 3063,
+        "category": "Cyberlimbs",
+        "subcategory": "Cyberarms",
+        "cost": 8500,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Cyber Holster (Off-Hand)",
+        "type": "Cyberarm Upgrade",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0",
+          "value": 0,
+          "scale": []
+        },
+        "parentContainer": "Cyberarm (Off-Hand)",
+        "prereq": "DNI (Direct Neural Interface),Cyberarm (Off-Hand)",
+        "incompatible": [
+          "Cyber Gun (Off-Hand)Cyberarm Upgrade",
+          "Grapple Gun (Off-Hand)",
+          "Gyroarm (Off-Hand)Cyberarm Upgrade",
+          "Smuggling Compartment (Off-Hand)Cyberarm Upgrade"
+        ],
+        "grants": [],
+        "description": "Hidden weapon readied with Free Action",
+        "effects": [],
+        "slug": "cyber-holster-off-hand",
+        "variantOf": "cyberarm-off-hand"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!9dyirTxWOX0Ankut"
+}

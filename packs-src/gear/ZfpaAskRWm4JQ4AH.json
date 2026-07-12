@@ -1,0 +1,60 @@
+{
+  "_id": "ZfpaAskRWm4JQ4AH",
+  "name": "Symbiotes",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "+2 Wounded Limit; Quick Healer Talent",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 26000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Symbiotes",
+        "srxId": 3120,
+        "category": "Bodyware",
+        "cost": 26000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Symbiotes",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.3",
+          "value": 0.3,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [],
+        "grants": [
+          "Quick Healer"
+        ],
+        "description": "+2 Wounded Limit; Quick Healer Talent",
+        "effects": [
+          {
+            "key": "woundedLimit",
+            "value": 2
+          }
+        ],
+        "slug": "symbiotes"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ZfpaAskRWm4JQ4AH"
+}

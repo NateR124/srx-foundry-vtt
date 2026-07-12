@@ -1,0 +1,59 @@
+{
+  "_id": "ieMoULKOFJbWwnnx",
+  "name": "Manabolt",
+  "type": "spell",
+  "system": {
+    "summary": "Combat",
+    "description": "Target takes (Net Force + 1)P/S",
+    "category": "combat",
+    "pattern": "direct",
+    "duration": "instantaneous",
+    "range": "60m",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "P/S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Combat"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Manabolt",
+        "srxId": 1549,
+        "category": "Combat",
+        "description": "Target takes (Net Force + 1)P/S",
+        "range": {
+          "raw": "60m",
+          "bands": [
+            60
+          ]
+        },
+        "duration": "Instantaneous",
+        "resistance": "WIL",
+        "attack": {
+          "type": "Ranged",
+          "accuracy": "Resist: WIL",
+          "dv": {
+            "raw": "(F+1)",
+            "force": true,
+            "mod": 1,
+            "type": "P/S",
+            "element": null
+          }
+        },
+        "slug": "manabolt"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "zZc1PdtmOVQowgGq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ieMoULKOFJbWwnnx"
+}

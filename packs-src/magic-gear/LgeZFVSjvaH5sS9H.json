@@ -1,0 +1,51 @@
+{
+  "_id": "LgeZFVSjvaH5sS9H",
+  "name": "Channeling (Crafted)",
+  "type": "gear",
+  "system": {
+    "summary": "Foci (Crafted)",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Channeling (Crafted)",
+        "srxId": 9061,
+        "category": "Foci (Crafted)",
+        "cost": 1000,
+        "costDisplay": "36,000",
+        "properties": [],
+        "options": [],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": "Channeling",
+        "fixedRating": 6,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": "Enchanting",
+        "maxQty": null,
+        "karmaCost": 0,
+        "crafted": true,
+        "equipPrereqs": [
+          "Expertise: Channeling"
+        ],
+        "alwaysUnique": true,
+        "slug": "channeling-crafted"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!LgeZFVSjvaH5sS9H"
+}

@@ -1,0 +1,64 @@
+{
+  "_id": "JSSzE0Jw7EyOb8vV",
+  "name": "Skillsoft",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "Athletics, Close Combat, Driving, Firearms, Piloting, Projectile Weapons, or Stealth",
+    "subtype": "ware",
+    "rating": 4,
+    "quantity": 1,
+    "cost": 7000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Skillsoft",
+        "srxId": 3115,
+        "category": "Bodyware",
+        "cost": 7000,
+        "costDisplay": "Rating x 7,000",
+        "properties": [],
+        "options": [
+          "Athletics",
+          "Biotech",
+          "Close Combat",
+          "Driving",
+          "Firearms",
+          "Piloting",
+          "Projectile Weapons",
+          "Stealth"
+        ],
+        "dictionaryName": "Skillsoft",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": true,
+        "maxRating": 4,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0",
+          "value": 0,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface),Skillwires",
+        "incompatible": [],
+        "grants": [],
+        "description": "Athletics, Close Combat, Driving, Firearms, Piloting, Projectile Weapons, or Stealth",
+        "effects": [],
+        "slug": "skillsoft",
+        "variantOf": "skillwires"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!JSSzE0Jw7EyOb8vV"
+}

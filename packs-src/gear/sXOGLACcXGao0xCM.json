@@ -1,0 +1,36 @@
+{
+  "_id": "sXOGLACcXGao0xCM",
+  "name": "Flare Compensation",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Vision Enhancement",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 200
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear-enhancement",
+      "catalogData": {
+        "name": "Flare Compensation",
+        "srxId": 7005,
+        "cost": 200,
+        "properties": [],
+        "options": [],
+        "enhancementType": 2,
+        "type": "Vision Enhancement",
+        "description": null,
+        "slug": "flare-compensation"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CfAYFTllX77UHdGc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!sXOGLACcXGao0xCM"
+}

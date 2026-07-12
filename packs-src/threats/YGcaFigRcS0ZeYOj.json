@@ -1,0 +1,74 @@
+{
+  "_id": "YGcaFigRcS0ZeYOj",
+  "name": "SYMAN 2-14",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 3,
+      "bonus": 5
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 16,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Cyber Spurs",
+        "pool": 13,
+        "dv": 6,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Katana",
+        "pool": 16,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Viper",
+        "pool": 14,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Yamaha Raiden Major (BF) 15 9P",
+        "pool": 14,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Deadly Aim</strong>: If the Syman attacks a target during their Action Phase, they can use a Minor Action to gain a +2 bonus to the attack.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Ultrasound, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The Syman does not suffer recoil</li><li><strong>penalties.</strong>: </li><li><strong>Hot-sim</strong>: The Syman generally operates in hot-sim,</li><li><strong>making it vulnerable to biofeedback damage.</strong>: </li><li><strong>Mobile Combatant</strong>: When the Syman takes the Full</li><li><strong>Defense action, they can take the Run action as a</strong>: </li><li><strong>Minor Action in the same Action Phase.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "syman-2-14"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "SYMAN 2-14"
+  },
+  "_key": "!actors!YGcaFigRcS0ZeYOj"
+}

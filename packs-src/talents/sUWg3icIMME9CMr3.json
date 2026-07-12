@@ -1,0 +1,73 @@
+{
+  "_id": "sUWg3icIMME9CMr3",
+  "name": "Spirit Mastery",
+  "type": "talent",
+  "system": {
+    "summary": "Conjuring",
+    "description": "Improved Crit on Drain tests and can reduce Force by 1 for additional service with chosen spirit type",
+    "category": "conjuring",
+    "subgroup": "",
+    "karma": 7,
+    "option": "Dreams, Enlightenment, Guardian, Predator, Trickster, World",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Spirit Mastery",
+        "srxId": 432,
+        "category": "Conjuring",
+        "maxQty": 6,
+        "maxQtyForEachOption": 1,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Dreams",
+          "Enlightenment",
+          "Guardian",
+          "Predator",
+          "Trickster",
+          "World"
+        ],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Summon Spirit (Conjuring Talent)",
+        "prereq": {
+          "kind": "talent",
+          "name": "Summon Spirit",
+          "categoryHint": "Conjuring Talent"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 7
+        },
+        "description": "Improved Crit on Drain tests and can reduce Force by 1 for additional service with chosen spirit type",
+        "effects": [],
+        "slug": "spirit-mastery"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!sUWg3icIMME9CMr3"
+}

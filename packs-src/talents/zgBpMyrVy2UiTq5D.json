@@ -1,0 +1,62 @@
+{
+  "_id": "zgBpMyrVy2UiTq5D",
+  "name": "Edge: Close Call",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "+2 Defense Score against one attack",
+    "category": "general",
+    "subgroup": "",
+    "karma": 0,
+    "option": "",
+    "isEdgeAction": true
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Edge: Close Call",
+        "srxId": 15,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": "TRUE",
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 0
+        },
+        "description": "+2 Defense Score against one attack",
+        "effects": [],
+        "slug": "edge-close-call"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!zgBpMyrVy2UiTq5D"
+}

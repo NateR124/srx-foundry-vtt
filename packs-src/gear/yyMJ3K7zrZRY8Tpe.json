@@ -1,0 +1,55 @@
+{
+  "_id": "yyMJ3K7zrZRY8Tpe",
+  "name": "Damage Compensators",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "High Pain Tolerance Talent",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 11000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Damage Compensators",
+        "srxId": 3096,
+        "category": "Bodyware",
+        "cost": 11000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Damage Compensators",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.4",
+          "value": 0.4,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [
+          "High Pain Tolerance"
+        ],
+        "description": "High Pain Tolerance Talent",
+        "effects": [],
+        "slug": "damage-compensators"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!yyMJ3K7zrZRY8Tpe"
+}

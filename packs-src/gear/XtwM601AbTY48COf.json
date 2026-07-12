@@ -1,0 +1,62 @@
+{
+  "_id": "XtwM601AbTY48COf",
+  "name": "Platelet Factories",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "+1 Phys & Stun Health, Leverage on dying resistance tests",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 10000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Platelet Factories",
+        "srxId": 3109,
+        "category": "Bodyware",
+        "cost": 10000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Platelet Factories",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.2",
+          "value": 0.2,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [],
+        "grants": [],
+        "description": "+1 Phys & Stun Health, Leverage on dying resistance tests",
+        "effects": [
+          {
+            "key": "stunHealth",
+            "value": 1
+          },
+          {
+            "key": "physicalHealth",
+            "value": 1
+          }
+        ],
+        "slug": "platelet-factories"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!XtwM601AbTY48COf"
+}

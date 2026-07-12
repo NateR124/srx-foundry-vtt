@@ -1,0 +1,74 @@
+{
+  "_id": "EdFjKymA8k0bz1uM",
+  "name": "SYMAN 1-87",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 2,
+      "bonus": 5
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 15,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Cyber Spurs",
+        "pool": 12,
+        "dv": 6,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Sword",
+        "pool": 14,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Viper",
+        "pool": 13,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Yamaha Raiden Major (BF) 14 9P",
+        "pool": 13,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Block</strong>: The Syman can use its Interrupt action to gain a +2 bonus to its Defense Score against a melee attack.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Ultrasound, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The Syman does not suffer recoil</li><li><strong>penalties.</strong>: </li><li><strong>Engineered Kinetic Defenses</strong>: The Syman gains 1</li><li><strong>free hit on damage resistance tests against AOE</strong>: </li><li><strong>attacks.</strong>: </li><li><strong>Hot-sim</strong>: The Syman generally operates in hot-sim,</li><li><strong>making it vulnerable to biofeedback damage.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "syman-1-87"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "SYMAN 1-87"
+  },
+  "_key": "!actors!EdFjKymA8k0bz1uM"
+}

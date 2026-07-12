@@ -1,0 +1,67 @@
+{
+  "_id": "iLqtR5sxTvUNkLOL",
+  "name": "Social Programming",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Infusion",
+    "description": "+1 Con, Influence, or Insight",
+    "category": "threading",
+    "subgroup": "Infusion",
+    "karma": 4,
+    "option": "Con, Influence, Insight",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Social Programming",
+        "srxId": 334,
+        "category": "Threading",
+        "subcategory": "Infusion",
+        "maxQty": 3,
+        "maxQtyForEachOption": 3,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Con",
+          "Influence",
+          "Insight"
+        ],
+        "options2": [],
+        "type": "Infusion",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "+1 Con, Influence, or Insight",
+        "effects": [],
+        "slug": "social-programming"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!iLqtR5sxTvUNkLOL"
+}

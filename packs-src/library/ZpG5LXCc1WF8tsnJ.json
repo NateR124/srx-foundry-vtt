@@ -1,0 +1,30 @@
+{
+  "_id": "ZpG5LXCc1WF8tsnJ",
+  "name": "Hermetic Academic",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Scholarly mage, well-versed on arcane topics and esoteric magical theories",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Hermetic Academic",
+        "srxId": 10013,
+        "type": "Contact",
+        "type2": null,
+        "description": "Scholarly mage, well-versed on arcane topics and esoteric magical theories",
+        "slug": "hermetic-academic"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ZpG5LXCc1WF8tsnJ"
+}

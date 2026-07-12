@@ -1,0 +1,35 @@
+{
+  "_id": "mBSFHuZLeD5bjqDS",
+  "name": "Street Samurai",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "archetype",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "archetype",
+      "catalogData": {
+        "name": "Street Samurai",
+        "srxId": 11010,
+        "noFlare": true,
+        "isCustom": false,
+        "isDossierGroup": false,
+        "parent": "rules-dossier",
+        "flares": [],
+        "slug": "street-samurai"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "82fke5ZPHOqEvVwG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!mBSFHuZLeD5bjqDS"
+}

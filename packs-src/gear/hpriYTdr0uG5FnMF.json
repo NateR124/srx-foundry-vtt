@@ -1,0 +1,54 @@
+{
+  "_id": "hpriYTdr0uG5FnMF",
+  "name": "Cyberware Scanner",
+  "type": "gear",
+  "system": {
+    "summary": "Security & Scanners",
+    "description": "",
+    "subtype": "Security & Scanners",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 5000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Cyberware Scanner",
+        "srxId": 6106,
+        "category": "Security & Scanners",
+        "cost": 5000,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Security & Scanners",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "cyberware-scanner"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!hpriYTdr0uG5FnMF"
+}

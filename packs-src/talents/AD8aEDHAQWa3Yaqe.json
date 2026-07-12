@@ -1,0 +1,63 @@
+{
+  "_id": "AD8aEDHAQWa3Yaqe",
+  "name": "Animal Familiar",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism / Assensing",
+    "description": "Create telepathic connection with a small animal",
+    "category": "mysticism",
+    "subgroup": "Assensing",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Animal Familiar",
+        "srxId": 440,
+        "category": "Mysticism",
+        "subcategory": "Assensing",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Assensing",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": "Touch",
+        "duration": "Permanent",
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Create telepathic connection with a small animal",
+        "effects": [],
+        "slug": "animal-familiar"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!AD8aEDHAQWa3Yaqe"
+}

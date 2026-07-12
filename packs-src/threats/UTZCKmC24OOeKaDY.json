@@ -1,0 +1,66 @@
+{
+  "_id": "UTZCKmC24OOeKaDY",
+  "name": "HALLOWEENER SHAMAN",
+  "type": "threat",
+  "system": {
+    "threatRating": 1,
+    "initiative": {
+      "dice": 1,
+      "bonus": 2
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 12,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Knife",
+        "pool": 6,
+        "dv": 4,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Power",
+        "pool": 5,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Frigid (Spell)",
+        "pool": 0,
+        "dv": 3,
+        "dvType": "P",
+        "element": "cold",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic</strong>: </li></ul><h3>Formula DVs (evaluated at F = TR)</h3><ul><li><strong>Frigid (Spell)</strong>: (F+2)P Cold</li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "halloweener-shaman"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "HALLOWEENER SHAMAN"
+  },
+  "_key": "!actors!UTZCKmC24OOeKaDY"
+}

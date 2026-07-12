@@ -1,0 +1,42 @@
+{
+  "_id": "NWj5CwdmuVkg4ZbH",
+  "name": "Armor Vest",
+  "type": "armor",
+  "system": {
+    "summary": "",
+    "description": "",
+    "rating": 9,
+    "hardened": 2,
+    "heavy": true,
+    "shield": false,
+    "equipped": false,
+    "cost": 450
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "armor",
+      "catalogData": {
+        "name": "Armor Vest",
+        "srxId": 4008,
+        "cost": 450,
+        "properties": [
+          "Heavy",
+          "Hardened (2)"
+        ],
+        "options": [],
+        "rating": 9,
+        "hardened": 2,
+        "heavy": true,
+        "shield": false,
+        "slug": "armor-vest"
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!NWj5CwdmuVkg4ZbH"
+}

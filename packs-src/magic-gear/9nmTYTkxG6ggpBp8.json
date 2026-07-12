@@ -1,0 +1,49 @@
+{
+  "_id": "9nmTYTkxG6ggpBp8",
+  "name": "Vector (Crafted)",
+  "type": "gear",
+  "system": {
+    "summary": "Artifices (Crafted)",
+    "description": "",
+    "subtype": "Artifice",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Vector (Crafted)",
+        "srxId": 9131,
+        "category": "Artifices (Crafted)",
+        "cost": 1000,
+        "costDisplay": "16,000",
+        "properties": [],
+        "options": [],
+        "type": "Artifice",
+        "type2": "Artificing Gear",
+        "type3": "Vector",
+        "fixedRating": 4,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": "Artificing",
+        "maxQty": null,
+        "karmaCost": 0,
+        "crafted": true,
+        "equipPrereqs": [],
+        "alwaysUnique": true,
+        "slug": "vector-crafted"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!9nmTYTkxG6ggpBp8"
+}

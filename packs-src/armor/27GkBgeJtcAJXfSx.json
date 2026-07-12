@@ -1,0 +1,39 @@
+{
+  "_id": "27GkBgeJtcAJXfSx",
+  "name": "Urban Explorer Jumpsuit",
+  "type": "armor",
+  "system": {
+    "summary": "",
+    "description": "",
+    "rating": 8,
+    "hardened": 0,
+    "heavy": false,
+    "shield": false,
+    "equipped": false,
+    "cost": 350
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "armor",
+      "catalogData": {
+        "name": "Urban Explorer Jumpsuit",
+        "srxId": 4016,
+        "cost": 350,
+        "properties": [],
+        "options": [],
+        "rating": 8,
+        "hardened": 0,
+        "heavy": false,
+        "shield": false,
+        "slug": "urban-explorer-jumpsuit"
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!27GkBgeJtcAJXfSx"
+}

@@ -1,0 +1,76 @@
+{
+  "_id": "MvvxiPXuihN11o6z",
+  "name": "Improved Quickness",
+  "type": "talent",
+  "system": {
+    "summary": "Channeling / Yin",
+    "description": "+1 Quickness",
+    "category": "channeling",
+    "subgroup": "Yin",
+    "karma": 15,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Improved Quickness",
+        "srxId": 502,
+        "category": "Channeling",
+        "subcategory": "Yin",
+        "maxQty": 2,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [
+          15,
+          35
+        ],
+        "options": [],
+        "options2": [],
+        "type": "Yin",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 15,
+          "scale": [
+            15,
+            35
+          ],
+          "display": "15/35"
+        },
+        "description": "+1 Quickness",
+        "effects": [
+          {
+            "key": "QUI",
+            "value": 1
+          }
+        ],
+        "slug": "improved-quickness"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!MvvxiPXuihN11o6z"
+}

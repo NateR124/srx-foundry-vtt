@@ -1,0 +1,47 @@
+{
+  "_id": "GmkZDI34J7a6FtSQ",
+  "name": "Icy Aura",
+  "type": "spell",
+  "system": {
+    "summary": "Combat",
+    "description": "Gain Cold resistance. Targets that hit you with melee attack take (Force)P Cold damage.",
+    "category": "combat",
+    "pattern": "self",
+    "duration": "sustained",
+    "range": "Self",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "P",
+    "element": "cold",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Combat"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Icy Aura",
+        "srxId": 1538,
+        "category": "Combat",
+        "description": "Gain Cold resistance. Targets that hit you with melee attack take (Force)P Cold damage.",
+        "range": {
+          "raw": "Self",
+          "special": "Self"
+        },
+        "duration": "Sustained",
+        "resistance": null,
+        "attack": null,
+        "slug": "icy-aura"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "zZc1PdtmOVQowgGq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!GmkZDI34J7a6FtSQ"
+}

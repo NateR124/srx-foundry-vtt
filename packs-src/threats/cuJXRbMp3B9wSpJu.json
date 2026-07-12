@@ -1,0 +1,50 @@
+{
+  "_id": "cuJXRbMp3B9wSpJu",
+  "name": "MERCENARY PILOT",
+  "type": "threat",
+  "system": {
+    "threatRating": 5,
+    "initiative": {
+      "dice": 3,
+      "bonus": 8
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 14,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Colt America L36",
+        "pool": 15,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Blaster IC</strong>: On a failed Hacking attempt against the mercenary pilot, intruder suffers 10S Biofeedback damage.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The mercenary pilot does not</li><li><strong>suffer recoil penalties.</strong>: </li><li><strong>Improved Crit</strong>: On Piloting tests, the pilot scores a</li><li><strong>critical hit with their Crit Dice on a 5 or a 6.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "mercenary-pilot"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "MERCENARY PILOT"
+  },
+  "_key": "!actors!cuJXRbMp3B9wSpJu"
+}

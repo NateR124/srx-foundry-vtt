@@ -1,0 +1,59 @@
+{
+  "_id": "dOr48leQqOqHDenx",
+  "name": "Muscle Cabling",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "+Rating to Body",
+    "subtype": "ware",
+    "rating": 3,
+    "quantity": 1,
+    "cost": 33000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Muscle Cabling",
+        "srxId": 3104,
+        "category": "Bodyware",
+        "cost": 33000,
+        "costDisplay": "Rating x 33,000",
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Muscle Cabling",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": 3,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "Rating x 0.4",
+          "value": 0.4,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [],
+        "grants": [],
+        "description": "+Rating to Body",
+        "effects": [
+          {
+            "key": "bod",
+            "value": 1
+          }
+        ],
+        "slug": "muscle-cabling"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!dOr48leQqOqHDenx"
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "ywuXLF1wzgPTYlC5",
+  "name": "Bayonet",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 350
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon-mod",
+      "catalogData": {
+        "name": "Bayonet",
+        "srxId": 5502,
+        "cost": 350,
+        "properties": [
+          "Two-Handed"
+        ],
+        "type": "Modification",
+        "mounts": [
+          2,
+          5
+        ],
+        "allMountsRequired": false,
+        "noMount": false,
+        "requiresMod": null,
+        "slug": "bayonet"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "rHfaFyA9uk37DvRq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ywuXLF1wzgPTYlC5"
+}

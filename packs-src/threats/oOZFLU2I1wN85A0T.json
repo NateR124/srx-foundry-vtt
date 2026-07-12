@@ -1,0 +1,66 @@
+{
+  "_id": "oOZFLU2I1wN85A0T",
+  "name": "BLACK LOTUS",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 2,
+      "bonus": 5
+    },
+    "defenseScore": 5,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 12,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Knife",
+        "pool": 6,
+        "dv": 4,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ice Spear (Spell)",
+        "pool": 17,
+        "dv": 8,
+        "dvType": "P",
+        "element": "cold",
+        "action": "major"
+      },
+      {
+        "name": "Fireball (Spell)",
+        "pool": 0,
+        "dv": 7,
+        "dvType": "P",
+        "element": "acid",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation,</li><li><strong>Thermographic, Vision Magnification</strong>: </li></ul><h3>Formula DVs (evaluated at F = TR)</h3><ul><li><strong>Ice Spear (Spell)</strong>: (F+4)P Cold</li><li><strong>Fireball (Spell)</strong>: (F+3)P Acid</li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "black-lotus"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "BLACK LOTUS"
+  },
+  "_key": "!actors!oOZFLU2I1wN85A0T"
+}

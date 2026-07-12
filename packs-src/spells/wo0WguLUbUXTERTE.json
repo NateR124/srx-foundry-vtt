@@ -1,0 +1,49 @@
+{
+  "_id": "wo0WguLUbUXTERTE",
+  "name": "Fleet Feet",
+  "type": "spell",
+  "system": {
+    "summary": "Health",
+    "description": "+Force to target's Movement Rate. Target Runs as Minor Action, and Moves as Free Action.",
+    "category": "health",
+    "pattern": "direct",
+    "duration": "sustained",
+    "range": "30m",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Health"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Fleet Feet",
+        "srxId": 1531,
+        "category": "Health",
+        "description": "+Force to target's Movement Rate. Target Runs as Minor Action, and Moves as Free Action.",
+        "range": {
+          "raw": "30m",
+          "bands": [
+            30
+          ]
+        },
+        "duration": "Sustained",
+        "resistance": null,
+        "attack": null,
+        "slug": "fleet-feet"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "81q0dM8ktqbFvvhu",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!wo0WguLUbUXTERTE"
+}

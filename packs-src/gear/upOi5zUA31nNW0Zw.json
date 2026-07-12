@@ -1,0 +1,55 @@
+{
+  "_id": "upOi5zUA31nNW0Zw",
+  "name": "Picrotoxin",
+  "type": "gear",
+  "system": {
+    "summary": "Toxins & Drugs / Toxins",
+    "description": "",
+    "subtype": "Toxin",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 900
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Picrotoxin",
+        "srxId": 6171,
+        "category": "Toxins & Drugs",
+        "subcategory": "Toxins",
+        "cost": 900,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Toxin",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "picrotoxin"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!upOi5zUA31nNW0Zw"
+}

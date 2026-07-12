@@ -1,0 +1,39 @@
+{
+  "_id": "waCElkjoRykeWQLm",
+  "name": "Riot Shield",
+  "type": "armor",
+  "system": {
+    "summary": "",
+    "description": "",
+    "rating": 0,
+    "hardened": 0,
+    "heavy": false,
+    "shield": true,
+    "equipped": false,
+    "cost": 1500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "armor",
+      "catalogData": {
+        "name": "Riot Shield",
+        "srxId": 4017,
+        "cost": 1500,
+        "properties": [],
+        "options": [],
+        "rating": 0,
+        "hardened": 0,
+        "heavy": false,
+        "shield": true,
+        "slug": "riot-shield"
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!waCElkjoRykeWQLm"
+}

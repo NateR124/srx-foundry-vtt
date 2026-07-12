@@ -1,0 +1,51 @@
+{
+  "_id": "qE1tT4QuNBFpAzGR",
+  "name": "Astral Armor (Crafted)",
+  "type": "gear",
+  "system": {
+    "summary": "Foci (Crafted)",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Astral Armor (Crafted)",
+        "srxId": 9057,
+        "category": "Foci (Crafted)",
+        "cost": 1000,
+        "costDisplay": "16,000",
+        "properties": [],
+        "options": [],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": "Astral Armor",
+        "fixedRating": 4,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": "Enchanting",
+        "maxQty": null,
+        "karmaCost": 0,
+        "crafted": true,
+        "equipPrereqs": [
+          "Astral Perception"
+        ],
+        "alwaysUnique": true,
+        "slug": "astral-armor-crafted"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!qE1tT4QuNBFpAzGR"
+}

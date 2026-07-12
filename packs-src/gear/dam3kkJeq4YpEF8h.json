@@ -1,0 +1,54 @@
+{
+  "_id": "dam3kkJeq4YpEF8h",
+  "name": "Stealth Rope",
+  "type": "gear",
+  "system": {
+    "summary": "Tools & Survival Gear",
+    "description": "",
+    "subtype": "Tools & Survival Gear",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 200
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Stealth Rope",
+        "srxId": 6145,
+        "category": "Tools & Survival Gear",
+        "cost": 200,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Tools & Survival Gear",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "stealth-rope"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!dam3kkJeq4YpEF8h"
+}

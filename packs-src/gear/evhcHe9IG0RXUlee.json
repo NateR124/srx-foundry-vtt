@@ -1,0 +1,55 @@
+{
+  "_id": "evhcHe9IG0RXUlee",
+  "name": "Synthetic Wrap (Off-Leg)",
+  "type": "gear",
+  "system": {
+    "summary": "Cyberlimbs / Cyberlegs",
+    "description": "Make cyberleg look life-like",
+    "subtype": "Cyberleg Upgrade",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Synthetic Wrap (Off-Leg)",
+        "srxId": 3079,
+        "category": "Cyberlimbs",
+        "subcategory": "Cyberlegs",
+        "cost": 2000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Synthetic Wrap (Off-Leg)Cyberleg Upgrade",
+        "type": "Cyberleg Upgrade",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0",
+          "value": 0,
+          "scale": []
+        },
+        "parentContainer": "Cyberleg (Off-Leg)",
+        "prereq": "DNI (Direct Neural Interface),Cyberleg (Off-Leg)",
+        "incompatible": [],
+        "grants": [],
+        "description": "Make cyberleg look life-like",
+        "effects": [],
+        "slug": "synthetic-wrap-off-leg",
+        "variantOf": "cyberleg-off-leg"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!evhcHe9IG0RXUlee"
+}

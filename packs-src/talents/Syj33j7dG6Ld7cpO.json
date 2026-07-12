@@ -1,0 +1,62 @@
+{
+  "_id": "Syj33j7dG6Ld7cpO",
+  "name": "Edge: Hustle",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "Change one Initiative die to 6",
+    "category": "general",
+    "subgroup": "",
+    "karma": 0,
+    "option": "",
+    "isEdgeAction": true
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Edge: Hustle",
+        "srxId": 18,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": "TRUE",
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 0
+        },
+        "description": "Change one Initiative die to 6",
+        "effects": [],
+        "slug": "edge-hustle"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Syj33j7dG6Ld7cpO"
+}

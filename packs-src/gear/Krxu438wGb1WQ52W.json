@@ -1,0 +1,69 @@
+{
+  "_id": "Krxu438wGb1WQ52W",
+  "name": "Cyber Gun",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "Hidden gun built-in to your arm",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Cyber Gun",
+        "srxId": 3092,
+        "category": "Bodyware",
+        "cost": 0,
+        "costDisplay": "Per Option: 4k/10k/10k",
+        "properties": [],
+        "options": [
+          "Pistol",
+          "SMG",
+          "Shotgun"
+        ],
+        "dictionaryName": "Cyber Gun",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": 2,
+        "nuyenScale": [
+          4000,
+          10000,
+          10000
+        ],
+        "essence": {
+          "display": "Per Option: 0.2/0.3/0.5",
+          "value": 0,
+          "scale": [
+            0.2,
+            0.3,
+            0.5
+          ]
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Cyberarm",
+          "Gyroarm"
+        ],
+        "grants": [],
+        "description": "Hidden gun built-in to your arm",
+        "effects": [],
+        "slug": "cyber-gun-2"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Krxu438wGb1WQ52W"
+}

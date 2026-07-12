@@ -1,0 +1,63 @@
+{
+  "_id": "GA7FDy07aKkQnHAA",
+  "name": "Sharpshooter",
+  "type": "talent",
+  "system": {
+    "summary": "Weapons / F (Semi-Automatic/Single Shot Firing Mode), PW",
+    "description": "When using Semi-Automatic/Single Shot firing mode, Take Aim action reduces target's cover bonus by 1",
+    "category": "weapons",
+    "subgroup": "F (Semi-Automatic/Single Shot Firing Mode), PW",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Sharpshooter",
+        "srxId": 159,
+        "category": "Weapons",
+        "subcategory": "F (Semi-Automatic/Single Shot Firing Mode), PW",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "F (Semi-Automatic/Single Shot Firing Mode), PW",
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "When using Semi-Automatic/Single Shot firing mode, Take Aim action reduces target's cover bonus by 1",
+        "effects": [],
+        "slug": "sharpshooter"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!GA7FDy07aKkQnHAA"
+}

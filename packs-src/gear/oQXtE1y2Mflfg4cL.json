@@ -1,0 +1,72 @@
+{
+  "_id": "oQXtE1y2Mflfg4cL",
+  "name": "Saeder-Krupp Motherboard",
+  "type": "gear",
+  "system": {
+    "summary": "Drone Command Consoles",
+    "description": "",
+    "subtype": "DCC",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 55000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Saeder-Krupp Motherboard",
+        "srxId": 7503,
+        "category": "Drone Command Consoles",
+        "cost": 55000,
+        "properties": [],
+        "options": [],
+        "type": "DCC",
+        "type2": null,
+        "type3": null,
+        "isDcc": true,
+        "skill": null,
+        "specialProperties": [],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": 2,
+          "dccMaxDrones": 2,
+          "handling": null,
+          "speed": null,
+          "body": null,
+          "armor": null,
+          "health": null,
+          "defenseScoreMod": null,
+          "autoRating": null,
+          "autoDefenseScore": null,
+          "dccBenefits": "Optimized Processing",
+          "autoSkills": null,
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [],
+        "slug": "saeder-krupp-motherboard"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!oQXtE1y2Mflfg4cL"
+}

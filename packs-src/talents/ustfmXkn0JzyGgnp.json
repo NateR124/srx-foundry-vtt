@@ -1,0 +1,66 @@
+{
+  "_id": "ustfmXkn0JzyGgnp",
+  "name": "Disabling Shot",
+  "type": "talent",
+  "system": {
+    "summary": "Vehicle",
+    "description": "When attacking vehicle, 1 Crit Die is Break Down die - 6 reduces target's Wounded Limit to 1, gives target Liability on damage resistance test with Shoot the Tires called shot",
+    "category": "vehicle",
+    "subgroup": "",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Disabling Shot",
+        "srxId": 353,
+        "category": "Vehicle",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Engineering 4",
+        "prereq": {
+          "kind": "rating",
+          "subject": "Engineering",
+          "min": 4
+        },
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "When attacking vehicle, 1 Crit Die is Break Down die - 6 reduces target's Wounded Limit to 1, gives target Liability on damage resistance test with Shoot the Tires called shot",
+        "effects": [],
+        "slug": "disabling-shot-2"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ustfmXkn0JzyGgnp"
+}

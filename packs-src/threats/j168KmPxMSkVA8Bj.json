@@ -1,0 +1,66 @@
+{
+  "_id": "j168KmPxMSkVA8Bj",
+  "name": "WESTERN DRAGON",
+  "type": "threat",
+  "system": {
+    "threatRating": 6,
+    "initiative": {
+      "dice": 4,
+      "bonus": 12
+    },
+    "defenseScore": 7,
+    "health": {
+      "value": 0,
+      "max": 34
+    },
+    "armor": 32,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Claw (Reach: 2m)",
+        "pool": 23,
+        "dv": 16,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Bite",
+        "pool": 20,
+        "dv": 18,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Breath Weapon",
+        "pool": 0,
+        "dv": 16,
+        "dvType": "P",
+        "element": "fire",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Breath Weapon</strong>: The dragon uses its Breath Weapon attack above, affecting everything in a 30m cone. At any given point, the cone’s width is equal to its length. The dragon cannot use its Breath Weapon if it already used it in this Combat Turn or the previous Combat Turn.</li><li><strong>Furious Rake</strong>: Twice per Combat Turn, at the end of any enemy’s Action Phase, the dragon can use its Claw attack.</li></ul><h3>Traits</h3><ul><li><strong>Physical, Fire Resistance</strong>: </li><li><strong>Apex Predator</strong>: Can’t gain Frightened status.</li><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Ultrasound, Vision Magnification</strong>: </li><li><strong>Dual Natured</strong>: Dragons always exist on both the</li><li><strong>astral and physical planes, and can interact with</strong>: </li><li><strong>anything on either plane. Their Armor applies to</strong>: </li><li><strong>attacks from both the physical and astral planes.</strong>: </li><li><strong>Unchained</strong>: If the dragon is under an effect that they</li><li><strong>roll at the end of the Combat Turn or their Action</strong>: </li><li><strong>Phase to end, they instead roll at the start of their</strong>: </li><li><strong>Action Phase.</strong>: </li></ul>",
+    "tags": [
+      "critter"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "western-dragon"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "q9e964oWjMmRYuNH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "WESTERN DRAGON"
+  },
+  "_key": "!actors!j168KmPxMSkVA8Bj"
+}

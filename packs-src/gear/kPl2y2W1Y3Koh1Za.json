@@ -1,0 +1,52 @@
+{
+  "_id": "kPl2y2W1Y3Koh1Za",
+  "name": "Crash Cart",
+  "type": "gear",
+  "system": {
+    "summary": "Tools & Survival Gear",
+    "description": "",
+    "subtype": "Tools & Survival Gear",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 5000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Crash Cart",
+        "srxId": 6122,
+        "category": "Tools & Survival Gear",
+        "cost": 5000,
+        "properties": [],
+        "options": [],
+        "type": "Tools & Survival Gear",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "crash-cart"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!kPl2y2W1Y3Koh1Za"
+}

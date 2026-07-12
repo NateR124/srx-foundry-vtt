@@ -1,0 +1,49 @@
+{
+  "_id": "LNqF9uHFRFoQBaXR",
+  "name": "Accelerator (Crafted)",
+  "type": "gear",
+  "system": {
+    "summary": "Artifices (Crafted)",
+    "description": "",
+    "subtype": "Artifice",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Accelerator (Crafted)",
+        "srxId": 9114,
+        "category": "Artifices (Crafted)",
+        "cost": 1000,
+        "costDisplay": "36,000",
+        "properties": [],
+        "options": [],
+        "type": "Artifice",
+        "type2": "Artificing Gear",
+        "type3": "Accelerator",
+        "fixedRating": 6,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": "Artificing",
+        "maxQty": null,
+        "karmaCost": 0,
+        "crafted": true,
+        "equipPrereqs": [],
+        "alwaysUnique": true,
+        "slug": "accelerator-crafted"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!LNqF9uHFRFoQBaXR"
+}

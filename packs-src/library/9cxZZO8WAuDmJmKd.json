@@ -1,0 +1,30 @@
+{
+  "_id": "9cxZZO8WAuDmJmKd",
+  "name": "Mr. Johnson",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "High-ranking corporate exec, who can be a resource for jobs or rumors about megacorps",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Mr. Johnson",
+        "srxId": 10017,
+        "type": "Contact",
+        "type2": null,
+        "description": "High-ranking corporate exec, who can be a resource for jobs or rumors about megacorps",
+        "slug": "mr-johnson"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!9cxZZO8WAuDmJmKd"
+}

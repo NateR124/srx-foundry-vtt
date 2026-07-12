@@ -1,0 +1,55 @@
+{
+  "_id": "MmIO4UNSORIsLvqV",
+  "name": "Atropine",
+  "type": "gear",
+  "system": {
+    "summary": "Toxins & Drugs / Toxins",
+    "description": "",
+    "subtype": "Toxin",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 350
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Atropine",
+        "srxId": 6163,
+        "category": "Toxins & Drugs",
+        "subcategory": "Toxins",
+        "cost": 350,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Toxin",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "atropine"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!MmIO4UNSORIsLvqV"
+}

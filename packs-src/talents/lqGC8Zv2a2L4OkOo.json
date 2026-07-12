@@ -1,0 +1,63 @@
+{
+  "_id": "lqGC8Zv2a2L4OkOo",
+  "name": "Leg Shot/Hamstring Attack",
+  "type": "talent",
+  "system": {
+    "summary": "Weapons / CC, F, PW",
+    "description": "Called shot to impose Hobbled status and -1 Defense Score",
+    "category": "weapons",
+    "subgroup": "CC, F, PW",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Leg Shot/Hamstring Attack",
+        "srxId": 145,
+        "category": "Weapons",
+        "subcategory": "CC, F, PW",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "CC, F, PW",
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Called shot to impose Hobbled status and -1 Defense Score",
+        "effects": [],
+        "slug": "leg-shot-hamstring-attack"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!lqGC8Zv2a2L4OkOo"
+}

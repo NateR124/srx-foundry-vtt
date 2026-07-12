@@ -1,0 +1,31 @@
+{
+  "_id": "vuYkcvIf8fkSB44r",
+  "name": "Ex-Suit",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Be recognized by an old co-worker while you’re playing a part in a run",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Ex-Suit",
+        "srxId": 10525,
+        "type": "Trait",
+        "type2": null,
+        "description": "Be recognized by an old co-worker while you’re playing a part in a run",
+        "options": [],
+        "slug": "ex-suit"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!vuYkcvIf8fkSB44r"
+}

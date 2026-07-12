@@ -1,0 +1,47 @@
+{
+  "_id": "1shM2XkgJZoNYAx5",
+  "name": "Remove Sense",
+  "type": "spell",
+  "system": {
+    "summary": "Health",
+    "description": "Blind target, or remove other sense of your choice",
+    "category": "health",
+    "pattern": "touch",
+    "duration": "timed",
+    "range": "Touch",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Health"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Remove Sense",
+        "srxId": 1561,
+        "category": "Health",
+        "description": "Blind target, or remove other sense of your choice",
+        "range": {
+          "raw": "Touch",
+          "special": "Touch"
+        },
+        "duration": "1 hour",
+        "resistance": "WIL+INT",
+        "attack": null,
+        "slug": "remove-sense"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "81q0dM8ktqbFvvhu",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!1shM2XkgJZoNYAx5"
+}

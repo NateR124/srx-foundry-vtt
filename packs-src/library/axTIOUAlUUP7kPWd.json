@@ -1,0 +1,31 @@
+{
+  "_id": "axTIOUAlUUP7kPWd",
+  "name": "Criminal Organizations",
+  "type": "knowledge",
+  "system": {
+    "summary": "",
+    "description": "Gangs, Mafia, Yakuza, hacker groups",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "Criminal Organizations",
+        "srxId": 10006,
+        "type": "Knowledge Domain",
+        "type2": null,
+        "description": "Gangs, Mafia, Yakuza, hacker groups",
+        "freePool": null,
+        "slug": "criminal-organizations"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!axTIOUAlUUP7kPWd"
+}

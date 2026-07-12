@@ -1,0 +1,51 @@
+{
+  "_id": "tyHfG56Bfb46tbZy",
+  "name": "Conjuring (Crafted)",
+  "type": "gear",
+  "system": {
+    "summary": "Foci (Crafted)",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Conjuring (Crafted)",
+        "srxId": 9062,
+        "category": "Foci (Crafted)",
+        "cost": 1000,
+        "costDisplay": "36,000",
+        "properties": [],
+        "options": [],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": "Conjuring",
+        "fixedRating": 6,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": "Enchanting",
+        "maxQty": null,
+        "karmaCost": 0,
+        "crafted": true,
+        "equipPrereqs": [
+          "Expertise: Conjuring"
+        ],
+        "alwaysUnique": true,
+        "slug": "conjuring-crafted"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!tyHfG56Bfb46tbZy"
+}

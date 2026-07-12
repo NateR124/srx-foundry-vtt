@@ -1,0 +1,65 @@
+{
+  "_id": "lbebNXmWc97UfOGT",
+  "name": "Virtual Reskin",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Fading",
+    "description": "Gain Wrapper Hacking Talent. Target up to (Level) allies, or one unwilling target.",
+    "category": "threading",
+    "subgroup": "Fading",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Virtual Reskin",
+        "srxId": 338,
+        "category": "Threading",
+        "subcategory": "Fading",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Fading",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "No",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [
+          "Wrapper"
+        ],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Gain Wrapper Hacking Talent. Target up to (Level) allies, or one unwilling target.",
+        "effects": [],
+        "slug": "virtual-reskin"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!lbebNXmWc97UfOGT"
+}

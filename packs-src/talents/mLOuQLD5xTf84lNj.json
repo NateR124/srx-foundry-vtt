@@ -1,0 +1,67 @@
+{
+  "_id": "mLOuQLD5xTf84lNj",
+  "name": "Elven Grace",
+  "type": "talent",
+  "system": {
+    "summary": "Metatype",
+    "description": "On Stealth tests, 1 Crit Die is Aptitude die - hit on 2+",
+    "category": "metatype",
+    "subgroup": "",
+    "karma": 8,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Elven Grace",
+        "srxId": 90,
+        "category": "Metatype",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Metatype Elf",
+        "prereq": {
+          "kind": "metatype",
+          "values": [
+            "Elf"
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 8
+        },
+        "description": "On Stealth tests, 1 Crit Die is Aptitude die - hit on 2+",
+        "effects": [],
+        "slug": "elven-grace"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!mLOuQLD5xTf84lNj"
+}

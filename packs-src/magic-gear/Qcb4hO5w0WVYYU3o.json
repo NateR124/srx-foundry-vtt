@@ -1,0 +1,53 @@
+{
+  "_id": "Qcb4hO5w0WVYYU3o",
+  "name": "Technomantic (Crafted)",
+  "type": "gear",
+  "system": {
+    "summary": "Artifices (Crafted)",
+    "description": "",
+    "subtype": "Artifice",
+    "rating": 15,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Technomantic (Crafted)",
+        "srxId": 9127,
+        "category": "Artifices (Crafted)",
+        "cost": 1000,
+        "costDisplay": "Level x Level x 1,000",
+        "properties": [],
+        "options": [
+          "Hacking Software Threading talents you know"
+        ],
+        "type": "Artifice",
+        "type2": "Artificing Gear",
+        "type3": null,
+        "fixedRating": null,
+        "maxRating": 15,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": "Artificing",
+        "maxQty": null,
+        "karmaCost": 0,
+        "crafted": true,
+        "equipPrereqs": [
+          "Expertise: Technomancer"
+        ],
+        "alwaysUnique": true,
+        "slug": "technomantic-crafted"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Qcb4hO5w0WVYYU3o"
+}

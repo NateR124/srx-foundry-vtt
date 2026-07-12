@@ -1,0 +1,38 @@
+{
+  "_id": "ONhslcYmEQBbNJEM",
+  "name": "Low-Light",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 375
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon-mod",
+      "catalogData": {
+        "name": "Low-Light",
+        "srxId": 5509,
+        "cost": 375,
+        "properties": [],
+        "type": "Modification",
+        "mounts": [],
+        "allMountsRequired": false,
+        "noMount": true,
+        "requiresMod": "Imaging Scope",
+        "slug": "low-light",
+        "variantOf": "imaging-scope"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "rHfaFyA9uk37DvRq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ONhslcYmEQBbNJEM"
+}

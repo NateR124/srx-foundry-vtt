@@ -1,0 +1,50 @@
+{
+  "_id": "lBICP6RrBsiASdxp",
+  "name": "CICADA MALE SPIRIT",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 2,
+      "bonus": 4
+    },
+    "defenseScore": 2,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 7,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Bite",
+        "pool": 11,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Deranged Chittering</strong>: All living beings within 30m that can hear the spirit make a Willpower + Logic magic resistance test with a threshold equal to the spirit’s Force. Any bonuses or penalties a target has against sonic attacks apply to their resistance test. If a target fails, they have Liability on all tests, excluding resistance tests, and a –2 penalty to their Defense Score as long as they can hear any cicada spirit using this power. An affected target can repeat the magic resistance test at the end of each Combat Turn to end this effect. If a target succeeds on their resistance test, they cannot be affected by this power being used by the same spirit again for 24 hours. CICADA NYMPH SPIRIT</li></ul><h3>Traits</h3><ul><li><strong>Physical Resistance</strong>: </li><li><strong>Unphased</strong>: Can’t gain Frightened or Wounded status.</li><li><strong>Toxin &amp; Disease Immunity</strong>: The spirit is immune to</li><li><strong>diseases &amp; toxins other than insecticides.</strong>: </li><li><strong>Banishing Resistance</strong>: When targeted by the Negate</li><li><strong>Mysticism power, double the spirit’s Force.</strong>: </li><li><strong>Dual Natured</strong>: Insect spirits always exist on both the</li><li><strong>astral and physical plane.</strong>: </li></ul>",
+    "tags": [
+      "critter"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "cicada-male-spirit"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "q9e964oWjMmRYuNH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "CICADA MALE SPIRIT"
+  },
+  "_key": "!actors!lBICP6RrBsiASdxp"
+}

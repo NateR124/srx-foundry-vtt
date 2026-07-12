@@ -1,0 +1,33 @@
+{
+  "_id": "cS4d6Yp51GIX02PA",
+  "name": "Spirit Bane",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Your astral signature attracts and angers a certain type of spirit, which may target you in battle",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Spirit Bane",
+        "srxId": 10543,
+        "type": "Trait",
+        "type2": null,
+        "description": "Your astral signature attracts and angers a certain type of spirit, which may target you in battle",
+        "options": [
+          "free text"
+        ],
+        "slug": "spirit-bane"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!cS4d6Yp51GIX02PA"
+}

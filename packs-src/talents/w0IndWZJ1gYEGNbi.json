@@ -1,0 +1,63 @@
+{
+  "_id": "w0IndWZJ1gYEGNbi",
+  "name": "Protected Device Segmentation (PDS)",
+  "type": "talent",
+  "system": {
+    "summary": "Software / Firewall",
+    "description": "+1 Matrix Defense Score against weapons & cyberware programs",
+    "category": "software",
+    "subgroup": "Firewall",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Protected Device Segmentation (PDS)",
+        "srxId": 269,
+        "category": "Software",
+        "subcategory": "Firewall",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Firewall",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "+1 Matrix Defense Score against weapons & cyberware programs",
+        "effects": [],
+        "slug": "protected-device-segmentation-pds-2"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!w0IndWZJ1gYEGNbi"
+}

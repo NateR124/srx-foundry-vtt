@@ -1,0 +1,68 @@
+{
+  "_id": "eLL4fw1wQyHvMjHN",
+  "name": "Mastery of Self",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism / Assensing",
+    "description": "+1 Willpower",
+    "category": "mysticism",
+    "subgroup": "Assensing",
+    "karma": 10,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Mastery of Self",
+        "srxId": 467,
+        "category": "Mysticism",
+        "subcategory": "Assensing",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Assensing",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 10
+        },
+        "description": "+1 Willpower",
+        "effects": [
+          {
+            "key": "WIL",
+            "value": 1
+          }
+        ],
+        "slug": "mastery-of-self-2"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!eLL4fw1wQyHvMjHN"
+}

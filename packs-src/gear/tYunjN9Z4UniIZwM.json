@@ -1,0 +1,68 @@
+{
+  "_id": "tYunjN9Z4UniIZwM",
+  "name": "Shiawase Cyber-6 Cyberdeck",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Cyberdecks",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 122000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Shiawase Cyber-6 Cyberdeck",
+        "srxId": 6025,
+        "category": "Matrix Devices",
+        "subcategory": "Cyberdecks",
+        "cost": 122000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Cyberdecks",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": 3,
+        "matrix": {
+          "dataProcessing": "1",
+          "firewall": "4",
+          "hotSimFirewall": "2",
+          "hackingTests": "1",
+          "agents": "5",
+          "rank": "22",
+          "modCapacity": "4"
+        },
+        "installedEnhancements": [
+          {
+            "name": "Agent",
+            "value": "Y"
+          },
+          {
+            "name": "Jailbreak",
+            "value": "Weapons & Cyberware"
+          },
+          {
+            "name": "Malware",
+            "value": "Y"
+          }
+        ],
+        "slug": "shiawase-cyber-6-cyberdeck"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!tYunjN9Z4UniIZwM"
+}

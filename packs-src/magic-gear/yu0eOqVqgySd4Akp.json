@@ -1,0 +1,49 @@
+{
+  "_id": "yu0eOqVqgySd4Akp",
+  "name": "Magical Lodge (Temporary)",
+  "type": "gear",
+  "system": {
+    "summary": "Mysticism Talents",
+    "description": "",
+    "subtype": "Permanent Magical Effect",
+    "rating": 6,
+    "quantity": 1,
+    "cost": 200
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Magical Lodge (Temporary)",
+        "srxId": 9014,
+        "category": "Mysticism Talents",
+        "cost": 200,
+        "costDisplay": "Force x 200",
+        "properties": [],
+        "options": [],
+        "type": "Permanent Magical Effect",
+        "type2": "Magical Gear",
+        "type3": null,
+        "fixedRating": null,
+        "maxRating": 6,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": "Magical Lodge",
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": true,
+        "equipPrereqs": [],
+        "alwaysUnique": false,
+        "slug": "magical-lodge-temporary"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!yu0eOqVqgySd4Akp"
+}

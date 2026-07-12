@@ -1,0 +1,115 @@
+{
+  "_id": "GMdZxw5vlYrDSFof",
+  "name": "Remington 950",
+  "type": "weapon",
+  "system": {
+    "summary": "Sniper Rifles",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "Sniper Rifles",
+    "category": "Sniper Rifles",
+    "range": "50/100/1,000m",
+    "properties": "Two-Handed",
+    "cost": 2600,
+    "attackModes": [
+      {
+        "name": "Ranged",
+        "action": "complex",
+        "fireMode": "SS",
+        "acc": 0,
+        "dv": "10",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Remington 950",
+        "srxId": 4597,
+        "category": "Sniper Rifles",
+        "cost": 2600,
+        "properties": [
+          "Two-Handed"
+        ],
+        "options": [],
+        "type": "Firearms",
+        "type2": "Sniper Rifles",
+        "type3": null,
+        "skill": "Firearms",
+        "specialization": "Sniper Rifles",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "50/100/1,000m",
+          "bands": [
+            50,
+            100,
+            1000
+          ]
+        },
+        "improvedRange": {
+          "raw": "50/100/1,500m",
+          "bands": [
+            50,
+            100,
+            1500
+          ]
+        },
+        "canMod": true,
+        "mounts": {
+          "barrel": 1,
+          "internal": 0,
+          "side": 1,
+          "stock": 1,
+          "top": 1,
+          "underbarrel": 1,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [
+          {
+            "name": "Imaging Scope",
+            "modSlug": "imaging-scope",
+            "mounts": [
+              4
+            ]
+          },
+          {
+            "name": "Vision Magnification",
+            "modSlug": "vision-magnification",
+            "mounts": "builtIn"
+          }
+        ],
+        "attackModes": [
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": "SS",
+            "accuracy": 0,
+            "dv": {
+              "raw": "10",
+              "value": 10,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "remington-950"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CmkjszDwd2SBy8Jk",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!GMdZxw5vlYrDSFof"
+}

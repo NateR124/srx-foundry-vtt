@@ -1,0 +1,52 @@
+{
+  "_id": "0f2ceKbUUNdAQPck",
+  "name": "Research Lab",
+  "type": "gear",
+  "system": {
+    "summary": "Tools & Survival Gear",
+    "description": "",
+    "subtype": "Tools & Survival Gear",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 60000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Research Lab",
+        "srxId": 6142,
+        "category": "Tools & Survival Gear",
+        "cost": 60000,
+        "properties": [],
+        "options": [],
+        "type": "Tools & Survival Gear",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "research-lab"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!0f2ceKbUUNdAQPck"
+}

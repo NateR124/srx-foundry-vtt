@@ -1,0 +1,67 @@
+{
+  "_id": "jHzcBMw1LxBTKbAI",
+  "name": "Evasion Autosoft",
+  "type": "talent",
+  "system": {
+    "summary": "Vehicle / Autopilot",
+    "description": "Vehicles on your DCC gain +1-2 Defense Score and can take Full Defense action",
+    "category": "vehicle",
+    "subgroup": "Autopilot",
+    "karma": 12,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Evasion Autosoft",
+        "srxId": 361,
+        "category": "Vehicle",
+        "subcategory": "Autopilot",
+        "maxQty": 2,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Autopilot",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Software 4",
+        "prereq": {
+          "kind": "rating",
+          "subject": "Software",
+          "min": 4
+        },
+        "grants": [],
+        "cost": {
+          "karma": 12
+        },
+        "description": "Vehicles on your DCC gain +1-2 Defense Score and can take Full Defense action",
+        "effects": [],
+        "slug": "evasion-autosoft"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!jHzcBMw1LxBTKbAI"
+}

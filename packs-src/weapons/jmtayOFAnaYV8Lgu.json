@@ -1,0 +1,93 @@
+{
+  "_id": "jmtayOFAnaYV8Lgu",
+  "name": "Renraku Bo Strike",
+  "type": "weapon",
+  "system": {
+    "summary": "Close Combat / Clubs",
+    "description": "",
+    "skill": "closeCombat",
+    "specialization": "Clubs",
+    "category": "Close Combat",
+    "range": "-",
+    "properties": "Two-Handed",
+    "cost": 13750,
+    "attackModes": [
+      {
+        "name": "Melee",
+        "action": "major",
+        "fireMode": "",
+        "acc": 3,
+        "dv": "BOD-2",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Renraku Bo Strike",
+        "srxId": 4512,
+        "category": "Close Combat",
+        "subcategory": "Clubs",
+        "cost": 13750,
+        "properties": [
+          "Two-Handed"
+        ],
+        "options": [],
+        "type": "Close Combat",
+        "type2": "Clubs",
+        "type3": "Staffs",
+        "skill": "Close Combat",
+        "specialization": "Clubs",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "-"
+        },
+        "improvedRange": null,
+        "canMod": false,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [
+          {
+            "attackType": "Melee",
+            "action": "Major",
+            "fireMode": null,
+            "accuracy": 3,
+            "dv": {
+              "raw": "BOD-2",
+              "attr": "bod",
+              "mod": -2,
+              "type": "P",
+              "element": null,
+              "min": 5,
+              "max": null
+            }
+          }
+        ],
+        "slug": "renraku-bo-strike",
+        "variantOf": "staff"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7STNsUPeWuVcG9Pd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!jmtayOFAnaYV8Lgu"
+}

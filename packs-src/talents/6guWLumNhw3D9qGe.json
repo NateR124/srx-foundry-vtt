@@ -1,0 +1,63 @@
+{
+  "_id": "6guWLumNhw3D9qGe",
+  "name": "Real-Time Sensory Optimization (RSO)",
+  "type": "talent",
+  "system": {
+    "summary": "Software / Data Processing",
+    "description": "If Software ≥ Perception, target gains +2 Perception",
+    "category": "software",
+    "subgroup": "Data Processing",
+    "karma": 8,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Real-Time Sensory Optimization (RSO)",
+        "srxId": 270,
+        "category": "Software",
+        "subcategory": "Data Processing",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Data Processing",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": null,
+        "matrixAction": "Complex",
+        "administered": "Yes",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 8
+        },
+        "description": "If Software ≥ Perception, target gains +2 Perception",
+        "effects": [],
+        "slug": "real-time-sensory-optimization-rso"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!6guWLumNhw3D9qGe"
+}

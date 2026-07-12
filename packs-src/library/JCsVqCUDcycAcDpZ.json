@@ -1,0 +1,30 @@
+{
+  "_id": "JCsVqCUDcycAcDpZ",
+  "name": "Journalist",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Always tracking down major rumors, especially scandals in the political or corporate world",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Journalist",
+        "srxId": 10014,
+        "type": "Contact",
+        "type2": null,
+        "description": "Always tracking down major rumors, especially scandals in the political or corporate world",
+        "slug": "journalist"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!JCsVqCUDcycAcDpZ"
+}

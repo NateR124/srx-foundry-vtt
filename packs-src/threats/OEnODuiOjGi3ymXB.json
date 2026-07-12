@@ -1,0 +1,74 @@
+{
+  "_id": "OEnODuiOjGi3ymXB",
+  "name": "WAGE MAGE",
+  "type": "threat",
+  "system": {
+    "threatRating": 2,
+    "initiative": {
+      "dice": 2,
+      "bonus": 4
+    },
+    "defenseScore": 2,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 9,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Knife",
+        "pool": 6,
+        "dv": 4,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Beretta 201T",
+        "pool": 9,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "(Spell)",
+        "pool": 12,
+        "dv": 8,
+        "dvType": "P",
+        "element": "acid",
+        "action": "major"
+      },
+      {
+        "name": "Fireball (Spell)",
+        "pool": 0,
+        "dv": 5,
+        "dvType": "P",
+        "element": "fire",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li></ul><h3>Formula DVs (evaluated at F = TR)</h3><ul><li><strong>(Spell)</strong>: (F+6)P Acid</li><li><strong>Fireball (Spell)</strong>: (F+3)P Fire</li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "wage-mage"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "WAGE MAGE"
+  },
+  "_key": "!actors!OEnODuiOjGi3ymXB"
+}

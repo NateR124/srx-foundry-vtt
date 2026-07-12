@@ -1,0 +1,53 @@
+{
+  "_id": "UGlsO51yXe1g5so3",
+  "name": "Pepper Punch",
+  "type": "gear",
+  "system": {
+    "summary": "Toxins & Drugs / Toxins",
+    "description": "",
+    "subtype": "Toxin",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 10
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Pepper Punch",
+        "srxId": 6170,
+        "category": "Toxins & Drugs",
+        "subcategory": "Toxins",
+        "cost": 10,
+        "properties": [],
+        "options": [],
+        "type": "Toxin",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "pepper-punch"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!UGlsO51yXe1g5so3"
+}

@@ -1,0 +1,82 @@
+{
+  "_id": "On0yS7Bqfxj7nsCW",
+  "name": "GANGER",
+  "type": "threat",
+  "system": {
+    "threatRating": 2,
+    "initiative": {
+      "dice": 2,
+      "bonus": 3
+    },
+    "defenseScore": 2,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 13,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 9,
+        "dv": 3,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Knife",
+        "pool": 11,
+        "dv": 4,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Power",
+        "pool": 11,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "HK-227 Major (SA) 11 8P",
+        "pool": 10,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "HK-227 Major (SA) 11 8P",
+        "pool": 9,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Spray n’ Pray</strong>: When attacking with a BF or FA firing mode, the ganger can reduce their attack’s DV by 1 to gain +2 on their attack test. GANGER MOOK</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light</strong>: </li><li><strong>Mash the Trigger</strong>: The ganger does not suffer recoil</li><li><strong>penalties.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "ganger"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "GANGER"
+  },
+  "_key": "!actors!On0yS7Bqfxj7nsCW"
+}

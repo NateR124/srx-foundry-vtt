@@ -1,0 +1,67 @@
+{
+  "_id": "5mzmtrTMVYqy2fNC",
+  "name": "Loop the Feed",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / Communications & Surveillance",
+    "description": "Make surveillance device show past footage instead of current feed",
+    "category": "hacking",
+    "subgroup": "Communications & Surveillance",
+    "karma": 3,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Loop the Feed",
+        "srxId": 241,
+        "category": "Hacking",
+        "subcategory": "Communications & Surveillance",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Communications & Surveillance",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "Complex",
+        "administered": "Yes",
+        "access": "Yes",
+        "prereqRaw": "Hack Access (Hacking Talent)",
+        "prereq": {
+          "kind": "talent",
+          "name": "Hack Access",
+          "categoryHint": "Hacking Talent"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "Make surveillance device show past footage instead of current feed",
+        "effects": [],
+        "slug": "loop-the-feed"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!5mzmtrTMVYqy2fNC"
+}

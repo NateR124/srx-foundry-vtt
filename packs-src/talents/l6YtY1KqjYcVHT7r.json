@@ -1,0 +1,70 @@
+{
+  "_id": "l6YtY1KqjYcVHT7r",
+  "name": "Initiation",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism / Metamagic",
+    "description": "+1 Magic",
+    "category": "mysticism",
+    "subgroup": "Metamagic",
+    "karma": 25,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Initiation",
+        "srxId": 461,
+        "category": "Mysticism",
+        "subcategory": "Metamagic",
+        "maxQty": 3,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Metamagic",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Post Character Creation Only",
+        "prereq": {
+          "kind": "postChargenOnly"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 25
+        },
+        "description": "+1 Magic",
+        "effects": [
+          {
+            "key": "MAG",
+            "value": 1
+          }
+        ],
+        "slug": "initiation-3"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!l6YtY1KqjYcVHT7r"
+}

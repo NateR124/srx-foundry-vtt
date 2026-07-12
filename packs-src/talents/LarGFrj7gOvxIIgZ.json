@@ -1,0 +1,65 @@
+{
+  "_id": "LarGFrj7gOvxIIgZ",
+  "name": "Bind Elemental",
+  "type": "talent",
+  "system": {
+    "summary": "Conjuring",
+    "description": "Conjuring talent for hermetic mages. Permanently bind elementals to your service.",
+    "category": "conjuring",
+    "subgroup": "",
+    "karma": 0,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Bind Elemental",
+        "srxId": 408,
+        "category": "Conjuring",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Hermetic Mage Tradition",
+        "prereq": {
+          "kind": "tradition",
+          "name": "Hermetic Mage Tradition"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 0
+        },
+        "description": "Conjuring talent for hermetic mages. Permanently bind elementals to your service.",
+        "effects": [],
+        "slug": "bind-elemental"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!LarGFrj7gOvxIIgZ"
+}

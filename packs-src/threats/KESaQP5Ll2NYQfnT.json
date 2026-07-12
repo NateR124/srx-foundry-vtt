@@ -1,0 +1,74 @@
+{
+  "_id": "KESaQP5Ll2NYQfnT",
+  "name": "YAKUZA FOOT SOLDIER",
+  "type": "threat",
+  "system": {
+    "threatRating": 2,
+    "initiative": {
+      "dice": 2,
+      "bonus": 4
+    },
+    "defenseScore": 2,
+    "health": {
+      "value": 0,
+      "max": 6
+    },
+    "armor": 12,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 10,
+        "dv": 3,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Short Sword",
+        "pool": 12,
+        "dv": 6,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Crusader II Major (SA) 12 7P",
+        "pool": 12,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "SCK Model 100 Major (SA) 12 8P",
+        "pool": 12,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Aggressive Technique</strong>: When the kenran-kai scores a critical hit on an attack test, they gain 1 additional hit.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The kenran-kai does not suffer</li><li><strong>recoil penalties.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "yakuza-foot-soldier"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "YAKUZA FOOT SOLDIER"
+  },
+  "_key": "!actors!KESaQP5Ll2NYQfnT"
+}

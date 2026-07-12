@@ -1,0 +1,66 @@
+{
+  "_id": "yvM8BVu8bb8Yk2Fc",
+  "name": "Armor Training",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "No Defense Score penalty for wearing Heavy Armor",
+    "category": "general",
+    "subgroup": "",
+    "karma": 7,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Armor Training",
+        "srxId": 5,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Body 5",
+        "prereq": {
+          "kind": "rating",
+          "subject": "Body",
+          "min": 5
+        },
+        "grants": [],
+        "cost": {
+          "karma": 7
+        },
+        "description": "No Defense Score penalty for wearing Heavy Armor",
+        "effects": [],
+        "slug": "armor-training"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!yvM8BVu8bb8Yk2Fc"
+}

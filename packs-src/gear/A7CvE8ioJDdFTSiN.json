@@ -1,0 +1,54 @@
+{
+  "_id": "A7CvE8ioJDdFTSiN",
+  "name": "Protected Device Segmentation (PDS)",
+  "type": "gear",
+  "system": {
+    "summary": "Software Talents",
+    "description": "",
+    "subtype": "Utility",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 16000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Protected Device Segmentation (PDS)",
+        "srxId": 6060,
+        "category": "Software Talents",
+        "cost": 16000,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Utility",
+        "type2": "Software",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "protected-device-segmentation-pds"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!A7CvE8ioJDdFTSiN"
+}

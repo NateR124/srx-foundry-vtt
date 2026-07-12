@@ -1,0 +1,31 @@
+{
+  "_id": "T5UGHeIhPhKvEcCH",
+  "name": "Arrogant",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Offend someone you need something from or that you’re negotiating with",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Arrogant",
+        "srxId": 10506,
+        "type": "Trait",
+        "type2": null,
+        "description": "Offend someone you need something from or that you’re negotiating with",
+        "options": [],
+        "slug": "arrogant"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!T5UGHeIhPhKvEcCH"
+}

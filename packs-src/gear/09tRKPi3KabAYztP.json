@@ -1,0 +1,54 @@
+{
+  "_id": "09tRKPi3KabAYztP",
+  "name": "Tag Eraser",
+  "type": "gear",
+  "system": {
+    "summary": "Electronics",
+    "description": "",
+    "subtype": "Electronics",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2200
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Tag Eraser",
+        "srxId": 6047,
+        "category": "Electronics",
+        "cost": 2200,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Electronics",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "tag-eraser"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!09tRKPi3KabAYztP"
+}

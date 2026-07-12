@@ -1,0 +1,74 @@
+{
+  "_id": "wX99IRAAIgySMyF1",
+  "name": "AZTECHNOLOGY LEOPARD GUARD",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 2,
+      "bonus": 4
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 13,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 12,
+        "dv": 3,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Sword",
+        "pool": 15,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares MP-5 TX Major (SA) 14 8P",
+        "pool": 14,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares MP-5 TX Major (SA) 14 8P",
+        "pool": 13,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Charge</strong>: If the Leopard Guard moves at least 3 meters toward a target, and their next action is to attack that target, they gain the Reroll 1’s benefit on their attack test – reroll any dice that roll a 1, excluding their Crit Dice, and use the new result. Qi: 1/day, the Leopard Guard can gain Leverage on an attack test or a resistance test. LIEUTENANT</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The Leopard Guard does not</li><li><strong>suffer recoil penalties.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "aztechnology-leopard-guard"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "AZTECHNOLOGY LEOPARD GUARD"
+  },
+  "_key": "!actors!wX99IRAAIgySMyF1"
+}

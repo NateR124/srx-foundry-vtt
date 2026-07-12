@@ -1,0 +1,39 @@
+{
+  "_id": "lpGbG3HtUbAmuwg1",
+  "name": "Bipod",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 200
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon-mod",
+      "catalogData": {
+        "name": "Bipod",
+        "srxId": 5503,
+        "cost": 200,
+        "properties": [],
+        "type": "Modification",
+        "mounts": [
+          5
+        ],
+        "allMountsRequired": false,
+        "noMount": false,
+        "requiresMod": null,
+        "slug": "bipod"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "rHfaFyA9uk37DvRq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!lpGbG3HtUbAmuwg1"
+}

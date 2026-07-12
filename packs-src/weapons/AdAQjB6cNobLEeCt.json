@@ -1,0 +1,101 @@
+{
+  "_id": "AdAQjB6cNobLEeCt",
+  "name": "Ruger Super Warhawk",
+  "type": "weapon",
+  "system": {
+    "summary": "Pistols / Heavy",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "Pistols",
+    "category": "Pistols",
+    "range": "10/30/80m",
+    "properties": "",
+    "cost": 1300,
+    "attackModes": [
+      {
+        "name": "Ranged",
+        "action": "major",
+        "fireMode": "SS",
+        "acc": -1,
+        "dv": "9",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Ruger Super Warhawk",
+        "srxId": 4566,
+        "category": "Pistols",
+        "subcategory": "Heavy",
+        "cost": 1300,
+        "properties": [],
+        "options": [],
+        "type": "Firearms",
+        "type2": "Pistols",
+        "type3": "Heavy",
+        "skill": "Firearms",
+        "specialization": "Pistols",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "10/30/80m",
+          "bands": [
+            10,
+            30,
+            80
+          ]
+        },
+        "improvedRange": {
+          "raw": "10/30/120m",
+          "bands": [
+            10,
+            30,
+            120
+          ]
+        },
+        "canMod": true,
+        "mounts": {
+          "barrel": 1,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 1,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": "SS",
+            "accuracy": -1,
+            "dv": {
+              "raw": "9",
+              "value": 9,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "ruger-super-warhawk"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "FiehijNVNUzGvvD1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!AdAQjB6cNobLEeCt"
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "MfKgwBwR8oRLpRS8",
+  "name": "Prejudiced",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Offend a key contact (make sure everyone at your table is comfortable with you roleplaying this trait before choosing it)",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Prejudiced",
+        "srxId": 10538,
+        "type": "Trait",
+        "type2": null,
+        "description": "Offend a key contact (make sure everyone at your table is comfortable with you roleplaying this trait before choosing it)",
+        "options": [
+          "free text"
+        ],
+        "slug": "prejudiced"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!MfKgwBwR8oRLpRS8"
+}

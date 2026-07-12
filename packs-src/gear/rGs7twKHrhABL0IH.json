@@ -1,0 +1,54 @@
+{
+  "_id": "rGs7twKHrhABL0IH",
+  "name": "Deep Fake",
+  "type": "gear",
+  "system": {
+    "summary": "Software Talents",
+    "description": "",
+    "subtype": "Utility",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 12000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Deep Fake",
+        "srxId": 6055,
+        "category": "Software Talents",
+        "cost": 12000,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Utility",
+        "type2": "Software",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "deep-fake"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!rGs7twKHrhABL0IH"
+}

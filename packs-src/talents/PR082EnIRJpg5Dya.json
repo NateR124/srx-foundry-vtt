@@ -1,0 +1,67 @@
+{
+  "_id": "PR082EnIRJpg5Dya",
+  "name": "Link-lock",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / System Administration",
+    "description": "Target in hot-sim cannot take Disconnect, Move (Matrix), Run Silent, or Switch Interface action",
+    "category": "hacking",
+    "subgroup": "System Administration",
+    "karma": 3,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Link-lock",
+        "srxId": 239,
+        "category": "Hacking",
+        "subcategory": "System Administration",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "System Administration",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "Complex",
+        "administered": "Yes",
+        "access": "Yes",
+        "prereqRaw": "Hack Access (Hacking Talent)",
+        "prereq": {
+          "kind": "talent",
+          "name": "Hack Access",
+          "categoryHint": "Hacking Talent"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "Target in hot-sim cannot take Disconnect, Move (Matrix), Run Silent, or Switch Interface action",
+        "effects": [],
+        "slug": "link-lock"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!PR082EnIRJpg5Dya"
+}

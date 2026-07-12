@@ -1,0 +1,47 @@
+{
+  "_id": "KsfgHKSjnTGdiT6w",
+  "name": "Detect Individual",
+  "type": "spell",
+  "system": {
+    "summary": "Detection",
+    "description": "Sense location of specific individual",
+    "category": "detection",
+    "pattern": "self",
+    "duration": "sustained",
+    "range": "Self",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Detection"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Detect Individual",
+        "srxId": 1520,
+        "category": "Detection",
+        "description": "Sense location of specific individual",
+        "range": {
+          "raw": "Self",
+          "special": "Self"
+        },
+        "duration": "Sust (1 hour)",
+        "resistance": "WIL+CHA",
+        "attack": null,
+        "slug": "detect-individual"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "y93WvYSQK8mAWRAI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!KsfgHKSjnTGdiT6w"
+}

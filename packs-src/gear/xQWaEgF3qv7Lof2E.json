@@ -1,0 +1,62 @@
+{
+  "_id": "xQWaEgF3qv7Lof2E",
+  "name": "Social Protocol Cortex",
+  "type": "gear",
+  "system": {
+    "summary": "Headware",
+    "description": "+1 Con, Influence",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 35000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Social Protocol Cortex",
+        "srxId": 3040,
+        "category": "Headware",
+        "cost": 35000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Social Protocol Cortex",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.3",
+          "value": 0.3,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "+1 Con, Influence",
+        "effects": [
+          {
+            "key": "con",
+            "value": 1
+          },
+          {
+            "key": "influence",
+            "value": 1
+          }
+        ],
+        "slug": "social-protocol-cortex"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xQWaEgF3qv7Lof2E"
+}

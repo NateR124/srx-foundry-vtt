@@ -1,0 +1,36 @@
+{
+  "_id": "5iei1A1RMsPMNubT",
+  "name": "Thermographic Vision",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Vision Enhancement",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear-enhancement",
+      "catalogData": {
+        "name": "Thermographic Vision",
+        "srxId": 7008,
+        "cost": 1500,
+        "properties": [],
+        "options": [],
+        "enhancementType": 2,
+        "type": "Vision Enhancement",
+        "description": null,
+        "slug": "thermographic-vision"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CfAYFTllX77UHdGc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!5iei1A1RMsPMNubT"
+}

@@ -1,0 +1,63 @@
+{
+  "_id": "FvuRtm2CyJ0iqcxG",
+  "name": "Malfunction",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / Personal & Industrial Equipment",
+    "description": "Lock users out of device, or with Access brick device or force it to cause structural damage",
+    "category": "hacking",
+    "subgroup": "Personal & Industrial Equipment",
+    "karma": 3,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Malfunction",
+        "srxId": 242,
+        "category": "Hacking",
+        "subcategory": "Personal & Industrial Equipment",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Personal & Industrial Equipment",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "Complex",
+        "administered": "Yes",
+        "access": "Special",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "Lock users out of device, or with Access brick device or force it to cause structural damage",
+        "effects": [],
+        "slug": "malfunction"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!FvuRtm2CyJ0iqcxG"
+}

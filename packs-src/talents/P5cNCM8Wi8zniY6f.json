@@ -1,0 +1,63 @@
+{
+  "_id": "P5cNCM8Wi8zniY6f",
+  "name": "Arc Feedback",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Complex Form",
+    "description": "If Black Hammer or Data Spike program fails against you, Reroll 1's on retaliating cyberattack",
+    "category": "threading",
+    "subgroup": "Complex Form",
+    "karma": 10,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Arc Feedback",
+        "srxId": 284,
+        "category": "Threading",
+        "subcategory": "Complex Form",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Complex Form",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 10
+        },
+        "description": "If Black Hammer or Data Spike program fails against you, Reroll 1's on retaliating cyberattack",
+        "effects": [],
+        "slug": "arc-feedback"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!P5cNCM8Wi8zniY6f"
+}

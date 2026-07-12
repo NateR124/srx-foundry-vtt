@@ -1,0 +1,66 @@
+{
+  "_id": "ehto8e5J8TQFCSaz",
+  "name": "Junkyard Dog",
+  "type": "talent",
+  "system": {
+    "summary": "Vehicle",
+    "description": "Each net hit on repair test ignores cost of 2 damage instead of 1",
+    "category": "vehicle",
+    "subgroup": "",
+    "karma": 9,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Junkyard Dog",
+        "srxId": 368,
+        "category": "Vehicle",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Engineering 4",
+        "prereq": {
+          "kind": "rating",
+          "subject": "Engineering",
+          "min": 4
+        },
+        "grants": [],
+        "cost": {
+          "karma": 9
+        },
+        "description": "Each net hit on repair test ignores cost of 2 damage instead of 1",
+        "effects": [],
+        "slug": "junkyard-dog"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ehto8e5J8TQFCSaz"
+}

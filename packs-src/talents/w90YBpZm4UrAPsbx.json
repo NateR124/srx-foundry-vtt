@@ -1,0 +1,68 @@
+{
+  "_id": "w90YBpZm4UrAPsbx",
+  "name": "Mentor Spirit",
+  "type": "talent",
+  "system": {
+    "summary": "Conjuring",
+    "description": "+1 attribute bonus and +2 on Drain tests to summon chosen spirit form",
+    "category": "conjuring",
+    "subgroup": "",
+    "karma": 20,
+    "option": "Spirit Forms",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Mentor Spirit",
+        "srxId": 424,
+        "category": "Conjuring",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Spirit Forms"
+        ],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Summon Spirit (Conjuring Talent)",
+        "prereq": {
+          "kind": "talent",
+          "name": "Summon Spirit",
+          "categoryHint": "Conjuring Talent"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 20
+        },
+        "description": "+1 attribute bonus and +2 on Drain tests to summon chosen spirit form",
+        "effects": [],
+        "slug": "mentor-spirit"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!w90YBpZm4UrAPsbx"
+}

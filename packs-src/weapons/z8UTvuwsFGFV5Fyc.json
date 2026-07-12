@@ -1,0 +1,41 @@
+{
+  "_id": "z8UTvuwsFGFV5Fyc",
+  "name": "Silencer/Suppressor",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon-mod",
+      "catalogData": {
+        "name": "Silencer/Suppressor",
+        "srxId": 5515,
+        "cost": 500,
+        "properties": [
+          "Restricted"
+        ],
+        "type": "Modification",
+        "mounts": [
+          0
+        ],
+        "allMountsRequired": false,
+        "noMount": false,
+        "requiresMod": null,
+        "slug": "silencer-suppressor"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "rHfaFyA9uk37DvRq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!z8UTvuwsFGFV5Fyc"
+}

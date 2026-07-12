@@ -1,0 +1,31 @@
+{
+  "_id": "QtJgZz4QkAyoCPEO",
+  "name": "Bad Temper",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Start a fight when you shouldn’t, or chase down an enemy who injured you rather than run away",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Bad Temper",
+        "srxId": 10509,
+        "type": "Trait",
+        "type2": null,
+        "description": "Start a fight when you shouldn’t, or chase down an enemy who injured you rather than run away",
+        "options": [],
+        "slug": "bad-temper"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!QtJgZz4QkAyoCPEO"
+}

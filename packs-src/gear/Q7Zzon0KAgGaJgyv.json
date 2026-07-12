@@ -1,0 +1,142 @@
+{
+  "_id": "Q7Zzon0KAgGaJgyv",
+  "name": "Aztechnology Halcon",
+  "type": "gear",
+  "system": {
+    "summary": "Fixed-Wing Aircraft",
+    "description": "",
+    "subtype": "Fixed-Wing Aircraft",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 8000000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Aztechnology Halcon",
+        "srxId": 7553,
+        "category": "Fixed-Wing Aircraft",
+        "cost": 8000000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Fixed-Wing Aircraft",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Piloting",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 2,
+          "speed": 22,
+          "body": 12,
+          "armor": 11,
+          "health": 14,
+          "defenseScoreMod": null,
+          "autoRating": 3,
+          "autoDefenseScore": 3,
+          "dccBenefits": null,
+          "autoSkills": "Firearms,Perception,Piloting",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Advanced Sensor Array",
+            "value": "2"
+          },
+          {
+            "name": "Anti-Theft System",
+            "value": "Built-In"
+          },
+          {
+            "name": "Armor Plating",
+            "value": "Built-In"
+          },
+          {
+            "name": "Combat Vehicle",
+            "value": "Built-In"
+          },
+          {
+            "name": "Increased Structural Integrity",
+            "value": "Built-In"
+          },
+          {
+            "name": "Smartlink (Vehicle)",
+            "value": "Built-In"
+          }
+        ],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": {
+              "weapon": "Mounted Heavy Machine Gun",
+              "orientation": "F",
+              "retractable": false,
+              "superior": true
+            }
+          },
+          {
+            "index": 2,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": {
+              "weapon": "Mounted Missile Launcher",
+              "orientation": "F",
+              "retractable": false,
+              "superior": true
+            }
+          },
+          {
+            "index": 3,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": {
+              "weapon": "Mounted Missile Launcher",
+              "orientation": "F",
+              "retractable": false,
+              "superior": true
+            }
+          }
+        ],
+        "slug": "aztechnology-halcon"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Q7Zzon0KAgGaJgyv"
+}

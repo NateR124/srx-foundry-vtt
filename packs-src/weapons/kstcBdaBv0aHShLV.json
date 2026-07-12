@@ -1,0 +1,173 @@
+{
+  "_id": "kstcBdaBv0aHShLV",
+  "name": "Colt M23",
+  "type": "weapon",
+  "system": {
+    "summary": "Automatics / Assault Rifles",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "Assault Rifles",
+    "category": "Automatics",
+    "range": "30/60/200m",
+    "properties": "Restricted, Two-Handed",
+    "cost": 19500,
+    "attackModes": [
+      {
+        "name": "Ranged",
+        "action": "major",
+        "fireMode": "SA",
+        "acc": 0,
+        "dv": "9",
+        "dvType": "P",
+        "element": ""
+      },
+      {
+        "name": "Ranged",
+        "action": "major",
+        "fireMode": "BF",
+        "acc": -1,
+        "dv": "10",
+        "dvType": "P",
+        "element": ""
+      },
+      {
+        "name": "Ranged",
+        "action": "complex",
+        "fireMode": "FA",
+        "acc": -3,
+        "dv": "11",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Colt M23",
+        "srxId": 4584,
+        "category": "Automatics",
+        "subcategory": "Assault Rifles",
+        "cost": 19500,
+        "properties": [
+          "Restricted",
+          "Two-Handed"
+        ],
+        "options": [],
+        "type": "Firearms",
+        "type2": "Automatics",
+        "type3": "Assault Rifles",
+        "skill": "Firearms",
+        "specialization": "Assault Rifles",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "30/60/200m",
+          "bands": [
+            30,
+            60,
+            200
+          ]
+        },
+        "improvedRange": {
+          "raw": "30/60/300m",
+          "bands": [
+            30,
+            60,
+            300
+          ]
+        },
+        "canMod": true,
+        "mounts": {
+          "barrel": 1,
+          "internal": 1,
+          "side": 1,
+          "stock": 1,
+          "top": 1,
+          "underbarrel": 1,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [
+          {
+            "name": "Advanced Gas-vent",
+            "modSlug": "advanced-gas-vent",
+            "mounts": [
+              0,
+              1
+            ]
+          },
+          {
+            "name": "Laser Sight",
+            "modSlug": "laser-sight",
+            "mounts": [
+              2
+            ]
+          },
+          {
+            "name": "Shock Pad",
+            "modSlug": "shock-pad",
+            "mounts": [
+              3
+            ]
+          }
+        ],
+        "attackModes": [
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": "SA",
+            "accuracy": 0,
+            "dv": {
+              "raw": "9",
+              "value": 9,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": "BF",
+            "accuracy": -1,
+            "dv": {
+              "raw": "10",
+              "value": 10,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": "FA",
+            "accuracy": -3,
+            "dv": {
+              "raw": "11",
+              "value": 11,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "colt-m23"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "q57iHsbHsOYA6BmX",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!kstcBdaBv0aHShLV"
+}

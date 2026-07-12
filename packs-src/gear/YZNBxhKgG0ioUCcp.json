@@ -1,0 +1,54 @@
+{
+  "_id": "YZNBxhKgG0ioUCcp",
+  "name": "Cybercombat Defensive Utilities (CCD)",
+  "type": "gear",
+  "system": {
+    "summary": "Software Talents",
+    "description": "",
+    "subtype": "Utility",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 16000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Cybercombat Defensive Utilities (CCD)",
+        "srxId": 6054,
+        "category": "Software Talents",
+        "cost": 16000,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Utility",
+        "type2": "Software",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "cybercombat-defensive-utilities-ccd"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!YZNBxhKgG0ioUCcp"
+}

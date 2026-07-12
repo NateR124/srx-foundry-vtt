@@ -1,0 +1,31 @@
+{
+  "_id": "0ui6XCSaC0CXYiVV",
+  "name": "SINner",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Your fake SIN struggles to cover up your sordid past - you may fail a routine scan of your fake SIN and get into trouble",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "SINner",
+        "srxId": 10541,
+        "type": "Trait",
+        "type2": null,
+        "description": "Your fake SIN struggles to cover up your sordid past - you may fail a routine scan of your fake SIN and get into trouble",
+        "options": [],
+        "slug": "sinner"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!0ui6XCSaC0CXYiVV"
+}

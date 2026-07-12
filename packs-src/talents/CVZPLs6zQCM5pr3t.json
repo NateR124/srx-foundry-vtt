@@ -1,0 +1,63 @@
+{
+  "_id": "CVZPLs6zQCM5pr3t",
+  "name": "Shield",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Complex Form",
+    "description": "Use Interrupt action to give ally +1 Matrix Defense Score if Matrix Defense score is less than yours",
+    "category": "threading",
+    "subgroup": "Complex Form",
+    "karma": 6,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Shield",
+        "srxId": 331,
+        "category": "Threading",
+        "subcategory": "Complex Form",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Complex Form",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": null,
+        "matrixAction": "Interrupt",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 6
+        },
+        "description": "Use Interrupt action to give ally +1 Matrix Defense Score if Matrix Defense score is less than yours",
+        "effects": [],
+        "slug": "shield"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!CVZPLs6zQCM5pr3t"
+}

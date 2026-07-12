@@ -1,0 +1,66 @@
+{
+  "_id": "fVDCH7KCtC5en0Xh",
+  "name": "Twitch Responsiveness",
+  "type": "talent",
+  "system": {
+    "summary": "Vehicle",
+    "description": "+1 Defense Score while jumped in",
+    "category": "vehicle",
+    "subgroup": "",
+    "karma": 12,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Twitch Responsiveness",
+        "srxId": 384,
+        "category": "Vehicle",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Engineering 4",
+        "prereq": {
+          "kind": "rating",
+          "subject": "Engineering",
+          "min": 4
+        },
+        "grants": [],
+        "cost": {
+          "karma": 12
+        },
+        "description": "+1 Defense Score while jumped in",
+        "effects": [],
+        "slug": "twitch-responsiveness"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!fVDCH7KCtC5en0Xh"
+}

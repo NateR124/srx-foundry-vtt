@@ -1,0 +1,74 @@
+{
+  "_id": "v1Nut9VyOIQgkp3F",
+  "name": "LIEUTENANT",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 2,
+      "bonus": 5
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 16,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 13,
+        "dv": 3,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Nightstick",
+        "pool": 15,
+        "dv": 4,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Power",
+        "pool": 15,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Yamaha Pulsar",
+        "pool": 14,
+        "dv": 6,
+        "dvType": "S",
+        "element": "electricity",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Wait for Backup</strong>: When the lieutenant makes an attack, they can suffer a –2 penalty on their attack test to gain +1 to their Defense Score until the start of their next Action Phase.</li><li><strong>Veteran Commander</strong>: The lieutenant can grant one of their allies 1 free hit on their next attack test.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The lieutenant does not suffer</li><li><strong>recoil penalties.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "lieutenant"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "LIEUTENANT"
+  },
+  "_key": "!actors!v1Nut9VyOIQgkp3F"
+}

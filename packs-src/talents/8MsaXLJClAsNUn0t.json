@@ -1,0 +1,62 @@
+{
+  "_id": "8MsaXLJClAsNUn0t",
+  "name": "Change of Plans",
+  "type": "talent",
+  "system": {
+    "summary": "Vehicle",
+    "description": "-1 hit to Resolve Hazards in chase test to adjust Chase Environment or Hazard Threshold +/-1",
+    "category": "vehicle",
+    "subgroup": "",
+    "karma": 6,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Change of Plans",
+        "srxId": 349,
+        "category": "Vehicle",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 6
+        },
+        "description": "-1 hit to Resolve Hazards in chase test to adjust Chase Environment or Hazard Threshold +/-1",
+        "effects": [],
+        "slug": "change-of-plans"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!8MsaXLJClAsNUn0t"
+}

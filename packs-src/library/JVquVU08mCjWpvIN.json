@@ -1,0 +1,60 @@
+{
+  "_id": "JVquVU08mCjWpvIN",
+  "name": "Decker",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "archetype",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "archetype",
+      "catalogData": {
+        "name": "Decker",
+        "srxId": 11012,
+        "noFlare": false,
+        "isCustom": false,
+        "isDossierGroup": false,
+        "parent": null,
+        "flares": [
+          {
+            "name": "Operative",
+            "metatypes": [
+              "Elf",
+              "Troll"
+            ],
+            "appIndex": 2
+          },
+          {
+            "name": "Saboteur",
+            "metatypes": [
+              "Dwarf",
+              "Human"
+            ],
+            "appIndex": 3
+          },
+          {
+            "name": "System Cracker",
+            "metatypes": [
+              "Human",
+              "Dwarf"
+            ],
+            "appIndex": 4
+          }
+        ],
+        "slug": "decker"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "82fke5ZPHOqEvVwG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!JVquVU08mCjWpvIN"
+}

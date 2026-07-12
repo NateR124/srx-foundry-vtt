@@ -1,0 +1,63 @@
+{
+  "_id": "SBfHNysw2qD0M3X9",
+  "name": "Reaping Attack",
+  "type": "talent",
+  "system": {
+    "summary": "Weapons / CC",
+    "description": "Cleave through enemy and repeat attack against another target",
+    "category": "weapons",
+    "subgroup": "CC",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Reaping Attack",
+        "srxId": 157,
+        "category": "Weapons",
+        "subcategory": "CC",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "CC",
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Cleave through enemy and repeat attack against another target",
+        "effects": [],
+        "slug": "reaping-attack"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!SBfHNysw2qD0M3X9"
+}

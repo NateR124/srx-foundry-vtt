@@ -1,0 +1,31 @@
+{
+  "_id": "hIELUf6UqXPBn9eG",
+  "name": "Educated",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Take a risk to grab additional sensitive information on a run, even when you weren’t hired for it",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Educated",
+        "srxId": 10522,
+        "type": "Trait",
+        "type2": null,
+        "description": "Take a risk to grab additional sensitive information on a run, even when you weren’t hired for it",
+        "options": [],
+        "slug": "educated"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!hIELUf6UqXPBn9eG"
+}

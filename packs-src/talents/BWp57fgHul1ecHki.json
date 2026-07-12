@@ -1,0 +1,31 @@
+{
+  "_id": "BWp57fgHul1ecHki",
+  "name": "Uncouth",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Offend others easily in a social interaction",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Uncouth",
+        "srxId": 10545,
+        "type": "Trait",
+        "type2": null,
+        "description": "Offend others easily in a social interaction",
+        "options": [],
+        "slug": "uncouth"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!BWp57fgHul1ecHki"
+}

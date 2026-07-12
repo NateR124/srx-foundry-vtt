@@ -1,0 +1,54 @@
+{
+  "_id": "Jwzd5wik1NKgGBaV",
+  "name": "Smartlink (Implanted)",
+  "type": "gear",
+  "system": {
+    "summary": "Senseware / Eyeware",
+    "description": "+2 to ranged attacks",
+    "subtype": "Eyeware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 12000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Smartlink (Implanted)",
+        "srxId": 3016,
+        "category": "Senseware",
+        "subcategory": "Eyeware",
+        "cost": 12000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Smartlink (Implanted)",
+        "type": "Eyeware",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.3",
+          "value": 0.3,
+          "scale": []
+        },
+        "parentContainer": "Cybereyes",
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "+2 to ranged attacks",
+        "effects": [],
+        "slug": "smartlink-implanted"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Jwzd5wik1NKgGBaV"
+}

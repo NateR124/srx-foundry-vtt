@@ -1,0 +1,52 @@
+{
+  "_id": "OhkRnt5084B1fJEw",
+  "name": "Evasion Autosoft",
+  "type": "gear",
+  "system": {
+    "summary": "Vehicle Talents",
+    "description": "",
+    "subtype": "Utility",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 48000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Evasion Autosoft",
+        "srxId": 6069,
+        "category": "Vehicle Talents",
+        "cost": 48000,
+        "properties": [],
+        "options": [],
+        "type": "Utility",
+        "type2": "Vehicle",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "evasion-autosoft"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!OhkRnt5084B1fJEw"
+}

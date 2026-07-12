@@ -1,0 +1,31 @@
+{
+  "_id": "C65Zn0IkKbsjqj8K",
+  "name": "Arcana",
+  "type": "knowledge",
+  "system": {
+    "summary": "",
+    "description": "Elementals, spirits, the astral plane, magical beings, rituals, mysticism powers, channeling powers",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "Arcana",
+        "srxId": 10005,
+        "type": "Knowledge Domain",
+        "type2": null,
+        "description": "Elementals, spirits, the astral plane, magical beings, rituals, mysticism powers, channeling powers",
+        "freePool": null,
+        "slug": "arcana"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!C65Zn0IkKbsjqj8K"
+}

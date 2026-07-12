@@ -1,0 +1,62 @@
+{
+  "_id": "kJ3OR3u0BrEhtJd7",
+  "name": "Ice in Your Veins",
+  "type": "talent",
+  "system": {
+    "summary": "Vehicle",
+    "description": "1 free hit to Resolve Hazards in chase test",
+    "category": "vehicle",
+    "subgroup": "",
+    "karma": 10,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Ice in Your Veins",
+        "srxId": 366,
+        "category": "Vehicle",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 10
+        },
+        "description": "1 free hit to Resolve Hazards in chase test",
+        "effects": [],
+        "slug": "ice-in-your-veins"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!kJ3OR3u0BrEhtJd7"
+}

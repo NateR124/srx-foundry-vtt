@@ -1,0 +1,60 @@
+{
+  "_id": "jccey5uPbvD86LZu",
+  "name": "Powerball",
+  "type": "spell",
+  "system": {
+    "summary": "Combat",
+    "description": "All targets in area take (Net Force - 1)P/S",
+    "category": "combat",
+    "pattern": "area",
+    "duration": "instantaneous",
+    "range": "50m [A]",
+    "action": "complex",
+    "resistanceAttr": "bod",
+    "dvFormula": "nf-1",
+    "dvType": "P/S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Combat"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Powerball",
+        "srxId": 1558,
+        "category": "Combat",
+        "description": "All targets in area take (Net Force - 1)P/S",
+        "range": {
+          "raw": "50m [A]",
+          "bands": [
+            50
+          ],
+          "area": true
+        },
+        "duration": "Instantaneous",
+        "resistance": "BOD",
+        "attack": {
+          "type": "AOE",
+          "accuracy": "Resist: BOD",
+          "dv": {
+            "raw": "(F-1)",
+            "force": true,
+            "mod": -1,
+            "type": "P/S",
+            "element": null
+          }
+        },
+        "slug": "powerball"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "zZc1PdtmOVQowgGq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!jccey5uPbvD86LZu"
+}

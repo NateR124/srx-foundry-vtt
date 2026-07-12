@@ -1,0 +1,72 @@
+{
+  "_id": "vFIpuApGnpWo2Jmw",
+  "name": "Aztechnology Overwatch",
+  "type": "gear",
+  "system": {
+    "summary": "Drone Command Consoles",
+    "description": "",
+    "subtype": "DCC",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 110000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Aztechnology Overwatch",
+        "srxId": 7506,
+        "category": "Drone Command Consoles",
+        "cost": 110000,
+        "properties": [],
+        "options": [],
+        "type": "DCC",
+        "type2": null,
+        "type3": null,
+        "isDcc": true,
+        "skill": null,
+        "specialProperties": [],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": 5,
+          "dccMaxDrones": 3,
+          "handling": null,
+          "speed": null,
+          "body": null,
+          "armor": null,
+          "health": null,
+          "defenseScoreMod": null,
+          "autoRating": null,
+          "autoDefenseScore": null,
+          "dccBenefits": "Clearsight Autosoft, Infiltration Autosoft",
+          "autoSkills": null,
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [],
+        "slug": "aztechnology-overwatch"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!vFIpuApGnpWo2Jmw"
+}

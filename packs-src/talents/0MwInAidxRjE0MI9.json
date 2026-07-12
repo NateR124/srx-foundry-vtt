@@ -1,0 +1,63 @@
+{
+  "_id": "0MwInAidxRjE0MI9",
+  "name": "Counter",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism / Metamagic",
+    "description": "Cancel magical ability as it is being used",
+    "category": "mysticism",
+    "subgroup": "Metamagic",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Counter",
+        "srxId": 452,
+        "category": "Mysticism",
+        "subcategory": "Metamagic",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Metamagic",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": "TRUE",
+        "edgeUsage": null,
+        "hasDrainFading": "TRUE",
+        "action": "Interrupt",
+        "range": "30m",
+        "duration": "Instantaneous",
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Cancel magical ability as it is being used",
+        "effects": [],
+        "slug": "counter"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!0MwInAidxRjE0MI9"
+}

@@ -1,0 +1,91 @@
+{
+  "_id": "3JsCjD6nW2G71gqp",
+  "name": "Pepper Spray",
+  "type": "weapon",
+  "system": {
+    "summary": "Exotic Weapons",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "Exotic Weapon - Sprayer",
+    "category": "Exotic Weapons",
+    "range": "10m",
+    "properties": "",
+    "cost": 50,
+    "attackModes": [
+      {
+        "name": "AOE",
+        "action": "major",
+        "fireMode": "",
+        "acc": 0,
+        "dv": "Special",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Pepper Spray",
+        "srxId": 4616,
+        "category": "Exotic Weapons",
+        "cost": 50,
+        "properties": [],
+        "options": [],
+        "type": "Exotic Weapons",
+        "type2": "Sprayer",
+        "type3": null,
+        "skill": null,
+        "specialization": "Exotic Weapon - Sprayer",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "10m",
+          "bands": [
+            10
+          ]
+        },
+        "improvedRange": null,
+        "canMod": false,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [
+          {
+            "attackType": "AOE",
+            "action": "Major",
+            "fireMode": null,
+            "accuracy": null,
+            "dv": {
+              "raw": "Special",
+              "special": "Special",
+              "type": null,
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "pepper-spray"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CxdzX8xPeW6rU3WC",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!3JsCjD6nW2G71gqp"
+}

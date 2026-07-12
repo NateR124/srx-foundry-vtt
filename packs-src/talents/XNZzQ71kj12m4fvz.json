@@ -1,0 +1,66 @@
+{
+  "_id": "XNZzQ71kj12m4fvz",
+  "name": "System Fail-Safes",
+  "type": "talent",
+  "system": {
+    "summary": "Vehicle",
+    "description": "+4 Health and +2 Wounded Limit to your vehicles",
+    "category": "vehicle",
+    "subgroup": "",
+    "karma": 12,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "System Fail-Safes",
+        "srxId": 381,
+        "category": "Vehicle",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Engineering 4",
+        "prereq": {
+          "kind": "rating",
+          "subject": "Engineering",
+          "min": 4
+        },
+        "grants": [],
+        "cost": {
+          "karma": 12
+        },
+        "description": "+4 Health and +2 Wounded Limit to your vehicles",
+        "effects": [],
+        "slug": "system-fail-safes"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!XNZzQ71kj12m4fvz"
+}

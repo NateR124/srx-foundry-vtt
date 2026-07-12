@@ -1,0 +1,48 @@
+{
+  "_id": "VlzaN3729dEOPjUs",
+  "name": "Wall",
+  "type": "spell",
+  "system": {
+    "summary": "Manipulation",
+    "description": "Create transluscent barrier as wall or sphere around you",
+    "category": "manipulation",
+    "pattern": "area",
+    "duration": "sustained",
+    "range": "Special [A]",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Manipulation"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Wall",
+        "srxId": 1578,
+        "category": "Manipulation",
+        "description": "Create transluscent barrier as wall or sphere around you",
+        "range": {
+          "raw": "Special [A]",
+          "special": "Special",
+          "area": true
+        },
+        "duration": "Sustained",
+        "resistance": null,
+        "attack": null,
+        "slug": "wall"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7UPq2yvvIYDMGwdo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!VlzaN3729dEOPjUs"
+}

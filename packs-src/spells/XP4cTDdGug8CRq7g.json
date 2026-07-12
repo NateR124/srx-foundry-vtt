@@ -1,0 +1,50 @@
+{
+  "_id": "XP4cTDdGug8CRq7g",
+  "name": "Ice Sheet",
+  "type": "spell",
+  "system": {
+    "summary": "Manipulation",
+    "description": "Targets in area fall Prone, vehicles may crash",
+    "category": "manipulation",
+    "pattern": "area",
+    "duration": "timed",
+    "range": "80m [A]",
+    "action": "complex",
+    "resistanceAttr": "special",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Manipulation"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Ice Sheet",
+        "srxId": 1536,
+        "category": "Manipulation",
+        "description": "Targets in area fall Prone, vehicles may crash",
+        "range": {
+          "raw": "80m [A]",
+          "bands": [
+            80
+          ],
+          "area": true
+        },
+        "duration": "10 minutes",
+        "resistance": "Special",
+        "attack": null,
+        "slug": "ice-sheet"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7UPq2yvvIYDMGwdo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!XP4cTDdGug8CRq7g"
+}

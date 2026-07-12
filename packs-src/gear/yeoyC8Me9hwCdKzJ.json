@@ -1,0 +1,59 @@
+{
+  "_id": "yeoyC8Me9hwCdKzJ",
+  "name": "Cerebral Booster",
+  "type": "gear",
+  "system": {
+    "summary": "Headware",
+    "description": "+Rating to Logic",
+    "subtype": "ware",
+    "rating": 3,
+    "quantity": 1,
+    "cost": 32000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Cerebral Booster",
+        "srxId": 3026,
+        "category": "Headware",
+        "cost": 32000,
+        "costDisplay": "Rating x 32,000",
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Cerebral Booster",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": 3,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "Rating x 0.4",
+          "value": 0.4,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [],
+        "grants": [],
+        "description": "+Rating to Logic",
+        "effects": [
+          {
+            "key": "log",
+            "value": 1
+          }
+        ],
+        "slug": "cerebral-booster"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!yeoyC8Me9hwCdKzJ"
+}

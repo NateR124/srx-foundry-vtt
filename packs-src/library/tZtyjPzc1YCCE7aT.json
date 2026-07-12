@@ -1,0 +1,32 @@
+{
+  "_id": "tZtyjPzc1YCCE7aT",
+  "name": "English",
+  "type": "knowledge",
+  "system": {
+    "summary": "Languages",
+    "description": "You can fluently speak and understand this language",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "English",
+        "srxId": 10030,
+        "subcategory": "Languages",
+        "type": "Language",
+        "type2": null,
+        "description": "You can fluently speak and understand this language",
+        "freePool": "Languages",
+        "slug": "english"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!tZtyjPzc1YCCE7aT"
+}

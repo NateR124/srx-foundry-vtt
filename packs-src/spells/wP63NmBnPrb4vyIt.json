@@ -1,0 +1,47 @@
+{
+  "_id": "wP63NmBnPrb4vyIt",
+  "name": "Weaken",
+  "type": "spell",
+  "system": {
+    "summary": "Health",
+    "description": "Target suffers Liability on tests with chosen physical attribute",
+    "category": "health",
+    "pattern": "touch",
+    "duration": "timed",
+    "range": "Touch",
+    "action": "complex",
+    "resistanceAttr": "attribute",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Health"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Weaken",
+        "srxId": 1579,
+        "category": "Health",
+        "description": "Target suffers Liability on tests with chosen physical attribute",
+        "range": {
+          "raw": "Touch",
+          "special": "Touch"
+        },
+        "duration": "1 hour",
+        "resistance": "Special",
+        "attack": null,
+        "slug": "weaken"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "81q0dM8ktqbFvvhu",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!wP63NmBnPrb4vyIt"
+}

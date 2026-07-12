@@ -1,0 +1,99 @@
+{
+  "_id": "Gud4yWQP3mIeEptq",
+  "name": "Flash-bang Grenade - Motion Sensor",
+  "type": "weapon",
+  "system": {
+    "summary": "Explosives / Grenades",
+    "description": "",
+    "skill": "projectileWeapons",
+    "specialization": "Grenades (Thrown)",
+    "category": "Explosives",
+    "range": "10/20/BOD x 5m (Min. 30)",
+    "properties": "",
+    "cost": 100,
+    "attackModes": [
+      {
+        "name": "Ranged AOE",
+        "action": "complex",
+        "fireMode": "",
+        "acc": 0,
+        "dv": "10/5",
+        "dvType": "S",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Flash-bang Grenade - Motion Sensor",
+        "srxId": 4627,
+        "category": "Explosives",
+        "subcategory": "Grenades",
+        "cost": 100,
+        "properties": [],
+        "options": [],
+        "type": "Explosives",
+        "type2": "Grenades",
+        "type3": null,
+        "skill": "Projectile Weapons",
+        "specialization": "Grenades (Thrown)",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "10/20/BOD x 5m (Min. 30)",
+          "bands": [
+            10,
+            20,
+            {
+              "attr": "bod",
+              "mult": 5,
+              "min": 30
+            }
+          ]
+        },
+        "improvedRange": null,
+        "canMod": false,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [
+          {
+            "attackType": "Ranged AOE",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": 0,
+            "dv": {
+              "raw": "10/5",
+              "near": 10,
+              "far": 5,
+              "type": "S",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "flash-bang-grenade-motion-sensor"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "HutAORUklVy45Nwf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Gud4yWQP3mIeEptq"
+}

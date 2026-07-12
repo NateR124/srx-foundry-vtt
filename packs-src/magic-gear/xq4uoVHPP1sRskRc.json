@@ -1,0 +1,50 @@
+{
+  "_id": "xq4uoVHPP1sRskRc",
+  "name": "Artifice Blueprint",
+  "type": "gear",
+  "system": {
+    "summary": "Artifice Blueprints",
+    "description": "",
+    "subtype": "magic-gear",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 5000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Artifice Blueprint",
+        "srxId": 9110,
+        "category": "Artifice Blueprints",
+        "cost": 5000,
+        "properties": [],
+        "options": [
+          "list of Artifices"
+        ],
+        "type": "",
+        "type2": "Artificing Gear",
+        "type3": null,
+        "fixedRating": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [],
+        "alwaysUnique": false,
+        "slug": "artifice-blueprint"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xq4uoVHPP1sRskRc"
+}

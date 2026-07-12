@@ -1,0 +1,62 @@
+{
+  "_id": "YiQ5iNnVOr9JOdlF",
+  "name": "Edge: System Lockdown",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "+2 Matrix Defense Score against one Hacking test",
+    "category": "general",
+    "subgroup": "",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": true
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Edge: System Lockdown",
+        "srxId": 26,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": "TRUE",
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "+2 Matrix Defense Score against one Hacking test",
+        "effects": [],
+        "slug": "edge-system-lockdown"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!YiQ5iNnVOr9JOdlF"
+}

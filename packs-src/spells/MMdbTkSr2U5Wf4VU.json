@@ -1,0 +1,49 @@
+{
+  "_id": "MMdbTkSr2U5Wf4VU",
+  "name": "Alter Memory",
+  "type": "spell",
+  "system": {
+    "summary": "Manipulation",
+    "description": "Add to, alter, or erase target's memory",
+    "category": "manipulation",
+    "pattern": "direct",
+    "duration": "instantaneous",
+    "range": "5m",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Manipulation"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Alter Memory",
+        "srxId": 1504,
+        "category": "Manipulation",
+        "description": "Add to, alter, or erase target's memory",
+        "range": {
+          "raw": "5m",
+          "bands": [
+            5
+          ]
+        },
+        "duration": "Instantaneous",
+        "resistance": "WIL+LOG",
+        "attack": null,
+        "slug": "alter-memory"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7UPq2yvvIYDMGwdo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!MMdbTkSr2U5Wf4VU"
+}

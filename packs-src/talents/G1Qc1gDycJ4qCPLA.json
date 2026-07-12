@@ -1,0 +1,63 @@
+{
+  "_id": "G1Qc1gDycJ4qCPLA",
+  "name": "Edge: Penetrating Shot",
+  "type": "talent",
+  "system": {
+    "summary": "Weapons / F",
+    "description": "Attack target through wall or barrier",
+    "category": "weapons",
+    "subgroup": "F",
+    "karma": 3,
+    "option": "",
+    "isEdgeAction": true
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Edge: Penetrating Shot",
+        "srxId": 133,
+        "category": "Weapons",
+        "subcategory": "F",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "F",
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": "TRUE",
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "Attack target through wall or barrier",
+        "effects": [],
+        "slug": "edge-penetrating-shot"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!G1Qc1gDycJ4qCPLA"
+}

@@ -1,0 +1,74 @@
+{
+  "_id": "GWTGIKRgz9rW10z8",
+  "name": "Reflex Recorder",
+  "type": "gear",
+  "system": {
+    "summary": "Headware",
+    "description": "+1 to chosen skill",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 22000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Reflex Recorder",
+        "srxId": 3038,
+        "category": "Headware",
+        "cost": 22000,
+        "properties": [],
+        "options": [
+          "Athletics",
+          "Biotech",
+          "Channeling",
+          "Close Combat",
+          "Con",
+          "Conjuring",
+          "Driving",
+          "Engineering",
+          "Firearms",
+          "Hacking",
+          "Influence",
+          "Insight",
+          "Mysticism",
+          "Outdoors",
+          "Piloting",
+          "Projectile Weapons",
+          "Software",
+          "Sorcery",
+          "Stealth",
+          "Threading"
+        ],
+        "dictionaryName": "Reflex Recorder",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": true,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.1",
+          "value": 0.1,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [],
+        "grants": [],
+        "description": "+1 to chosen skill",
+        "effects": [],
+        "slug": "reflex-recorder"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!GWTGIKRgz9rW10z8"
+}

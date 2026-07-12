@@ -1,0 +1,75 @@
+{
+  "_id": "zIOGgE5xcb4aUlPi",
+  "name": "Cyberskull",
+  "type": "gear",
+  "system": {
+    "summary": "Cyberlimbs / Other Cyberlimbs",
+    "description": "1 free hit on Armor tests vs. critical hits, Liability on Con & Influence tests",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 11000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Cyberskull",
+        "srxId": 3083,
+        "category": "Cyberlimbs",
+        "subcategory": "Other Cyberlimbs",
+        "cost": 11000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Cyberskull",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.3",
+          "value": 0.3,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "1 free hit on Armor tests vs. critical hits, Liability on Con & Influence tests",
+        "effects": [
+          {
+            "key": "athletics",
+            "value": 2
+          },
+          {
+            "key": "closeCombat",
+            "value": 1
+          },
+          {
+            "key": "armor",
+            "value": 2
+          },
+          {
+            "key": "hardenedArmor",
+            "value": 1
+          },
+          {
+            "key": "movementRate",
+            "value": 2
+          }
+        ],
+        "slug": "cyberskull"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!zIOGgE5xcb4aUlPi"
+}

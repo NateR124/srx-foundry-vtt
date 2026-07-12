@@ -1,0 +1,68 @@
+{
+  "_id": "jRfMNMTSYIOUC2TH",
+  "name": "Fairlight Paladin Cyberdeck",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Cyberdecks",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 295000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Fairlight Paladin Cyberdeck",
+        "srxId": 6030,
+        "category": "Matrix Devices",
+        "subcategory": "Cyberdecks",
+        "cost": 295000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Cyberdecks",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": 3,
+        "matrix": {
+          "dataProcessing": "2",
+          "firewall": "6",
+          "hotSimFirewall": "3",
+          "hackingTests": "2",
+          "agents": "6",
+          "rank": "27",
+          "modCapacity": "6"
+        },
+        "installedEnhancements": [
+          {
+            "name": "Analytics Engine",
+            "value": "Y"
+          },
+          {
+            "name": "Malware",
+            "value": "Y"
+          },
+          {
+            "name": "User Auditing",
+            "value": "Y"
+          }
+        ],
+        "slug": "fairlight-paladin-cyberdeck"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!jRfMNMTSYIOUC2TH"
+}

@@ -1,0 +1,134 @@
+{
+  "_id": "Xr819ugHJZ5wGqFG",
+  "name": "Technomancer Static (Human)",
+  "type": "character",
+  "system": {
+    "details": {
+      "metatype": "human",
+      "archetype": "Technomancer Static (Human)",
+      "nuyen": 0
+    },
+    "attributes": {
+      "bod": {
+        "base": 4,
+        "bonus": 0
+      },
+      "agi": {
+        "base": 4,
+        "bonus": 0
+      },
+      "rea": {
+        "base": 3,
+        "bonus": 0
+      },
+      "wil": {
+        "base": 6,
+        "bonus": 0
+      },
+      "log": {
+        "base": 2,
+        "bonus": 0
+      },
+      "int": {
+        "base": 5,
+        "bonus": 0
+      },
+      "cha": {
+        "base": 1,
+        "bonus": 0
+      }
+    },
+    "skills": {
+      "athletics": {
+        "rating": 1,
+        "bonus": 0,
+        "specializations": []
+      },
+      "con": {
+        "rating": 1,
+        "bonus": 0,
+        "specializations": []
+      },
+      "firearms": {
+        "rating": 5,
+        "bonus": 0,
+        "specializations": []
+      },
+      "influence": {
+        "rating": 1,
+        "bonus": 0,
+        "specializations": []
+      },
+      "perception": {
+        "rating": 1,
+        "bonus": 0,
+        "specializations": []
+      },
+      "stealth": {
+        "rating": 1,
+        "bonus": 0,
+        "specializations": []
+      },
+      "threading": {
+        "rating": 5,
+        "bonus": 0,
+        "specializations": []
+      }
+    },
+    "special": {
+      "edge": {
+        "rating": 2,
+        "value": 2
+      },
+      "essence": 6,
+      "quickness": {
+        "base": 1,
+        "bonus": 0
+      },
+      "magic": {
+        "base": 0,
+        "bonus": 0
+      },
+      "resonance": {
+        "base": 1,
+        "bonus": 0
+      }
+    },
+    "monitors": {
+      "stun": {
+        "value": 0,
+        "systemShock": 0,
+        "bonus": 0
+      },
+      "physical": {
+        "value": 0,
+        "systemShock": 0,
+        "bonus": 0
+      }
+    },
+    "derivedMods": {
+      "armor": 0,
+      "hardened": 0,
+      "woundedLimit": 0
+    },
+    "vision": {
+      "lowlight": false,
+      "thermographic": false,
+      "ultrasound": false,
+      "flareCompensation": false,
+      "visionMagnification": false
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "Technomancer Static (Human)",
+    "actorLink": true
+  },
+  "_key": "!actors!Xr819ugHJZ5wGqFG"
+}

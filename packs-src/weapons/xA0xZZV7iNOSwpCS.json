@@ -1,0 +1,89 @@
+{
+  "_id": "xA0xZZV7iNOSwpCS",
+  "name": "Stun Baton",
+  "type": "weapon",
+  "system": {
+    "summary": "Close Combat / Clubs",
+    "description": "",
+    "skill": "closeCombat",
+    "specialization": "Clubs",
+    "category": "Close Combat",
+    "range": "-",
+    "properties": "",
+    "cost": 750,
+    "attackModes": [
+      {
+        "name": "Melee",
+        "action": "complex",
+        "fireMode": "",
+        "acc": 3,
+        "dv": "5",
+        "dvType": "S",
+        "element": "Electricity"
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Stun Baton",
+        "srxId": 4513,
+        "category": "Close Combat",
+        "subcategory": "Clubs",
+        "cost": 750,
+        "properties": [],
+        "options": [],
+        "type": "Close Combat",
+        "type2": "Clubs",
+        "type3": null,
+        "skill": "Close Combat",
+        "specialization": "Clubs",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "-"
+        },
+        "improvedRange": null,
+        "canMod": false,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [
+          {
+            "attackType": "Melee",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": 3,
+            "dv": {
+              "raw": "5",
+              "value": 5,
+              "type": "S",
+              "element": "Electricity",
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "stun-baton"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7STNsUPeWuVcG9Pd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xA0xZZV7iNOSwpCS"
+}

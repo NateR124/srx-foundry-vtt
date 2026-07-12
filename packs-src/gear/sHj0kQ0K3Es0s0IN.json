@@ -1,0 +1,52 @@
+{
+  "_id": "sHj0kQ0K3Es0s0IN",
+  "name": "Gecko Tape Gloves",
+  "type": "gear",
+  "system": {
+    "summary": "Tools & Survival Gear",
+    "description": "",
+    "subtype": "Tools & Survival Gear",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 4500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Gecko Tape Gloves",
+        "srxId": 6131,
+        "category": "Tools & Survival Gear",
+        "cost": 4500,
+        "properties": [],
+        "options": [],
+        "type": "Tools & Survival Gear",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "gecko-tape-gloves"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!sHj0kQ0K3Es0s0IN"
+}

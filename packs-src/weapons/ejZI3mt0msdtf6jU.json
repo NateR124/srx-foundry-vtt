@@ -1,0 +1,73 @@
+{
+  "_id": "ejZI3mt0msdtf6jU",
+  "name": "Assault Cannon Round",
+  "type": "weapon",
+  "system": {
+    "summary": "Ammo",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "",
+    "category": "Ammo",
+    "range": "",
+    "properties": "Restricted",
+    "cost": 50,
+    "attackModes": [
+      {
+        "name": "",
+        "action": "major",
+        "fireMode": "",
+        "acc": 0,
+        "dv": "",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Assault Cannon Round",
+        "srxId": 4657,
+        "category": "Ammo",
+        "cost": 50,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Ammo",
+        "type2": null,
+        "type3": null,
+        "skill": null,
+        "specialization": null,
+        "isLargeMelee": false,
+        "isAmmo": true,
+        "isAccessory": false,
+        "range": null,
+        "improvedRange": null,
+        "canMod": false,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [],
+        "slug": "assault-cannon-round"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "P7D7v5b2Ei5PB1wy",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ejZI3mt0msdtf6jU"
+}

@@ -1,0 +1,72 @@
+{
+  "_id": "WNWAhR6WMZn9MX3U",
+  "name": "Kinesics",
+  "type": "talent",
+  "system": {
+    "summary": "Channeling / Yin",
+    "description": "+1 Con and Influence",
+    "category": "channeling",
+    "subgroup": "Yin",
+    "karma": 7,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Kinesics",
+        "srxId": 507,
+        "category": "Channeling",
+        "subcategory": "Yin",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Yin",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 7
+        },
+        "description": "+1 Con and Influence",
+        "effects": [
+          {
+            "key": "Con",
+            "value": 1
+          },
+          {
+            "key": "Influence",
+            "value": 1
+          }
+        ],
+        "slug": "kinesics"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!WNWAhR6WMZn9MX3U"
+}
