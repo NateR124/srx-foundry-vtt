@@ -20,8 +20,11 @@ import {
   metatypeKarma,
   attributePointsSpent,
   skillPointsSpent,
+  attributePointCost,
+  skillPointCost,
   unaugmentedAttributes,
   magicResonanceRating,
+  validatePriorityAssignment,
   validateBuild,
   validateWellRounded,
   assembleCharacter,
@@ -45,6 +48,9 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
       goStep: SrxChargenApp.#onGoStep,
       next: SrxChargenApp.#onNext,
       back: SrxChargenApp.#onBack,
+      pickPriority: SrxChargenApp.#onPickPriority,
+      stepAttr: SrxChargenApp.#onStepAttr,
+      stepSkill: SrxChargenApp.#onStepSkill,
       addSpec: SrxChargenApp.#onAddSpec,
       removeSpec: SrxChargenApp.#onRemoveSpec,
       commit: SrxChargenApp.#onCommit
@@ -73,6 +79,12 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
 
   /** @type {object} the working build selection consumed by priority.mjs. */
   #selection;
+
+  /** Signed modifier label ("+3" / "-1" / "" when zero) for display. */
+  static #signLabel(n) {
+    if (!n) return "";
+    return n > 0 ? `+${n}` : String(n);
+  }
 
   /** Seed a selection from an existing actor (re-open mid-build) or defaults. */
   static #defaultSelection(actor) {
@@ -124,6 +136,12 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
       spend: verdict.spend
     };
 
+    // Per-step forward gate: don't let the player leave Priorities until the
+    // five categories form a valid A–E permutation (the one hard prerequisite
+    // every later step derives its budgets from).
+    context.blockNext = this.#step === "priorities"
+      && !validatePriorityAssignment(sel.priorities).ok;
+
     switch (this.#step) {
       case "priorities": context.priorities = this.#priorityContext(); break;
       case "metatype": context.metatype = this.#metatypeContext(); break;
@@ -140,6 +158,7 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
   #priorityContext() {
     return {
       rows: PRIORITY_ROWS,
+      complete: validatePriorityAssignment(this.#selection.priorities).ok,
       categories: PRIORITY_CATEGORIES.map((cat) => ({
         key: cat,
         label: game.i18n.localize(`SRX.Chargen.category.${cat}`),
@@ -169,9 +188,24 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
   #metatypeContext() {
     const pri = this.#selection.priorities.metatype;
     const available = pri ? metatypesAt(pri) : Object.keys(SRX.metatypes);
+    // Keep a metatype always selected: if the current pick isn't offered at this
+    // priority (e.g. default "human" at Priority A → Troll/Elf only), fall to the
+    // first available so the step never renders with nothing chosen.
+    if (available.length && !available.includes(this.#selection.metatype)) {
+      this.#selection.metatype = available[0];
+    }
     const def = SRX.metatypes[this.#selection.metatype] ?? SRX.metatypes.human;
+    const elsewhere = Object.keys(SRX.metatypes).filter((k) => !available.includes(k));
     return {
       priority: pri,
+      availableNames: available.map((k) => game.i18n.localize(SRX.metatypes[k].label)).join(", "),
+      elsewhereNames: elsewhere.map((k) => game.i18n.localize(SRX.metatypes[k].label)).join(", "),
+      selectedKarma: metatypeKarma(pri, this.#selection.metatype),
+      grantLabel: (() => {
+        const k = metatypeKarma(pri, this.#selection.metatype);
+        return k == null ? null : game.i18n.format("SRX.Chargen.grantsKarma", { karma: k });
+      })(),
+      maxima: Object.entries(def.maxima ?? {}).map(([k, v]) => ({ abbr: SRX.attributes[k].abbr, value: v })),
       list: available.map((key) => {
         const m = SRX.metatypes[key];
         return {
@@ -180,7 +214,7 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
           karma: metatypeKarma(pri, key),
           selected: this.#selection.metatype === key,
           mods: Object.entries(m.mods ?? {})
-            .map(([k, v]) => `${SRX.attributes[k].abbr} ${v > 0 ? "+" : ""}${v}`).join(", ") || "—"
+            .map(([k, v]) => `${SRX.attributes[k].abbr} ${v > 0 ? "+" : ""}${v}`).join(" · ") || "—"
         };
       }),
       choice: def.choice
@@ -205,14 +239,20 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
       spent,
       remaining: available - spent,
       over: spent > available,
-      rows: Object.entries(SRX.attributes).map(([key, def]) => ({
-        key,
-        label: game.i18n.localize(def.label),
-        abbr: def.abbr,
-        base: this.#selection.attributes[key] ?? 1,
-        unaug: unaug[key],
-        max: SRX.metatypes[this.#selection.metatype]?.maxima?.[key] ?? 6
-      }))
+      rows: Object.entries(SRX.attributes).map(([key, def]) => {
+        const base = this.#selection.attributes[key] ?? 1;
+        return {
+          key,
+          label: game.i18n.localize(def.label),
+          abbr: def.abbr,
+          base,
+          // Effective metatype delta actually applied (honours the min-1 floor).
+          mod: unaug[key] - base,
+          modLabel: SrxChargenApp.#signLabel(unaug[key] - base),
+          unaug: unaug[key],
+          max: SRX.metatypes[this.#selection.metatype]?.maxima?.[key] ?? 6
+        };
+      })
     };
   }
 
@@ -303,16 +343,52 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
   }
 
   #reviewContext(verdict) {
-    const { summary } = assembleCharacter(this.#selection);
-    const wr = validateWellRounded(this.#selection);
+    const sel = this.#selection;
+    const { summary } = assembleCharacter(sel);
+    const wr = validateWellRounded(sel);
     const problemMsg = (p) => game.i18n.has(`SRX.Chargen.problem.${p.code}`)
       ? game.i18n.format(`SRX.Chargen.problem.${p.code}`, p) : p.code;
+
+    const metatypeLabel = game.i18n.localize(
+      (SRX.metatypes[sel.metatype] ?? SRX.metatypes.human).label);
+    const unaug = unaugmentedAttributes(sel);
+
+    // Full build recap — the player confirms what they actually built.
+    const attributes = Object.entries(SRX.attributes).map(([key, def]) => {
+      const base = sel.attributes?.[key] ?? 1;
+      return {
+        abbr: def.abbr, base, value: unaug[key],
+        modLabel: SrxChargenApp.#signLabel(unaug[key] - base)
+      };
+    });
+    const skills = Object.entries(sel.skills ?? {})
+      .filter(([, s]) => (s?.rating ?? 0) > 0)
+      .map(([key, s]) => ({
+        label: game.i18n.localize(SRX.skills[key]?.label ?? key),
+        rating: s.rating,
+        specs: [...(s.specializations ?? [])].join(", ")
+      }))
+      .sort((a, b) => a.label.localeCompare(b.label));
+    const priorities = PRIORITY_CATEGORIES.map((cat) => ({
+      label: game.i18n.localize(`SRX.Chargen.category.${cat}`),
+      row: sel.priorities?.[cat] || "—"
+    }));
+    const awakenedLabel = summary.awakened
+      ? game.i18n.localize(`SRX.Chargen.${summary.awakened}Option`) : null;
+
     return {
       legal: verdict.legal,
       problems: verdict.problems.map(problemMsg),
       warnings: verdict.warnings.map(problemMsg),
       wellRounded: wr.problems.map(problemMsg),
       summary,
+      metatypeLabel,
+      lifestyleLabel: game.i18n.localize(`SRX.Lifestyle.${summary.lifestyle}`),
+      priorities,
+      attributes,
+      skills,
+      talents: sel.talents ?? [],
+      awakenedLabel,
       fakeSin: fakeSinRating(summary.lifestyle),
       isNew: !this.#actor
     };
@@ -323,11 +399,49 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
    * navigation so typing never loses focus mid-edit. */
   _onRender(context, options) {
     super._onRender(context, options);
-    for (const sel of this.element?.querySelectorAll?.("select") ?? []) {
-      sel.addEventListener("change", () => {
+    // Re-render on discrete choices (selects, metatype radio, talent checkboxes)
+    // so dependent views update live. Number inputs are deliberately excluded —
+    // they use #wireLiveBudget for in-flight feedback and are read on navigation
+    // so typing never loses focus mid-edit.
+    for (const el of this.element?.querySelectorAll?.("select, input[type=radio], input[type=checkbox]") ?? []) {
+      el.addEventListener("change", () => {
         this.#readForm();
         this.render();
       });
+    }
+    this.#wireLiveBudget();
+  }
+
+  /** Live points readout: recompute spent/remaining on every keystroke without a
+   * re-render (which would steal focus mid-type). Steppers/navigation still do a
+   * full render; this is purely the in-flight feedback. */
+  #wireLiveBudget() {
+    const budget = this.element?.querySelector?.(".chargen-budget");
+    if (!budget) return;
+    const kind = budget.dataset.kind;
+    const avail = Number(budget.dataset.available) || 0;
+    const recompute = () => {
+      let spent = 0;
+      if (kind === "attr") {
+        for (const key of Object.keys(SRX.attributes)) {
+          const v = Number(this.element.elements[`attr.${key}`]?.value);
+          spent += attributePointCost(Math.max(1, Math.min(6, v || 1)));
+        }
+      } else {
+        for (const key of Object.keys(SRX.skills)) {
+          const v = Number(this.element.elements[`skill.${key}`]?.value);
+          const specs = this.#selection.skills[key]?.specializations?.length ?? 0;
+          spent += skillPointCost(Math.max(0, Math.min(6, v || 0))) + specs;
+        }
+      }
+      const spentEl = budget.querySelector(".b-spent");
+      const remEl = budget.querySelector(".b-remaining");
+      if (spentEl) spentEl.textContent = String(spent);
+      if (remEl) remEl.textContent = String(avail - spent);
+      budget.classList.toggle("over", spent > avail);
+    };
+    for (const inp of this.element.querySelectorAll("input[type=number]")) {
+      inp.addEventListener("input", recompute);
     }
   }
 
@@ -409,6 +523,11 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
 
   static #onNext() {
     this.#readForm();
+    // Priorities are the one hard prerequisite — don't advance until valid.
+    if (this.#step === "priorities" && !validatePriorityAssignment(this.#selection.priorities).ok) {
+      this.render();
+      return;
+    }
     const i = STEPS.indexOf(this.#step);
     if (i < STEPS.length - 1) this.#step = STEPS[i + 1];
     this.render();
@@ -418,6 +537,41 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
     this.#readForm();
     const i = STEPS.indexOf(this.#step);
     if (i > 0) this.#step = STEPS[i - 1];
+    this.render();
+  }
+
+  /** Click an A–E cell to assign that priority to a category. Rows stay a
+   * distinct A–E permutation: if the clicked row already belongs to another
+   * category, the two swap so the player never has to clear a slot by hand. */
+  static #onPickPriority(_event, target) {
+    this.#readForm();
+    const { cat, row } = target.dataset;
+    const pr = this.#selection.priorities;
+    if (pr[cat] === row) return;
+    const old = pr[cat] ?? "";
+    const other = PRIORITY_CATEGORIES.find((c) => c !== cat && pr[c] === row);
+    pr[cat] = row;
+    if (other) pr[other] = old;
+    this.render();
+  }
+
+  static #onStepAttr(_event, target) {
+    this.#readForm();
+    const key = target.dataset.key;
+    const delta = Number(target.dataset.delta) || 0;
+    const cur = this.#selection.attributes[key] ?? 1;
+    this.#selection.attributes[key] = Math.max(1, Math.min(6, cur + delta));
+    this.render();
+  }
+
+  static #onStepSkill(_event, target) {
+    this.#readForm();
+    const key = target.dataset.key;
+    const delta = Number(target.dataset.delta) || 0;
+    const s = this.#selection.skills[key] ?? { rating: 0, specializations: [] };
+    s.rating = Math.max(0, Math.min(6, (s.rating ?? 0) + delta));
+    if (s.rating < 4) s.specializations = [];
+    this.#selection.skills[key] = s;
     this.render();
   }
 
