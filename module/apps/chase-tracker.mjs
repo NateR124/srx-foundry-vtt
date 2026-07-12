@@ -68,15 +68,22 @@ export class SrxChaseTracker extends HandlebarsApplicationMixin(ApplicationV2) {
 
   async _prepareContext() {
     const state = this.chaseState();
-    const vehicles = this.vehicles().map((v) => ({
-      id: v.id,
-      uuid: v.uuid,
-      name: v.name,
-      role: v.system.chase?.role ?? "none",
-      range: v.system.chase?.range ?? "medium",
-      speed: v.system.derived?.effectiveSpeed ?? v.system.speed,
-      isPursuer: (v.system.chase?.role ?? "none") === "pursuer"
-    }));
+    const bandIndex = { close: 1, medium: 2, long: 3 };
+    const vehicles = this.vehicles().map((v) => {
+      const role = v.system.chase?.role ?? "none";
+      const range = v.system.chase?.range ?? "medium";
+      return {
+        id: v.id,
+        uuid: v.uuid,
+        name: v.name,
+        role,
+        range,
+        speed: v.system.derived?.effectiveSpeed ?? v.system.speed,
+        isPursuer: role === "pursuer",
+        // Read-only glance cue for the 3-segment band bar (close/medium/long).
+        band: [1, 2, 3].map((n) => ({ filled: n <= (bandIndex[range] ?? 2) }))
+      };
+    });
 
     return {
       hasCombat: !!this.combat,
@@ -93,6 +100,10 @@ export class SrxChaseTracker extends HandlebarsApplicationMixin(ApplicationV2) {
           crash: "SRX.Vehicle.hazardCrash"
         }[state.hazard])
         : "—",
+      // Colour-code the hazard tile: none = neutral, light = amber, crash = red.
+      hazardTone: state.hazard
+        ? { none: "none", lightCrash: "warn", crash: "danger" }[state.hazard]
+        : null,
       rangeMeters: CHASE_RANGE_METERS
     };
   }

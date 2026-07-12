@@ -1,5 +1,54 @@
 /* SRX M6 Vehicles depth — chase tracker, weapon mounts, mount builder.
-   Merged into styles/srx.css by the orchestrator at integration. */
+   Merged into styles/srx.css by the orchestrator at integration.
+   UI/UX pass: docs/UX-VEHICLE-CHASE.md. */
+
+/* ---------- Restrained section headings ----------
+   The vehicle sheet + chase tracker used bare <h3>, which fell back to Foundry's
+   large-bold default (billboards) because srx.css only scopes the compact
+   heading rule to .col/.magic-panel/etc. Bring them to the shared small-caps
+   scale used elsewhere. */
+.vehicle-sheet-body .section-label,
+.chase-tracker-body .section-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border, #888);
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.9;
+  margin: 12px 0 4px;
+}
+.vehicle-sheet-body .field-label {
+  display: block;
+  font-size: 0.72em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+  margin: 4px 0 2px;
+}
+
+/* ---------- Chase controls fold (cockpit) ----------
+   Chase Environment + Chase role are Warm/chase-only; collapse them until a
+   chase is active (details[open] driven by chaseActive). */
+.vehicle-sheet-body .chase-fold { margin: 6px 0; }
+.vehicle-sheet-body .chase-fold > summary {
+  cursor: pointer;
+  list-style: none;
+  justify-content: flex-start;
+}
+.vehicle-sheet-body .chase-fold > summary::-webkit-details-marker { display: none; }
+.vehicle-sheet-body .chase-fold > summary::before {
+  content: "\25B8"; /* ▸ */
+  font-size: 0.9em;
+  opacity: 0.7;
+  transition: transform 0.1s ease;
+}
+.vehicle-sheet-body .chase-fold[open] > summary::before { content: "\25BE"; /* ▾ */ }
+.vehicle-sheet-body .chase-fold-body { margin: 2px 0 4px; }
+.vehicle-sheet-body .chase-fold-body .chase-state { margin-top: 4px; }
+
 
 /* Weapon mounts (play mode) */
 .vehicle-sheet-body .mount-list {
@@ -43,14 +92,45 @@
   gap: 0.6rem;
   padding: 0.5rem;
 }
-.chase-tracker-body .chase-env-line {
-  display: flex;
-  gap: 1.2rem;
-  font-size: 0.9em;
-}
-.chase-tracker-body .chase-buttons {
+/* Environment + Hazard as glanceable stat tiles (cockpit language) */
+.chase-tracker-body .chase-tiles {
   display: flex;
   gap: 0.5rem;
+  margin: 4px 0;
+}
+.chase-tracker-body .chase-tiles .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 88px;
+  padding: 3px 10px;
+  border: 1px solid var(--color-border, #888);
+  border-radius: 4px;
+}
+.chase-tracker-body .chase-tiles .stat label {
+  font-size: 0.68em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.75;
+}
+.chase-tracker-body .chase-tiles .stat span {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+/* Hazard tile colour language: amber = light crash, red = crash */
+.chase-tracker-body .chase-tiles .stat.hazard.tone-warn {
+  background: #8a6d1a22;
+  border-color: #8a6d1a;
+}
+.chase-tracker-body .chase-tiles .stat.hazard.tone-danger {
+  background: #a33b3b22;
+  border-color: #a33b3b;
+}
+.chase-tracker-body .form-row .roll-env {
+  flex: 0 0 auto;
+  align-self: flex-end;
+  width: auto;
+  white-space: nowrap;
 }
 .chase-tracker-body .chase-grid {
   width: 100%;
@@ -68,7 +148,33 @@
 .chase-tracker-body .chase-grid .chase-speed {
   text-align: center;
 }
+/* Role-tinted rows — quarry vs pursuer read at a glance via a left edge */
+.chase-tracker-body .chase-grid tr[data-role] td:first-child {
+  border-left: 3px solid transparent;
+  padding-left: 0.4rem;
+}
+.chase-tracker-body .chase-grid tr[data-role="quarry"] td:first-child { border-left-color: #b8892b; }
+.chase-tracker-body .chase-grid tr[data-role="pursuer"] td:first-child { border-left-color: #3e6a9a; }
+/* Range band bar (close/medium/long) — filled to the current band */
+.chase-tracker-body .range-band {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 2px;
+}
+.chase-tracker-body .range-band .band-seg {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(140, 140, 140, 0.25);
+}
+.chase-tracker-body .range-band .band-seg.filled { background: #b8892b; }
 .chase-tracker-body .chase-hint {
   opacity: 0.75;
   font-size: 0.82em;
+}
+/* Resolve Chase Turn — the turn's payoff click, made prominent */
+.chase-tracker-body .chase-resolve {
+  width: 100%;
+  margin-top: 4px;
+  font-weight: 600;
 }
