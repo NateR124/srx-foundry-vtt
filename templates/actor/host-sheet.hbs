@@ -1,32 +1,55 @@
-<div class="srx host-sheet-body">
+<div class="srx host-sheet-body {{#if isBuild}}mode-build{{else}}mode-play{{/if}}">
   <header class="sheet-header">
     <img class="portrait" src="{{actor.img}}" data-action="editImage" data-edit="img" alt="{{actor.name}}">
     <div class="header-fields">
-      <input class="charname" type="text" name="name" value="{{actor.name}}">
-      <div class="host-statline">
-        <label class="host-rating">{{localize "SRX.Host.rating"}}
-          <input type="number" name="system.hostRating" value="{{system.hostRating}}" min="1" step="1">
-        </label>
-        <span class="stat" data-tooltip="{{localize 'SRX.Derived.matrixDefenseScore'}}">
-          <label>{{localize "SRX.Host.mds"}}</label><b>{{mds}}</b>
-        </span>
-        <label>{{localize "SRX.Host.hostType"}}
-          <select name="system.type">
-            <option value="wireless" {{#if (srxEq system.type "wireless")}}selected{{/if}}>{{localize "SRX.Host.wireless"}}</option>
-            <option value="wired" {{#if (srxEq system.type "wired")}}selected{{/if}}>{{localize "SRX.Host.wired"}}</option>
-          </select>
-        </label>
-        <button type="button" class="firewall-roll" data-action="rollFirewall"
-                data-tooltip="{{localize 'SRX.Host.firewallHint'}}">
-          <i class="fa-solid fa-shield-halved"></i>
-          {{localize "SRX.Host.firewallRoll"}} ({{firewallPool}}d)
-        </button>
+      <div class="name-row">
+        {{#if isBuild}}
+        <input class="charname" type="text" name="name" value="{{actor.name}}">
+        {{else}}
+        <h1 class="charname display">{{actor.name}}</h1>
+        {{/if}}
+        {{#if editable}}
+        <a class="mode-toggle {{#if isBuild}}building{{/if}}" data-action="toggleMode"
+           title="{{#if isBuild}}{{localize 'SRX.Sheet.modeToPlay'}}{{else}}{{localize 'SRX.Sheet.modeToBuild'}}{{/if}}">
+          <i class="fa-solid {{#if isBuild}}fa-hammer{{else}}fa-dice-d6{{/if}}"></i>
+          {{#if isBuild}}{{localize "SRX.Sheet.modeBuild"}}{{else}}{{localize "SRX.Sheet.modePlay"}}{{/if}}
+        </a>
+        {{/if}}
+      </div>
+      <div class="host-badges">
+        <span class="host-badge" data-tooltip="{{localize 'SRX.Host.rating'}}">{{localize "SRX.Host.ratingShort"}} {{system.hostRating}}</span>
+        <span class="host-badge">{{hostTypeLabel}}</span>
       </div>
     </div>
   </header>
 
+  {{#if isBuild}}
+  {{!-- Build: stat entry (Cold — prep time) --}}
   <section class="host-body">
-    <h3>{{localize "SRX.Host.overrides"}}</h3>
+    <div class="host-statline">
+      <label class="host-rating">{{localize "SRX.Host.rating"}}
+        <input type="number" name="system.hostRating" value="{{system.hostRating}}" min="1" step="1">
+      </label>
+      <span class="stat" data-tooltip="{{localize 'SRX.Derived.matrixDefenseScore'}}">
+        <label>{{localize "SRX.Host.mds"}}</label><b>{{mds}}</b>
+      </span>
+      <span class="stat" data-tooltip="{{localize 'SRX.Host.firewallHint'}}">
+        <label>{{localize "SRX.Host.firewall"}}</label><b>{{firewallPool}}d</b>
+      </span>
+      <label>{{localize "SRX.Host.hostType"}}
+        <select name="system.type">
+          <option value="wireless" {{#if (srxEq system.type "wireless")}}selected{{/if}}>{{localize "SRX.Host.wireless"}}</option>
+          <option value="wired" {{#if (srxEq system.type "wired")}}selected{{/if}}>{{localize "SRX.Host.wired"}}</option>
+        </select>
+      </label>
+      <button type="button" class="firewall-roll" data-action="rollFirewall"
+              data-tooltip="{{localize 'SRX.Host.firewallHint'}}">
+        <i class="fa-solid fa-shield-halved"></i>
+        {{localize "SRX.Host.firewallRoll"}} ({{firewallPool}}d)
+      </button>
+    </div>
+
+    <h3 class="host-section">{{localize "SRX.Host.overrides"}}</h3>
     <div class="item-grid host-overrides">
       {{#each systems}}
       <label>{{this.label}}
@@ -35,12 +58,12 @@
       {{/each}}
     </div>
 
-    <h3 class="section-header">{{localize "SRX.Host.icLadder"}}
-      <span>
+    <h3 class="host-section section-header">{{localize "SRX.Host.icLadder"}}
+      <span class="header-actions">
         {{#unless ladder.length}}
-        <a class="item-control" data-action="loadExampleLadder">{{localize "SRX.Host.loadExample"}}</a>
+        <a class="add-mode" data-action="loadExampleLadder">{{localize "SRX.Host.loadExample"}}</a>
         {{/unless}}
-        <a class="item-control" data-action="addLadderRow"><i class="fa-solid fa-plus"></i> {{localize "SRX.Host.addRow"}}</a>
+        <a class="add-mode" data-action="addLadderRow"><i class="fa-solid fa-plus"></i> {{localize "SRX.Host.addRow"}}</a>
       </span>
     </h3>
     <div class="ic-ladder">
@@ -57,8 +80,10 @@
       {{/each}}
     </div>
 
-    <h3 class="section-header">{{localize "SRX.Host.icDefs"}}
-      <a class="item-control" data-action="addIcDef"><i class="fa-solid fa-plus"></i> {{localize "SRX.Host.addRow"}}</a>
+    <h3 class="host-section section-header">{{localize "SRX.Host.icDefs"}}
+      <span class="header-actions">
+        <a class="add-mode" data-action="addIcDef"><i class="fa-solid fa-plus"></i> {{localize "SRX.Host.addRow"}}</a>
+      </span>
     </h3>
     <div class="ic-defs">
       {{#each icDefs}}
@@ -74,4 +99,67 @@
       {{/each}}
     </div>
   </section>
+
+  {{else}}
+  {{!-- Play: GM cockpit — readouts and Intent clicks only, no form inputs --}}
+  <section class="host-body">
+    <div class="host-statline play">
+      <span class="stat big" data-tooltip="{{localize 'SRX.Derived.matrixDefenseScore'}}">
+        <label>{{localize "SRX.Host.mds"}}</label><b>{{mds}}</b>
+      </span>
+      <span class="stat" data-tooltip="{{localize 'SRX.Host.firewallHint'}}">
+        <label>{{localize "SRX.Host.firewall"}}</label><b>{{firewallPool}}d</b>
+      </span>
+      <span class="stat {{#if peakOs}}alert{{/if}}" data-tooltip="{{localize 'SRX.Matrix.osHint'}}">
+        <label>{{localize "SRX.Host.peakOs"}}</label><b>{{peakOs}}</b>
+      </span>
+      <button type="button" class="firewall-roll" data-action="rollFirewall"
+              data-tooltip="{{localize 'SRX.Host.firewallHint'}}">
+        <i class="fa-solid fa-shield-halved"></i>
+        {{localize "SRX.Host.firewallRoll"}} ({{firewallPool}}d)
+      </button>
+    </div>
+
+    {{#if overrideChips.length}}
+    <div class="subsystem-chips" data-tooltip="{{localize 'SRX.Host.overrides'}}">
+      {{#each overrideChips}}
+      <span class="chip"><span class="chip-label">{{this.label}}</span><b>{{this.value}}</b></span>
+      {{/each}}
+    </div>
+    {{/if}}
+
+    <h3 class="host-section">{{localize "SRX.Host.icLadderShort"}}</h3>
+    {{#if ladderPlay.length}}
+    <ul class="ic-rungs">
+      {{#each ladderPlay}}
+      <li class="rung {{#if this.active}}active{{/if}}">
+        <span class="rung-os">{{localize "SRX.Host.osThreshold"}} ≥ {{this.os}}</span>
+        <span class="rung-ic">{{this.icText}}</span>
+        {{#if this.active}}<i class="fa-solid fa-bolt rung-flag" data-tooltip="{{localize 'SRX.Host.osTierTip'}}"></i>{{/if}}
+      </li>
+      {{/each}}
+    </ul>
+    {{else}}
+    <p class="empty">{{localize "SRX.Host.noLadder"}}</p>
+    {{/if}}
+
+    <h3 class="host-section">{{localize "SRX.Host.access"}}
+      <a class="spider-toggle {{#if spiderPresent}}active{{/if}}" data-action="toggleSpider"
+         data-tooltip="{{localize 'SRX.Host.spiderTip'}}">
+        <i class="fa-solid fa-user-secret"></i> {{localize "SRX.Host.spider"}}
+      </a>
+    </h3>
+    <ul class="item-list host-intruders">
+      {{#each intruders}}
+      <li>
+        <i class="fa-solid fa-user-ninja"></i>
+        <span class="item-name">{{this.name}}</span>
+        <span class="detail">{{localize "SRX.Host.osThreshold"}} {{this.os}}{{#if this.icText}} · {{this.icText}}{{/if}}</span>
+      </li>
+      {{else}}
+      <li class="empty">{{localize "SRX.Host.noIntruders"}}</li>
+      {{/each}}
+    </ul>
+  </section>
+  {{/if}}
 </div>

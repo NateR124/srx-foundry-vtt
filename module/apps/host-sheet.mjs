@@ -1,5 +1,5 @@
 import { restoreNullNumbers } from "./form-utils.mjs";
-import { MATRIX_SYSTEMS, exampleIcLadder, hostFirewallPool } from "../rules/matrix.mjs";
+import { MATRIX_SYSTEMS, exampleIcLadder, hostFirewallPool, getActiveIC } from "../rules/matrix.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
@@ -10,6 +10,12 @@ const { ActorSheetV2 } = foundry.applications.sheets;
  * previous seed's Attack/Sleaze/DataProc block was SR5 bleed-through.
  * GM tools: per-system rating overrides, OS-keyed IC ladder, IC damage
  * overrides, one-click firewall test.
+ *
+ * Play/Build split (docs/UX-MATRIX-HOST.md): Play = a GM cockpit with zero
+ * form inputs (MDS/Firewall/Peak-OS tiles, the IC ladder with the currently
+ * triggered rung highlighted, the intruder list, one Firewall Test); Build =
+ * the per-system rating grid + ladder / damage editors. Same client-side
+ * `toggleMode` preference the character and threat sheets use.
  */
 export class SrxHostSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   static DEFAULT_OPTIONS = {
@@ -24,13 +30,30 @@ export class SrxHostSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       addIcDef: SrxHostSheet.#onAddIcDef,
       removeIcDef: SrxHostSheet.#onRemoveIcDef,
       loadExampleLadder: SrxHostSheet.#onLoadExampleLadder,
-      toggleSpider: SrxHostSheet.#onToggleSpider
+      toggleSpider: SrxHostSheet.#onToggleSpider,
+      toggleMode: SrxHostSheet.#onToggleMode
     }
   };
 
   static PARTS = {
     body: { template: "systems/srx/templates/actor/host-sheet.hbs" }
   };
+
+  /**
+   * Play\Build mode — a client-side viewing preference (not actor data), keyed
+   * per actor in localStorage, matching the character and threat sheets.
+   */
+  #mode = null;
+
+  get sheetMode() {
+    if (this.#mode) return this.#mode;
+    try {
+      this.#mode = window.localStorage.getItem(`srx.sheetMode.${this.document.id}`) ?? "play";
+    } catch (_e) {
+      this.#mode = "play";
+    }
+    return this.#mode;
+  }
 
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
@@ -40,57 +63,70 @@ export class SrxHostSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     context.actor = actor;
     context.system = sys;
     context.editable = this.isEditable;
+    context.isBuild = this.isEditable && this.sheetMode === "build";
     context.mds = sys.hostRating;
     context.firewallPool = hostFirewallPool(sys.hostRating);
+    context.hostTypeLabel = game.i18n.localize(
+      sys.type === "wired" ? "SRX.Host.wired" : "SRX.Host.wireless"
+    );
     context.systems = MATRIX_SYSTEMS.map((key) => ({
       key,
       label: game.i18n.localize(`SRX.MatrixSystem.${key}`),
       value: sys.overrides?.[key] ?? null
     }));
+    // Play-only: overridden subsystems shown as read-only chips (a readout the
+    // GM still quotes live), never the input grid.
+    context.overrideChips = context.systems.filter((s) => s.value != null);
     context.ladder = (sys.icLadder ?? []).map((row, idx) => ({
       idx,
       os: row.os,
       icText: (row.ic ?? []).join(", ")
     }));
     context.icDefs = (sys.icDefinitions ?? []).map((d, idx) => ({ ...d, idx }));
-    // Spider presence + intruder Overwatch tracking (p. 152). Stored as a flag
-    // because HostData's schema is hub-frozen; the sheet owns the tooling.
+    // Spider presence + intruder Overwatch tracking (p. 152).
     context.spiderPresent = !!actor.getFlag("srx", "spiderPresent");
-    context.intruders = Object.entries(sys.intruders ?? {}).map(([id, os]) => ({ id, os }));
+
+    // Intruders: resolve names, sort by OS desc, tag the IC each has tripped.
+    const intruderEntries = Object.entries(sys.intruders ?? {});
+    context.intruders = intruderEntries
+      .map(([id, os]) => ({
+        id,
+        name: game.actors?.get?.(id)?.name ?? id,
+        os,
+        icText: getActiveIC(os, sys.icLadder).join(", ")
+      }))
+      .sort((a, b) => b.os - a.os);
+
+    // Peak OS drives the "which rung is live" highlight in the Play cockpit.
+    const peakOs = intruderEntries.reduce((m, [, os]) => Math.max(m, os), 0);
+    context.peakOs = peakOs;
+    const activeIc = getActiveIC(peakOs, sys.icLadder);
+    const activeRungOs = (sys.icLadder ?? [])
+      .filter((r) => peakOs >= r.os)
+      .reduce((m, r) => Math.max(m, r.os), -Infinity);
+    context.ladderPlay = (sys.icLadder ?? [])
+      .map((row) => ({
+        os: row.os,
+        icText: (row.ic ?? []).join(", "),
+        active: peakOs > 0 && activeIc.length > 0 && row.os === activeRungOs
+      }))
+      .sort((a, b) => a.os - b.os);
     return context;
-  }
-
-  /**
-   * Append a spider / intruder panel to the host body (M5 depth). Injected at
-   * render time so the hub-frozen host template does not need editing.
-   */
-  _onRender(context, options) {
-    super._onRender?.(context, options);
-    try {
-      const root = this.element;
-      const body = root?.querySelector?.(".host-body");
-      if (!body || body.querySelector(".host-spider")) return;
-
-      const intruderRows = context.intruders.length
-        ? context.intruders.map((i) => `<li>${i.id} · OS ${i.os}</li>`).join("")
-        : `<li class="empty">—</li>`;
-      const panel = document.createElement("section");
-      panel.className = "host-spider";
-      panel.innerHTML = `
-        <h3>${game.i18n.localize("SRX.Host.access")}</h3>
-        <button type="button" class="spider-toggle ${context.spiderPresent ? "active" : ""}" data-action="toggleSpider">
-          <i class="fa-solid fa-user-secret"></i> ${game.i18n.localize("SRX.Host.spider")}
-        </button>
-        <ul class="item-list host-intruders">${intruderRows}</ul>`;
-      body.appendChild(panel);
-    } catch (err) {
-      console.error("SRX | host spider panel", err);
-    }
   }
 
   static async #onToggleSpider() {
     const active = !this.document.getFlag("srx", "spiderPresent");
     await this.document.setFlag("srx", "spiderPresent", active);
+  }
+
+  /** Flip between the Play cockpit and the Build (edit-everything) view. */
+  static async #onToggleMode() {
+    const next = this.sheetMode === "play" ? "build" : "play";
+    this.#mode = next;
+    try {
+      window.localStorage.setItem(`srx.sheetMode.${this.document.id}`, next);
+    } catch (_e) { /* private browsing — keep in-memory only */ }
+    return this.render();
   }
 
   /**

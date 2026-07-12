@@ -113,7 +113,7 @@ function devicesPanel(actor) {
   return `
     <div class="matrix-subpanel devices">
       <h4><i class="fa-solid fa-tablet-screen-button"></i> ${T("SRX.Matrix.devicesHeading")}
-        <a class="item-control" data-matrix-action="addDevice"><i class="fa-solid fa-plus"></i></a></h4>
+        <a class="panel-add" data-matrix-action="addDevice" data-tooltip="${T("SRX.Matrix.addDevice")}"><i class="fa-solid fa-plus"></i> ${T("SRX.Matrix.addDevice")}</a></h4>
       <ul class="item-list matrix-devices">${list}</ul>
     </div>`;
 }
