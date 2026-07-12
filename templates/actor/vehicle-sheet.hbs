@@ -57,7 +57,7 @@
       </label>
     </div>
 
-    <h3>{{localize "SRX.Vehicle.autopilot"}}</h3>
+    <h3 class="section-label">{{localize "SRX.Vehicle.autopilot"}}</h3>
     <div class="form-row">
       <label>{{localize "SRX.Item.rating"}}
         <input type="number" name="system.autopilot.rating" value="{{system.autopilot.rating}}" min="0">
@@ -70,7 +70,7 @@
       </label>
     </div>
 
-    <h3>{{localize "SRX.Sheet.monitors"}}</h3>
+    <h3 class="section-label">{{localize "SRX.Sheet.monitors"}}</h3>
     <div class="form-row">
       <label>{{localize "SRX.Threat.damage"}}
         <input type="number" name="system.health.value" value="{{system.health.value}}" min="0">
@@ -155,33 +155,38 @@
       </button>
     </div>
 
-    <h3>{{localize "SRX.Vehicle.environment"}}</h3>
-    <div class="matrix-actions">
-      <button type="button" data-action="rollEnvironment" data-area="cluttered">{{localize "SRX.Vehicle.areaCluttered"}}</button>
-      <button type="button" data-action="rollEnvironment" data-area="standard">{{localize "SRX.Vehicle.areaStandard"}}</button>
-      <button type="button" data-action="rollEnvironment" data-area="open">{{localize "SRX.Vehicle.areaOpen"}}</button>
-    </div>
+    <details class="chase-fold" {{#if chaseActive}}open{{/if}}>
+      <summary class="section-label">{{localize "SRX.Vehicle.chaseSection"}}</summary>
+      <div class="chase-fold-body">
+        <span class="field-label">{{localize "SRX.Vehicle.environment"}}</span>
+        <div class="matrix-actions">
+          <button type="button" data-action="rollEnvironment" data-area="cluttered">{{localize "SRX.Vehicle.areaCluttered"}}</button>
+          <button type="button" data-action="rollEnvironment" data-area="standard">{{localize "SRX.Vehicle.areaStandard"}}</button>
+          <button type="button" data-action="rollEnvironment" data-area="open">{{localize "SRX.Vehicle.areaOpen"}}</button>
+        </div>
 
-    <div class="form-row chase-state">
-      <label>{{localize "SRX.Vehicle.chaseRole"}}
-        <select name="system.chase.role">
-          <option value="none" {{#if (srxEq system.chase.role "none")}}selected{{/if}}>{{localize "SRX.Vehicle.roleNone"}}</option>
-          <option value="quarry" {{#if (srxEq system.chase.role "quarry")}}selected{{/if}}>{{localize "SRX.Vehicle.roleQuarry"}}</option>
-          <option value="pursuer" {{#if (srxEq system.chase.role "pursuer")}}selected{{/if}}>{{localize "SRX.Vehicle.rolePursuer"}}</option>
-        </select>
-      </label>
-      {{#if (srxEq system.chase.role "pursuer")}}
-      <label>{{localize "SRX.Vehicle.chaseRange"}}
-        <select name="system.chase.range">
-          <option value="close" {{#if (srxEq system.chase.range "close")}}selected{{/if}}>{{localize "SRX.Vehicle.rangeClose"}}</option>
-          <option value="medium" {{#if (srxEq system.chase.range "medium")}}selected{{/if}}>{{localize "SRX.Vehicle.rangeMedium"}}</option>
-          <option value="long" {{#if (srxEq system.chase.range "long")}}selected{{/if}}>{{localize "SRX.Vehicle.rangeLong"}}</option>
-        </select>
-      </label>
-      {{/if}}
-    </div>
+        <div class="form-row chase-state">
+          <label>{{localize "SRX.Vehicle.chaseRole"}}
+            <select name="system.chase.role">
+              <option value="none" {{#if (srxEq system.chase.role "none")}}selected{{/if}}>{{localize "SRX.Vehicle.roleNone"}}</option>
+              <option value="quarry" {{#if (srxEq system.chase.role "quarry")}}selected{{/if}}>{{localize "SRX.Vehicle.roleQuarry"}}</option>
+              <option value="pursuer" {{#if (srxEq system.chase.role "pursuer")}}selected{{/if}}>{{localize "SRX.Vehicle.rolePursuer"}}</option>
+            </select>
+          </label>
+          {{#if (srxEq system.chase.role "pursuer")}}
+          <label>{{localize "SRX.Vehicle.chaseRange"}}
+            <select name="system.chase.range">
+              <option value="close" {{#if (srxEq system.chase.range "close")}}selected{{/if}}>{{localize "SRX.Vehicle.rangeClose"}}</option>
+              <option value="medium" {{#if (srxEq system.chase.range "medium")}}selected{{/if}}>{{localize "SRX.Vehicle.rangeMedium"}}</option>
+              <option value="long" {{#if (srxEq system.chase.range "long")}}selected{{/if}}>{{localize "SRX.Vehicle.rangeLong"}}</option>
+            </select>
+          </label>
+          {{/if}}
+        </div>
+      </div>
+    </details>
 
-    <h3>{{localize "SRX.Vehicle.mounts"}}</h3>
+    <h3 class="section-label">{{localize "SRX.Vehicle.mounts"}}</h3>
     {{#if mounts.length}}
     <ul class="mount-list">
       {{#each mounts}}
@@ -198,7 +203,7 @@
     <p class="fact">{{localize "SRX.Vehicle.mountsNone"}}</p>
     {{/if}}
 
-    <h3>{{localize "SRX.Vehicle.squad"}}</h3>
+    <h3 class="section-label">{{localize "SRX.Vehicle.squad"}}</h3>
     <div class="matrix-actions">
       <button type="button" data-action="openChaseTracker" {{#unless inCombat}}disabled{{/unless}}>
         <i class="fa-solid fa-flag-checkered"></i> {{localize "SRX.Vehicle.chaseTracker"}}
@@ -226,7 +231,7 @@
 
   {{#if isBuild}}
   <section class="mount-builder">
-    <h3>{{localize "SRX.Vehicle.mounts"}}</h3>
+    <h3 class="section-label">{{localize "SRX.Vehicle.mounts"}}</h3>
     {{#each mounts}}
     <div class="form-row mount-edit" data-mount-id="{{this.id}}">
       <label>{{localize "SRX.Sheet.name"}}

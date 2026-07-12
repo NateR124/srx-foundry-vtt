@@ -4,6 +4,17 @@
   {{else}}
 
   <section class="chase-controls">
+    <h3 class="section-label">{{localize "SRX.Vehicle.environment"}}</h3>
+    <div class="chase-tiles">
+      <div class="stat">
+        <label>{{localize "SRX.Vehicle.environment"}}</label>
+        <span>{{envLabel}}</span>
+      </div>
+      <div class="stat hazard {{#if hazardTone}}tone-{{hazardTone}}{{/if}}">
+        <label>{{localize "SRX.Vehicle.hazard"}}</label>
+        <span>{{hazardLabel}}</span>
+      </div>
+    </div>
     <div class="form-row">
       <label>{{localize "SRX.Vehicle.chaseArea"}}
         <select name="area">
@@ -15,21 +26,13 @@
       <label>{{localize "SRX.Vehicle.hazardThreshold"}}
         <input type="number" name="hazardThreshold" value="{{state.hazardThreshold}}" min="0" step="1">
       </label>
-    </div>
-    <div class="chase-env-line">
-      <span><b>{{localize "SRX.Vehicle.environment"}}:</b> {{envLabel}}</span>
-      <span><b>{{localize "SRX.Vehicle.hazard"}}:</b> {{hazardLabel}}</span>
-    </div>
-    <div class="chase-buttons">
-      <button type="button" data-action="rollEnvironment">
+      <button type="button" class="roll-env" data-action="rollEnvironment">
         <i class="fa-solid fa-dice-d6"></i> {{localize "SRX.Vehicle.rollEnvironment"}}
-      </button>
-      <button type="button" class="primary" data-action="resolve">
-        <i class="fa-solid fa-flag-checkered"></i> {{localize "SRX.Vehicle.chaseResolve"}}
       </button>
     </div>
   </section>
 
+  <h3 class="section-label">{{localize "SRX.Vehicle.chaseTracker"}}</h3>
   <table class="chase-grid">
     <thead>
       <tr>
@@ -43,7 +46,7 @@
     </thead>
     <tbody>
       {{#each vehicles}}
-      <tr data-vehicle-row="{{this.id}}" data-uuid="{{this.uuid}}">
+      <tr data-vehicle-row="{{this.id}}" data-uuid="{{this.uuid}}" data-role="{{this.role}}">
         <td class="chase-name">{{this.name}}</td>
         <td>
           <select name="role">
@@ -53,6 +56,9 @@
           </select>
         </td>
         <td>
+          <div class="range-band" aria-hidden="true">
+            {{#each this.band}}<span class="band-seg {{#if this.filled}}filled{{/if}}"></span>{{/each}}
+          </div>
           <select name="range">
             <option value="close" {{#if (srxEq this.range "close")}}selected{{/if}}>{{localize "SRX.Vehicle.rangeClose"}}</option>
             <option value="medium" {{#if (srxEq this.range "medium")}}selected{{/if}}>{{localize "SRX.Vehicle.rangeMedium"}}</option>
@@ -71,5 +77,8 @@
     </tbody>
   </table>
   <p class="fact chase-hint">{{localize "SRX.Vehicle.chaseHint"}}</p>
+  <button type="button" class="chase-resolve primary" data-action="resolve">
+    <i class="fa-solid fa-flag-checkered"></i> {{localize "SRX.Vehicle.chaseResolve"}}
+  </button>
   {{/unless}}
 </div>

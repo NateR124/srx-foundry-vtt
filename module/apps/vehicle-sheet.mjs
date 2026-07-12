@@ -87,6 +87,9 @@ export class SrxVehicleSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     context.assignedToDcc = isAssignedToDcc(actor);
     context.hasCharacter = !!game.user.character;
     context.inCombat = !!game.combat;
+    // Chase controls collapse until a chase is active for this vehicle (a role
+    // set on it — the Chase Tracker sets this too). See docs/UX-VEHICLE-CHASE.md.
+    context.chaseActive = (sys.chase?.role ?? "none") !== "none";
     return context;
   }
 
