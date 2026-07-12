@@ -1,0 +1,53 @@
+{
+  "_id": "STbzB6JZSGMAXqU9",
+  "name": "Skillwires",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "Replace skill rating with skillsoft",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 25000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Skillwires",
+        "srxId": 3114,
+        "category": "Bodyware",
+        "cost": 25000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Skillwires",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.5",
+          "value": 0.5,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "Replace skill rating with skillsoft",
+        "effects": [],
+        "slug": "skillwires"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!STbzB6JZSGMAXqU9"
+}

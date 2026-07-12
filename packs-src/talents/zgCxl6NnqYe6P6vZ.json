@@ -1,0 +1,67 @@
+{
+  "_id": "zgCxl6NnqYe6P6vZ",
+  "name": "Brash Attack",
+  "type": "talent",
+  "system": {
+    "summary": "Weapons / CC",
+    "description": "-1 Defense Score for 1 free hit on attack",
+    "category": "weapons",
+    "subgroup": "CC",
+    "karma": 6,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Brash Attack",
+        "srxId": 120,
+        "category": "Weapons",
+        "subcategory": "CC",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "CC",
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Defense Score 2",
+        "prereq": {
+          "kind": "rating",
+          "subject": "Defense Score",
+          "min": 2
+        },
+        "grants": [],
+        "cost": {
+          "karma": 6
+        },
+        "description": "-1 Defense Score for 1 free hit on attack",
+        "effects": [],
+        "slug": "brash-attack"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!zgCxl6NnqYe6P6vZ"
+}

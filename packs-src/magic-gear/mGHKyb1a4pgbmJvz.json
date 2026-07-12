@@ -1,0 +1,60 @@
+{
+  "_id": "mGHKyb1a4pgbmJvz",
+  "name": "Fetish",
+  "type": "gear",
+  "system": {
+    "summary": "Foci",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 15,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Fetish",
+        "srxId": 9024,
+        "category": "Foci",
+        "cost": 2000,
+        "costDisplay": "Force x Force x 2,000",
+        "properties": [],
+        "options": [
+          "Arcane Onslaught",
+          "Battle Mage",
+          "Legerdemain",
+          "Magical Marksman",
+          "Refined Weaving",
+          "Sorcerous Precision",
+          "Spell Shaping",
+          "Spell Shield"
+        ],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": null,
+        "fixedRating": null,
+        "maxRating": 15,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [
+          "Expertise: Sorcery"
+        ],
+        "alwaysUnique": true,
+        "slug": "fetish"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!mGHKyb1a4pgbmJvz"
+}

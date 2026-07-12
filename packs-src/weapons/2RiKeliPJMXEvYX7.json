@@ -1,0 +1,39 @@
+{
+  "_id": "2RiKeliPJMXEvYX7",
+  "name": "Laser Sight (Bow)",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 400
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon-mod",
+      "catalogData": {
+        "name": "Laser Sight (Bow)",
+        "srxId": 5513,
+        "cost": 400,
+        "properties": [],
+        "type": "Modification",
+        "mounts": [
+          7
+        ],
+        "allMountsRequired": false,
+        "noMount": false,
+        "requiresMod": null,
+        "slug": "laser-sight-bow"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "rHfaFyA9uk37DvRq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!2RiKeliPJMXEvYX7"
+}

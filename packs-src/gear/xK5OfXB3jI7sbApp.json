@@ -1,0 +1,62 @@
+{
+  "_id": "xK5OfXB3jI7sbApp",
+  "name": "Mounted Exotic Weapon - Ares Lancer MP Laser",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Mounted Weapon",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 23000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Mounted Exotic Weapon - Ares Lancer MP Laser",
+        "srxId": 8532,
+        "cost": 23000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Mounted Weapon",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": true,
+        "isExoticWeapon": true,
+        "nuyenMultiplier": null,
+        "requiresMount": true,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": "Firearms",
+        "attackSpecialization": "Exotic Weapon - Beam",
+        "attacks": [
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": 3,
+            "dv": {
+              "raw": "9",
+              "value": 9,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "mounted-exotic-weapon-ares-lancer-mp-laser"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xK5OfXB3jI7sbApp"
+}

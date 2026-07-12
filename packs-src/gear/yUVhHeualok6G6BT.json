@@ -1,0 +1,56 @@
+{
+  "_id": "yUVhHeualok6G6BT",
+  "name": "Gyroarm (Off-Hand)",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "Fire 1 additional Action Phase without recoil penalty",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 11000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Gyroarm (Off-Hand)",
+        "srxId": 3102,
+        "category": "Bodyware",
+        "cost": 11000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Gyroarm (Off-Hand)",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.2",
+          "value": 0.2,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Cyberarm (Off-Hand)",
+          "Cyber Gun (Off-Hand)"
+        ],
+        "grants": [],
+        "description": "Fire 1 additional Action Phase without recoil penalty",
+        "effects": [],
+        "slug": "gyroarm-off-hand-2"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!yUVhHeualok6G6BT"
+}

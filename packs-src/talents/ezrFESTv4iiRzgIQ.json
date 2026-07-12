@@ -1,0 +1,67 @@
+{
+  "_id": "ezrFESTv4iiRzgIQ",
+  "name": "Employee Engagement",
+  "type": "talent",
+  "system": {
+    "summary": "Social",
+    "description": "+1 Accelerator to you and all allies",
+    "category": "social",
+    "subgroup": "",
+    "karma": 9,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Employee Engagement",
+        "srxId": 186,
+        "category": "Social",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 9
+        },
+        "description": "+1 Accelerator to you and all allies",
+        "effects": [
+          {
+            "key": "Accelerator",
+            "value": 1
+          }
+        ],
+        "slug": "employee-engagement"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ezrFESTv4iiRzgIQ"
+}

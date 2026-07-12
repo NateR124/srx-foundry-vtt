@@ -1,0 +1,60 @@
+{
+  "_id": "R0dwk1O3Viu5pl5A",
+  "name": "Neuro-Stun",
+  "type": "gear",
+  "system": {
+    "summary": "Toxins & Drugs / Toxins",
+    "description": "",
+    "subtype": "Toxin",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 100
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Neuro-Stun",
+        "srxId": 6168,
+        "category": "Toxins & Drugs",
+        "subcategory": "Toxins",
+        "cost": 100,
+        "costDisplay": "Per Option: 100/500",
+        "properties": [],
+        "options": [
+          "VII",
+          "X"
+        ],
+        "type": "Toxin",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": 2,
+        "uniqueNuyenScale": [
+          100,
+          500
+        ],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "neuro-stun"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!R0dwk1O3Viu5pl5A"
+}

@@ -1,0 +1,45 @@
+{
+  "_id": "ahWdiQ9WWX6HjBMl",
+  "name": "Smuggling Compartment",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Smuggling Compartment",
+        "srxId": 8512,
+        "cost": 1500,
+        "properties": [],
+        "options": [],
+        "type": "Modification",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": false,
+        "isExoticWeapon": false,
+        "nuyenMultiplier": null,
+        "requiresMount": false,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": null,
+        "attackSpecialization": null,
+        "attacks": [],
+        "slug": "smuggling-compartment"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ahWdiQ9WWX6HjBMl"
+}

@@ -1,0 +1,66 @@
+{
+  "_id": "AuvO8SO1zDcEzn5C",
+  "name": "Harmonized Strike",
+  "type": "talent",
+  "system": {
+    "summary": "Conjuring",
+    "description": "On spell attack tests and Drain tests with specific spell for each elemental, 1 Crit Die is Aptitude die - hit on 2+",
+    "category": "conjuring",
+    "subgroup": "",
+    "karma": 9,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Harmonized Strike",
+        "srxId": 420,
+        "category": "Conjuring",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Bind Elemental (Conjuring Talent)",
+        "prereq": {
+          "kind": "talent",
+          "name": "Bind Elemental",
+          "categoryHint": "Conjuring Talent"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 9
+        },
+        "description": "On spell attack tests and Drain tests with specific spell for each elemental, 1 Crit Die is Aptitude die - hit on 2+",
+        "effects": [],
+        "slug": "harmonized-strike"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!AuvO8SO1zDcEzn5C"
+}

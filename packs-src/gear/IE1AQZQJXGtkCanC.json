@@ -1,0 +1,84 @@
+{
+  "_id": "IE1AQZQJXGtkCanC",
+  "name": "Chrysler-Nissan Jackrabbit",
+  "type": "gear",
+  "system": {
+    "summary": "Cars",
+    "description": "",
+    "subtype": "Cars",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 9000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Chrysler-Nissan Jackrabbit",
+        "srxId": 7519,
+        "category": "Cars",
+        "cost": 9000,
+        "properties": [],
+        "options": [],
+        "type": "Cars",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 1,
+          "speed": 3,
+          "body": 8,
+          "armor": 6,
+          "health": 16,
+          "defenseScoreMod": null,
+          "autoRating": 2,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Perception",
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "FB",
+              "heavy": false
+            },
+            "builtIn": null
+          }
+        ],
+        "slug": "chrysler-nissan-jackrabbit"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!IE1AQZQJXGtkCanC"
+}

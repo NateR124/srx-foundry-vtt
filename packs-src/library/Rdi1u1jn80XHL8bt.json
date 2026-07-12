@@ -1,0 +1,32 @@
+{
+  "_id": "Rdi1u1jn80XHL8bt",
+  "name": "Italian",
+  "type": "knowledge",
+  "system": {
+    "summary": "Languages",
+    "description": "You can fluently speak and understand this language",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "Italian",
+        "srxId": 10037,
+        "subcategory": "Languages",
+        "type": "Language",
+        "type2": null,
+        "description": "You can fluently speak and understand this language",
+        "freePool": "Languages",
+        "slug": "italian"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Rdi1u1jn80XHL8bt"
+}

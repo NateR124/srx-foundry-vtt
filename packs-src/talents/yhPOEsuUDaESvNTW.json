@@ -1,0 +1,63 @@
+{
+  "_id": "yhPOEsuUDaESvNTW",
+  "name": "Astral Perception",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism / Astral",
+    "description": "See and affect the astral plane",
+    "category": "mysticism",
+    "subgroup": "Astral",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Astral Perception",
+        "srxId": 444,
+        "category": "Mysticism",
+        "subcategory": "Astral",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Astral",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": "Minor",
+        "range": "Self",
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "See and affect the astral plane",
+        "effects": [],
+        "slug": "astral-perception-3"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!yhPOEsuUDaESvNTW"
+}

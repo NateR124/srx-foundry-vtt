@@ -1,0 +1,51 @@
+{
+  "_id": "D1Vz2n705Xdxwgvw",
+  "name": "Weapon, Greater (Crafted)",
+  "type": "gear",
+  "system": {
+    "summary": "Foci (Crafted)",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Weapon, Greater (Crafted)",
+        "srxId": 9084,
+        "category": "Foci (Crafted)",
+        "cost": 1000,
+        "costDisplay": "64,000",
+        "properties": [],
+        "options": [
+          "list of close combat weapons & bows"
+        ],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": null,
+        "fixedRating": 8,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": "Enchanting",
+        "maxQty": null,
+        "karmaCost": 0,
+        "crafted": true,
+        "equipPrereqs": [],
+        "alwaysUnique": true,
+        "slug": "weapon-greater-crafted"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!D1Vz2n705Xdxwgvw"
+}

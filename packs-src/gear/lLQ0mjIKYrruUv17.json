@@ -1,0 +1,52 @@
+{
+  "_id": "lLQ0mjIKYrruUv17",
+  "name": "Electrical Kit",
+  "type": "gear",
+  "system": {
+    "summary": "Electronics",
+    "description": "",
+    "subtype": "Electronics",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 4000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Electrical Kit",
+        "srxId": 6037,
+        "category": "Electronics",
+        "cost": 4000,
+        "properties": [],
+        "options": [],
+        "type": "Electronics",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "electrical-kit"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!lLQ0mjIKYrruUv17"
+}

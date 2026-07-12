@@ -1,0 +1,68 @@
+{
+  "_id": "7dPnNivwQ0SdBHPU",
+  "name": "Enhanced Speed",
+  "type": "talent",
+  "system": {
+    "summary": "Channeling / Yin",
+    "description": "+(Channeling/2) to Movement Rate",
+    "category": "channeling",
+    "subgroup": "Yin",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Enhanced Speed",
+        "srxId": 496,
+        "category": "Channeling",
+        "subcategory": "Yin",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Yin",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "+(Channeling/2) to Movement Rate",
+        "effects": [
+          {
+            "key": "Movement Rate",
+            "value": 0
+          }
+        ],
+        "slug": "enhanced-speed"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!7dPnNivwQ0SdBHPU"
+}

@@ -1,0 +1,54 @@
+{
+  "_id": "LKqU9iorQWGHNd19",
+  "name": "Damper",
+  "type": "gear",
+  "system": {
+    "summary": "Senseware / Earware",
+    "description": "Leverage against sonic attacks and flash-bang grenades",
+    "subtype": "Earware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Damper",
+        "srxId": 3006,
+        "category": "Senseware",
+        "subcategory": "Earware",
+        "cost": 1000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Damper",
+        "type": "Earware",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.2",
+          "value": 0.2,
+          "scale": []
+        },
+        "parentContainer": "Cyberears",
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "Leverage against sonic attacks and flash-bang grenades",
+        "effects": [],
+        "slug": "damper"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!LKqU9iorQWGHNd19"
+}

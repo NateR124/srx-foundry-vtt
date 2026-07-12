@@ -1,0 +1,67 @@
+{
+  "_id": "lMrbM9S8i8aqacGI",
+  "name": "Elven Charm",
+  "type": "talent",
+  "system": {
+    "summary": "Metatype",
+    "description": "+1 on first Con or Influence test against someone if you aren't disguised",
+    "category": "metatype",
+    "subgroup": "",
+    "karma": 8,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Elven Charm",
+        "srxId": 89,
+        "category": "Metatype",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Metatype Elf",
+        "prereq": {
+          "kind": "metatype",
+          "values": [
+            "Elf"
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 8
+        },
+        "description": "+1 on first Con or Influence test against someone if you aren't disguised",
+        "effects": [],
+        "slug": "elven-charm"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!lMrbM9S8i8aqacGI"
+}

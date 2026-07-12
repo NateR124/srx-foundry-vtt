@@ -1,0 +1,60 @@
+{
+  "_id": "YSPGx37gFAOJXp9m",
+  "name": "Shatter",
+  "type": "spell",
+  "system": {
+    "summary": "Combat",
+    "description": "Ranged AOE attack - DV (F+4)P",
+    "category": "combat",
+    "pattern": "area",
+    "duration": "instantaneous",
+    "range": "50m [A]",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+4",
+    "dvType": "P",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Combat"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Shatter",
+        "srxId": 1567,
+        "category": "Combat",
+        "description": "Ranged AOE attack - DV (F+4)P",
+        "range": {
+          "raw": "50m [A]",
+          "bands": [
+            50
+          ],
+          "area": true
+        },
+        "duration": "Instantaneous",
+        "resistance": null,
+        "attack": {
+          "type": "AOE",
+          "accuracy": null,
+          "dv": {
+            "raw": "(F+4)",
+            "force": true,
+            "mod": 4,
+            "type": "P",
+            "element": null
+          }
+        },
+        "slug": "shatter"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "zZc1PdtmOVQowgGq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!YSPGx37gFAOJXp9m"
+}

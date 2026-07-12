@@ -1,0 +1,89 @@
+{
+  "_id": "pxqK3jLEccFHtMOr",
+  "name": "Cyberspace Designs Hawkeye",
+  "type": "gear",
+  "system": {
+    "summary": "Drones (Aerial)",
+    "description": "",
+    "subtype": "Drones (Aerial)",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 36000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Cyberspace Designs Hawkeye",
+        "srxId": 7596,
+        "category": "Drones (Aerial)",
+        "cost": 36000,
+        "properties": [],
+        "options": [],
+        "type": "Drones (Aerial)",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Piloting",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 1,
+          "speed": 8,
+          "body": 6,
+          "armor": 4,
+          "health": 10,
+          "defenseScoreMod": null,
+          "autoRating": 3,
+          "autoDefenseScore": 3,
+          "dccBenefits": null,
+          "autoSkills": "Perception,Piloting,Stealth",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Advanced Sensor Array",
+            "value": "2"
+          }
+        ],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "F",
+              "heavy": false
+            },
+            "builtIn": null
+          }
+        ],
+        "slug": "cyberspace-designs-hawkeye"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!pxqK3jLEccFHtMOr"
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "xtlIKQJhcQ9Yabgk",
+  "name": "Street Doc",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Key resource for getting patched up, or procuring illegal drugs and toxins",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Street Doc",
+        "srxId": 10019,
+        "type": "Contact",
+        "type2": null,
+        "description": "Key resource for getting patched up, or procuring illegal drugs and toxins",
+        "slug": "street-doc"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xtlIKQJhcQ9Yabgk"
+}

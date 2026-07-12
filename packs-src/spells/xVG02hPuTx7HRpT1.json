@@ -1,0 +1,49 @@
+{
+  "_id": "xVG02hPuTx7HRpT1",
+  "name": "Bugs",
+  "type": "spell",
+  "system": {
+    "summary": "Illusion",
+    "description": "Target cannot take actions",
+    "category": "illusion",
+    "pattern": "direct",
+    "duration": "sustained",
+    "range": "80m",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Illusion"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Bugs",
+        "srxId": 1510,
+        "category": "Illusion",
+        "description": "Target cannot take actions",
+        "range": {
+          "raw": "80m",
+          "bands": [
+            80
+          ]
+        },
+        "duration": "Sustained",
+        "resistance": "WIL+LOG",
+        "attack": null,
+        "slug": "bugs"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "dqlrlbNPd7IOtFU1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xVG02hPuTx7HRpT1"
+}

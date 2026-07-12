@@ -1,0 +1,54 @@
+{
+  "_id": "TnEmYXUGQK5dxy7e",
+  "name": "Patrol IC",
+  "type": "gear",
+  "system": {
+    "summary": "Software Talents",
+    "description": "",
+    "subtype": "Utility",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 72000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Patrol IC",
+        "srxId": 6059,
+        "category": "Software Talents",
+        "cost": 72000,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Utility",
+        "type2": "Software",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "patrol-ic"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!TnEmYXUGQK5dxy7e"
+}

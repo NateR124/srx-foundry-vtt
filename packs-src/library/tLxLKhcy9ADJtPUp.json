@@ -1,0 +1,31 @@
+{
+  "_id": "tLxLKhcy9ADJtPUp",
+  "name": "Media",
+  "type": "knowledge",
+  "system": {
+    "summary": "",
+    "description": "Music trends, trideo stars, literature, famous journalists",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "Media",
+        "srxId": 10010,
+        "type": "Knowledge Domain",
+        "type2": null,
+        "description": "Music trends, trideo stars, literature, famous journalists",
+        "freePool": null,
+        "slug": "media"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!tLxLKhcy9ADJtPUp"
+}

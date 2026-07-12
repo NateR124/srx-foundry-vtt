@@ -1,0 +1,134 @@
+{
+  "_id": "5VL7FmTQetPkqBpR",
+  "name": "Ares Paladin",
+  "type": "gear",
+  "system": {
+    "summary": "Drones (Terrestrial)",
+    "description": "",
+    "subtype": "Drones (Terrestrial)",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 350000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Ares Paladin",
+        "srxId": 7579,
+        "category": "Drones (Terrestrial)",
+        "cost": 350000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Drones (Terrestrial)",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 0,
+          "speed": 3,
+          "body": 12,
+          "armor": 13,
+          "health": 16,
+          "defenseScoreMod": null,
+          "autoRating": 4,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Firearms,Perception",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Armor Plating",
+            "value": "Built-In"
+          },
+          {
+            "name": "Combat Vehicle",
+            "value": "Built-In"
+          },
+          {
+            "name": "Increased Structural Integrity",
+            "value": "Built-In"
+          },
+          {
+            "name": "Smartlink (Vehicle)",
+            "value": "Built-In"
+          }
+        ],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "R",
+              "heavy": true
+            },
+            "builtIn": {
+              "weapon": "Mounted Heavy Machine Gun",
+              "orientation": "R",
+              "retractable": false,
+              "superior": true
+            }
+          },
+          {
+            "index": 2,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": {
+              "weapon": "Mounted Missile Launcher",
+              "orientation": "F",
+              "retractable": false,
+              "superior": false
+            }
+          },
+          {
+            "index": 3,
+            "mount": {
+              "orientation": "B",
+              "heavy": false
+            },
+            "builtIn": {
+              "weapon": "Mounted Submachine Gun",
+              "orientation": "B",
+              "retractable": false,
+              "superior": false
+            }
+          }
+        ],
+        "slug": "ares-paladin"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!5VL7FmTQetPkqBpR"
+}

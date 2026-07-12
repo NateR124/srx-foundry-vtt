@@ -1,0 +1,58 @@
+{
+  "_id": "GET4ifHULs8E0wAt",
+  "name": "Toxic Wave",
+  "type": "spell",
+  "system": {
+    "summary": "Combat",
+    "description": "AOE attack centered on self - DV (F+5)P Acid",
+    "category": "combat",
+    "pattern": "area",
+    "duration": "instantaneous",
+    "range": "Self [A]",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+5",
+    "dvType": "P",
+    "element": "acid",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Combat"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Toxic Wave",
+        "srxId": 1575,
+        "category": "Combat",
+        "description": "AOE attack centered on self - DV (F+5)P Acid",
+        "range": {
+          "raw": "Self [A]",
+          "special": "Self",
+          "area": true
+        },
+        "duration": "Instantaneous",
+        "resistance": null,
+        "attack": {
+          "type": "AOE",
+          "accuracy": null,
+          "dv": {
+            "raw": "(F+5)",
+            "force": true,
+            "mod": 5,
+            "type": "P",
+            "element": "Acid"
+          }
+        },
+        "slug": "toxic-wave"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "zZc1PdtmOVQowgGq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!GET4ifHULs8E0wAt"
+}

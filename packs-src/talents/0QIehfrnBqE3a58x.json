@@ -1,0 +1,63 @@
+{
+  "_id": "0QIehfrnBqE3a58x",
+  "name": "Cripple",
+  "type": "talent",
+  "system": {
+    "summary": "Weapons / PW (Bows, Crossbows, Throwing Knives, Shuriken)",
+    "description": "1/Combat Turn, use Leg Shot/Hamstring Attack Weapon Talent. Instead of Liability, -1 hit.",
+    "category": "weapons",
+    "subgroup": "PW (Bows, Crossbows, Throwing Knives, Shuriken)",
+    "karma": 7,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Cripple",
+        "srxId": 124,
+        "category": "Weapons",
+        "subcategory": "PW (Bows, Crossbows, Throwing Knives, Shuriken)",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "PW (Bows, Crossbows, Throwing Knives, Shuriken)",
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 7
+        },
+        "description": "1/Combat Turn, use Leg Shot/Hamstring Attack Weapon Talent. Instead of Liability, -1 hit.",
+        "effects": [],
+        "slug": "cripple"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!0QIehfrnBqE3a58x"
+}

@@ -1,0 +1,49 @@
+{
+  "_id": "DYfuUQAUz3dQQNqz",
+  "name": "Mind Probe",
+  "type": "spell",
+  "system": {
+    "summary": "Detection",
+    "description": "Pull information from target's mind",
+    "category": "detection",
+    "pattern": "direct",
+    "duration": "sustained",
+    "range": "10m",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Detection"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Mind Probe",
+        "srxId": 1551,
+        "category": "Detection",
+        "description": "Pull information from target's mind",
+        "range": {
+          "raw": "10m",
+          "bands": [
+            10
+          ]
+        },
+        "duration": "Sust (1 minute)",
+        "resistance": "WIL+CHA",
+        "attack": null,
+        "slug": "mind-probe"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "y93WvYSQK8mAWRAI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!DYfuUQAUz3dQQNqz"
+}

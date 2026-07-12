@@ -1,0 +1,126 @@
+{
+  "_id": "23rUyC0P5NxaFVL3",
+  "name": "Ares Roadmaster",
+  "type": "gear",
+  "system": {
+    "summary": "Trucks & Vans",
+    "description": "",
+    "subtype": "Trucks & Vans",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 50000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Ares Roadmaster",
+        "srxId": 7534,
+        "category": "Trucks & Vans",
+        "cost": 50000,
+        "properties": [],
+        "options": [],
+        "type": "Trucks & Vans",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)",
+          "-1 to operator's Defense Score"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 0,
+          "speed": 3,
+          "body": 16,
+          "armor": 15,
+          "health": 24,
+          "defenseScoreMod": -1,
+          "autoRating": 2,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Perception",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Armor Plating",
+            "value": "Built-In"
+          },
+          {
+            "name": "Combat Vehicle",
+            "value": "Built-In"
+          }
+        ],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "R",
+              "heavy": true
+            },
+            "builtIn": null
+          },
+          {
+            "index": 2,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": null
+          },
+          {
+            "index": 3,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": null
+          },
+          {
+            "index": 4,
+            "mount": {
+              "orientation": "FB",
+              "heavy": false
+            },
+            "builtIn": null
+          },
+          {
+            "index": 5,
+            "mount": {
+              "orientation": "B",
+              "heavy": true
+            },
+            "builtIn": null
+          }
+        ],
+        "slug": "ares-roadmaster"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!23rUyC0P5NxaFVL3"
+}

@@ -1,0 +1,66 @@
+{
+  "_id": "IHJC2U5ZzjuUZUFN",
+  "name": "AWAKENED GHOUL (SHAMAN)",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 2,
+      "bonus": 5
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 12,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Claws",
+        "pool": 12,
+        "dv": 6,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Bite",
+        "pool": 10,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Frigid (Spell)",
+        "pool": 0,
+        "dv": 5,
+        "dvType": "P",
+        "element": "cold",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Diseased</strong>: If the ghoul damages a target with a melee attack, it delivers the HMHVV III disease, with a Power of 5. The target must make a disease resistance test using Body + Willpower against a threshold of the disease’s Power. If they fail, the target gains the Sick status. This disease onsets 12 hours later, giving the target the Impaired status. The target can repeat the disease resistance test at the end of each day to end the Sick status. After 3 days, if they have not removed the Sick status, the target turns into a ghoul.</li><li><strong>Sacrifice</strong>: When they are hit by an attack, the ghoul shaman can spend their Interrupt action to make the attack target an adjacent willing ally instead. If the attack would miss the new target, it instead hits with 0 net hits.</li></ul><h3>Traits</h3><ul><li><strong>Dual Natured</strong>: Ghouls always exist on both the astral</li><li><strong>and physical planes, and can interact with anything</strong>: </li><li><strong>on either plane. Their Armor applies to attacks from</strong>: </li><li><strong>both the physical and astral planes. Unless specified</strong>: </li><li><strong>otherwise, any of the ghoul’s abilities can be used on</strong>: </li><li><strong>the astral plane (if they cast a spell, it still requires the</strong>: </li><li><strong>Astral keyword to be used on the astral plane).</strong>: </li><li><strong>Aversion to Sunlight</strong>: While in natural sunlight, a</li><li><strong>ghoul suffers Liability on all tests.</strong>: </li><li><strong>Pack Hunter</strong>: If one or more of the ghoul’s allies is</li><li><strong>within melee reach of a target, the ghoul gains</strong>: </li><li><strong>Leverage on melee attacks against that target.</strong>: </li></ul><h3>Formula DVs (evaluated at F = TR)</h3><ul><li><strong>Frigid (Spell)</strong>: (F+2)P Cold</li></ul>",
+    "tags": [
+      "critter"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "awakened-ghoul-shaman"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "q9e964oWjMmRYuNH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "AWAKENED GHOUL (SHAMAN)"
+  },
+  "_key": "!actors!IHJC2U5ZzjuUZUFN"
+}

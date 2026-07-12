@@ -1,0 +1,54 @@
+{
+  "_id": "hkv6urP8m0jIEVzT",
+  "name": "Salvo Autosoft",
+  "type": "gear",
+  "system": {
+    "summary": "Vehicle Talents",
+    "description": "",
+    "subtype": "Utility",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 28000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Salvo Autosoft",
+        "srxId": 6072,
+        "category": "Vehicle Talents",
+        "cost": 28000,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Utility",
+        "type2": "Vehicle",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "salvo-autosoft"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!hkv6urP8m0jIEVzT"
+}

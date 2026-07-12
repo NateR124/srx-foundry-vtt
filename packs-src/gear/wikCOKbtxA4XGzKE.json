@@ -1,0 +1,55 @@
+{
+  "_id": "wikCOKbtxA4XGzKE",
+  "name": "Bliss",
+  "type": "gear",
+  "system": {
+    "summary": "Toxins & Drugs / Drugs",
+    "description": "",
+    "subtype": "Drug",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 25
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Bliss",
+        "srxId": 6179,
+        "category": "Toxins & Drugs",
+        "subcategory": "Drugs",
+        "cost": 25,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Drug",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "bliss"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!wikCOKbtxA4XGzKE"
+}

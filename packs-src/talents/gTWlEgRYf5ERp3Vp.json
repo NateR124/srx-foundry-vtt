@@ -1,0 +1,31 @@
+{
+  "_id": "gTWlEgRYf5ERp3Vp",
+  "name": "Big Regret",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "You’re still ashamed about something you did in the past - you may make bad decisions to avoid making the same mistake again",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Big Regret",
+        "srxId": 10510,
+        "type": "Trait",
+        "type2": null,
+        "description": "You’re still ashamed about something you did in the past - you may make bad decisions to avoid making the same mistake again",
+        "options": [],
+        "slug": "big-regret"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!gTWlEgRYf5ERp3Vp"
+}

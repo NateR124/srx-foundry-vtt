@@ -1,0 +1,76 @@
+{
+  "_id": "BhHrd23IOi8HUrLr",
+  "name": "Content Mastery",
+  "type": "talent",
+  "system": {
+    "summary": "Software / Data Processing",
+    "description": "+1 Biotech, Engineering, and Outdoors",
+    "category": "software",
+    "subgroup": "Data Processing",
+    "karma": 8,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Content Mastery",
+        "srxId": 255,
+        "category": "Software",
+        "subcategory": "Data Processing",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Data Processing",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 8
+        },
+        "description": "+1 Biotech, Engineering, and Outdoors",
+        "effects": [
+          {
+            "key": "Biotech",
+            "value": 1
+          },
+          {
+            "key": "Engineering",
+            "value": 1
+          },
+          {
+            "key": "Outdoors",
+            "value": 1
+          }
+        ],
+        "slug": "content-mastery"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!BhHrd23IOi8HUrLr"
+}

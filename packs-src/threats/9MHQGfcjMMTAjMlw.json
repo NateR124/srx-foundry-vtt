@@ -1,0 +1,66 @@
+{
+  "_id": "9MHQGfcjMMTAjMlw",
+  "name": "HTR PILOT",
+  "type": "threat",
+  "system": {
+    "threatRating": 5,
+    "initiative": {
+      "dice": 3,
+      "bonus": 9
+    },
+    "defenseScore": 5,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 15,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "600",
+        "pool": 13,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Heavy Machine Gun (Rotating)",
+        "pool": 15,
+        "dv": 14,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Heavy Machine Gun (Rotating)",
+        "pool": 14,
+        "dv": 15,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Tactical Network</strong>: This is an administered software program, maintained by an agent on the HTR pilot’s commlink. While this program is running, the HTR pilot gains Leverage on attacks made against any target that an ally running this program attacked since the HTR pilot’s last Initiative Pass.</li><li><strong>Black IC</strong>: On a failed Hacking attempt against the HTR officer, intruder suffers Physical Biofeedback damage equal to 10 + OS. NISSAN HOUND ROTORCRAFT (PILOTING)</li><li><strong>Body</strong>: 12 Handling: 3</li><li><strong>Armor</strong>: 12 Speed: 7</li><li><strong>Health</strong>: 16 Wounded Limit: 8</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Ultrasound, Vision</strong>: </li><li><strong>Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The HTR pilot does not suffer</li><li><strong>recoil penalties.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "htr-pilot"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "HTR PILOT"
+  },
+  "_key": "!actors!9MHQGfcjMMTAjMlw"
+}

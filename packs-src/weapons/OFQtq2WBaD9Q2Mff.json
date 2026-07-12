@@ -1,0 +1,71 @@
+{
+  "_id": "OFQtq2WBaD9Q2Mff",
+  "name": "Battery Pack",
+  "type": "weapon",
+  "system": {
+    "summary": "Ammo",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "",
+    "category": "Ammo",
+    "range": "",
+    "properties": "",
+    "cost": 500,
+    "attackModes": [
+      {
+        "name": "",
+        "action": "major",
+        "fireMode": "",
+        "acc": 0,
+        "dv": "",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Battery Pack",
+        "srxId": 4658,
+        "category": "Ammo",
+        "cost": 500,
+        "properties": [],
+        "options": [],
+        "type": "Ammo",
+        "type2": null,
+        "type3": null,
+        "skill": null,
+        "specialization": null,
+        "isLargeMelee": false,
+        "isAmmo": true,
+        "isAccessory": false,
+        "range": null,
+        "improvedRange": null,
+        "canMod": false,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [],
+        "slug": "battery-pack"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "P7D7v5b2Ei5PB1wy",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!OFQtq2WBaD9Q2Mff"
+}

@@ -1,0 +1,47 @@
+{
+  "_id": "qoMwui3GGzfvP93K",
+  "name": "Stupefy",
+  "type": "spell",
+  "system": {
+    "summary": "Health",
+    "description": "Target suffers Liability on tests with chosen mental attribute",
+    "category": "health",
+    "pattern": "touch",
+    "duration": "timed",
+    "range": "Touch",
+    "action": "complex",
+    "resistanceAttr": "attribute",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Health"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Stupefy",
+        "srxId": 1571,
+        "category": "Health",
+        "description": "Target suffers Liability on tests with chosen mental attribute",
+        "range": {
+          "raw": "Touch",
+          "special": "Touch"
+        },
+        "duration": "1 hour",
+        "resistance": "Special",
+        "attack": null,
+        "slug": "stupefy"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "81q0dM8ktqbFvvhu",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!qoMwui3GGzfvP93K"
+}

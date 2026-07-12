@@ -1,0 +1,67 @@
+{
+  "_id": "3usHJDvh5NP2ex7W",
+  "name": "Bioengineered Platelets",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "+1 Phys & Stun Health, +2 Wounded Limit, 1 free hit on recovery & dying resistance tests",
+    "subtype": "Platelet Factories Upgrade",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 24000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Bioengineered Platelets",
+        "srxId": 3110,
+        "category": "Bodyware",
+        "cost": 24000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Bioengineered Platelets",
+        "type": "Platelet Factories Upgrade",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.5",
+          "value": 0.5,
+          "scale": []
+        },
+        "parentContainer": "Platelet Factories",
+        "prereq": "Platelet Factories",
+        "incompatible": [],
+        "grants": [],
+        "description": "+1 Phys & Stun Health, +2 Wounded Limit, 1 free hit on recovery & dying resistance tests",
+        "effects": [
+          {
+            "key": "stunHealth",
+            "value": 1
+          },
+          {
+            "key": "physicalHealth",
+            "value": 1
+          },
+          {
+            "key": "woundedLimit",
+            "value": 2
+          }
+        ],
+        "slug": "bioengineered-platelets",
+        "variantOf": "platelet-factories"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!3usHJDvh5NP2ex7W"
+}

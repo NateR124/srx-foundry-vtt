@@ -1,0 +1,90 @@
+{
+  "_id": "Ysj3v0vPgPebDDc0",
+  "name": "SWAT TEAM MEMBER",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 3,
+      "bonus": 4
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 17,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 13,
+        "dv": 3,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Combat Knife",
+        "pool": 15,
+        "dv": 4,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "2066",
+        "pool": 15,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Colt MS-1 Major (SA) 16 9P",
+        "pool": 15,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Colt MS-1 Major (SA) 16 9P",
+        "pool": 15,
+        "dv": 11,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Flashbang Grenade",
+        "pool": 15,
+        "dv": 0,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Precise Shot</strong>: When making a ranged attack with a Major Action, the police officer can instead attack with a Complex Action and designate one of their dice as an Aptitude die. This die counts as a hit as along as it rolls anything other than a 1.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The corporate security lieutenant</li><li><strong>does not suffer recoil penalties.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "swat-team-member"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "SWAT TEAM MEMBER"
+  },
+  "_key": "!actors!Ysj3v0vPgPebDDc0"
+}

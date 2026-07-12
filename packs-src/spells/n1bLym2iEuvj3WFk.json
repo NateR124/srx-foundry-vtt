@@ -1,0 +1,61 @@
+{
+  "_id": "n1bLym2iEuvj3WFk",
+  "name": "Flamethrower",
+  "type": "spell",
+  "system": {
+    "summary": "Combat",
+    "description": "Ranged attack - Acc 1, DV (F+5)P Fire",
+    "category": "combat",
+    "pattern": "direct",
+    "duration": "instantaneous",
+    "range": "20/50/100m",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+5",
+    "dvType": "P",
+    "element": "fire",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Combat"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Flamethrower",
+        "srxId": 1530,
+        "category": "Combat",
+        "description": "Ranged attack - Acc 1, DV (F+5)P Fire",
+        "range": {
+          "raw": "20/50/100m",
+          "bands": [
+            20,
+            50,
+            100
+          ]
+        },
+        "duration": "Instantaneous",
+        "resistance": null,
+        "attack": {
+          "type": "Ranged",
+          "accuracy": 1,
+          "dv": {
+            "raw": "(F+5)",
+            "force": true,
+            "mod": 5,
+            "type": "P",
+            "element": "Fire"
+          }
+        },
+        "slug": "flamethrower"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "zZc1PdtmOVQowgGq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!n1bLym2iEuvj3WFk"
+}

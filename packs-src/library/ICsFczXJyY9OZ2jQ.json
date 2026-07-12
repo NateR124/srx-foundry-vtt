@@ -1,0 +1,31 @@
+{
+  "_id": "ICsFczXJyY9OZ2jQ",
+  "name": "History",
+  "type": "knowledge",
+  "system": {
+    "summary": "",
+    "description": "Ancient history, recent events, cultural traditions",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "History",
+        "srxId": 10008,
+        "type": "Knowledge Domain",
+        "type2": null,
+        "description": "Ancient history, recent events, cultural traditions",
+        "freePool": null,
+        "slug": "history"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ICsFczXJyY9OZ2jQ"
+}

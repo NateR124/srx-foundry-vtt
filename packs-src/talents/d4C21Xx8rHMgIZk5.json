@@ -1,0 +1,66 @@
+{
+  "_id": "d4C21Xx8rHMgIZk5",
+  "name": "Silent Professional",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "Take Hide action with Partial Cover or Medium Visibility Impairment. When using Hide action, Run as Minor Action",
+    "category": "general",
+    "subgroup": "",
+    "karma": 6,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Silent Professional",
+        "srxId": 69,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Stealth 5",
+        "prereq": {
+          "kind": "rating",
+          "subject": "Stealth",
+          "min": 5
+        },
+        "grants": [],
+        "cost": {
+          "karma": 6
+        },
+        "description": "Take Hide action with Partial Cover or Medium Visibility Impairment. When using Hide action, Run as Minor Action",
+        "effects": [],
+        "slug": "silent-professional"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!d4C21Xx8rHMgIZk5"
+}

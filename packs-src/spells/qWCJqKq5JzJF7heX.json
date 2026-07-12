@@ -1,0 +1,49 @@
+{
+  "_id": "qWCJqKq5JzJF7heX",
+  "name": "Spook",
+  "type": "spell",
+  "system": {
+    "summary": "Illusion",
+    "description": "Target gains Frightened status",
+    "category": "illusion",
+    "pattern": "direct",
+    "duration": "instantaneous",
+    "range": "80m",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Illusion"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Spook",
+        "srxId": 1569,
+        "category": "Illusion",
+        "description": "Target gains Frightened status",
+        "range": {
+          "raw": "80m",
+          "bands": [
+            80
+          ]
+        },
+        "duration": "Instantaneous",
+        "resistance": null,
+        "attack": null,
+        "slug": "spook"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "dqlrlbNPd7IOtFU1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!qWCJqKq5JzJF7heX"
+}

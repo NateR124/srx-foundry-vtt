@@ -1,0 +1,64 @@
+{
+  "_id": "Qz9P6ky5ZtSXoUku",
+  "name": "Ambidextrous",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "No off-hand penalty",
+    "category": "general",
+    "subgroup": "",
+    "karma": 8,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Ambidextrous",
+        "srxId": 3,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "At Character Creation Only",
+        "prereq": {
+          "kind": "chargenOnly"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 8
+        },
+        "description": "No off-hand penalty",
+        "effects": [],
+        "slug": "ambidextrous"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Qz9P6ky5ZtSXoUku"
+}

@@ -1,0 +1,52 @@
+{
+  "_id": "l72URt83ITW67ywY",
+  "name": "Virtual Cockpit",
+  "type": "gear",
+  "system": {
+    "summary": "Vehicle Talents",
+    "description": "",
+    "subtype": "Utility",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 16000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Virtual Cockpit",
+        "srxId": 6075,
+        "category": "Vehicle Talents",
+        "cost": 16000,
+        "properties": [],
+        "options": [],
+        "type": "Utility",
+        "type2": "Vehicle",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "virtual-cockpit"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!l72URt83ITW67ywY"
+}

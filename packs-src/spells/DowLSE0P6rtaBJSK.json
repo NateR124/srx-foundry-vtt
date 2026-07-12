@@ -1,0 +1,47 @@
+{
+  "_id": "DowLSE0P6rtaBJSK",
+  "name": "Resist Pain",
+  "type": "spell",
+  "system": {
+    "summary": "Health",
+    "description": "+(Force x 1.5) to target's Wounded Limit",
+    "category": "health",
+    "pattern": "touch",
+    "duration": "sustained",
+    "range": "Touch",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Health"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Resist Pain",
+        "srxId": 1562,
+        "category": "Health",
+        "description": "+(Force x 1.5) to target's Wounded Limit",
+        "range": {
+          "raw": "Touch",
+          "special": "Touch"
+        },
+        "duration": "Sustained",
+        "resistance": null,
+        "attack": null,
+        "slug": "resist-pain"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "81q0dM8ktqbFvvhu",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!DowLSE0P6rtaBJSK"
+}

@@ -1,0 +1,63 @@
+{
+  "_id": "IOInpZAb3SsndWe5",
+  "name": "Edge: Ghost Protocol",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / System Administration",
+    "description": "If you fail Hacking test, IC does not activate",
+    "category": "hacking",
+    "subgroup": "System Administration",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": true
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Edge: Ghost Protocol",
+        "srxId": 225,
+        "category": "Hacking",
+        "subcategory": "System Administration",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "System Administration",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": "TRUE",
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "No",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "If you fail Hacking test, IC does not activate",
+        "effects": [],
+        "slug": "edge-ghost-protocol"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!IOInpZAb3SsndWe5"
+}

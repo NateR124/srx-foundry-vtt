@@ -1,0 +1,50 @@
+{
+  "_id": "zOXRKjIsBW1roAwF",
+  "name": "CICADA MOTHER SPIRIT",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 3,
+      "bonus": 6
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 11,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Bite",
+        "pool": 16,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Physical Resistance</strong>: </li><li><strong>Unphased</strong>: Can’t gain Frightened or Wounded status.</li><li><strong>Toxin &amp; Disease Immunity</strong>: The spirit is immune to</li><li><strong>diseases &amp; toxins other than insecticides.</strong>: </li><li><strong>Banishing Resistance</strong>: When targeted by the Negate</li><li><strong>Mysticism power, double the spirit’s Force.</strong>: </li></ul>",
+    "tags": [
+      "critter"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "cicada-mother-spirit"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "q9e964oWjMmRYuNH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "CICADA MOTHER SPIRIT"
+  },
+  "_key": "!actors!zOXRKjIsBW1roAwF"
+}

@@ -1,0 +1,63 @@
+{
+  "_id": "XmtotxnML3Ssklgt",
+  "name": "Advanced DNI",
+  "type": "gear",
+  "system": {
+    "summary": "Headware",
+    "description": "+2 to Hacking, Software",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 66000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Advanced DNI",
+        "srxId": 3031,
+        "category": "Headware",
+        "cost": 66000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Advanced DNI",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.4",
+          "value": 0.4,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "+2 to Hacking, Software",
+        "effects": [
+          {
+            "key": "hacking",
+            "value": 2
+          },
+          {
+            "key": "software",
+            "value": 2
+          }
+        ],
+        "slug": "advanced-dni",
+        "variantOf": "dni-direct-neural-interface"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!XmtotxnML3Ssklgt"
+}

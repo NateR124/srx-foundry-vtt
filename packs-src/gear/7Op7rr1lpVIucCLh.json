@@ -1,0 +1,52 @@
+{
+  "_id": "7Op7rr1lpVIucCLh",
+  "name": "Real-Time Threat Assessment (RTA)",
+  "type": "gear",
+  "system": {
+    "summary": "Software Talents",
+    "description": "",
+    "subtype": "Utility",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 48000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Real-Time Threat Assessment (RTA)",
+        "srxId": 6062,
+        "category": "Software Talents",
+        "cost": 48000,
+        "properties": [],
+        "options": [],
+        "type": "Utility",
+        "type2": "Software",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "real-time-threat-assessment-rta"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!7Op7rr1lpVIucCLh"
+}

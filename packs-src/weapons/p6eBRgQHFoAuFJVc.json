@@ -1,0 +1,94 @@
+{
+  "_id": "p6eBRgQHFoAuFJVc",
+  "name": "Monofilament Whip",
+  "type": "weapon",
+  "system": {
+    "summary": "Exotic Weapons",
+    "description": "",
+    "skill": "closeCombat",
+    "specialization": "Exotic Weapon - Whip",
+    "category": "Exotic Weapons",
+    "range": "+1m",
+    "properties": "Deadly, Restricted",
+    "cost": 13000,
+    "attackModes": [
+      {
+        "name": "Melee",
+        "action": "complex",
+        "fireMode": "",
+        "acc": 1,
+        "dv": "9",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Monofilament Whip",
+        "srxId": 4613,
+        "category": "Exotic Weapons",
+        "cost": 13000,
+        "properties": [
+          "Deadly",
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Exotic Weapons",
+        "type2": "Whip",
+        "type3": null,
+        "skill": "Close Combat",
+        "specialization": "Exotic Weapon - Whip",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "+1m",
+          "bands": [
+            1
+          ]
+        },
+        "improvedRange": null,
+        "canMod": false,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [
+          {
+            "attackType": "Melee",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": 1,
+            "dv": {
+              "raw": "9",
+              "value": 9,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "monofilament-whip"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CxdzX8xPeW6rU3WC",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!p6eBRgQHFoAuFJVc"
+}

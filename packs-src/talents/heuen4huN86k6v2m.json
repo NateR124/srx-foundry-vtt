@@ -1,0 +1,68 @@
+{
+  "_id": "heuen4huN86k6v2m",
+  "name": "Circle of Friends",
+  "type": "talent",
+  "system": {
+    "summary": "Social",
+    "description": "Gain Loyal Friend General Talent with 2 loyal friend contacts",
+    "category": "social",
+    "subgroup": "",
+    "karma": 4,
+    "option": "List Contacts",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Circle of Friends",
+        "srxId": 175,
+        "category": "Social",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [
+          "List Contacts"
+        ],
+        "options2": [
+          "List Contacts"
+        ],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [
+          "Loyal Friend"
+        ],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Gain Loyal Friend General Talent with 2 loyal friend contacts",
+        "effects": [],
+        "slug": "circle-of-friends"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!heuen4huN86k6v2m"
+}

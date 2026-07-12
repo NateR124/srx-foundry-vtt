@@ -1,0 +1,96 @@
+{
+  "_id": "ZRBWyB8D315mezjc",
+  "name": "Smoke Grenade",
+  "type": "weapon",
+  "system": {
+    "summary": "Explosives / Grenades",
+    "description": "",
+    "skill": "projectileWeapons",
+    "specialization": "Grenades (Thrown)",
+    "category": "Explosives",
+    "range": "10/20/BOD x 5m (Min. 30)",
+    "properties": "",
+    "cost": 100,
+    "attackModes": [
+      {
+        "name": "Ranged AOE",
+        "action": "complex",
+        "fireMode": "",
+        "acc": 0,
+        "dv": "",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Smoke Grenade",
+        "srxId": 4626,
+        "category": "Explosives",
+        "subcategory": "Grenades",
+        "cost": 100,
+        "properties": [],
+        "options": [],
+        "type": "Explosives",
+        "type2": "Grenades",
+        "type3": null,
+        "skill": "Projectile Weapons",
+        "specialization": "Grenades (Thrown)",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "10/20/BOD x 5m (Min. 30)",
+          "bands": [
+            10,
+            20,
+            {
+              "attr": "bod",
+              "mult": 5,
+              "min": 30
+            }
+          ]
+        },
+        "improvedRange": null,
+        "canMod": false,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [
+          {
+            "attackType": "Ranged AOE",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": 0,
+            "dv": {
+              "type": null,
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "smoke-grenade"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "HutAORUklVy45Nwf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ZRBWyB8D315mezjc"
+}

@@ -1,0 +1,109 @@
+{
+  "_id": "eueZZByrTjpeKNFA",
+  "name": "Uzi IV",
+  "type": "weapon",
+  "system": {
+    "summary": "Automatics / Submachine Guns",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "Submachine Guns",
+    "category": "Automatics",
+    "range": "20/50/100m",
+    "properties": "",
+    "cost": 650,
+    "attackModes": [
+      {
+        "name": "Ranged",
+        "action": "major",
+        "fireMode": "BF",
+        "acc": -4,
+        "dv": "10",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Uzi IV",
+        "srxId": 4580,
+        "category": "Automatics",
+        "subcategory": "Submachine Guns",
+        "cost": 650,
+        "properties": [],
+        "options": [],
+        "type": "Firearms",
+        "type2": "Automatics",
+        "type3": "Submachine Guns",
+        "skill": "Firearms",
+        "specialization": "Submachine Guns",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "20/50/100m",
+          "bands": [
+            20,
+            50,
+            100
+          ]
+        },
+        "improvedRange": {
+          "raw": "20/50/150m",
+          "bands": [
+            20,
+            50,
+            150
+          ]
+        },
+        "canMod": true,
+        "mounts": {
+          "barrel": 1,
+          "internal": 1,
+          "side": 0,
+          "stock": 0,
+          "top": 1,
+          "underbarrel": 0,
+          "foldingStock": 1,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [
+          {
+            "name": "Laser Sight",
+            "modSlug": "laser-sight",
+            "mounts": [
+              4
+            ]
+          }
+        ],
+        "attackModes": [
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": "BF",
+            "accuracy": -4,
+            "dv": {
+              "raw": "10",
+              "value": 10,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "uzi-iv"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "q57iHsbHsOYA6BmX",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!eueZZByrTjpeKNFA"
+}

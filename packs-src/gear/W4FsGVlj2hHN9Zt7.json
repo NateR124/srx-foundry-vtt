@@ -1,0 +1,181 @@
+{
+  "_id": "W4FsGVlj2hHN9Zt7",
+  "name": "Aztechnology Agular GX-2",
+  "type": "gear",
+  "system": {
+    "summary": "Rotorcraft",
+    "description": "",
+    "subtype": "Rotorcraft",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 4500000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Aztechnology Agular GX-2",
+        "srxId": 7547,
+        "category": "Rotorcraft",
+        "cost": 4500000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Rotorcraft",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Piloting",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 1,
+          "speed": 8,
+          "body": 14,
+          "armor": 13,
+          "health": 16,
+          "defenseScoreMod": null,
+          "autoRating": 3,
+          "autoDefenseScore": 3,
+          "dccBenefits": null,
+          "autoSkills": "Firearms,Perception,Piloting",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Advanced Sensor Array",
+            "value": "1"
+          },
+          {
+            "name": "Anti-Theft System",
+            "value": "Built-In"
+          },
+          {
+            "name": "Armor Plating",
+            "value": "Built-In"
+          },
+          {
+            "name": "Combat Vehicle",
+            "value": "Built-In"
+          },
+          {
+            "name": "Increased Structural Integrity",
+            "value": "Built-In"
+          },
+          {
+            "name": "Smartlink (Vehicle)",
+            "value": "Built-In"
+          }
+        ],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": {
+              "weapon": "Mounted Assault Cannon",
+              "orientation": "F",
+              "retractable": false,
+              "superior": true
+            }
+          },
+          {
+            "index": 2,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": {
+              "weapon": "Mounted Heavy Machine Gun",
+              "orientation": "F",
+              "retractable": false,
+              "superior": true
+            }
+          },
+          {
+            "index": 3,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": {
+              "weapon": "Mounted Heavy Machine Gun",
+              "orientation": "F",
+              "retractable": false,
+              "superior": true
+            }
+          },
+          {
+            "index": 4,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": {
+              "weapon": "Mounted Missile Launcher",
+              "orientation": "F",
+              "retractable": false,
+              "superior": false
+            }
+          },
+          {
+            "index": 5,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": {
+              "weapon": "Mounted Missile Launcher",
+              "orientation": "F",
+              "retractable": false,
+              "superior": false
+            }
+          },
+          {
+            "index": 6,
+            "mount": {
+              "orientation": "B",
+              "heavy": true
+            },
+            "builtIn": {
+              "weapon": "Mounted Light Machine Gun",
+              "orientation": "B",
+              "retractable": false,
+              "superior": true
+            }
+          }
+        ],
+        "slug": "aztechnology-agular-gx-2"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!W4FsGVlj2hHN9Zt7"
+}

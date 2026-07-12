@@ -1,0 +1,59 @@
+{
+  "_id": "3vHCki5kIcQn475R",
+  "name": "Mind Spike",
+  "type": "spell",
+  "system": {
+    "summary": "Combat",
+    "description": "Target takes (Net Force - 1)S on casting and at end of each of their Action Phases",
+    "category": "combat",
+    "pattern": "direct",
+    "duration": "sustained",
+    "range": "30m",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf-1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Combat"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Mind Spike",
+        "srxId": 1552,
+        "category": "Combat",
+        "description": "Target takes (Net Force - 1)S on casting and at end of each of their Action Phases",
+        "range": {
+          "raw": "30m",
+          "bands": [
+            30
+          ]
+        },
+        "duration": "Sustained",
+        "resistance": "WIL",
+        "attack": {
+          "type": "Ranged",
+          "accuracy": "Resist: WIL",
+          "dv": {
+            "raw": "(F-1)",
+            "force": true,
+            "mod": -1,
+            "type": "S",
+            "element": null
+          }
+        },
+        "slug": "mind-spike"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "zZc1PdtmOVQowgGq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!3vHCki5kIcQn475R"
+}

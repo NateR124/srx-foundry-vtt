@@ -1,0 +1,50 @@
+{
+  "_id": "wyytWAQeHNGgVGD4",
+  "name": "SPINDLER",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 2,
+      "bonus": 5
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 8
+    },
+    "armor": 11,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Bite",
+        "pool": 19,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Death from Above</strong>: The spindler can move across vertical surfaces and along ceilings at its Movement Rate without making any climbing tests.</li><li><strong>Poisonous Bite</strong>: A target that takes damage from the spindler’s Bite attack is afflicted with a Power 2 toxin. The target must make a Body + Willpower toxin resistance test with a threshold of the toxin’s Power. If they fail, the target gains the Sick status. While they have the Sick status, the target also suffers the Paralyzed status. The target can repeat the toxin resistance test at the end of each Combat Turn to end the effect early. Otherwise, the Sick status ends after 10 minutes.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Low-Light, Thermographic</li></ul>",
+    "tags": [
+      "critter"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "spindler"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "q9e964oWjMmRYuNH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "SPINDLER"
+  },
+  "_key": "!actors!wyytWAQeHNGgVGD4"
+}

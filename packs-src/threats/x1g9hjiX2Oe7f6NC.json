@@ -1,0 +1,90 @@
+{
+  "_id": "x1g9hjiX2Oe7f6NC",
+  "name": "TIR GHOST",
+  "type": "threat",
+  "system": {
+    "threatRating": 5,
+    "initiative": {
+      "dice": 4,
+      "bonus": 8
+    },
+    "defenseScore": 6,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 15,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 17,
+        "dv": 2,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Wakizashi",
+        "pool": 21,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Shuriken",
+        "pool": 22,
+        "dv": 4,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Light Fire 75",
+        "pool": 21,
+        "dv": 6,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "AK-97 Major (SA) 19 9P",
+        "pool": 19,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "AK-97 Major (SA) 19 9P",
+        "pool": 19,
+        "dv": 11,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Double Tap</strong>: The Tir Ghost can use a Complex Action to attack with their Ares Light Fire 75 pistol to increase their attack’s DV by 1.</li><li><strong>Impossible to Kill</strong>: Once per fight, when the Tir Ghost is hit by an attack (including AOE attacks), they can make the attack miss instead.</li><li><strong>Pinning Shot</strong>: When attacking with a shuriken, the Tir Ghost can use the Pinning Shot Weapons Talent.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The Tir Ghost does not suffer</li><li><strong>recoil penalties.</strong>: </li><li><strong>Lethal Assassin</strong>: If the Tir Ghost has Leverage on an</li><li><strong>attack test, they can reroll 1 Crit Die and must use the</strong>: </li><li><strong>new result.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "tir-ghost"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "TIR GHOST"
+  },
+  "_key": "!actors!x1g9hjiX2Oe7f6NC"
+}

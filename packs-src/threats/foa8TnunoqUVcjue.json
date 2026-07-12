@@ -1,0 +1,58 @@
+{
+  "_id": "foa8TnunoqUVcjue",
+  "name": "DWARF BRUISER",
+  "type": "threat",
+  "system": {
+    "threatRating": 2,
+    "initiative": {
+      "dice": 2,
+      "bonus": 3
+    },
+    "defenseScore": 2,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 16,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Knucks/Subdual",
+        "pool": 12,
+        "dv": 7,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Warhawk",
+        "pool": 10,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Close Quarters Specialist</strong>: If the bruiser makes an attack against a target they have initiated a subdual on, they gain the Reroll 1’s benefit on their attack test – reroll any dice that roll a 1, excluding their Crit Dice, and use the new result. ELVEN WETWORK SPECIALIST</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The bruiser does not suffer recoil</li><li><strong>penalties.</strong>: </li><li><strong>Brawler</strong>: The bruiser gains 1 free hit on subdual tests.</li><li><strong>Improved Crit</strong>: On all resistance tests, the dwarf</li><li><strong>bruiser scores a critical hit with their Crit Dice on a 5</strong>: </li><li><strong>or a 6.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "dwarf-bruiser"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "DWARF BRUISER"
+  },
+  "_key": "!actors!foa8TnunoqUVcjue"
+}

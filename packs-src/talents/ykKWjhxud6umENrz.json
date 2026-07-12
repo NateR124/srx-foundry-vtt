@@ -1,0 +1,81 @@
+{
+  "_id": "ykKWjhxud6umENrz",
+  "name": "Edge: Call Great Form",
+  "type": "talent",
+  "system": {
+    "summary": "Conjuring",
+    "description": "Summon extremely powerful Great Form spirit",
+    "category": "conjuring",
+    "subgroup": "",
+    "karma": 6,
+    "option": "",
+    "isEdgeAction": true
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Edge: Call Great Form",
+        "srxId": 410,
+        "category": "Conjuring",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": "TRUE",
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Summon Spirit (Conjuring Talent), Conjuring 6, Magic 4",
+        "prereq": {
+          "op": "and",
+          "terms": [
+            {
+              "kind": "talent",
+              "name": "Summon Spirit",
+              "categoryHint": "Conjuring Talent"
+            },
+            {
+              "kind": "rating",
+              "subject": "Conjuring",
+              "min": 6
+            },
+            {
+              "kind": "rating",
+              "subject": "Magic",
+              "min": 4
+            }
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 6
+        },
+        "description": "Summon extremely powerful Great Form spirit",
+        "effects": [],
+        "slug": "edge-call-great-form"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ykKWjhxud6umENrz"
+}

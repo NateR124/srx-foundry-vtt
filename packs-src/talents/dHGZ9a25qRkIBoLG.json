@@ -1,0 +1,31 @@
+{
+  "_id": "dHGZ9a25qRkIBoLG",
+  "name": "Bad Rep",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Others may not want to do any business with you",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Bad Rep",
+        "srxId": 10508,
+        "type": "Trait",
+        "type2": null,
+        "description": "Others may not want to do any business with you",
+        "options": [],
+        "slug": "bad-rep"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!dHGZ9a25qRkIBoLG"
+}

@@ -1,0 +1,63 @@
+{
+  "_id": "06kCWGKOeBww2moX",
+  "name": "Crash Program",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / System Administration",
+    "description": "End administered program, Threading talent or IC.",
+    "category": "hacking",
+    "subgroup": "System Administration",
+    "karma": 3,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Crash Program",
+        "srxId": 217,
+        "category": "Hacking",
+        "subcategory": "System Administration",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "System Administration",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "Complex",
+        "administered": "No",
+        "access": "No",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "End administered program, Threading talent or IC.",
+        "effects": [],
+        "slug": "crash-program"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!06kCWGKOeBww2moX"
+}

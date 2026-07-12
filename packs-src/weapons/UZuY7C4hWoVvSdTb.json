@@ -1,0 +1,74 @@
+{
+  "_id": "UZuY7C4hWoVvSdTb",
+  "name": "Explosive Arrow/Bolt",
+  "type": "weapon",
+  "system": {
+    "summary": "Ammo",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "",
+    "category": "Ammo",
+    "range": "",
+    "properties": "Illegal",
+    "cost": 25,
+    "attackModes": [
+      {
+        "name": "",
+        "action": "major",
+        "fireMode": "",
+        "acc": 0,
+        "dv": "",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Explosive Arrow/Bolt",
+        "srxId": 4654,
+        "category": "Ammo",
+        "cost": 25,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Ammo",
+        "type2": null,
+        "type3": null,
+        "skill": null,
+        "specialization": null,
+        "isLargeMelee": false,
+        "isAmmo": true,
+        "isAccessory": false,
+        "range": null,
+        "improvedRange": null,
+        "canMod": false,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [],
+        "slug": "explosive-arrow-bolt",
+        "variantOf": "arrow-bolt"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "P7D7v5b2Ei5PB1wy",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!UZuY7C4hWoVvSdTb"
+}

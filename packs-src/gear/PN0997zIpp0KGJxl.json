@@ -1,0 +1,62 @@
+{
+  "_id": "PN0997zIpp0KGJxl",
+  "name": "Mounted Exotic Weapon - Ares Armatus Monster Hunter",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Mounted Weapon",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 40000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Mounted Exotic Weapon - Ares Armatus Monster Hunter",
+        "srxId": 8531,
+        "cost": 40000,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Mounted Weapon",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": true,
+        "isExoticWeapon": true,
+        "nuyenMultiplier": null,
+        "requiresMount": true,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": "Firearms",
+        "attackSpecialization": "Exotic Weapon - Electric Gun",
+        "attacks": [
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": -2,
+            "dv": {
+              "raw": "11",
+              "value": 11,
+              "type": "S",
+              "element": "Electricity",
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "mounted-exotic-weapon-ares-armatus-monster-hunter"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!PN0997zIpp0KGJxl"
+}

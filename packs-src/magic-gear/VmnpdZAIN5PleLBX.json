@@ -1,0 +1,51 @@
+{
+  "_id": "VmnpdZAIN5PleLBX",
+  "name": "Echo, Greater",
+  "type": "gear",
+  "system": {
+    "summary": "Artifices",
+    "description": "",
+    "subtype": "Artifice",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Echo, Greater",
+        "srxId": 9092,
+        "category": "Artifices",
+        "cost": 2000,
+        "costDisplay": "200,000",
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Artifice",
+        "type2": "Artificing Gear",
+        "type3": "Echo",
+        "fixedRating": 10,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [],
+        "alwaysUnique": true,
+        "slug": "echo-greater"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!VmnpdZAIN5PleLBX"
+}

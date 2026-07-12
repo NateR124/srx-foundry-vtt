@@ -1,0 +1,50 @@
+{
+  "_id": "1CPocV5KzCSylpEz",
+  "name": "Shadow",
+  "type": "spell",
+  "system": {
+    "summary": "Manipulation",
+    "description": "Create darkness in area",
+    "category": "manipulation",
+    "pattern": "area",
+    "duration": "timed",
+    "range": "100m [A]",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Manipulation"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Shadow",
+        "srxId": 1565,
+        "category": "Manipulation",
+        "description": "Create darkness in area",
+        "range": {
+          "raw": "100m [A]",
+          "bands": [
+            100
+          ],
+          "area": true
+        },
+        "duration": "(Force)hours",
+        "resistance": null,
+        "attack": null,
+        "slug": "shadow"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7UPq2yvvIYDMGwdo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!1CPocV5KzCSylpEz"
+}

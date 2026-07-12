@@ -1,0 +1,51 @@
+{
+  "_id": "e90EiInFpVaFrBOX",
+  "name": "Power",
+  "type": "gear",
+  "system": {
+    "summary": "Foci",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Power",
+        "srxId": 9033,
+        "category": "Foci",
+        "cost": 2000,
+        "costDisplay": "128,000",
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": "Power",
+        "fixedRating": 8,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [],
+        "alwaysUnique": true,
+        "slug": "power"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!e90EiInFpVaFrBOX"
+}

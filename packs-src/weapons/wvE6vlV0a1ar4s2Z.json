@@ -1,0 +1,38 @@
+{
+  "_id": "wvE6vlV0a1ar4s2Z",
+  "name": "Vision Magnification",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon-mod",
+      "catalogData": {
+        "name": "Vision Magnification",
+        "srxId": 5511,
+        "cost": 500,
+        "properties": [],
+        "type": "Modification",
+        "mounts": [],
+        "allMountsRequired": false,
+        "noMount": true,
+        "requiresMod": "Imaging Scope",
+        "slug": "vision-magnification",
+        "variantOf": "imaging-scope"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "rHfaFyA9uk37DvRq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!wvE6vlV0a1ar4s2Z"
+}

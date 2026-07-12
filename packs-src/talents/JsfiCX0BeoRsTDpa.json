@@ -1,0 +1,77 @@
+{
+  "_id": "JsfiCX0BeoRsTDpa",
+  "name": "Prodigious Alchemist",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism / Artificing",
+    "description": "Can have 1 additional active alchemical preparation",
+    "category": "mysticism",
+    "subgroup": "Artificing",
+    "karma": 10,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Prodigious Alchemist",
+        "srxId": 471,
+        "category": "Mysticism",
+        "subcategory": "Artificing",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Artificing",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Alchemy (Mysticism Talent), Mysticism 6",
+        "prereq": {
+          "op": "and",
+          "terms": [
+            {
+              "kind": "talent",
+              "name": "Alchemy",
+              "categoryHint": "Mysticism Talent"
+            },
+            {
+              "kind": "rating",
+              "subject": "Mysticism",
+              "min": 6
+            }
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 10
+        },
+        "description": "Can have 1 additional active alchemical preparation",
+        "effects": [],
+        "slug": "prodigious-alchemist"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!JsfiCX0BeoRsTDpa"
+}

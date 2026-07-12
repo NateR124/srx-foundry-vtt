@@ -1,0 +1,82 @@
+{
+  "_id": "zzgZJz4bvGtKMPca",
+  "name": "ELITE SECURITY LEADER",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 3,
+      "bonus": 6
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 18,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 15,
+        "dv": 4,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Combat Knife",
+        "pool": 16,
+        "dv": 4,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Viper",
+        "pool": 16,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Colt Cobra TZ-120 Major (SA) 17 8P",
+        "pool": 16,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Colt Cobra TZ-120 Major (SA) 17 8P",
+        "pool": 16,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Eliminate Threat</strong>: When attacking with a BF or FA firing mode, the security leader can suffer a –3 penalty on their attack test to increase their attack’s DV by 2.</li><li><strong>Veteran Commander</strong>: The security leader can grant one of their allies 1 free hit on their next attack test.</li><li><strong>Blaster IC</strong>: On a failed Hacking attempt against the security leader, intruder suffers 10S Biofeedback damage.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The elite security leader does not</li><li><strong>suffer recoil penalties.</strong>: </li><li><strong>Improved Crit</strong>: On attack tests, the security leader</li><li><strong>scores a critical hit with their Crit Dice on a 5 or a 6.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "elite-security-leader"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "ELITE SECURITY LEADER"
+  },
+  "_key": "!actors!zzgZJz4bvGtKMPca"
+}

@@ -1,0 +1,47 @@
+{
+  "_id": "A8C4nTcHXGMZ0iu3",
+  "name": "Paralyze",
+  "type": "spell",
+  "system": {
+    "summary": "Health",
+    "description": "Target gains Paralyzed status",
+    "category": "health",
+    "pattern": "touch",
+    "duration": "sustained",
+    "range": "Touch",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Health"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Paralyze",
+        "srxId": 1555,
+        "category": "Health",
+        "description": "Target gains Paralyzed status",
+        "range": {
+          "raw": "Touch",
+          "special": "Touch"
+        },
+        "duration": "Sustained",
+        "resistance": "WIL+BOD",
+        "attack": null,
+        "slug": "paralyze"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "81q0dM8ktqbFvvhu",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!A8C4nTcHXGMZ0iu3"
+}

@@ -1,0 +1,134 @@
+{
+  "_id": "auve73XACUTO4XB3",
+  "name": "Decker Operative (Troll)",
+  "type": "character",
+  "system": {
+    "details": {
+      "metatype": "troll",
+      "archetype": "Decker Operative (Troll)",
+      "nuyen": 0
+    },
+    "attributes": {
+      "bod": {
+        "base": 4,
+        "bonus": 0
+      },
+      "agi": {
+        "base": 4,
+        "bonus": 0
+      },
+      "rea": {
+        "base": 4,
+        "bonus": 0
+      },
+      "wil": {
+        "base": 4,
+        "bonus": 0
+      },
+      "log": {
+        "base": 5,
+        "bonus": 0
+      },
+      "int": {
+        "base": 1,
+        "bonus": 0
+      },
+      "cha": {
+        "base": 1,
+        "bonus": 0
+      }
+    },
+    "skills": {
+      "closeCombat": {
+        "rating": 2,
+        "bonus": 0,
+        "specializations": []
+      },
+      "con": {
+        "rating": 1,
+        "bonus": 0,
+        "specializations": []
+      },
+      "firearms": {
+        "rating": 5,
+        "bonus": 0,
+        "specializations": []
+      },
+      "hacking": {
+        "rating": 5,
+        "bonus": 0,
+        "specializations": []
+      },
+      "perception": {
+        "rating": 1,
+        "bonus": 0,
+        "specializations": []
+      },
+      "software": {
+        "rating": 4,
+        "bonus": 0,
+        "specializations": []
+      },
+      "stealth": {
+        "rating": 3,
+        "bonus": 0,
+        "specializations": []
+      }
+    },
+    "special": {
+      "edge": {
+        "rating": 2,
+        "value": 2
+      },
+      "essence": 6,
+      "quickness": {
+        "base": 1,
+        "bonus": 0
+      },
+      "magic": {
+        "base": 1,
+        "bonus": 0
+      },
+      "resonance": {
+        "base": 0,
+        "bonus": 0
+      }
+    },
+    "monitors": {
+      "stun": {
+        "value": 0,
+        "systemShock": 0,
+        "bonus": 0
+      },
+      "physical": {
+        "value": 0,
+        "systemShock": 0,
+        "bonus": 0
+      }
+    },
+    "derivedMods": {
+      "armor": 0,
+      "hardened": 0,
+      "woundedLimit": 0
+    },
+    "vision": {
+      "lowlight": false,
+      "thermographic": false,
+      "ultrasound": false,
+      "flareCompensation": false,
+      "visionMagnification": false
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "Decker Operative (Troll)",
+    "actorLink": true
+  },
+  "_key": "!actors!auve73XACUTO4XB3"
+}

@@ -1,0 +1,63 @@
+{
+  "_id": "Jm06aUNLmOiF9BXJ",
+  "name": "Snoop",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / Communications & Surveillance",
+    "description": "View/listen to target's communications, or spoof them with Access",
+    "category": "hacking",
+    "subgroup": "Communications & Surveillance",
+    "karma": 3,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Snoop",
+        "srxId": 247,
+        "category": "Hacking",
+        "subcategory": "Communications & Surveillance",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Communications & Surveillance",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "Complex",
+        "administered": "Yes",
+        "access": "Special",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "View/listen to target's communications, or spoof them with Access",
+        "effects": [],
+        "slug": "snoop"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Jm06aUNLmOiF9BXJ"
+}

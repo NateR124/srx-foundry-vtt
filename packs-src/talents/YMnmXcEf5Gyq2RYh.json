@@ -1,0 +1,31 @@
+{
+  "_id": "YMnmXcEf5Gyq2RYh",
+  "name": "In Debt",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Pay hard-won nuyen to your creditor",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "In Debt",
+        "srxId": 10529,
+        "type": "Trait",
+        "type2": null,
+        "description": "Pay hard-won nuyen to your creditor",
+        "options": [],
+        "slug": "in-debt"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!YMnmXcEf5Gyq2RYh"
+}

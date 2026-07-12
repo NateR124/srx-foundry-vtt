@@ -1,0 +1,53 @@
+{
+  "_id": "uPA8t7EG10G3upH6",
+  "name": "Smuggling Compartment",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "Small hidden compartment",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 3000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Smuggling Compartment",
+        "srxId": 3117,
+        "category": "Bodyware",
+        "cost": 3000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Smuggling Compartment",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.15",
+          "value": 0.15,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "Small hidden compartment",
+        "effects": [],
+        "slug": "smuggling-compartment-3"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!uPA8t7EG10G3upH6"
+}

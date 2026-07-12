@@ -1,0 +1,55 @@
+{
+  "_id": "e050MzaB2Kejt0YC",
+  "name": "Jammer - Directional",
+  "type": "gear",
+  "system": {
+    "summary": "Electronics",
+    "description": "",
+    "subtype": "Electronics",
+    "rating": 6,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Jammer - Directional",
+        "srxId": 6043,
+        "category": "Electronics",
+        "cost": 2000,
+        "costDisplay": "Rating x Rating x 2,000",
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Electronics",
+        "type2": null,
+        "maxRating": 6,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "jammer-directional"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!e050MzaB2Kejt0YC"
+}

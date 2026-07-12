@@ -1,0 +1,58 @@
+{
+  "_id": "qjN0SXV4kX9C2E8j",
+  "name": "TOXIC MAGE: POISONER",
+  "type": "threat",
+  "system": {
+    "threatRating": 5,
+    "initiative": {
+      "dice": 4,
+      "bonus": 10
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 14
+    },
+    "armor": 24,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "(Spell)",
+        "pool": 19,
+        "dv": 11,
+        "dvType": "P",
+        "element": "fire",
+        "action": "major"
+      },
+      {
+        "name": "Manaball (Spell)",
+        "pool": 0,
+        "dv": 5,
+        "dvType": "PS",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Determined</strong>: If the toxic shaman is under an effect</li><li><strong>that they roll at the end of their Action Phase to end,</strong>: </li><li><strong>they instead roll at the start of their Action Phase.</strong>: </li><li><strong>Improved Crit</strong>: On spell attack tests, the toxic shaman</li><li><strong>scores a critical hit with their Crit Dice on a 5 or a 6.</strong>: </li></ul><h3>Formula DVs (evaluated at F = TR)</h3><ul><li><strong>(Spell)</strong>: (F+6)P Fire</li><li><strong>Manaball (Spell)</strong>: (F)P/S</li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "toxic-mage-poisoner"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "TOXIC MAGE: POISONER"
+  },
+  "_key": "!actors!qjN0SXV4kX9C2E8j"
+}

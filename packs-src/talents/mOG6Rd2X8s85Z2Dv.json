@@ -1,0 +1,82 @@
+{
+  "_id": "mOG6Rd2X8s85Z2Dv",
+  "name": "MMRI",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Infusion",
+    "description": "Gain benefits of control rig",
+    "category": "threading",
+    "subgroup": "Infusion",
+    "karma": 20,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "MMRI",
+        "srxId": 317,
+        "category": "Threading",
+        "subcategory": "Infusion",
+        "maxQty": 3,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [
+          20,
+          30,
+          45
+        ],
+        "options": [],
+        "options2": [],
+        "type": "Infusion",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 20,
+          "scale": [
+            20,
+            30,
+            45
+          ],
+          "display": "20/30/45"
+        },
+        "description": "Gain benefits of control rig",
+        "effects": [
+          {
+            "key": "Driving",
+            "value": 1
+          },
+          {
+            "key": "Piloting",
+            "value": 1
+          }
+        ],
+        "slug": "mmri"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!mOG6Rd2X8s85Z2Dv"
+}

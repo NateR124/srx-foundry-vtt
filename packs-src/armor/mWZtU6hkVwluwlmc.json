@@ -1,0 +1,40 @@
+{
+  "_id": "mWZtU6hkVwluwlmc",
+  "name": "Kevlock Actioneer Attire",
+  "type": "armor",
+  "system": {
+    "summary": "",
+    "description": "",
+    "rating": 10,
+    "hardened": 0,
+    "heavy": false,
+    "shield": false,
+    "equipped": false,
+    "cost": 21700
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "armor",
+      "catalogData": {
+        "name": "Kevlock Actioneer Attire",
+        "srxId": 4003,
+        "cost": 21700,
+        "properties": [],
+        "options": [],
+        "rating": 10,
+        "hardened": 0,
+        "heavy": false,
+        "shield": false,
+        "slug": "kevlock-actioneer-attire",
+        "variantOf": "actioneer-business-clothes"
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!mWZtU6hkVwluwlmc"
+}

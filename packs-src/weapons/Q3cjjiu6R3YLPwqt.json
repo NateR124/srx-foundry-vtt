@@ -1,0 +1,39 @@
+{
+  "_id": "Q3cjjiu6R3YLPwqt",
+  "name": "Folding Stock",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 400
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon-mod",
+      "catalogData": {
+        "name": "Folding Stock",
+        "srxId": 5505,
+        "cost": 400,
+        "properties": [],
+        "type": "Modification",
+        "mounts": [
+          6
+        ],
+        "allMountsRequired": false,
+        "noMount": false,
+        "requiresMod": null,
+        "slug": "folding-stock"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "rHfaFyA9uk37DvRq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Q3cjjiu6R3YLPwqt"
+}

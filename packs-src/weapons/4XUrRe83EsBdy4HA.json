@@ -1,0 +1,96 @@
+{
+  "_id": "4XUrRe83EsBdy4HA",
+  "name": "Onotari Interceptor",
+  "type": "weapon",
+  "system": {
+    "summary": "Explosives / Missile Launchers",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "Launchers",
+    "category": "Explosives",
+    "range": "100/300/600m",
+    "properties": "Illegal, Two-Handed",
+    "cost": 21000,
+    "attackModes": [
+      {
+        "name": "Ranged AOE",
+        "action": "complex",
+        "fireMode": "",
+        "acc": -1,
+        "dv": "As Ammo",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Onotari Interceptor",
+        "srxId": 4641,
+        "category": "Explosives",
+        "subcategory": "Missile Launchers",
+        "cost": 21000,
+        "properties": [
+          "Illegal",
+          "Two-Handed"
+        ],
+        "options": [],
+        "type": "Explosives",
+        "type2": "Launchers",
+        "type3": null,
+        "skill": "Firearms",
+        "specialization": "Launchers",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "100/300/600m",
+          "bands": [
+            100,
+            300,
+            600
+          ]
+        },
+        "improvedRange": null,
+        "canMod": false,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [
+          {
+            "attackType": "Ranged AOE",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": -1,
+            "dv": {
+              "raw": "As Ammo",
+              "type": null,
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "onotari-interceptor"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "HutAORUklVy45Nwf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!4XUrRe83EsBdy4HA"
+}

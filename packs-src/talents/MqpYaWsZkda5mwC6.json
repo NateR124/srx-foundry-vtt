@@ -1,0 +1,86 @@
+{
+  "_id": "MqpYaWsZkda5mwC6",
+  "name": "Expertise: Full Magician",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "Gain Expertise in Conjuring, Mysticism, and Sorcery (can purchase talents). Gain bonus spell and talents based on tradition.",
+    "category": "general",
+    "subgroup": "",
+    "karma": 30,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Expertise: Full Magician",
+        "srxId": 32,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Magic 1, Conjuring 3, Mysticism 3, Sorcery 3",
+        "prereq": {
+          "op": "and",
+          "terms": [
+            {
+              "kind": "rating",
+              "subject": "Magic",
+              "min": 1
+            },
+            {
+              "kind": "rating",
+              "subject": "Conjuring",
+              "min": 3
+            },
+            {
+              "kind": "rating",
+              "subject": "Mysticism",
+              "min": 3
+            },
+            {
+              "kind": "rating",
+              "subject": "Sorcery",
+              "min": 3
+            }
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 30
+        },
+        "description": "Gain Expertise in Conjuring, Mysticism, and Sorcery (can purchase talents). Gain bonus spell and talents based on tradition.",
+        "effects": [],
+        "slug": "expertise-full-magician"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!MqpYaWsZkda5mwC6"
+}

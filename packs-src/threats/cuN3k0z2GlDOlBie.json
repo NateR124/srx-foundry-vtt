@@ -1,0 +1,50 @@
+{
+  "_id": "cuN3k0z2GlDOlBie",
+  "name": "TECHNOMANCER",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 3,
+      "bonus": 4
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 12,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "(Deadly Artifice)",
+        "pool": 13,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Ultrasound, Vision Magnification</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "technomancer"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "TECHNOMANCER"
+  },
+  "_key": "!actors!cuN3k0z2GlDOlBie"
+}

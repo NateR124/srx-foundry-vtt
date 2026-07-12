@@ -1,0 +1,58 @@
+{
+  "_id": "Tsyo1VLRHe2CWnP6",
+  "name": "ROACH MALE SPIRIT",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 2,
+      "bonus": 5
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 12,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Bite",
+        "pool": 10,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Slash (Reach: 2m)",
+        "pool": 13,
+        "dv": 6,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Grasping Legs</strong>: If the spirit hits a target with its Slash attack, it immediately makes a subdual test: Body + Athletics opposed by the target’s (Body or Agility) + Athletics. If the spirit wins, the target gains the Immobilized status. The spirit can only immobilize 1 target at a time. The target can spend a Major Action to repeat the subdual test. If the target wins, they are no longer Immobilized. ROACH FLESH FORM SPIRIT</li></ul><h3>Traits</h3><ul><li><strong>Physical, Fire and Cold Resistance</strong>: </li><li><strong>Unphased</strong>: Can’t gain Frightened or Wounded status.</li><li><strong>Toxin &amp; Disease Immunity</strong>: The spirit is immune to</li><li><strong>diseases &amp; toxins other than insecticides.</strong>: </li><li><strong>Banishing Resistance</strong>: When targeted by the Negate</li><li><strong>Mysticism power, double the spirit’s Force.</strong>: </li><li><strong>Dual Natured</strong>: Insect spirits always exist on both the</li><li><strong>astral and physical plane.</strong>: </li><li><strong>Fear of Sunlight</strong>: While in natural sunlight, the spirit</li><li><strong>suffers the Frightened status.</strong>: </li><li><strong>Improved Crit</strong>: On attack tests, the spirit scores a</li><li><strong>critical hit with their Crit Dice on a 5 or a 6.</strong>: </li></ul>",
+    "tags": [
+      "critter"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "roach-male-spirit"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "q9e964oWjMmRYuNH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "ROACH MALE SPIRIT"
+  },
+  "_key": "!actors!Tsyo1VLRHe2CWnP6"
+}

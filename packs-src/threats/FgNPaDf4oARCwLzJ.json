@@ -1,0 +1,66 @@
+{
+  "_id": "FgNPaDf4oARCwLzJ",
+  "name": "EXECUTIVE (SHAMAN)",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 2,
+      "bonus": 7
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 14
+    },
+    "armor": 13,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Knife",
+        "pool": 5,
+        "dv": 4,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Viper",
+        "pool": 9,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Frigid (Spell)",
+        "pool": 0,
+        "dv": 6,
+        "dvType": "P",
+        "element": "cold",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Stay Alive</strong>: The executive can spend an Edge to double their Defense Score against one attack.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic</strong>: </li></ul><h3>Formula DVs (evaluated at F = TR)</h3><ul><li><strong>Frigid (Spell)</strong>: (F+2)P Cold</li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "executive-shaman"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "EXECUTIVE (SHAMAN)"
+  },
+  "_key": "!actors!FgNPaDf4oARCwLzJ"
+}

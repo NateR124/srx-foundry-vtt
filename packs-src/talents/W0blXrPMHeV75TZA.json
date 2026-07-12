@@ -1,0 +1,67 @@
+{
+  "_id": "W0blXrPMHeV75TZA",
+  "name": "Adaptive AI",
+  "type": "talent",
+  "system": {
+    "summary": "Vehicle / Autopilot",
+    "description": "+1 Autopilot Rating to vehicles on your DCC",
+    "category": "vehicle",
+    "subgroup": "Autopilot",
+    "karma": 16,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Adaptive AI",
+        "srxId": 341,
+        "category": "Vehicle",
+        "subcategory": "Autopilot",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Autopilot",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Software 4",
+        "prereq": {
+          "kind": "rating",
+          "subject": "Software",
+          "min": 4
+        },
+        "grants": [],
+        "cost": {
+          "karma": 16
+        },
+        "description": "+1 Autopilot Rating to vehicles on your DCC",
+        "effects": [],
+        "slug": "adaptive-ai"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!W0blXrPMHeV75TZA"
+}

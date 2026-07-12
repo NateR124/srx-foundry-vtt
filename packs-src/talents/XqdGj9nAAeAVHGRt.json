@@ -1,0 +1,65 @@
+{
+  "_id": "XqdGj9nAAeAVHGRt",
+  "name": "Decompile",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Fading",
+    "description": "Gain Crash Program Hacking Talent. Can gain bonus when using it.",
+    "category": "threading",
+    "subgroup": "Fading",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Decompile",
+        "srxId": 295,
+        "category": "Threading",
+        "subcategory": "Fading",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Fading",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [
+          "Crash Program"
+        ],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Gain Crash Program Hacking Talent. Can gain bonus when using it.",
+        "effects": [],
+        "slug": "decompile"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!XqdGj9nAAeAVHGRt"
+}

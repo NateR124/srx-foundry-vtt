@@ -1,0 +1,30 @@
+{
+  "_id": "IXL1Kah2MKhs7bk1",
+  "name": "Fixer",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Primary source for jobs, and able to plug you into other contacts you may need – if you only have one contact, make them a Fixer",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Fixer",
+        "srxId": 10010,
+        "type": "Contact",
+        "type2": null,
+        "description": "Primary source for jobs, and able to plug you into other contacts you may need – if you only have one contact, make them a Fixer",
+        "slug": "fixer"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!IXL1Kah2MKhs7bk1"
+}

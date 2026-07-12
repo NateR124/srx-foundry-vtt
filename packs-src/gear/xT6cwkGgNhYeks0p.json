@@ -1,0 +1,38 @@
+{
+  "_id": "xT6cwkGgNhYeks0p",
+  "name": "Malware",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Cyberdeck Mod",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 24000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear-enhancement",
+      "catalogData": {
+        "name": "Malware",
+        "srxId": 7017,
+        "cost": 24000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "enhancementType": 3,
+        "type": "Cyberdeck Mod",
+        "description": null,
+        "slug": "malware"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CfAYFTllX77UHdGc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xT6cwkGgNhYeks0p"
+}

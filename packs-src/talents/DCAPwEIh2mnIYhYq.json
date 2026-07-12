@@ -1,0 +1,63 @@
+{
+  "_id": "DCAPwEIh2mnIYhYq",
+  "name": "Supreme Balance",
+  "type": "talent",
+  "system": {
+    "summary": "Channeling / Yin",
+    "description": "Run as Minor Action and Move as Free Action. Do not suffer Liability when running. Leverage on tests to keep balance or avoid being knocked prone.",
+    "category": "channeling",
+    "subgroup": "Yin",
+    "karma": 5,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Supreme Balance",
+        "srxId": 537,
+        "category": "Channeling",
+        "subcategory": "Yin",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Yin",
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 5
+        },
+        "description": "Run as Minor Action and Move as Free Action. Do not suffer Liability when running. Leverage on tests to keep balance or avoid being knocked prone.",
+        "effects": [],
+        "slug": "supreme-balance"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!DCAPwEIh2mnIYhYq"
+}

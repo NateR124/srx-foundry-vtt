@@ -1,0 +1,77 @@
+{
+  "_id": "WlJFOTyVhxWVULIk",
+  "name": "Bone Lacing",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "+1-3 Phys Health, +1 Hardened Armor, unarmed melee DV, (by type: Improved Crit, 5 hits on crit on Armor tests)",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Bone Lacing",
+        "srxId": 3091,
+        "category": "Bodyware",
+        "cost": 0,
+        "costDisplay": "Per Option: 5k/15k/30k",
+        "properties": [],
+        "options": [
+          "Plastic",
+          "Aluminum",
+          "Titanium"
+        ],
+        "dictionaryName": "Bone Lacing",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": 2,
+        "nuyenScale": [
+          5000,
+          15000,
+          30000
+        ],
+        "essence": {
+          "display": "Per Option: 0.3/0.6/0.9",
+          "value": 0,
+          "scale": [
+            0.3,
+            0.6,
+            0.9
+          ]
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Bone Density Enhancement"
+        ],
+        "grants": [],
+        "description": "+1-3 Phys Health, +1 Hardened Armor, unarmed melee DV, (by type: Improved Crit, 5 hits on crit on Armor tests)",
+        "effects": [
+          {
+            "key": "hardenedArmor",
+            "value": 1
+          },
+          {
+            "key": "physicalHealth",
+            "value": 1
+          }
+        ],
+        "slug": "bone-lacing"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!WlJFOTyVhxWVULIk"
+}

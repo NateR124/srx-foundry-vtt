@@ -1,0 +1,30 @@
+{
+  "_id": "C4ImcHAr0j75FL9Z",
+  "name": "Street Shaman",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Arcane service provider and an information hub for any strange magical happenings on the streets",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Street Shaman",
+        "srxId": 10021,
+        "type": "Contact",
+        "type2": null,
+        "description": "Arcane service provider and an information hub for any strange magical happenings on the streets",
+        "slug": "street-shaman"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!C4ImcHAr0j75FL9Z"
+}

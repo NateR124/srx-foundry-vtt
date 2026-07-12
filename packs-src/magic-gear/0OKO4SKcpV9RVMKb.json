@@ -1,0 +1,51 @@
+{
+  "_id": "0OKO4SKcpV9RVMKb",
+  "name": "Unerring Sorcery",
+  "type": "gear",
+  "system": {
+    "summary": "Foci",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Unerring Sorcery",
+        "srxId": 9043,
+        "category": "Foci",
+        "cost": 2000,
+        "costDisplay": "50,000",
+        "properties": [],
+        "options": [],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": null,
+        "fixedRating": 5,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [
+          "Expertise: Sorcery"
+        ],
+        "alwaysUnique": true,
+        "slug": "unerring-sorcery"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!0OKO4SKcpV9RVMKb"
+}

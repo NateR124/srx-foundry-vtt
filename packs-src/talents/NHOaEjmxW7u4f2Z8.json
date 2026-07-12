@@ -1,0 +1,63 @@
+{
+  "_id": "NHOaEjmxW7u4f2Z8",
+  "name": "Sniper",
+  "type": "talent",
+  "system": {
+    "summary": "Weapons / F",
+    "description": "Long range x 1.5 for firearms. If Take Aim action with sniper rifle in Close/Medium range, reroll 1 Crit Die.",
+    "category": "weapons",
+    "subgroup": "F",
+    "karma": 9,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Sniper",
+        "srxId": 162,
+        "category": "Weapons",
+        "subcategory": "F",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "F",
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 9
+        },
+        "description": "Long range x 1.5 for firearms. If Take Aim action with sniper rifle in Close/Medium range, reroll 1 Crit Die.",
+        "effects": [],
+        "slug": "sniper"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!NHOaEjmxW7u4f2Z8"
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "MwJRvwsuMFUIggnx",
+  "name": "Liar",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Get caught in an unnecessary fib or exaggeration",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Liar",
+        "srxId": 10531,
+        "type": "Trait",
+        "type2": null,
+        "description": "Get caught in an unnecessary fib or exaggeration",
+        "options": [],
+        "slug": "liar"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!MwJRvwsuMFUIggnx"
+}

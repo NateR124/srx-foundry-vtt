@@ -1,0 +1,96 @@
+{
+  "_id": "3M2Pd9KEIZrWDtNB",
+  "name": "ArmTech MGL-12",
+  "type": "weapon",
+  "system": {
+    "summary": "Explosives / Grenade Launchers",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "Launchers",
+    "category": "Explosives",
+    "range": "30/60/250m",
+    "properties": "Restricted, Two-Handed",
+    "cost": 8000,
+    "attackModes": [
+      {
+        "name": "Ranged AOE",
+        "action": "major",
+        "fireMode": "",
+        "acc": -3,
+        "dv": "As Ammo",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "ArmTech MGL-12",
+        "srxId": 4634,
+        "category": "Explosives",
+        "subcategory": "Grenade Launchers",
+        "cost": 8000,
+        "properties": [
+          "Restricted",
+          "Two-Handed"
+        ],
+        "options": [],
+        "type": "Explosives",
+        "type2": "Launchers",
+        "type3": null,
+        "skill": "Firearms",
+        "specialization": "Launchers",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "30/60/250m",
+          "bands": [
+            30,
+            60,
+            250
+          ]
+        },
+        "improvedRange": null,
+        "canMod": false,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [
+          {
+            "attackType": "Ranged AOE",
+            "action": "Major",
+            "fireMode": null,
+            "accuracy": -3,
+            "dv": {
+              "raw": "As Ammo",
+              "type": null,
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "armtech-mgl-12"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "HutAORUklVy45Nwf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!3M2Pd9KEIZrWDtNB"
+}

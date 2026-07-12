@@ -1,0 +1,47 @@
+{
+  "_id": "YQTrboo2wtG7r6l5",
+  "name": "Sharpen Skill",
+  "type": "spell",
+  "system": {
+    "summary": "Detection",
+    "description": "Target gains +2 augmentation bonus to chosen skill",
+    "category": "detection",
+    "pattern": "touch",
+    "duration": "sustained",
+    "range": "Touch",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Detection"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Sharpen Skill",
+        "srxId": 1566,
+        "category": "Detection",
+        "description": "Target gains +2 augmentation bonus to chosen skill",
+        "range": {
+          "raw": "Touch",
+          "special": "Touch"
+        },
+        "duration": "Sustained",
+        "resistance": null,
+        "attack": null,
+        "slug": "sharpen-skill"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "y93WvYSQK8mAWRAI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!YQTrboo2wtG7r6l5"
+}

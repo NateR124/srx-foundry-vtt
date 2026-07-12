@@ -1,0 +1,105 @@
+{
+  "_id": "hAzgikmXrPrR7qLO",
+  "name": "Ares Lancer MP Laser",
+  "type": "weapon",
+  "system": {
+    "summary": "Exotic Weapons",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "Exotic Weapon - Beam",
+    "category": "Exotic Weapons",
+    "range": "30/60/120m",
+    "properties": "Deadly, Illegal, Two-Handed",
+    "cost": 18000,
+    "attackModes": [
+      {
+        "name": "Ranged",
+        "action": "complex",
+        "fireMode": "",
+        "acc": 3,
+        "dv": "9",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Ares Lancer MP Laser",
+        "srxId": 4610,
+        "category": "Exotic Weapons",
+        "cost": 18000,
+        "properties": [
+          "Deadly",
+          "Illegal",
+          "Two-Handed"
+        ],
+        "options": [],
+        "type": "Exotic Weapons",
+        "type2": "Beam",
+        "type3": null,
+        "skill": "Firearms",
+        "specialization": "Exotic Weapon - Beam",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "30/60/120m",
+          "bands": [
+            30,
+            60,
+            120
+          ]
+        },
+        "improvedRange": null,
+        "canMod": true,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 1,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [
+          {
+            "name": "Laser Sight",
+            "modSlug": "laser-sight",
+            "mounts": [
+              4
+            ]
+          }
+        ],
+        "attackModes": [
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": 3,
+            "dv": {
+              "raw": "9",
+              "value": 9,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "ares-lancer-mp-laser"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CxdzX8xPeW6rU3WC",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!hAzgikmXrPrR7qLO"
+}

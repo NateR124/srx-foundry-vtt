@@ -1,0 +1,110 @@
+{
+  "_id": "fSdFUpkyECE7baES",
+  "name": "Shuriken",
+  "type": "weapon",
+  "system": {
+    "summary": "Projectile Weapons / Throwing weapons",
+    "description": "",
+    "skill": "projectileWeapons",
+    "specialization": "Throwing Weapons",
+    "category": "Projectile Weapons",
+    "range": "5/10/BOD x 5m (Min. 15)",
+    "properties": "",
+    "cost": 50,
+    "attackModes": [
+      {
+        "name": "Ranged",
+        "action": "major",
+        "fireMode": "",
+        "acc": 1,
+        "dv": "4",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Shuriken",
+        "srxId": 4545,
+        "category": "Projectile Weapons",
+        "subcategory": "Throwing weapons",
+        "cost": 50,
+        "properties": [],
+        "options": [],
+        "type": "Projectile Weapons",
+        "type2": "Throwing weapons",
+        "type3": "Thrown Blade",
+        "skill": "Projectile Weapons",
+        "specialization": "Throwing Weapons",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "5/10/BOD x 5m (Min. 15)",
+          "bands": [
+            5,
+            10,
+            {
+              "attr": "bod",
+              "mult": 5,
+              "min": 15
+            }
+          ]
+        },
+        "improvedRange": {
+          "raw": "10/20/BOD x 10m (Min. 30)",
+          "bands": [
+            10,
+            20,
+            {
+              "attr": "bod",
+              "mult": 10,
+              "min": 30
+            }
+          ]
+        },
+        "canMod": false,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": null,
+            "accuracy": 1,
+            "dv": {
+              "raw": "4",
+              "value": 4,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "shuriken",
+        "variantOf": "throwing-knife"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "FHMz42ZuuAQogGoV",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!fSdFUpkyECE7baES"
+}

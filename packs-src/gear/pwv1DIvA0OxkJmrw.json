@@ -1,0 +1,60 @@
+{
+  "_id": "pwv1DIvA0OxkJmrw",
+  "name": "Mounted Exotic Weapon - Parashield Dart Pistol",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Mounted Weapon",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 5750
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Mounted Exotic Weapon - Parashield Dart Pistol",
+        "srxId": 8536,
+        "cost": 5750,
+        "properties": [],
+        "options": [],
+        "type": "Mounted Weapon",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": true,
+        "isExoticWeapon": true,
+        "nuyenMultiplier": null,
+        "requiresMount": true,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": "Firearms",
+        "attackSpecialization": "Exotic Weapon - Dart Gun",
+        "attacks": [
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": null,
+            "accuracy": -1,
+            "dv": {
+              "raw": "Special",
+              "special": "Special",
+              "type": null,
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "mounted-exotic-weapon-parashield-dart-pistol"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!pwv1DIvA0OxkJmrw"
+}

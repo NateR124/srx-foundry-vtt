@@ -1,0 +1,31 @@
+{
+  "_id": "ag5gCaPaux4CuvbX",
+  "name": "Tir Tairngire",
+  "type": "knowledge",
+  "system": {
+    "summary": "",
+    "description": "All facets of life in Tir Tairngire including politics, native critters, major cities, corporate activity, customs & traditions, legal systems",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "Tir Tairngire",
+        "srxId": 10019,
+        "type": "Knowledge Domain",
+        "type2": null,
+        "description": "All facets of life in Tir Tairngire including politics, native critters, major cities, corporate activity, customs & traditions, legal systems",
+        "freePool": null,
+        "slug": "tir-tairngire"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ag5gCaPaux4CuvbX"
+}

@@ -1,0 +1,63 @@
+{
+  "_id": "SaGkcwr46c6EdXy4",
+  "name": "Blur",
+  "type": "talent",
+  "system": {
+    "summary": "Channeling / Qi",
+    "description": "Attacker suffers Liability on attack test",
+    "category": "channeling",
+    "subgroup": "Qi",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Blur",
+        "srxId": 487,
+        "category": "Channeling",
+        "subcategory": "Qi",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Qi",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": "TRUE",
+        "action": null,
+        "range": "Self",
+        "duration": "Instantaneous",
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Attacker suffers Liability on attack test",
+        "effects": [],
+        "slug": "blur"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!SaGkcwr46c6EdXy4"
+}

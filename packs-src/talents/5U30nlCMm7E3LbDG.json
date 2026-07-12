@@ -1,0 +1,31 @@
+{
+  "_id": "5U30nlCMm7E3LbDG",
+  "name": "Loss of Confidence",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Fail at a task that should be easy for you",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Loss of Confidence",
+        "srxId": 10533,
+        "type": "Trait",
+        "type2": null,
+        "description": "Fail at a task that should be easy for you",
+        "options": [],
+        "slug": "loss-of-confidence"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!5U30nlCMm7E3LbDG"
+}

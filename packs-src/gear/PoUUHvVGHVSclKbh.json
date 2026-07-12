@@ -1,0 +1,55 @@
+{
+  "_id": "PoUUHvVGHVSclKbh",
+  "name": "Reflex Pathways",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "Ambidextrous Talent",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 22000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Reflex Pathways",
+        "srxId": 3113,
+        "category": "Bodyware",
+        "cost": 22000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Reflex Pathways",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.3",
+          "value": 0.3,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [
+          "Ambidextrous"
+        ],
+        "description": "Ambidextrous Talent",
+        "effects": [],
+        "slug": "reflex-pathways"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!PoUUHvVGHVSclKbh"
+}

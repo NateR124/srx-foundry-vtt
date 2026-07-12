@@ -1,0 +1,55 @@
+{
+  "_id": "JEhMvNzVzbdKHpOX",
+  "name": "Allegiance Sigma Cyberdeck",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Cyberdecks",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 26000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Allegiance Sigma Cyberdeck",
+        "srxId": 6019,
+        "category": "Matrix Devices",
+        "subcategory": "Cyberdecks",
+        "cost": 26000,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Cyberdecks",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": 3,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "16",
+          "modCapacity": "2"
+        },
+        "installedEnhancements": [],
+        "slug": "allegiance-sigma-cyberdeck"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!JEhMvNzVzbdKHpOX"
+}

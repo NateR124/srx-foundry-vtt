@@ -1,0 +1,52 @@
+{
+  "_id": "ljsWptDZp98wJRuR",
+  "name": "Stim Patch",
+  "type": "gear",
+  "system": {
+    "summary": "Biotech",
+    "description": "",
+    "subtype": "Biotech",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 200
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Stim Patch",
+        "srxId": 6157,
+        "category": "Biotech",
+        "cost": 200,
+        "properties": [],
+        "options": [],
+        "type": "Biotech",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "stim-patch"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ljsWptDZp98wJRuR"
+}

@@ -1,0 +1,40 @@
+{
+  "_id": "TpgNw0B2KFUOCweI",
+  "name": "Ares LightSec Armor Vest",
+  "type": "armor",
+  "system": {
+    "summary": "",
+    "description": "",
+    "rating": 6,
+    "hardened": 0,
+    "heavy": false,
+    "shield": false,
+    "equipped": false,
+    "cost": 150
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "armor",
+      "catalogData": {
+        "name": "Ares LightSec Armor Vest",
+        "srxId": 4009,
+        "cost": 150,
+        "properties": [],
+        "options": [],
+        "rating": 6,
+        "hardened": 0,
+        "heavy": false,
+        "shield": false,
+        "slug": "ares-lightsec-armor-vest",
+        "variantOf": "armor-vest"
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!TpgNw0B2KFUOCweI"
+}

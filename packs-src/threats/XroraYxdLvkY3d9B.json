@@ -1,0 +1,74 @@
+{
+  "_id": "XroraYxdLvkY3d9B",
+  "name": "TROLL WITH A MACHINE GUN",
+  "type": "threat",
+  "system": {
+    "threatRating": 5,
+    "initiative": {
+      "dice": 3,
+      "bonus": 6
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 16
+    },
+    "armor": 25,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "(Reach: 2m)",
+        "pool": 17,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "(Reach: 2m)",
+        "pool": 17,
+        "dv": 11,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Predator V",
+        "pool": 19,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Stoner-Ares M202 Major (BF) 18 11P",
+        "pool": 17,
+        "dv": 12,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Ton of Bricks</strong>: Once per fight, when the troll takes damage, they can reduce the damage by 5.</li><li><strong>Vengeful Rage</strong>: If an enemy damages the troll, and the troll makes an attack against that enemy on their next Action Phase, they gain the Reroll 1’s benefit on their attack test – reroll any dice that roll a 1, excluding their Crit Dice, and use the new result.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The troll does not suffer recoil</li><li><strong>penalties.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "troll-with-a-machine-gun"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "TROLL WITH A MACHINE GUN"
+  },
+  "_key": "!actors!XroraYxdLvkY3d9B"
+}

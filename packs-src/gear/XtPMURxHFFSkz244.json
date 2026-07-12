@@ -1,0 +1,53 @@
+{
+  "_id": "XtPMURxHFFSkz244",
+  "name": "Contact Lenses",
+  "type": "gear",
+  "system": {
+    "summary": "Audio & Optical Devices / Optical Devices",
+    "description": "",
+    "subtype": "Optical Device",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 50
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Contact Lenses",
+        "srxId": 6085,
+        "category": "Audio & Optical Devices",
+        "subcategory": "Optical Devices",
+        "cost": 50,
+        "properties": [],
+        "options": [],
+        "type": "Optical Device",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 1,
+        "enhancementType": 2,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "contact-lenses"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!XtPMURxHFFSkz244"
+}

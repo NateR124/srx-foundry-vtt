@@ -1,0 +1,55 @@
+{
+  "_id": "O2Pfoj4VUcH3neCq",
+  "name": "Long Haul",
+  "type": "gear",
+  "system": {
+    "summary": "Toxins & Drugs / Drugs",
+    "description": "",
+    "subtype": "Drug",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 25
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Long Haul",
+        "srxId": 6187,
+        "category": "Toxins & Drugs",
+        "subcategory": "Drugs",
+        "cost": 25,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Drug",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "long-haul"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!O2Pfoj4VUcH3neCq"
+}

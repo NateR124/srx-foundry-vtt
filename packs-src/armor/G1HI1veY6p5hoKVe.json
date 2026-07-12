@@ -1,0 +1,39 @@
+{
+  "_id": "G1HI1veY6p5hoKVe",
+  "name": "Actioneer Business Clothes",
+  "type": "armor",
+  "system": {
+    "summary": "",
+    "description": "",
+    "rating": 9,
+    "hardened": 0,
+    "heavy": false,
+    "shield": false,
+    "equipped": false,
+    "cost": 1500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "armor",
+      "catalogData": {
+        "name": "Actioneer Business Clothes",
+        "srxId": 4002,
+        "cost": 1500,
+        "properties": [],
+        "options": [],
+        "rating": 9,
+        "hardened": 0,
+        "heavy": false,
+        "shield": false,
+        "slug": "actioneer-business-clothes"
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!G1HI1veY6p5hoKVe"
+}

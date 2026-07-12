@@ -1,0 +1,45 @@
+{
+  "_id": "Wk6iOVa5mCURh9dV",
+  "name": "Smartlink (Vehicle)",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 6000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Smartlink (Vehicle)",
+        "srxId": 8511,
+        "cost": 6000,
+        "properties": [],
+        "options": [],
+        "type": "Modification",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": false,
+        "isExoticWeapon": false,
+        "nuyenMultiplier": null,
+        "requiresMount": false,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": null,
+        "attackSpecialization": null,
+        "attacks": [],
+        "slug": "smartlink-vehicle"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Wk6iOVa5mCURh9dV"
+}

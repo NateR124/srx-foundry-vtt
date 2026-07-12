@@ -1,0 +1,90 @@
+{
+  "_id": "w1Zmci4mcirdmlXu",
+  "name": "ELITE SECURITY RIGGER",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 2,
+      "bonus": 8
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 13,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "600",
+        "pool": 12,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Forward)",
+        "pool": 15,
+        "dv": 11,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Forward)",
+        "pool": 14,
+        "dv": 12,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Assault Rifle (Rotating)",
+        "pool": 16,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Assault Rifle (Rotating)",
+        "pool": 16,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Assault Rifle (Rotating)",
+        "pool": 15,
+        "dv": 11,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The rigger does not suffer recoil</li><li><strong>penalties.</strong>: </li><li><strong>Improved Crit</strong>: On attack tests, the rigger scores a</li><li><strong>critical hit with their Crit Dice on a 5 or a 6.</strong>: </li><li><strong>Twitchy Driver</strong>: The rigger gains a +1 bonus to their</li><li><strong>Defense Score when driving a vehicle.</strong>: </li><li><strong>MITSUBISHI NIGHTSKY</strong>: </li><li><strong>CAR (DRIVING)</strong>: </li><li><strong>Body</strong>: 14 Handling: 2</li><li><strong>Armor</strong>: 12 Speed: 5</li><li><strong>Health</strong>: 20 Wounded Limit: 10</li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "elite-security-rigger"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "ELITE SECURITY RIGGER"
+  },
+  "_key": "!actors!w1Zmci4mcirdmlXu"
+}

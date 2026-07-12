@@ -1,0 +1,53 @@
+{
+  "_id": "ZQ168UO1XJ4KvprN",
+  "name": "Alcohol",
+  "type": "gear",
+  "system": {
+    "summary": "Toxins & Drugs / Drugs",
+    "description": "",
+    "subtype": "Drug",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Alcohol",
+        "srxId": 6177,
+        "category": "Toxins & Drugs",
+        "subcategory": "Drugs",
+        "cost": 2,
+        "properties": [],
+        "options": [],
+        "type": "Drug",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "alcohol"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ZQ168UO1XJ4KvprN"
+}

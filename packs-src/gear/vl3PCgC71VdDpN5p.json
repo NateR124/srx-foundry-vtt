@@ -1,0 +1,145 @@
+{
+  "_id": "vl3PCgC71VdDpN5p",
+  "name": "A-47D Pegasus",
+  "type": "gear",
+  "system": {
+    "summary": "Drones (Aerial)",
+    "description": "",
+    "subtype": "Drones (Aerial)",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 750000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "A-47D Pegasus",
+        "srxId": 7595,
+        "category": "Drones (Aerial)",
+        "cost": 750000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Drones (Aerial)",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Piloting",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 2,
+          "speed": 12,
+          "body": 8,
+          "armor": 13,
+          "health": 12,
+          "defenseScoreMod": null,
+          "autoRating": 3,
+          "autoDefenseScore": 3,
+          "dccBenefits": null,
+          "autoSkills": "Firearms,Perception,Piloting,Stealth",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Advanced Sensor Array",
+            "value": "3"
+          },
+          {
+            "name": "Anti-Theft System",
+            "value": "Built-In"
+          },
+          {
+            "name": "Armor Plating",
+            "value": "Built-In"
+          },
+          {
+            "name": "Combat Vehicle",
+            "value": "Built-In"
+          },
+          {
+            "name": "Increased Structural Integrity",
+            "value": "Built-In"
+          },
+          {
+            "name": "Smartlink (Vehicle)",
+            "value": "Built-In"
+          }
+        ],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "R",
+              "heavy": true
+            },
+            "builtIn": {
+              "weapon": "Mounted Light Machine Gun",
+              "orientation": "R",
+              "retractable": false,
+              "superior": false
+            }
+          },
+          {
+            "index": 2,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": {
+              "weapon": "Mounted Missile Launcher",
+              "orientation": "F",
+              "retractable": false,
+              "superior": false
+            }
+          },
+          {
+            "index": 3,
+            "mount": {
+              "orientation": "F",
+              "heavy": false
+            },
+            "builtIn": null
+          },
+          {
+            "index": 4,
+            "mount": {
+              "orientation": "B",
+              "heavy": false
+            },
+            "builtIn": null
+          }
+        ],
+        "slug": "a-47d-pegasus"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!vl3PCgC71VdDpN5p"
+}

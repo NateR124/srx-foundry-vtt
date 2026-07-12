@@ -1,0 +1,59 @@
+{
+  "_id": "RgXeMTmmiQdozDeu",
+  "name": "Olfactory Booster",
+  "type": "gear",
+  "system": {
+    "summary": "Senseware / Other",
+    "description": "+1 Perception",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 15000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Olfactory Booster",
+        "srxId": 3022,
+        "category": "Senseware",
+        "subcategory": "Other",
+        "cost": 15000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Olfactory Booster",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.2",
+          "value": 0.2,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "+1 Perception",
+        "effects": [
+          {
+            "key": "perception",
+            "value": 1
+          }
+        ],
+        "slug": "olfactory-booster"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!RgXeMTmmiQdozDeu"
+}

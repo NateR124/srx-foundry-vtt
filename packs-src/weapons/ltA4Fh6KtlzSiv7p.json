@@ -1,0 +1,92 @@
+{
+  "_id": "ltA4Fh6KtlzSiv7p",
+  "name": "Combat Axe",
+  "type": "weapon",
+  "system": {
+    "summary": "Close Combat / Blades",
+    "description": "",
+    "skill": "closeCombat",
+    "specialization": "Blades",
+    "category": "Close Combat",
+    "range": "-",
+    "properties": "Two-Handed",
+    "cost": 1000,
+    "attackModes": [
+      {
+        "name": "Melee",
+        "action": "complex",
+        "fireMode": "",
+        "acc": 1,
+        "dv": "BOD+1",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Combat Axe",
+        "srxId": 4515,
+        "category": "Close Combat",
+        "subcategory": "Blades",
+        "cost": 1000,
+        "properties": [
+          "Two-Handed"
+        ],
+        "options": [],
+        "type": "Close Combat",
+        "type2": "Blades",
+        "type3": null,
+        "skill": "Close Combat",
+        "specialization": "Blades",
+        "isLargeMelee": true,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "-"
+        },
+        "improvedRange": null,
+        "canMod": false,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [
+          {
+            "attackType": "Melee",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": 1,
+            "dv": {
+              "raw": "BOD+1",
+              "attr": "bod",
+              "mod": 1,
+              "type": "P",
+              "element": null,
+              "min": 7,
+              "max": null
+            }
+          }
+        ],
+        "slug": "combat-axe"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7STNsUPeWuVcG9Pd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ltA4Fh6KtlzSiv7p"
+}

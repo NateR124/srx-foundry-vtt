@@ -1,0 +1,104 @@
+{
+  "_id": "CCx0oPCkwCzC2ASj",
+  "name": "Saeder-Krupp IP-6 Gun Turret",
+  "type": "gear",
+  "system": {
+    "summary": "Drones (Terrestrial)",
+    "description": "",
+    "subtype": "Drones (Terrestrial)",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 10500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Saeder-Krupp IP-6 Gun Turret",
+        "srxId": 7585,
+        "category": "Drones (Terrestrial)",
+        "cost": 10500,
+        "properties": [],
+        "options": [],
+        "type": "Drones (Terrestrial)",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)",
+          "Operator's Defense Score always 1",
+          "If moved, Autopilot Rating reduced to 1"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 0,
+          "speed": 0,
+          "body": 6,
+          "armor": 9,
+          "health": 8,
+          "defenseScoreMod": -999,
+          "autoRating": 3,
+          "autoDefenseScore": 1,
+          "dccBenefits": null,
+          "autoSkills": "Firearms,Perception",
+          "alwaysOne": true
+        },
+        "vehicleMods": [
+          {
+            "name": "Advanced Sensor Array",
+            "value": "1"
+          },
+          {
+            "name": "Armor Plating",
+            "value": "Built-In"
+          },
+          {
+            "name": "Smartlink (Vehicle)",
+            "value": "Built-In"
+          }
+        ],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "R",
+              "heavy": false
+            },
+            "builtIn": {
+              "weapon": "Mounted Assault Rifle",
+              "orientation": "R",
+              "retractable": false,
+              "superior": true
+            }
+          }
+        ],
+        "slug": "saeder-krupp-ip-6-gun-turret"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!CCx0oPCkwCzC2ASj"
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "LcwNbbJmbuthWZxt",
+  "name": "Hacker",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Stays up to date on latest Matrix security developments, and can work on a contract basis if needed",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Hacker",
+        "srxId": 10012,
+        "type": "Contact",
+        "type2": null,
+        "description": "Stays up to date on latest Matrix security developments, and can work on a contract basis if needed",
+        "slug": "hacker"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!LcwNbbJmbuthWZxt"
+}

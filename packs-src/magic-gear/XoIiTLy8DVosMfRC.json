@@ -1,0 +1,51 @@
+{
+  "_id": "XoIiTLy8DVosMfRC",
+  "name": "Lethal Fist, Greater",
+  "type": "gear",
+  "system": {
+    "summary": "Foci",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Lethal Fist, Greater",
+        "srxId": 9028,
+        "category": "Foci",
+        "cost": 2000,
+        "costDisplay": "128,000",
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": "Lethal Fist",
+        "fixedRating": 8,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [],
+        "alwaysUnique": true,
+        "slug": "lethal-fist-greater"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!XoIiTLy8DVosMfRC"
+}

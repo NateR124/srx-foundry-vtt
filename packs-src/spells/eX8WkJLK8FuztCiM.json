@@ -1,0 +1,50 @@
+{
+  "_id": "eX8WkJLK8FuztCiM",
+  "name": "Agony",
+  "type": "spell",
+  "system": {
+    "summary": "Illusion",
+    "description": "Chosen targets gain Wounded status",
+    "category": "illusion",
+    "pattern": "area",
+    "duration": "sustained",
+    "range": "50m [A]",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Illusion"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Agony",
+        "srxId": 1502,
+        "category": "Illusion",
+        "description": "Chosen targets gain Wounded status",
+        "range": {
+          "raw": "50m [A]",
+          "bands": [
+            50
+          ],
+          "area": true
+        },
+        "duration": "Sustained",
+        "resistance": "WIL",
+        "attack": null,
+        "slug": "agony"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "dqlrlbNPd7IOtFU1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!eX8WkJLK8FuztCiM"
+}

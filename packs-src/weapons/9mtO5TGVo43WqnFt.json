@@ -1,0 +1,92 @@
+{
+  "_id": "9mtO5TGVo43WqnFt",
+  "name": "High-explosive Missile",
+  "type": "weapon",
+  "system": {
+    "summary": "Explosives / Missiles",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "",
+    "category": "Explosives",
+    "range": "-",
+    "properties": "Illegal",
+    "cost": 3000,
+    "attackModes": [
+      {
+        "name": "AOE",
+        "action": "major",
+        "fireMode": "",
+        "acc": 0,
+        "dv": "20/10",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "High-explosive Missile",
+        "srxId": 4637,
+        "category": "Explosives",
+        "subcategory": "Missiles",
+        "cost": 3000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Explosives",
+        "type2": "Missiles",
+        "type3": null,
+        "skill": null,
+        "specialization": null,
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "-"
+        },
+        "improvedRange": null,
+        "canMod": false,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [
+          {
+            "attackType": "AOE",
+            "action": null,
+            "fireMode": null,
+            "accuracy": null,
+            "dv": {
+              "raw": "20/10",
+              "near": 20,
+              "far": 10,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "high-explosive-missile"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "HutAORUklVy45Nwf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!9mtO5TGVo43WqnFt"
+}

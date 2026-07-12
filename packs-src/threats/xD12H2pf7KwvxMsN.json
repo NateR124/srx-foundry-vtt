@@ -1,0 +1,74 @@
+{
+  "_id": "xD12H2pf7KwvxMsN",
+  "name": "YAKUZA UNDERBOSS",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 3,
+      "bonus": 7
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 15
+    },
+    "armor": 17,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 16,
+        "dv": 3,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Katana",
+        "pool": 19,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Crusader II Major (SA) 17 7P",
+        "pool": 17,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Yamaha Raiden Major (BF) 18 9P",
+        "pool": 17,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Show the Way</strong>: When the underboss attacks a target, they can use a Minor Action to grant Leverage to their next ally to attack the target before the start of the underboss’s next Action Phase.</li><li><strong>Blaster IC</strong>: On a failed Hacking attempt against the underboss, intruder suffers 10S Biofeedback damage. CYBERONIN</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Ultrasound, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The underboss does not suffer</li><li><strong>recoil penalties.</strong>: </li><li><strong>Fearless</strong>: The underboss has Leverage on tests to</li><li><strong>remove, or avoid gaining, the Frightened status.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "yakuza-underboss"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "YAKUZA UNDERBOSS"
+  },
+  "_key": "!actors!xD12H2pf7KwvxMsN"
+}

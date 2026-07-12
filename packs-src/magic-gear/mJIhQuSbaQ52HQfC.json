@@ -1,0 +1,69 @@
+{
+  "_id": "mJIhQuSbaQ52HQfC",
+  "name": "Supplicating",
+  "type": "gear",
+  "system": {
+    "summary": "Foci",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 15,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Supplicating",
+        "srxId": 9041,
+        "category": "Foci",
+        "cost": 2000,
+        "costDisplay": "Force x Force x 2,000",
+        "properties": [],
+        "options": [
+          "Advanced Binder",
+          "Banisher",
+          "Deadly Summons",
+          "Edge: Call Great Form",
+          "Edge: Conjured Luck",
+          "Edge: Rapid Summons",
+          "Elemental Infusion",
+          "Elemental Mastery",
+          "Evolved Elemental",
+          "Fortified Calling",
+          "Great Form Binding",
+          "Lethal Conjurer",
+          "Quickened Anima",
+          "Remote Service",
+          "Savage Spirit",
+          "Shunt Pain",
+          "Spirit Mastery"
+        ],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": null,
+        "fixedRating": null,
+        "maxRating": 15,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [
+          "Expertise: Conjuring"
+        ],
+        "alwaysUnique": true,
+        "slug": "supplicating"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!mJIhQuSbaQ52HQfC"
+}

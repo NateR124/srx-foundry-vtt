@@ -1,0 +1,62 @@
+{
+  "_id": "2BrcMNePNoGQSHK9",
+  "name": "Experienced Grifter",
+  "type": "talent",
+  "system": {
+    "summary": "Social",
+    "description": "Convert 1 Karma into 3,500¥",
+    "category": "social",
+    "subgroup": "",
+    "karma": 1,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Experienced Grifter",
+        "srxId": 188,
+        "category": "Social",
+        "maxQty": 10,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 1
+        },
+        "description": "Convert 1 Karma into 3,500¥",
+        "effects": [],
+        "slug": "experienced-grifter"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!2BrcMNePNoGQSHK9"
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "uZBSaEu3r9MRzqTt",
+  "name": "Sawed-off",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon-mod",
+      "catalogData": {
+        "name": "Sawed-off",
+        "srxId": 5517,
+        "cost": 0,
+        "properties": [],
+        "type": "Modification",
+        "mounts": [
+          8
+        ],
+        "allMountsRequired": false,
+        "noMount": false,
+        "requiresMod": null,
+        "slug": "sawed-off"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "rHfaFyA9uk37DvRq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!uZBSaEu3r9MRzqTt"
+}

@@ -1,0 +1,50 @@
+{
+  "_id": "peAMh7lswMXk27Oc",
+  "name": "ELITE SECURITY DECKER",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 2,
+      "bonus": 7
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 10,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Beretta 201T",
+        "pool": 8,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Vision Magnification</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "elite-security-decker"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "ELITE SECURITY DECKER"
+  },
+  "_key": "!actors!peAMh7lswMXk27Oc"
+}

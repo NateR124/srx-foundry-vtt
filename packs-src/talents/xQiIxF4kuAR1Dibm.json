@@ -1,0 +1,62 @@
+{
+  "_id": "xQiIxF4kuAR1Dibm",
+  "name": "Edge: Adrenaline Rush",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "While Wounded, gain Leverage and bonus equal to your damage on attack test",
+    "category": "general",
+    "subgroup": "",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": true
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Edge: Adrenaline Rush",
+        "srxId": 12,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": "TRUE",
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "While Wounded, gain Leverage and bonus equal to your damage on attack test",
+        "effects": [],
+        "slug": "edge-adrenaline-rush"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xQiIxF4kuAR1Dibm"
+}

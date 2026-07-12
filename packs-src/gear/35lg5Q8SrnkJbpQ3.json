@@ -1,0 +1,46 @@
+{
+  "_id": "35lg5Q8SrnkJbpQ3",
+  "name": "Passenger Protection System",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Passenger Protection System",
+        "srxId": 8508,
+        "cost": 500,
+        "costDisplay": "Body x 500",
+        "properties": [],
+        "options": [],
+        "type": "Modification",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": false,
+        "isExoticWeapon": false,
+        "nuyenMultiplier": "Body",
+        "requiresMount": false,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": null,
+        "attackSpecialization": null,
+        "attacks": [],
+        "slug": "passenger-protection-system"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!35lg5Q8SrnkJbpQ3"
+}

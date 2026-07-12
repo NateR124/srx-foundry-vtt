@@ -1,0 +1,36 @@
+{
+  "_id": "bS92wB5V6yIRdND2",
+  "name": "Visual Acuity",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Vision Enhancement",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 19000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear-enhancement",
+      "catalogData": {
+        "name": "Visual Acuity",
+        "srxId": 7010,
+        "cost": 19000,
+        "properties": [],
+        "options": [],
+        "enhancementType": 2,
+        "type": "Vision Enhancement",
+        "description": null,
+        "slug": "visual-acuity"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CfAYFTllX77UHdGc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!bS92wB5V6yIRdND2"
+}

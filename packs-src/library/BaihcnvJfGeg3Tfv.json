@@ -1,0 +1,31 @@
+{
+  "_id": "BaihcnvJfGeg3Tfv",
+  "name": "Security Systems & Protocols",
+  "type": "knowledge",
+  "system": {
+    "summary": "",
+    "description": "Checkpoint procedures & protocols, devices, typical building designs",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "Security Systems & Protocols",
+        "srxId": 10016,
+        "type": "Knowledge Domain",
+        "type2": null,
+        "description": "Checkpoint procedures & protocols, devices, typical building designs",
+        "freePool": null,
+        "slug": "security-systems-protocols"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!BaihcnvJfGeg3Tfv"
+}

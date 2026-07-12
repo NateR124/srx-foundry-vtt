@@ -1,0 +1,51 @@
+{
+  "_id": "9OEqh9cAGOakOFs1",
+  "name": "Accelerator, Greater",
+  "type": "gear",
+  "system": {
+    "summary": "Artifices",
+    "description": "",
+    "subtype": "Artifice",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Accelerator, Greater",
+        "srxId": 9089,
+        "category": "Artifices",
+        "cost": 2000,
+        "costDisplay": "162,000",
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Artifice",
+        "type2": "Artificing Gear",
+        "type3": "Accelerator",
+        "fixedRating": 9,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [],
+        "alwaysUnique": true,
+        "slug": "accelerator-greater"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!9OEqh9cAGOakOFs1"
+}

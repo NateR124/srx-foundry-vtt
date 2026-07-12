@@ -1,0 +1,66 @@
+{
+  "_id": "P6Yl5JP1VyzbCPCK",
+  "name": "Resonant Resilience",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Infusion",
+    "description": "Gain Built Tough and High Pain Tolerance General Talents",
+    "category": "threading",
+    "subgroup": "Infusion",
+    "karma": 14,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Resonant Resilience",
+        "srxId": 329,
+        "category": "Threading",
+        "subcategory": "Infusion",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Infusion",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [
+          "Built Tough",
+          "High Pain Tolerance"
+        ],
+        "cost": {
+          "karma": 14
+        },
+        "description": "Gain Built Tough and High Pain Tolerance General Talents",
+        "effects": [],
+        "slug": "resonant-resilience"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!P6Yl5JP1VyzbCPCK"
+}

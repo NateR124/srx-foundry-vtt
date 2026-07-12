@@ -1,0 +1,67 @@
+{
+  "_id": "RkDtNEmAK657ohzm",
+  "name": "Mage",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "archetype",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "archetype",
+      "catalogData": {
+        "name": "Mage",
+        "srxId": 11015,
+        "noFlare": false,
+        "isCustom": false,
+        "isDossierGroup": false,
+        "parent": null,
+        "flares": [
+          {
+            "name": "Burn-out",
+            "metatypes": [
+              "Human"
+            ],
+            "appIndex": 11
+          },
+          {
+            "name": "Charlatan",
+            "metatypes": [
+              "Human",
+              "Elf"
+            ],
+            "appIndex": 12
+          },
+          {
+            "name": "Combat Mage",
+            "metatypes": [
+              "Troll",
+              "Dwarf"
+            ],
+            "appIndex": 13
+          },
+          {
+            "name": "Warder",
+            "metatypes": [
+              "Dwarf",
+              "Human"
+            ],
+            "appIndex": 14
+          }
+        ],
+        "slug": "mage-2"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "82fke5ZPHOqEvVwG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!RkDtNEmAK657ohzm"
+}

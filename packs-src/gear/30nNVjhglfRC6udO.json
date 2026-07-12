@@ -1,0 +1,56 @@
+{
+  "_id": "30nNVjhglfRC6udO",
+  "name": "Magelink",
+  "type": "gear",
+  "system": {
+    "summary": "Senseware / Eyeware",
+    "description": "+2 to ranged spell attacks",
+    "subtype": "Eyeware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 17000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Magelink",
+        "srxId": 3014,
+        "category": "Senseware",
+        "subcategory": "Eyeware",
+        "cost": 17000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Magelink",
+        "type": "Eyeware",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.3",
+          "value": 0.3,
+          "scale": []
+        },
+        "parentContainer": "Cybereyes",
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [
+          "Battle Mage"
+        ],
+        "description": "+2 to ranged spell attacks",
+        "effects": [],
+        "slug": "magelink"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!30nNVjhglfRC6udO"
+}

@@ -1,0 +1,66 @@
+{
+  "_id": "7CnTP1Ka0d4XXaUd",
+  "name": "Refined Instincts",
+  "type": "talent",
+  "system": {
+    "summary": "Channeling / Yin",
+    "description": "+1 Intuition or Charisma",
+    "category": "channeling",
+    "subgroup": "Yin",
+    "karma": 8,
+    "option": "Intuition, Charisma",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Refined Instincts",
+        "srxId": 530,
+        "category": "Channeling",
+        "subcategory": "Yin",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Intuition",
+          "Charisma"
+        ],
+        "options2": [],
+        "type": "Yin",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 8
+        },
+        "description": "+1 Intuition or Charisma",
+        "effects": [],
+        "slug": "refined-instincts"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!7CnTP1Ka0d4XXaUd"
+}

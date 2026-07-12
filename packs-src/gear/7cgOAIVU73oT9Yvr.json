@@ -1,0 +1,55 @@
+{
+  "_id": "7cgOAIVU73oT9Yvr",
+  "name": "Smuggling Compartment",
+  "type": "gear",
+  "system": {
+    "summary": "Cyberlimbs / Cyberlegs",
+    "description": "Small hidden compartment",
+    "subtype": "Cyberleg Upgrade",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Smuggling Compartment",
+        "srxId": 3074,
+        "category": "Cyberlimbs",
+        "subcategory": "Cyberlegs",
+        "cost": 2000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Smuggling CompartmentCyberleg Upgrade",
+        "type": "Cyberleg Upgrade",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0",
+          "value": 0,
+          "scale": []
+        },
+        "parentContainer": "Cyberleg",
+        "prereq": "DNI (Direct Neural Interface),Cyberleg",
+        "incompatible": [],
+        "grants": [],
+        "description": "Small hidden compartment",
+        "effects": [],
+        "slug": "smuggling-compartment-2",
+        "variantOf": "cyberleg"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!7cgOAIVU73oT9Yvr"
+}

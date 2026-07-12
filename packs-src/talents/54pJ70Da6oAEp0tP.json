@@ -1,0 +1,69 @@
+{
+  "_id": "54pJ70Da6oAEp0tP",
+  "name": "Weapon Skill Mastery",
+  "type": "talent",
+  "system": {
+    "summary": "Weapons / CC, F, PW",
+    "description": "Gain access to Skill Mastery talents for chosen skill",
+    "category": "weapons",
+    "subgroup": "CC, F, PW",
+    "karma": 0,
+    "option": "Close Combat, Firearms, Projectile Weapons",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Weapon Skill Mastery",
+        "srxId": 169,
+        "category": "Weapons",
+        "subcategory": "CC, F, PW",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Close Combat",
+          "Firearms",
+          "Projectile Weapons"
+        ],
+        "options2": [],
+        "type": "CC, F, PW",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": "TRUE",
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [
+          "Skill Mastery"
+        ],
+        "cost": {
+          "karma": 0
+        },
+        "description": "Gain access to Skill Mastery talents for chosen skill",
+        "effects": [],
+        "slug": "weapon-skill-mastery"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!54pJ70Da6oAEp0tP"
+}

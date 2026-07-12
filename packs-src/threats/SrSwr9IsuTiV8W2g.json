@@ -1,0 +1,82 @@
+{
+  "_id": "SrSwr9IsuTiV8W2g",
+  "name": "RED POLE ADEPT",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 2,
+      "bonus": 8
+    },
+    "defenseScore": 6,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 16,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 17,
+        "dv": 5,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Katana",
+        "pool": 18,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Predator V",
+        "pool": 18,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares MP-5 TX Major (SA) 17 8P",
+        "pool": 17,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares MP-5 TX Major (SA) 17 8P",
+        "pool": 16,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The red pole does not suffer recoil</li><li><strong>penalties.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "red-pole-adept"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "RED POLE ADEPT"
+  },
+  "_key": "!actors!SrSwr9IsuTiV8W2g"
+}

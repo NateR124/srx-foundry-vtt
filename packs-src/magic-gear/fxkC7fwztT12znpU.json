@@ -1,0 +1,48 @@
+{
+  "_id": "fxkC7fwztT12znpU",
+  "name": "Magical Materials",
+  "type": "gear",
+  "system": {
+    "summary": "Magical Materials",
+    "description": "",
+    "subtype": "magic-gear",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Magical Materials",
+        "srxId": 9008,
+        "category": "Magical Materials",
+        "cost": 1,
+        "properties": [],
+        "options": [],
+        "type": "",
+        "type2": "Magical Gear",
+        "type3": null,
+        "fixedRating": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [],
+        "alwaysUnique": false,
+        "slug": "magical-materials"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!fxkC7fwztT12znpU"
+}

@@ -1,0 +1,67 @@
+{
+  "_id": "ttNwrWAH9yM2kEMX",
+  "name": "Astral Tracking",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism / Astral",
+    "description": "Track astral signatures back to their creators",
+    "category": "mysticism",
+    "subgroup": "Astral",
+    "karma": 3,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Astral Tracking",
+        "srxId": 446,
+        "category": "Mysticism",
+        "subcategory": "Astral",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Astral",
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Astral Projection (Mysticism Talent)",
+        "prereq": {
+          "kind": "talent",
+          "name": "Astral Projection",
+          "categoryHint": "Mysticism Talent"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "Track astral signatures back to their creators",
+        "effects": [],
+        "slug": "astral-tracking"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ttNwrWAH9yM2kEMX"
+}

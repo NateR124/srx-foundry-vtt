@@ -1,0 +1,36 @@
+{
+  "_id": "LwtSzqT8FPHYzzeo",
+  "name": "Low-Light Vision",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Vision Enhancement",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 750
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear-enhancement",
+      "catalogData": {
+        "name": "Low-Light Vision",
+        "srxId": 7006,
+        "cost": 750,
+        "properties": [],
+        "options": [],
+        "enhancementType": 2,
+        "type": "Vision Enhancement",
+        "description": null,
+        "slug": "low-light-vision"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CfAYFTllX77UHdGc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!LwtSzqT8FPHYzzeo"
+}

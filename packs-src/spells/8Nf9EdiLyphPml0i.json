@@ -1,0 +1,61 @@
+{
+  "_id": "8Nf9EdiLyphPml0i",
+  "name": "Ice Spear",
+  "type": "spell",
+  "system": {
+    "summary": "Combat",
+    "description": "Ranged attack - Acc 2, DV (F+4)P Cold",
+    "category": "combat",
+    "pattern": "direct",
+    "duration": "instantaneous",
+    "range": "10/20/50m",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+4",
+    "dvType": "P",
+    "element": "cold",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Combat"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Ice Spear",
+        "srxId": 1537,
+        "category": "Combat",
+        "description": "Ranged attack - Acc 2, DV (F+4)P Cold",
+        "range": {
+          "raw": "10/20/50m",
+          "bands": [
+            10,
+            20,
+            50
+          ]
+        },
+        "duration": "Instantaneous",
+        "resistance": null,
+        "attack": {
+          "type": "Ranged",
+          "accuracy": 2,
+          "dv": {
+            "raw": "(F+4)",
+            "force": true,
+            "mod": 4,
+            "type": "P",
+            "element": "Cold"
+          }
+        },
+        "slug": "ice-spear"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "zZc1PdtmOVQowgGq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!8Nf9EdiLyphPml0i"
+}

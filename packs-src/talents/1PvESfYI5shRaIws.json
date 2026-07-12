@@ -1,0 +1,31 @@
+{
+  "_id": "1PvESfYI5shRaIws",
+  "name": "Virtual Vertigo",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Gain a bad status, like Dazed, just from using the Matrix",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Virtual Vertigo",
+        "srxId": 10546,
+        "type": "Trait",
+        "type2": null,
+        "description": "Gain a bad status, like Dazed, just from using the Matrix",
+        "options": [],
+        "slug": "virtual-vertigo"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!1PvESfYI5shRaIws"
+}

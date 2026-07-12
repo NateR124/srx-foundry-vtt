@@ -1,0 +1,31 @@
+{
+  "_id": "V7THizfCktva04oy",
+  "name": "Thrill Seeker",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Make a risky decision just for the thrill of it",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Thrill Seeker",
+        "srxId": 10544,
+        "type": "Trait",
+        "type2": null,
+        "description": "Make a risky decision just for the thrill of it",
+        "options": [],
+        "slug": "thrill-seeker"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!V7THizfCktva04oy"
+}

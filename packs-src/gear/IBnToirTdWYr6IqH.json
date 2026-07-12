@@ -1,0 +1,45 @@
+{
+  "_id": "IBnToirTdWYr6IqH",
+  "name": "Ram Plate",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 4000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Ram Plate",
+        "srxId": 8510,
+        "cost": 4000,
+        "properties": [],
+        "options": [],
+        "type": "Modification",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": false,
+        "isExoticWeapon": false,
+        "nuyenMultiplier": null,
+        "requiresMount": false,
+        "requiresHeavyMount": false,
+        "prereq": "Body 8",
+        "attackSkill": null,
+        "attackSpecialization": null,
+        "attacks": [],
+        "slug": "ram-plate"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!IBnToirTdWYr6IqH"
+}

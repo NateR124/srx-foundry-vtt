@@ -1,0 +1,80 @@
+{
+  "_id": "iVIY6v9Zzy5SQvwv",
+  "name": "Expertise: Technomancer",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "Gain Expertise: Hacking and Expertise: Software General Talents, Living Persona Threading Talent. Can purchase Threading talents.",
+    "category": "general",
+    "subgroup": "",
+    "karma": 20,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Expertise: Technomancer",
+        "srxId": 39,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Resonance 1, Threading 4",
+        "prereq": {
+          "op": "and",
+          "terms": [
+            {
+              "kind": "rating",
+              "subject": "Resonance",
+              "min": 1
+            },
+            {
+              "kind": "rating",
+              "subject": "Threading",
+              "min": 4
+            }
+          ]
+        },
+        "grants": [
+          "Expertise: Hacking",
+          "Expertise: Software",
+          "Living Persona"
+        ],
+        "cost": {
+          "karma": 20
+        },
+        "description": "Gain Expertise: Hacking and Expertise: Software General Talents, Living Persona Threading Talent. Can purchase Threading talents.",
+        "effects": [],
+        "slug": "expertise-technomancer"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!iVIY6v9Zzy5SQvwv"
+}

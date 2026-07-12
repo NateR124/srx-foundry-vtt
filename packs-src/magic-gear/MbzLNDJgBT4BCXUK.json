@@ -1,0 +1,165 @@
+{
+  "_id": "MbzLNDJgBT4BCXUK",
+  "name": "Earth",
+  "type": "gear",
+  "system": {
+    "summary": "Earth",
+    "description": "",
+    "subtype": "anima",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "anima",
+      "catalogData": {
+        "name": "Earth",
+        "srxId": 2502,
+        "category": "Earth",
+        "kind": "elemental",
+        "animalTotem": null,
+        "spellType": "Manipulation",
+        "stats": {
+          "quickness": 1,
+          "health": 12,
+          "armor": 12,
+          "defenseScore": 2
+        },
+        "properties": [
+          "Physical Resistance, Cold Immunity, Acid Vulnerability",
+          "Unphased (can't gain Frightened or Wounded status)"
+        ],
+        "skills": [
+          "Mysticism",
+          "Sorcery"
+        ],
+        "spellAttack": null,
+        "powers": [
+          {
+            "name": "Infuse Mana",
+            "raw": "Infuse Mana (Trait): +Force/2 on Manipulation spell Drain tests",
+            "action": null,
+            "sustained": false,
+            "duration": null,
+            "resist": null,
+            "text": "+Force/2 on Manipulation spell Drain tests"
+          },
+          {
+            "name": "Control Element",
+            "raw": "Control Element (Major Action): Earth",
+            "action": "Major Action",
+            "sustained": false,
+            "duration": null,
+            "resist": null,
+            "text": "Earth"
+          },
+          {
+            "name": "Sustain Spell",
+            "raw": "Sustain Spell (No Action, Sustained): Sustain one Manipulation spell for you. Spell Force must be ≤ elemental's Force.",
+            "action": "No Action",
+            "sustained": true,
+            "duration": "Sustained",
+            "resist": null,
+            "text": "Sustain one Manipulation spell for you. Spell Force must be ≤ elemental's Force."
+          }
+        ],
+        "harmonizedSpell": "Punch",
+        "attack": {
+          "name": "Jab",
+          "type": "Melee",
+          "skill": "Close Combat",
+          "action": "Major",
+          "accuracy": 0,
+          "dv": {
+            "raw": "2",
+            "value": 2,
+            "type": "S",
+            "element": null
+          }
+        },
+        "evolvedSkill": "Athletics",
+        "evolvedPowers": [
+          {
+            "name": "Banishing Resistance",
+            "raw": "Banishing Resistance (Trait): Double Force vs. Negate",
+            "action": null,
+            "sustained": false,
+            "duration": null,
+            "resist": null,
+            "text": "Double Force vs. Negate"
+          },
+          {
+            "name": "Crush",
+            "raw": "Crush (Complex Action): Cast Shatter at Force. Only targets objects.",
+            "action": "Complex Action",
+            "sustained": false,
+            "duration": null,
+            "resist": null,
+            "text": "Cast Shatter at Force. Only targets objects."
+          },
+          {
+            "name": "Soft Landing",
+            "raw": "Soft Landing (Interrupt Action): Reduce your fall damage by (Force x 5)m.",
+            "action": "Interrupt Action",
+            "sustained": false,
+            "duration": null,
+            "resist": null,
+            "text": "Reduce your fall damage by (Force x 5)m."
+          }
+        ],
+        "elementalFormulaePower": {
+          "name": "Elemental Formulae",
+          "raw": "Elemental Formulae (Complex Action, Sustained): 1 SpellType alchemical preparation does not count against limit. Spell Force must be ≤ elemental's Force.",
+          "action": "Complex Action",
+          "sustained": true,
+          "duration": "Sustained",
+          "resist": null,
+          "text": "1 SpellType alchemical preparation does not count against limit. Spell Force must be ≤ elemental's Force."
+        },
+        "greatFormPowers": [
+          {
+            "name": "Binding Roots",
+            "raw": "Binding Roots (No Action, Sustained): When melee attack hits, cast Bind at Force",
+            "action": "No Action",
+            "sustained": true,
+            "duration": "Sustained",
+            "resist": null,
+            "text": "When melee attack hits, cast Bind at Force"
+          },
+          {
+            "name": "Concussive Force",
+            "raw": "Concussive Force (Complex Action): Cast Powerball at Force centered on self. Can't use if already used in this Combat Turn or Turn before.",
+            "action": "Complex Action",
+            "sustained": false,
+            "duration": null,
+            "resist": null,
+            "text": "Cast Powerball at Force centered on self. Can't use if already used in this Combat Turn or Turn before."
+          }
+        ],
+        "greatFormSpellAttack": "Punch",
+        "greatFormAttack": {
+          "name": "Slam",
+          "type": "Melee",
+          "skill": "Close Combat",
+          "action": "Major",
+          "accuracy": 1,
+          "dv": {
+            "raw": "10",
+            "value": 10,
+            "type": "S",
+            "element": null
+          }
+        },
+        "slug": "earth"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "KLZmxSXG65k8ddMa",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!MbzLNDJgBT4BCXUK"
+}

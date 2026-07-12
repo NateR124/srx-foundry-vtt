@@ -1,0 +1,44 @@
+{
+  "_id": "lt9skP6qmihWNPS4",
+  "name": "Shiawase FortKnight Full Body Armor",
+  "type": "armor",
+  "system": {
+    "summary": "",
+    "description": "",
+    "rating": 14,
+    "hardened": 3,
+    "heavy": true,
+    "shield": false,
+    "equipped": false,
+    "cost": 28500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "armor",
+      "catalogData": {
+        "name": "Shiawase FortKnight Full Body Armor",
+        "srxId": 4012,
+        "cost": 28500,
+        "properties": [
+          "Illegal",
+          "Heavy",
+          "Hardened (3)"
+        ],
+        "options": [],
+        "rating": 14,
+        "hardened": 3,
+        "heavy": true,
+        "shield": false,
+        "slug": "shiawase-fortknight-full-body-armor",
+        "variantOf": "full-body-armor"
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!lt9skP6qmihWNPS4"
+}

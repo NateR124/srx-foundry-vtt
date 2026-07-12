@@ -1,0 +1,31 @@
+{
+  "_id": "7Qgvb3FmR5WvGXpe",
+  "name": "Enemy",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Your enemy turns up at just the wrong time to torment you",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Enemy",
+        "srxId": 10523,
+        "type": "Trait",
+        "type2": null,
+        "description": "Your enemy turns up at just the wrong time to torment you",
+        "options": [],
+        "slug": "enemy"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!7Qgvb3FmR5WvGXpe"
+}

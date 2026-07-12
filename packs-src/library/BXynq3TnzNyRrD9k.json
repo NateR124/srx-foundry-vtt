@@ -1,0 +1,31 @@
+{
+  "_id": "BXynq3TnzNyRrD9k",
+  "name": "Critters & Paranormal Creatures",
+  "type": "knowledge",
+  "system": {
+    "summary": "",
+    "description": "Abilities, traits, personalities, ecology",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "Critters & Paranormal Creatures",
+        "srxId": 10007,
+        "type": "Knowledge Domain",
+        "type2": null,
+        "description": "Abilities, traits, personalities, ecology",
+        "freePool": null,
+        "slug": "critters-paranormal-creatures"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!BXynq3TnzNyRrD9k"
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "jgXvP3TX3ixZ0Qxj",
+  "name": "Phobia",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Gain Frightened status or become paralyzed with fear upon seeing the source of your phobia",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Phobia",
+        "srxId": 10537,
+        "type": "Trait",
+        "type2": null,
+        "description": "Gain Frightened status or become paralyzed with fear upon seeing the source of your phobia",
+        "options": [
+          "free text"
+        ],
+        "slug": "phobia"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!jgXvP3TX3ixZ0Qxj"
+}

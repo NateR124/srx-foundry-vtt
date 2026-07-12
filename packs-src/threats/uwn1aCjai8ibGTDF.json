@@ -1,0 +1,82 @@
+{
+  "_id": "uwn1aCjai8ibGTDF",
+  "name": "SYMAN 2-53",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 3,
+      "bonus": 6
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 17,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Cyber Spurs",
+        "pool": 15,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Katana",
+        "pool": 18,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Viper",
+        "pool": 17,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "AK-97 Major (SA) 17 9P",
+        "pool": 17,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "AK-97 Major (SA) 17 9P",
+        "pool": 17,
+        "dv": 11,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Leaping Attack</strong>: If the Syman moves at least 3 meters toward a target, and their next action is to attack that target, they gain the Reroll 1’s benefit on their attack test – reroll any dice that roll a 1, excluding their Crit Dice, and use the new result.</li><li><strong>Swift</strong>: The Syman can take the Run action as a Minor Action, and the Move Action as a Free action (but can still only take each once per Combat Turn). The Syman does not suffer Liability on tests when they take the Run action. SYMAN 1-87</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Ultrasound, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The Syman does not suffer recoil</li><li><strong>penalties.</strong>: </li><li><strong>Hot-sim</strong>: The Syman generally operates in hot-sim,</li><li><strong>making it vulnerable to biofeedback damage.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "syman-2-53"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "SYMAN 2-53"
+  },
+  "_key": "!actors!uwn1aCjai8ibGTDF"
+}

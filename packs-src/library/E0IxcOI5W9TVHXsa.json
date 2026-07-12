@@ -1,0 +1,31 @@
+{
+  "_id": "E0IxcOI5W9TVHXsa",
+  "name": "Military & Law Enforcement",
+  "type": "knowledge",
+  "system": {
+    "summary": "",
+    "description": "Police procedures, security design, standard operating equipment",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "Military & Law Enforcement",
+        "srxId": 10012,
+        "type": "Knowledge Domain",
+        "type2": null,
+        "description": "Police procedures, security design, standard operating equipment",
+        "freePool": null,
+        "slug": "military-law-enforcement"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!E0IxcOI5W9TVHXsa"
+}

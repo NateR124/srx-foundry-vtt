@@ -1,0 +1,55 @@
+{
+  "_id": "3JAODVhzl6rxUag6",
+  "name": "Renraku Tsurugi Cyberdeck",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Cyberdecks",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 175000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Renraku Tsurugi Cyberdeck",
+        "srxId": 6028,
+        "category": "Matrix Devices",
+        "subcategory": "Cyberdecks",
+        "cost": 175000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Cyberdecks",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": 3,
+        "matrix": {
+          "dataProcessing": "2",
+          "firewall": "6",
+          "hotSimFirewall": "3",
+          "hackingTests": "2",
+          "agents": "4",
+          "rank": "25",
+          "modCapacity": "4"
+        },
+        "installedEnhancements": [],
+        "slug": "renraku-tsurugi-cyberdeck"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!3JAODVhzl6rxUag6"
+}

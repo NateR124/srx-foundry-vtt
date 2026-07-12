@@ -1,0 +1,36 @@
+{
+  "_id": "4XhD1wZkRjT6qwnL",
+  "name": "Damper",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Audio Enhancement",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear-enhancement",
+      "catalogData": {
+        "name": "Damper",
+        "srxId": 7002,
+        "cost": 2000,
+        "properties": [],
+        "options": [],
+        "enhancementType": 1,
+        "type": "Audio Enhancement",
+        "description": null,
+        "slug": "damper"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CfAYFTllX77UHdGc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!4XhD1wZkRjT6qwnL"
+}

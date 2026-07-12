@@ -1,0 +1,61 @@
+{
+  "_id": "BtHfPVWMmEFCEGzC",
+  "name": "Acid Stream",
+  "type": "spell",
+  "system": {
+    "summary": "Combat",
+    "description": "Ranged attack - Acc 0, DV (F+6)P Acid",
+    "category": "combat",
+    "pattern": "direct",
+    "duration": "instantaneous",
+    "range": "10/20/50m",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+6",
+    "dvType": "P",
+    "element": "acid",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Combat"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Acid Stream",
+        "srxId": 1501,
+        "category": "Combat",
+        "description": "Ranged attack - Acc 0, DV (F+6)P Acid",
+        "range": {
+          "raw": "10/20/50m",
+          "bands": [
+            10,
+            20,
+            50
+          ]
+        },
+        "duration": "Instantaneous",
+        "resistance": null,
+        "attack": {
+          "type": "Ranged",
+          "accuracy": 0,
+          "dv": {
+            "raw": "(F+6)",
+            "force": true,
+            "mod": 6,
+            "type": "P",
+            "element": "Acid"
+          }
+        },
+        "slug": "acid-stream"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "zZc1PdtmOVQowgGq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!BtHfPVWMmEFCEGzC"
+}

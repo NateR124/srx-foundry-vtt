@@ -1,0 +1,45 @@
+{
+  "_id": "N9cr3TvTpmoon9YZ",
+  "name": "Jailbreak",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Cyberdeck Mod",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 16000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear-enhancement",
+      "catalogData": {
+        "name": "Jailbreak",
+        "srxId": 7016,
+        "cost": 16000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [
+          "Alarms & Doors",
+          "Communications & Surveillance",
+          "Drones & Vehicles",
+          "Files & Databases",
+          "Personal & Industrial Equipment",
+          "Weapons & Cyberware"
+        ],
+        "enhancementType": 3,
+        "type": "Cyberdeck Mod",
+        "description": null,
+        "slug": "jailbreak"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CfAYFTllX77UHdGc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!N9cr3TvTpmoon9YZ"
+}

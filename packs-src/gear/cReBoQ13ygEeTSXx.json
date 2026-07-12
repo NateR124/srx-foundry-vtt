@@ -1,0 +1,73 @@
+{
+  "_id": "cReBoQ13ygEeTSXx",
+  "name": "Mnemonic Enhancer",
+  "type": "gear",
+  "system": {
+    "summary": "Headware",
+    "description": "Knowledgeable Talent; +Rating to Biotech, Engineering, Outdoors, Software",
+    "subtype": "ware",
+    "rating": 3,
+    "quantity": 1,
+    "cost": 24000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Mnemonic Enhancer",
+        "srxId": 3036,
+        "category": "Headware",
+        "cost": 24000,
+        "costDisplay": "Rating x 24,000",
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Mnemonic Enhancer",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": 3,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "Rating x 0.2",
+          "value": 0.2,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [],
+        "grants": [
+          "Knowledgeable"
+        ],
+        "description": "Knowledgeable Talent; +Rating to Biotech, Engineering, Outdoors, Software",
+        "effects": [
+          {
+            "key": "biotech",
+            "value": 1
+          },
+          {
+            "key": "engineering",
+            "value": 1
+          },
+          {
+            "key": "outdoors",
+            "value": 1
+          },
+          {
+            "key": "software",
+            "value": 1
+          }
+        ],
+        "slug": "mnemonic-enhancer"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!cReBoQ13ygEeTSXx"
+}

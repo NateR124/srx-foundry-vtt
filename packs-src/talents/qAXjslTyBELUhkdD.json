@@ -1,0 +1,65 @@
+{
+  "_id": "qAXjslTyBELUhkdD",
+  "name": "Edge: Bypass Protections",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Fading",
+    "description": "Gain Data Spike Hacking Talent. Use it on a persona not in hot-sim.",
+    "category": "threading",
+    "subgroup": "Fading",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": true
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Edge: Bypass Protections",
+        "srxId": 299,
+        "category": "Threading",
+        "subcategory": "Fading",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Fading",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": "TRUE",
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [
+          "Data Spike"
+        ],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Gain Data Spike Hacking Talent. Use it on a persona not in hot-sim.",
+        "effects": [],
+        "slug": "edge-bypass-protections"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!qAXjslTyBELUhkdD"
+}

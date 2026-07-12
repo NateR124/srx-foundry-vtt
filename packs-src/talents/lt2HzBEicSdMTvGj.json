@@ -1,0 +1,65 @@
+{
+  "_id": "lt2HzBEicSdMTvGj",
+  "name": "Artistic Virtuoso",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "Leverage when using Performance specialization",
+    "category": "general",
+    "subgroup": "",
+    "karma": 3,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Artistic Virtuoso",
+        "srxId": 6,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Performance Specialization in Con or Influence",
+        "prereq": {
+          "kind": "special",
+          "value": "Performance Specialization in Con or Influence"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "Leverage when using Performance specialization",
+        "effects": [],
+        "slug": "artistic-virtuoso"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!lt2HzBEicSdMTvGj"
+}

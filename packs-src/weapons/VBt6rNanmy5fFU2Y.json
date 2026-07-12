@@ -1,0 +1,39 @@
+{
+  "_id": "VBt6rNanmy5fFU2Y",
+  "name": "Shock Pad",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 100
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon-mod",
+      "catalogData": {
+        "name": "Shock Pad",
+        "srxId": 5514,
+        "cost": 100,
+        "properties": [],
+        "type": "Modification",
+        "mounts": [
+          3
+        ],
+        "allMountsRequired": false,
+        "noMount": false,
+        "requiresMod": null,
+        "slug": "shock-pad"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "rHfaFyA9uk37DvRq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!VBt6rNanmy5fFU2Y"
+}

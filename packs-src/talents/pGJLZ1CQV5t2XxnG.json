@@ -1,0 +1,77 @@
+{
+  "_id": "pGJLZ1CQV5t2XxnG",
+  "name": "Spiritual Alchemist",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism / Artificing",
+    "description": "Use Alchemy talent with spirit powers",
+    "category": "mysticism",
+    "subgroup": "Artificing",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Spiritual Alchemist",
+        "srxId": 479,
+        "category": "Mysticism",
+        "subcategory": "Artificing",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Artificing",
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Alchemy (Mysticism Talent), Summon Spirit (Conjuring Talent)",
+        "prereq": {
+          "op": "and",
+          "terms": [
+            {
+              "kind": "talent",
+              "name": "Alchemy",
+              "categoryHint": "Mysticism Talent"
+            },
+            {
+              "kind": "talent",
+              "name": "Summon Spirit",
+              "categoryHint": "Conjuring Talent"
+            }
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Use Alchemy talent with spirit powers",
+        "effects": [],
+        "slug": "spiritual-alchemist"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!pGJLZ1CQV5t2XxnG"
+}

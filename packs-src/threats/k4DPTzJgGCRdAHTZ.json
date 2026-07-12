@@ -1,0 +1,82 @@
+{
+  "_id": "k4DPTzJgGCRdAHTZ",
+  "name": "GANG LEADER",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 3,
+      "bonus": 4
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 15,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 11,
+        "dv": 3,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Short Sword",
+        "pool": 14,
+        "dv": 5,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Predator V",
+        "pool": 14,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Colt Cobra TZ-120 Major (SA) 14 8P",
+        "pool": 14,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Colt Cobra TZ-120 Major (SA) 14 8P",
+        "pool": 13,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Find the Weak Spot</strong>: If the gang leader gets 3 or more net hits on an attack test against a target, the target gains the Impaired status.</li><li><strong>Pile On</strong>: If the gang leader hits a target with an attack, the next ganger (including the gang leader) that attacks that target before the end of the gang leader’s next Action Phase gains Leverage on their attack. CRIMSON CRUSH GANGER</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The gang leader does not suffer</li><li><strong>recoil penalties.</strong>: </li><li><strong>Determined</strong>: If the gang leader is under an effect that</li><li><strong>they roll at the end of their Action Phase to end, they</strong>: </li><li><strong>instead roll at the start of their Action Phase.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "gang-leader"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "GANG LEADER"
+  },
+  "_key": "!actors!k4DPTzJgGCRdAHTZ"
+}

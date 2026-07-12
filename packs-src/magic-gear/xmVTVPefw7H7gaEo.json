@@ -1,0 +1,137 @@
+{
+  "_id": "xmVTVPefw7H7gaEo",
+  "name": "Mischief",
+  "type": "gear",
+  "system": {
+    "summary": "Trickster",
+    "description": "",
+    "subtype": "anima",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "anima",
+      "catalogData": {
+        "name": "Mischief",
+        "srxId": 2519,
+        "category": "Trickster",
+        "kind": "spirit",
+        "animalTotem": "Coyote",
+        "spellType": null,
+        "stats": {
+          "quickness": 2,
+          "health": 12,
+          "armor": 4,
+          "defenseScore": 4
+        },
+        "properties": [
+          "Physical Resistance",
+          "Unphased (can't gain Frightened or Wounded status)"
+        ],
+        "skills": [
+          "Close Combat",
+          "Mysticism",
+          "Sorcery",
+          "Stealth"
+        ],
+        "spellAttack": null,
+        "powers": [
+          {
+            "name": "Accident",
+            "raw": "Accident (Complex Action, Sustained): Target has Liability on next Agility test and glitches on 1, 2, or 3. Power doesn't break Invisibility. Resist: WIL+AGI",
+            "action": "Complex Action",
+            "sustained": true,
+            "duration": "Sustained",
+            "resist": "WIL+AGI",
+            "text": "Target has Liability on next Agility test and glitches on 1, 2, or 3. Power doesn't break Invisibility. Resist: WIL+AGI"
+          },
+          {
+            "name": "Animal Form",
+            "raw": "Animal Form (Major Action, Sustained): Change into animal totem. Retain stats, but can't use attacks/powers.",
+            "action": "Major Action",
+            "sustained": true,
+            "duration": "Sustained",
+            "resist": null,
+            "text": "Change into animal totem. Retain stats, but can't use attacks/powers."
+          },
+          {
+            "name": "Cloak",
+            "raw": "Cloak (Major Action, Sustained): Cast Invisibility on object up to (Force/2)m in size",
+            "action": "Major Action",
+            "sustained": true,
+            "duration": "Sustained",
+            "resist": null,
+            "text": "Cast Invisibility on object up to (Force/2)m in size"
+          },
+          {
+            "name": "Giggles",
+            "raw": "Giggles (Complex Action): Cast Influence at Force, but can only make target laugh for 1 Action Phase (Liability on Agility and Drain tests). Power doesn't break Invisibility.",
+            "action": "Complex Action",
+            "sustained": false,
+            "duration": null,
+            "resist": null,
+            "text": "Cast Influence at Force, but can only make target laugh for 1 Action Phase (Liability on Agility and Drain tests). Power doesn't break Invisibility."
+          },
+          {
+            "name": "Hide and Seek",
+            "raw": "Hide and Seek (Major Action): Cast Invisibility on self at Force. Doesn't count towards limit of 1 sustained power.",
+            "action": "Major Action",
+            "sustained": false,
+            "duration": null,
+            "resist": null,
+            "text": "Cast Invisibility on self at Force. Doesn't count towards limit of 1 sustained power."
+          },
+          {
+            "name": "Primary Spell",
+            "raw": "Primary Spell (Complex Action, Sustained): Cast Control Actions or Poltergeist at Force",
+            "action": "Complex Action",
+            "sustained": true,
+            "duration": "Sustained",
+            "resist": null,
+            "text": "Cast Control Actions or Poltergeist at Force"
+          }
+        ],
+        "harmonizedSpell": null,
+        "attack": {
+          "name": "Fist",
+          "type": "Melee",
+          "skill": "Close Combat",
+          "action": "Major",
+          "accuracy": 1,
+          "dv": {
+            "raw": "6",
+            "value": 6,
+            "type": "P/S",
+            "element": null
+          }
+        },
+        "evolvedSkill": null,
+        "evolvedPowers": [],
+        "elementalFormulaePower": null,
+        "greatFormPowers": [
+          {
+            "name": "Sow Chaos",
+            "raw": "Sow Chaos (No Action): Cast Chaos at Force without using action 1/Action Phase",
+            "action": "No Action",
+            "sustained": false,
+            "duration": null,
+            "resist": null,
+            "text": "Cast Chaos at Force without using action 1/Action Phase"
+          }
+        ],
+        "greatFormSpellAttack": null,
+        "greatFormAttack": null,
+        "slug": "mischief"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "KLZmxSXG65k8ddMa",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xmVTVPefw7H7gaEo"
+}

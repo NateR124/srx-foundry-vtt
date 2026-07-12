@@ -1,0 +1,31 @@
+{
+  "_id": "kCONDLMXwhE6Wytc",
+  "name": "Politics",
+  "type": "knowledge",
+  "system": {
+    "summary": "",
+    "description": "Current political figures, lobbyists, political systems, economics",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "Politics",
+        "srxId": 10013,
+        "type": "Knowledge Domain",
+        "type2": null,
+        "description": "Current political figures, lobbyists, political systems, economics",
+        "freePool": null,
+        "slug": "politics"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!kCONDLMXwhE6Wytc"
+}

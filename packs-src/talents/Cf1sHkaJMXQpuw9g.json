@@ -1,0 +1,67 @@
+{
+  "_id": "Cf1sHkaJMXQpuw9g",
+  "name": "Data Bomb",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / Files & Databases",
+    "description": "Set data bomb on file - 7P/S + net hits damage and Killjoy program to anyone that tries to access it",
+    "category": "hacking",
+    "subgroup": "Files & Databases",
+    "karma": 3,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Data Bomb",
+        "srxId": 219,
+        "category": "Hacking",
+        "subcategory": "Files & Databases",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Files & Databases",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "Yes",
+        "prereqRaw": "Hack Access (Hacking Talent)",
+        "prereq": {
+          "kind": "talent",
+          "name": "Hack Access",
+          "categoryHint": "Hacking Talent"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "Set data bomb on file - 7P/S + net hits damage and Killjoy program to anyone that tries to access it",
+        "effects": [],
+        "slug": "data-bomb"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Cf1sHkaJMXQpuw9g"
+}

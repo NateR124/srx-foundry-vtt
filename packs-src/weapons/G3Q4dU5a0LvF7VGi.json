@@ -1,0 +1,123 @@
+{
+  "_id": "G3Q4dU5a0LvF7VGi",
+  "name": "Remington Roomsweeper",
+  "type": "weapon",
+  "system": {
+    "summary": "Shotguns",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "Shotguns",
+    "category": "Shotguns",
+    "range": "20/50/100m (Slug), 20m (Shot Round)",
+    "properties": "Two-Handed",
+    "cost": 2600,
+    "attackModes": [
+      {
+        "name": "Ranged",
+        "action": "major",
+        "fireMode": "SS",
+        "acc": 0,
+        "dv": "10",
+        "dvType": "P",
+        "element": ""
+      },
+      {
+        "name": "AOE",
+        "action": "major",
+        "fireMode": "SS",
+        "acc": 0,
+        "dv": "5",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Remington Roomsweeper",
+        "srxId": 4603,
+        "category": "Shotguns",
+        "cost": 2600,
+        "properties": [
+          "Two-Handed"
+        ],
+        "options": [],
+        "type": "Firearms",
+        "type2": "Shotguns",
+        "type3": null,
+        "skill": "Firearms",
+        "specialization": "Shotguns",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "20/50/100m (Slug), 20m (Shot Round)"
+        },
+        "improvedRange": {
+          "raw": "20/50/150m (Slug), 20m (Shot Round)"
+        },
+        "canMod": true,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 1,
+          "top": 1,
+          "underbarrel": 1,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 1
+        },
+        "installedMods": [
+          {
+            "name": "Sawed-off",
+            "modSlug": "sawed-off",
+            "mounts": [
+              8
+            ]
+          }
+        ],
+        "attackModes": [
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": "SS",
+            "accuracy": 0,
+            "dv": {
+              "raw": "10",
+              "value": 10,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "attackType": "AOE",
+            "action": "Major",
+            "fireMode": "SS",
+            "accuracy": null,
+            "dv": {
+              "raw": "5",
+              "value": 5,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "remington-roomsweeper"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pnCkLYUVA54VbxcZ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!G3Q4dU5a0LvF7VGi"
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "hwk8q0EgJkYaSW4L",
+  "name": "Bookie",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Knows about sports and media, and has relationships with criminal organizations",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Bookie",
+        "srxId": 10006,
+        "type": "Contact",
+        "type2": null,
+        "description": "Knows about sports and media, and has relationships with criminal organizations",
+        "slug": "bookie"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!hwk8q0EgJkYaSW4L"
+}

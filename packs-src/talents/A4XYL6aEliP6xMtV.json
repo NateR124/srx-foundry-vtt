@@ -1,0 +1,65 @@
+{
+  "_id": "A4XYL6aEliP6xMtV",
+  "name": "Split Mind",
+  "type": "talent",
+  "system": {
+    "summary": "Channeling / Yin",
+    "description": "Gain Ambidextrous General Talent. Gang Up action does not work on you. Can purchase certain Weapons Talents.",
+    "category": "channeling",
+    "subgroup": "Yin",
+    "karma": 9,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Split Mind",
+        "srxId": 533,
+        "category": "Channeling",
+        "subcategory": "Yin",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Yin",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [
+          "Ambidextrous"
+        ],
+        "cost": {
+          "karma": 9
+        },
+        "description": "Gain Ambidextrous General Talent. Gang Up action does not work on you. Can purchase certain Weapons Talents.",
+        "effects": [],
+        "slug": "split-mind"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!A4XYL6aEliP6xMtV"
+}

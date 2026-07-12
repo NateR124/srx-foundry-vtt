@@ -1,0 +1,36 @@
+{
+  "_id": "q4roniABN1LNaJVs",
+  "name": "Ultrasound",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Audio Enhancement",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 9000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear-enhancement",
+      "catalogData": {
+        "name": "Ultrasound",
+        "srxId": 7003,
+        "cost": 9000,
+        "properties": [],
+        "options": [],
+        "enhancementType": 1,
+        "type": "Audio Enhancement",
+        "description": null,
+        "slug": "ultrasound"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CfAYFTllX77UHdGc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!q4roniABN1LNaJVs"
+}

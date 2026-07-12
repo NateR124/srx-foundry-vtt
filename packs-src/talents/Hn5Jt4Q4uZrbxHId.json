@@ -1,0 +1,89 @@
+{
+  "_id": "Hn5Jt4Q4uZrbxHId",
+  "name": "Knack",
+  "type": "talent",
+  "system": {
+    "summary": "Metatype",
+    "description": "If Crit Dice are same (excl 1’s), gain 1 hit with chosen skill",
+    "category": "metatype",
+    "subgroup": "",
+    "karma": 4,
+    "option": "Athletics, Biotech, Channeling, Close Combat, Con, Conjuring, Driving, Engineering, Firearms, Hacking, Influence, Insight, Mysticism, Outdoors, Perception, Piloting, Projectile Weapons, Software, Sorcery, Stealth, Threading",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Knack",
+        "srxId": 98,
+        "category": "Metatype",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Athletics",
+          "Biotech",
+          "Channeling",
+          "Close Combat",
+          "Con",
+          "Conjuring",
+          "Driving",
+          "Engineering",
+          "Firearms",
+          "Hacking",
+          "Influence",
+          "Insight",
+          "Mysticism",
+          "Outdoors",
+          "Perception",
+          "Piloting",
+          "Projectile Weapons",
+          "Software",
+          "Sorcery",
+          "Stealth",
+          "Threading"
+        ],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Metatype Human",
+        "prereq": {
+          "kind": "metatype",
+          "values": [
+            "Human"
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "If Crit Dice are same (excl 1’s), gain 1 hit with chosen skill",
+        "effects": [],
+        "slug": "knack"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Hn5Jt4Q4uZrbxHId"
+}

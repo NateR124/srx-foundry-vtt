@@ -1,0 +1,47 @@
+{
+  "_id": "Ojx3PFy0xC0zpIhO",
+  "name": "Strengthen",
+  "type": "spell",
+  "system": {
+    "summary": "Health",
+    "description": "Target gains +2 augmentation bonus to tests with chosen physical attribute",
+    "category": "health",
+    "pattern": "touch",
+    "duration": "sustained",
+    "range": "Touch",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Health"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Strengthen",
+        "srxId": 1570,
+        "category": "Health",
+        "description": "Target gains +2 augmentation bonus to tests with chosen physical attribute",
+        "range": {
+          "raw": "Touch",
+          "special": "Touch"
+        },
+        "duration": "Sustained",
+        "resistance": null,
+        "attack": null,
+        "slug": "strengthen"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "81q0dM8ktqbFvvhu",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Ojx3PFy0xC0zpIhO"
+}

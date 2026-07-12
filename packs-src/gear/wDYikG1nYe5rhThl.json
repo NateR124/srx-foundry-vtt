@@ -1,0 +1,77 @@
+{
+  "_id": "wDYikG1nYe5rhThl",
+  "name": "Mounted Heavy Machine Gun",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Mounted Weapon",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 28000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Mounted Heavy Machine Gun",
+        "srxId": 8526,
+        "cost": 28000,
+        "properties": [
+          "Heavy Mount",
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Mounted Weapon",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": true,
+        "isExoticWeapon": false,
+        "nuyenMultiplier": null,
+        "requiresMount": true,
+        "requiresHeavyMount": true,
+        "prereq": null,
+        "attackSkill": "Firearms",
+        "attackSpecialization": "Machine Guns",
+        "attacks": [
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": "BF",
+            "accuracy": 0,
+            "dv": {
+              "raw": "14",
+              "value": 14,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": "FA",
+            "accuracy": -1,
+            "dv": {
+              "raw": "15",
+              "value": 15,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "mounted-heavy-machine-gun"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!wDYikG1nYe5rhThl"
+}

@@ -1,0 +1,68 @@
+{
+  "_id": "CnzraghJC9l1sDzt",
+  "name": "Vehicle Skill Mastery",
+  "type": "talent",
+  "system": {
+    "summary": "Vehicle",
+    "description": "Gain access to Skill Mastery talents for chosen skill",
+    "category": "vehicle",
+    "subgroup": "",
+    "karma": 0,
+    "option": "Driving, Engineering, Piloting",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Vehicle Skill Mastery",
+        "srxId": 385,
+        "category": "Vehicle",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Driving",
+          "Engineering",
+          "Piloting"
+        ],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": "TRUE",
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [
+          "Skill Mastery"
+        ],
+        "cost": {
+          "karma": 0
+        },
+        "description": "Gain access to Skill Mastery talents for chosen skill",
+        "effects": [],
+        "slug": "vehicle-skill-mastery"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!CnzraghJC9l1sDzt"
+}

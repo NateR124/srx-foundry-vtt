@@ -1,0 +1,63 @@
+{
+  "_id": "2ui5HTSqDl70UpwU",
+  "name": "Steel Endurance",
+  "type": "talent",
+  "system": {
+    "summary": "Channeling / Qi",
+    "description": "Leverage on resistance test",
+    "category": "channeling",
+    "subgroup": "Qi",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Steel Endurance",
+        "srxId": 535,
+        "category": "Channeling",
+        "subcategory": "Qi",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Qi",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": "TRUE",
+        "action": null,
+        "range": "Self",
+        "duration": "Instantaneous",
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Leverage on resistance test",
+        "effects": [],
+        "slug": "steel-endurance"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!2ui5HTSqDl70UpwU"
+}

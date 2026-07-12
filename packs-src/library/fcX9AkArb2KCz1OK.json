@@ -1,0 +1,35 @@
+{
+  "_id": "fcX9AkArb2KCz1OK",
+  "name": "Custom",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "archetype",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "archetype",
+      "catalogData": {
+        "name": "Custom",
+        "srxId": 11001,
+        "noFlare": true,
+        "isCustom": true,
+        "isDossierGroup": false,
+        "parent": null,
+        "flares": [],
+        "slug": "custom"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "82fke5ZPHOqEvVwG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!fcX9AkArb2KCz1OK"
+}

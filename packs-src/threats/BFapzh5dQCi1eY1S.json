@@ -1,0 +1,58 @@
+{
+  "_id": "BFapzh5dQCi1eY1S",
+  "name": "MELDED BEAR",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 3,
+      "bonus": 3
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 18
+    },
+    "armor": 21,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Bite",
+        "pool": 15,
+        "dv": 12,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Claw (Reach: 2m)",
+        "pool": 17,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Bear Hug</strong>: If the melded bear hits a target with a melee attack, it immediately makes a subdual test: Body + Athletics opposed by the target’s (Body or Agility) + Athletics. If the melded bear wins, the target gains the Grabbed status. The melded bear can only grab 1 target at a time. The target can spend a Major Action to repeat the subdual test. If the target wins, they are no longer Grabbed.</li><li><strong>Camouflage</strong>: Sitting still in one spot for 10 minutes, a melded bear can camouflage itself to become effectively invisible on both the physical and astral planes. Observers make an Intuition + Perception test opposed by the bear’s Agility + Stealth test. If they win this test, they notice the melded bear. This effect ends when the bear takes an action.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Low-Light</li></ul>",
+    "tags": [
+      "critter"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "melded-bear"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "q9e964oWjMmRYuNH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "MELDED BEAR"
+  },
+  "_key": "!actors!BFapzh5dQCi1eY1S"
+}

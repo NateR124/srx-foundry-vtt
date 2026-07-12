@@ -1,0 +1,61 @@
+{
+  "_id": "cIU02LPUKSR6vOoa",
+  "name": "Punch",
+  "type": "spell",
+  "system": {
+    "summary": "Combat",
+    "description": "Ranged attack - Acc 3, DV (F+4)P/S",
+    "category": "combat",
+    "pattern": "direct",
+    "duration": "instantaneous",
+    "range": "10/20/50m",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+4",
+    "dvType": "P/S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Combat"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Punch",
+        "srxId": 1560,
+        "category": "Combat",
+        "description": "Ranged attack - Acc 3, DV (F+4)P/S",
+        "range": {
+          "raw": "10/20/50m",
+          "bands": [
+            10,
+            20,
+            50
+          ]
+        },
+        "duration": "Instantaneous",
+        "resistance": null,
+        "attack": {
+          "type": "Ranged",
+          "accuracy": 3,
+          "dv": {
+            "raw": "(F+4)",
+            "force": true,
+            "mod": 4,
+            "type": "P/S",
+            "element": null
+          }
+        },
+        "slug": "punch"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "zZc1PdtmOVQowgGq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!cIU02LPUKSR6vOoa"
+}

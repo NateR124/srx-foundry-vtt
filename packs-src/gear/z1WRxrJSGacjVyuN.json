@@ -1,0 +1,106 @@
+{
+  "_id": "z1WRxrJSGacjVyuN",
+  "name": "EADS Barrakuda",
+  "type": "gear",
+  "system": {
+    "summary": "Drones (Aquatic)",
+    "description": "",
+    "subtype": "Drones (Aquatic)",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 24000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "EADS Barrakuda",
+        "srxId": 7607,
+        "category": "Drones (Aquatic)",
+        "cost": 24000,
+        "properties": [],
+        "options": [],
+        "type": "Drones (Aquatic)",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 2,
+          "speed": 3,
+          "body": 8,
+          "armor": 10,
+          "health": 14,
+          "defenseScoreMod": null,
+          "autoRating": 3,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Firearms,Perception,Stealth",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Advanced Sensor Array",
+            "value": "1"
+          },
+          {
+            "name": "Smartlink (Vehicle)",
+            "value": "Built-In"
+          }
+        ],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "R",
+              "heavy": false
+            },
+            "builtIn": {
+              "weapon": "Mounted Assault Rifle",
+              "orientation": "R",
+              "retractable": false,
+              "superior": false
+            }
+          },
+          {
+            "index": 2,
+            "mount": {
+              "orientation": "F",
+              "heavy": false
+            },
+            "builtIn": null
+          }
+        ],
+        "slug": "eads-barrakuda"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!z1WRxrJSGacjVyuN"
+}

@@ -1,0 +1,62 @@
+{
+  "_id": "taBgMOpRiekYuyOy",
+  "name": "Mounted Missile Launcher",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Mounted Weapon",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 35000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Mounted Missile Launcher",
+        "srxId": 8530,
+        "cost": 35000,
+        "properties": [
+          "Heavy Mount",
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Mounted Weapon",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": true,
+        "isExoticWeapon": false,
+        "nuyenMultiplier": null,
+        "requiresMount": true,
+        "requiresHeavyMount": true,
+        "prereq": null,
+        "attackSkill": "Firearms",
+        "attackSpecialization": "Launchers",
+        "attacks": [
+          {
+            "attackType": "Ranged AOE",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": 0,
+            "dv": {
+              "raw": "As Ammo",
+              "type": null,
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "mounted-missile-launcher"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!taBgMOpRiekYuyOy"
+}

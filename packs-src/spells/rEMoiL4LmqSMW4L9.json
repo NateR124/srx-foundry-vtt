@@ -1,0 +1,47 @@
+{
+  "_id": "rEMoiL4LmqSMW4L9",
+  "name": "Disguise",
+  "type": "spell",
+  "system": {
+    "summary": "Illusion",
+    "description": "Change target's appearance",
+    "category": "illusion",
+    "pattern": "touch",
+    "duration": "sustained",
+    "range": "Touch",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Illusion"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Disguise",
+        "srxId": 1524,
+        "category": "Illusion",
+        "description": "Change target's appearance",
+        "range": {
+          "raw": "Touch",
+          "special": "Touch"
+        },
+        "duration": "Sustained",
+        "resistance": "WIL+INT",
+        "attack": null,
+        "slug": "disguise"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "dqlrlbNPd7IOtFU1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!rEMoiL4LmqSMW4L9"
+}

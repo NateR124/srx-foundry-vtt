@@ -1,0 +1,38 @@
+{
+  "_id": "yynG7PrtrCZ2PZuk",
+  "name": "Thermographic",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 750
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon-mod",
+      "catalogData": {
+        "name": "Thermographic",
+        "srxId": 5510,
+        "cost": 750,
+        "properties": [],
+        "type": "Modification",
+        "mounts": [],
+        "allMountsRequired": false,
+        "noMount": true,
+        "requiresMod": "Imaging Scope",
+        "slug": "thermographic",
+        "variantOf": "imaging-scope"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "rHfaFyA9uk37DvRq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!yynG7PrtrCZ2PZuk"
+}

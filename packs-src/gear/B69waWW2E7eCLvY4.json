@@ -1,0 +1,80 @@
+{
+  "_id": "B69waWW2E7eCLvY4",
+  "name": "Yamaha Growler",
+  "type": "gear",
+  "system": {
+    "summary": "Motorbikes",
+    "description": "",
+    "subtype": "Motorbikes",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 3500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Yamaha Growler",
+        "srxId": 7516,
+        "category": "Motorbikes",
+        "cost": 3500,
+        "properties": [],
+        "options": [],
+        "type": "Motorbikes",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 3,
+          "speed": 4,
+          "body": 6,
+          "armor": 8,
+          "health": 14,
+          "defenseScoreMod": null,
+          "autoRating": 2,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Perception",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Handling Enhancement",
+            "value": "Built-In"
+          }
+        ],
+        "mounts": [],
+        "slug": "yamaha-growler"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!B69waWW2E7eCLvY4"
+}

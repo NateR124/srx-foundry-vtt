@@ -1,0 +1,84 @@
+{
+  "_id": "78in2vv1ZujdcB6u",
+  "name": "Proteus Lamprey",
+  "type": "gear",
+  "system": {
+    "summary": "Submersibles",
+    "description": "",
+    "subtype": "Submersibles",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 33000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Proteus Lamprey",
+        "srxId": 7569,
+        "category": "Submersibles",
+        "cost": 33000,
+        "properties": [],
+        "options": [],
+        "type": "Submersibles",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 1,
+          "speed": 1,
+          "body": 12,
+          "armor": 8,
+          "health": 18,
+          "defenseScoreMod": null,
+          "autoRating": 2,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Perception",
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "R",
+              "heavy": false
+            },
+            "builtIn": null
+          }
+        ],
+        "slug": "proteus-lamprey"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!78in2vv1ZujdcB6u"
+}

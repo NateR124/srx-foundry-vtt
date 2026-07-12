@@ -1,0 +1,63 @@
+{
+  "_id": "reUL9MfLMnWbDUJP",
+  "name": "Nerve Strike",
+  "type": "talent",
+  "system": {
+    "summary": "Channeling / Yang",
+    "description": "Unarmed attack can cause Dazed status",
+    "category": "channeling",
+    "subgroup": "Yang",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Nerve Strike",
+        "srxId": 520,
+        "category": "Channeling",
+        "subcategory": "Yang",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Yang",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": "TRUE",
+        "action": null,
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "resistance": "WIL+BOD",
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Unarmed attack can cause Dazed status",
+        "effects": [],
+        "slug": "nerve-strike"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!reUL9MfLMnWbDUJP"
+}

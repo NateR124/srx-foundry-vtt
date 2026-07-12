@@ -1,0 +1,50 @@
+{
+  "_id": "0MPN07ou1yB1Zf9T",
+  "name": "DEVIL RAT",
+  "type": "threat",
+  "system": {
+    "threatRating": 1,
+    "initiative": {
+      "dice": 1,
+      "bonus": 3
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 4
+    },
+    "armor": 5,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Bite",
+        "pool": 10,
+        "dv": 2,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Rat Master</strong>: Using a Complex Action, the devil rat can telepathically control the behavior of up to 30 rats within 100m of it, directing them to take whatever actions it wishes. This power is a magical effect with a Force equal to the devil rat’s</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Low-Light</li><li><strong>Devil rats are immune to toxins and diseases.</strong>: </li><li><strong>Aversion to Sunlight</strong>: While in natural sunlight, a</li><li><strong>devil rat suffers Liability on all tests.</strong>: </li></ul>",
+    "tags": [
+      "critter"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "devil-rat"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "q9e964oWjMmRYuNH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "DEVIL RAT"
+  },
+  "_key": "!actors!0MPN07ou1yB1Zf9T"
+}

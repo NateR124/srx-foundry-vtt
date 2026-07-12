@@ -1,0 +1,47 @@
+{
+  "_id": "PsECKdaGck1u8lvw",
+  "name": "Cure Disease",
+  "type": "spell",
+  "system": {
+    "summary": "Health",
+    "description": "Cleanse diseases from target",
+    "category": "health",
+    "pattern": "touch",
+    "duration": "instantaneous",
+    "range": "Touch",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Health"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Cure Disease",
+        "srxId": 1518,
+        "category": "Health",
+        "description": "Cleanse diseases from target",
+        "range": {
+          "raw": "Touch",
+          "special": "Touch"
+        },
+        "duration": "Instantaneous",
+        "resistance": null,
+        "attack": null,
+        "slug": "cure-disease"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "81q0dM8ktqbFvvhu",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!PsECKdaGck1u8lvw"
+}

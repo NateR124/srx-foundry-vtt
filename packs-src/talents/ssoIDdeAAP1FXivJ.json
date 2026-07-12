@@ -1,0 +1,65 @@
+{
+  "_id": "ssoIDdeAAP1FXivJ",
+  "name": "Hacked ID",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / Files & Databases",
+    "description": "Gain Fake ID General Talent with +3 rating. Can create (Hacking/4) rating fake SIN.",
+    "category": "hacking",
+    "subgroup": "Files & Databases",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Hacked ID",
+        "srxId": 235,
+        "category": "Hacking",
+        "subcategory": "Files & Databases",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Files & Databases",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [
+          "Fake ID"
+        ],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Gain Fake ID General Talent with +3 rating. Can create (Hacking/4) rating fake SIN.",
+        "effects": [],
+        "slug": "hacked-id"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ssoIDdeAAP1FXivJ"
+}

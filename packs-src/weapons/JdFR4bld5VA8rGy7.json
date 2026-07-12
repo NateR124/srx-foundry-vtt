@@ -1,0 +1,39 @@
+{
+  "_id": "JdFR4bld5VA8rGy7",
+  "name": "Imaging Scope",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 200
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon-mod",
+      "catalogData": {
+        "name": "Imaging Scope",
+        "srxId": 5507,
+        "cost": 200,
+        "properties": [],
+        "type": "Modification",
+        "mounts": [
+          4
+        ],
+        "allMountsRequired": false,
+        "noMount": false,
+        "requiresMod": null,
+        "slug": "imaging-scope"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "rHfaFyA9uk37DvRq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!JdFR4bld5VA8rGy7"
+}

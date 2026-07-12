@@ -1,0 +1,47 @@
+{
+  "_id": "pyl6MzeGgk8zQ8y7",
+  "name": "Enlighten",
+  "type": "spell",
+  "system": {
+    "summary": "Health",
+    "description": "Target gains +2 augmentation bonus to tests with chosen mental attribute",
+    "category": "health",
+    "pattern": "touch",
+    "duration": "sustained",
+    "range": "Touch",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Health"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Enlighten",
+        "srxId": 1527,
+        "category": "Health",
+        "description": "Target gains +2 augmentation bonus to tests with chosen mental attribute",
+        "range": {
+          "raw": "Touch",
+          "special": "Touch"
+        },
+        "duration": "Sustained",
+        "resistance": null,
+        "attack": null,
+        "slug": "enlighten"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "81q0dM8ktqbFvvhu",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!pyl6MzeGgk8zQ8y7"
+}

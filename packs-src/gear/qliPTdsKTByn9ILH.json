@@ -1,0 +1,45 @@
+{
+  "_id": "qliPTdsKTByn9ILH",
+  "name": "Flare Compensation",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Vision Enhancement",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 200
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Flare Compensation",
+        "srxId": 8514,
+        "cost": 200,
+        "properties": [],
+        "options": [],
+        "type": "Vision Enhancement",
+        "maxRating": null,
+        "isVisionEnhancement": true,
+        "isWeapon": false,
+        "isExoticWeapon": false,
+        "nuyenMultiplier": null,
+        "requiresMount": false,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": null,
+        "attackSpecialization": null,
+        "attacks": [],
+        "slug": "flare-compensation"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!qliPTdsKTByn9ILH"
+}

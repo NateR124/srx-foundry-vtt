@@ -1,0 +1,63 @@
+{
+  "_id": "03OoyeKoBXuww1pO",
+  "name": "Blade Throwing",
+  "type": "talent",
+  "system": {
+    "summary": "Weapons / PW (Throwing Knives, Shuriken)",
+    "description": "When using throwing knives/shuriken, double ranges and +1 to attacks",
+    "category": "weapons",
+    "subgroup": "PW (Throwing Knives, Shuriken)",
+    "karma": 6,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Blade Throwing",
+        "srxId": 113,
+        "category": "Weapons",
+        "subcategory": "PW (Throwing Knives, Shuriken)",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "PW (Throwing Knives, Shuriken)",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 6
+        },
+        "description": "When using throwing knives/shuriken, double ranges and +1 to attacks",
+        "effects": [],
+        "slug": "blade-throwing"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!03OoyeKoBXuww1pO"
+}

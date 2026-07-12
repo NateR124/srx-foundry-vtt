@@ -1,0 +1,67 @@
+{
+  "_id": "w62IszJ2YiEFqiNu",
+  "name": "Wired Reflexes",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "+Rating to Quickness",
+    "subtype": "ware",
+    "rating": 3,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Wired Reflexes",
+        "srxId": 3125,
+        "category": "Bodyware",
+        "cost": 0,
+        "costDisplay": "Per Rating: 24k/64k/134k",
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Wired Reflexes",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": 3,
+        "uniqueScale": 1,
+        "nuyenScale": [
+          24000,
+          64000,
+          134000
+        ],
+        "essence": {
+          "display": "Per Rating: 1/1.5/2.5",
+          "value": 0,
+          "scale": [
+            1,
+            1.5,
+            2.5
+          ]
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "+Rating to Quickness",
+        "effects": [
+          {
+            "key": "qui",
+            "value": 1
+          }
+        ],
+        "slug": "wired-reflexes"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!w62IszJ2YiEFqiNu"
+}

@@ -1,0 +1,52 @@
+{
+  "_id": "3NK4NMCLf9tYIi4m",
+  "name": "Voice Recognition Security System",
+  "type": "gear",
+  "system": {
+    "summary": "Security & Scanners",
+    "description": "",
+    "subtype": "Security & Scanners",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Voice Recognition Security System",
+        "srxId": 6115,
+        "category": "Security & Scanners",
+        "cost": 2000,
+        "properties": [],
+        "options": [],
+        "type": "Security & Scanners",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "voice-recognition-security-system"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!3NK4NMCLf9tYIi4m"
+}

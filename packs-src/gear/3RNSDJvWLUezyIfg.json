@@ -1,0 +1,61 @@
+{
+  "_id": "3RNSDJvWLUezyIfg",
+  "name": "Tetrodotoxin",
+  "type": "gear",
+  "system": {
+    "summary": "Toxins & Drugs / Toxins",
+    "description": "",
+    "subtype": "Toxin",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Tetrodotoxin",
+        "srxId": 6175,
+        "category": "Toxins & Drugs",
+        "subcategory": "Toxins",
+        "cost": 0,
+        "costDisplay": "Per Option: 4.5k/8k",
+        "properties": [
+          "Illegal"
+        ],
+        "options": [
+          "Refined"
+        ],
+        "type": "Toxin",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": 2,
+        "uniqueNuyenScale": [
+          4500,
+          8000
+        ],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "tetrodotoxin"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!3RNSDJvWLUezyIfg"
+}

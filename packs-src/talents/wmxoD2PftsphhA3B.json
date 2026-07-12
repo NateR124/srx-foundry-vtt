@@ -1,0 +1,68 @@
+{
+  "_id": "wmxoD2PftsphhA3B",
+  "name": "Social Skill Mastery",
+  "type": "talent",
+  "system": {
+    "summary": "Social",
+    "description": "Gain access to Skill Mastery talents for chosen skill",
+    "category": "social",
+    "subgroup": "",
+    "karma": 0,
+    "option": "Con, Influence, Insight",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Social Skill Mastery",
+        "srxId": 202,
+        "category": "Social",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Con",
+          "Influence",
+          "Insight"
+        ],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": "TRUE",
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [
+          "Skill Mastery"
+        ],
+        "cost": {
+          "karma": 0
+        },
+        "description": "Gain access to Skill Mastery talents for chosen skill",
+        "effects": [],
+        "slug": "social-skill-mastery"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!wmxoD2PftsphhA3B"
+}

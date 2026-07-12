@@ -1,0 +1,140 @@
+{
+  "_id": "sv7XKTKBAW6m9hig",
+  "name": "Ingram Smartgun X",
+  "type": "weapon",
+  "system": {
+    "summary": "Automatics / Submachine Guns",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "Submachine Guns",
+    "category": "Automatics",
+    "range": "20/50/100m",
+    "properties": "",
+    "cost": 6200,
+    "attackModes": [
+      {
+        "name": "Ranged",
+        "action": "major",
+        "fireMode": "BF",
+        "acc": -1,
+        "dv": "9",
+        "dvType": "P",
+        "element": ""
+      },
+      {
+        "name": "Ranged",
+        "action": "complex",
+        "fireMode": "FA",
+        "acc": -3,
+        "dv": "10",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Ingram Smartgun X",
+        "srxId": 4578,
+        "category": "Automatics",
+        "subcategory": "Submachine Guns",
+        "cost": 6200,
+        "properties": [],
+        "options": [],
+        "type": "Firearms",
+        "type2": "Automatics",
+        "type3": "Submachine Guns",
+        "skill": "Firearms",
+        "specialization": "Submachine Guns",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "20/50/100m",
+          "bands": [
+            20,
+            50,
+            100
+          ]
+        },
+        "improvedRange": {
+          "raw": "20/50/150m",
+          "bands": [
+            20,
+            50,
+            150
+          ]
+        },
+        "canMod": true,
+        "mounts": {
+          "barrel": 2,
+          "internal": 1,
+          "side": 0,
+          "stock": 0,
+          "top": 1,
+          "underbarrel": 0,
+          "foldingStock": 1,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [
+          {
+            "name": "Advanced Gas-vent",
+            "modSlug": "advanced-gas-vent",
+            "mounts": [
+              0,
+              1
+            ]
+          },
+          {
+            "name": "Silencer/Suppressor",
+            "modSlug": "silencer-suppressor",
+            "mounts": [
+              0
+            ]
+          }
+        ],
+        "attackModes": [
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": "BF",
+            "accuracy": -1,
+            "dv": {
+              "raw": "9",
+              "value": 9,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": "FA",
+            "accuracy": -3,
+            "dv": {
+              "raw": "10",
+              "value": 10,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "ingram-smartgun-x"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "q57iHsbHsOYA6BmX",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!sv7XKTKBAW6m9hig"
+}

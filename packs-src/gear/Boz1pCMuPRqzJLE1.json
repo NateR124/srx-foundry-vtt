@@ -1,0 +1,55 @@
+{
+  "_id": "Boz1pCMuPRqzJLE1",
+  "name": "Hermes Chariot Cyberdeck",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Cyberdecks",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 110000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Hermes Chariot Cyberdeck",
+        "srxId": 6024,
+        "category": "Matrix Devices",
+        "subcategory": "Cyberdecks",
+        "cost": 110000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Cyberdecks",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": 3,
+        "matrix": {
+          "dataProcessing": "1",
+          "firewall": "4",
+          "hotSimFirewall": "2",
+          "hackingTests": "2",
+          "agents": "2",
+          "rank": "21",
+          "modCapacity": "4"
+        },
+        "installedEnhancements": [],
+        "slug": "hermes-chariot-cyberdeck"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Boz1pCMuPRqzJLE1"
+}

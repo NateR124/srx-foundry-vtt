@@ -1,0 +1,51 @@
+{
+  "_id": "kqEynPWmRVUC4SAH",
+  "name": "Sorcery",
+  "type": "gear",
+  "system": {
+    "summary": "Foci",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Sorcery",
+        "srxId": 9038,
+        "category": "Foci",
+        "cost": 2000,
+        "costDisplay": "72,000",
+        "properties": [],
+        "options": [],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": "Sorcery",
+        "fixedRating": 6,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [
+          "Expertise: Sorcery"
+        ],
+        "alwaysUnique": true,
+        "slug": "sorcery"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!kqEynPWmRVUC4SAH"
+}

@@ -1,0 +1,66 @@
+{
+  "_id": "zxD6D63uogwcoYcj",
+  "name": "ELITE SECURITY MAGE",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 2,
+      "bonus": 4
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 15,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Knife",
+        "pool": 7,
+        "dv": 4,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Viper",
+        "pool": 10,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Frigid (Spell)",
+        "pool": 0,
+        "dv": 5,
+        "dvType": "P",
+        "element": "cold",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li></ul><h3>Formula DVs (evaluated at F = TR)</h3><ul><li><strong>Frigid (Spell)</strong>: (F+2)P Cold</li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "elite-security-mage"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "ELITE SECURITY MAGE"
+  },
+  "_key": "!actors!zxD6D63uogwcoYcj"
+}

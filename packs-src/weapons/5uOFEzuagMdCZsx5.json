@@ -1,0 +1,122 @@
+{
+  "_id": "5uOFEzuagMdCZsx5",
+  "name": "Cavalier Arms Crockett EBR",
+  "type": "weapon",
+  "system": {
+    "summary": "Sniper Rifles",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "Sniper Rifles",
+    "category": "Sniper Rifles",
+    "range": "50/100/1,000m",
+    "properties": "Two-Handed",
+    "cost": 5500,
+    "attackModes": [
+      {
+        "name": "Ranged",
+        "action": "major",
+        "fireMode": "SA",
+        "acc": 0,
+        "dv": "10",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Cavalier Arms Crockett EBR",
+        "srxId": 4595,
+        "category": "Sniper Rifles",
+        "cost": 5500,
+        "properties": [
+          "Two-Handed"
+        ],
+        "options": [],
+        "type": "Firearms",
+        "type2": "Sniper Rifles",
+        "type3": null,
+        "skill": "Firearms",
+        "specialization": "Sniper Rifles",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "50/100/1,000m",
+          "bands": [
+            50,
+            100,
+            1000
+          ]
+        },
+        "improvedRange": {
+          "raw": "50/100/1,500m",
+          "bands": [
+            50,
+            100,
+            1500
+          ]
+        },
+        "canMod": true,
+        "mounts": {
+          "barrel": 1,
+          "internal": 0,
+          "side": 1,
+          "stock": 1,
+          "top": 1,
+          "underbarrel": 1,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [
+          {
+            "name": "Imaging Scope",
+            "modSlug": "imaging-scope",
+            "mounts": [
+              4
+            ]
+          },
+          {
+            "name": "Vision Magnification",
+            "modSlug": "vision-magnification",
+            "mounts": "builtIn"
+          },
+          {
+            "name": "Silencer/Suppressor",
+            "modSlug": "silencer-suppressor",
+            "mounts": [
+              0
+            ]
+          }
+        ],
+        "attackModes": [
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": "SA",
+            "accuracy": 0,
+            "dv": {
+              "raw": "10",
+              "value": 10,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "cavalier-arms-crockett-ebr"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CmkjszDwd2SBy8Jk",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!5uOFEzuagMdCZsx5"
+}

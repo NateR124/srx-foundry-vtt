@@ -1,0 +1,63 @@
+{
+  "_id": "mTeTgbHaBCAiP1CW",
+  "name": "Read Resonance",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Fading",
+    "description": "+(Level) to Analyze Icon action. Can read Resonance signatures.",
+    "category": "threading",
+    "subgroup": "Fading",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Read Resonance",
+        "srxId": 321,
+        "category": "Threading",
+        "subcategory": "Fading",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Fading",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "+(Level) to Analyze Icon action. Can read Resonance signatures.",
+        "effects": [],
+        "slug": "read-resonance"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!mTeTgbHaBCAiP1CW"
+}

@@ -1,0 +1,98 @@
+{
+  "_id": "GF10cFVR41sIQhwE",
+  "name": "POLICE OFFICER",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 2,
+      "bonus": 4
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 15,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 12,
+        "dv": 3,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Nightstick",
+        "pool": 14,
+        "dv": 4,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "2066",
+        "pool": 14,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Defiance EX Shocker",
+        "pool": 12,
+        "dv": 7,
+        "dvType": "S",
+        "element": "electricity",
+        "action": "major"
+      },
+      {
+        "name": "Assault Rifle (Rotating)",
+        "pool": 13,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Assault Rifle (Rotating)",
+        "pool": 13,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Assault Rifle (Rotating)",
+        "pool": 12,
+        "dv": 11,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Precise Shot</strong>: When making a ranged attack with a Major Action, the police officer can instead attack with a Complex Action and designate one of their dice as an Aptitude die. This die counts as a hit as along as it rolls anything other than a 1. FORD AMERICAR CAR (DRIVING)</li><li><strong>Body</strong>: 8 Handling: 2</li><li><strong>Armor</strong>: 8 Speed: 4</li><li><strong>Health</strong>: 16 Wounded Limit: 8</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The police officer does not suffer</li><li><strong>recoil penalties.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "police-officer"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "POLICE OFFICER"
+  },
+  "_key": "!actors!GF10cFVR41sIQhwE"
+}

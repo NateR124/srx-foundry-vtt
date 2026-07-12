@@ -1,0 +1,53 @@
+{
+  "_id": "e4B0zgHxzD6NU5vy",
+  "name": "Data Lock",
+  "type": "gear",
+  "system": {
+    "summary": "Headware",
+    "description": "Data safe implanted in your head",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 4000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Data Lock",
+        "srxId": 3029,
+        "category": "Headware",
+        "cost": 4000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Data Lock",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.1",
+          "value": 0.1,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "Data safe implanted in your head",
+        "effects": [],
+        "slug": "data-lock"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!e4B0zgHxzD6NU5vy"
+}

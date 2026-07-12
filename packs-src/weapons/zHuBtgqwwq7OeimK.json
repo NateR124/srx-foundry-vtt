@@ -1,0 +1,150 @@
+{
+  "_id": "zHuBtgqwwq7OeimK",
+  "name": "Ultimax R7",
+  "type": "weapon",
+  "system": {
+    "summary": "Automatics / Machine Guns",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "Machine Guns",
+    "category": "Automatics",
+    "range": "30/60/200m",
+    "properties": "Illegal, Two-Handed",
+    "cost": 6200,
+    "attackModes": [
+      {
+        "name": "Ranged",
+        "action": "major",
+        "fireMode": "BF",
+        "acc": -3,
+        "dv": "11",
+        "dvType": "P",
+        "element": ""
+      },
+      {
+        "name": "Ranged",
+        "action": "complex",
+        "fireMode": "FA",
+        "acc": -5,
+        "dv": "12",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Ultimax R7",
+        "srxId": 4591,
+        "category": "Automatics",
+        "subcategory": "Machine Guns",
+        "cost": 6200,
+        "properties": [
+          "Illegal",
+          "Two-Handed"
+        ],
+        "options": [],
+        "type": "Firearms",
+        "type2": "Automatics",
+        "type3": "Machine Guns",
+        "skill": "Firearms",
+        "specialization": "Machine Guns",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "30/60/200m",
+          "bands": [
+            30,
+            60,
+            200
+          ]
+        },
+        "improvedRange": {
+          "raw": "30/60/300m",
+          "bands": [
+            30,
+            60,
+            300
+          ]
+        },
+        "canMod": true,
+        "mounts": {
+          "barrel": 1,
+          "internal": 1,
+          "side": 1,
+          "stock": 1,
+          "top": 1,
+          "underbarrel": 1,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [
+          {
+            "name": "Advanced Gas-vent",
+            "modSlug": "advanced-gas-vent",
+            "mounts": [
+              0,
+              1
+            ]
+          },
+          {
+            "name": "Bipod",
+            "modSlug": "bipod",
+            "mounts": [
+              5
+            ]
+          },
+          {
+            "name": "Shock Pad",
+            "modSlug": "shock-pad",
+            "mounts": [
+              3
+            ]
+          }
+        ],
+        "attackModes": [
+          {
+            "attackType": "Ranged",
+            "action": "Major",
+            "fireMode": "BF",
+            "accuracy": -3,
+            "dv": {
+              "raw": "11",
+              "value": 11,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": "FA",
+            "accuracy": -5,
+            "dv": {
+              "raw": "12",
+              "value": 12,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "ultimax-r7"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "q57iHsbHsOYA6BmX",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!zHuBtgqwwq7OeimK"
+}

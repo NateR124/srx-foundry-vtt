@@ -1,0 +1,60 @@
+{
+  "_id": "tiWpmWkRtjwNvAJl",
+  "name": "Lightning Storm",
+  "type": "spell",
+  "system": {
+    "summary": "Combat",
+    "description": "Ranged AOE attack - DV (F+1)P Electricity",
+    "category": "combat",
+    "pattern": "area",
+    "duration": "instantaneous",
+    "range": "50m [A]",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "P",
+    "element": "electricity",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Combat"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Lightning Storm",
+        "srxId": 1546,
+        "category": "Combat",
+        "description": "Ranged AOE attack - DV (F+1)P Electricity",
+        "range": {
+          "raw": "50m [A]",
+          "bands": [
+            50
+          ],
+          "area": true
+        },
+        "duration": "Instantaneous",
+        "resistance": null,
+        "attack": {
+          "type": "AOE",
+          "accuracy": null,
+          "dv": {
+            "raw": "(F+1)",
+            "force": true,
+            "mod": 1,
+            "type": "P",
+            "element": "Electricity"
+          }
+        },
+        "slug": "lightning-storm"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "zZc1PdtmOVQowgGq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!tiWpmWkRtjwNvAJl"
+}

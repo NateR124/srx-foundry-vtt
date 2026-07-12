@@ -1,0 +1,31 @@
+{
+  "_id": "C5vYxr9Jd6R6fqL6",
+  "name": "Absent-Minded",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Forget crucial information, or fail to notice something important",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Absent-Minded",
+        "srxId": 10501,
+        "type": "Trait",
+        "type2": null,
+        "description": "Forget crucial information, or fail to notice something important",
+        "options": [],
+        "slug": "absent-minded"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!C5vYxr9Jd6R6fqL6"
+}

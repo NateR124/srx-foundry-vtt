@@ -1,0 +1,99 @@
+{
+  "_id": "5z7TYZw0DEl4RFnz",
+  "name": "Fragmentation Grenade",
+  "type": "weapon",
+  "system": {
+    "summary": "Explosives / Grenades",
+    "description": "",
+    "skill": "projectileWeapons",
+    "specialization": "Grenades (Thrown)",
+    "category": "Explosives",
+    "range": "10/20/BOD x 5m (Min. 30)",
+    "properties": "",
+    "cost": 150,
+    "attackModes": [
+      {
+        "name": "Ranged AOE",
+        "action": "complex",
+        "fireMode": "",
+        "acc": 0,
+        "dv": "10/5",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Fragmentation Grenade",
+        "srxId": 4623,
+        "category": "Explosives",
+        "subcategory": "Grenades",
+        "cost": 150,
+        "properties": [],
+        "options": [],
+        "type": "Explosives",
+        "type2": "Grenades",
+        "type3": null,
+        "skill": "Projectile Weapons",
+        "specialization": "Grenades (Thrown)",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "10/20/BOD x 5m (Min. 30)",
+          "bands": [
+            10,
+            20,
+            {
+              "attr": "bod",
+              "mult": 5,
+              "min": 30
+            }
+          ]
+        },
+        "improvedRange": null,
+        "canMod": false,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [
+          {
+            "attackType": "Ranged AOE",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": 0,
+            "dv": {
+              "raw": "10/5",
+              "near": 10,
+              "far": 5,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "fragmentation-grenade"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "HutAORUklVy45Nwf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!5z7TYZw0DEl4RFnz"
+}

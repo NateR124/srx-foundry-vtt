@@ -1,0 +1,50 @@
+{
+  "_id": "zPdsFh06mAW3K0cx",
+  "name": "EXECUTIVE",
+  "type": "threat",
+  "system": {
+    "threatRating": 2,
+    "initiative": {
+      "dice": 2,
+      "bonus": 6
+    },
+    "defenseScore": 5,
+    "health": {
+      "value": 0,
+      "max": 15
+    },
+    "armor": 15,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Ares Predator V",
+        "pool": 9,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Lucky Escape</strong>: The executive can spend an Edge to end the Grabbed or Immobilized status.</li><li><strong>Stay Alive</strong>: The executive can spend an Edge to double their Defense Score against one attack.</li><li><strong>Blaster IC</strong>: On a failed Hacking attempt against the executive, intruder suffers 12S Biofeedback damage.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic</strong>: </li><li><strong>Mash the Trigger</strong>: The executive does not suffer</li><li><strong>recoil penalties.</strong>: </li><li><strong>Hardy</strong>: The executive has Leverage on toxin, disease,</li><li><strong>and dying resistance tests.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "executive"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "EXECUTIVE"
+  },
+  "_key": "!actors!zPdsFh06mAW3K0cx"
+}

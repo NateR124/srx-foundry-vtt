@@ -1,0 +1,31 @@
+{
+  "_id": "14jmqU34iZhWSn1H",
+  "name": "Dependents",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "An enemy may kidnap or threaten someone you care about",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Dependents",
+        "srxId": 10519,
+        "type": "Trait",
+        "type2": null,
+        "description": "An enemy may kidnap or threaten someone you care about",
+        "options": [],
+        "slug": "dependents"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!14jmqU34iZhWSn1H"
+}

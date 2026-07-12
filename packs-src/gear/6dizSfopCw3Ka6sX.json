@@ -1,0 +1,75 @@
+{
+  "_id": "6dizSfopCw3Ka6sX",
+  "name": "Dodge Scoot",
+  "type": "gear",
+  "system": {
+    "summary": "Motorbikes",
+    "description": "",
+    "subtype": "Motorbikes",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1800
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Dodge Scoot",
+        "srxId": 7513,
+        "category": "Motorbikes",
+        "cost": 1800,
+        "properties": [],
+        "options": [],
+        "type": "Motorbikes",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 0,
+          "speed": 1,
+          "body": 4,
+          "armor": 2,
+          "health": 12,
+          "defenseScoreMod": null,
+          "autoRating": 1,
+          "autoDefenseScore": 1,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Perception",
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [],
+        "slug": "dodge-scoot"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!6dizSfopCw3Ka6sX"
+}

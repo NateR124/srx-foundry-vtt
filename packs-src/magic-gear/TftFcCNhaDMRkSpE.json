@@ -1,0 +1,53 @@
+{
+  "_id": "TftFcCNhaDMRkSpE",
+  "name": "Spirit (Crafted)",
+  "type": "gear",
+  "system": {
+    "summary": "Foci (Crafted)",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Spirit (Crafted)",
+        "srxId": 9079,
+        "category": "Foci (Crafted)",
+        "cost": 1000,
+        "costDisplay": "25,000",
+        "properties": [],
+        "options": [
+          "Spirit forms you know"
+        ],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": null,
+        "fixedRating": 5,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": "Enchanting",
+        "maxQty": null,
+        "karmaCost": 0,
+        "crafted": true,
+        "equipPrereqs": [
+          "Summon Spirit"
+        ],
+        "alwaysUnique": true,
+        "slug": "spirit-crafted"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!TftFcCNhaDMRkSpE"
+}

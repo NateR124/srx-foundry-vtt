@@ -1,0 +1,58 @@
+{
+  "_id": "jsJvCpfBbPxKZdm7",
+  "name": "ULTHARACHNA",
+  "type": "threat",
+  "system": {
+    "threatRating": 5,
+    "initiative": {
+      "dice": 4,
+      "bonus": 7
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 18
+    },
+    "armor": 22,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Bite",
+        "pool": 24,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Slash (Reach: 3m)",
+        "pool": 20,
+        "dv": 6,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Bite</strong>: A target that takes damage from the ultharachna’s Bite attack is afflicted with a Power 8 toxin. The target must make a toxin resistance test using Body + Willpower. Reduce the Power of the toxin by their hits. The target takes Physical damage equal to the remaining Power of the toxin.</li><li><strong>Cocoon</strong>: Once per Combat Turn, if the ultharachna hits a target with its Slash attack, it can attempt to wrap the target in webbing. The target makes an Agility + Athletics (5) escaping test. If they fail, the target gains the Paralyzed status. On their turn, the target can spend a Major Action to make a Body + Athletics (5) escaping test to free themselves from the webbing.</li><li><strong>Death from Above</strong>: The ultharachna can move across vertical surfaces and along ceilings at its Movement Rate without making any climbing tests.</li><li><strong>Spider Legs</strong>: At the end of any enemy’s Action Phase, if they are within reach, the ultharachna uses its Slash attack against them. The ultharachna cannot use this power more than 8 times before its next Action Phase.</li><li><strong>Unstoppable</strong>: On their turn, the ultharachna can take damage to end an ongoing effect or status on them. The damage is equal to the threshold for the test to end the ongoing effect or status.</li><li><strong>Web Tendril</strong>: The ultharachna shoots a strand of webbing at a target and pulls the target to it. The ultharachna makes an attack test with a dice pool of 20 against any target within 40m. On a hit, the target makes an opposed Body + Athletics test against the ultharachna. If the ultharachna wins, the target is pulled adjacent to the ultharachna.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Low-Light, Thermographic,</li><li><strong>Ultrasound</strong>: </li><li><strong>Fearless</strong>: The ultharachna has Leverage on tests to</li><li><strong>remove, or avoid gaining, the Frightened status.</strong>: </li></ul>",
+    "tags": [
+      "critter"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "ultharachna"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "q9e964oWjMmRYuNH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "ULTHARACHNA"
+  },
+  "_key": "!actors!jsJvCpfBbPxKZdm7"
+}

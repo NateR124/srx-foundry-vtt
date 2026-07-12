@@ -1,0 +1,53 @@
+{
+  "_id": "Vi7bcvuM6P2aAOMh",
+  "name": "Transys Avalon Commlink",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Commlinks",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 24000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Transys Avalon Commlink",
+        "srxId": 6011,
+        "category": "Matrix Devices",
+        "subcategory": "Commlinks",
+        "cost": 24000,
+        "properties": [],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Commlinks",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "1",
+          "firewall": "5",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "2",
+          "rank": "9",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "transys-avalon-commlink"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Vi7bcvuM6P2aAOMh"
+}

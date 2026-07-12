@@ -1,0 +1,56 @@
+{
+  "_id": "NWZPEUrqC2wofzEP",
+  "name": "Retinal Duplication",
+  "type": "gear",
+  "system": {
+    "summary": "Senseware / Eyeware",
+    "description": "Copy retinas",
+    "subtype": "Eyeware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 8000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Retinal Duplication",
+        "srxId": 3015,
+        "category": "Senseware",
+        "subcategory": "Eyeware",
+        "cost": 8000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "dictionaryName": "Retinal Duplication",
+        "type": "Eyeware",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.2",
+          "value": 0.2,
+          "scale": []
+        },
+        "parentContainer": "Cybereyes",
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "Copy retinas",
+        "effects": [],
+        "slug": "retinal-duplication"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!NWZPEUrqC2wofzEP"
+}

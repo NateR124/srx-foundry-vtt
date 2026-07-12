@@ -1,0 +1,50 @@
+{
+  "_id": "kWvP7Jxe5msKNtXN",
+  "name": "Hush",
+  "type": "spell",
+  "system": {
+    "summary": "Illusion",
+    "description": "Dampen sound in area, -(Force/3) to Perception tests",
+    "category": "illusion",
+    "pattern": "area",
+    "duration": "sustained",
+    "range": "80m [A]",
+    "action": "complex",
+    "resistanceAttr": "special",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Illusion"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Hush",
+        "srxId": 1535,
+        "category": "Illusion",
+        "description": "Dampen sound in area, -(Force/3) to Perception tests",
+        "range": {
+          "raw": "80m [A]",
+          "bands": [
+            80
+          ],
+          "area": true
+        },
+        "duration": "Sustained",
+        "resistance": "Special",
+        "attack": null,
+        "slug": "hush"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "dqlrlbNPd7IOtFU1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!kWvP7Jxe5msKNtXN"
+}

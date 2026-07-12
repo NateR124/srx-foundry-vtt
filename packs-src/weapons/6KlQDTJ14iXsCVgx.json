@@ -1,0 +1,103 @@
+{
+  "_id": "6KlQDTJ14iXsCVgx",
+  "name": "Defiance EX Shocker",
+  "type": "weapon",
+  "system": {
+    "summary": "Pistols / Tasers",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "Tasers",
+    "category": "Pistols",
+    "range": "5/10/20m",
+    "properties": "Light",
+    "cost": 700,
+    "attackModes": [
+      {
+        "name": "Ranged",
+        "action": "complex",
+        "fireMode": "SS",
+        "acc": -2,
+        "dv": "7",
+        "dvType": "S",
+        "element": "Electricity"
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Defiance EX Shocker",
+        "srxId": 4549,
+        "category": "Pistols",
+        "subcategory": "Tasers",
+        "cost": 700,
+        "properties": [
+          "Light"
+        ],
+        "options": [],
+        "type": "Firearms",
+        "type2": "Tasers",
+        "type3": null,
+        "skill": "Firearms",
+        "specialization": "Tasers",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "5/10/20m",
+          "bands": [
+            5,
+            10,
+            20
+          ]
+        },
+        "improvedRange": {
+          "raw": "5/10/30m",
+          "bands": [
+            5,
+            10,
+            30
+          ]
+        },
+        "canMod": true,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 1,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": "SS",
+            "accuracy": -2,
+            "dv": {
+              "raw": "7",
+              "value": 7,
+              "type": "S",
+              "element": "Electricity",
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "defiance-ex-shocker"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "FiehijNVNUzGvvD1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!6KlQDTJ14iXsCVgx"
+}

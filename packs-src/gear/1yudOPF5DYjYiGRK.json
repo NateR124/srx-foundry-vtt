@@ -1,0 +1,66 @@
+{
+  "_id": "1yudOPF5DYjYiGRK",
+  "name": "Dermal Plating",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "+2 Armor, Hardened Armor",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 25000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Dermal Plating",
+        "srxId": 3097,
+        "category": "Bodyware",
+        "cost": 25000,
+        "costDisplay": "25,500",
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Dermal Plating",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.8",
+          "value": 0.8,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Cybertorso",
+          "Orthoskin"
+        ],
+        "grants": [],
+        "description": "+2 Armor, Hardened Armor",
+        "effects": [
+          {
+            "key": "armor",
+            "value": 2
+          },
+          {
+            "key": "hardenedArmor",
+            "value": 2
+          }
+        ],
+        "slug": "dermal-plating"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!1yudOPF5DYjYiGRK"
+}

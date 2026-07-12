@@ -1,0 +1,63 @@
+{
+  "_id": "x2nIiiNaJF98sdCH",
+  "name": "Restraints",
+  "type": "gear",
+  "system": {
+    "summary": "Security & Scanners",
+    "description": "",
+    "subtype": "Security & Scanners",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Restraints",
+        "srxId": 6113,
+        "category": "Security & Scanners",
+        "cost": 0,
+        "costDisplay": "Per Option: 5/10/20/50",
+        "properties": [],
+        "options": [
+          "Rope",
+          "Plastic",
+          "Metal",
+          "Plasteel"
+        ],
+        "type": "Security & Scanners",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": 2,
+        "uniqueNuyenScale": [
+          5,
+          10,
+          20,
+          50
+        ],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "restraints"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!x2nIiiNaJF98sdCH"
+}

@@ -1,0 +1,76 @@
+{
+  "_id": "eRVGnof0RviUIQGB",
+  "name": "Enhanced Articulation",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "+1 Athletics, Close Combat, Firearms, Projectile Weapons, Stealth",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 35000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Enhanced Articulation",
+        "srxId": 3099,
+        "category": "Bodyware",
+        "cost": 35000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Enhanced Articulation",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.3",
+          "value": 0.3,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [
+          "Smart Articulation"
+        ],
+        "grants": [],
+        "description": "+1 Athletics, Close Combat, Firearms, Projectile Weapons, Stealth",
+        "effects": [
+          {
+            "key": "athletics",
+            "value": 1
+          },
+          {
+            "key": "closeCombat",
+            "value": 1
+          },
+          {
+            "key": "firearms",
+            "value": 1
+          },
+          {
+            "key": "projectileWeapons",
+            "value": 1
+          },
+          {
+            "key": "stealth",
+            "value": 1
+          }
+        ],
+        "slug": "enhanced-articulation"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!eRVGnof0RviUIQGB"
+}

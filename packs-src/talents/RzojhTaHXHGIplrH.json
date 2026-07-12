@@ -1,0 +1,64 @@
+{
+  "_id": "RzojhTaHXHGIplrH",
+  "name": "Skill Mastery: Steady Hand",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "If you roll glitch with chosen skill, roll 1d6 and cancel glitch on 2+",
+    "category": "general",
+    "subgroup": "",
+    "karma": 5,
+    "option": "Skill Mastery Skills",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Skill Mastery: Steady Hand",
+        "srxId": 68,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": 1,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Skill Mastery Skills"
+        ],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": "TRUE",
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 5
+        },
+        "description": "If you roll glitch with chosen skill, roll 1d6 and cancel glitch on 2+",
+        "effects": [],
+        "slug": "skill-mastery-steady-hand"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!RzojhTaHXHGIplrH"
+}

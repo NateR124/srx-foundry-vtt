@@ -1,0 +1,131 @@
+{
+  "_id": "NUPcD3rTZ5KKql5m",
+  "name": "CAS Stonewall A7 Battle Tank",
+  "type": "gear",
+  "system": {
+    "summary": "Tanks",
+    "description": "",
+    "subtype": "Tanks",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2750000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "CAS Stonewall A7 Battle Tank",
+        "srxId": 7539,
+        "category": "Tanks",
+        "cost": 2750000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Tanks",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)",
+          "+3 DV to Assault Cannon",
+          "-1 to operator's Defense Score"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 0,
+          "speed": 1,
+          "body": 20,
+          "armor": 23,
+          "health": 26,
+          "defenseScoreMod": -1,
+          "autoRating": 3,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Firearms,Driving,Perception",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Anti-Theft System",
+            "value": "Built-In"
+          },
+          {
+            "name": "Armor Plating",
+            "value": "Built-In"
+          },
+          {
+            "name": "Increased Structural Integrity",
+            "value": "Built-In"
+          },
+          {
+            "name": "Smartlink (Vehicle)",
+            "value": "Built-In"
+          }
+        ],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "R",
+              "heavy": true
+            },
+            "builtIn": {
+              "weapon": "Mounted Assault Cannon",
+              "orientation": "R",
+              "retractable": false,
+              "superior": false
+            }
+          },
+          {
+            "index": 2,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": {
+              "weapon": "Mounted Light Machine Gun",
+              "orientation": "F",
+              "retractable": false,
+              "superior": false
+            }
+          },
+          {
+            "index": 5,
+            "mount": {
+              "orientation": "R",
+              "heavy": true
+            },
+            "builtIn": null
+          }
+        ],
+        "slug": "cas-stonewall-a7-battle-tank"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!NUPcD3rTZ5KKql5m"
+}

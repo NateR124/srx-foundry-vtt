@@ -1,0 +1,58 @@
+{
+  "_id": "s2HWyk8WHfH32OTg",
+  "name": "WASP QUEEN SPIRIT",
+  "type": "threat",
+  "system": {
+    "threatRating": 5,
+    "initiative": {
+      "dice": 4,
+      "bonus": 10
+    },
+    "defenseScore": 5,
+    "health": {
+      "value": 0,
+      "max": 14
+    },
+    "armor": 14,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Stinger",
+        "pool": 19,
+        "dv": 12,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Bite",
+        "pool": 17,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Stinger</strong>: The damage from the spirit’s Stinger attack is toxin damage – any bonuses or penalties the target has for toxin resistance tests apply to their damage resistance test. Additionally, the stinger delivers a toxin with a Power of 5. The target must make a Body + Willpower toxin resistance test with a threshold of the toxin’s Power. If they fail, the target gains the Sick status. This toxin causes the target to suffer the Paralyzed status. The target can repeat the toxin resistance test at the end of each Combat Turn to end the effect early. Otherwise, the Sick status ends after 1 minute.</li><li><strong>Terrifying Aura</strong>: Any metahuman that sees the Queen spirit must make a Willpower + Charisma (3) test or gain the Frightened Status. Once a target sees the Queen spirit, they cannot be affected by this power again for 24 hours.</li></ul><h3>Traits</h3><ul><li><strong>Physical Resistance</strong>: </li><li><strong>Unphased</strong>: Can’t gain Frightened or Wounded status.</li><li><strong>Toxin &amp; Disease Immunity</strong>: The spirit is immune to</li><li><strong>diseases &amp; toxins other than insecticides.</strong>: </li><li><strong>Banishing Resistance</strong>: When targeted by the Negate</li><li><strong>Mysticism power, double the spirit’s Force.</strong>: </li><li><strong>Dual Natured</strong>: Insect spirits always exist on both the</li><li><strong>astral and physical plane.</strong>: </li><li><strong>Improved Crit</strong>: On attack tests, the spirit scores a</li><li><strong>critical hit with their Crit Dice on a 5 or a 6.</strong>: </li></ul>",
+    "tags": [
+      "critter"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "wasp-queen-spirit"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "q9e964oWjMmRYuNH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "WASP QUEEN SPIRIT"
+  },
+  "_key": "!actors!s2HWyk8WHfH32OTg"
+}

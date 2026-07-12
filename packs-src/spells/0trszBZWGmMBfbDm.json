@@ -1,0 +1,49 @@
+{
+  "_id": "0trszBZWGmMBfbDm",
+  "name": "Analyze Magic",
+  "type": "spell",
+  "system": {
+    "summary": "Detection",
+    "description": "+Force to assensing test to examine magical effect or find astral signature",
+    "category": "detection",
+    "pattern": "direct",
+    "duration": "instantaneous",
+    "range": "30m",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Detection"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Analyze Magic",
+        "srxId": 1505,
+        "category": "Detection",
+        "description": "+Force to assensing test to examine magical effect or find astral signature",
+        "range": {
+          "raw": "30m",
+          "bands": [
+            30
+          ]
+        },
+        "duration": "Instantaneous",
+        "resistance": null,
+        "attack": null,
+        "slug": "analyze-magic"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "y93WvYSQK8mAWRAI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!0trszBZWGmMBfbDm"
+}

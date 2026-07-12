@@ -1,0 +1,62 @@
+{
+  "_id": "0RNCPX6rLgCTGqWw",
+  "name": "Mounted Sword",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Mounted Weapon",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 10350
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Mounted Sword",
+        "srxId": 8541,
+        "cost": 10350,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Mounted Weapon",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": true,
+        "isExoticWeapon": false,
+        "nuyenMultiplier": null,
+        "requiresMount": true,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": "Close Combat",
+        "attackSpecialization": "Blades",
+        "attacks": [
+          {
+            "attackType": "Melee",
+            "action": "Major",
+            "fireMode": null,
+            "accuracy": 2,
+            "dv": {
+              "raw": "9",
+              "value": 9,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "mounted-sword"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!0RNCPX6rLgCTGqWw"
+}

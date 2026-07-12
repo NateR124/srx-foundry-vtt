@@ -1,0 +1,50 @@
+{
+  "_id": "ShrlrQFNotZcahVl",
+  "name": "Slow",
+  "type": "spell",
+  "system": {
+    "summary": "Manipulation",
+    "description": "All targets in area gain Hobbled status and reduce Accelerator by Net Force",
+    "category": "manipulation",
+    "pattern": "area",
+    "duration": "timed",
+    "range": "50m [A]",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Manipulation"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Slow",
+        "srxId": 1568,
+        "category": "Manipulation",
+        "description": "All targets in area gain Hobbled status and reduce Accelerator by Net Force",
+        "range": {
+          "raw": "50m [A]",
+          "bands": [
+            50
+          ],
+          "area": true
+        },
+        "duration": "1 minute",
+        "resistance": "WIL+AGI",
+        "attack": null,
+        "slug": "slow"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7UPq2yvvIYDMGwdo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ShrlrQFNotZcahVl"
+}

@@ -1,0 +1,49 @@
+{
+  "_id": "W6PWgy3cZA2gAUVN",
+  "name": "Enhance Aim",
+  "type": "spell",
+  "system": {
+    "summary": "Detection",
+    "description": "Target reroll 1's on attack tests with chosen skill",
+    "category": "detection",
+    "pattern": "direct",
+    "duration": "sustained",
+    "range": "30m",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Detection"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Enhance Aim",
+        "srxId": 1526,
+        "category": "Detection",
+        "description": "Target reroll 1's on attack tests with chosen skill",
+        "range": {
+          "raw": "30m",
+          "bands": [
+            30
+          ]
+        },
+        "duration": "Sustained",
+        "resistance": null,
+        "attack": null,
+        "slug": "enhance-aim"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "y93WvYSQK8mAWRAI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!W6PWgy3cZA2gAUVN"
+}

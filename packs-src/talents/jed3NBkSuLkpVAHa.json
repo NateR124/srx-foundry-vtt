@@ -1,0 +1,67 @@
+{
+  "_id": "jed3NBkSuLkpVAHa",
+  "name": "Calibrate Targeting",
+  "type": "talent",
+  "system": {
+    "summary": "Vehicle / Autopilot",
+    "description": "Use Major Action to let 1 vehicle on DCC reroll 1's on attack",
+    "category": "vehicle",
+    "subgroup": "Autopilot",
+    "karma": 7,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Calibrate Targeting",
+        "srxId": 347,
+        "category": "Vehicle",
+        "subcategory": "Autopilot",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Autopilot",
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Software 4",
+        "prereq": {
+          "kind": "rating",
+          "subject": "Software",
+          "min": 4
+        },
+        "grants": [],
+        "cost": {
+          "karma": 7
+        },
+        "description": "Use Major Action to let 1 vehicle on DCC reroll 1's on attack",
+        "effects": [],
+        "slug": "calibrate-targeting"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!jed3NBkSuLkpVAHa"
+}

@@ -1,0 +1,62 @@
+{
+  "_id": "Z4YK4ZXs0wCRuZcP",
+  "name": "Cerebellum Booster",
+  "type": "gear",
+  "system": {
+    "summary": "Headware",
+    "description": "+1 Intuition, Perception",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 48000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Cerebellum Booster",
+        "srxId": 3025,
+        "category": "Headware",
+        "cost": 48000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Cerebellum Booster",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.4",
+          "value": 0.4,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [],
+        "grants": [],
+        "description": "+1 Intuition, Perception",
+        "effects": [
+          {
+            "key": "int",
+            "value": 1
+          },
+          {
+            "key": "perception",
+            "value": 1
+          }
+        ],
+        "slug": "cerebellum-booster"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Z4YK4ZXs0wCRuZcP"
+}

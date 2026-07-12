@@ -1,0 +1,53 @@
+{
+  "_id": "3fLLiyRfMBjVkTDl",
+  "name": "Headphones",
+  "type": "gear",
+  "system": {
+    "summary": "Audio & Optical Devices / Audio Devices",
+    "description": "",
+    "subtype": "Audio Device",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 100
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Headphones",
+        "srxId": 6082,
+        "category": "Audio & Optical Devices",
+        "subcategory": "Audio Devices",
+        "cost": 100,
+        "properties": [],
+        "options": [],
+        "type": "Audio Device",
+        "type2": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 99,
+        "enhancementType": 1,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "headphones"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!3fLLiyRfMBjVkTDl"
+}

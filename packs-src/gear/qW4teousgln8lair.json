@@ -1,0 +1,76 @@
+{
+  "_id": "qW4teousgln8lair",
+  "name": "Sikorsky-Bell Microskimmer",
+  "type": "gear",
+  "system": {
+    "summary": "Minidrones (Aerial)",
+    "description": "",
+    "subtype": "Minidrones (Aerial)",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2200
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Sikorsky-Bell Microskimmer",
+        "srxId": 7593,
+        "category": "Minidrones (Aerial)",
+        "cost": 2200,
+        "properties": [],
+        "options": [],
+        "type": "Minidrones (Aerial)",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Piloting",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)",
+          "+1 to operator's Defense Score"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 2,
+          "speed": 1,
+          "body": 3,
+          "armor": 2,
+          "health": 4,
+          "defenseScoreMod": 1,
+          "autoRating": 2,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Perception,Piloting,Stealth",
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [],
+        "slug": "sikorsky-bell-microskimmer"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!qW4teousgln8lair"
+}

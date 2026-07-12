@@ -1,0 +1,53 @@
+{
+  "_id": "wCnMmRKTbxLTPccb",
+  "name": "Internal Air Tank",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "Hold breath for 1 hour",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 5000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Internal Air Tank",
+        "srxId": 3103,
+        "category": "Bodyware",
+        "cost": 5000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Internal Air Tank",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.2",
+          "value": 0.2,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "Hold breath for 1 hour",
+        "effects": [],
+        "slug": "internal-air-tank"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!wCnMmRKTbxLTPccb"
+}

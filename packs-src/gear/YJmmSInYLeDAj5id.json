@@ -1,0 +1,63 @@
+{
+  "_id": "YJmmSInYLeDAj5id",
+  "name": "Muscle Replacement",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "+Rating to Body, Agility",
+    "subtype": "ware",
+    "rating": 3,
+    "quantity": 1,
+    "cost": 32000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Muscle Replacement",
+        "srxId": 3105,
+        "category": "Bodyware",
+        "cost": 32000,
+        "costDisplay": "Rating x 32,000",
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Muscle Replacement",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": 3,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "Rating x 1",
+          "value": 1,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "+Rating to Body, Agility",
+        "effects": [
+          {
+            "key": "bod",
+            "value": 1
+          },
+          {
+            "key": "agi",
+            "value": 1
+          }
+        ],
+        "slug": "muscle-replacement"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!YJmmSInYLeDAj5id"
+}

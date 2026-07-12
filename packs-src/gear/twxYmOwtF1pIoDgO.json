@@ -1,0 +1,84 @@
+{
+  "_id": "twxYmOwtF1pIoDgO",
+  "name": "GMC Wave Cutter",
+  "type": "gear",
+  "system": {
+    "summary": "Boats",
+    "description": "",
+    "subtype": "Boats",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 4500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "GMC Wave Cutter",
+        "srxId": 7563,
+        "category": "Boats",
+        "cost": 4500,
+        "properties": [],
+        "options": [],
+        "type": "Boats",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 3,
+          "speed": 2,
+          "body": 6,
+          "armor": 2,
+          "health": 14,
+          "defenseScoreMod": null,
+          "autoRating": 2,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Perception",
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "F",
+              "heavy": false
+            },
+            "builtIn": null
+          }
+        ],
+        "slug": "gmc-wave-cutter"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!twxYmOwtF1pIoDgO"
+}

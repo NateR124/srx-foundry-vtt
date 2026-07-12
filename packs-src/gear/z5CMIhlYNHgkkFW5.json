@@ -1,0 +1,54 @@
+{
+  "_id": "z5CMIhlYNHgkkFW5",
+  "name": "Balancing AI",
+  "type": "gear",
+  "system": {
+    "summary": "Cyberlimbs / Cyberlegs",
+    "description": "Leverage to keep balance/stay on feet; no Liability while Running",
+    "subtype": "Cyberleg Upgrade",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 3500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Balancing AI",
+        "srxId": 3080,
+        "category": "Cyberlimbs",
+        "subcategory": "Cyberlegs",
+        "cost": 3500,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Balancing AI",
+        "type": "Cyberleg Upgrade",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0",
+          "value": 0,
+          "scale": []
+        },
+        "parentContainer": "Cyberleg",
+        "prereq": "DNI (Direct Neural Interface),Cyberleg,Cyberleg (Off-Leg)",
+        "incompatible": [],
+        "grants": [],
+        "description": "Leverage to keep balance/stay on feet; no Liability while Running",
+        "effects": [],
+        "slug": "balancing-ai"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!z5CMIhlYNHgkkFW5"
+}

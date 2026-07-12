@@ -1,0 +1,36 @@
+{
+  "_id": "JQjyHY70DexC1gfX",
+  "name": "User Auditing",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Cyberdeck Mod",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 15000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear-enhancement",
+      "catalogData": {
+        "name": "User Auditing",
+        "srxId": 7019,
+        "cost": 15000,
+        "properties": [],
+        "options": [],
+        "enhancementType": 3,
+        "type": "Cyberdeck Mod",
+        "description": null,
+        "slug": "user-auditing"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CfAYFTllX77UHdGc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!JQjyHY70DexC1gfX"
+}

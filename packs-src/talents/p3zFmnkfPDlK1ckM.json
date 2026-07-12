@@ -1,0 +1,63 @@
+{
+  "_id": "p3zFmnkfPDlK1ckM",
+  "name": "Enhanced Security Protocols",
+  "type": "talent",
+  "system": {
+    "summary": "Software / Firewall",
+    "description": "Up to (Software/2) targets gain +1 Matrix Defense Score if Software ≥ Matrix Defense Score x2",
+    "category": "software",
+    "subgroup": "Firewall",
+    "karma": 3,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Enhanced Security Protocols",
+        "srxId": 263,
+        "category": "Software",
+        "subcategory": "Firewall",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Firewall",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": null,
+        "matrixAction": "Minor",
+        "administered": "Yes",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "Up to (Software/2) targets gain +1 Matrix Defense Score if Software ≥ Matrix Defense Score x2",
+        "effects": [],
+        "slug": "enhanced-security-protocols"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!p3zFmnkfPDlK1ckM"
+}

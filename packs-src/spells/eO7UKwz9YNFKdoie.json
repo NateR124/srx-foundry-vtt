@@ -1,0 +1,47 @@
+{
+  "_id": "eO7UKwz9YNFKdoie",
+  "name": "Levitate",
+  "type": "spell",
+  "system": {
+    "summary": "Manipulation",
+    "description": "Move person or object through the air",
+    "category": "manipulation",
+    "pattern": "direct",
+    "duration": "sustained",
+    "range": "Special",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Manipulation"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Levitate",
+        "srxId": 1543,
+        "category": "Manipulation",
+        "description": "Move person or object through the air",
+        "range": {
+          "raw": "Special",
+          "special": "Special"
+        },
+        "duration": "Sustained",
+        "resistance": "WIL+BOD",
+        "attack": null,
+        "slug": "levitate"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7UPq2yvvIYDMGwdo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!eO7UKwz9YNFKdoie"
+}

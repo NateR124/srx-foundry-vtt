@@ -1,0 +1,47 @@
+{
+  "_id": "NuLmq2ZQrEgWx2JS",
+  "name": "Detect Object",
+  "type": "spell",
+  "system": {
+    "summary": "Detection",
+    "description": "Sense location of specific object",
+    "category": "detection",
+    "pattern": "self",
+    "duration": "sustained",
+    "range": "Self",
+    "action": "complex",
+    "resistanceAttr": "special",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Detection"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Detect Object",
+        "srxId": 1523,
+        "category": "Detection",
+        "description": "Sense location of specific object",
+        "range": {
+          "raw": "Self",
+          "special": "Self"
+        },
+        "duration": "Sust (1 hour)",
+        "resistance": "Special",
+        "attack": null,
+        "slug": "detect-object"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "y93WvYSQK8mAWRAI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!NuLmq2ZQrEgWx2JS"
+}

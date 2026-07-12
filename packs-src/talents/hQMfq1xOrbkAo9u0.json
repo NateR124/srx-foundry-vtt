@@ -1,0 +1,63 @@
+{
+  "_id": "hQMfq1xOrbkAo9u0",
+  "name": "Razor Flurry",
+  "type": "talent",
+  "system": {
+    "summary": "Weapons / CC (Blades)",
+    "description": "When using Blades or Cyber Spurs, -1 DV to reroll 1's on attack test",
+    "category": "weapons",
+    "subgroup": "CC (Blades)",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Razor Flurry",
+        "srxId": 156,
+        "category": "Weapons",
+        "subcategory": "CC (Blades)",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "CC (Blades)",
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "When using Blades or Cyber Spurs, -1 DV to reroll 1's on attack test",
+        "effects": [],
+        "slug": "razor-flurry"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!hQMfq1xOrbkAo9u0"
+}

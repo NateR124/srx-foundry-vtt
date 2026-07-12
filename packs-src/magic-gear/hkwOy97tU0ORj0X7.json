@@ -1,0 +1,68 @@
+{
+  "_id": "hkwOy97tU0ORj0X7",
+  "name": "Potentiality",
+  "type": "gear",
+  "system": {
+    "summary": "Foci",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 15,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Potentiality",
+        "srxId": 9032,
+        "category": "Foci",
+        "cost": 2000,
+        "costDisplay": "Force x Force x 2,000",
+        "properties": [],
+        "options": [
+          "Aegis",
+          "Arcane Mind",
+          "Astral Messenger",
+          "Astral Tracking",
+          "Aura Manipulation",
+          "Counter",
+          "Drain Soul",
+          "Edge: Mana Well",
+          "Inner Strength",
+          "Magical Defenses",
+          "Mana Barrier",
+          "Mystical Acceleration",
+          "Mystical Stamina",
+          "Negate",
+          "Speed of Thought - Astral",
+          "Spiritual Alchemist"
+        ],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": null,
+        "fixedRating": null,
+        "maxRating": 15,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [
+          "Expertise: Mysticism"
+        ],
+        "alwaysUnique": true,
+        "slug": "potentiality"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!hkwOy97tU0ORj0X7"
+}

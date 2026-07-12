@@ -1,0 +1,61 @@
+{
+  "_id": "F7dTarxxbl5wmvcJ",
+  "name": "Lightning Bolt",
+  "type": "spell",
+  "system": {
+    "summary": "Combat",
+    "description": "Ranged attack - Acc 3, DV (F+3)P Electricity",
+    "category": "combat",
+    "pattern": "direct",
+    "duration": "instantaneous",
+    "range": "20/50/100m",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+3",
+    "dvType": "P",
+    "element": "electricity",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Combat"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Lightning Bolt",
+        "srxId": 1545,
+        "category": "Combat",
+        "description": "Ranged attack - Acc 3, DV (F+3)P Electricity",
+        "range": {
+          "raw": "20/50/100m",
+          "bands": [
+            20,
+            50,
+            100
+          ]
+        },
+        "duration": "Instantaneous",
+        "resistance": null,
+        "attack": {
+          "type": "Ranged",
+          "accuracy": 3,
+          "dv": {
+            "raw": "(F+3)",
+            "force": true,
+            "mod": 3,
+            "type": "P",
+            "element": "Electricity"
+          }
+        },
+        "slug": "lightning-bolt"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "zZc1PdtmOVQowgGq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!F7dTarxxbl5wmvcJ"
+}

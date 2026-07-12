@@ -1,0 +1,73 @@
+{
+  "_id": "ZWhkyrldeteIZatC",
+  "name": "Cyber Gun",
+  "type": "gear",
+  "system": {
+    "summary": "Cyberlimbs / Cyberarms",
+    "description": "Hidden gun built-in to your arm",
+    "subtype": "Cyberarm Upgrade",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Cyber Gun",
+        "srxId": 3051,
+        "category": "Cyberlimbs",
+        "subcategory": "Cyberarms",
+        "cost": 0,
+        "costDisplay": "Per Option: 4k/10k/10k",
+        "properties": [],
+        "options": [
+          "Pistol",
+          "SMG",
+          "Shotgun"
+        ],
+        "dictionaryName": "Cyber GunCyberarm Upgrade",
+        "type": "Cyberarm Upgrade",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": 2,
+        "nuyenScale": [
+          4000,
+          10000,
+          10000
+        ],
+        "essence": {
+          "display": "0",
+          "value": 0,
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        },
+        "parentContainer": "Cyberarm",
+        "prereq": "DNI (Direct Neural Interface),Cyberarm",
+        "incompatible": [
+          "Cyber Holster",
+          "Grapple Gun",
+          "GyroarmCyberarm Upgrade",
+          "Smuggling CompartmentCyberarm Upgrade"
+        ],
+        "grants": [],
+        "description": "Hidden gun built-in to your arm",
+        "effects": [],
+        "slug": "cyber-gun",
+        "variantOf": "cyberarm"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ZWhkyrldeteIZatC"
+}

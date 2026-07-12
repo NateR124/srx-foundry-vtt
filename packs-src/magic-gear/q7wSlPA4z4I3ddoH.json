@@ -1,0 +1,49 @@
+{
+  "_id": "q7wSlPA4z4I3ddoH",
+  "name": "Artifice Vessel",
+  "type": "gear",
+  "system": {
+    "summary": "Artifice Vessels",
+    "description": "",
+    "subtype": "magic-gear",
+    "rating": 15,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Artifice Vessel",
+        "srxId": 9112,
+        "category": "Artifice Vessels",
+        "cost": 1000,
+        "costDisplay": "Level x Level x 1,000",
+        "properties": [],
+        "options": [],
+        "type": "",
+        "type2": "Artificing Gear",
+        "type3": null,
+        "fixedRating": null,
+        "maxRating": 15,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [],
+        "alwaysUnique": false,
+        "slug": "artifice-vessel"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!q7wSlPA4z4I3ddoH"
+}

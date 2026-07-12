@@ -1,0 +1,31 @@
+{
+  "_id": "zBu3mZDoxzYl8rHK",
+  "name": "Amnesia",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "You’re not sure just how this will come back to bite you, as you don’t remember",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Amnesia",
+        "srxId": 10504,
+        "type": "Trait",
+        "type2": null,
+        "description": "You’re not sure just how this will come back to bite you, as you don’t remember",
+        "options": [],
+        "slug": "amnesia"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!zBu3mZDoxzYl8rHK"
+}

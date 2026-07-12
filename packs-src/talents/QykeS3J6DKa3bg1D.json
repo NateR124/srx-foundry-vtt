@@ -1,0 +1,63 @@
+{
+  "_id": "QykeS3J6DKa3bg1D",
+  "name": "Intuitive Targeting",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Complex Form",
+    "description": "Gain benefits of implanted smartlink",
+    "category": "threading",
+    "subgroup": "Complex Form",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Intuitive Targeting",
+        "srxId": 306,
+        "category": "Threading",
+        "subcategory": "Complex Form",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Complex Form",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": null,
+        "matrixAction": "Minor",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Gain benefits of implanted smartlink",
+        "effects": [],
+        "slug": "intuitive-targeting"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!QykeS3J6DKa3bg1D"
+}

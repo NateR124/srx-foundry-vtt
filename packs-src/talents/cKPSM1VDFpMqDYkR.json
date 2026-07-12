@@ -1,0 +1,81 @@
+{
+  "_id": "cKPSM1VDFpMqDYkR",
+  "name": "Edge: Rapid Summons",
+  "type": "talent",
+  "system": {
+    "summary": "Conjuring",
+    "description": "Summon spirit to physical plane with +3 Initiative",
+    "category": "conjuring",
+    "subgroup": "",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": true
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Edge: Rapid Summons",
+        "srxId": 412,
+        "category": "Conjuring",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": "TRUE",
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Summon Spirit (Conjuring Talent), Conjuring 6, Magic 4",
+        "prereq": {
+          "op": "and",
+          "terms": [
+            {
+              "kind": "talent",
+              "name": "Summon Spirit",
+              "categoryHint": "Conjuring Talent"
+            },
+            {
+              "kind": "rating",
+              "subject": "Conjuring",
+              "min": 6
+            },
+            {
+              "kind": "rating",
+              "subject": "Magic",
+              "min": 4
+            }
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Summon spirit to physical plane with +3 Initiative",
+        "effects": [],
+        "slug": "edge-rapid-summons"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!cKPSM1VDFpMqDYkR"
+}

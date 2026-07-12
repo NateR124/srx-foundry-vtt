@@ -1,0 +1,55 @@
+{
+  "_id": "vYxdxmpPubf2ph2o",
+  "name": "Erika MCD-1 Cyberdeck",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Cyberdecks",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 58000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Erika MCD-1 Cyberdeck",
+        "srxId": 6021,
+        "category": "Matrix Devices",
+        "subcategory": "Cyberdecks",
+        "cost": 58000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Cyberdecks",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": 3,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "2",
+          "hotSimFirewall": "1",
+          "hackingTests": "1",
+          "agents": "2",
+          "rank": "18",
+          "modCapacity": "1"
+        },
+        "installedEnhancements": [],
+        "slug": "erika-mcd-1-cyberdeck"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!vYxdxmpPubf2ph2o"
+}

@@ -1,0 +1,75 @@
+{
+  "_id": "rHaaYgPZRdciAyit",
+  "name": "Horizon Carrier Pigeon",
+  "type": "gear",
+  "system": {
+    "summary": "Drones (Aerial)",
+    "description": "",
+    "subtype": "Drones (Aerial)",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 700
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Horizon Carrier Pigeon",
+        "srxId": 7598,
+        "category": "Drones (Aerial)",
+        "cost": 700,
+        "properties": [],
+        "options": [],
+        "type": "Drones (Aerial)",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Piloting",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 0,
+          "speed": 1,
+          "body": 3,
+          "armor": 0,
+          "health": 6,
+          "defenseScoreMod": null,
+          "autoRating": 1,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Perception,Piloting",
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [],
+        "slug": "horizon-carrier-pigeon"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!rHaaYgPZRdciAyit"
+}

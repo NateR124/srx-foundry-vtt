@@ -1,0 +1,74 @@
+{
+  "_id": "r1MwzTqyG4dLMdgN",
+  "name": "GANG MAGE",
+  "type": "threat",
+  "system": {
+    "threatRating": 2,
+    "initiative": {
+      "dice": 2,
+      "bonus": 3
+    },
+    "defenseScore": 2,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 11,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Knife",
+        "pool": 6,
+        "dv": 4,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Power",
+        "pool": 9,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "(Spell)",
+        "pool": 12,
+        "dv": 8,
+        "dvType": "P",
+        "element": "fire",
+        "action": "major"
+      },
+      {
+        "name": "Fireball (Spell)",
+        "pool": 0,
+        "dv": 6,
+        "dvType": "P",
+        "element": "fire",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic</strong>: </li></ul><h3>Formula DVs (evaluated at F = TR)</h3><ul><li><strong>(Spell)</strong>: (F+6)P Fire</li><li><strong>Fireball (Spell)</strong>: (F+4)P Fire</li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "gang-mage"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "GANG MAGE"
+  },
+  "_key": "!actors!r1MwzTqyG4dLMdgN"
+}

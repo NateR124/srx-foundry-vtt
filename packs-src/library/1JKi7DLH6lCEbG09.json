@@ -1,0 +1,30 @@
+{
+  "_id": "1JKi7DLH6lCEbG09",
+  "name": "Bounty Hunter",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Expert on tracking down individuals and likely places where someone may try to hide or escape",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Bounty Hunter",
+        "srxId": 10007,
+        "type": "Contact",
+        "type2": null,
+        "description": "Expert on tracking down individuals and likely places where someone may try to hide or escape",
+        "slug": "bounty-hunter"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!1JKi7DLH6lCEbG09"
+}

@@ -1,0 +1,59 @@
+{
+  "_id": "xfGId8hjLDpy4R7m",
+  "name": "Elemental Resistance",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "Resistance to Acid, Cold, Electricity, or Fire",
+    "subtype": "Dermal Plating Upgrade",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 17500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Elemental Resistance",
+        "srxId": 3098,
+        "category": "Bodyware",
+        "cost": 17500,
+        "properties": [],
+        "options": [
+          "Acid",
+          "Cold",
+          "Electricity",
+          "Fire"
+        ],
+        "dictionaryName": "Elemental Resistance",
+        "type": "Dermal Plating Upgrade",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.1",
+          "value": 0.1,
+          "scale": []
+        },
+        "parentContainer": "Dermal Plating",
+        "prereq": "DNI (Direct Neural Interface),Dermal Plating",
+        "incompatible": [],
+        "grants": [],
+        "description": "Resistance to Acid, Cold, Electricity, or Fire",
+        "effects": [],
+        "slug": "elemental-resistance",
+        "variantOf": "dermal-plating"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xfGId8hjLDpy4R7m"
+}

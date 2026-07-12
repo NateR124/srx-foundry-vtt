@@ -1,0 +1,63 @@
+{
+  "_id": "jzzpH5OBmv3iDhq2",
+  "name": "Edge: Mana Well",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism / Astral",
+    "description": "Gain Leverage on Drain test and reroll 1 Crit Die",
+    "category": "mysticism",
+    "subgroup": "Astral",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": true
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Edge: Mana Well",
+        "srxId": 456,
+        "category": "Mysticism",
+        "subcategory": "Astral",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Astral",
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": "TRUE",
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Gain Leverage on Drain test and reroll 1 Crit Die",
+        "effects": [],
+        "slug": "edge-mana-well"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!jzzpH5OBmv3iDhq2"
+}

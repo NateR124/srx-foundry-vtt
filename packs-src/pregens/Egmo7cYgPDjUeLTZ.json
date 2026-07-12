@@ -1,0 +1,149 @@
+{
+  "_id": "Egmo7cYgPDjUeLTZ",
+  "name": "Face Infiltrator (Elf)",
+  "type": "character",
+  "system": {
+    "details": {
+      "metatype": "elf",
+      "archetype": "Face Infiltrator (Elf)",
+      "nuyen": 0
+    },
+    "attributes": {
+      "bod": {
+        "base": 2,
+        "bonus": 0
+      },
+      "agi": {
+        "base": 3,
+        "bonus": 0
+      },
+      "rea": {
+        "base": 3,
+        "bonus": 0
+      },
+      "wil": {
+        "base": 2,
+        "bonus": 0
+      },
+      "log": {
+        "base": 4,
+        "bonus": 0
+      },
+      "int": {
+        "base": 4,
+        "bonus": 0
+      },
+      "cha": {
+        "base": 5,
+        "bonus": 0
+      }
+    },
+    "skills": {
+      "athletics": {
+        "rating": 4,
+        "bonus": 0,
+        "specializations": []
+      },
+      "biotech": {
+        "rating": 3,
+        "bonus": 0,
+        "specializations": []
+      },
+      "closeCombat": {
+        "rating": 3,
+        "bonus": 0,
+        "specializations": []
+      },
+      "con": {
+        "rating": 5,
+        "bonus": 0,
+        "specializations": []
+      },
+      "firearms": {
+        "rating": 4,
+        "bonus": 0,
+        "specializations": []
+      },
+      "influence": {
+        "rating": 5,
+        "bonus": 0,
+        "specializations": []
+      },
+      "insight": {
+        "rating": 5,
+        "bonus": 0,
+        "specializations": []
+      },
+      "perception": {
+        "rating": 4,
+        "bonus": 0,
+        "specializations": []
+      },
+      "software": {
+        "rating": 3,
+        "bonus": 0,
+        "specializations": []
+      },
+      "stealth": {
+        "rating": 5,
+        "bonus": 0,
+        "specializations": []
+      }
+    },
+    "special": {
+      "edge": {
+        "rating": 3,
+        "value": 3
+      },
+      "essence": 6,
+      "quickness": {
+        "base": 1,
+        "bonus": 0
+      },
+      "magic": {
+        "base": 1,
+        "bonus": 0
+      },
+      "resonance": {
+        "base": 0,
+        "bonus": 0
+      }
+    },
+    "monitors": {
+      "stun": {
+        "value": 0,
+        "systemShock": 0,
+        "bonus": 0
+      },
+      "physical": {
+        "value": 0,
+        "systemShock": 0,
+        "bonus": 0
+      }
+    },
+    "derivedMods": {
+      "armor": 0,
+      "hardened": 0,
+      "woundedLimit": 0
+    },
+    "vision": {
+      "lowlight": false,
+      "thermographic": false,
+      "ultrasound": false,
+      "flareCompensation": false,
+      "visionMagnification": false
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "Face Infiltrator (Elf)",
+    "actorLink": true
+  },
+  "_key": "!actors!Egmo7cYgPDjUeLTZ"
+}

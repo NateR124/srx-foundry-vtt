@@ -1,0 +1,31 @@
+{
+  "_id": "UOJSX9O1qzeCxXJj",
+  "name": "Social Stress",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Horribly mess up a task that requires talking with others",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Social Stress",
+        "srxId": 10542,
+        "type": "Trait",
+        "type2": null,
+        "description": "Horribly mess up a task that requires talking with others",
+        "options": [],
+        "slug": "social-stress"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!UOJSX9O1qzeCxXJj"
+}

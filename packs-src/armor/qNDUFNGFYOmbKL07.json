@@ -1,0 +1,39 @@
+{
+  "_id": "qNDUFNGFYOmbKL07",
+  "name": "Leather (Synth)",
+  "type": "armor",
+  "system": {
+    "summary": "",
+    "description": "",
+    "rating": 4,
+    "hardened": 0,
+    "heavy": false,
+    "shield": false,
+    "equipped": false,
+    "cost": 100
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "armor",
+      "catalogData": {
+        "name": "Leather (Synth)",
+        "srxId": 4013,
+        "cost": 100,
+        "properties": [],
+        "options": [],
+        "rating": 4,
+        "hardened": 0,
+        "heavy": false,
+        "shield": false,
+        "slug": "leather-synth"
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!qNDUFNGFYOmbKL07"
+}

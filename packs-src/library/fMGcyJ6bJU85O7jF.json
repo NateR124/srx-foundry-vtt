@@ -1,0 +1,35 @@
+{
+  "_id": "fMGcyJ6bJU85O7jF",
+  "name": "Mage",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "archetype",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "archetype",
+      "catalogData": {
+        "name": "Mage",
+        "srxId": 11006,
+        "noFlare": true,
+        "isCustom": false,
+        "isDossierGroup": false,
+        "parent": "rules-dossier",
+        "flares": [],
+        "slug": "mage"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "82fke5ZPHOqEvVwG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!fMGcyJ6bJU85O7jF"
+}

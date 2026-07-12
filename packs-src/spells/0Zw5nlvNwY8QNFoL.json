@@ -1,0 +1,60 @@
+{
+  "_id": "0Zw5nlvNwY8QNFoL",
+  "name": "Frigid",
+  "type": "spell",
+  "system": {
+    "summary": "Combat",
+    "description": "Ranged AOE attack - DV (F+2)P Cold",
+    "category": "combat",
+    "pattern": "area",
+    "duration": "instantaneous",
+    "range": "50m [A]",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+2",
+    "dvType": "P",
+    "element": "cold",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Combat"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Frigid",
+        "srxId": 1533,
+        "category": "Combat",
+        "description": "Ranged AOE attack - DV (F+2)P Cold",
+        "range": {
+          "raw": "50m [A]",
+          "bands": [
+            50
+          ],
+          "area": true
+        },
+        "duration": "Instantaneous",
+        "resistance": null,
+        "attack": {
+          "type": "AOE",
+          "accuracy": null,
+          "dv": {
+            "raw": "(F+2)",
+            "force": true,
+            "mod": 2,
+            "type": "P",
+            "element": "Cold"
+          }
+        },
+        "slug": "frigid"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "zZc1PdtmOVQowgGq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!0Zw5nlvNwY8QNFoL"
+}

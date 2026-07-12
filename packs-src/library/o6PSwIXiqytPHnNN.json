@@ -1,0 +1,30 @@
+{
+  "_id": "o6PSwIXiqytPHnNN",
+  "name": "Bartender",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Picks up all manner of rumors or gossip, from criminal organizations to corporate dealings",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Bartender",
+        "srxId": 10004,
+        "type": "Contact",
+        "type2": null,
+        "description": "Picks up all manner of rumors or gossip, from criminal organizations to corporate dealings",
+        "slug": "bartender"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!o6PSwIXiqytPHnNN"
+}

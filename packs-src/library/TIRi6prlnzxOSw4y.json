@@ -1,0 +1,31 @@
+{
+  "_id": "TIRi6prlnzxOSw4y",
+  "name": "UCAS",
+  "type": "knowledge",
+  "system": {
+    "summary": "",
+    "description": "All facets of life in the UCAS including politics, native critters, major cities, corporate activity, customs & traditions, legal systems",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "UCAS",
+        "srxId": 10021,
+        "type": "Knowledge Domain",
+        "type2": null,
+        "description": "All facets of life in the UCAS including politics, native critters, major cities, corporate activity, customs & traditions, legal systems",
+        "freePool": null,
+        "slug": "ucas"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!TIRi6prlnzxOSw4y"
+}

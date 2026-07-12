@@ -1,0 +1,50 @@
+{
+  "_id": "h1mVEHhruMa6R3tK",
+  "name": "Entangle",
+  "type": "spell",
+  "system": {
+    "summary": "Manipulation",
+    "description": "All targets in area gain Grabbed status",
+    "category": "manipulation",
+    "pattern": "area",
+    "duration": "sustained",
+    "range": "50m [A]",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Manipulation"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Entangle",
+        "srxId": 1528,
+        "category": "Manipulation",
+        "description": "All targets in area gain Grabbed status",
+        "range": {
+          "raw": "50m [A]",
+          "bands": [
+            50
+          ],
+          "area": true
+        },
+        "duration": "Sustained",
+        "resistance": "WIL+AGI",
+        "attack": null,
+        "slug": "entangle"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7UPq2yvvIYDMGwdo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!h1mVEHhruMa6R3tK"
+}

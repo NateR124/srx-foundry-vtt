@@ -1,0 +1,82 @@
+{
+  "_id": "85cbpcIN2VjfR1pn",
+  "name": "HTR OFFICER",
+  "type": "threat",
+  "system": {
+    "threatRating": 5,
+    "initiative": {
+      "dice": 3,
+      "bonus": 7
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 19,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 15,
+        "dv": 4,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Combat Knife",
+        "pool": 17,
+        "dv": 4,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Light Fire 75",
+        "pool": 19,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "FN HAR Major (SA) 17 9P",
+        "pool": 17,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "FN HAR Major (SA) 17 9P",
+        "pool": 16,
+        "dv": 11,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Tactical Network</strong>: This is an administered software program, maintained by an agent on the HTR officer’s commlink. While this program is running, the HTR officer gains Leverage on attacks made against any target that an ally running this program attacked since the HTR officer’s last Initiative Pass.</li><li><strong>Black IC</strong>: On a failed Hacking attempt against the HTR officer, intruder suffers Physical Biofeedback damage equal to 10 + OS.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Ultrasound, Vision</strong>: </li><li><strong>Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The HTR officer does not suffer</li><li><strong>recoil penalties.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "htr-officer"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "HTR OFFICER"
+  },
+  "_key": "!actors!85cbpcIN2VjfR1pn"
+}

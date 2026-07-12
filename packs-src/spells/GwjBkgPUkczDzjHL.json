@@ -1,0 +1,59 @@
+{
+  "_id": "GwjBkgPUkczDzjHL",
+  "name": "Powerbolt",
+  "type": "spell",
+  "system": {
+    "summary": "Combat",
+    "description": "Target takes (Net Force + 1)P/S",
+    "category": "combat",
+    "pattern": "direct",
+    "duration": "instantaneous",
+    "range": "60m",
+    "action": "complex",
+    "resistanceAttr": "bod",
+    "dvFormula": "nf+1",
+    "dvType": "P/S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Combat"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Powerbolt",
+        "srxId": 1559,
+        "category": "Combat",
+        "description": "Target takes (Net Force + 1)P/S",
+        "range": {
+          "raw": "60m",
+          "bands": [
+            60
+          ]
+        },
+        "duration": "Instantaneous",
+        "resistance": "BOD",
+        "attack": {
+          "type": "Ranged",
+          "accuracy": "Resist: BOD",
+          "dv": {
+            "raw": "(F+1)",
+            "force": true,
+            "mod": 1,
+            "type": "P/S",
+            "element": null
+          }
+        },
+        "slug": "powerbolt"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "zZc1PdtmOVQowgGq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!GwjBkgPUkczDzjHL"
+}

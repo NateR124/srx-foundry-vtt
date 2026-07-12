@@ -1,0 +1,50 @@
+{
+  "_id": "s9K9q0aPQYgnZWs6",
+  "name": "CYBERONIN",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 3,
+      "bonus": 7
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 12,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Ares Viper",
+        "pool": 10,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Ultrasound, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The cyberonin does not suffer</li><li><strong>recoil penalties.</strong>: </li><li><strong>Combat Hacker</strong>: Increase the cyberonin’s Data Spike</li><li><strong>damage by 2.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "cyberonin"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "CYBERONIN"
+  },
+  "_key": "!actors!s9K9q0aPQYgnZWs6"
+}

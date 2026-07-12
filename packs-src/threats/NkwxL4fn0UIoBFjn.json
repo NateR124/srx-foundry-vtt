@@ -1,0 +1,58 @@
+{
+  "_id": "NkwxL4fn0UIoBFjn",
+  "name": "BARGHEST",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 3,
+      "bonus": 4
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 14,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Bite",
+        "pool": 14,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Claws",
+        "pool": 16,
+        "dv": 6,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Hunter’s Howl</strong>: The barghest unleashes a terrifying howl that causes their prey to stumble as their muscles uncontrollably seize up. Any living being that can hear the howl is affected as if by the Slow spell, with a Force equal to the Barghest’s</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Low-Light</li><li><strong>Dual Natured</strong>: The barghest always exists on both the</li><li><strong>astral and physical planes, and can interact with</strong>: </li><li><strong>anything on either plane. Their Armor applies to</strong>: </li><li><strong>attacks from both the physical and astral planes.</strong>: </li></ul>",
+    "tags": [
+      "critter"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "barghest"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "q9e964oWjMmRYuNH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "BARGHEST"
+  },
+  "_key": "!actors!NkwxL4fn0UIoBFjn"
+}

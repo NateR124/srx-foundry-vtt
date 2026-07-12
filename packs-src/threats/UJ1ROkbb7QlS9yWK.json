@@ -1,0 +1,74 @@
+{
+  "_id": "UJ1ROkbb7QlS9yWK",
+  "name": "CORPORATE SECURITY GUARD",
+  "type": "threat",
+  "system": {
+    "threatRating": 2,
+    "initiative": {
+      "dice": 2,
+      "bonus": 3
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 13,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 10,
+        "dv": 3,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Nightstick",
+        "pool": 12,
+        "dv": 4,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Beretta 201T",
+        "pool": 12,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Yamaha Pulsar",
+        "pool": 11,
+        "dv": 6,
+        "dvType": "S",
+        "element": "electricity",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Wait for Backup</strong>: When the corporate security guard makes an attack, they can suffer a –2 penalty on their attack test to gain +1 to their Defense Score until the start of their next Action Phase.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The corporate security guard does</li><li><strong>not suffer recoil penalties.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "corporate-security-guard"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "CORPORATE SECURITY GUARD"
+  },
+  "_key": "!actors!UJ1ROkbb7QlS9yWK"
+}

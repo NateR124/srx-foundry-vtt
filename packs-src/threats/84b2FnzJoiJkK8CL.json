@@ -1,0 +1,50 @@
+{
+  "_id": "84b2FnzJoiJkK8CL",
+  "name": "MATRIX DEFENSE OFFICER",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 2,
+      "bonus": 5
+    },
+    "defenseScore": 2,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 10,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Beretta 201T",
+        "pool": 8,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Low-Light</li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "matrix-defense-officer"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "MATRIX DEFENSE OFFICER"
+  },
+  "_key": "!actors!84b2FnzJoiJkK8CL"
+}

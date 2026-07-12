@@ -1,0 +1,67 @@
+{
+  "_id": "3TYbUMLqdwOnIJle",
+  "name": "Cyberleg (Off-Leg)",
+  "type": "gear",
+  "system": {
+    "summary": "Cyberlimbs / Cyberlegs",
+    "description": "+6m Movement Rate; +1 Athletics, Armor; 5 hits on Armor crit; Run as Minor Action, Move as Free Action",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 40000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Cyberleg (Off-Leg)",
+        "srxId": 3076,
+        "category": "Cyberlimbs",
+        "subcategory": "Cyberlegs",
+        "cost": 40000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Cyberleg (Off-Leg)",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "1",
+          "value": 1,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "+6m Movement Rate; +1 Athletics, Armor; 5 hits on Armor crit; Run as Minor Action, Move as Free Action",
+        "effects": [
+          {
+            "key": "athletics",
+            "value": 1
+          },
+          {
+            "key": "armor",
+            "value": 1
+          },
+          {
+            "key": "movementRate",
+            "value": 6
+          }
+        ],
+        "slug": "cyberleg-off-leg"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!3TYbUMLqdwOnIJle"
+}

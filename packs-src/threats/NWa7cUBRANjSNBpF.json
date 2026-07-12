@@ -1,0 +1,130 @@
+{
+  "_id": "NWa7cUBRANjSNBpF",
+  "name": "AZTEC GO-GANGER",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 3,
+      "bonus": 4
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 12,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 6,
+        "dv": 3,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Power",
+        "pool": 12,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "AK-97 Major (SA) 12 9P",
+        "pool": 11,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "AK-97 Major (SA) 12 9P",
+        "pool": 10,
+        "dv": 11,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "(HE Grenades)",
+        "pool": 10,
+        "dv": 0,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Assault Rifle (Rotating)",
+        "pool": 13,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Assault Rifle (Rotating)",
+        "pool": 13,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Assault Rifle (Rotating)",
+        "pool": 12,
+        "dv": 11,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Submachine Gun (Forward)",
+        "pool": 13,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Submachine Gun (Forward)",
+        "pool": 13,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Submachine Gun (Forward)",
+        "pool": 12,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The go-ganger does not suffer</li><li><strong>recoil penalties.</strong>: </li><li><strong>Improved Crit</strong>: On Driving tests, the go-ganger scores</li><li><strong>a critical hit with their Crit Dice on a 5 or a 6.</strong>: </li><li><strong>Twitchy Driver</strong>: The crazed go-ganger gains a +1</li><li><strong>bonus to their Defense Score when driving a vehicle.</strong>: </li><li><strong>HYUNDAI SHIN-HYUNG</strong>: </li><li><strong>CAR (DRIVING)</strong>: </li><li><strong>Body</strong>: 8 Handling: 1</li><li><strong>Armor</strong>: 8 Speed: 6</li><li><strong>Health</strong>: 16 Wounded Limit: 8</li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "aztec-go-ganger"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "AZTEC GO-GANGER"
+  },
+  "_key": "!actors!NWa7cUBRANjSNBpF"
+}

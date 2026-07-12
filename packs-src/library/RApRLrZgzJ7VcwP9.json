@@ -1,0 +1,31 @@
+{
+  "_id": "RApRLrZgzJ7VcwP9",
+  "name": "Wilderness",
+  "type": "knowledge",
+  "system": {
+    "summary": "",
+    "description": "Geography, survival gear, edible flora & fauna, animal tracks",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "Wilderness",
+        "srxId": 10024,
+        "type": "Knowledge Domain",
+        "type2": null,
+        "description": "Geography, survival gear, edible flora & fauna, animal tracks",
+        "freePool": null,
+        "slug": "wilderness"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!RApRLrZgzJ7VcwP9"
+}

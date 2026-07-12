@@ -1,0 +1,77 @@
+{
+  "_id": "W3pkB6WIfM4SYIYe",
+  "name": "Master Craftsman",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism / Artificing",
+    "description": "Max Force for enchanting focus increased to Mysticism x 1.5 and can have 1 additional active focus",
+    "category": "mysticism",
+    "subgroup": "Artificing",
+    "karma": 14,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Master Craftsman",
+        "srxId": 466,
+        "category": "Mysticism",
+        "subcategory": "Artificing",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Artificing",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Enchanting (Mysticism Talent), Mysticism 6",
+        "prereq": {
+          "op": "and",
+          "terms": [
+            {
+              "kind": "talent",
+              "name": "Enchanting",
+              "categoryHint": "Mysticism Talent"
+            },
+            {
+              "kind": "rating",
+              "subject": "Mysticism",
+              "min": 6
+            }
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 14
+        },
+        "description": "Max Force for enchanting focus increased to Mysticism x 1.5 and can have 1 additional active focus",
+        "effects": [],
+        "slug": "master-craftsman"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!W3pkB6WIfM4SYIYe"
+}

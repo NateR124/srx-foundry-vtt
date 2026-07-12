@@ -1,0 +1,49 @@
+{
+  "_id": "YzTS7V6AcEdsM9B9",
+  "name": "Force Field",
+  "type": "spell",
+  "system": {
+    "summary": "Manipulation",
+    "description": "+Force/2 to target's Armor",
+    "category": "manipulation",
+    "pattern": "direct",
+    "duration": "sustained",
+    "range": "80m",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Manipulation"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Force Field",
+        "srxId": 1532,
+        "category": "Manipulation",
+        "description": "+Force/2 to target's Armor",
+        "range": {
+          "raw": "80m",
+          "bands": [
+            80
+          ]
+        },
+        "duration": "Sustained",
+        "resistance": null,
+        "attack": null,
+        "slug": "force-field"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7UPq2yvvIYDMGwdo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!YzTS7V6AcEdsM9B9"
+}

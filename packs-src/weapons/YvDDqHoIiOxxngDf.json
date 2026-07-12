@@ -1,0 +1,41 @@
+{
+  "_id": "YvDDqHoIiOxxngDf",
+  "name": "Laser Sight",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Modification",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 200
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon-mod",
+      "catalogData": {
+        "name": "Laser Sight",
+        "srxId": 5512,
+        "cost": 200,
+        "properties": [],
+        "type": "Modification",
+        "mounts": [
+          2,
+          4,
+          5
+        ],
+        "allMountsRequired": false,
+        "noMount": false,
+        "requiresMod": null,
+        "slug": "laser-sight"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "rHfaFyA9uk37DvRq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!YvDDqHoIiOxxngDf"
+}

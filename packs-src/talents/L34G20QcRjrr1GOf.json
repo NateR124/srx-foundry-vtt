@@ -1,0 +1,62 @@
+{
+  "_id": "L34G20QcRjrr1GOf",
+  "name": "Encryption",
+  "type": "talent",
+  "system": {
+    "summary": "Social",
+    "description": "+1 Matrix Defense Score against files & databases or communications & surveillance programs",
+    "category": "social",
+    "subgroup": "",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Encryption",
+        "srxId": 187,
+        "category": "Social",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "+1 Matrix Defense Score against files & databases or communications & surveillance programs",
+        "effects": [],
+        "slug": "encryption"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!L34G20QcRjrr1GOf"
+}

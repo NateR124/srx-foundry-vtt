@@ -1,0 +1,76 @@
+{
+  "_id": "PYhNN18nbF71q0UU",
+  "name": "Mounted Exotic Weapon - Fichetti Freeze Jet",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Mounted Weapon",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 8700
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Mounted Exotic Weapon - Fichetti Freeze Jet",
+        "srxId": 8533,
+        "cost": 8700,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Mounted Weapon",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": true,
+        "isExoticWeapon": true,
+        "nuyenMultiplier": null,
+        "requiresMount": true,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": "Projectile Weapons",
+        "attackSpecialization": "Exotic Weapon - Sprayer",
+        "attacks": [
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": -2,
+            "dv": {
+              "raw": "7",
+              "value": 7,
+              "type": "P",
+              "element": "Cold",
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "attackType": "AOE",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": null,
+            "dv": {
+              "raw": "5",
+              "value": 5,
+              "type": "P",
+              "element": "Cold",
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "mounted-exotic-weapon-fichetti-freeze-jet"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!PYhNN18nbF71q0UU"
+}

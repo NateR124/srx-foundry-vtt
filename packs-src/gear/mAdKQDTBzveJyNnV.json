@@ -1,0 +1,62 @@
+{
+  "_id": "mAdKQDTBzveJyNnV",
+  "name": "Troll Eyes",
+  "type": "gear",
+  "system": {
+    "summary": "Senseware / Eyeware",
+    "description": "Thermographic Vision Enhancement",
+    "subtype": "Eyeware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1750
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Troll Eyes",
+        "srxId": 3018,
+        "category": "Senseware",
+        "subcategory": "Eyeware",
+        "cost": 1750,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Troll Eyes",
+        "type": "Eyeware",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.1",
+          "value": 0.1,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [
+          "Cybereyes",
+          "Thermographic Vision"
+        ],
+        "grants": [],
+        "description": "Thermographic Vision Enhancement",
+        "effects": [
+          {
+            "key": "thermographic",
+            "value": 1
+          }
+        ],
+        "slug": "troll-eyes"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!mAdKQDTBzveJyNnV"
+}

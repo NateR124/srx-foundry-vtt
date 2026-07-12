@@ -1,0 +1,91 @@
+{
+  "_id": "Fa2CUDkS6aTrSvb7",
+  "name": "Plastic",
+  "type": "weapon",
+  "system": {
+    "summary": "Demolitions (per kilogram)",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "",
+    "category": "Demolitions (per kilogram)",
+    "range": "-",
+    "properties": "Illegal",
+    "cost": 350,
+    "attackModes": [
+      {
+        "name": "AOE",
+        "action": "major",
+        "fireMode": "",
+        "acc": 0,
+        "dv": "6/3",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Plastic",
+        "srxId": 4645,
+        "category": "Demolitions (per kilogram)",
+        "cost": 350,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Explosives",
+        "type2": "Demolitions",
+        "type3": null,
+        "skill": null,
+        "specialization": null,
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "-"
+        },
+        "improvedRange": null,
+        "canMod": false,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [
+          {
+            "attackType": "AOE",
+            "action": null,
+            "fireMode": null,
+            "accuracy": null,
+            "dv": {
+              "raw": "6/3",
+              "near": 6,
+              "far": 3,
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "plastic"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "KqBfvgau9EQSsH7X",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Fa2CUDkS6aTrSvb7"
+}

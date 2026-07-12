@@ -1,0 +1,58 @@
+{
+  "_id": "0etS1mQsbKRgcGZX",
+  "name": "Cybereyes",
+  "type": "gear",
+  "system": {
+    "summary": "Senseware / Eyeware",
+    "description": "Other eyeware cyberware costs no Essence",
+    "subtype": "Eyeware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 8500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Cybereyes",
+        "srxId": 3010,
+        "category": "Senseware",
+        "subcategory": "Eyeware",
+        "cost": 8500,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Cybereyes",
+        "type": "Eyeware",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.3",
+          "value": 0.3,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Cat's Eyes",
+          "Hawk Eyes",
+          "Troll Eyes"
+        ],
+        "grants": [],
+        "description": "Other eyeware cyberware costs no Essence",
+        "effects": [],
+        "slug": "cybereyes"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!0etS1mQsbKRgcGZX"
+}

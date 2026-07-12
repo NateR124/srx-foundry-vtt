@@ -1,0 +1,62 @@
+{
+  "_id": "iZ4yVuob7io8AOsP",
+  "name": "Redline",
+  "type": "talent",
+  "system": {
+    "summary": "Vehicle",
+    "description": "Vehicle takes 2 damage to gain +1 Speed for 1 Combat Turn",
+    "category": "vehicle",
+    "subgroup": "",
+    "karma": 5,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Redline",
+        "srxId": 373,
+        "category": "Vehicle",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 5
+        },
+        "description": "Vehicle takes 2 damage to gain +1 Speed for 1 Combat Turn",
+        "effects": [],
+        "slug": "redline"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!iZ4yVuob7io8AOsP"
+}

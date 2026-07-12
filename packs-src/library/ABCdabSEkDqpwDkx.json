@@ -1,0 +1,30 @@
+{
+  "_id": "ABCdabSEkDqpwDkx",
+  "name": "Simsense Star",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Expert on trends in music, art, and media, as well as megacorps’ entertainment business",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Simsense Star",
+        "srxId": 10018,
+        "type": "Contact",
+        "type2": null,
+        "description": "Expert on trends in music, art, and media, as well as megacorps’ entertainment business",
+        "slug": "simsense-star"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ABCdabSEkDqpwDkx"
+}

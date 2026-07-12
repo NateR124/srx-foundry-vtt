@@ -1,0 +1,58 @@
+{
+  "_id": "ldcEzPmDUQ4DPVNU",
+  "name": "MONSTROUS VULTURE",
+  "type": "threat",
+  "system": {
+    "threatRating": 3,
+    "initiative": {
+      "dice": 2,
+      "bonus": 4
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 13,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Corrosive Bite",
+        "pool": 14,
+        "dv": 10,
+        "dvType": "P",
+        "element": "acid",
+        "action": "major"
+      },
+      {
+        "name": "Claws",
+        "pool": 16,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Regeneration</strong>: If the monstrous vulture is alive, at the start of each Combat Turn it heals 3 damage. If its current damage is reduced to less than its Health, it immediately regains consciousness. If the monstrous vulture’s damage exceeds its Health x 2, it dies.</li><li><strong>Swift</strong>: The monstrous vulture can take the Run action as a Minor Action, and the Move Action as a Free action (but can still only take each once per Combat Turn). The monstrous vulture does not suffer Liability on tests when they take the Run action. RADHOUND</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Low-Light, Thermographic</li><li><strong>Elusive</strong>: Intercept attacks made against the monstrous</li><li><strong>vulture suffer Liability.</strong>: </li></ul>",
+    "tags": [
+      "critter"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "monstrous-vulture"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "q9e964oWjMmRYuNH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "MONSTROUS VULTURE"
+  },
+  "_key": "!actors!ldcEzPmDUQ4DPVNU"
+}

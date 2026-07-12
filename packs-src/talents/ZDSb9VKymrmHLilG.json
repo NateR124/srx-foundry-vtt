@@ -1,0 +1,66 @@
+{
+  "_id": "ZDSb9VKymrmHLilG",
+  "name": "Quick Twitch",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Infusion",
+    "description": "+1 Agility or Reaction",
+    "category": "threading",
+    "subgroup": "Infusion",
+    "karma": 12,
+    "option": "Agility, Reaction",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Quick Twitch",
+        "srxId": 320,
+        "category": "Threading",
+        "subcategory": "Infusion",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Agility",
+          "Reaction"
+        ],
+        "options2": [],
+        "type": "Infusion",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 12
+        },
+        "description": "+1 Agility or Reaction",
+        "effects": [],
+        "slug": "quick-twitch"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ZDSb9VKymrmHLilG"
+}

@@ -1,0 +1,53 @@
+{
+  "_id": "53QYGnIAnYZIKPgY",
+  "name": "Alchemical",
+  "type": "gear",
+  "system": {
+    "summary": "Foci",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Alchemical",
+        "srxId": 9017,
+        "category": "Foci",
+        "cost": 2000,
+        "costDisplay": "8,000",
+        "properties": [],
+        "options": [
+          "All spells"
+        ],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": null,
+        "fixedRating": 2,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [
+          "Alchemy"
+        ],
+        "alwaysUnique": true,
+        "slug": "alchemical"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!53QYGnIAnYZIKPgY"
+}

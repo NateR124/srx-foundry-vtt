@@ -1,0 +1,54 @@
+{
+  "_id": "qeIVKW3s7Y6Xikmx",
+  "name": "Synaptic Overdrive",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "Roll extra Initiative die and discard lowest",
+    "subtype": "Synaptic Booster Upgrade",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 20000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Synaptic Overdrive",
+        "srxId": 3122,
+        "category": "Bodyware",
+        "cost": 20000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Synaptic Overdrive",
+        "type": "Synaptic Booster Upgrade",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.3",
+          "value": 0.3,
+          "scale": []
+        },
+        "parentContainer": "Synaptic Booster",
+        "prereq": "Synaptic Booster",
+        "incompatible": [],
+        "grants": [],
+        "description": "Roll extra Initiative die and discard lowest",
+        "effects": [],
+        "slug": "synaptic-overdrive",
+        "variantOf": "synaptic-booster"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!qeIVKW3s7Y6Xikmx"
+}

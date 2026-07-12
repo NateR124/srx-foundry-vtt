@@ -1,0 +1,31 @@
+{
+  "_id": "Z6g6ZFiOgqkHOOtt",
+  "name": "The Matrix",
+  "type": "knowledge",
+  "system": {
+    "summary": "",
+    "description": "System architecture & capabilities, history, devices, popular games, hacker groups",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "The Matrix",
+        "srxId": 10009,
+        "type": "Knowledge Domain",
+        "type2": null,
+        "description": "System architecture & capabilities, history, devices, popular games, hacker groups",
+        "freePool": null,
+        "slug": "the-matrix"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Z6g6ZFiOgqkHOOtt"
+}

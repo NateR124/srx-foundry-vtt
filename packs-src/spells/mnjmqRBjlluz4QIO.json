@@ -1,0 +1,47 @@
+{
+  "_id": "mnjmqRBjlluz4QIO",
+  "name": "Detect Magic",
+  "type": "spell",
+  "system": {
+    "summary": "Detection",
+    "description": "Sense presence of magical effects",
+    "category": "detection",
+    "pattern": "self",
+    "duration": "sustained",
+    "range": "Self",
+    "action": "complex",
+    "resistanceAttr": "special",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Detection"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Detect Magic",
+        "srxId": 1522,
+        "category": "Detection",
+        "description": "Sense presence of magical effects",
+        "range": {
+          "raw": "Self",
+          "special": "Self"
+        },
+        "duration": "Sustained",
+        "resistance": "(10 - F)x2",
+        "attack": null,
+        "slug": "detect-magic"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "y93WvYSQK8mAWRAI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!mnjmqRBjlluz4QIO"
+}

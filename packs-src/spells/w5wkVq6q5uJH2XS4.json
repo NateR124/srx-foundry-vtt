@@ -1,0 +1,49 @@
+{
+  "_id": "w5wkVq6q5uJH2XS4",
+  "name": "Chaos",
+  "type": "spell",
+  "system": {
+    "summary": "Illusion",
+    "description": "Target has -2 Defense score and rerolls 6's on all tests, excluding resistance tests",
+    "category": "illusion",
+    "pattern": "direct",
+    "duration": "timed",
+    "range": "80m",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Illusion"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Chaos",
+        "srxId": 1511,
+        "category": "Illusion",
+        "description": "Target has -2 Defense score and rerolls 6's on all tests, excluding resistance tests",
+        "range": {
+          "raw": "80m",
+          "bands": [
+            80
+          ]
+        },
+        "duration": "10 minutes",
+        "resistance": "WIL+INT",
+        "attack": null,
+        "slug": "chaos"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "dqlrlbNPd7IOtFU1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!w5wkVq6q5uJH2XS4"
+}

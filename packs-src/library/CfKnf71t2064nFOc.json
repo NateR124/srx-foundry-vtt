@@ -1,0 +1,51 @@
+{
+  "_id": "CfKnf71t2064nFOc",
+  "name": "Weapons Specialist",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "archetype",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "archetype",
+      "catalogData": {
+        "name": "Weapons Specialist",
+        "srxId": 11022,
+        "noFlare": false,
+        "isCustom": false,
+        "isDossierGroup": false,
+        "parent": null,
+        "flares": [
+          {
+            "name": "Blaze",
+            "metatypes": [
+              "Human"
+            ],
+            "appIndex": 31
+          },
+          {
+            "name": "Pulverizer",
+            "metatypes": [
+              "Ork",
+              "Troll"
+            ],
+            "appIndex": 32
+          }
+        ],
+        "slug": "weapons-specialist"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "82fke5ZPHOqEvVwG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!CfKnf71t2064nFOc"
+}

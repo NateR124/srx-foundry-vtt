@@ -1,0 +1,68 @@
+{
+  "_id": "8dR8HMUCzrC1d0ri",
+  "name": "Channel Element",
+  "type": "talent",
+  "system": {
+    "summary": "Channeling / Yang",
+    "description": "Change attack damage to chosen type",
+    "category": "channeling",
+    "subgroup": "Yang",
+    "karma": 4,
+    "option": "Acid, Cold, Electricity, Fire",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Channel Element",
+        "srxId": 488,
+        "category": "Channeling",
+        "subcategory": "Yang",
+        "maxQty": 3,
+        "maxQtyForEachOption": 1,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Acid",
+          "Cold",
+          "Electricity",
+          "Fire"
+        ],
+        "options2": [],
+        "type": "Yang",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": "TRUE",
+        "action": "Complex",
+        "range": "Touch",
+        "duration": "Sustained",
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Change attack damage to chosen type",
+        "effects": [],
+        "slug": "channel-element"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!8dR8HMUCzrC1d0ri"
+}

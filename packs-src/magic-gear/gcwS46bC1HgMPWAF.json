@@ -1,0 +1,57 @@
+{
+  "_id": "gcwS46bC1HgMPWAF",
+  "name": "Homunculus",
+  "type": "gear",
+  "system": {
+    "summary": "Mysticism Talents",
+    "description": "",
+    "subtype": "Permanent Magical Effect",
+    "rating": 15,
+    "quantity": 1,
+    "cost": 100
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Homunculus",
+        "srxId": 9012,
+        "category": "Mysticism Talents",
+        "cost": 100,
+        "costDisplay": "Force x Force x 100",
+        "properties": [],
+        "options": [
+          "Quickness 1",
+          "Athletics 4",
+          "Close Combat 4",
+          "Perception 4",
+          "Stealth 4",
+          "+6 Armor",
+          "Astral Perception"
+        ],
+        "type": "Permanent Magical Effect",
+        "type2": "Magical Gear",
+        "type3": null,
+        "fixedRating": null,
+        "maxRating": 15,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": "Homunculus",
+        "maxQty": 0,
+        "karmaCost": null,
+        "crafted": true,
+        "equipPrereqs": [],
+        "alwaysUnique": false,
+        "slug": "homunculus"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!gcwS46bC1HgMPWAF"
+}

@@ -1,0 +1,63 @@
+{
+  "_id": "Jh7E5VUXxJhaE1kI",
+  "name": "Crack File",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / Files & Databases",
+    "description": "View, edit, copy, create, or delete file or data",
+    "category": "hacking",
+    "subgroup": "Files & Databases",
+    "karma": 3,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Crack File",
+        "srxId": 216,
+        "category": "Hacking",
+        "subcategory": "Files & Databases",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Files & Databases",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "Complex",
+        "administered": "No",
+        "access": "No",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "View, edit, copy, create, or delete file or data",
+        "effects": [],
+        "slug": "crack-file"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Jh7E5VUXxJhaE1kI"
+}

@@ -1,0 +1,64 @@
+{
+  "_id": "xTcwhc2BZ8CWXz6i",
+  "name": "Bone Density Enhancement",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "+1 Phys Health, Hardened Armor, unarmed melee DV; Improved Crit on Armor tests",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 28000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Bone Density Enhancement",
+        "srxId": 3090,
+        "category": "Bodyware",
+        "cost": 28000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Bone Density Enhancement",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.3",
+          "value": 0.3,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [
+          "Bone Lacing"
+        ],
+        "grants": [],
+        "description": "+1 Phys Health, Hardened Armor, unarmed melee DV; Improved Crit on Armor tests",
+        "effects": [
+          {
+            "key": "hardenedArmor",
+            "value": 1
+          },
+          {
+            "key": "physicalHealth",
+            "value": 1
+          }
+        ],
+        "slug": "bone-density-enhancement"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xTcwhc2BZ8CWXz6i"
+}

@@ -1,0 +1,63 @@
+{
+  "_id": "dxvMwpTPqe0gKMZX",
+  "name": "Eye in the Sky",
+  "type": "talent",
+  "system": {
+    "summary": "Vehicle / Autopilot",
+    "description": "You and vehicles on your DCC reroll 1's on Perception tests when observing ground from aerial view",
+    "category": "vehicle",
+    "subgroup": "Autopilot",
+    "karma": 5,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Eye in the Sky",
+        "srxId": 362,
+        "category": "Vehicle",
+        "subcategory": "Autopilot",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Autopilot",
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 5
+        },
+        "description": "You and vehicles on your DCC reroll 1's on Perception tests when observing ground from aerial view",
+        "effects": [],
+        "slug": "eye-in-the-sky"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!dxvMwpTPqe0gKMZX"
+}

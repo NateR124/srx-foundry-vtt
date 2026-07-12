@@ -1,0 +1,31 @@
+{
+  "_id": "FvjdeelK6rqubnzj",
+  "name": "Technomancy",
+  "type": "knowledge",
+  "system": {
+    "summary": "",
+    "description": "Technomantic abilities, Resonance flows and interactions, artificing",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "knowledge",
+      "catalogData": {
+        "name": "Technomancy",
+        "srxId": 10020,
+        "type": "Knowledge Domain",
+        "type2": null,
+        "description": "Technomantic abilities, Resonance flows and interactions, artificing",
+        "freePool": null,
+        "slug": "technomancy"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "k3U05NMxcV6GRwIz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!FvjdeelK6rqubnzj"
+}

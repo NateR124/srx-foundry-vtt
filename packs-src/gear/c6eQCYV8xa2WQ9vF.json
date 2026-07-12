@@ -1,0 +1,66 @@
+{
+  "_id": "c6eQCYV8xa2WQ9vF",
+  "name": "Suprathyroid Gland",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "+1 Body, Agility, Reaction",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 110000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Suprathyroid Gland",
+        "srxId": 3119,
+        "category": "Bodyware",
+        "cost": 110000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Suprathyroid Gland",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.3",
+          "value": 0.3,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [],
+        "grants": [],
+        "description": "+1 Body, Agility, Reaction",
+        "effects": [
+          {
+            "key": "bod",
+            "value": 1
+          },
+          {
+            "key": "agi",
+            "value": 1
+          },
+          {
+            "key": "rea",
+            "value": 1
+          }
+        ],
+        "slug": "suprathyroid-gland"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!c6eQCYV8xa2WQ9vF"
+}

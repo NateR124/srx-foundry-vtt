@@ -1,0 +1,63 @@
+{
+  "_id": "hDZtQPj7EMPVrRtM",
+  "name": "Edge: Smash & Grab",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / Files & Databases",
+    "description": "If you fail Crack File Hacking test by 4 or less, succeed at action but suffer consequences",
+    "category": "hacking",
+    "subgroup": "Files & Databases",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": true
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Edge: Smash & Grab",
+        "srxId": 230,
+        "category": "Hacking",
+        "subcategory": "Files & Databases",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Files & Databases",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": "TRUE",
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "No",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "If you fail Crack File Hacking test by 4 or less, succeed at action but suffer consequences",
+        "effects": [],
+        "slug": "edge-smash-grab"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!hDZtQPj7EMPVrRtM"
+}

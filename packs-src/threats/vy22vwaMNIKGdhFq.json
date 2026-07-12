@@ -1,0 +1,58 @@
+{
+  "_id": "vy22vwaMNIKGdhFq",
+  "name": "WASP WORKER SPIRIT",
+  "type": "threat",
+  "system": {
+    "threatRating": 2,
+    "initiative": {
+      "dice": 2,
+      "bonus": 3
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 8
+    },
+    "armor": 7,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Stinger",
+        "pool": 11,
+        "dv": 6,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Bite",
+        "pool": 9,
+        "dv": 5,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Stinger</strong>: The damage from the spirit’s Stinger attack is toxin damage – any bonuses or penalties the target has for toxin resistance tests apply to their damage resistance test. Additionally, the stinger delivers a toxin with a Power of 2. The target must make a Body + Willpower toxin resistance test with a threshold of the toxin’s Power. If they fail, the target gains the Sick status. This toxin causes the target to suffer the Immobilized and Impaired statuses. The target can repeat the toxin resistance test at the end of each Combat Turn to end the effect early. Otherwise, the Sick status ends after 1 minute. WASP FLESH FORM SPIRIT</li></ul><h3>Traits</h3><ul><li><strong>Physical Resistance</strong>: </li><li><strong>Unphased</strong>: Can’t gain Frightened or Wounded status.</li><li><strong>Toxin &amp; Disease Immunity</strong>: The spirit is immune to</li><li><strong>diseases &amp; toxins other than insecticides.</strong>: </li><li><strong>Banishing Resistance</strong>: When targeted by the Negate</li><li><strong>Mysticism power, double the spirit’s Force.</strong>: </li><li><strong>Dual Natured</strong>: Insect spirits always exist on both the</li><li><strong>astral and physical plane.</strong>: </li></ul>",
+    "tags": [
+      "critter"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "wasp-worker-spirit"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "q9e964oWjMmRYuNH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "WASP WORKER SPIRIT"
+  },
+  "_key": "!actors!vy22vwaMNIKGdhFq"
+}

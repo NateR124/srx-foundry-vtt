@@ -1,0 +1,31 @@
+{
+  "_id": "0WrUyXFNLRzEcQZy",
+  "name": "Loyal",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Put yourself in harm’s way to protect someone else when you’d both be better off if you didn’t",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Loyal",
+        "srxId": 10535,
+        "type": "Trait",
+        "type2": null,
+        "description": "Put yourself in harm’s way to protect someone else when you’d both be better off if you didn’t",
+        "options": [],
+        "slug": "loyal"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!0WrUyXFNLRzEcQZy"
+}

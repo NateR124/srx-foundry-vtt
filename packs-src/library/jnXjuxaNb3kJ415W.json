@@ -1,0 +1,30 @@
+{
+  "_id": "jnXjuxaNb3kJ415W",
+  "name": "Activist",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Fights against megacorps and champions the underprivileged or a specific political cause",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Activist",
+        "srxId": 10001,
+        "type": "Contact",
+        "type2": null,
+        "description": "Fights against megacorps and champions the underprivileged or a specific political cause",
+        "slug": "activist"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!jnXjuxaNb3kJ415W"
+}

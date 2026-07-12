@@ -1,0 +1,106 @@
+{
+  "_id": "W2mDRiDm1tmsKVyo",
+  "name": "MCT-Nissan Roto-Drone",
+  "type": "gear",
+  "system": {
+    "summary": "Drones (Aerial)",
+    "description": "",
+    "subtype": "Drones (Aerial)",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 45000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "MCT-Nissan Roto-Drone",
+        "srxId": 7601,
+        "category": "Drones (Aerial)",
+        "cost": 45000,
+        "properties": [],
+        "options": [],
+        "type": "Drones (Aerial)",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Piloting",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 1,
+          "speed": 2,
+          "body": 5,
+          "armor": 9,
+          "health": 12,
+          "defenseScoreMod": null,
+          "autoRating": 3,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Firearms,Perception,Piloting",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Combat Vehicle",
+            "value": "Built-In"
+          },
+          {
+            "name": "Smartlink (Vehicle)",
+            "value": "Built-In"
+          }
+        ],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "R",
+              "heavy": false
+            },
+            "builtIn": {
+              "weapon": "Mounted Assault Rifle",
+              "orientation": "R",
+              "retractable": false,
+              "superior": false
+            }
+          },
+          {
+            "index": 2,
+            "mount": {
+              "orientation": "F",
+              "heavy": false
+            },
+            "builtIn": null
+          }
+        ],
+        "slug": "mct-nissan-roto-drone"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!W2mDRiDm1tmsKVyo"
+}

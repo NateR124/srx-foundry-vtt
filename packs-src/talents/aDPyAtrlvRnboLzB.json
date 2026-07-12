@@ -1,0 +1,63 @@
+{
+  "_id": "aDPyAtrlvRnboLzB",
+  "name": "Register Sprite",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Infusion",
+    "description": "Gain 1 sprite (functions as agent)",
+    "category": "threading",
+    "subgroup": "Infusion",
+    "karma": 5,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Register Sprite",
+        "srxId": 322,
+        "category": "Threading",
+        "subcategory": "Infusion",
+        "maxQty": 6,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Infusion",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "-",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 5
+        },
+        "description": "Gain 1 sprite (functions as agent)",
+        "effects": [],
+        "slug": "register-sprite"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!aDPyAtrlvRnboLzB"
+}

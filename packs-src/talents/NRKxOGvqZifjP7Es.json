@@ -1,0 +1,31 @@
+{
+  "_id": "NRKxOGvqZifjP7Es",
+  "name": "Gremlins",
+  "type": "trait",
+  "system": {
+    "summary": "",
+    "description": "Horribly mess up a task that requires using technology",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "trait",
+      "catalogData": {
+        "name": "Gremlins",
+        "srxId": 10528,
+        "type": "Trait",
+        "type2": null,
+        "description": "Horribly mess up a task that requires using technology",
+        "options": [],
+        "slug": "gremlins"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WwCjT3cWh1ZOvZmE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!NRKxOGvqZifjP7Es"
+}

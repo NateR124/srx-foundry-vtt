@@ -1,0 +1,83 @@
+{
+  "_id": "xxZS2e9wsRhtHeyn",
+  "name": "Shiawase Kanmushi",
+  "type": "gear",
+  "system": {
+    "summary": "Minidrones (Terrestrial)",
+    "description": "",
+    "subtype": "Minidrones (Terrestrial)",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 3300
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Shiawase Kanmushi",
+        "srxId": 7576,
+        "category": "Minidrones (Terrestrial)",
+        "cost": 3300,
+        "properties": [],
+        "options": [],
+        "type": "Minidrones (Terrestrial)",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)",
+          "+2 to operator's Stealth",
+          "+1 to operator's Defense Score",
+          "Movement Rate: 5 meters"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": 2
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 0,
+          "speed": 0,
+          "body": 1,
+          "armor": 0,
+          "health": -2,
+          "defenseScoreMod": 1,
+          "autoRating": 2,
+          "autoDefenseScore": 2,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Perception,Stealth",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Increased Structural Integrity",
+            "value": "Built-In"
+          }
+        ],
+        "mounts": [],
+        "slug": "shiawase-kanmushi"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xxZS2e9wsRhtHeyn"
+}

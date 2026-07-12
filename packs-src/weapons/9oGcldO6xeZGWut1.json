@@ -1,0 +1,112 @@
+{
+  "_id": "9oGcldO6xeZGWut1",
+  "name": "Raynger Foldable Recurve Bow",
+  "type": "weapon",
+  "system": {
+    "summary": "Projectile Weapons / Bows",
+    "description": "",
+    "skill": "projectileWeapons",
+    "specialization": "Archery",
+    "category": "Projectile Weapons",
+    "range": "10/20/BOD x 10m (Min. 30)",
+    "properties": "Two-Handed",
+    "cost": 800,
+    "attackModes": [
+      {
+        "name": "Ranged",
+        "action": "complex",
+        "fireMode": "",
+        "acc": 0,
+        "dv": "BOD",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Raynger Foldable Recurve Bow",
+        "srxId": 4541,
+        "category": "Projectile Weapons",
+        "subcategory": "Bows",
+        "cost": 800,
+        "properties": [
+          "Two-Handed"
+        ],
+        "options": [],
+        "type": "Projectile Weapons",
+        "type2": "Bows",
+        "type3": null,
+        "skill": "Projectile Weapons",
+        "specialization": "Archery",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "10/20/BOD x 10m (Min. 30)",
+          "bands": [
+            10,
+            20,
+            {
+              "attr": "bod",
+              "mult": 10,
+              "min": 30
+            }
+          ]
+        },
+        "improvedRange": {
+          "raw": "20/40/BOD x 20m (Min. 60)",
+          "bands": [
+            20,
+            40,
+            {
+              "attr": "bod",
+              "mult": 20,
+              "min": 60
+            }
+          ]
+        },
+        "canMod": true,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 1,
+          "sawedOff": 0
+        },
+        "installedMods": [],
+        "attackModes": [
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": 0,
+            "dv": {
+              "raw": "BOD",
+              "attr": "bod",
+              "type": "P",
+              "element": null,
+              "min": null,
+              "max": 5
+            }
+          }
+        ],
+        "slug": "raynger-foldable-recurve-bow",
+        "variantOf": "recurve-bow"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "FHMz42ZuuAQogGoV",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!9oGcldO6xeZGWut1"
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "oaKG8lIF6fAlX77c",
+  "name": "Coyote",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Expert smuggler, familiar with how to cross borders with contraband",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Coyote",
+        "srxId": 10009,
+        "type": "Contact",
+        "type2": null,
+        "description": "Expert smuggler, familiar with how to cross borders with contraband",
+        "slug": "coyote"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!oaKG8lIF6fAlX77c"
+}

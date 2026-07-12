@@ -1,0 +1,55 @@
+{
+  "_id": "mQ9tFuzv0zwDhCj9",
+  "name": "Jammer - Area",
+  "type": "gear",
+  "system": {
+    "summary": "Electronics",
+    "description": "",
+    "subtype": "Electronics",
+    "rating": 6,
+    "quantity": 1,
+    "cost": 1000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Jammer - Area",
+        "srxId": 6042,
+        "category": "Electronics",
+        "cost": 1000,
+        "costDisplay": "Rating x Rating x 1,000",
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "type": "Electronics",
+        "type2": null,
+        "maxRating": 6,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "jammer-area"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!mQ9tFuzv0zwDhCj9"
+}

@@ -1,0 +1,104 @@
+{
+  "_id": "gKy63MMGKoQyqDit",
+  "name": "Fichetti Pain Inducer",
+  "type": "weapon",
+  "system": {
+    "summary": "Exotic Weapons",
+    "description": "",
+    "skill": "firearms",
+    "specialization": "Exotic Weapon - Beam",
+    "category": "Exotic Weapons",
+    "range": "20/50/80m",
+    "properties": "Illegal, Two-Handed",
+    "cost": 10500,
+    "attackModes": [
+      {
+        "name": "Ranged",
+        "action": "complex",
+        "fireMode": "",
+        "acc": 0,
+        "dv": "Special",
+        "dvType": "P",
+        "element": ""
+      }
+    ]
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "weapon",
+      "catalogData": {
+        "name": "Fichetti Pain Inducer",
+        "srxId": 4612,
+        "category": "Exotic Weapons",
+        "cost": 10500,
+        "properties": [
+          "Illegal",
+          "Two-Handed"
+        ],
+        "options": [],
+        "type": "Exotic Weapons",
+        "type2": "Beam",
+        "type3": null,
+        "skill": "Firearms",
+        "specialization": "Exotic Weapon - Beam",
+        "isLargeMelee": false,
+        "isAmmo": false,
+        "isAccessory": false,
+        "range": {
+          "raw": "20/50/80m",
+          "bands": [
+            20,
+            50,
+            80
+          ]
+        },
+        "improvedRange": null,
+        "canMod": true,
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 1,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        },
+        "installedMods": [
+          {
+            "name": "Laser Sight",
+            "modSlug": "laser-sight",
+            "mounts": [
+              4
+            ]
+          }
+        ],
+        "attackModes": [
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": 0,
+            "dv": {
+              "raw": "Special",
+              "special": "Special",
+              "type": null,
+              "element": null,
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "fichetti-pain-inducer"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CxdzX8xPeW6rU3WC",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!gKy63MMGKoQyqDit"
+}

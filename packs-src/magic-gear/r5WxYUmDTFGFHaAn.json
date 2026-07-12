@@ -1,0 +1,51 @@
+{
+  "_id": "r5WxYUmDTFGFHaAn",
+  "name": "Potency",
+  "type": "gear",
+  "system": {
+    "summary": "Foci",
+    "description": "",
+    "subtype": "Focus",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 2000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Potency",
+        "srxId": 9031,
+        "category": "Foci",
+        "cost": 2000,
+        "costDisplay": "72,000",
+        "properties": [],
+        "options": [],
+        "type": "Focus",
+        "type2": "Magical Gear",
+        "type3": "Potency",
+        "fixedRating": 6,
+        "maxRating": null,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [
+          "Alchemy"
+        ],
+        "alwaysUnique": true,
+        "slug": "potency"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!r5WxYUmDTFGFHaAn"
+}

@@ -1,0 +1,53 @@
+{
+  "_id": "3YYre4d2uDLGnK12",
+  "name": "Erika Elite Commlink",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Commlinks",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 15000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "Erika Elite Commlink",
+        "srxId": 6010,
+        "category": "Matrix Devices",
+        "subcategory": "Commlinks",
+        "cost": 15000,
+        "properties": [],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Commlinks",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": null,
+        "matrix": {
+          "dataProcessing": "1",
+          "firewall": "5",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "",
+          "rank": "8",
+          "modCapacity": ""
+        },
+        "installedEnhancements": [],
+        "slug": "erika-elite-commlink"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!3YYre4d2uDLGnK12"
+}

@@ -1,0 +1,63 @@
+{
+  "_id": "CcRYhD0Q4f8K1IHC",
+  "name": "Mana Barrier",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism / Astral",
+    "description": "Create barrier that blocks magic and astral forms",
+    "category": "mysticism",
+    "subgroup": "Astral",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Mana Barrier",
+        "srxId": 465,
+        "category": "Mysticism",
+        "subcategory": "Astral",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Astral",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": "TRUE",
+        "edgeUsage": null,
+        "hasDrainFading": "TRUE",
+        "action": "Complex",
+        "range": "Special [A]",
+        "duration": "Sustained",
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Create barrier that blocks magic and astral forms",
+        "effects": [],
+        "slug": "mana-barrier"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!CcRYhD0Q4f8K1IHC"
+}

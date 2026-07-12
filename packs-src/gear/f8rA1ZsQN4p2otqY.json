@@ -1,0 +1,59 @@
+{
+  "_id": "f8rA1ZsQN4p2otqY",
+  "name": "Reaction Enhancers",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "+Rating to Reaction",
+    "subtype": "ware",
+    "rating": 3,
+    "quantity": 1,
+    "cost": 23000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Reaction Enhancers",
+        "srxId": 3111,
+        "category": "Bodyware",
+        "cost": 23000,
+        "costDisplay": "Rating x 23,000",
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Reaction Enhancers",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": 3,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "Rating x 0.5",
+          "value": 0.5,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "+Rating to Reaction",
+        "effects": [
+          {
+            "key": "rea",
+            "value": 1
+          }
+        ],
+        "slug": "reaction-enhancers"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!f8rA1ZsQN4p2otqY"
+}

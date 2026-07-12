@@ -1,0 +1,58 @@
+{
+  "_id": "NsB5x7EKoE5YdYPI",
+  "name": "CHUPACABRA (BLOOD SPIRIT)",
+  "type": "threat",
+  "system": {
+    "threatRating": 5,
+    "initiative": {
+      "dice": 4,
+      "bonus": 8
+    },
+    "defenseScore": 6,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 16,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Bite",
+        "pool": 22,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Launch Spines",
+        "pool": 0,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Blood Thirst</strong>: Once per Initiative Pass, at the end of any enemy’s Action Phase, the chupacabra can use its Bite attack.</li><li><strong>Death from Above</strong>: The chupacabra can move across vertical surfaces and along ceilings at its Movement Rate without making any climbing tests.</li><li><strong>Drain Blood</strong>: When the chupacabra damages a target with its Bite attack, it heals 2 damage.</li><li><strong>Launch Spines</strong>: The chupacabra can launch a volley of spines out of its body. This is an AOE attack (see above) affecting everyone within 20m. The chupacabra cannot use this attack again for 10 minutes.</li><li><strong>Poisonous Bite</strong>: A target that takes damage from the chupacabra’s Bite attack is afflicted with a Power 6 toxin. The target must make a Body + Willpower toxin resistance test with a threshold of the toxin’s Power. If they fail, the target gains the Sick status. While they have the Sick status, the target also suffers the Impaired status. The target can repeat the toxin resistance test at the end of each of their Action Phases to end the effect early. Otherwise, the Sick status ends after 1 minute.</li><li><strong>Unstoppable</strong>: On their turn, the chupacabra can take 2 damage to end an ongoing effect or status on them.</li></ul><h3>Traits</h3><ul><li><strong>Physical Resistance, Toxin &amp; Disease Immunity</strong>: </li><li><strong>Unphased</strong>: Can’t gain Frightened or Wounded status.</li><li><strong>Dual Natured</strong>: The chupacabra always exists on both</li><li><strong>the astral and physical planes, and can interact with</strong>: </li><li><strong>anything on either plane. Their Armor applies to</strong>: </li><li><strong>attacks from both the physical and astral planes.</strong>: </li></ul>",
+    "tags": [
+      "critter"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "chupacabra-blood-spirit"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "q9e964oWjMmRYuNH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "CHUPACABRA (BLOOD SPIRIT)"
+  },
+  "_key": "!actors!NsB5x7EKoE5YdYPI"
+}

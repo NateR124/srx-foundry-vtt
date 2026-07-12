@@ -1,0 +1,51 @@
+{
+  "_id": "2DPGEwETffYPjYes",
+  "name": "Enchanted Preparation",
+  "type": "gear",
+  "system": {
+    "summary": "Alchemy",
+    "description": "",
+    "subtype": "magic-gear",
+    "rating": 6,
+    "quantity": 1,
+    "cost": 200
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Enchanted Preparation",
+        "srxId": 9003,
+        "category": "Alchemy",
+        "cost": 200,
+        "costDisplay": "Force x Force x 200",
+        "properties": [],
+        "options": [
+          "all spell list and mysticism powers"
+        ],
+        "type": "",
+        "type2": "Magical Gear",
+        "type3": null,
+        "fixedRating": null,
+        "maxRating": 6,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [],
+        "alwaysUnique": false,
+        "slug": "enchanted-preparation"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!2DPGEwETffYPjYes"
+}

@@ -1,0 +1,58 @@
+{
+  "_id": "JzayexpUZmW66Sk0",
+  "name": "Toxin Extractor",
+  "type": "gear",
+  "system": {
+    "summary": "Bodyware",
+    "description": "Leverage on toxin resistance",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 8000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Toxin Extractor",
+        "srxId": 3124,
+        "category": "Bodyware",
+        "cost": 8000,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Toxin Extractor",
+        "type": "",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.2",
+          "value": 0.2,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [],
+        "grants": [],
+        "description": "Leverage on toxin resistance",
+        "effects": [
+          {
+            "key": "toxins",
+            "value": 1
+          }
+        ],
+        "slug": "toxin-extractor"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!JzayexpUZmW66Sk0"
+}

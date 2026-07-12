@@ -1,0 +1,76 @@
+{
+  "_id": "g4vFpDL2BJC7DS31",
+  "name": "Mounted Exotic Weapon - Shiawase Arms pH",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Mounted Weapon",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 9500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Mounted Exotic Weapon - Shiawase Arms pH",
+        "srxId": 8540,
+        "cost": 9500,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Mounted Weapon",
+        "maxRating": null,
+        "isVisionEnhancement": false,
+        "isWeapon": true,
+        "isExoticWeapon": true,
+        "nuyenMultiplier": null,
+        "requiresMount": true,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": "Projectile Weapons",
+        "attackSpecialization": "Exotic Weapon - Sprayer",
+        "attacks": [
+          {
+            "attackType": "Ranged",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": 0,
+            "dv": {
+              "raw": "9",
+              "value": 9,
+              "type": "P",
+              "element": "Acid",
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "attackType": "AOE",
+            "action": "Complex",
+            "fireMode": null,
+            "accuracy": null,
+            "dv": {
+              "raw": "6",
+              "value": 6,
+              "type": "P",
+              "element": "Acid",
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "slug": "mounted-exotic-weapon-shiawase-arms-ph"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!g4vFpDL2BJC7DS31"
+}

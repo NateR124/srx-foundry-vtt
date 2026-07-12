@@ -1,0 +1,66 @@
+{
+  "_id": "llrahNBp2ffLIw3Y",
+  "name": "ELVEN WETWORK SPECIALIST",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 3,
+      "bonus": 6
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 11
+    },
+    "armor": 13,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Combat Knife",
+        "pool": 17,
+        "dv": 5,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Katana",
+        "pool": 19,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ingram Smartgun X Major (BF) 18 9P",
+        "pool": 16,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Ultrasound, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The wetwork specialist does not</li><li><strong>suffer recoil penalties.</strong>: </li><li><strong>Chameleon Suit</strong>: The wetwork specialist gains 1 free</li><li><strong>hit on Stealth tests.</strong>: </li><li><strong>Improved Crit</strong>: On all Close Combat tests, the</li><li><strong>wetwork specialist scores a critical hit with their Crit</strong>: </li><li><strong>Dice on a 5 or a 6.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "elven-wetwork-specialist"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "ELVEN WETWORK SPECIALIST"
+  },
+  "_key": "!actors!llrahNBp2ffLIw3Y"
+}

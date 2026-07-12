@@ -1,0 +1,83 @@
+{
+  "_id": "TlswS62puhpAGKLJ",
+  "name": "MCT Fly-Spy",
+  "type": "gear",
+  "system": {
+    "summary": "Minidrones (Aerial)",
+    "description": "",
+    "subtype": "Minidrones (Aerial)",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 7500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "MCT Fly-Spy",
+        "srxId": 7592,
+        "category": "Minidrones (Aerial)",
+        "cost": 7500,
+        "properties": [],
+        "options": [],
+        "type": "Minidrones (Aerial)",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Piloting",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)",
+          "+2 to operator's Stealth",
+          "+1 to operator's Defense Score",
+          "Movement Rate (flying): 12 meters"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": null,
+          "stealth": 2
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 3,
+          "speed": 0,
+          "body": 2,
+          "armor": 0,
+          "health": -2,
+          "defenseScoreMod": 1,
+          "autoRating": 3,
+          "autoDefenseScore": 3,
+          "dccBenefits": null,
+          "autoSkills": "Perception,Piloting,Stealth",
+          "alwaysOne": false
+        },
+        "vehicleMods": [
+          {
+            "name": "Increased Structural Integrity",
+            "value": "Built-In"
+          }
+        ],
+        "mounts": [],
+        "slug": "mct-fly-spy"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!TlswS62puhpAGKLJ"
+}

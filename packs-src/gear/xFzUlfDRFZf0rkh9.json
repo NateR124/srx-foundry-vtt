@@ -1,0 +1,93 @@
+{
+  "_id": "xFzUlfDRFZf0rkh9",
+  "name": "Sea Ray Cottonmouth",
+  "type": "gear",
+  "system": {
+    "summary": "Boats",
+    "description": "",
+    "subtype": "Boats",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 46000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle",
+      "catalogData": {
+        "name": "Sea Ray Cottonmouth",
+        "srxId": 7566,
+        "category": "Boats",
+        "cost": 46000,
+        "properties": [],
+        "options": [],
+        "type": "Boats",
+        "type2": null,
+        "type3": null,
+        "isDcc": false,
+        "skill": "Driving",
+        "specialProperties": [
+          "Cold, Stun Damage Resistance (Leverage)",
+          "AOE Damage Vulnerability (Liability)",
+          "+1 augmentation bonus to operator's Stealth"
+        ],
+        "operatorBonuses": {
+          "biotechAug": null,
+          "biotech": null,
+          "engineeringAug": null,
+          "engineering": null,
+          "stealthAug": 1,
+          "stealth": null
+        },
+        "visionEnhancements": {
+          "flareCompensation": null,
+          "lowLight": null,
+          "thermographic": null,
+          "ultrasound": null,
+          "visionMagnification": null
+        },
+        "stats": {
+          "dccRank": null,
+          "dccMaxDrones": null,
+          "handling": 2,
+          "speed": 5,
+          "body": 10,
+          "armor": 8,
+          "health": 16,
+          "defenseScoreMod": null,
+          "autoRating": 3,
+          "autoDefenseScore": 3,
+          "dccBenefits": null,
+          "autoSkills": "Driving,Perception,Stealth",
+          "alwaysOne": false
+        },
+        "vehicleMods": [],
+        "mounts": [
+          {
+            "index": 1,
+            "mount": {
+              "orientation": "F",
+              "heavy": true
+            },
+            "builtIn": null
+          },
+          {
+            "index": 2,
+            "mount": {
+              "orientation": "B",
+              "heavy": false
+            },
+            "builtIn": null
+          }
+        ],
+        "slug": "sea-ray-cottonmouth"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "2vnwmRpLOyxgAmIS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!xFzUlfDRFZf0rkh9"
+}

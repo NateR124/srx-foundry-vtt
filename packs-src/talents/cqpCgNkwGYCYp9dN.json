@@ -1,0 +1,65 @@
+{
+  "_id": "cqpCgNkwGYCYp9dN",
+  "name": "Marionette",
+  "type": "talent",
+  "system": {
+    "summary": "Threading / Fading",
+    "description": "Gain Puppet Master Hacking Talent. Use it without Access and without triggering IC.",
+    "category": "threading",
+    "subgroup": "Fading",
+    "karma": 4,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Marionette",
+        "srxId": 312,
+        "category": "Threading",
+        "subcategory": "Fading",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Fading",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "-",
+        "administered": "No",
+        "access": "No",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [
+          "Puppet Master"
+        ],
+        "cost": {
+          "karma": 4
+        },
+        "description": "Gain Puppet Master Hacking Talent. Use it without Access and without triggering IC.",
+        "effects": [],
+        "slug": "marionette"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!cqpCgNkwGYCYp9dN"
+}

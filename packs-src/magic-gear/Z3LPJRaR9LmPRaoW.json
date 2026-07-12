@@ -1,0 +1,50 @@
+{
+  "_id": "Z3LPJRaR9LmPRaoW",
+  "name": "Focus Formula",
+  "type": "gear",
+  "system": {
+    "summary": "Focus Formulae",
+    "description": "",
+    "subtype": "Focus Formula",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 5000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Focus Formula",
+        "srxId": 9053,
+        "category": "Focus Formulae",
+        "cost": 5000,
+        "properties": [],
+        "options": [
+          "All foci"
+        ],
+        "type": "Focus Formula",
+        "type2": "Magical Gear",
+        "type3": null,
+        "fixedRating": null,
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": null,
+        "maxQty": null,
+        "karmaCost": null,
+        "crafted": false,
+        "equipPrereqs": [],
+        "alwaysUnique": false,
+        "slug": "focus-formula"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Z3LPJRaR9LmPRaoW"
+}

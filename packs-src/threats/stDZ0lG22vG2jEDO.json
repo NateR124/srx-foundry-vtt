@@ -1,0 +1,98 @@
+{
+  "_id": "stDZ0lG22vG2jEDO",
+  "name": "TRANSPORT DRIVER",
+  "type": "threat",
+  "system": {
+    "threatRating": 2,
+    "initiative": {
+      "dice": 2,
+      "bonus": 6
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 10
+    },
+    "armor": 12,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Beretta 201T",
+        "pool": 11,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Assault Rifle (Rotating)",
+        "pool": 13,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Assault Rifle (Rotating)",
+        "pool": 13,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Assault Rifle (Rotating)",
+        "pool": 12,
+        "dv": 11,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Assault Rifle (Rotating)",
+        "pool": 13,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Assault Rifle (Rotating)",
+        "pool": 13,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Assault Rifle (Rotating)",
+        "pool": 12,
+        "dv": 11,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The corporate security driver does</li><li><strong>not suffer recoil penalties.</strong>: </li><li><strong>Defense Score</strong>: Due to its limited mobility, when</li><li><strong>driving the Ares Roadmaster, the corporate security</strong>: </li><li><strong>driver reduces their Defense Score to 2.</strong>: </li><li><strong>ARES ROADMASTER</strong>: </li><li><strong>TRUCK/VAN (DRIVING)</strong>: </li><li><strong>Body</strong>: 16 Handling: -</li><li><strong>Armor</strong>: 18 Speed: 3</li><li><strong>Health</strong>: 24 Wounded Limit: 12</li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "transport-driver"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "TRANSPORT DRIVER"
+  },
+  "_key": "!actors!stDZ0lG22vG2jEDO"
+}

@@ -1,0 +1,74 @@
+{
+  "_id": "PljtzNdZaIVAWMyk",
+  "name": "RENRAKU RED SAMURAI",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 2,
+      "bonus": 7
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 18,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 14,
+        "dv": 3,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Monosword",
+        "pool": 16,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Viper",
+        "pool": 14,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Yamaha Raiden Major (BF) 14 9P",
+        "pool": 13,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Ruinous Assault</strong>: If the Red Samurai does damage to a target with a melee attack, the target must make a Willpower (2) resistance test. If they fail, they gain the Impaired status.</li><li><strong>Swift</strong>: The Red Samurai can take the Run action as a Minor Action, and the Move Action as a Free action (but can still only take each once per Combat Turn). The Red Samurai does not suffer Liability on tests when they take the Run action. WATCHMAN</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The Red Samurai does not suffer</li><li><strong>recoil penalties.</strong>: </li><li><strong>Improved Crit</strong>: On attacks with their Monosword, the</li><li><strong>Red Samurai score a critical hit with their Crit Dice on</strong>: </li><li><strong>a 5 or a 6, and they gain 1 additional hit on a crit.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "renraku-red-samurai"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "RENRAKU RED SAMURAI"
+  },
+  "_key": "!actors!PljtzNdZaIVAWMyk"
+}

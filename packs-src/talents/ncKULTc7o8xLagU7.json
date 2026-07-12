@@ -1,0 +1,65 @@
+{
+  "_id": "ncKULTc7o8xLagU7",
+  "name": "Killing Hands",
+  "type": "talent",
+  "system": {
+    "summary": "Channeling / Yin",
+    "description": "Gain Martial Arts Training Weapons Talent. +2 DV to unarmed attacks.",
+    "category": "channeling",
+    "subgroup": "Yin",
+    "karma": 5,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Killing Hands",
+        "srxId": 506,
+        "category": "Channeling",
+        "subcategory": "Yin",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Yin",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [
+          "Martial Arts Training"
+        ],
+        "cost": {
+          "karma": 5
+        },
+        "description": "Gain Martial Arts Training Weapons Talent. +2 DV to unarmed attacks.",
+        "effects": [],
+        "slug": "killing-hands"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!ncKULTc7o8xLagU7"
+}

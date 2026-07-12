@@ -1,0 +1,64 @@
+{
+  "_id": "NiRcC2nqceWAhfMJ",
+  "name": "Skill Mastery: Seasoned Pro",
+  "type": "talent",
+  "system": {
+    "summary": "General",
+    "description": "Reduce dice pool by 2 to gain 1 hit",
+    "category": "general",
+    "subgroup": "",
+    "karma": 7,
+    "option": "Skill Mastery Skills",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Skill Mastery: Seasoned Pro",
+        "srxId": 67,
+        "category": "General",
+        "maxQty": 1,
+        "maxQtyForEachOption": 1,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Skill Mastery Skills"
+        ],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": "TRUE",
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 7
+        },
+        "description": "Reduce dice pool by 2 to gain 1 hit",
+        "effects": [],
+        "slug": "skill-mastery-seasoned-pro"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!NiRcC2nqceWAhfMJ"
+}

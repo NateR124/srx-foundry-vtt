@@ -1,0 +1,49 @@
+{
+  "_id": "8kOIFHWD7hOAcJWi",
+  "name": "Inebriate",
+  "type": "spell",
+  "system": {
+    "summary": "Health",
+    "description": "Target gains Impaired status",
+    "category": "health",
+    "pattern": "direct",
+    "duration": "instantaneous",
+    "range": "30m",
+    "action": "complex",
+    "resistanceAttr": "wil",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Health"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Inebriate",
+        "srxId": 1540,
+        "category": "Health",
+        "description": "Target gains Impaired status",
+        "range": {
+          "raw": "30m",
+          "bands": [
+            30
+          ]
+        },
+        "duration": "Instantaneous",
+        "resistance": "WIL+BOD",
+        "attack": null,
+        "slug": "inebriate"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "81q0dM8ktqbFvvhu",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!8kOIFHWD7hOAcJWi"
+}

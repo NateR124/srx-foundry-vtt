@@ -1,0 +1,73 @@
+{
+  "_id": "vZ6N6JJhtNIG9SfY",
+  "name": "Cyber Gun (Off-Hand)",
+  "type": "gear",
+  "system": {
+    "summary": "Cyberlimbs / Cyberarms",
+    "description": "Hidden gun built-in to your arm",
+    "subtype": "Cyberarm Upgrade",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Cyber Gun (Off-Hand)",
+        "srxId": 3062,
+        "category": "Cyberlimbs",
+        "subcategory": "Cyberarms",
+        "cost": 0,
+        "costDisplay": "Per Option: 4k/10k/10k",
+        "properties": [],
+        "options": [
+          "Pistol",
+          "SMG",
+          "Shotgun"
+        ],
+        "dictionaryName": "Cyber Gun (Off-Hand)Cyberarm Upgrade",
+        "type": "Cyberarm Upgrade",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": 2,
+        "nuyenScale": [
+          4000,
+          10000,
+          10000
+        ],
+        "essence": {
+          "display": "0",
+          "value": 0,
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        },
+        "parentContainer": "Cyberarm (Off-Hand)",
+        "prereq": "DNI (Direct Neural Interface),Cyberarm (Off-Hand)",
+        "incompatible": [
+          "Cyber Holster (Off-Hand)",
+          "Grapple Gun (Off-Hand)",
+          "Gyroarm (Off-Hand)Cyberarm Upgrade",
+          "Smuggling Compartment (Off-Hand)Cyberarm Upgrade"
+        ],
+        "grants": [],
+        "description": "Hidden gun built-in to your arm",
+        "effects": [],
+        "slug": "cyber-gun-off-hand",
+        "variantOf": "cyberarm-off-hand"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!vZ6N6JJhtNIG9SfY"
+}

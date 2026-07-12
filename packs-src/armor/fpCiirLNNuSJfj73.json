@@ -1,0 +1,41 @@
+{
+  "_id": "fpCiirLNNuSJfj73",
+  "name": "Chameleon Suit",
+  "type": "armor",
+  "system": {
+    "summary": "",
+    "description": "",
+    "rating": 7,
+    "hardened": 0,
+    "heavy": false,
+    "shield": false,
+    "equipped": false,
+    "cost": 29000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "armor",
+      "catalogData": {
+        "name": "Chameleon Suit",
+        "srxId": 4010,
+        "cost": 29000,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "rating": 7,
+        "hardened": 0,
+        "heavy": false,
+        "shield": false,
+        "slug": "chameleon-suit"
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!fpCiirLNNuSJfj73"
+}

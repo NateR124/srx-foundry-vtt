@@ -1,0 +1,43 @@
+{
+  "_id": "JdiO3HvLZ0tGo45Z",
+  "name": "Full Body Armor",
+  "type": "armor",
+  "system": {
+    "summary": "",
+    "description": "",
+    "rating": 12,
+    "hardened": 3,
+    "heavy": true,
+    "shield": false,
+    "equipped": false,
+    "cost": 16500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "armor",
+      "catalogData": {
+        "name": "Full Body Armor",
+        "srxId": 4011,
+        "cost": 16500,
+        "properties": [
+          "Illegal",
+          "Heavy",
+          "Hardened (3)"
+        ],
+        "options": [],
+        "rating": 12,
+        "hardened": 3,
+        "heavy": true,
+        "shield": false,
+        "slug": "full-body-armor"
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!JdiO3HvLZ0tGo45Z"
+}

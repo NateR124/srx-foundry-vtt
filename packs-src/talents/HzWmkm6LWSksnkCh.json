@@ -1,0 +1,63 @@
+{
+  "_id": "HzWmkm6LWSksnkCh",
+  "name": "Decelerate",
+  "type": "talent",
+  "system": {
+    "summary": "Hacking / Weapons & Cyberware",
+    "description": "Reduce Initiative of Wired Reflexes user by net hits x2",
+    "category": "hacking",
+    "subgroup": "Weapons & Cyberware",
+    "karma": 3,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Decelerate",
+        "srxId": 221,
+        "category": "Hacking",
+        "subcategory": "Weapons & Cyberware",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Weapons & Cyberware",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": "TRUE",
+        "matrixTest": "TRUE",
+        "matrixAction": "Complex",
+        "administered": "Yes",
+        "access": "Special",
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 3
+        },
+        "description": "Reduce Initiative of Wired Reflexes user by net hits x2",
+        "effects": [],
+        "slug": "decelerate"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!HzWmkm6LWSksnkCh"
+}

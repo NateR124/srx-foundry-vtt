@@ -1,0 +1,54 @@
+{
+  "_id": "FyJ7656m4QaiC3so",
+  "name": "Hydraulic Jacks",
+  "type": "gear",
+  "system": {
+    "summary": "Cyberlimbs / Cyberlegs",
+    "description": "Double jump distance, Leverage on jumping and falling damage resistance tests",
+    "subtype": "Cyberleg Upgrade",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 9500
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Hydraulic Jacks",
+        "srxId": 3081,
+        "category": "Cyberlimbs",
+        "subcategory": "Cyberlegs",
+        "cost": 9500,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Hydraulic Jacks",
+        "type": "Cyberleg Upgrade",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0",
+          "value": 0,
+          "scale": []
+        },
+        "parentContainer": "Cyberleg",
+        "prereq": "DNI (Direct Neural Interface),Cyberleg,Cyberleg (Off-Leg)",
+        "incompatible": [],
+        "grants": [],
+        "description": "Double jump distance, Leverage on jumping and falling damage resistance tests",
+        "effects": [],
+        "slug": "hydraulic-jacks"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!FyJ7656m4QaiC3so"
+}

@@ -1,0 +1,45 @@
+{
+  "_id": "yrapY2OfPIIUmsMc",
+  "name": "Low-Light",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Vision Enhancement",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 750
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "vehicle-mod",
+      "catalogData": {
+        "name": "Low-Light",
+        "srxId": 8515,
+        "cost": 750,
+        "properties": [],
+        "options": [],
+        "type": "Vision Enhancement",
+        "maxRating": null,
+        "isVisionEnhancement": true,
+        "isWeapon": false,
+        "isExoticWeapon": false,
+        "nuyenMultiplier": null,
+        "requiresMount": false,
+        "requiresHeavyMount": false,
+        "prereq": null,
+        "attackSkill": null,
+        "attackSpecialization": null,
+        "attacks": [],
+        "slug": "low-light"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eBNJiDAjzj78RBi5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!yrapY2OfPIIUmsMc"
+}

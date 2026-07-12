@@ -1,0 +1,82 @@
+{
+  "_id": "sWwq8wuNKWqJBUXP",
+  "name": "ORK GANGER",
+  "type": "threat",
+  "system": {
+    "threatRating": 2,
+    "initiative": {
+      "dice": 2,
+      "bonus": 4
+    },
+    "defenseScore": 2,
+    "health": {
+      "value": 0,
+      "max": 11
+    },
+    "armor": 16,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Fist",
+        "pool": 12,
+        "dv": 5,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Spiked Club",
+        "pool": 12,
+        "dv": 6,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Power",
+        "pool": 12,
+        "dv": 8,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "HK-227 Major (SA) 12 8P",
+        "pool": 11,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "HK-227 Major (SA) 12 8P",
+        "pool": 10,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Spray n’ Pray</strong>: When attacking with a BF or FA firing mode, the ganger can reduce their attack’s DV by 1 to gain +2 on their attack test.</li><li><strong>Focused Rage</strong>: The ork ganger has Leverage on the first attack they make after gaining the Wounded status.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light</strong>: </li><li><strong>Mash the Trigger</strong>: The ganger does not suffer recoil</li><li><strong>penalties.</strong>: </li><li><strong>Improved Crit</strong>: On attack tests, the ork ganger scores</li><li><strong>a critical hit with their Crit Dice on a 5 or a 6.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "ork-ganger"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "ORK GANGER"
+  },
+  "_key": "!actors!sWwq8wuNKWqJBUXP"
+}

@@ -1,0 +1,82 @@
+{
+  "_id": "AK5UFPCPUVCkco0B",
+  "name": "TRIAD SOLDIER",
+  "type": "threat",
+  "system": {
+    "threatRating": 2,
+    "initiative": {
+      "dice": 2,
+      "bonus": 3
+    },
+    "defenseScore": 3,
+    "health": {
+      "value": 0,
+      "max": 8
+    },
+    "armor": 14,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Knucks",
+        "pool": 10,
+        "dv": 4,
+        "dvType": "S",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Wakizashi",
+        "pool": 12,
+        "dv": 5,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares Light Fire 70",
+        "pool": 13,
+        "dv": 7,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares MP-5 TX Major (SA) 12 8P",
+        "pool": 12,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Ares MP-5 TX Major (SA) 12 8P",
+        "pool": 11,
+        "dv": 10,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Thermographic, Vision Magnification</strong>: </li><li><strong>Mash the Trigger</strong>: The soldier does not suffer recoil</li><li><strong>penalties.</strong>: </li></ul>",
+    "tags": [
+      "npc"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "triad-soldier"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "hJ8LzvSsxegRfkR2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "TRIAD SOLDIER"
+  },
+  "_key": "!actors!AK5UFPCPUVCkco0B"
+}

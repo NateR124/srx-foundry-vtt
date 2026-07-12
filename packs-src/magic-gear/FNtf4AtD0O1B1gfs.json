@@ -1,0 +1,51 @@
+{
+  "_id": "FNtf4AtD0O1B1gfs",
+  "name": "Preparation",
+  "type": "gear",
+  "system": {
+    "summary": "Alchemy (Crafted)",
+    "description": "",
+    "subtype": "magic-gear",
+    "rating": 6,
+    "quantity": 1,
+    "cost": 10
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "magic-gear",
+      "catalogData": {
+        "name": "Preparation",
+        "srxId": 9050,
+        "category": "Alchemy (Crafted)",
+        "cost": 10,
+        "costDisplay": "Force x Force x 10",
+        "properties": [],
+        "options": [
+          "Your spell list and mysticism powers"
+        ],
+        "type": "",
+        "type2": "Magical Gear",
+        "type3": null,
+        "fixedRating": null,
+        "maxRating": 6,
+        "ratingSquared": true,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "talentPrereq": "Alchemy",
+        "maxQty": 0,
+        "karmaCost": null,
+        "crafted": true,
+        "equipPrereqs": [],
+        "alwaysUnique": false,
+        "slug": "preparation"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "wHJ3t2szFUEcrqGJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!FNtf4AtD0O1B1gfs"
+}

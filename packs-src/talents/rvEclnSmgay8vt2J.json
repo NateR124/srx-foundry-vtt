@@ -1,0 +1,77 @@
+{
+  "_id": "rvEclnSmgay8vt2J",
+  "name": "Astral Projection",
+  "type": "talent",
+  "system": {
+    "summary": "Mysticism / Astral",
+    "description": "Leave body and project into the astral plane",
+    "category": "mysticism",
+    "subgroup": "Astral",
+    "karma": 6,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Astral Projection",
+        "srxId": 445,
+        "category": "Mysticism",
+        "subcategory": "Astral",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "Astral",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": "Complex",
+        "range": "Self",
+        "duration": "(MAG) x 2 hours",
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Astral Perception (Mysticism Talent), Essence 5",
+        "prereq": {
+          "op": "and",
+          "terms": [
+            {
+              "kind": "talent",
+              "name": "Astral Perception",
+              "categoryHint": "Mysticism Talent"
+            },
+            {
+              "kind": "rating",
+              "subject": "Essence",
+              "min": 5
+            }
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 6
+        },
+        "description": "Leave body and project into the astral plane",
+        "effects": [],
+        "slug": "astral-projection"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!rvEclnSmgay8vt2J"
+}

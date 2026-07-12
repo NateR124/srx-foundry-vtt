@@ -1,0 +1,63 @@
+{
+  "_id": "hZXRLYWUdPJi5ZJu",
+  "name": "Speed Strikes",
+  "type": "talent",
+  "system": {
+    "summary": "Weapons / CC",
+    "description": "Use Reaction/2 for unarmed attack damage",
+    "category": "weapons",
+    "subgroup": "CC",
+    "karma": 7,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Speed Strikes",
+        "srxId": 163,
+        "category": "Weapons",
+        "subcategory": "CC",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": "CC",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 7
+        },
+        "description": "Use Reaction/2 for unarmed attack damage",
+        "effects": [],
+        "slug": "speed-strikes"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!hZXRLYWUdPJi5ZJu"
+}

@@ -1,0 +1,55 @@
+{
+  "_id": "42kjJIsCFpcYleNQ",
+  "name": "Cortex Bomb",
+  "type": "gear",
+  "system": {
+    "summary": "Headware",
+    "description": "Bomb implanted in your head",
+    "subtype": "ware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 25000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Cortex Bomb",
+        "srxId": 3028,
+        "category": "Headware",
+        "cost": 25000,
+        "properties": [
+          "Illegal"
+        ],
+        "options": [],
+        "dictionaryName": "Cortex Bomb",
+        "type": "",
+        "type2": null,
+        "wareType": "Cyberware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.1",
+          "value": 0.1,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [],
+        "grants": [],
+        "description": "Bomb implanted in your head",
+        "effects": [],
+        "slug": "cortex-bomb"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!42kjJIsCFpcYleNQ"
+}

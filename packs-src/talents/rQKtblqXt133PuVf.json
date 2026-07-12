@@ -1,0 +1,67 @@
+{
+  "_id": "rQKtblqXt133PuVf",
+  "name": "Improved Physical Attribute",
+  "type": "talent",
+  "system": {
+    "summary": "Channeling / Yin",
+    "description": "+1 to chosen attribute",
+    "category": "channeling",
+    "subgroup": "Yin",
+    "karma": 10,
+    "option": "Body, Agility, Reaction",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Improved Physical Attribute",
+        "srxId": 501,
+        "category": "Channeling",
+        "subcategory": "Yin",
+        "maxQty": 5,
+        "maxQtyForEachOption": 3,
+        "uniqueKarmaScale": [],
+        "options": [
+          "Body",
+          "Agility",
+          "Reaction"
+        ],
+        "options2": [],
+        "type": "Yin",
+        "type2": null,
+        "activeAbility": null,
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 10
+        },
+        "description": "+1 to chosen attribute",
+        "effects": [],
+        "slug": "improved-physical-attribute"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!rQKtblqXt133PuVf"
+}

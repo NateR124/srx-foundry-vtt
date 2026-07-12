@@ -1,0 +1,36 @@
+{
+  "_id": "z53CCS0Cl8XBbdDq",
+  "name": "Analytics Engine",
+  "type": "gear",
+  "system": {
+    "summary": "",
+    "description": "",
+    "subtype": "Cyberdeck Mod",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 10000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear-enhancement",
+      "catalogData": {
+        "name": "Analytics Engine",
+        "srxId": 7013,
+        "cost": 10000,
+        "properties": [],
+        "options": [],
+        "enhancementType": 3,
+        "type": "Cyberdeck Mod",
+        "description": null,
+        "slug": "analytics-engine"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CfAYFTllX77UHdGc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!z53CCS0Cl8XBbdDq"
+}

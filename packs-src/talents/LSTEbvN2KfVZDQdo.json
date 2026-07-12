@@ -1,0 +1,81 @@
+{
+  "_id": "LSTEbvN2KfVZDQdo",
+  "name": "Great Form Binding",
+  "type": "talent",
+  "system": {
+    "summary": "Conjuring",
+    "description": "Permanently bind significantly more powerful elemental",
+    "category": "conjuring",
+    "subgroup": "",
+    "karma": 6,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Great Form Binding",
+        "srxId": 419,
+        "category": "Conjuring",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Bind Elemental (Conjuring Talent), Conjuring 6, Magic 4",
+        "prereq": {
+          "op": "and",
+          "terms": [
+            {
+              "kind": "talent",
+              "name": "Bind Elemental",
+              "categoryHint": "Conjuring Talent"
+            },
+            {
+              "kind": "rating",
+              "subject": "Conjuring",
+              "min": 6
+            },
+            {
+              "kind": "rating",
+              "subject": "Magic",
+              "min": 4
+            }
+          ]
+        },
+        "grants": [],
+        "cost": {
+          "karma": 6
+        },
+        "description": "Permanently bind significantly more powerful elemental",
+        "effects": [],
+        "slug": "great-form-binding"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!LSTEbvN2KfVZDQdo"
+}

@@ -1,0 +1,66 @@
+{
+  "_id": "h3eT0sDLFIyUZRw6",
+  "name": "THUNDERBIRD",
+  "type": "threat",
+  "system": {
+    "threatRating": 4,
+    "initiative": {
+      "dice": 2,
+      "bonus": 7
+    },
+    "defenseScore": 4,
+    "health": {
+      "value": 0,
+      "max": 12
+    },
+    "armor": 13,
+    "body": 1,
+    "attacks": [
+      {
+        "name": "Bite",
+        "pool": 13,
+        "dv": 12,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Claws",
+        "pool": 16,
+        "dv": 9,
+        "dvType": "P",
+        "element": "",
+        "action": "major"
+      },
+      {
+        "name": "Lightning Strike",
+        "pool": 18,
+        "dv": 8,
+        "dvType": "P",
+        "element": "electricity",
+        "action": "major"
+      }
+    ],
+    "notes": "<h3>Abilities</h3><ul><li><strong>Lightning Strike</strong>: Once per Combat Turn, the thunderbird can use its Lightning Strike attack. This is a ranged attack, with a range of 30/75/150m.</li><li><strong>Swift</strong>: The thunderbird can take the Run action as a Minor Action, and the Move Action as a Free action (but can still only take each once per Combat Turn). The thunderbird does not suffer Liability on tests when they take the Run action.</li></ul><h3>Traits</h3><ul><li><strong>Vision Enhancements</strong>: Flare Compensation, Low-</li><li><strong>Light, Vision Magnification</strong>: </li><li><strong>Dual Natured</strong>: The thunderbird always exists on both</li><li><strong>the astral and physical planes, and can interact with</strong>: </li><li><strong>anything on either plane. Their Armor applies to</strong>: </li><li><strong>attacks from both the physical and astral planes.</strong>: </li></ul>",
+    "tags": [
+      "critter"
+    ]
+  },
+  "flags": {
+    "srx": {
+      "needsSchema": false,
+      "srxId": "thunderbird"
+    }
+  },
+  "items": [],
+  "effects": [],
+  "folder": "q9e964oWjMmRYuNH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "prototypeToken": {
+    "name": "THUNDERBIRD"
+  },
+  "_key": "!actors!h3eT0sDLFIyUZRw6"
+}

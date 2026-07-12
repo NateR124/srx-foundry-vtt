@@ -1,0 +1,30 @@
+{
+  "_id": "FG7MNpCVEdhFPbs7",
+  "name": "Mechanic",
+  "type": "contact",
+  "system": {
+    "summary": "",
+    "description": "Expert on all manner of vehicles and drones, and can repair them or track down rare parts",
+    "cost": 0
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "contact",
+      "catalogData": {
+        "name": "Mechanic",
+        "srxId": 10016,
+        "type": "Contact",
+        "type2": null,
+        "description": "Expert on all manner of vehicles and drones, and can repair them or track down rare parts",
+        "slug": "mechanic"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "RcEhKYZH24sw7j09",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!FG7MNpCVEdhFPbs7"
+}

@@ -1,0 +1,62 @@
+{
+  "_id": "3E4eIh9XKxuRs7gx",
+  "name": "Hawk Eyes",
+  "type": "gear",
+  "system": {
+    "summary": "Senseware / Eyeware",
+    "description": "Vision Magnification Enhancement",
+    "subtype": "Eyeware",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 1250
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "ware",
+      "catalogData": {
+        "name": "Hawk Eyes",
+        "srxId": 3012,
+        "category": "Senseware",
+        "subcategory": "Eyeware",
+        "cost": 1250,
+        "properties": [],
+        "options": [],
+        "dictionaryName": "Hawk Eyes",
+        "type": "Eyeware",
+        "type2": null,
+        "wareType": "Bioware",
+        "canRepurchase": false,
+        "maxRating": null,
+        "uniqueScale": null,
+        "nuyenScale": [],
+        "essence": {
+          "display": "0.1",
+          "value": 0.1,
+          "scale": []
+        },
+        "parentContainer": null,
+        "prereq": null,
+        "incompatible": [
+          "Cybereyes",
+          "Vision Magnification"
+        ],
+        "grants": [],
+        "description": "Vision Magnification Enhancement",
+        "effects": [
+          {
+            "key": "visionMagnification",
+            "value": 1
+          }
+        ],
+        "slug": "hawk-eyes"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mvkqYvwE3x2SMwoz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!3E4eIh9XKxuRs7gx"
+}

@@ -1,0 +1,60 @@
+{
+  "_id": "fjp567onVGGVctyV",
+  "name": "MCT 360 Cyberdeck",
+  "type": "gear",
+  "system": {
+    "summary": "Matrix Devices / Cyberdecks",
+    "description": "",
+    "subtype": "Matrix Devices",
+    "rating": 0,
+    "quantity": 1,
+    "cost": 45000
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "gear",
+      "catalogData": {
+        "name": "MCT 360 Cyberdeck",
+        "srxId": 6020,
+        "category": "Matrix Devices",
+        "subcategory": "Cyberdecks",
+        "cost": 45000,
+        "properties": [
+          "Restricted"
+        ],
+        "options": [],
+        "type": "Matrix Devices",
+        "type2": "Cyberdecks",
+        "maxRating": null,
+        "ratingSquared": false,
+        "uniqueScale": null,
+        "uniqueNuyenScale": [],
+        "capacity": 0,
+        "enhancementType": 3,
+        "matrix": {
+          "dataProcessing": "",
+          "firewall": "",
+          "hotSimFirewall": "",
+          "hackingTests": "",
+          "agents": "2",
+          "rank": "17",
+          "modCapacity": "2"
+        },
+        "installedEnhancements": [
+          {
+            "name": "Malware",
+            "value": "Y"
+          }
+        ],
+        "slug": "mct-360-cyberdeck"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "pbbeO4rnhMi0QcIf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!fjp567onVGGVctyV"
+}

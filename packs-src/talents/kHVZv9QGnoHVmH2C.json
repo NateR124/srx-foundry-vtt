@@ -1,0 +1,62 @@
+{
+  "_id": "kHVZv9QGnoHVmH2C",
+  "name": "Aggressive Driving",
+  "type": "talent",
+  "system": {
+    "summary": "Vehicle",
+    "description": "Reroll 1's on handling test with Ramming, Box In, or Force Crash",
+    "category": "vehicle",
+    "subgroup": "",
+    "karma": 6,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Aggressive Driving",
+        "srxId": 344,
+        "category": "Vehicle",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": null,
+        "prereq": null,
+        "grants": [],
+        "cost": {
+          "karma": 6
+        },
+        "description": "Reroll 1's on handling test with Ramming, Box In, or Force Crash",
+        "effects": [],
+        "slug": "aggressive-driving"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!kHVZv9QGnoHVmH2C"
+}

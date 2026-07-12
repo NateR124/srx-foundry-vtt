@@ -1,0 +1,49 @@
+{
+  "_id": "vWobakZA6ZMa9rwE",
+  "name": "Magic Fingers",
+  "type": "spell",
+  "system": {
+    "summary": "Manipulation",
+    "description": "Create and control invisible, floating hands",
+    "category": "manipulation",
+    "pattern": "direct",
+    "duration": "timed",
+    "range": "30m",
+    "action": "complex",
+    "resistanceAttr": "",
+    "dvFormula": "nf+1",
+    "dvType": "S",
+    "element": "",
+    "drainSkill": "sorcery",
+    "physicalDrain": false,
+    "keywords": "Manipulation"
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "spell",
+      "catalogData": {
+        "name": "Magic Fingers",
+        "srxId": 1547,
+        "category": "Manipulation",
+        "description": "Create and control invisible, floating hands",
+        "range": {
+          "raw": "30m",
+          "bands": [
+            30
+          ]
+        },
+        "duration": "10 minutes",
+        "resistance": null,
+        "attack": null,
+        "slug": "magic-fingers"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7UPq2yvvIYDMGwdo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!vWobakZA6ZMa9rwE"
+}

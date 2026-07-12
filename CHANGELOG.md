@@ -3,6 +3,23 @@
 All notable changes to the SRX (Unofficial) Foundry VTT system. Versions follow
 `MAJOR.MINOR.PATCH`; the system targets Foundry **v14** (verified 14.364).
 
+## 1.0.0 — 2026-07-12 — Open-source release: full SRX compendium bundled
+
+The SRX creator granted permission to redistribute SRX-derived catalog content,
+so the full content compendium now ships **inside the system** — reversing the
+prior bring-your-own-data model. Nine compendium packs are bundled and
+registered:
+
+### Added
+- **Bundled content packs (9):** `weapons` (150), `armor` (17),
+  `gear` (Gear & Augments, 408), `spells` (79), `magic-gear` (137),
+  `talents` (Talents & Traits, 564), `library` (Contacts & Knowledge, 88),
+  `pregens` (Pregen Characters, 65), and `threats` (Threats & Critters, 100) —
+  1608 documents total, pre-foldered for browsing.
+- **Compendium foldering** in `system.json`: `SRX — Rules & Gear` (Item packs)
+  and `SRX — NPCs & Pregens` (pregens + threats), alongside the existing
+  `SRX — Help & Onboarding` folder.
+
 ## 0.5.0 — 2026-07-11 — Wave-1 integration + release prep
 
 Milestones **M0–M7 code-complete and integrated**; **M8 release prep** in

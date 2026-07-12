@@ -1,0 +1,65 @@
+{
+  "_id": "Y4KdoaEltGXSBIO0",
+  "name": "Summon Spirit",
+  "type": "talent",
+  "system": {
+    "summary": "Conjuring",
+    "description": "Conjuring talent for shamans. Summon spirit to provide 1 service.",
+    "category": "conjuring",
+    "subgroup": "",
+    "karma": 0,
+    "option": "",
+    "isEdgeAction": false
+  },
+  "flags": {
+    "srx": {
+      "catalogType": "talent",
+      "catalogData": {
+        "name": "Summon Spirit",
+        "srxId": 433,
+        "category": "Conjuring",
+        "maxQty": 1,
+        "maxQtyForEachOption": null,
+        "uniqueKarmaScale": [],
+        "options": [],
+        "options2": [],
+        "type": null,
+        "type2": null,
+        "activeAbility": "TRUE",
+        "skillMastery": null,
+        "addlSkillMastery": null,
+        "alchemy": null,
+        "edgeUsage": null,
+        "hasDrainFading": null,
+        "action": null,
+        "range": null,
+        "duration": null,
+        "resistance": null,
+        "matrixProgram": null,
+        "matrixTest": null,
+        "matrixAction": null,
+        "administered": null,
+        "access": null,
+        "prereqRaw": "Shamanic Tradition",
+        "prereq": {
+          "kind": "tradition",
+          "name": "Shamanic Tradition"
+        },
+        "grants": [],
+        "cost": {
+          "karma": 0
+        },
+        "description": "Conjuring talent for shamans. Summon spirit to provide 1 service.",
+        "effects": [],
+        "slug": "summon-spirit"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "7Jbc3DAC8Gx0aVg3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!items!Y4KdoaEltGXSBIO0"
+}
