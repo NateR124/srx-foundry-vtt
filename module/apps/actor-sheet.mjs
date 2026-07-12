@@ -2,6 +2,7 @@ import { SRX } from "../config.mjs";
 import { restoreNullNumbers } from "./form-utils.mjs";
 import { oneTimeGrants } from "../rules/metatype.mjs";
 import { getMatrixState, personaMds, personaInterfaceMods } from "../matrix/persona.mjs";
+import { fociPanelData, bondFocus } from "../magic/foci.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
@@ -39,6 +40,7 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
       endSustain: SrxCharacterSheet.#onEndSustain,
       toggleMode: SrxCharacterSheet.#onToggleMode,
       toggleFocusActive: SrxCharacterSheet.#onToggleFocusActive,
+      bondFocus: SrxCharacterSheet.#onBondFocus,
       matrixConnect: SrxCharacterSheet.#onMatrixConnect,
       matrixDisconnect: SrxCharacterSheet.#onMatrixDisconnect,
       matrixSwitch: SrxCharacterSheet.#onMatrixSwitch,
@@ -192,7 +194,8 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
       astralState: actor.getFlag("srx", "astralState") ?? "physical",
       qiUses: actor.getFlag("srx", "qiUses") ?? 0,
       sustainCount: sustained.length,
-      sustained
+      sustained,
+      fociPanel: fociPanelData(actor)
     };
 
     context.metatypes = Object.entries(SRX.metatypes).map(([key, def]) => ({
@@ -592,6 +595,14 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
     const item = this.document.items.get(target.dataset.itemId);
     if (!item || item.type !== "focus") return null;
     await item.update({ "system.active": !item.system.active });
+    return this.render();
+  }
+
+  /** Intent (once): bond a focus so it can be activated (UX-FOCI.md). */
+  static async #onBondFocus(_event, target) {
+    const item = this.document.items.get(target.dataset.itemId);
+    if (!item || item.type !== "focus") return null;
+    await bondFocus(item);
     return this.render();
   }
 }

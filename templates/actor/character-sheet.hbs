@@ -365,16 +365,31 @@
         </li>
         {{/each}}
       </ul>
-      <h3>{{localize "SRX.Sheet.foci"}}
+      <h3 class="foci-header">{{localize "SRX.Sheet.foci"}}
+        <span class="foci-count {{#if magic.fociPanel.over}}over{{/if}}"
+              data-tooltip="{{localize 'SRX.Foci.limitHint'}}">{{magic.fociPanel.activeCount}} / {{magic.fociPanel.safeLimit}}</span>
         {{#if isBuild}}<a class="item-control" data-action="createItem" data-type="focus"><i class="fa-solid fa-plus"></i></a>{{/if}}
       </h3>
+      {{#if magic.fociPanel.over}}
+      <p class="foci-overlimit-note"><i class="fa-solid fa-triangle-exclamation"></i>{{localize "SRX.Foci.overLimitHint"}}</p>
+      {{/if}}
       <ul class="item-list foci">
-        {{#each items.foci}}
-        <li>
-          <a class="equip {{#if this.system.active}}equipped{{/if}}" data-action="toggleFocusActive" data-item-id="{{this.id}}" title="{{localize 'SRX.Sheet.focusActiveToggle'}}"><i class="fa-solid fa-wand-sparkles"></i></a>
+        {{#each magic.fociPanel.foci}}
+        <li class="{{#if this.overLimit}}over-limit{{/if}}">
+          <a class="focus-toggle {{#if this.active}}active{{/if}}{{#unless this.bonded}} locked{{/unless}}"
+             data-action="toggleFocusActive" data-item-id="{{this.id}}" aria-pressed="{{this.active}}"
+             data-tooltip="{{#if this.bonded}}{{localize 'SRX.Sheet.focusActiveToggle'}}{{else}}{{localize 'SRX.Foci.bondFirst'}}{{/if}}">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </a>
           <span class="item-name" data-action="editItem" data-item-id="{{this.id}}">{{this.name}}</span>
-          <span class="summary">F{{this.system.force}} · {{this.system.focusType}}
-            {{#if this.system.bonded}}· {{localize "SRX.Item.bonded"}}{{/if}}
+          <span class="summary">F{{this.force}} · {{this.focusType}}</span>
+          <span class="focus-tags">
+            {{#if this.bonded}}
+              <span class="focus-chip bonded" data-tooltip="{{localize 'SRX.Foci.bondedHint'}}">{{localize "SRX.Item.bonded"}}</span>
+            {{else}}
+              <a class="focus-chip unbonded" data-action="bondFocus" data-item-id="{{this.id}}" data-tooltip="{{localize 'SRX.Foci.bondHint'}}">{{localize "SRX.Foci.bond"}}</a>
+            {{/if}}
+            {{#if this.overLimit}}<i class="fa-solid fa-triangle-exclamation over-icon" data-tooltip="{{localize 'SRX.Foci.overLimitHint'}}"></i>{{/if}}
           </span>
           {{#if ../isBuild}}<a class="item-control" data-action="deleteItem" data-item-id="{{this.id}}"><i class="fa-solid fa-trash"></i></a>{{/if}}
         </li>
