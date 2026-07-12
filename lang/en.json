@@ -929,5 +929,11 @@
   "SRX.Host.noLadder": "No IC configured — GM improvises.",
   "SRX.Host.noIntruders": "No intruders detected.",
   "SRX.Host.osTierTip": "IC currently triggered — an intruder's Overwatch Score has reached this tier.",
-  "SRX.Host.spiderTip": "Toggle whether a spider (security decker) is actively defending this host."
+  "SRX.Host.spiderTip": "Toggle whether a spider (security decker) is actively defending this host.",
+  "SRX.Foci.limitHint": "Active foci / safe limit (Willpower ÷ 2). Going over is allowed but costs Liability on all resistance & Drain tests and 1 unresisted Stun/hour per focus over.",
+  "SRX.Foci.overLimitHint": "Over the safe active-focus limit — resistance & Drain tests take Liability, and 1 unresisted Stun/hour per focus over.",
+  "SRX.Foci.bond": "Bond",
+  "SRX.Foci.bondHint": "Bond this focus (Force hours of contemplation) so it can be activated.",
+  "SRX.Foci.bondedHint": "Bonded — ready to activate.",
+  "SRX.Foci.bondFirst": "Bond this focus before it can be activated."
 }
