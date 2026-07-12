@@ -55,5 +55,14 @@
   "SRX.Matrix.importDone": "Imported Matrix talents: {hacking} Hacking, {software} Software, {threading} Threading.",
 
   "SRX.Host.spider": "Spider present",
-  "SRX.Host.access": "Intruders / Access"
+  "SRX.Host.access": "Intruders / Access",
+
+  "SRX.Host.ratingShort": "HR",
+  "SRX.Host.firewall": "Firewall",
+  "SRX.Host.icLadderShort": "IC Ladder",
+  "SRX.Host.peakOs": "Peak OS",
+  "SRX.Host.noLadder": "No IC configured — GM improvises.",
+  "SRX.Host.noIntruders": "No intruders detected.",
+  "SRX.Host.osTierTip": "IC currently triggered — an intruder's Overwatch Score has reached this tier.",
+  "SRX.Host.spiderTip": "Toggle whether a spider (security decker) is actively defending this host."
 }

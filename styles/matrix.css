@@ -42,6 +42,29 @@
   font-weight: bold;
 }
 
+/* Obvious "add another row" affordance — a bordered pill, distinct from the
+   per-row trash `item-control` so it reads unmistakably as the primary add. */
+.srx .matrix-subpanel h4 .panel-add {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 9px;
+  border: 1px solid var(--color-border, #888);
+  border-radius: 10px;
+  font-size: var(--font-size-11, 11px);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+  cursor: pointer;
+}
+.srx .matrix-subpanel h4 .panel-add:hover {
+  opacity: 1;
+  border-color: var(--color-warm-2, #c9a227);
+  color: var(--color-warm-2, #c9a227);
+}
+
 .srx .matrix-subpanel .item-control.active,
 .srx .host-spider .spider-toggle.active {
   color: var(--color-warm-2, #c9a227);
@@ -77,9 +100,146 @@
 }
 .srx .matrix-devices .detail { white-space: nowrap; opacity: 0.75; }
 
-.srx .host-spider { margin-top: 0.75rem; }
-.srx .host-spider .spider-toggle { margin-bottom: 0.4rem; }
-.srx .host-intruders li { padding: 0.1rem 0; opacity: 0.85; }
+/* -------------------------------------------- */
+/*  Host sheet — Play/Build cockpit              */
+/*  (docs/UX-MATRIX-HOST.md)                     */
+/* -------------------------------------------- */
+
+/* BUG(UI) fix: the host section headings were bare <h3> that fell back to the
+   default billboard scale — the restrained small-caps rule in srx.css is scoped
+   to character-sheet containers and never reached the host sheet. Bring them to
+   the same small-caps label-row scale used across the sheets. */
+.srx.host-sheet-body .host-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border-bottom: 1px solid var(--color-border, #888);
+  font-size: 0.9em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 14px 0 6px;
+}
+.srx.host-sheet-body .host-section .header-actions {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+/* Header identity badges (HR / type) */
+.srx.host-sheet-body .host-badges {
+  display: flex;
+  gap: 6px;
+  margin-top: 3px;
+}
+.srx.host-sheet-body .host-badge {
+  font-size: 0.75em;
+  padding: 1px 8px;
+  border: 1px solid var(--color-border, #888);
+  border-radius: 10px;
+  opacity: 0.85;
+}
+
+/* Play statline: big MDS tile + Firewall + Peak-OS readouts, no inputs.
+   Reuses the shared `.host-statline .stat` tile chrome from srx.css. */
+.srx.host-sheet-body .host-statline.play { margin: 8px 0; }
+.srx.host-sheet-body .host-statline.play .stat.big b { font-size: 1.7em; }
+.srx.host-sheet-body .host-statline.play .stat.alert {
+  border-color: var(--color-warm-2, #c9a227);
+}
+.srx.host-sheet-body .host-statline.play .stat.alert b { color: var(--color-warm-2, #c9a227); }
+
+/* Overridden-subsystem readout chips (Play only, only when set) */
+.srx.host-sheet-body .subsystem-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 2px 0 4px;
+}
+.srx.host-sheet-body .subsystem-chips .chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  padding: 1px 8px;
+  border: 1px solid var(--color-border-light-tertiary, #78302266);
+  border-radius: 10px;
+  font-size: 0.75em;
+}
+.srx.host-sheet-body .subsystem-chips .chip-label {
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  opacity: 0.75;
+}
+.srx.host-sheet-body .subsystem-chips .chip b { font-size: 1.1em; }
+
+/* IC ladder as a read-only rung list; the rung the intruders have reached
+   (getActiveIC on peak OS) carries the amber "active" highlight. */
+.srx.host-sheet-body .ic-rungs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.srx.host-sheet-body .ic-rungs .rung {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 8px;
+  border: 1px solid var(--color-border-light-tertiary, #78302244);
+  border-left: 3px solid transparent;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.03);
+}
+.srx.host-sheet-body .ic-rungs .rung.active {
+  border-left-color: var(--color-warm-2, #c9a227);
+  background: rgba(201, 162, 39, 0.12);
+}
+.srx.host-sheet-body .ic-rungs .rung-os {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.75;
+  white-space: nowrap;
+}
+.srx.host-sheet-body .ic-rungs .rung-ic { flex: 1; font-weight: 600; }
+.srx.host-sheet-body .ic-rungs .rung.active .rung-flag { color: var(--color-warm-2, #c9a227); }
+
+/* Spider toggle sits in the Access heading; active = amber (shared convention) */
+.srx.host-sheet-body .host-section .spider-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 1px 9px;
+  border: 1px solid var(--color-border, #888);
+  border-radius: 10px;
+  font-size: 0.7em;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.85;
+  cursor: pointer;
+}
+.srx.host-sheet-body .host-section .spider-toggle:hover { opacity: 1; }
+.srx.host-sheet-body .host-section .spider-toggle.active {
+  border-color: var(--color-warm-2, #c9a227);
+  color: var(--color-warm-2, #c9a227);
+}
+
+.srx.host-sheet-body .host-intruders li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 0;
+}
+.srx.host-sheet-body .host-intruders .item-name { flex: 1; }
+.srx.host-sheet-body .host-intruders .detail {
+  font-size: 0.8em;
+  opacity: 0.75;
+  white-space: nowrap;
+}
 
 /* Matrix chat-card accent (mirrors combat/magic accents in srx.css). */
 .srx.chat-card.matrix-card {
