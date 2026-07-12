@@ -920,5 +920,6 @@
   "SRX.Advance.reason.specNeedsRating4": "Specializations require a skill rating of 4 or higher.",
   "SRX.Advance.reason.insufficientKarma": "Not enough Karma.",
   "SRX.Advance.reason.alreadyOwned": "This talent is already owned.",
-  "SRX.Advance.reason.unknownKind": "Unknown purchase."
+  "SRX.Advance.reason.unknownKind": "Unknown purchase.",
+  "SRX.Vehicle.chaseSection": "Chase"
 }
