@@ -2,7 +2,7 @@
 
 An unofficial, free, fan-made game system for [Foundry Virtual Tabletop](https://foundryvtt.com) (**v14+**) implementing **SRX — Shadowrun Edition X**, the free fan-made streamlined edition of Shadowrun.
 
-**Status (2026-07):** all milestones **M0–M7 code-complete and integrated**; **M8 release prep** in progress. Pure rules are covered by 419 unit tests; the document/UI layer wants a fresh in-Foundry smoke pass before a public tag. See [RULES-STATUS.md](RULES-STATUS.md) for honest, per-subsystem automation levels.
+**Status (2026-07):** all milestones **M0–M7 code-complete and integrated**; **M8 release prep** in progress. Pure rules are covered by 419 unit tests; the document/UI layer wants a fresh in-Foundry smoke pass before a public tag.
 
 ## Features by milestone
 

@@ -3,3 +3,13 @@ content-build/
 *.zip
 # Compiled compendium packs (build artifact — sources live in packs-src/)
 /packs/
+
+# Local-only dev/agent scaffolding (kept in ../_dev-archive, never published)
+AGENT-LOCK.md
+AGENTS.md
+MISSION.md
+UNATTENDED.md
+STATUS.md
+RULES-STATUS.md
+MISSION-OUT/
+docs/
