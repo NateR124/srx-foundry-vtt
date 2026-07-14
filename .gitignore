@@ -12,4 +12,6 @@ UNATTENDED.md
 STATUS.md
 RULES-STATUS.md
 MISSION-OUT/
-docs/
+docs/*
+# ...but README screenshots are published with the repo
+!docs/screenshots/
