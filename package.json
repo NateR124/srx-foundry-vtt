@@ -7,6 +7,7 @@
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest",
+    "smoke:ui": "node scripts/sheet-ui-smoke.mjs",
     "build:packs": "node scripts/build-packs.mjs"
   },
   "devDependencies": {

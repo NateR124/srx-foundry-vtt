@@ -43,7 +43,9 @@ export class WeaponData extends foundry.abstract.TypeDataModel {
         new fields.SchemaField({
           name: new fields.StringField({ required: true, blank: true, initial: "" }),
           action: new fields.StringField({ required: true, initial: "major", choices: () => SRX.attackActions }),
-          fireMode: new fields.StringField({ required: true, initial: "", choices: () => SRX.fireModes }),
+          // blank: true — defining choices flips StringField's blank default
+          // to false, and "" is a legal mode (melee weapons have none)
+          fireMode: new fields.StringField({ required: true, blank: true, initial: "", choices: () => SRX.fireModes }),
           acc: new fields.NumberField({ required: true, integer: true, initial: 0, nullable: false }),
           dv: new fields.StringField({ required: true, blank: true, initial: "" }),
           dvMin: new fields.NumberField({ required: false, integer: true, nullable: true, initial: null }),

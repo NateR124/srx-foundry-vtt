@@ -3,6 +3,22 @@
 All notable changes to the SRX (Unofficial) Foundry VTT system. Versions follow
 `MAJOR.MINOR.PATCH`; the system targets Foundry **v14** (verified 14.364).
 
+## 1.0.1 — 2026-07-14 — Fix weapon creation on the character sheet
+
+### Fixed
+- **Creating a weapon from the character sheet** (the `+` button in Build
+  mode) failed with a `DataModelValidationError`: `fireMode` declares
+  `choices` (which flips `StringField`'s `blank` default to `false`) while
+  `""` is a legal mode — melee weapons have none. The field now sets
+  `blank: true`; blank-fireMode compendium weapons also validate cleanly.
+
+### Added
+- **Sheet UI smoke test** (`npm run smoke:ui`): joins the local world via
+  Playwright, opens a throwaway character sheet in Build mode, clicks every
+  `+` (createItem) button on every tab, and fails on any console error,
+  uncaught page error, or error/warning notification toast — attributed to
+  the exact click that caused it.
+
 ## 1.0.0 — 2026-07-12 — Open-source release: full SRX compendium bundled
 
 The SRX creator granted permission to redistribute SRX-derived catalog content,
