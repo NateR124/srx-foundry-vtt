@@ -1,10 +1,11 @@
 /**
  * SRX Quench integration batches — run in-browser via the Quench module.
  *
- * These exist because the vitest suite only covers the pure rules layer: all
- * four combat criticals found in the architect review (dead initiative
- * override, no re-roll on round 2, permission wedges, invalid Region data)
- * passed 227 unit tests. These batches drive the real documents end-to-end.
+ * These exist because the vitest suite only covers the pure rules layer: four
+ * critical combat bugs (dead initiative override, no re-roll on round 2,
+ * permission wedges, invalid Region data) lived entirely in the Foundry glue
+ * and passed the whole unit suite. These batches drive real documents
+ * end-to-end. Regression pins for those bugs: tests/glue-regressions.test.mjs.
  */
 
 const CLEANUP = { actors: [], combats: [], items: [], regionScene: null };
@@ -435,7 +436,7 @@ export function registerQuenchTests(quench) {
             .to.deep.equal({ dv: 8, type: "S" });
         });
 
-        it("host sheet renders the M5 tooling (ladder editor + firewall roll)", async () => {
+        it("host sheet renders the host tooling (ladder editor + firewall roll)", async () => {
           const sheet = host.sheet;
           await sheet.render(true);
           await new Promise((r) => setTimeout(r, 200));

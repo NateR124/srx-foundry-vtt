@@ -1,6 +1,7 @@
 /**
- * Regression pins for the architect-review fixes (see outer repo
- * docs/agents/REVIEW-FABLE-ARCHITECT.md). Each block names the bug it locks out.
+ * Regression pins for bugs found in pre-release review that the unit suite
+ * had missed (they lived in glue code or data mapping, not the pure rules).
+ * Each describe block names the bug it locks out.
  */
 
 import { describe, it, expect } from "vitest";

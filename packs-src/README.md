@@ -1,16 +1,26 @@
 # Compendium pack sources
 
-Human-readable JSON sources for the system's built-in compendium packs. These
-are **onboarding/help content only** — no SRX or Shadowrun rules text, stats,
-art, or logos are bundled here (see the repo `README.md` content policy).
+Human-readable JSON sources for the system's built-in compendium packs.
+
+**Content policy:** no rules text, art, or logos from any *official Shadowrun
+product* are bundled here. The SRX catalog data (everything except
+`srx-guides/`) **is** bundled, and it is SRX material included with the
+permission of the SRX creator — it is not this project's to license. Read
+`CONTENT-NOTICE.md` at the repo root before redistributing any of it.
+`srx-guides/` is original material written for this project and falls under the
+code license.
 
 ## Layout
 
 ```
 packs-src/
-  srx-guides/                 -> compiles to pack  "srx-guides"
+  srx-guides/                 -> compiles to pack  "srx-guides"   (ours, 0BSD)
     journal-quickstart.json   -> "SRX Quick-Start — The 15-Minute Fight"
     journal-gm-setup.json     -> "SRX GM Setup Guide"
+  weapons/ armor/ gear/       -> SRX catalog data (see CONTENT-NOTICE.md)
+  spells/ magic-gear/
+  talents/ threats/
+  pregens/ library/
 ```
 
 Each `*.json` file is one document in the `@foundryvtt/foundryvtt-cli` extract
@@ -27,9 +37,8 @@ npm run build:packs                                # packs-src/** -> packs/**
 Compiled `packs/` output is git-ignored (a build artifact); the release CI
 builds it before zipping.
 
-## Wiring into the system (gated)
+## Wiring into the system
 
-For Foundry to load these packs, `system.json` must declare them. That change
-is intentionally **not** applied here (the `system.json` schema block is frozen
-for this milestone). The exact `packs` + `packFolders` block to merge lives in
-`MISSION-OUT/system-packs.snippet.json`.
+All ten packs are declared in `system.json` (`packs` + `packFolders`), so
+Foundry loads them automatically. Adding a new pack means adding a folder here
+**and** a matching entry to those two blocks in `system.json`.

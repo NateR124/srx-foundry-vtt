@@ -1,7 +1,7 @@
 /**
- * fociPanelData — Magic-tab foci panel presentation (docs/UX-FOCI.md).
+ * fociPanelData — Magic-tab foci panel presentation.
  *
- * The helper lives in module/magic/foci.mjs, which pulls in the magic lane's
+ * The helper lives in module/magic/foci.mjs, which pulls in the magic
  * import chain (SRXRoll extends foundry.dice.Roll at load). Stub the handful of
  * Foundry globals those modules touch at import time before importing, exactly
  * as the runtime provides them; the function under test is a pure read.

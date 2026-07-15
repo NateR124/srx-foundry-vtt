@@ -1,7 +1,7 @@
 /**
- * Vehicle action glue (M6): handling/speed tests per control mode, Take
+ * Vehicle action glue: handling/speed tests per control mode, Take
  * Controls, ram, crash, chase-environment roll, Body+Armor resistance.
- * Rules: docs/research/vehicles-drones.md pp. 192–205.
+ * Rules: SRX Full Rulebook pp. 192–205.
  */
 
 import { SRXRoll } from "../dice/srx-roll.mjs";

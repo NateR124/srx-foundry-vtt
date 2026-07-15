@@ -1,20 +1,13 @@
 /**
- * M7 Chargen & Advancement hooks.
+ * Chargen & Advancement hooks.
  *
- * Adds a "Create / Advance" entry point to the character sheet WITHOUT editing
- * the frozen sheet class (module/apps/actor-sheet.mjs): a render hook injects a
+ * Adds a "Create / Advance" entry point to the character sheet without editing
+ * the sheet class (module/apps/actor-sheet.mjs): a render hook injects a
  * header button that opens a chooser (priority build wizard or Karma
  * advancement panel).
  *
- * INTEGRATION (hub is frozen — orchestrator wires this):
- *   // TODO(integrate): registerChargenHooks()
- * Add to module/srx.mjs alongside the other register*Hooks() calls in the
- * "ready" hook:
- *   import { registerChargenHooks } from "./chargen/hooks.mjs";
- *   registerChargenHooks();
- * The template snippet templates/apps/chargen/sheet-button.hbs is provided as
- * an alternative in-template placement if the orchestrator prefers wiring the
- * button into templates/actor/character-sheet.hbs directly.
+ * Wired from module/srx.mjs init via `registerChargenHooks()`, alongside the
+ * other `registerXHooks()` calls.
  */
 
 import { openChargen } from "../apps/chargen/chargen-app.mjs";
@@ -93,7 +86,7 @@ function injectLaunchButton(app, element) {
   if (header) header.insertBefore(btn, header.querySelector(".window-title")?.nextSibling ?? null);
 }
 
-/** Wire the M7 chargen/advancement launch button onto character sheets. */
+/** Wire the chargen/advancement launch button onto character sheets. */
 export function registerChargenHooks() {
   // ApplicationV2 render hook: `render${ClassName}`, emitted per class in the
   // inheritance chain and called as (application, element, context, options).

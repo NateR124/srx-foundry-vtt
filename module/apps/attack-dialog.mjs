@@ -5,7 +5,7 @@ import { composeAttackModifiers, coverDefenseBonus, effectiveDefenseScore } from
  * Combat attack dialog: pool + Leverage/Liability + situational combat mods
  * (visibility, recoil, cover, off-hand, take aim, Full Defense on target).
  *
- * Layout per docs/UX-ACTION-DIALOGS.md: live summary strip (pool · TN ·
+ * Layout: live summary strip (pool · TN ·
  * hit mod · effective DS) driven by the same rules functions as the roll;
  * attack/defense fieldsets up front (defense pre-filled from combat state);
  * Cold overrides behind the Advanced fold.

@@ -6,12 +6,12 @@
  * combat (p. 199).
  *
  * Mounts are stored inline in `flags.srx.mounts` on the vehicle (no schema
- * change; a promotion path is in MISSION-OUT). Cross-owner damage flows through
+ * change; promotion to schema fields is a possible future migration). Cross-owner damage flows through
  * the standard attack-outcome card, whose Apply step already relays via the GM
  * executor; the once-per-pass marker also relays through the GM executor when
  * a gunner does not own the vehicle.
  *
- * Rules: docs/research/vehicles-drones.md pp. 198–199.
+ * Rules: SRX Full Rulebook pp. 198–199.
  */
 
 import { SRXRoll } from "../dice/srx-roll.mjs";

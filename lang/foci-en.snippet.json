@@ -1,8 +1,0 @@
-{
-  "SRX.Foci.limitHint": "Active foci / safe limit (Willpower ÷ 2). Going over is allowed but costs Liability on all resistance & Drain tests and 1 unresisted Stun/hour per focus over.",
-  "SRX.Foci.overLimitHint": "Over the safe active-focus limit — resistance & Drain tests take Liability, and 1 unresisted Stun/hour per focus over.",
-  "SRX.Foci.bond": "Bond",
-  "SRX.Foci.bondHint": "Bond this focus (Force hours of contemplation) so it can be activated.",
-  "SRX.Foci.bondedHint": "Bonded — ready to activate.",
-  "SRX.Foci.bondFirst": "Bond this focus before it can be activated."
-}

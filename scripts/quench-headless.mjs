@@ -15,8 +15,7 @@ function resolvePlaywright() {
     import.meta.url, // local node_modules
     ...(process.env.PLAYWRIGHT_DIR
       ? [`file:///${process.env.PLAYWRIGHT_DIR.replace(/\\/g, "/")}/package.json`]
-      : []),
-    "file:///C:/Code/coc-sheet/package.json" // known install on Nate's machine
+      : [])
   ];
   for (const base of candidates) {
     try {
@@ -27,7 +26,7 @@ function resolvePlaywright() {
 }
 const { chromium } = resolvePlaywright();
 
-const URL = "http://localhost:30000";
+const URL = process.env.FVTT_URL || "http://localhost:30000";
 const BATCHES = [
   "srx.combat.integration",
   "srx.magic.integration",

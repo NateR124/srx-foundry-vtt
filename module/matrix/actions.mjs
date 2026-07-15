@@ -1,8 +1,8 @@
 /**
- * Matrix test pipeline (M5): Hacking tests vs MDS with the full
+ * Matrix test pipeline: Hacking tests vs MDS with the full
  * failing-at-hacking flow (OS +1 → IC row fires → biofeedback resist cards),
  * data-processing tests, and host firewall rolls.
- * Rules: docs/research/matrix-hacking.md pp. 142–152.
+ * Rules: SRX Full Rulebook pp. 142–152.
  */
 
 import { SRXRoll } from "../dice/srx-roll.mjs";

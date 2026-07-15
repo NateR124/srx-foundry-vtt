@@ -8,7 +8,7 @@
  * Repair reduces the vehicle's damage (system.health.value). Cross-owner
  * writes relay through the GM executor.
  *
- * Rules: docs/research/vehicles-drones.md p. 196.
+ * Rules: SRX Full Rulebook p. 196.
  */
 
 import { SRXRoll } from "../dice/srx-roll.mjs";

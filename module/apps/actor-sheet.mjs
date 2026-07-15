@@ -58,7 +58,7 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
   #activeTab = "main";
 
   /**
-   * Play/Build mode (UX-FIELD-CLASSIFICATION): Play is the cockpit — intent
+   * Play/Build mode: Play is the cockpit — intent
    * buttons and readouts; Build exposes the Cold/Internal inputs. Remembered
    * per actor per client (a mode is a viewing preference, not actor data).
    */
@@ -88,8 +88,8 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
     const showMagicTab = (sys.special.magic.value ?? 0) > 0 || isBuild;
     if (!showMagicTab && this.#activeTab === "magic") this.#activeTab = "main";
 
-    // Matrix tab: hackers/deckers only in Play (UX-FIELD-CLASSIFICATION §C:
-    // hide Firewall/matrix for non-hackers); Build always shows it
+    // Matrix tab: hackers/deckers only in Play (hide Firewall/matrix for
+    // non-hackers); Build always shows it
     const showMatrixTab = isBuild
       || (sys.skills.hacking?.value ?? 0) > 0
       || (sys.skills.software?.value ?? 0) > 0
@@ -403,7 +403,8 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
     const value = current === index ? index - 1 : index;
     const update = { [`system.monitors.${track}.value`]: value };
     // Physical damage also fills the Stun track by the same amount (p. 128).
-    // Only INCREASES mirror — healing resolves per-track (M2 owns full damage flow).
+    // Only INCREASES mirror — healing resolves per-track (the combat pipeline
+    // owns the full damage flow).
     if (track === "physical" && value > current) {
       update["system.monitors.stun.value"] = Math.min(
         monitors.stun.max ?? monitors.stun.value + (value - current),
@@ -598,7 +599,7 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
     return this.render();
   }
 
-  /** Intent (once): bond a focus so it can be activated (UX-FOCI.md). */
+  /** Intent (once): bond a focus so it can be activated. */
   static async #onBondFocus(_event, target) {
     const item = this.document.items.get(target.dataset.itemId);
     if (!item || item.type !== "focus") return null;

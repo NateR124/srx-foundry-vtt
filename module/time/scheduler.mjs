@@ -1,5 +1,5 @@
 /**
- * World-time timed-effects queue (ARCHITECTURE §7a).
+ * World-time timed-effects queue.
  * Persisted on a world setting; advanced by updateWorldTime (GM only).
  */
 

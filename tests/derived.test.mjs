@@ -6,8 +6,7 @@ import {
 import { evaluateDv } from "../module/rules/formulas.mjs";
 
 /**
- * Cross-checked against the seven official pregen sheets
- * (docs/research/character-sheets.md in the planning repo).
+ * Cross-checked against the seven official pregen sheets.
  */
 
 describe("accelerator = ceil((REA+LOG)/2)", () => {

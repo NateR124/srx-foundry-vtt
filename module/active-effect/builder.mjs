@@ -6,7 +6,7 @@
  * `ActiveEffect` creation data. Kept deliberately generic and Foundry-free so
  * the same helpers back:
  *   - talent / 'ware bulk AE generation (import pipeline), and
- *   - the Matrix lane's program effects (administered programs reuse this).
+ *   - Matrix program effects (administered programs reuse this).
  *
  * The output is plain data objects — no document creation here — so every
  * function is unit-testable without a live Foundry.

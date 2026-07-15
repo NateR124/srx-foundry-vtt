@@ -69,7 +69,7 @@ export class SrxItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
     context.showFreezer = context.hasCost || ["weapon", "armor", "gear"].includes(item.type);
 
     // Read-first description: the toggled <prose-mirror> shows enriched HTML
-    // until the user clicks to edit (docs/UX-ITEM-SHEETS.md).
+    // until the user clicks to edit.
     context.descriptionHTML = await foundry.applications.ux.TextEditor.implementation.enrichHTML(
       item.system.description, { secrets: item.isOwner, relativeTo: item }
     );

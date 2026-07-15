@@ -5,6 +5,7 @@ content-build/
 /packs/
 
 # Local-only dev/agent scaffolding (kept in ../_dev-archive, never published)
+agent-review/
 AGENT-LOCK.md
 AGENTS.md
 MISSION.md

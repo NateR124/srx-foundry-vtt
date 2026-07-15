@@ -1,6 +1,5 @@
 /**
  * Combat tracker UI hooks: pass banner + action-economy chips.
- * Design reference: docs/UX-COMBAT-TRACKER.md.
  */
 
 import {

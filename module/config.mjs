@@ -70,7 +70,7 @@ SRX.focusTypes = [
  * vision, health modifier (both tracks), movement modifier, extras.
  * `choice` entries are resolved at application time via a player pick.
  *
- * CONSUMPTION STATUS (M1): the character data model reads `health`,
+ * CONSUMPTION STATUS: the character data model reads `health`,
  * `movement`, `naturalArmor`, `reach`, `vision`, and (via rules/metatype.mjs)
  * derives `mods` + `choice` live in prepareDerivedData (resolved pick
  * persisted at details.metatypeChoice) and surfaces `maxima` violations and
@@ -80,7 +80,7 @@ SRX.focusTypes = [
  * applied by the sheet's metatype-change dialog. NOT yet consumed:
  * `toxinDiseaseLeverage` (roll-context leverage), the Livin' on the Streets
  * trait auto-grant for trolls remaining at Streets (p. 12 → p. 74, lands
- * with trait items), and chargen karma validation — all M7.
+ * with trait items), and chargen karma validation.
  */
 SRX.metatypes = {
   human: {

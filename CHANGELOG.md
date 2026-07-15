@@ -3,6 +3,38 @@
 All notable changes to the SRX (Unofficial) Foundry VTT system. Versions follow
 `MAJOR.MINOR.PATCH`; the system targets Foundry **v14** (verified 14.364).
 
+## Unreleased — Handoff hygiene
+
+### Fixed
+- **Missing localization key**: `SRX.Foci.deactivateCascade` (shown when a
+  deactivated focus dismisses its spirit) was never in the loaded `en.json`.
+- Release zips now include `CONTENT-NOTICE.md` alongside the content it covers.
+- `packs-src/README.md` claimed pack registration was still gated; all ten
+  packs have been registered in `system.json` since 1.0.0.
+
+### Added
+- Contributor documentation: `CONTRIBUTING.md`, `ARCHITECTURE.md` (as-built,
+  with a rules-to-code-to-test map), `RULES-DECISIONS.md` (the R-number ruling
+  ledger cited from code comments), `EFFECTS.md` (the flat Active Effect
+  contract), and `KNOWN-GAPS.md`.
+- CI checks: all-JSON validation, localization completeness
+  (`npm run check:i18n`), and a `module/rules/` Foundry-purity gate.
+- npm scripts for all smoke tests (`smoke:join`, `smoke:quench`, `smoke:ui`);
+  Node ≥ 20 declared; the pack-build CLI version pinned in CI.
+
+### Changed
+- Removed internal development-process jargon (milestone tags, stale
+  integration TODOs, references to unpublished planning documents) from all
+  source comments; test files renamed to describe the behavior they pin
+  (`glue-regressions`, `cover-suppression-calledshot`, `rest-qi-conjuring-foci`).
+- Merged the leftover `lang/*-en.snippet.json` staging files into `en.json`
+  (single localization source of truth) and deleted them.
+- Smoke scripts no longer depend on machine-specific paths or a hard-coded
+  user id (`FVTT_URL` / `FVTT_USERID` / `FVTT_PASS` / `PLAYWRIGHT_DIR` env
+  vars; the join smoke discovers the Gamemaster automatically).
+
+No rule behavior changed; the 437-test suite passes unmodified.
+
 ## 1.0.1 — 2026-07-14 — Fix weapon creation on the character sheet
 
 ### Fixed

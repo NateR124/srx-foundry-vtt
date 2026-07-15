@@ -785,6 +785,7 @@
   "SRX.Foci.bonded": "{name} bonds {focus} ({hours}h of contemplation).",
   "SRX.Foci.notBonded": "A focus must be bonded before it can be activated.",
   "SRX.Foci.overLimit": "{name} has {over} focus/foci over the safe limit ({limit}): Liability on resistance & Drain tests, and 1 unresisted Stun/hour per focus over.",
+  "SRX.Foci.deactivateCascade": "A focus was deactivated.",
   "SRX.Healing.SystemShock": "System Shock",
   "SRX.Healing.SystemShockThrottle": "System Shock absorbs {throttled} box(es) of {name}'s healing.",
   "SRX.Astral.budgetTitle": "Astral Projection",

@@ -3,7 +3,7 @@
  * confirmed by Dossier p. 18). Pure functions — no Foundry imports — so the
  * advancement app and vitest consume them directly.
  *
- * RULING R46 (docs/RULINGS-NEEDED.md): the chapter/Dossier values govern
+ * RULING R46 (RULES-DECISIONS.md): the chapter/Dossier values govern
  * (attribute 10/20, skill 5/10, specialization 5, knowledge 3). The
  * Appendix p. 385 table (12/24, 6/12, 6) appears un-errata'd and is NOT used.
  *

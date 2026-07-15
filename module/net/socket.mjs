@@ -1,5 +1,5 @@
 /**
- * GM-executor socket layer (ARCHITECTURE §6a).
+ * GM-executor socket layer (ARCHITECTURE.md, "GM executor").
  * Players request cross-ownership mutations; an active GM executes them.
  */
 

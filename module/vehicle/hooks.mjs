@@ -1,5 +1,5 @@
 /**
- * Vehicle chat-button hooks + M6-depth wiring (chase, DCC, mounts, repairs).
+ * Vehicle chat-button hooks + depth wiring (chase, DCC, mounts, repairs).
  * registerVehicleHooks() is already invoked from module/srx.mjs at "ready".
  */
 
@@ -32,7 +32,7 @@ export function registerVehicleHooks() {
   // DCC shared-initiative relay.
   registerDccHandlers();
 
-  // Expose the M6 vehicle API alongside the pure rules already on game.srx.
+  // Expose the vehicle API alongside the pure rules already on game.srx.
   // game.srx.vehicle is the pure-rules ES module namespace (sealed), so spread
   // it into a fresh, extensible object rather than assigning onto it.
   if (game.srx) {

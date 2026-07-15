@@ -1,5 +1,5 @@
 /**
- * Flat Active Effect change contract (M3 seed).
+ * Flat Active Effect change contract (see EFFECTS.md).
  * Keys are Foundry AE change keys relative to actor system data.
  * Values are numeric deltas unless mode is override.
  *
@@ -22,7 +22,7 @@ export const FLAT_EFFECT_KEYS = {
   // Special attributes that also fold their .bonus through augmented() in
   // CharacterData#prepareDerivedData (quickness/magic/resonance loop). Ware and
   // magical talents (Wired Reflexes → QUI, Initiation → MAG, Submersion → RES)
-  // drive these columns; added to the contract v0.2 (see docs/EFFECTS.md).
+  // drive these columns; added to the contract v0.2 (see EFFECTS.md).
   "attr.qui": { path: "system.special.quickness.bonus", mode: "add", notes: "Quickness (special attr) — folded via augmented()" },
   "attr.mag": { path: "system.special.magic.bonus", mode: "add", notes: "Magic (special attr) — folded via augmented()" },
   "attr.res": { path: "system.special.resonance.bonus", mode: "add", notes: "Resonance (special attr) — folded via augmented()" },

@@ -45,8 +45,9 @@ export function edgeActorFromMessage(message) {
 
 /**
  * Close Call — after seeing an attack against you, spend Edge for +2 Defense
- * Score vs that attack (p. 17). M1 surfaces this as a temporary AE-like flag
- * on the defender and a chat announcement; full attack pipeline lands in M2.
+ * Score vs that attack (p. 17). Surfaced as a temporary flag on the defender
+ * plus a chat announcement; the attack pipeline (combat/pipeline.mjs) reads
+ * and consumes the flag.
  * @param {Actor} actor
  * @param {ChatMessage} [message]
  */
@@ -221,7 +222,7 @@ export function edgeButtonContext(context = {}, result = null) {
     edgeTalents: Object.values(SRX.freeEdgeTalents).filter((t) => {
       if (t.window === "initiative") return isInit;
       if (t.window === "postRoll") return !isInit && result;
-      if (t.window === "defense") return true; // always available; semantics M2
+      if (t.window === "defense") return true; // always available
       return true;
     }),
     secondChanceSplit: !isInit && result && (result.critDice?.length || result.normalDice?.length)

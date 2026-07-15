@@ -71,8 +71,9 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
         flareCompensation: new fields.BooleanField({ initial: false }),
         visionMagnification: new fields.BooleanField({ initial: false })
       }),
-      // Manual derived-stat modifiers (M1). Auto-fed by 'ware/talent Active
-      // Effects in a later milestone; until then pregens enter them here.
+      // Manual derived-stat modifiers. 'ware/talent Active Effects add into
+      // these same fields (rules/effects.mjs "derived.*" keys); manual entry
+      // covers pregens and anything not modeled as an effect.
       // Innate armor/hardened stack ADDITIVELY with worn armor (R41, p. 128).
       derivedMods: new fields.SchemaField({
         armor: new fields.NumberField({ required: true, integer: true, initial: 0, nullable: false }),
@@ -211,7 +212,7 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
       // Baseline melee reach is 1 meter (p. 119); trolls' natural reach of 2
       // is an absolute value from the same rule, not a modifier.
       reach: meta.reach ?? SRX.baseReach,
-      // Metatype vision + manual/ware flags (cybereyes replacement is M3).
+      // Metatype vision + manual/'ware flags (cybereyes arrive as imported 'ware).
       vision: resolveVisionEnhancements(meta.vision, this.vision),
       visionKeys: resolveVisionEnhancements(meta.vision, this.vision)
         .filter((v) => v.active)
@@ -232,7 +233,8 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
     };
 
     // Unaugmented ratings vs the metatype maxima table (p. 13). Advisory —
-    // surfaced as a sheet banner, never clamped (karma validation is M7).
+    // surfaced as a sheet banner, never clamped (chargen/advancement validate
+    // purchases separately via rules/karma.mjs).
     const unaugmented = Object.fromEntries(
       Object.keys(SRX.attributes).map((key) => [key, this.attributes[key].unaugmented])
     );

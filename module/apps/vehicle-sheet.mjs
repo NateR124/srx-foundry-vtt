@@ -2,10 +2,10 @@ const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
 
 /**
- * Vehicle / drone sheet (M6): Play = rigger/GM cockpit (stat tiles,
+ * Vehicle / drone sheet: Play = rigger/GM cockpit (stat tiles,
  * clickable damage track with Wounded-Limit marker, control state, test /
  * ram / crash buttons, chase helpers); Build = stat entry. Mirrors the
- * threat-sheet pattern (docs/UX-THREAT-SHEET.md).
+ * threat-sheet pattern.
  */
 export class SrxVehicleSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   static DEFAULT_OPTIONS = {
@@ -79,7 +79,7 @@ export class SrxVehicleSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       autopilot: "SRX.Vehicle.modeAutopilot"
     }[sys.controlMode] ?? "SRX.Vehicle.modeAutopilot");
 
-    // M6 depth: mounts, DCC assignment, chase/repair helpers
+    // Depth panels: mounts, DCC assignment, chase/repair helpers
     const { listMounts } = await import("../vehicle/mounts.mjs");
     const { isAssignedToDcc } = await import("../vehicle/dcc.mjs");
     context.mounts = listMounts(actor);
@@ -88,7 +88,7 @@ export class SrxVehicleSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     context.hasCharacter = !!game.user.character;
     context.inCombat = !!game.combat;
     // Chase controls collapse until a chase is active for this vehicle (a role
-    // set on it — the Chase Tracker sets this too). See docs/UX-VEHICLE-CHASE.md.
+    // set on it — the Chase Tracker sets this too).
     context.chaseActive = (sys.chase?.role ?? "none") !== "none";
     return context;
   }

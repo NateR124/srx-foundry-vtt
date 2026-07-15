@@ -1,7 +1,6 @@
 /**
  * SRX derived statistics (canonical formulas: Appendix pp. 385–388, verified
- * against all seven pregen sheets — see docs/research/character-sheets.md in
- * the planning repo). Pure functions, no Foundry imports.
+ * against all seven pregen sheets). Pure functions, no Foundry imports.
  *
  * All inputs are AUGMENTED attribute values unless noted (p. 13: "always use
  * augmented rating unless a rule says 'unaugmented'").

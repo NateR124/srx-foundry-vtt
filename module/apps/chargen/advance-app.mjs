@@ -9,7 +9,7 @@
  * is mirrored to `system.details.karma.spent`.
  *
  * Cross-ownership note: a player can only spend on an actor they own. When they
- * don't (and aren't GM) the panel refuses — the M7 lane does not add
+ * don't (and aren't GM) the panel refuses — advancement does not add
  * privileged mutation; that stays with the GM executor in net/socket.mjs.
  */
 

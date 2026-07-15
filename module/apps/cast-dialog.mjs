@@ -3,7 +3,7 @@ import { clampForce, maxForce, sustainDicePenalty } from "../rules/magic.mjs";
 /**
  * Spell cast dialog: Force picker + optional mods.
  *
- * Layout per docs/UX-ACTION-DIALOGS.md: Force is the decision (autofocus,
+ * Layout: Force is the decision (autofocus,
  * Magic/max hint); the auto-applied sustain penalty is shown as a fact, not an
  * input; Cold overrides (hit mods, TN) live behind the Advanced fold.
  *

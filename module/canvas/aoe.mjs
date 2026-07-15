@@ -229,8 +229,7 @@ export function snapPointToGrid(pt) {
 /**
  * Interactive placement: left-click aim point, right-click / Escape cancel.
  * Snaps to grid center when possible. The aim preview shows the real outer
- * blast footprint so players aim with the area, not a point
- * (docs/UX-AOE-CANVAS.md).
+ * blast footprint so players aim with the area, not a point.
  *
  * @param {object} [opts]
  * @param {string} [opts.hint]

@@ -1,9 +1,0 @@
-{
-  "SRX.Healing.Stabilize": "Stabilize",
-  "SRX.Healing.FirstAid": "First Aid",
-  "SRX.Healing.StabilizedSuccess": "{healer} stabilizes {target} ({hits} hits vs threshold {threshold}) — Dying removed.",
-  "SRX.Healing.StabilizedFailure": "{healer} fails to stabilize {target} ({hits} hits vs threshold {threshold}).",
-  "SRX.Healing.FirstAidSuccess": "{healer} performs First Aid on {target}, healing {boxes} boxes.",
-  "SRX.Healing.FirstAidFailure": "{healer} fails to perform First Aid on {target}.",
-  "SRX.Healing.TargetDying": "Select a dying target to stabilize."
-}

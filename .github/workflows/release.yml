@@ -28,8 +28,32 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Validate system.json
-        run: node -e "JSON.parse(require('fs').readFileSync('system.json','utf8')); console.log('system.json OK')"
+      - name: Validate all tracked JSON
+        run: |
+          node -e "
+            const { execSync } = require('child_process');
+            const fs = require('fs');
+            const files = execSync('git ls-files \"*.json\"', {encoding: 'utf8'}).split('\n').filter(Boolean);
+            let bad = 0;
+            for (const f of files) {
+              try { JSON.parse(fs.readFileSync(f, 'utf8')); }
+              catch (e) { console.error('INVALID JSON: ' + f + ' — ' + e.message); bad++; }
+            }
+            console.log(files.length + ' JSON files checked, ' + bad + ' invalid');
+            process.exit(bad ? 1 : 0);
+          "
+
+      - name: Localization check
+        run: npm run check:i18n
+
+      - name: Rules purity check (module/rules must stay Foundry-free)
+        run: |
+          if grep -rnE "game\.|foundry\.[a-z]|canvas\.|ChatMessage|Hooks\." module/rules --include="*.mjs"; then
+            echo "::error::module/rules/ must not reference Foundry APIs (see ARCHITECTURE.md)"
+            exit 1
+          else
+            echo "module/rules is Foundry-free"
+          fi
 
       - name: Run vitest
         run: npm test
@@ -54,7 +78,7 @@ jobs:
           # without touching package-lock.json. If there are no pack sources,
           # this is a no-op and produces no packs/ directory.
           if [ -d packs-src ]; then
-            npm install --no-save @foundryvtt/foundryvtt-cli
+            npm install --no-save @foundryvtt/foundryvtt-cli@3.0.4
             npm run build:packs
           else
             echo "no packs-src/ — skipping pack build"
@@ -66,7 +90,8 @@ jobs:
           # folder) — the installer extracts straight into Data/systems/srx.
           # `packs` holds the compiled LevelDB compendia built above.
           mkdir stage
-          for p in module templates styles lang packs assets ui system.json package.json README.md LICENSE LICENSE.md; do
+          # CONTENT-NOTICE.md must travel with the compendium content it covers.
+          for p in module templates styles lang packs assets ui system.json package.json README.md LICENSE LICENSE.md CONTENT-NOTICE.md; do
             if [ -e "$p" ]; then cp -r "$p" stage/; fi
           done
           cd stage && zip -r ../srx.zip . && cd ..

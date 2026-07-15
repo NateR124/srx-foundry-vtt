@@ -1,5 +1,5 @@
 /**
- * Matrix hooks (M5 + depth):
+ * Matrix hooks:
  *  - chat-card buttons: biofeedback resist, stop / end administered programs
  *  - a GM-executor handler for cross-ownership status toggles (program effects)
  *  - Matrix-tab depth panels injected into the character sheet

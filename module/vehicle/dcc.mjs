@@ -7,10 +7,10 @@
  * rigger (owned; assign/remove are plain flag writes) and each assigned drone
  * carries a back-reference in `flags.srx.dccAssigned`. Writing the shared
  * Initiative onto other combatants is GM-only, so it relays through the GM
- * executor (module/net/socket.mjs). A schema promotion path is documented in
- * MISSION-OUT/documentTypes-vehicle-dcc.snippet.json.
+ * executor (module/net/socket.mjs). Promoting these flags to schema fields is
+ * a possible future migration.
  *
- * Rules: docs/research/vehicles-drones.md pp. 196–197.
+ * Rules: SRX Full Rulebook pp. 196–197.
  */
 
 import { dccInitiative, dccAutopilotRating, dccHasCapacity } from "../rules/vehicle.mjs";

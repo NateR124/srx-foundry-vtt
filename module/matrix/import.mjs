@@ -1,19 +1,17 @@
 /**
- * Matrix talent-catalog import (M5 depth). Parses the character-builder
- * Talents.txt into the three Matrix catalogs — 40 Hacking, 28 Software, 57
- * Threading programs — enriching each with the structured matrix metadata the
- * program/technomancy engines read (flags.srx.matrixProgram) and, for
- * [Infusion] technomancy talents, Active Effects built through the shared
- * effect contract.
+ * Matrix talent-catalog import. Parses the character-builder Talents.txt into
+ * the three Matrix catalogs — 40 Hacking, 28 Software, 57 Threading programs —
+ * enriching each with the structured matrix metadata the program/technomancy
+ * engines read (flags.srx.matrixProgram) and, for [Infusion] technomancy
+ * talents, Active Effects built through the shared effect contract.
  *
  * This is a SEPARATE, matrix-aware importer from module/import/full — it does
- * NOT touch module/import/full/effect-seed.mjs or module/rules/effects.mjs
+ * not modify module/import/full/effect-seed.mjs or module/rules/effects.mjs
  * (read-only reuse of the contract only).
  *
- * // TODO(integrate): use active-effect builder — when module/active-effect/**
- * lands, swap buildInfusionEffect() to call the shared AE builder. Until then
- * we compile flat effects directly against the module/rules/effects.mjs
- * contract (FLAT_EFFECT_KEYS), which is exactly what that builder wraps.
+ * buildInfusionEffect() compiles flat effects directly against the
+ * module/rules/effects.mjs contract (FLAT_EFFECT_KEYS) — the same contract
+ * module/active-effect/builder.mjs wraps; either path yields equivalent AEs.
  */
 
 import { table } from "../import/tsv.mjs";
@@ -159,8 +157,9 @@ export function buildInfusionEffect(entry) {
 
 /**
  * Convert a parsed entry to Foundry talent-item data. Extra matrix metadata
- * rides on flags.srx.matrixProgram (the TalentData schema is hub-frozen and
- * cannot gain fields here). Category maps to the existing talent categories.
+ * rides on flags.srx.matrixProgram rather than new TalentData schema fields —
+ * the talent schema is shared by every talent item, so matrix-only data stays
+ * in flags. Category maps to the existing talent categories.
  */
 export function buildMatrixTalentItem(entry) {
   const categoryKey = { Hacking: "hacking", Software: "software", Threading: "threading" }[entry.category];

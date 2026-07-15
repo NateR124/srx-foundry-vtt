@@ -1,10 +1,9 @@
 /**
- * Core Matrix rules (SRX pp. 137–153) plus M5-depth: Access/marks,
+ * Core Matrix rules (SRX pp. 137–153) plus depth: Access/marks,
  * administered programs, devices, and technomancy (Fading, Net Level, Echo,
  * Threading substitution). Pure functions only — no Foundry globals.
- * Research digests: docs/research/matrix-hacking.md, docs/research/technomancy.md.
  *
- * Rounding: every division rounds UP (RULINGS-NEEDED R1, p. 10 global rule) —
+ * Rounding: every division rounds UP (RULES-DECISIONS.md R1, p. 10 global rule) —
  * including the many Resonance/2, Level/2, Resonance/3 cap/count formulas here,
  * which the book does not individually re-specify.
  */
@@ -299,7 +298,7 @@ export function dominantDuplicate(values = []) {
   return best;
 }
 
-/** Aggregate MDS bonuses stack (RULINGS-NEEDED R18 — no anti-stack language). */
+/** Aggregate MDS bonuses stack (RULES-DECISIONS.md R18 — no anti-stack language). */
 export function aggregateMdsBonuses(bonuses = []) {
   return bonuses.reduce((n, b) => n + (Number(b) || 0), 0);
 }
@@ -521,7 +520,7 @@ export function artificeMaxCraftLevel({ threading = 0, specialization = false, m
 
 /**
  * Submersion nuyen cost. Second factor is the OLD (pre-raise) Resonance
- * (RULINGS-NEEDED R22): cost = newAugmentedResonance × oldResonance × 1,000¥.
+ * (RULES-DECISIONS.md R22): cost = newAugmentedResonance × oldResonance × 1,000¥.
  */
 export function submersionCost({ resonance = 1 } = {}) {
   const old = Math.max(0, Number(resonance) || 0);

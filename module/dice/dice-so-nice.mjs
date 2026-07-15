@@ -1,6 +1,6 @@
 /**
  * Dice So Nice integration — Crit Dice get a distinct material/edge so they
- * are not distinguished by color alone (ARCHITECTURE §5, colorblind-safe).
+ * are not distinguished by color alone (colorblind-safe).
  *
  * DSN is optional; hooks no-op when the module is absent.
  */

@@ -4,7 +4,7 @@ import { resolveTn, buyHits } from "../rules/dice.mjs";
  * Pre-roll dialog: shows the pool composition and gathers SRX modifiers
  * (dice mod, Leverage/Liability, hits mod, threshold, buy hits).
  *
- * Layout per docs/UX-ACTION-DIALOGS.md: live summary strip (pool · TN · vs),
+ * Layout: live summary strip (pool · TN · vs),
  * common inputs up front, Cold overrides behind the Advanced fold.
  *
  * @param {object} config

@@ -3,7 +3,7 @@
  *
  * The catalog importer (`module/import/import-app.mjs`) creates Items from
  * parsed entries but only forwards name/type/system/flags — never `effects`.
- * Rather than edit that (other lane's) mapping, we hook `preCreateItem`: any
+ * Rather than edit that mapping, we hook `preCreateItem`: any
  * item whose `flags.srx.catalogData.effects` carry supported flat modifiers
  * gets a generated ActiveEffect injected into its source before creation.
  *
@@ -11,9 +11,8 @@
  * the right thing when a player drops a "+2 Body" 'ware or a "Built Tough"
  * talent onto their character — the effect rides along and modifies stats.
  *
- * INTEGRATION: srx.mjs is HUB-FROZEN. Call `registerActiveEffectHooks()` from
- * the system init alongside the other `registerXHooks()` calls.
- * // TODO(integrate): registerActiveEffectHooks()
+ * Wired from module/srx.mjs init via `registerActiveEffectHooks()`, alongside
+ * the other `registerXHooks()` calls.
  */
 
 import { catalogEffectDataForItem } from "./catalog-effects.mjs";

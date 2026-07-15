@@ -5,13 +5,13 @@ const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
 
 /**
- * Host sheet (M5): Host Rating drives everything (Logic = Software =
+ * Host sheet: Host Rating drives everything (Logic = Software =
  * firewall = HR ⇒ MDS = HR, firewall pool = HR × 3 — SRX p. 151); the
  * previous seed's Attack/Sleaze/DataProc block was SR5 bleed-through.
  * GM tools: per-system rating overrides, OS-keyed IC ladder, IC damage
  * overrides, one-click firewall test.
  *
- * Play/Build split (docs/UX-MATRIX-HOST.md): Play = a GM cockpit with zero
+ * Play/Build split: Play = a GM cockpit with zero
  * form inputs (MDS/Firewall/Peak-OS tiles, the IC ladder with the currently
  * triggered rung highlighted, the intruder list, one Firewall Test); Build =
  * the per-system rating grid + ladder / damage editors. Same client-side

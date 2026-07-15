@@ -2,11 +2,11 @@
  * SRX formula-string evaluation for gear data (e.g. weapon DV "BOD-3" with a
  * minimum, "BOD+1", flat "7"). Pure functions, no Foundry imports.
  *
- * Grammar (from the character-builder data, docs/research/tsv-gear-data.md):
+ * Grammar (from the character-builder TSV data):
  *   <int>                     → flat value
  *   BOD | BOD+<int> | BOD-<int> → Body-based melee DV
  * Min/max clamps come from the data's "DV Min"/"DV Max" columns and apply to
- * the computed base DV (floor-for-melee / cap-for-bows, RULINGS-NEEDED R54).
+ * the computed base DV (floor-for-melee / cap-for-bows, RULES-DECISIONS.md R54).
  */
 
 const ATTR_PATTERN = /^\s*(BOD|AGI|REA|WIL|LOG|INT|CHA)\s*(?:([+-])\s*(\d+))?\s*$/i;

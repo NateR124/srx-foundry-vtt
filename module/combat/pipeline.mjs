@@ -1,5 +1,5 @@
 /**
- * Attack → resist → apply damage chat pipeline (M2).
+ * Attack → resist → apply damage chat pipeline.
  * Defender-side buttons first; GM socket for cross-ownership apply.
  */
 

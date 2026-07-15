@@ -10,11 +10,11 @@ const pKnowledge = CATALOG_FILES["KnowledgeDomains.txt.deploy"].parser;
 const pArchetypes = CATALOG_FILES["Archetypes.txt.deploy"].parser;
 const pAnima = CATALOG_FILES["Anima.txt.deploy"].parser;
 
-describe("M3 full parsers", () => {
+describe("full catalog parsers", () => {
   it("catalog keys exactly match the real builder Load Data filenames", () => {
     // The builder exports these names — a mismatched key silently skips the
     // whole catalog on import ("Skip unknown file"), which is how Knowledge
-    // and Magic Gear were lost before the architect review.
+    // and Magic Gear were once silently lost (caught in pre-release review).
     const REAL_BUILDER_FILES = [
       "Anima.txt.deploy",
       "Archetypes.txt.deploy",

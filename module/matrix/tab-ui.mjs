@@ -1,7 +1,7 @@
 /**
- * Matrix-tab depth panels (M5). The character sheet already renders the Matrix
- * cockpit (status + connect/hack buttons); per the lane brief we EXTEND that tab
- * via a render hook rather than rewriting the sheet body. This module appends
+ * Matrix-tab depth panels. The character sheet already renders the Matrix
+ * cockpit (status + connect/hack buttons); this module EXTENDS that tab
+ * via a render hook rather than rewriting the sheet body. It appends
  * four panels — Technomancy, Administered Programs, Access & Marks, Devices —
  * into the existing `.matrix-panel`, and wires their controls.
  *

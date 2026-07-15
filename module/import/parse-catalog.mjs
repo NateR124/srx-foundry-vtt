@@ -1,8 +1,8 @@
 /**
- * Minimal catalog parsers for M1.5 — Weapons, Armor, Gear, Talents only.
- * Browser-safe pure functions (string in → entries out). Column maps match
- * task-1 / research digests; this is intentionally a thinner transform aimed
- * at Foundry Item creation, not the full sidecar JSON catalog.
+ * Minimal catalog parsers — Weapons, Armor, Gear, Talents only.
+ * Browser-safe pure functions (string in → entries out); intentionally a
+ * thinner transform aimed at Foundry Item creation, not the full sidecar
+ * JSON catalog.
  */
 
 import { slugify } from "./slugify.mjs";

@@ -10,10 +10,10 @@
  * programs apply statuses or bespoke penalties, not attribute bonuses), so the
  * catalog below classifies each automatable program by effect kind.
  *
- * // TODO(integrate): use active-effect builder — where a program's payload IS
- * an attribute/skill bonus (e.g. the Software buff talents), swap to the shared
- * AE builder once module/active-effect/** lands; today those are self-MDS deltas
- * handled numerically in personaMds().
+ * Where a program's payload IS an attribute/skill bonus (e.g. the Software
+ * buff talents), the value is a self-MDS delta handled numerically in
+ * personaMds() rather than an ActiveEffect; programs that map onto the shared
+ * AE contract could alternatively go through module/active-effect/builder.mjs.
  */
 
 import {

@@ -3,7 +3,7 @@ const { ActorSheetV2 } = foundry.applications.sheets;
 
 /**
  * Threat sheet: GM combat cockpit in Play mode (readouts + Intent clicks
- * only), stat entry in Build mode. Design reference: docs/UX-THREAT-SHEET.md.
+ * only), stat entry in Build mode.
  */
 export class SrxThreatSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   static DEFAULT_OPTIONS = {

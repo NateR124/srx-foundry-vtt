@@ -1,5 +1,5 @@
 /**
- * SRX vision / detection modes for the four enhancement types (ARCHITECTURE §6b).
+ * SRX vision / detection modes for the four enhancement types.
  * Metatype packages and later 'ware AEs flip these on tokens via detection filters.
  *
  * Foundry v14 APIs: CONFIG.Canvas.detectionModes / visionModes.
@@ -50,7 +50,7 @@ export function registerVisionModes() {
     CONFIG.Canvas.detectionModes.srxUltrasound = new DetectionMode({
       id: "srxUltrasound",
       label: "SRX.Vision.ultrasound",
-      // Sound-like: penetrates darkness; walls still block for M1 simplicity
+      // Sound-like: penetrates darkness; walls still block for simplicity
       type: DetectionMode.DETECTION_TYPES?.SOUND ?? DetectionMode.DETECTION_TYPES?.SIGHT ?? 0,
       walls: true,
       angle: false

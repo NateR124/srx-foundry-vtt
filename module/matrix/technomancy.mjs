@@ -2,8 +2,8 @@
  * Technomancy (SRX pp. 174–188). Technomancers are the standard character
  * actor with a Resonance attribute and the Expertise: Technomancer talent —
  * NOT a separate actor type. Sprites function as agents (extra administered-
- * program capacity) and need no actor sheet either, so this lane introduces NO
- * new document type (see MISSION-OUT/technomancy-doctype-decision.md).
+ * program capacity) and need no actor sheet either, so technomancy introduces
+ * NO new document type.
  *
  * The three technomancer-specific pieces layered on the shared Matrix code:
  *  1. Threading substitution (Threading↔Hacking/Software, Intuition↔Logic)

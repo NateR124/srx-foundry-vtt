@@ -322,7 +322,7 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
     const magicAvail = PRIORITY_TABLE[pri.magic]?.magic?.karma ?? 0;
     const chosen = this.#selection.talents ?? [];
     const chosenIds = new Set(chosen.map((t) => t.itemId));
-    // Consume the imported catalog (M3). World talent items only.
+    // Consume the imported catalog. World talent items only.
     const catalog = (game.items?.filter?.((i) => i.type === "talent") ?? [])
       .map((i) => ({ id: i.id, name: i.name, karma: i.system?.karma ?? 0, category: i.system?.category ?? "general" }))
       .sort((a, b) => a.name.localeCompare(b.name));
@@ -635,8 +635,8 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
       }
       if (!actor) throw new Error("actor create failed");
 
-      // Copy chosen catalog talents onto the actor (consume M3 import; the
-      // effect-application of talents is another lane's job).
+      // Copy chosen catalog talents onto the actor. Effect application is
+      // handled by the preCreateItem hook in module/active-effect/hooks.mjs.
       const talentDocs = [];
       for (const t of this.#selection.talents ?? []) {
         const src = game.items?.get?.(t.itemId);

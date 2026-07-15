@@ -45,8 +45,7 @@ export async function promptConnectConfig() {
 /**
  * Matrix test dialog (Hacking / data processing): interface modifiers arrive
  * as pre-computed facts, noise is the one live decision, Cold overrides sit
- * behind the Advanced fold. Shares the .srx.roll-config skin
- * (docs/UX-ACTION-DIALOGS.md).
+ * behind the Advanced fold. Shares the .srx.roll-config skin.
  *
  * @param {object} opts
  * @param {string} opts.title

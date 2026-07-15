@@ -2,12 +2,19 @@
   "name": "srx-foundry-system",
   "version": "0.2.0",
   "private": true,
+  "license": "0BSD",
   "type": "module",
   "description": "Dev tooling for the SRX Foundry VTT system (the system itself ships as plain ES modules).",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest",
+    "check:i18n": "node scripts/check-i18n.mjs",
     "smoke:ui": "node scripts/sheet-ui-smoke.mjs",
+    "smoke:join": "node scripts/foundry-join-smoke.mjs",
+    "smoke:quench": "node scripts/quench-headless.mjs",
     "build:packs": "node scripts/build-packs.mjs"
   },
   "devDependencies": {

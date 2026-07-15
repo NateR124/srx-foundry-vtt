@@ -47,7 +47,7 @@ function talentRow(name, category, karma, desc) {
   return r.join("\t");
 }
 
-describe("M1.5 catalog parsers", () => {
+describe("minimal catalog parsers", () => {
   it("parses armor ratings and heavy flag", () => {
     const entries = parseArmor(ARMOR + "\n");
     expect(entries.length).toBe(1);

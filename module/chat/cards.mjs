@@ -3,7 +3,7 @@
  *
  *   header (category icon · title · subtitle) → body lines → banner → action row
  *
- * Design reference: docs/UX-CHAT-CARDS.md. Variant classes carry the category
+ * Variant classes carry the category
  * accent (combat-card, magic-card, edge-card, heal-card, time-card, aoe-card,
  * info-card); styling lives in styles/srx.css under "Chat cards".
  *

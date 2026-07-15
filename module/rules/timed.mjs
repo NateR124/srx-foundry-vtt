@@ -28,7 +28,7 @@ export function createTimedEffect(data) {
   };
 }
 
-/** Deterministic-enough id for tests; Foundry uses foundry.utils.randomID in live code. */
+/** Deterministic-enough id for tests; live code uses the VTT's randomID helper. */
 function randomId() {
   return `te-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
 }

@@ -1,8 +1,7 @@
 /**
- * Persona matrix state (M5). Personas are NOT a separate actor type — MDS
+ * Persona matrix state. Personas are NOT a separate actor type — MDS
  * derives from the character's own LOG + Software + firewall, so matrix state
- * lives on the character as flags.srx.matrix (docs/research/matrix-hacking.md,
- * "Foundry implications").
+ * lives on the character as flags.srx.matrix.
  *
  * State: { mode: "offline"|"ar"|"vr", hotSim, silent, os, linkLocked }.
  * Hot-sim is a connect-time choice — device setup can only change by
@@ -42,7 +41,7 @@ export async function setMatrixState(actor, patch) {
 /**
  * Effective persona MDS: base derived MDS + the Matrix Defense action buff
  * (p. 145) + any self-buff administered-program bonuses (CCD/Encryption/…,
- * which stack — RULINGS-NEEDED R18). Optional `systemKey` selects per-system
+ * which stack — RULES-DECISIONS.md R18). Optional `systemKey` selects per-system
  * program bonuses (e.g. PDS +1 vs weapons&cyberware only).
  */
 export function personaMds(actor, systemKey = null) {

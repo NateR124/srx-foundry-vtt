@@ -1,7 +1,7 @@
 {
   "id": "srx",
   "title": "SRX — Shadowrun Edition X (Unofficial)",
-  "description": "An unofficial, free fan-made Foundry VTT system for SRX (Shadowrun Edition X). Shadowrun is a registered trademark of The Topps Company, Inc. This project is not published, endorsed by, or affiliated with The Topps Company, Catalyst Game Labs, or the SRX team. No rules text, artwork, or other proprietary material from any Shadowrun product or the SRX rulebook is included. Playing requires the free SRX rulebook, available separately from the SRX team.",
+  "description": "An unofficial, free fan-made Foundry VTT system for SRX (Shadowrun Edition X). Shadowrun is a registered trademark of The Topps Company, Inc. This project is not published, endorsed by, or affiliated with The Topps Company, Catalyst Game Labs, or the SRX team. No rules text, artwork, or other proprietary material from any official Shadowrun product is included. The bundled SRX catalog content is included with the permission of the SRX creator and remains his work; the SRX rulebook itself is not included, and playing requires it, available free from the SRX team.",
   "version": "1.0.1",
   "compatibility": {
     "minimum": "14",
@@ -256,6 +256,8 @@
     }
   },
   "url": "https://github.com/NateR124/srx-foundry-vtt",
+  "license": "https://github.com/NateR124/srx-foundry-vtt/blob/main/LICENSE",
+  "readme": "https://github.com/NateR124/srx-foundry-vtt/blob/main/README.md",
   "manifest": "https://github.com/NateR124/srx-foundry-vtt/releases/latest/download/system.json",
   "download": "https://github.com/NateR124/srx-foundry-vtt/releases/latest/download/srx.zip"
 }

@@ -1,7 +1,6 @@
 /**
  * Core Vehicle & Drone rules (SRX pp. 192–205). Pure functions only.
- * Research digest: docs/research/vehicles-drones.md. Vehicles and drones are
- * mechanically identical (p. 192).
+ * Vehicles and drones are mechanically identical (p. 192).
  */
 
 import { ceilDiv } from "./dice.mjs";

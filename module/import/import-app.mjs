@@ -1,12 +1,12 @@
 /**
- * In-app SRX catalog import (M3).
+ * In-app SRX catalog import.
  * User picks Load Data TSV files (or a folder of them) plus optional JSON
  * sidecars; we parse in-browser and create world Items/Actors in folders.
  * Including the spell-resolution JSON enriches spells during the same run.
  * Re-imports skip documents that already exist in the target folder.
  *
  * UX: structured log (per-line status icons), running state on the submit
- * button, and a summary banner after the run (docs/UX-SURFACE-BACKLOG.md §8).
+ * button, and a summary banner after the run.
  */
 
 import { CATALOG_FILES } from "./parse-catalog.mjs";
@@ -123,7 +123,7 @@ export class SrxCatalogImportApp extends HandlebarsApplicationMixin(ApplicationV
 
   static async #onSubmit(_event, _form, _formData) {
     if (this.#running) return;
-    // Inline validation — the form itself reports the problem (UX-NOTIFICATIONS policy)
+    // Inline validation — the form itself reports the problem (no toast)
     if (!game.user.isGM) {
       this.#pushLog("error", game.i18n.localize("SRX.Import.gmOnly"));
       this.render();

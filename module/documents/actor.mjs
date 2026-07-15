@@ -288,7 +288,7 @@ export class SrxActor extends foundry.documents.Actor {
     return msg;
   }
 
-  /** Cast a spell item (M4). */
+  /** Cast a spell item. */
   async castSpell(spell) {
     return castSpellPipeline(this, spell);
   }
@@ -391,7 +391,7 @@ export class SrxActor extends foundry.documents.Actor {
     return msg;
   }
 
-  /** Damage resistance: Body + Armor, tagged for AOE Defense-Score bonus later (M2). */
+  /** Damage resistance: Body + Armor, tagged for the AOE Defense-Score bonus. */
   async rollDamageResistance() {
     const sys = this.system;
     return this.#rollPool({

@@ -7,7 +7,7 @@
  *  3. Subtract 10 from every score; anyone still > 0 acts again (pass 2…)
  *  4. Hard cap 4 passes, then new Combat Turn (re-roll)
  *
- * Permission model (ARCHITECTURE §6a): players may advance within a pass via
+ * Permission model (ARCHITECTURE.md, "GM executor"): players may advance within a pass via
  * core nextTurn, but end-of-pass and end-of-Combat-Turn mutate every
  * combatant, so those paths always execute on a GM client — non-GM calls
  * relay through the GM-executor socket.

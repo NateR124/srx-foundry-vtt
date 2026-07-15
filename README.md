@@ -73,11 +73,13 @@ You'll want the free SRX rulebook from the SRX team at hand for the rules themse
 
 ```bash
 npm install
-npm test              # vitest — pure rules + import parsers (419 tests)
+npm test              # vitest — pure rules + import parsers
 npm run build:packs   # compile packs-src/** -> packs/** (needs @foundryvtt/foundryvtt-cli)
 ```
 
 Rules math lives in `module/rules/` as pure functions with no Foundry imports, so it's unit-testable outside Foundry. Foundry-facing code wraps it under `module/combat`, `module/magic`, `module/matrix`, `module/vehicle`, `module/chargen`, and `module/apps`. Compendium sources are JSON files under `packs-src/`.
+
+New contributor? Start with [CONTRIBUTING.md](CONTRIBUTING.md) and [ARCHITECTURE.md](ARCHITECTURE.md) (which maps each tabletop rule to the code and tests that implement it). Ambiguous-rule interpretations are logged in [RULES-DECISIONS.md](RULES-DECISIONS.md), and unautomated corners in [KNOWN-GAPS.md](KNOWN-GAPS.md).
 
 ## Legal
 
@@ -85,4 +87,7 @@ Shadowrun is a registered trademark and/or trademark of The Topps Company, Inc.,
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+Two different things live in this repo, under two different terms:
+
+- **The code** is [0BSD](LICENSE) — use it, change it, ship it, no strings. Credit is appreciated but genuinely not required.
+- **The bundled SRX catalog** (`packs/`, `packs-src/`) isn't mine to license. It's SRX material, included with the permission of the SRX creator, and that permission came with one condition: nobody charges money for it. See [CONTENT-NOTICE.md](CONTENT-NOTICE.md) before you redistribute it — and if you want to use it in your own project, ask him rather than me.

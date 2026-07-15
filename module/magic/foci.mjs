@@ -16,9 +16,9 @@
  *    (Liability on resistance/Drain tests + Stun/hour is left to the GM / the
  *    over-limit helpers in rules/foci.mjs).
  *
- * NOTE: the effects lane owns the richer (bonus-typed) AE builder. This module
- * uses the shared flat-effect contract directly; if a typed builder lands,
- * swap `compileFlatEffects` for it here.
+ * NOTE: this module uses the shared flat-effect contract directly
+ * (compileFlatEffects); module/active-effect/builder.mjs wraps the same
+ * contract and would produce equivalent AEs.
  */
 
 import { compileFlatEffects } from "../rules/effects.mjs";
@@ -29,9 +29,8 @@ import {
   safeActiveFociLimit,
   fociOverLimit
 } from "../rules/foci.mjs";
-// Read-only imports of other lanes' exported helpers — do NOT edit those files.
-// endSustained/getSustained come from the effects lane's sustain.mjs; dismissSpirit
-// is our own conjure.mjs helper (routes deletion through the GM executor).
+// endSustained/getSustained come from sustain.mjs; dismissSpirit is
+// conjure.mjs's helper (routes deletion through the GM executor).
 import { getSustained, endSustained } from "./sustain.mjs";
 import { dismissSpirit } from "./conjure.mjs";
 import { esc, line, noticeCard } from "../chat/cards.mjs";
@@ -99,7 +98,7 @@ export function activeFocusCount(actor) {
 }
 
 /**
- * Presentation data for the Magic-tab foci panel (see docs/UX-FOCI.md).
+ * Presentation data for the Magic-tab foci panel.
  * Pure read over the actor's items — attach the result to the sheet render
  * context and drive the active-toggle list + the "active N / safe L" readout
  * from it, so the safe-limit is visible *before* a player trips it (today it
@@ -109,8 +108,8 @@ export function activeFocusCount(actor) {
  * foci exceed Willpower/2 and applies Liability to every resistance/Drain test,
  * so each active focus is flagged when the actor is over — not an arbitrary
  * "these specific ones." The Master Craftsman talent (+1 safe focus) is not
- * auto-detected here, matching {@link warnIfOverLimit}; see UX-FOCI.md
- * follow-ups.
+ * auto-detected here, matching {@link warnIfOverLimit} (a known gap — see
+ * KNOWN-GAPS.md).
  *
  * @param {Actor} actor
  * @returns {{ foci: Array<{id:string,name:string,force:number,focusType:string,
@@ -230,7 +229,7 @@ export async function deactivateFocus(item) {
  * Cascade the dependent effects of a focus that has just been deactivated or
  * unbonded (pp. 359–362): Spell focus ends its sustained spell(s); Sustaining
  * focus drops its sustained power; Spirit focus dismisses the summoned spirit.
- * Calls the effects lane's endSustained and our conjure lane's dismissSpirit —
+ * Calls sustain.mjs's endSustained and conjure.mjs's dismissSpirit —
  * never re-implements them.
  * @param {Item} item
  */
@@ -325,7 +324,7 @@ export function registerFociHooks() {
     activeCount: activeFocusCount,
     panelData: fociPanelData,
     cascade: cascadeFocusDeactivation,
-    // The cast/effects lane calls this when a Sustaining focus takes over a
+    // magic/cast.mjs and magic/sustain.mjs call this when a Sustaining focus takes over a
     // power, so deactivating the focus can drop exactly that sustained entry.
     holdSustain: (item, sustainId) =>
       item?.setFlag?.("srx", "sustainingId", sustainId ?? null)

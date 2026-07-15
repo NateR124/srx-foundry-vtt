@@ -1,5 +1,5 @@
 /**
- * Per-subsystem automation level: off | prompt | auto (ARCHITECTURE § settings).
+ * Per-subsystem automation level: off | prompt | auto.
  */
 
 export const AUTOMATION_LEVELS = ["off", "prompt", "auto"];

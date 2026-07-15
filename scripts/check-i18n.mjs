@@ -1,4 +1,21 @@
+/**
+ * Localization check: every SRX.# / TYPES.# key referenced in module/ and
+ * templates/ must exist in lang/en.json. Exits non-zero on missing keys, so
+ * CI can gate on it.
+ *
+ * Keys built at runtime by concatenation (e.g. `"SRX.Monitor." + track`)
+ * appear in source as dangling prefixes; each prefix below is allowed only
+ * if at least one concrete key under it exists in en.json.
+ */
 import fs from "fs";
+
+const DYNAMIC_PREFIXES = [
+  "SRX.Knowledge.",
+  "SRX.Monitor.",
+  "SRX.TalentCategory.",
+  "SRX.Vehicle.mountType_",
+  "TYPES.Item."
+];
 
 const en = JSON.parse(fs.readFileSync("lang/en.json", "utf8"));
 const files = [];
@@ -20,6 +37,21 @@ for (const f of files) {
   let m;
   while ((m = re.exec(t))) used.add(m[1]);
 }
-const missing = [...used].filter((k) => !(k in en)).sort();
-console.log(`used ${used.size}, missing ${missing.length}`);
-for (const k of missing) console.log(k);
+
+const enKeys = Object.keys(en);
+const problems = [];
+for (const k of [...used].sort()) {
+  if (k in en) continue;
+  if (DYNAMIC_PREFIXES.includes(k)) {
+    // A dynamic prefix is fine as long as something concrete lives under it.
+    if (!enKeys.some((e) => e.startsWith(k))) {
+      problems.push(`${k} (dynamic prefix with NO concrete keys in en.json)`);
+    }
+    continue;
+  }
+  problems.push(k);
+}
+
+console.log(`used ${used.size}, problems ${problems.length}`);
+for (const k of problems) console.log(`MISSING: ${k}`);
+process.exit(problems.length ? 1 : 0);

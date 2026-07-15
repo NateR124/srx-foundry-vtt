@@ -14,7 +14,7 @@
  * and range live on the vehicle (`system.chase`). Cross-owner writes relay
  * through the GM executor.
  *
- * Rules: docs/research/vehicles-drones.md pp. 200–205.
+ * Rules: SRX Full Rulebook pp. 200–205.
  */
 
 import {

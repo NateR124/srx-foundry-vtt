@@ -85,7 +85,7 @@ export function evaluateRoll(dice, { tn = 5, hitMods = 0, threshold = null } = {
 
 /**
  * Buying hits (p. 10): 1 hit per full 4 dice; floor, not the global round-up —
- * it is a purchase rate, not a division result (RULINGS-NEEDED R1).
+ * it is a purchase rate, not a division result (RULES-DECISIONS.md R1).
  * Not allowed under Liability; allowed under Leverage.
  * @returns {number|null} bought hits, or null if not permitted.
  */
@@ -118,7 +118,7 @@ export function teamworkBonus(assistantHits, leaderPool) {
 /**
  * Group test (p. 11): the group succeeds if at least half succeed. When a hit
  * count is needed, use the median result — even-sized groups use the lower of
- * the middle pair (RULINGS-NEEDED R49).
+ * the middle pair (RULES-DECISIONS.md R49).
  */
 export function groupTest(individualHits, threshold) {
   const n = individualHits.length;

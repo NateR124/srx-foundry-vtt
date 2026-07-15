@@ -194,7 +194,7 @@ Hooks.once("ready", () => {
   registerAstralTimeHooks();
   registerSuppressMovementHooks();
   registerChargenHooks();
-  console.log("SRX | Ready (M2 combat + M3 import + M4 magic + M5 matrix + M6 vehicles + effects/foci/spirits)");
+  console.log("SRX | Ready");
 });
 
 /** Dice So Nice */

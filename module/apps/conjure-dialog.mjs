@@ -4,7 +4,7 @@ import { maxForce } from "../rules/magic.mjs";
 /**
  * Conjure dialog: Force / Form (/ Services) for Summon Spirit and Bind
  * Elemental. Previously both fired from the sheet with a hardcoded Force —
- * the one number the rules let the conjurer choose (docs/UX-ACTION-DIALOGS.md).
+ * the one number the rules let the conjurer choose.
  *
  * @param {object} opts
  * @param {string} opts.title

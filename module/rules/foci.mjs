@@ -102,11 +102,11 @@ export function focusEffectChanges(focus = {}) {
     case "mysticism":  return [{ key: "skill.mysticism", value: 1 }];
     case "willpower":  return [{ key: "attr.wil", value: 1 }];
     case "protective": return [{ key: "derived.armor", value: 2 }];
-    // Power Focus grants "+1 augmentation Magic attribute" (digest
-    // magic-mysticism-channeling-foci.md, p. 353). SRX foci are fixed-Force
-    // (Power = Force 8) and grant a flat +1, unlike classic Shadowrun's
-    // variable-Force power focus that added its Force — so the magnitude is 1,
-    // NOT the focus rating. attr.mag → system.special.magic.bonus (effects lane).
+    // Power Focus grants "+1 augmentation Magic attribute" (p. 353). SRX foci
+    // are fixed-Force (Power = Force 8) and grant a flat +1, unlike classic
+    // Shadowrun's variable-Force power focus that added its Force — so the
+    // magnitude is 1, NOT the focus rating. attr.mag →
+    // system.special.magic.bonus (flat-effect contract).
     case "power":      return [{ key: "attr.mag", value: 1 }];
     case "skill":
       // Skill focus aligned to one skill at crafting (imbued = skill key).

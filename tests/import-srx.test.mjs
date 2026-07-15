@@ -11,7 +11,7 @@ function loadFixture(filename) {
   return parsePregenJson(text);
 }
 
-describe("parsePregenJson (M3-SRX-ACTORS Phase A)", () => {
+describe("parsePregenJson (pregen character exports)", () => {
   it("Street Samurai maps attributes and skills", () => {
     const actor = loadFixture("StreetSamurai.json");
     expect(actor.name).toBe("Street Samurai");

@@ -1,15 +1,14 @@
 /**
  * Local Foundry join + static asset smoke (no secrets).
- * Assumes world srx-smoke-test is active and Gamemaster has empty password
- * (common local setup). Override with FVTT_USERID / FVTT_PASS env if needed.
+ * Assumes an SRX world is active and Gamemaster has an empty password
+ * (common local setup). The Gamemaster user id is discovered from the join
+ * page; override with FVTT_USERID / FVTT_PASS env if needed.
  *
  *   node scripts/foundry-join-smoke.mjs
  */
-import crypto from "crypto";
 import http from "http";
 
 const BASE = process.env.FVTT_URL || "http://127.0.0.1:30000";
-const USER_ID = process.env.FVTT_USERID || "oZX3jOtG7b8nm4GT";
 const PASS = process.env.FVTT_PASS ?? "";
 
 function request(method, path, { body, cookie } = {}) {
@@ -65,9 +64,16 @@ ok("system is srx", status.json?.system === "srx");
 let cookie = "";
 const joinGet = await request("GET", "/join");
 cookie = jar(joinGet.setCookie, cookie);
+// Discover the Gamemaster's user id from the join page unless overridden.
+let userId = process.env.FVTT_USERID;
+if (!userId) {
+  const m = joinGet.raw.match(/<option value="(\w+)"[^>]*>[^<]*Gamemaster[^<]*<\/option>/i);
+  userId = m?.[1];
+}
+ok("Gamemaster user found", !!userId, userId ? "" : "set FVTT_USERID");
 const join = await request("POST", "/join", {
   cookie,
-  body: { action: "join", userid: USER_ID, password: PASS }
+  body: { action: "join", userid: userId, password: PASS }
 });
 cookie = jar(join.setCookie, cookie);
 ok("join Gamemaster", join.json?.status === "success", JSON.stringify(join.json));
