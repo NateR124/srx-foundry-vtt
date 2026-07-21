@@ -3,7 +3,7 @@
 All notable changes to the SRX (Unofficial) Foundry VTT system. Versions follow
 `MAJOR.MINOR.PATCH`; the system targets Foundry **v14** (verified 14.364).
 
-## Unreleased — Handoff hygiene
+## 1.0.2 — 2026-07-20 — Handoff hygiene
 
 ### Fixed
 - **Missing localization key**: `SRX.Foci.deactivateCascade` (shown when a
@@ -32,6 +32,9 @@ All notable changes to the SRX (Unofficial) Foundry VTT system. Versions follow
 - Smoke scripts no longer depend on machine-specific paths or a hard-coded
   user id (`FVTT_URL` / `FVTT_USERID` / `FVTT_PASS` / `PLAYWRIGHT_DIR` env
   vars; the join smoke discovers the Gamemaster automatically).
+- README rewritten around installation (manifest URL first); contributor
+  docs (`ARCHITECTURE`, `CONTRIBUTING`, `EFFECTS`, `KNOWN-GAPS`,
+  `RULES-DECISIONS`) moved from the repo root into `docs/`.
 
 No rule behavior changed; the 437-test suite passes unmodified.
 
