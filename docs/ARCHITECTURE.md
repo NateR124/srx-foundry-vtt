@@ -129,7 +129,7 @@ prove:
 - **Version:** `system.json` is authoritative (it's what Foundry and the
   release pipeline read). `package.json`'s version is meaningless private
   tooling metadata.
-- **Bundled SRX catalog content** is covered by [CONTENT-NOTICE.md](CONTENT-NOTICE.md),
+- **Bundled SRX catalog content** is covered by [CONTENT-NOTICE.md](../CONTENT-NOTICE.md),
   not the code license — read it before redistributing.
 
 ## Known architectural debts (documented, deliberately unfixed)

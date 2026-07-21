@@ -88,7 +88,7 @@ code you aren't changing.
 
 The bundled SRX catalog (`packs-src/`, compiled `packs/`) is **not** covered
 by the code license — it's SRX material redistributed with the creator's
-permission. Read [CONTENT-NOTICE.md](CONTENT-NOTICE.md) before touching how
+permission. Read [CONTENT-NOTICE.md](../CONTENT-NOTICE.md) before touching how
 content is packaged or distributed. Original journal content
 (`packs-src/srx-guides/`) is 0BSD like the code.
 

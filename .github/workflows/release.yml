@@ -49,7 +49,7 @@ jobs:
       - name: Rules purity check (module/rules must stay Foundry-free)
         run: |
           if grep -rnE "game\.|foundry\.[a-z]|canvas\.|ChatMessage|Hooks\." module/rules --include="*.mjs"; then
-            echo "::error::module/rules/ must not reference Foundry APIs (see ARCHITECTURE.md)"
+            echo "::error::module/rules/ must not reference Foundry APIs (see docs/ARCHITECTURE.md)"
             exit 1
           else
             echo "module/rules is Foundry-free"
