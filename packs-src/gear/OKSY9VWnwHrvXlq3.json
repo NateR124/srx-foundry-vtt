@@ -1,14 +1,28 @@
 {
   "_id": "OKSY9VWnwHrvXlq3",
   "name": "Grapple Gun (Off-Hand)",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Cyberlimbs / Cyberarms",
     "description": "Hidden grapple gun built-in to your arm",
-    "subtype": "Cyberarm Upgrade",
+    "source": "",
+    "cost": 5000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Cyberarm Upgrade",
+    "container": "Cyberarm (Off-Hand)",
     "rating": 0,
-    "quantity": 1,
-    "cost": 5000
+    "maxRating": null,
+    "essence": 0,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface),Cyberarm (Off-Hand)",
+    "incompatible": [
+      "Cyber Gun (Off-Hand)Cyberarm Upgrade",
+      "Cyber Holster (Off-Hand)",
+      "Gyroarm (Off-Hand)Cyberarm Upgrade",
+      "Smuggling Compartment (Off-Hand)Cyberarm Upgrade"
+    ]
   },
   "flags": {
     "srx": {

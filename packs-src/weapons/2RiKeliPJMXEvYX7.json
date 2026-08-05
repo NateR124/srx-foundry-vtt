@@ -1,14 +1,21 @@
 {
   "_id": "2RiKeliPJMXEvYX7",
   "name": "Laser Sight (Bow)",
-  "type": "gear",
+  "type": "weaponMod",
   "system": {
     "summary": "",
     "description": "",
-    "subtype": "Modification",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 400
+    "source": "",
+    "cost": 400,
+    "legality": "",
+    "mounts": [
+      "bow"
+    ],
+    "allMountsRequired": false,
+    "noMount": false,
+    "requiresMod": "",
+    "attachedTo": "",
+    "attachedMounts": []
   },
   "flags": {
     "srx": {

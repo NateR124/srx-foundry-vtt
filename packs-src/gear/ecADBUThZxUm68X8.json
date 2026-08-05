@@ -1,14 +1,23 @@
 {
   "_id": "ecADBUThZxUm68X8",
   "name": "Voice Modulator",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Headware",
     "description": "Make any sound, imitate voices",
-    "subtype": "ware",
+    "source": "",
+    "cost": 10000,
+    "legality": "restricted",
+    "wareType": "cyberware",
+    "category": "Headware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 10000
+    "maxRating": null,
+    "essence": 0.15,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

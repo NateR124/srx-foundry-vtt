@@ -1,14 +1,23 @@
 {
   "_id": "pzXoPdDlpEuzbX6a",
   "name": "Adrenaline Pump",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "Temporary physical boost",
-    "subtype": "ware",
+    "source": "",
+    "cost": 160000,
+    "legality": "restricted",
+    "wareType": "bioware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 160000
+    "maxRating": null,
+    "essence": 0.8,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": []
   },
   "flags": {
     "srx": {

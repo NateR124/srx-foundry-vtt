@@ -1,14 +1,19 @@
 {
   "_id": "ONhslcYmEQBbNJEM",
   "name": "Low-Light",
-  "type": "gear",
+  "type": "weaponMod",
   "system": {
     "summary": "",
     "description": "",
-    "subtype": "Modification",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 375
+    "source": "",
+    "cost": 375,
+    "legality": "",
+    "mounts": [],
+    "allMountsRequired": false,
+    "noMount": true,
+    "requiresMod": "Imaging Scope",
+    "attachedTo": "",
+    "attachedMounts": []
   },
   "flags": {
     "srx": {

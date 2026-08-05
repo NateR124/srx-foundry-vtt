@@ -1,14 +1,23 @@
 {
   "_id": "PoUUHvVGHVSclKbh",
   "name": "Reflex Pathways",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "Ambidextrous Talent",
-    "subtype": "ware",
+    "source": "",
+    "cost": 22000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 22000
+    "maxRating": null,
+    "essence": 0.3,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

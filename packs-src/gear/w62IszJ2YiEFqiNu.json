@@ -1,14 +1,27 @@
 {
   "_id": "w62IszJ2YiEFqiNu",
   "name": "Wired Reflexes",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "+Rating to Quickness",
-    "subtype": "ware",
-    "rating": 3,
-    "quantity": 1,
-    "cost": 0
+    "source": "",
+    "cost": 0,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Bodyware",
+    "container": "",
+    "rating": 1,
+    "maxRating": 3,
+    "essence": 0,
+    "essenceScale": [
+      1,
+      1.5,
+      2.5
+    ],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

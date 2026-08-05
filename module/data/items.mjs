@@ -39,6 +39,14 @@ export class WeaponData extends foundry.abstract.TypeDataModel {
       category: new fields.StringField({ required: true, blank: true, initial: "" }),
       range: new fields.StringField({ required: true, blank: true, initial: "" }),
       properties: new fields.StringField({ required: true, blank: true, initial: "" }),
+      // Mod mount capacities (SRX.weaponMounts keys). All-zero = unmoddable
+      // (melee/explosives/ammo have no mounts in the catalog).
+      mounts: new fields.SchemaField(Object.fromEntries(
+        SRX.weaponMounts.map((key) => [
+          key,
+          new fields.NumberField({ required: true, integer: true, min: 0, initial: 0, nullable: false })
+        ])
+      )),
       attackModes: new fields.ArrayField(
         new fields.SchemaField({
           name: new fields.StringField({ required: true, blank: true, initial: "" }),
@@ -85,6 +93,63 @@ export class GearData extends foundry.abstract.TypeDataModel {
       subtype: new fields.StringField({ required: true, blank: true, initial: "" }),
       rating: new fields.NumberField({ required: true, integer: true, min: 0, initial: 0, nullable: false }),
       quantity: new fields.NumberField({ required: true, integer: true, min: 0, initial: 1, nullable: false })
+    };
+  }
+}
+
+/**
+ * Weapon modification (silencer, scope, gas-vent…). Attaches to one owned
+ * weapon via `attachedTo` (embedded item id); `attachedMounts` records which
+ * mount(s) it occupies there. Mount/compatibility semantics live in
+ * rules/weapon-mods.mjs.
+ */
+export class WeaponModData extends foundry.abstract.TypeDataModel {
+  static defineSchema() {
+    return {
+      ...descriptionSchema(),
+      ...costSchema(),
+      mounts: new fields.ArrayField(
+        new fields.StringField({ required: true, blank: false, choices: () => SRX.weaponMounts })
+      ),
+      // true = occupies every listed mount (Underbarrel Grenade Launcher);
+      // false = occupies any one of them (Laser Sight)
+      allMountsRequired: new fields.BooleanField({ initial: false }),
+      // Add-on that rides on another mod instead of a mount (scope upgrades)
+      noMount: new fields.BooleanField({ initial: false }),
+      requiresMod: new fields.StringField({ required: true, blank: true, initial: "" }),
+      attachedTo: new fields.StringField({ required: true, blank: true, initial: "" }),
+      attachedMounts: new fields.ArrayField(
+        new fields.StringField({ required: true, blank: false, choices: () => SRX.weaponMounts })
+      )
+    };
+  }
+}
+
+/**
+ * Cyberware/bioware. Essence math lives in rules/ware.mjs; the AE pipeline
+ * (active-effect/hooks.mjs) scales flags.srx.catalogData.effects by rating
+ * for rated 'ware and tracks the installed toggle.
+ */
+export class WareData extends foundry.abstract.TypeDataModel {
+  static defineSchema() {
+    return {
+      ...descriptionSchema(),
+      ...costSchema(),
+      wareType: new fields.StringField({ required: true, initial: "cyberware", choices: () => SRX.wareTypes }),
+      category: new fields.StringField({ required: true, blank: true, initial: "" }),
+      // Cyberlimb upgrades install INTO a parent container ("Cyberarm") rather
+      // than the body directly — display/prereq context, from the catalog.
+      container: new fields.StringField({ required: true, blank: true, initial: "" }),
+      rating: new fields.NumberField({ required: true, integer: true, min: 0, initial: 0, nullable: false }),
+      // null = unrated (flat essence cost); set = rated (essence × rating)
+      maxRating: new fields.NumberField({ required: false, integer: true, min: 1, nullable: true, initial: null }),
+      essence: new fields.NumberField({ required: true, min: 0, initial: 0, nullable: false }),
+      // Per-rating cost table (Wired Reflexes 1/1.5/2.5); wins over `essence`
+      essenceScale: new fields.ArrayField(new fields.NumberField({ required: true, min: 0, nullable: false })),
+      // In the body (costs Essence, effects apply) vs a spare in a bag
+      installed: new fields.BooleanField({ initial: true }),
+      prereq: new fields.StringField({ required: true, blank: true, initial: "" }),
+      incompatible: new fields.ArrayField(new fields.StringField({ required: true, blank: false }))
     };
   }
 }

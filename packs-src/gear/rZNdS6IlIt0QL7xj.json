@@ -1,14 +1,23 @@
 {
   "_id": "rZNdS6IlIt0QL7xj",
   "name": "Muscle Toner",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "+Rating to Agility",
-    "subtype": "ware",
-    "rating": 3,
-    "quantity": 1,
-    "cost": 43000
+    "source": "",
+    "cost": 43000,
+    "legality": "",
+    "wareType": "bioware",
+    "category": "Bodyware",
+    "container": "",
+    "rating": 1,
+    "maxRating": 3,
+    "essence": 0.2,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": []
   },
   "flags": {
     "srx": {

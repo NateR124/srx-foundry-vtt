@@ -1,14 +1,23 @@
 {
   "_id": "LKqU9iorQWGHNd19",
   "name": "Damper",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Senseware / Earware",
     "description": "Leverage against sonic attacks and flash-bang grenades",
-    "subtype": "Earware",
+    "source": "",
+    "cost": 1000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Earware",
+    "container": "Cyberears",
     "rating": 0,
-    "quantity": 1,
-    "cost": 1000
+    "maxRating": null,
+    "essence": 0.2,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

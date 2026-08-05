@@ -1,14 +1,26 @@
 {
   "_id": "APXqKzFATafKAeJ2",
   "name": "Orthoskin",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "+Rating to Armor",
-    "subtype": "ware",
-    "rating": 3,
-    "quantity": 1,
-    "cost": 20000
+    "source": "",
+    "cost": 20000,
+    "legality": "",
+    "wareType": "bioware",
+    "category": "Bodyware",
+    "container": "",
+    "rating": 1,
+    "maxRating": 3,
+    "essence": 0.2,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": [
+      "Cybertorso",
+      "Dermal Plating"
+    ]
   },
   "flags": {
     "srx": {

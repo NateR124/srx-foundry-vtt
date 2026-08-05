@@ -1,14 +1,25 @@
 {
   "_id": "J7SJRuNdgK2n7Svj",
   "name": "Thermographic Vision",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Senseware / Eyeware",
     "description": "Thermographic Vision Enhancement",
-    "subtype": "Eyeware",
+    "source": "",
+    "cost": 1500,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Eyeware",
+    "container": "Cybereyes",
     "rating": 0,
-    "quantity": 1,
-    "cost": 1500
+    "maxRating": null,
+    "essence": 0.2,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": [
+      "Troll Eyes"
+    ]
   },
   "flags": {
     "srx": {

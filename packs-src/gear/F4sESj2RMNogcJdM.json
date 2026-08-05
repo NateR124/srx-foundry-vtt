@@ -1,14 +1,23 @@
 {
   "_id": "F4sESj2RMNogcJdM",
   "name": "Synaptic Booster",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "+Rating to Accelerator",
-    "subtype": "ware",
-    "rating": 3,
-    "quantity": 1,
-    "cost": 16000
+    "source": "",
+    "cost": 16000,
+    "legality": "",
+    "wareType": "bioware",
+    "category": "Bodyware",
+    "container": "",
+    "rating": 1,
+    "maxRating": 3,
+    "essence": 0.1,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": []
   },
   "flags": {
     "srx": {

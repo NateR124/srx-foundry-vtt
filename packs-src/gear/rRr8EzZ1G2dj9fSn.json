@@ -1,14 +1,23 @@
 {
   "_id": "rRr8EzZ1G2dj9fSn",
   "name": "Performance Enhancement",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Cyberlimbs / Cyberarms",
     "description": "+1 Athletics, Close Combat, Firearms, Projectile Weapons",
-    "subtype": "Cyberarm Upgrade",
+    "source": "",
+    "cost": 25000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Cyberarm Upgrade",
+    "container": "Cyberarm",
     "rating": 0,
-    "quantity": 1,
-    "cost": 25000
+    "maxRating": null,
+    "essence": 0,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface),Cyberarm",
+    "incompatible": []
   },
   "flags": {
     "srx": {

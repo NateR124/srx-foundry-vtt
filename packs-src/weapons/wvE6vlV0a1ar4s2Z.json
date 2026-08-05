@@ -1,14 +1,19 @@
 {
   "_id": "wvE6vlV0a1ar4s2Z",
   "name": "Vision Magnification",
-  "type": "gear",
+  "type": "weaponMod",
   "system": {
     "summary": "",
     "description": "",
-    "subtype": "Modification",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 500
+    "source": "",
+    "cost": 500,
+    "legality": "",
+    "mounts": [],
+    "allMountsRequired": false,
+    "noMount": true,
+    "requiresMod": "Imaging Scope",
+    "attachedTo": "",
+    "attachedMounts": []
   },
   "flags": {
     "srx": {

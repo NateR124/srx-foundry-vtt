@@ -30,7 +30,18 @@
         "dvType": "P",
         "element": ""
       }
-    ]
+    ],
+    "mounts": {
+      "barrel": 1,
+      "internal": 1,
+      "side": 0,
+      "stock": 0,
+      "top": 1,
+      "underbarrel": 0,
+      "foldingStock": 1,
+      "bow": 0,
+      "sawedOff": 0
+    }
   },
   "flags": {
     "srx": {

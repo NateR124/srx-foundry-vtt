@@ -1,14 +1,23 @@
 {
   "_id": "7cgOAIVU73oT9Yvr",
   "name": "Smuggling Compartment",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Cyberlimbs / Cyberlegs",
     "description": "Small hidden compartment",
-    "subtype": "Cyberleg Upgrade",
+    "source": "",
+    "cost": 2000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Cyberleg Upgrade",
+    "container": "Cyberleg",
     "rating": 0,
-    "quantity": 1,
-    "cost": 2000
+    "maxRating": null,
+    "essence": 0,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface),Cyberleg",
+    "incompatible": []
   },
   "flags": {
     "srx": {

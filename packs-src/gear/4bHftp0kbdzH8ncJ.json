@@ -1,14 +1,23 @@
 {
   "_id": "4bHftp0kbdzH8ncJ",
   "name": "Fingertip Compartment",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "Small hidden compartment",
-    "subtype": "ware",
+    "source": "",
+    "cost": 2000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 2000
+    "maxRating": null,
+    "essence": 0.05,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

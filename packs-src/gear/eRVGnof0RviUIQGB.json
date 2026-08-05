@@ -1,14 +1,25 @@
 {
   "_id": "eRVGnof0RviUIQGB",
   "name": "Enhanced Articulation",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "+1 Athletics, Close Combat, Firearms, Projectile Weapons, Stealth",
-    "subtype": "ware",
+    "source": "",
+    "cost": 35000,
+    "legality": "",
+    "wareType": "bioware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 35000
+    "maxRating": null,
+    "essence": 0.3,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": [
+      "Smart Articulation"
+    ]
   },
   "flags": {
     "srx": {

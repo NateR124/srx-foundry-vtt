@@ -1,14 +1,28 @@
 {
   "_id": "3sGyPKN0jxBkOqRG",
   "name": "Cyber Holster",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Cyberlimbs / Cyberarms",
     "description": "Hidden weapon readied with Free Action",
-    "subtype": "Cyberarm Upgrade",
+    "source": "",
+    "cost": 8500,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Cyberarm Upgrade",
+    "container": "Cyberarm",
     "rating": 0,
-    "quantity": 1,
-    "cost": 8500
+    "maxRating": null,
+    "essence": 0,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface),Cyberarm",
+    "incompatible": [
+      "Cyber GunCyberarm Upgrade",
+      "Grapple Gun",
+      "GyroarmCyberarm Upgrade",
+      "Smuggling CompartmentCyberarm Upgrade"
+    ]
   },
   "flags": {
     "srx": {

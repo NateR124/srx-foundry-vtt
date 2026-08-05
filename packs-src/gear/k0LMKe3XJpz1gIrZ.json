@@ -1,14 +1,23 @@
 {
   "_id": "k0LMKe3XJpz1gIrZ",
   "name": "DNI (Direct Neural Interface)",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Headware",
     "description": "Basic Matrix connection",
-    "subtype": "ware",
+    "source": "",
+    "cost": 500,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Headware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 500
+    "maxRating": null,
+    "essence": 0.05,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": []
   },
   "flags": {
     "srx": {

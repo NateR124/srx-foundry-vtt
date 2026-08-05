@@ -1,14 +1,23 @@
 {
   "_id": "om1CRJtRvmwYmJun",
   "name": "Synthetic Wrap",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Cyberlimbs / Other Cyberlimbs",
     "description": "Make cyberskull look life-like. No Liability on Con & Influence tests.",
-    "subtype": "Cyberskull Upgrade",
+    "source": "",
+    "cost": 2000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Cyberskull Upgrade",
+    "container": "Cyberskull",
     "rating": 0,
-    "quantity": 1,
-    "cost": 2000
+    "maxRating": null,
+    "essence": 0,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface),Cyberskull",
+    "incompatible": []
   },
   "flags": {
     "srx": {

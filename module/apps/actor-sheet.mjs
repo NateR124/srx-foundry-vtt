@@ -3,6 +3,8 @@ import { restoreNullNumbers } from "./form-utils.mjs";
 import { oneTimeGrants } from "../rules/metatype.mjs";
 import { getMatrixState, personaMds, personaInterfaceMods } from "../matrix/persona.mjs";
 import { fociPanelData, bondFocus } from "../magic/foci.mjs";
+import { wareEssenceCost } from "../rules/ware.mjs";
+import { promptAttachMod, detachMod } from "../items/weapon-mods.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
@@ -47,7 +49,10 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
       matrixSilent: SrxCharacterSheet.#onMatrixSilent,
       matrixDefense: SrxCharacterSheet.#onMatrixDefense,
       matrixHack: SrxCharacterSheet.#onMatrixHack,
-      matrixData: SrxCharacterSheet.#onMatrixData
+      matrixData: SrxCharacterSheet.#onMatrixData,
+      attachMod: SrxCharacterSheet.#onAttachMod,
+      detachMod: SrxCharacterSheet.#onDetachMod,
+      toggleWareInstalled: SrxCharacterSheet.#onToggleWareInstalled
     }
   };
 
@@ -174,11 +179,14 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
     }));
 
     const byType = (t) => actor.items.filter((i) => i.type === t).sort((a, b) => a.name.localeCompare(b.name));
+    const allMods = byType("weaponMod");
     context.items = {
       weapons: byType("weapon").map((w) => ({
         item: w,
-        modes: w.system.attackModes.map((m, idx) => ({ ...m, idx }))
+        modes: w.system.attackModes.map((m, idx) => ({ ...m, idx })),
+        mods: allMods.filter((m) => m.system.attachedTo === w.id)
       })),
+      unattachedMods: allMods.filter((m) => !m.system.attachedTo),
       armor: byType("armor"),
       gear: byType("gear"),
       talents: byType("talent"),
@@ -187,6 +195,27 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
       knowledge: byType("knowledge"),
       spells: byType("spell"),
       foci: byType("focus")
+    };
+
+    // Ware tab: cyber/bio split, live essence math, R2 advisory
+    const wareRow = (item) => ({
+      item,
+      essenceCost: wareEssenceCost(item.system),
+      rated: item.system.maxRating !== null && item.system.maxRating !== undefined
+    });
+    const ware = byType("ware");
+    context.ware = {
+      cyber: ware.filter((i) => i.system.wareType === "cyberware").map(wareRow),
+      bio: ware.filter((i) => i.system.wareType === "bioware").map(wareRow),
+      essenceBase: sys.special.essence,
+      essenceUsed: sys.derived.essenceUsed,
+      essenceRemaining: sys.derived.essence,
+      violations: (sys.derived.essenceViolations ?? []).map((v) =>
+        game.i18n.format("SRX.Ware.essenceCapViolation", {
+          attr: game.i18n.localize(`SRX.Attribute.${v.key === "magic" ? "mag" : "res"}`),
+          value: v.value, max: v.max
+        })
+      )
     };
 
     const sustained = actor.getFlag("srx", "sustained") ?? [];
@@ -604,6 +633,29 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
     const item = this.document.items.get(target.dataset.itemId);
     if (!item || item.type !== "focus") return null;
     await bondFocus(item);
+    return this.render();
+  }
+
+  /** Pick a compatible weapon (validated) and attach the mod to it. */
+  static async #onAttachMod(_event, target) {
+    const item = this.document.items.get(target.dataset.itemId);
+    if (!item || item.type !== "weaponMod") return null;
+    await promptAttachMod(item);
+    return this.render();
+  }
+
+  static async #onDetachMod(_event, target) {
+    const item = this.document.items.get(target.dataset.itemId);
+    if (!item || item.type !== "weaponMod") return null;
+    await detachMod(item);
+    return this.render();
+  }
+
+  /** Intent toggle: in the body (Essence + effects apply) vs spare in a bag. */
+  static async #onToggleWareInstalled(_event, target) {
+    const item = this.document.items.get(target.dataset.itemId);
+    if (!item || item.type !== "ware") return null;
+    await item.update({ "system.installed": !item.system.installed });
     return this.render();
   }
 }

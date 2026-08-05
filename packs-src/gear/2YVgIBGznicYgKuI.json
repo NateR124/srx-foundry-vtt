@@ -1,14 +1,23 @@
 {
   "_id": "2YVgIBGznicYgKuI",
   "name": "Balance Augmenter",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Senseware / Earware",
     "description": "Leverage to keep balance/stay on feet; no Liability while Running",
-    "subtype": "Earware",
+    "source": "",
+    "cost": 5000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Earware",
+    "container": "Cyberears",
     "rating": 0,
-    "quantity": 1,
-    "cost": 5000
+    "maxRating": null,
+    "essence": 0.2,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

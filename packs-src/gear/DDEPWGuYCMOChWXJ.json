@@ -1,14 +1,26 @@
 {
   "_id": "DDEPWGuYCMOChWXJ",
   "name": "Gyroarm",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "Fire 1 additional Action Phase without recoil penalty",
-    "subtype": "ware",
+    "source": "",
+    "cost": 11000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 11000
+    "maxRating": null,
+    "essence": 0.2,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": [
+      "Cyberarm",
+      "Cyber Gun"
+    ]
   },
   "flags": {
     "srx": {

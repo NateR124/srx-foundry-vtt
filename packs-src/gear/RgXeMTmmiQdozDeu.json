@@ -1,14 +1,23 @@
 {
   "_id": "RgXeMTmmiQdozDeu",
   "name": "Olfactory Booster",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Senseware / Other",
     "description": "+1 Perception",
-    "subtype": "ware",
+    "source": "",
+    "cost": 15000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Senseware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 15000
+    "maxRating": null,
+    "essence": 0.2,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

@@ -3,6 +3,7 @@ import * as derived from "../rules/derived.mjs";
 import * as metatype from "../rules/metatype.mjs";
 import { resolveVisionEnhancements } from "../canvas/vision.mjs";
 import { aggregateStatusMods, statusIdsFromActor } from "../rules/statuses.mjs";
+import { totalEssenceUsed, essenceRemaining, essenceCapViolations } from "../rules/ware.mjs";
 
 const fields = foundry.data.fields;
 
@@ -231,6 +232,20 @@ export class CharacterData extends foundry.abstract.TypeDataModel {
         ids: [...statusMods.statuses]
       }
     };
+
+    // Essence: special.essence holds the BASE (6); remaining derives live
+    // from installed 'ware (p. 326) so implants actually cost the body.
+    // Magic/Resonance over floor(Essence) is advisory like the maxima (R2).
+    const wareSystems = [];
+    for (const item of actor?.items ?? []) {
+      if (item.type === "ware") wareSystems.push(item.system);
+    }
+    this.derived.essenceUsed = totalEssenceUsed(wareSystems);
+    this.derived.essence = essenceRemaining(this.special.essence, this.derived.essenceUsed);
+    this.derived.essenceViolations = essenceCapViolations(this.derived.essence, {
+      magic: this.special.magic.value,
+      resonance: this.special.resonance.value
+    });
 
     // Unaugmented ratings vs the metatype maxima table (p. 13). Advisory —
     // surfaced as a sheet banner, never clamped (chargen/advancement validate

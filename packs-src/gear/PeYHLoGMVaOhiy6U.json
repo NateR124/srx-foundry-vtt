@@ -1,14 +1,25 @@
 {
   "_id": "PeYHLoGMVaOhiy6U",
   "name": "Cyber Spurs",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "Hidden blades built-in to your arm",
-    "subtype": "ware",
+    "source": "",
+    "cost": 3000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 3000
+    "maxRating": null,
+    "essence": 0.2,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": [
+      "Cyberarm"
+    ]
   },
   "flags": {
     "srx": {

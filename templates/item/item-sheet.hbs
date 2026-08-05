@@ -29,6 +29,15 @@
           <i class="fa-solid fa-plus"></i> {{localize "SRX.Item.addMode"}}
         </a>
       </h3>
+      <details class="freezer">
+        <summary>{{localize "SRX.WeaponMod.mountsHeader"}}</summary>
+        <div class="item-grid">
+          {{#each weaponMounts}}
+          <label>{{this.label}}<input type="number" name="system.mounts.{{this.key}}" value="{{this.value}}" step="1" min="0"></label>
+          {{/each}}
+        </div>
+      </details>
+
       {{#each attackModes}}
       <fieldset class="attack-mode">
         <legend>{{#if this.name}}{{this.name}}{{else}}{{localize "SRX.Item.attackMode"}}{{/if}}</legend>
@@ -75,6 +84,42 @@
         <label>{{localize "SRX.Item.subtype"}}<input type="text" name="system.subtype" value="{{system.subtype}}"></label>
         <label>{{localize "SRX.Item.rating"}}<input type="number" name="system.rating" value="{{system.rating}}" step="1" min="0"></label>
         <label>{{localize "SRX.Item.quantity"}}<input type="number" name="system.quantity" value="{{system.quantity}}" step="1" min="0"></label>
+      </div>
+    {{/if}}
+
+    {{#if (srxEq type "weaponMod")}}
+      {{#if attachedWeaponName}}
+      <p class="hint">{{localize "SRX.WeaponMod.attachedToLabel"}}: <b>{{attachedWeaponName}}</b></p>
+      {{/if}}
+      <h3 class="section-header">{{localize "SRX.WeaponMod.mountsHeader"}}</h3>
+      <div class="item-grid">
+        {{#each mountPicks}}
+        <label class="check"><input type="checkbox" name="mountPick.{{this.key}}" {{#if this.checked}}checked{{/if}}> {{this.label}}</label>
+        {{/each}}
+      </div>
+      <div class="item-grid">
+        <label class="check"><input type="checkbox" name="system.allMountsRequired" {{#if system.allMountsRequired}}checked{{/if}}> {{localize "SRX.WeaponMod.allMountsRequired"}}</label>
+        <label class="check"><input type="checkbox" name="system.noMount" {{#if system.noMount}}checked{{/if}}> {{localize "SRX.WeaponMod.noMount"}}</label>
+        <label>{{localize "SRX.WeaponMod.requiresMod"}}<input type="text" name="system.requiresMod" value="{{system.requiresMod}}"></label>
+      </div>
+    {{/if}}
+
+    {{#if (srxEq type "ware")}}
+      <div class="item-grid">
+        <label>{{localize "SRX.Ware.type"}}
+          <select name="system.wareType">
+            {{#each wareTypes}}<option value="{{this.key}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>{{/each}}
+          </select>
+        </label>
+        <label>{{localize "SRX.Item.category"}}<input type="text" name="system.category" value="{{system.category}}"></label>
+        <label>{{localize "SRX.Ware.container"}}<input type="text" name="system.container" value="{{system.container}}"></label>
+        <label>{{localize "SRX.Item.rating"}}<input type="number" name="system.rating" value="{{system.rating}}" step="1" min="0"></label>
+        <label>{{localize "SRX.Ware.maxRating"}}<input type="number" name="system.maxRating" value="{{system.maxRating}}" step="1" min="1"></label>
+        <label>{{localize "SRX.Ware.essence"}}<input type="number" name="system.essence" value="{{system.essence}}" step="0.01" min="0"></label>
+        <label>{{localize "SRX.Ware.essenceScale"}}<input type="text" name="essenceScaleText" value="{{essenceScaleText}}" placeholder="1, 1.5, 2.5"></label>
+        <label class="check"><input type="checkbox" name="system.installed" {{#if system.installed}}checked{{/if}}> {{localize "SRX.Ware.installed"}}</label>
+        <label>{{localize "SRX.Ware.prereq"}}<input type="text" name="system.prereq" value="{{system.prereq}}"></label>
+        <label>{{localize "SRX.Ware.incompatible"}}<input type="text" name="incompatibleText" value="{{incompatibleText}}"></label>
       </div>
     {{/if}}
 

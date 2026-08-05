@@ -1,14 +1,26 @@
 {
   "_id": "cLzf8QHRPKWb97fM",
   "name": "Cat's Eyes",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Senseware / Eyeware",
     "description": "Low-Light Vision Enhancement",
-    "subtype": "Eyeware",
+    "source": "",
+    "cost": 1000,
+    "legality": "",
+    "wareType": "bioware",
+    "category": "Eyeware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 1000
+    "maxRating": null,
+    "essence": 0.1,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": [
+      "Cybereyes",
+      "Low-Light Vision"
+    ]
   },
   "flags": {
     "srx": {

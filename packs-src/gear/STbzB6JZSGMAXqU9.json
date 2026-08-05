@@ -1,14 +1,23 @@
 {
   "_id": "STbzB6JZSGMAXqU9",
   "name": "Skillwires",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "Replace skill rating with skillsoft",
-    "subtype": "ware",
+    "source": "",
+    "cost": 25000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 25000
+    "maxRating": null,
+    "essence": 0.5,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

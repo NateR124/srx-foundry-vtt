@@ -1,14 +1,23 @@
 {
   "_id": "3usHJDvh5NP2ex7W",
   "name": "Bioengineered Platelets",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "+1 Phys & Stun Health, +2 Wounded Limit, 1 free hit on recovery & dying resistance tests",
-    "subtype": "Platelet Factories Upgrade",
+    "source": "",
+    "cost": 24000,
+    "legality": "",
+    "wareType": "bioware",
+    "category": "Platelet Factories Upgrade",
+    "container": "Platelet Factories",
     "rating": 0,
-    "quantity": 1,
-    "cost": 24000
+    "maxRating": null,
+    "essence": 0.5,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "Platelet Factories",
+    "incompatible": []
   },
   "flags": {
     "srx": {

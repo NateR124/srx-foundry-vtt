@@ -1,14 +1,26 @@
 {
   "_id": "1yudOPF5DYjYiGRK",
   "name": "Dermal Plating",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "+2 Armor, Hardened Armor",
-    "subtype": "ware",
+    "source": "",
+    "cost": 25000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 25000
+    "maxRating": null,
+    "essence": 0.8,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": [
+      "Cybertorso",
+      "Orthoskin"
+    ]
   },
   "flags": {
     "srx": {

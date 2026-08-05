@@ -1,14 +1,23 @@
 {
   "_id": "Kya31AKX5SXkCpmN",
   "name": "Sleep Regulator",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Headware",
     "description": "Only sleep 3 hours each night",
-    "subtype": "ware",
+    "source": "",
+    "cost": 8500,
+    "legality": "",
+    "wareType": "bioware",
+    "category": "Headware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 8500
+    "maxRating": null,
+    "essence": 0.15,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": []
   },
   "flags": {
     "srx": {

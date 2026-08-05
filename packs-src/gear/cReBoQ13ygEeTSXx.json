@@ -1,14 +1,23 @@
 {
   "_id": "cReBoQ13ygEeTSXx",
   "name": "Mnemonic Enhancer",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Headware",
     "description": "Knowledgeable Talent; +Rating to Biotech, Engineering, Outdoors, Software",
-    "subtype": "ware",
-    "rating": 3,
-    "quantity": 1,
-    "cost": 24000
+    "source": "",
+    "cost": 24000,
+    "legality": "",
+    "wareType": "bioware",
+    "category": "Headware",
+    "container": "",
+    "rating": 1,
+    "maxRating": 3,
+    "essence": 0.2,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": []
   },
   "flags": {
     "srx": {

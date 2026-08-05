@@ -1,14 +1,23 @@
 {
   "_id": "FqCjIHQhvMx2WBxi",
   "name": "Audio Enhancement",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Senseware / Earware",
     "description": "+1 Perception",
-    "subtype": "Earware",
+    "source": "",
+    "cost": 17000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Earware",
+    "container": "Cyberears",
     "rating": 0,
-    "quantity": 1,
-    "cost": 17000
+    "maxRating": null,
+    "essence": 0.2,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

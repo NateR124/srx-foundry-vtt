@@ -1,14 +1,30 @@
 {
   "_id": "iBAPSXYiJ5u7Wbwt",
   "name": "Cyber Gun (Off-Hand)",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "Hidden gun built-in to your arm",
-    "subtype": "ware",
+    "source": "",
+    "cost": 0,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 0
+    "maxRating": null,
+    "essence": 0,
+    "essenceScale": [
+      0.2,
+      0.3,
+      0.5
+    ],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": [
+      "Cyberarm (Off-Hand)",
+      "Gyroarm (Off-Hand)"
+    ]
   },
   "flags": {
     "srx": {

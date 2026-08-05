@@ -1,14 +1,23 @@
 {
   "_id": "c6eQCYV8xa2WQ9vF",
   "name": "Suprathyroid Gland",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "+1 Body, Agility, Reaction",
-    "subtype": "ware",
+    "source": "",
+    "cost": 110000,
+    "legality": "",
+    "wareType": "bioware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 110000
+    "maxRating": null,
+    "essence": 0.3,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": []
   },
   "flags": {
     "srx": {

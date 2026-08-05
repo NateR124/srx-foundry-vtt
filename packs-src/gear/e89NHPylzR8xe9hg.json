@@ -1,14 +1,27 @@
 {
   "_id": "e89NHPylzR8xe9hg",
   "name": "Control Rig",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Headware",
     "description": "+2 Driving, Piloting; +Rating to Driving, Piloting, Agility, Athletics, Close Combat, Firearms, Projectile Weapons, and Stealth; Can take Biofeedback damage",
-    "subtype": "ware",
-    "rating": 3,
-    "quantity": 1,
-    "cost": 0
+    "source": "",
+    "cost": 0,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Headware",
+    "container": "",
+    "rating": 1,
+    "maxRating": 3,
+    "essence": 0,
+    "essenceScale": [
+      1,
+      1.5,
+      2
+    ],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

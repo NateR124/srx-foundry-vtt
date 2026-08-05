@@ -1,14 +1,19 @@
 {
   "_id": "7izJ6UfmYYzm2GCj",
   "name": "Flare Compensation",
-  "type": "gear",
+  "type": "weaponMod",
   "system": {
     "summary": "",
     "description": "",
-    "subtype": "Modification",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 100
+    "source": "",
+    "cost": 100,
+    "legality": "",
+    "mounts": [],
+    "allMountsRequired": false,
+    "noMount": true,
+    "requiresMod": "Imaging Scope",
+    "attachedTo": "",
+    "attachedMounts": []
   },
   "flags": {
     "srx": {

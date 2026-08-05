@@ -1,14 +1,23 @@
 {
   "_id": "GWTGIKRgz9rW10z8",
   "name": "Reflex Recorder",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Headware",
     "description": "+1 to chosen skill",
-    "subtype": "ware",
+    "source": "",
+    "cost": 22000,
+    "legality": "",
+    "wareType": "bioware",
+    "category": "Headware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 22000
+    "maxRating": null,
+    "essence": 0.1,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": []
   },
   "flags": {
     "srx": {

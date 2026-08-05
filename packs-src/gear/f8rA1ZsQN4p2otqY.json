@@ -1,14 +1,23 @@
 {
   "_id": "f8rA1ZsQN4p2otqY",
   "name": "Reaction Enhancers",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "+Rating to Reaction",
-    "subtype": "ware",
-    "rating": 3,
-    "quantity": 1,
-    "cost": 23000
+    "source": "",
+    "cost": 23000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Bodyware",
+    "container": "",
+    "rating": 1,
+    "maxRating": 3,
+    "essence": 0.5,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

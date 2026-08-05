@@ -1,14 +1,23 @@
 {
   "_id": "pc5lZCYkpLky6APh",
   "name": "Flashlight",
-  "type": "gear",
+  "type": "weaponMod",
   "system": {
     "summary": "",
     "description": "",
-    "subtype": "Modification",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 50
+    "source": "",
+    "cost": 50,
+    "legality": "",
+    "mounts": [
+      "side",
+      "top",
+      "underbarrel"
+    ],
+    "allMountsRequired": false,
+    "noMount": false,
+    "requiresMod": "",
+    "attachedTo": "",
+    "attachedMounts": []
   },
   "flags": {
     "srx": {

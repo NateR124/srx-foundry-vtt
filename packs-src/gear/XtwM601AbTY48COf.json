@@ -1,14 +1,23 @@
 {
   "_id": "XtwM601AbTY48COf",
   "name": "Platelet Factories",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "+1 Phys & Stun Health, Leverage on dying resistance tests",
-    "subtype": "ware",
+    "source": "",
+    "cost": 10000,
+    "legality": "",
+    "wareType": "bioware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 10000
+    "maxRating": null,
+    "essence": 0.2,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": []
   },
   "flags": {
     "srx": {

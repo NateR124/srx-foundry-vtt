@@ -1,14 +1,19 @@
 {
   "_id": "yynG7PrtrCZ2PZuk",
   "name": "Thermographic",
-  "type": "gear",
+  "type": "weaponMod",
   "system": {
     "summary": "",
     "description": "",
-    "subtype": "Modification",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 750
+    "source": "",
+    "cost": 750,
+    "legality": "",
+    "mounts": [],
+    "allMountsRequired": false,
+    "noMount": true,
+    "requiresMod": "Imaging Scope",
+    "attachedTo": "",
+    "attachedMounts": []
   },
   "flags": {
     "srx": {

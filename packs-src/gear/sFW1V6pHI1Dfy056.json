@@ -1,14 +1,23 @@
 {
   "_id": "sFW1V6pHI1Dfy056",
   "name": "Neural Hardening",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Headware",
     "description": "+2 to biofeedback resistance tests",
-    "subtype": "ware",
+    "source": "",
+    "cost": 9000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Headware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 9000
+    "maxRating": null,
+    "essence": 0.2,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

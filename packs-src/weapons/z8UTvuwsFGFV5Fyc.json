@@ -1,14 +1,21 @@
 {
   "_id": "z8UTvuwsFGFV5Fyc",
   "name": "Silencer/Suppressor",
-  "type": "gear",
+  "type": "weaponMod",
   "system": {
     "summary": "",
     "description": "",
-    "subtype": "Modification",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 500
+    "source": "",
+    "cost": 500,
+    "legality": "restricted",
+    "mounts": [
+      "barrel"
+    ],
+    "allMountsRequired": false,
+    "noMount": false,
+    "requiresMod": "",
+    "attachedTo": "",
+    "attachedMounts": []
   },
   "flags": {
     "srx": {

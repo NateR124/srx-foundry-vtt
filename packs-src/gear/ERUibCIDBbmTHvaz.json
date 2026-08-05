@@ -1,14 +1,27 @@
 {
   "_id": "ERUibCIDBbmTHvaz",
   "name": "Cyberarm (Off-Hand)",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Cyberlimbs / Cyberarms",
     "description": "+1 Armor, Hardened Armor, Athletics",
-    "subtype": "ware",
+    "source": "",
+    "cost": 28000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Cyberlimbs",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 28000
+    "maxRating": null,
+    "essence": 0.5,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": [
+      "Cyber Gun (Off-Hand)",
+      "Cyber Spurs (Off-Hand)",
+      "Gyroarm (Off-Hand)"
+    ]
   },
   "flags": {
     "srx": {

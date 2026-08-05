@@ -1,14 +1,23 @@
 {
   "_id": "cD6UsUcLP4I8sC0U",
   "name": "Cyberleg",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Cyberlimbs / Cyberlegs",
     "description": "+2m Movement Rate; +1 Close Combat, Armor, Hardened Armor, unarmed melee DV; +2 Athletics",
-    "subtype": "ware",
+    "source": "",
+    "cost": 40000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Cyberlimbs",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 40000
+    "maxRating": null,
+    "essence": 1,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

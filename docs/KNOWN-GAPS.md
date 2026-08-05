@@ -18,9 +18,16 @@ work is. Three categories:
   vehicle rules, not as a dedicated talent-item subsystem.
 - **Master Craftsman** (+1 safe active focus) is not auto-detected by the
   foci over-limit warnings (`module/magic/foci.mjs`).
-- **Data migrations.** There is no migration framework. That's fine until the
-  first release that changes a persisted actor/item schema — that release
-  MUST introduce one (see [CONTRIBUTING.md](CONTRIBUTING.md)).
+- **Weapon mod mechanical effects.** Mods attach to weapons with full mount/
+  compatibility validation (1.1.0), but their *mechanical* consequences
+  (Gas-vent recoil compensation, Imaging Scope aim bonuses, Silencer
+  perception penalties) are not wired into the attack pipeline — the catalog
+  carries no machine-readable effect columns for mods, so players apply them
+  via the roll dialogs' modifier inputs.
+- **'Ware prerequisites/incompatibilities are advisory.** Essence costs and
+  flat stat effects automate (1.1.0); `prereq`/`incompatible` chains (DNI
+  before Wired Reflexes, Dermal Plating vs Orthoskin) display on the item but
+  are not enforced on install.
 
 ## 2. Built but not live-verified ("pending live smoke")
 

@@ -1,14 +1,21 @@
 {
   "_id": "uZBSaEu3r9MRzqTt",
   "name": "Sawed-off",
-  "type": "gear",
+  "type": "weaponMod",
   "system": {
     "summary": "",
     "description": "",
-    "subtype": "Modification",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 0
+    "source": "",
+    "cost": 0,
+    "legality": "",
+    "mounts": [
+      "sawedOff"
+    ],
+    "allMountsRequired": false,
+    "noMount": false,
+    "requiresMod": "",
+    "attachedTo": "",
+    "attachedMounts": []
   },
   "flags": {
     "srx": {

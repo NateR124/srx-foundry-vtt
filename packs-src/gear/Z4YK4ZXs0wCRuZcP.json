@@ -1,14 +1,23 @@
 {
   "_id": "Z4YK4ZXs0wCRuZcP",
   "name": "Cerebellum Booster",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Headware",
     "description": "+1 Intuition, Perception",
-    "subtype": "ware",
+    "source": "",
+    "cost": 48000,
+    "legality": "",
+    "wareType": "bioware",
+    "category": "Headware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 48000
+    "maxRating": null,
+    "essence": 0.4,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": []
   },
   "flags": {
     "srx": {

@@ -1,14 +1,23 @@
 {
   "_id": "yyMJ3K7zrZRY8Tpe",
   "name": "Damage Compensators",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "High Pain Tolerance Talent",
-    "subtype": "ware",
+    "source": "",
+    "cost": 11000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 11000
+    "maxRating": null,
+    "essence": 0.4,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

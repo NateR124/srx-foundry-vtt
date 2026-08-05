@@ -1,14 +1,23 @@
 {
   "_id": "MOR7PKruKW4sGcbV",
   "name": "Cyberdeck",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Headware",
     "description": "Cyberdeck  implanted in your head",
-    "subtype": "ware",
+    "source": "",
+    "cost": 2000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Headware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 2000
+    "maxRating": null,
+    "essence": 0.1,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

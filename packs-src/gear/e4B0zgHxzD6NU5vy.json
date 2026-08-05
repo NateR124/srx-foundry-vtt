@@ -1,14 +1,23 @@
 {
   "_id": "e4B0zgHxzD6NU5vy",
   "name": "Data Lock",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Headware",
     "description": "Data safe implanted in your head",
-    "subtype": "ware",
+    "source": "",
+    "cost": 4000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Headware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 4000
+    "maxRating": null,
+    "essence": 0.1,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

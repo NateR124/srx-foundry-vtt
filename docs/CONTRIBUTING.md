@@ -71,10 +71,11 @@ bugs (`tests/glue-regressions.test.mjs`).
 4. **Cross-ownership writes go through the GM executor**
    (`module/net/socket.mjs`) — never widen document permissions.
 5. **Schema changes to persisted data (actors/items/effects) require a
-   migration plan.** There is no migration framework yet; the first PR that
-   breaks a saved world's data must introduce one and test it against fixture
-   worlds. If you're not sure whether your change breaks old worlds, ask in
-   the PR.
+   migration plan.** The framework lives in `module/migrations/` (versioned by
+   a world setting, GM-only on ready; pure conversion mappings in
+   `convert.mjs` so they unit-test against the real pack data). Add a
+   conversion + bump `NEEDS_MIGRATION_BELOW` in `migrate.mjs`. If you're not
+   sure whether your change breaks old worlds, ask in the PR.
 
 ## Style
 

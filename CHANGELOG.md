@@ -3,6 +3,56 @@
 All notable changes to the SRX (Unofficial) Foundry VTT system. Versions follow
 `MAJOR.MINOR.PATCH`; the system targets Foundry **v14** (verified 14.364).
 
+## 1.1.0 — 2026-08-04 — 'Ware & weapon mods become real
+
+Closes the two remaining playtest reports: cyberware/bioware now interacts
+with the character's stats on its own sheet page, and weapon mods attach to
+specific weapons with compatibility checks.
+
+### Added
+- **`ware` item type** (cyberware/bioware, 112 catalog entries converted from
+  gear). Essence cost per the catalog — flat, per-rating ("Rating x 1"), or a
+  rating table ("1/1.5/2.5") — with an installed/spare toggle
+  (`module/rules/ware.mjs`, R58).
+- **Live Essence tracking**: `system.special.essence` now holds the *base*
+  (6); remaining Essence derives from installed 'ware every data prep and
+  shows on the Build sheet next to the base. Magic/Resonance above
+  floor(Essence) surfaces as an advisory banner (R2/R57), and chargen's Magic
+  cap uses the derived value.
+- **Ware sheet tab**: essence base/used/remaining strip, cyberware and bioware
+  lists with install toggles, ratings, and per-item Essence costs.
+- **Rating-scaled stat effects**: rated 'ware multiplies its catalog effect
+  columns by rating ("+Rating to Body" at R3 → +3 BOD) at drop time, rescales
+  when the rating changes, and disables while uninstalled
+  (`module/active-effect/`).
+- **`weaponMod` item type** (17 catalog entries converted from gear). Mods
+  attach to one owned weapon through a validated picker: single-mount
+  (Gas-vent → barrel), any-of (Laser Sight → side/top/underbarrel), all-of
+  (Underbarrel Grenade Launcher needs internal+underbarrel), and scope
+  add-ons (Thermographic requires an attached Imaging Scope). Mount capacity
+  is enforced; melee/explosives have no mounts and correctly take nothing
+  (`module/rules/weapon-mods.mjs`).
+- **Weapon mount data**: weapons carry `system.mounts` capacities (56
+  firearms/bows populated from the catalog; editable on the weapon sheet for
+  homebrew). Attached mods list under their weapon on the Main tab; deleting
+  a weapon frees its mods; detaching a scope strands its add-ons with it.
+- **Migration framework** (`module/migrations/`): versioned by a world
+  setting, GM-only on ready. 1.0.x worlds convert gear→ware/weaponMod in
+  place (world items, actors, unlinked tokens), seed the missing stat AEs,
+  and fill weapon mounts from catalog flags.
+
+### Changed
+- 'Ware and weapon mods no longer appear in the Gear tab or as gear items;
+  compendium sources rebaked (`scripts/convert-packs-1.1.mjs`). Rated 'ware
+  in the packs now defaults to rating 1 (was: baked at max rating).
+
+### Notes for existing worlds
+- The migration keeps your manually-entered Essence value as the new *base* —
+  if you had lowered it by hand to account for 'ware, set it back to 6 so the
+  derived tracking doesn't double-count.
+- 'Ware prereq/incompatible chains and weapon-mod mechanical effects (recoil
+  comp, scope bonuses) remain manual — see KNOWN-GAPS.md.
+
 ## 1.0.2 — 2026-07-20 — Handoff hygiene
 
 ### Fixed

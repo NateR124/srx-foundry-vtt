@@ -1,14 +1,23 @@
 {
   "_id": "YvDDqHoIiOxxngDf",
   "name": "Laser Sight",
-  "type": "gear",
+  "type": "weaponMod",
   "system": {
     "summary": "",
     "description": "",
-    "subtype": "Modification",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 200
+    "source": "",
+    "cost": 200,
+    "legality": "",
+    "mounts": [
+      "side",
+      "top",
+      "underbarrel"
+    ],
+    "allMountsRequired": false,
+    "noMount": false,
+    "requiresMod": "",
+    "attachedTo": "",
+    "attachedMounts": []
   },
   "flags": {
     "srx": {

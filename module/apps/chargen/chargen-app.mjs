@@ -106,7 +106,9 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
       skills,
       awakened: (sys?.special?.magic?.base ?? 0) > 0 ? "magic"
         : (sys?.special?.resonance?.base ?? 0) > 0 ? "resonance" : null,
-      essence: sys?.special?.essence ?? 6,
+      // Remaining Essence (derived from installed 'ware) caps the Magic
+      // rating (pp. 60–61); fall back to base for actors not yet prepared.
+      essence: sys?.derived?.essence ?? sys?.special?.essence ?? 6,
       nuyenSpent: 0,
       archetype: sys?.details?.archetype ?? "",
       lifestyle: sys?.details?.lifestyle ?? null,

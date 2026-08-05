@@ -1,14 +1,23 @@
 {
   "_id": "wCnMmRKTbxLTPccb",
   "name": "Internal Air Tank",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "Hold breath for 1 hour",
-    "subtype": "ware",
+    "source": "",
+    "cost": 5000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 5000
+    "maxRating": null,
+    "essence": 0.2,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

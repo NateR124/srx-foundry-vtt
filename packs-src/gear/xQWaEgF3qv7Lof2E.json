@@ -1,14 +1,23 @@
 {
   "_id": "xQWaEgF3qv7Lof2E",
   "name": "Social Protocol Cortex",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Headware",
     "description": "+1 Con, Influence",
-    "subtype": "ware",
+    "source": "",
+    "cost": 35000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Headware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 35000
+    "maxRating": null,
+    "essence": 0.3,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

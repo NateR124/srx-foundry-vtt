@@ -1,14 +1,23 @@
 {
   "_id": "zIOGgE5xcb4aUlPi",
   "name": "Cyberskull",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Cyberlimbs / Other Cyberlimbs",
     "description": "1 free hit on Armor tests vs. critical hits, Liability on Con & Influence tests",
-    "subtype": "ware",
+    "source": "",
+    "cost": 11000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Cyberlimbs",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 11000
+    "maxRating": null,
+    "essence": 0.3,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

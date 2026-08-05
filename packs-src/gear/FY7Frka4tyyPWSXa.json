@@ -1,14 +1,25 @@
 {
   "_id": "FY7Frka4tyyPWSXa",
   "name": "Low-Light Vision",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Senseware / Eyeware",
     "description": "Low-Light Vision Enhancement",
-    "subtype": "Eyeware",
+    "source": "",
+    "cost": 750,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Eyeware",
+    "container": "Cybereyes",
     "rating": 0,
-    "quantity": 1,
-    "cost": 750
+    "maxRating": null,
+    "essence": 0.2,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": [
+      "Cat's Eyes"
+    ]
   },
   "flags": {
     "srx": {

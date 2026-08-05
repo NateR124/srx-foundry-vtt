@@ -1,14 +1,23 @@
 {
   "_id": "PnqoHh1MBAG4AuAP",
   "name": "Synthacardium",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "+1 Body, Phys & Stun Health; Improved Crit on Athletics tests, Leverage to avoid fatigue damage",
-    "subtype": "ware",
+    "source": "",
+    "cost": 48000,
+    "legality": "",
+    "wareType": "bioware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 48000
+    "maxRating": null,
+    "essence": 0.2,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": []
   },
   "flags": {
     "srx": {

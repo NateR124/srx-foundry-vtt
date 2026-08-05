@@ -1,14 +1,22 @@
 {
   "_id": "ywuXLF1wzgPTYlC5",
   "name": "Bayonet",
-  "type": "gear",
+  "type": "weaponMod",
   "system": {
     "summary": "",
     "description": "",
-    "subtype": "Modification",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 350
+    "source": "",
+    "cost": 350,
+    "legality": "",
+    "mounts": [
+      "side",
+      "underbarrel"
+    ],
+    "allMountsRequired": false,
+    "noMount": false,
+    "requiresMod": "",
+    "attachedTo": "",
+    "attachedMounts": []
   },
   "flags": {
     "srx": {

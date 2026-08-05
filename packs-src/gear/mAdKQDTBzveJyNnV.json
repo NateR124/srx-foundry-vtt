@@ -1,14 +1,26 @@
 {
   "_id": "mAdKQDTBzveJyNnV",
   "name": "Troll Eyes",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Senseware / Eyeware",
     "description": "Thermographic Vision Enhancement",
-    "subtype": "Eyeware",
+    "source": "",
+    "cost": 1750,
+    "legality": "",
+    "wareType": "bioware",
+    "category": "Eyeware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 1750
+    "maxRating": null,
+    "essence": 0.1,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": [
+      "Cybereyes",
+      "Thermographic Vision"
+    ]
   },
   "flags": {
     "srx": {

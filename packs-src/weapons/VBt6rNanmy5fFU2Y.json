@@ -1,14 +1,21 @@
 {
   "_id": "VBt6rNanmy5fFU2Y",
   "name": "Shock Pad",
-  "type": "gear",
+  "type": "weaponMod",
   "system": {
     "summary": "",
     "description": "",
-    "subtype": "Modification",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 100
+    "source": "",
+    "cost": 100,
+    "legality": "",
+    "mounts": [
+      "stock"
+    ],
+    "allMountsRequired": false,
+    "noMount": false,
+    "requiresMod": "",
+    "attachedTo": "",
+    "attachedMounts": []
   },
   "flags": {
     "srx": {

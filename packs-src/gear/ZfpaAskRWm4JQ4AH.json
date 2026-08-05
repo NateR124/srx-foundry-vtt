@@ -1,14 +1,23 @@
 {
   "_id": "ZfpaAskRWm4JQ4AH",
   "name": "Symbiotes",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "+2 Wounded Limit; Quick Healer Talent",
-    "subtype": "ware",
+    "source": "",
+    "cost": 26000,
+    "legality": "",
+    "wareType": "bioware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 26000
+    "maxRating": null,
+    "essence": 0.3,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": []
   },
   "flags": {
     "srx": {

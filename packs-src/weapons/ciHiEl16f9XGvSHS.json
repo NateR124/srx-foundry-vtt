@@ -1,14 +1,22 @@
 {
   "_id": "ciHiEl16f9XGvSHS",
   "name": "Underbarrel Grenade Launcher",
-  "type": "gear",
+  "type": "weaponMod",
   "system": {
     "summary": "",
     "description": "",
-    "subtype": "Modification",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 3500
+    "source": "",
+    "cost": 3500,
+    "legality": "restricted",
+    "mounts": [
+      "internal",
+      "underbarrel"
+    ],
+    "allMountsRequired": true,
+    "noMount": false,
+    "requiresMod": "",
+    "attachedTo": "",
+    "attachedMounts": []
   },
   "flags": {
     "srx": {

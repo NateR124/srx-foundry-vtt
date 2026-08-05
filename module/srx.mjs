@@ -10,8 +10,10 @@ import { HostData } from "./data/actor-host.mjs";
 import { VehicleData } from "./data/actor-vehicle.mjs";
 import {
   WeaponData, ArmorData, GearData, TalentData, TraitData, ContactData, KnowledgeData,
-  SpellData, FocusData
+  SpellData, FocusData, WeaponModData, WareData
 } from "./data/items.mjs";
+import { registerWeaponModHooks } from "./items/weapon-mods.mjs";
+import { registerMigrationSetting, migrateWorld } from "./migrations/migrate.mjs";
 import * as magicRules from "./rules/magic.mjs";
 import * as qiRules from "./rules/qi.mjs";
 import * as conjuringRules from "./rules/conjuring.mjs";
@@ -129,6 +131,8 @@ Hooks.once("init", () => {
   CONFIG.Item.dataModels.knowledge = KnowledgeData;
   CONFIG.Item.dataModels.spell = SpellData;
   CONFIG.Item.dataModels.focus = FocusData;
+  CONFIG.Item.dataModels.weaponMod = WeaponModData;
+  CONFIG.Item.dataModels.ware = WareData;
 
   // Dice
   CONFIG.Dice.rolls.push(SRXRoll);
@@ -160,18 +164,20 @@ Hooks.once("init", () => {
   // Handlebars helpers
   Handlebars.registerHelper({
     srxEq: (a, b) => a === b,
+    srxOr: (a, b) => !!(a || b),
     srxGte: (a, b) => Number(a) >= Number(b),
     srxNotNull: (v) => v !== null && v !== undefined,
     srxSigned: (v) => (Number(v) >= 0 ? `+${v}` : `${v}`),
     srxIsHit: (die, tn) => Number(die) >= Number(tn ?? 5),
     srxConcat: (...args) => args.slice(0, -1).join(""),
-    srxHasLegality: (type) => ["weapon", "armor", "gear"].includes(type)
+    srxHasLegality: (type) => ["weapon", "armor", "gear", "weaponMod", "ware"].includes(type)
   });
 });
 
 Hooks.once("setup", () => {
   registerImportSettings();
   registerAutomationSettings();
+  registerMigrationSetting();
 });
 
 Hooks.once("ready", () => {
@@ -194,6 +200,8 @@ Hooks.once("ready", () => {
   registerAstralTimeHooks();
   registerSuppressMovementHooks();
   registerChargenHooks();
+  registerWeaponModHooks();
+  migrateWorld();
   console.log("SRX | Ready");
 });
 

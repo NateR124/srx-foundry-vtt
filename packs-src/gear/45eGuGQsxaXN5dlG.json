@@ -1,14 +1,25 @@
 {
   "_id": "45eGuGQsxaXN5dlG",
   "name": "Cyber Spurs (Off-Hand)",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "Hidden blades built-in to your arm",
-    "subtype": "ware",
+    "source": "",
+    "cost": 3000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 3000
+    "maxRating": null,
+    "essence": 0.2,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": [
+      "Cyberarm (Off-Hand)"
+    ]
   },
   "flags": {
     "srx": {

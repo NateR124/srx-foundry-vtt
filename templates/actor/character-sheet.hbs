@@ -102,6 +102,7 @@
     <a class="{{#if (srxEq activeTab 'main')}}active{{/if}}" data-action="selectTab" data-tab="main">{{localize "SRX.Tab.main"}}</a>
     <a class="{{#if (srxEq activeTab 'talents')}}active{{/if}}" data-action="selectTab" data-tab="talents">{{localize "SRX.Tab.talents"}}</a>
     <a class="{{#if (srxEq activeTab 'gear')}}active{{/if}}" data-action="selectTab" data-tab="gear">{{localize "SRX.Tab.gear"}}</a>
+    <a class="{{#if (srxEq activeTab 'ware')}}active{{/if}}" data-action="selectTab" data-tab="ware">{{localize "SRX.Tab.ware"}}</a>
     {{#if showMagicTab}}
     <a class="{{#if (srxEq activeTab 'magic')}}active{{/if}}" data-action="selectTab" data-tab="magic">{{localize "SRX.Tab.magic"}}</a>
     {{/if}}
@@ -160,8 +161,9 @@
           <span class="aug">{{system.special.resonance.value}}</span>
         </div>
         <div class="attribute-row">
-          <span>{{localize "SRX.Attribute.ess"}}</span>
-          <input type="number" name="system.special.essence" value="{{system.special.essence}}" step="0.01">
+          <span title="{{localize 'SRX.Ware.essenceBaseHint'}}">{{localize "SRX.Attribute.ess"}}</span>
+          <input type="number" name="system.special.essence" value="{{system.special.essence}}" step="0.01" title="{{localize 'SRX.Ware.essenceBaseHint'}}">
+          <span class="aug" title="{{localize 'SRX.Ware.essenceRemaining'}}">{{system.derived.essence}}</span>
         </div>
         <div class="attribute-row">
           <span>{{localize "SRX.Sheet.firewall"}}</span>
@@ -234,8 +236,29 @@
             </span>
             {{#if ../isBuild}}<a class="item-control" data-action="deleteItem" data-item-id="{{this.item.id}}"><i class="fa-solid fa-trash"></i></a>{{/if}}
           </li>
+          {{#each this.mods}}
+          <li class="weapon-mod-row">
+            <span class="item-name" data-action="editItem" data-item-id="{{this.id}}"><i class="fa-solid fa-wrench"></i> {{this.name}}</span>
+            <a class="item-control" data-action="detachMod" data-item-id="{{this.id}}" data-tooltip="{{localize 'SRX.WeaponMod.detach'}}"><i class="fa-solid fa-link-slash"></i></a>
+          </li>
+          {{/each}}
           {{/each}}
         </ul>
+
+        {{#if (srxOr items.unattachedMods.length isBuild)}}
+        <h3>{{localize "SRX.WeaponMod.unattached"}}
+          {{#if isBuild}}<a class="item-control" data-action="createItem" data-type="weaponMod" title="{{localize 'SRX.Sheet.createItem'}}"><i class="fa-solid fa-plus"></i></a>{{/if}}
+        </h3>
+        <ul class="item-list weapon-mods">
+          {{#each items.unattachedMods}}
+          <li>
+            <span class="item-name" data-action="editItem" data-item-id="{{this.id}}">{{this.name}}</span>
+            <a class="rollable" data-action="attachMod" data-item-id="{{this.id}}">{{localize "SRX.WeaponMod.attach"}}</a>
+            {{#if ../isBuild}}<a class="item-control" data-action="deleteItem" data-item-id="{{this.id}}"><i class="fa-solid fa-trash"></i></a>{{/if}}
+          </li>
+          {{/each}}
+        </ul>
+        {{/if}}
 
         <h3>{{localize "SRX.Sheet.armor"}}
           {{#if isBuild}}<a class="item-control" data-action="createItem" data-type="armor" title="{{localize 'SRX.Sheet.createItem'}}"><i class="fa-solid fa-plus"></i></a>{{/if}}
@@ -314,6 +337,52 @@
         <span class="qty">×{{this.system.quantity}}</span>
         <span class="summary">{{this.system.summary}}</span>
         {{#if ../isBuild}}<a class="item-control" data-action="deleteItem" data-item-id="{{this.id}}"><i class="fa-solid fa-trash"></i></a>{{/if}}
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+
+  {{!-- WARE TAB — cyberware/bioware with live Essence accounting --}}
+  <section class="tab-ware {{#unless (srxEq activeTab 'ware')}}hidden{{/unless}}">
+    <div class="ware-essence-strip">
+      <div class="derived-stat"><b>{{ware.essenceRemaining}}</b><span>{{localize "SRX.Ware.essenceRemaining"}}</span></div>
+      <div class="derived-stat"><b>{{ware.essenceUsed}}</b><span>{{localize "SRX.Ware.essenceUsed"}}</span></div>
+      <div class="derived-stat"><b>{{ware.essenceBase}}</b><span>{{localize "SRX.Ware.essenceBase"}}</span></div>
+    </div>
+    {{#each ware.violations}}
+    <div class="state-banner maxima">{{this}}</div>
+    {{/each}}
+
+    <h3>{{localize "SRX.Ware.cyberware"}}
+      {{#if isBuild}}<a class="item-control" data-action="createItem" data-type="ware" title="{{localize 'SRX.Sheet.createItem'}}"><i class="fa-solid fa-plus"></i></a>{{/if}}
+    </h3>
+    <ul class="item-list ware">
+      {{#each ware.cyber}}
+      <li class="{{#unless this.item.system.installed}}uninstalled{{/unless}}">
+        <a class="equip {{#if this.item.system.installed}}equipped{{/if}}" data-action="toggleWareInstalled" data-item-id="{{this.item.id}}"
+           data-tooltip="{{#if this.item.system.installed}}{{localize 'SRX.Ware.installedHint'}}{{else}}{{localize 'SRX.Ware.uninstalledHint'}}{{/if}}"><i class="fa-solid fa-microchip"></i></a>
+        <span class="item-name" data-action="editItem" data-item-id="{{this.item.id}}">{{this.item.name}}</span>
+        <span class="category">{{this.item.system.category}}</span>
+        {{#if this.rated}}<span class="rating">R{{this.item.system.rating}}/{{this.item.system.maxRating}}</span>{{/if}}
+        <span class="rating" data-tooltip="{{localize 'SRX.Ware.essenceCost'}}">{{this.essenceCost}} {{localize "SRX.Attribute.ess"}}</span>
+        <a class="item-control" data-action="postItem" data-item-id="{{this.item.id}}"><i class="fa-solid fa-comment"></i></a>
+        {{#if ../isBuild}}<a class="item-control" data-action="deleteItem" data-item-id="{{this.item.id}}"><i class="fa-solid fa-trash"></i></a>{{/if}}
+      </li>
+      {{/each}}
+    </ul>
+
+    <h3>{{localize "SRX.Ware.bioware"}}</h3>
+    <ul class="item-list ware">
+      {{#each ware.bio}}
+      <li class="{{#unless this.item.system.installed}}uninstalled{{/unless}}">
+        <a class="equip {{#if this.item.system.installed}}equipped{{/if}}" data-action="toggleWareInstalled" data-item-id="{{this.item.id}}"
+           data-tooltip="{{#if this.item.system.installed}}{{localize 'SRX.Ware.installedHint'}}{{else}}{{localize 'SRX.Ware.uninstalledHint'}}{{/if}}"><i class="fa-solid fa-dna"></i></a>
+        <span class="item-name" data-action="editItem" data-item-id="{{this.item.id}}">{{this.item.name}}</span>
+        <span class="category">{{this.item.system.category}}</span>
+        {{#if this.rated}}<span class="rating">R{{this.item.system.rating}}/{{this.item.system.maxRating}}</span>{{/if}}
+        <span class="rating" data-tooltip="{{localize 'SRX.Ware.essenceCost'}}">{{this.essenceCost}} {{localize "SRX.Attribute.ess"}}</span>
+        <a class="item-control" data-action="postItem" data-item-id="{{this.item.id}}"><i class="fa-solid fa-comment"></i></a>
+        {{#if ../isBuild}}<a class="item-control" data-action="deleteItem" data-item-id="{{this.item.id}}"><i class="fa-solid fa-trash"></i></a>{{/if}}
       </li>
       {{/each}}
     </ul>

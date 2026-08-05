@@ -1,14 +1,23 @@
 {
   "_id": "YJmmSInYLeDAj5id",
   "name": "Muscle Replacement",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "+Rating to Body, Agility",
-    "subtype": "ware",
-    "rating": 3,
-    "quantity": 1,
-    "cost": 32000
+    "source": "",
+    "cost": 32000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Bodyware",
+    "container": "",
+    "rating": 1,
+    "maxRating": 3,
+    "essence": 1,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

@@ -43,15 +43,22 @@ export function catalogEffectsOf(itemLike) {
  * @param {object} [opts]
  * @param {string} [opts.img] - defaults to the enhancement icon
  * @param {string} [opts.origin] - source item uuid
+ * @param {number} [opts.multiplier] - scales every change value (rated 'ware:
+ *   catalog columns are per-rating — "+Rating to Body" carries value 1)
+ * @param {boolean} [opts.disabled] - start disabled (uninstalled 'ware)
  * @returns {{ effects: object[], unsupported: {raw: string, value: number}[] }}
  */
 export function itemEffectDataFromCatalog(name, catalogEffects, opts = {}) {
+  const multiplier = Number.isFinite(opts.multiplier) ? opts.multiplier : 1;
   const { effects: mapped, unsupported } = mapCatalogEffects(catalogEffects);
-  const { changes } = compileFlatEffects(mapped);
+  const { changes } = compileFlatEffects(
+    mapped.map((fx) => ({ ...fx, value: fx.value * multiplier }))
+  );
   if (!changes.length) return { effects: [], unsupported };
   const ae = buildActiveEffectData({
     name: name || "Enhancement",
     changes,
+    disabled: !!opts.disabled,
     img: opts.img,
     origin: opts.origin,
     flags: { srx: { generated: true, fromCatalog: true } }
@@ -60,9 +67,24 @@ export function itemEffectDataFromCatalog(name, catalogEffects, opts = {}) {
 }
 
 /**
+ * The rating multiplier a 'ware item's catalog effects scale by: rated 'ware
+ * ("+Rating to Body", maxRating set) multiplies by its current rating; flat
+ * 'ware and every other type multiply by 1.
+ * @param {object} itemLike - live Item or creation-data object
+ * @returns {number}
+ */
+export function wareEffectMultiplier(itemLike) {
+  if (itemLike?.type !== "ware") return 1;
+  const maxRating = itemLike.system?.maxRating;
+  if (!Number.isFinite(maxRating)) return 1;
+  return Math.min(Math.max(itemLike.system?.rating ?? 1, 1), maxRating);
+}
+
+/**
  * Convenience: given an item(-like), produce the AE creation data its catalog
  * effect columns imply. Empty array when the item carries no supported flat
- * modifiers (weapons, most gear, narrative-only talents).
+ * modifiers (weapons, most gear, narrative-only talents). 'Ware scales by
+ * rating and starts disabled when not installed.
  * @param {object} itemLike - live Item or creation-data object
  * @param {object} [opts]
  * @returns {object[]} ActiveEffect creation data (0 or 1)
@@ -71,6 +93,8 @@ export function catalogEffectDataForItem(itemLike, opts = {}) {
   const name = itemLike?.name ?? "Enhancement";
   const img = opts.img ?? itemLike?.img;
   const { effects } = itemEffectDataFromCatalog(name, catalogEffectsOf(itemLike), {
+    multiplier: wareEffectMultiplier(itemLike),
+    disabled: itemLike?.type === "ware" && itemLike.system?.installed === false,
     ...opts,
     // Only pass a real image path; skip the schema default placeholder so the
     // generated effect can inherit the enhancement icon instead.

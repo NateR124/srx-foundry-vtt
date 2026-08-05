@@ -36,6 +36,14 @@ At runtime, `module/active-effect/hooks.mjs` applies this automatically on
 gets a `transfer: true` ActiveEffect injected before creation, so dropping a
 "+2 Body" 'ware onto a character just works.
 
+`ware` items get two extra behaviors (1.1.0): rated 'ware ("+Rating to Body",
+`system.maxRating` set) scales its per-rating catalog columns by the current
+rating — and an `updateItem` hook rescales the generated AE when the rating
+changes; the `system.installed` toggle flips the AE's `disabled` so a spare in
+a bag stops modifying the owner. Essence costs are deliberately NOT effects —
+they derive live in `CharacterData#prepareDerivedData` from installed `ware`
+items (`rules/ware.mjs`).
+
 ## Rules
 
 1. Flat numeric bonuses only — no predicates or conditions (see

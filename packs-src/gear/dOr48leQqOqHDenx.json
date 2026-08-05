@@ -1,14 +1,23 @@
 {
   "_id": "dOr48leQqOqHDenx",
   "name": "Muscle Cabling",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "+Rating to Body",
-    "subtype": "ware",
-    "rating": 3,
-    "quantity": 1,
-    "cost": 33000
+    "source": "",
+    "cost": 33000,
+    "legality": "",
+    "wareType": "bioware",
+    "category": "Bodyware",
+    "container": "",
+    "rating": 1,
+    "maxRating": 3,
+    "essence": 0.4,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": []
   },
   "flags": {
     "srx": {

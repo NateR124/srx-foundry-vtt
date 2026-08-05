@@ -1,14 +1,22 @@
 {
   "_id": "wfrpkZLghDcfXPq4",
   "name": "Advanced Gas-vent",
-  "type": "gear",
+  "type": "weaponMod",
   "system": {
     "summary": "",
     "description": "",
-    "subtype": "Modification",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 1200
+    "source": "",
+    "cost": 1200,
+    "legality": "",
+    "mounts": [
+      "barrel",
+      "internal"
+    ],
+    "allMountsRequired": true,
+    "noMount": false,
+    "requiresMod": "",
+    "attachedTo": "",
+    "attachedMounts": []
   },
   "flags": {
     "srx": {

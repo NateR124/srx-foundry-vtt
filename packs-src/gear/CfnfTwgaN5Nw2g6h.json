@@ -1,14 +1,25 @@
 {
   "_id": "CfnfTwgaN5Nw2g6h",
   "name": "Smart Articulation",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "+2 Athletics, Close Combat, Firearms, Projectile Weapons, Stealth",
-    "subtype": "ware",
+    "source": "",
+    "cost": 34000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 34000
+    "maxRating": null,
+    "essence": 1,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": [
+      "Enhanced Articulation"
+    ]
   },
   "flags": {
     "srx": {

@@ -1,14 +1,26 @@
 {
   "_id": "3E4eIh9XKxuRs7gx",
   "name": "Hawk Eyes",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Senseware / Eyeware",
     "description": "Vision Magnification Enhancement",
-    "subtype": "Eyeware",
+    "source": "",
+    "cost": 1250,
+    "legality": "",
+    "wareType": "bioware",
+    "category": "Eyeware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 1250
+    "maxRating": null,
+    "essence": 0.1,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": [
+      "Cybereyes",
+      "Vision Magnification"
+    ]
   },
   "flags": {
     "srx": {

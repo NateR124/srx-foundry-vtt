@@ -62,11 +62,33 @@ export class SrxItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
 
     if (item.type === "weapon") {
       context.attackModes = item.system.attackModes.map((m, idx) => ({ ...m, idx }));
+      context.weaponMounts = SRX.weaponMounts.map((key) => ({
+        key,
+        label: game.i18n.localize(`SRX.Mount.${key}`),
+        value: item.system.mounts?.[key] ?? 0
+      }));
+    }
+
+    if (item.type === "weaponMod") {
+      context.mountPicks = SRX.weaponMounts.map((key) => ({
+        key,
+        label: game.i18n.localize(`SRX.Mount.${key}`),
+        checked: item.system.mounts.includes(key)
+      }));
+      context.attachedWeaponName = item.actor?.items.get(item.system.attachedTo)?.name ?? "";
+    }
+
+    if (item.type === "ware") {
+      context.wareTypes = SRX.wareTypes.map((key) => ({
+        key, label: game.i18n.localize(`SRX.Ware.${key}`), selected: item.system.wareType === key
+      }));
+      context.essenceScaleText = item.system.essenceScale.join(", ");
+      context.incompatibleText = item.system.incompatible.join(", ");
     }
 
     // Freezer fold (cost & legality) — only for types that carry either
-    context.hasCost = ["weapon", "armor", "gear", "focus"].includes(item.type);
-    context.showFreezer = context.hasCost || ["weapon", "armor", "gear"].includes(item.type);
+    context.hasCost = ["weapon", "armor", "gear", "focus", "weaponMod", "ware"].includes(item.type);
+    context.showFreezer = context.hasCost;
 
     // Read-first description: the toggled <prose-mirror> shows enriched HTML
     // until the user clicks to edit.
@@ -79,6 +101,8 @@ export class SrxItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
   /**
    * @override — form paths like system.attackModes.0.acc expand to an object
    * keyed by index; convert back to a proper array merged over the current one.
+   * Also folds the weaponMod mount checkboxes and the ware comma-separated
+   * list inputs back into their array fields.
    */
   _processFormData(event, form, formData) {
     const data = super._processFormData(event, form, formData);
@@ -90,6 +114,23 @@ export class SrxItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
         current[i] = { ...current[i], ...patch };
       }
       data.system.attackModes = current;
+    }
+    if (data.mountPick) {
+      data.system ??= {};
+      data.system.mounts = SRX.weaponMounts.filter((key) => data.mountPick[key]);
+      delete data.mountPick;
+    }
+    if (typeof data.essenceScaleText === "string") {
+      data.system ??= {};
+      data.system.essenceScale = data.essenceScaleText
+        .split(",").map((s) => Number(s.trim())).filter((n) => Number.isFinite(n) && n >= 0);
+      delete data.essenceScaleText;
+    }
+    if (typeof data.incompatibleText === "string") {
+      data.system ??= {};
+      data.system.incompatible = data.incompatibleText
+        .split(",").map((s) => s.trim()).filter(Boolean);
+      delete data.incompatibleText;
     }
     return restoreNullNumbers(this.document, data);
   }

@@ -77,6 +77,8 @@ Questions can also be sent to the SRX team: ShadowrunEditionX@protonmail.com.
 | R54 | Gear | DV Min / DV Max columns: floor on BOD-based melee DV and cap on bow DV? | Yes — floor-for-melee, cap-for-bows (matches the data pattern). `rules/formulas.mjs`. | provisional |
 | R55 | Data | Knucks (4503) has no attack profile in Weapons.txt. | Unarmed attack profile with Knucks DV; confirm vs p. 303. | provisional |
 | R56 | Magic | MagArtGear lists karmaCost 0 for crafted foci, but Mysticism has focus craft karma (Force karma). Does buying a focus cost karma? | Crafting costs Force karma (p. 296+); purchased foci still need bonding — modeled per book, not per builder data. | provisional |
+| R57 | 'Ware | Does Essence loss from implants immediately lower a too-high Magic/Resonance rating, or only cap future advancement? floor(Essence) is stated as the *maximum* (pp. 13, 174) but no explicit "lose the rating now" clause was found. | Essence remaining derives live from installed 'ware (`rules/ware.mjs`); a Magic/Resonance rating above floor(Essence) is surfaced as an advisory sheet banner and never auto-lowered — same handling as the metatype maxima. | provisional |
+| R58 | 'Ware | Rated 'ware Essence: catalog gives a per-rating value ("Rating x 1") or a per-rating table ("1/1.5/2.5"). What does rating 0 (fresh item) cost? | Rated 'ware always occupies the body at ≥ rating 1: cost = value × clamp(rating, 1, max), table wins when present. Unrated 'ware ignores rating. `rules/ware.mjs`, tests vs the real catalog. | provisional |
 
 ## Adding a decision
 

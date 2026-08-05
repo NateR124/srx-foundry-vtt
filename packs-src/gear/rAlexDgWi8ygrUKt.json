@@ -1,14 +1,23 @@
 {
   "_id": "rAlexDgWi8ygrUKt",
   "name": "Pathogenic Defense",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "Leverage on disease resistance",
-    "subtype": "ware",
+    "source": "",
+    "cost": 5000,
+    "legality": "",
+    "wareType": "bioware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 5000
+    "maxRating": null,
+    "essence": 0.1,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": []
   },
   "flags": {
     "srx": {

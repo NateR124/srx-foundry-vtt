@@ -1,14 +1,23 @@
 {
   "_id": "JSSzE0Jw7EyOb8vV",
   "name": "Skillsoft",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "Athletics, Close Combat, Driving, Firearms, Piloting, Projectile Weapons, or Stealth",
-    "subtype": "ware",
-    "rating": 4,
-    "quantity": 1,
-    "cost": 7000
+    "source": "",
+    "cost": 7000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Bodyware",
+    "container": "",
+    "rating": 1,
+    "maxRating": 4,
+    "essence": 0,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface),Skillwires",
+    "incompatible": []
   },
   "flags": {
     "srx": {

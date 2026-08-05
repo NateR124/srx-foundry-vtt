@@ -1,14 +1,23 @@
 {
   "_id": "sbNvJPR7Lj7Enbm4",
   "name": "Cyberears",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Senseware / Earware",
     "description": "Other earware cyberware costs no Essence",
-    "subtype": "Earware",
+    "source": "",
+    "cost": 2000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Earware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 2000
+    "maxRating": null,
+    "essence": 0.2,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

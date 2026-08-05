@@ -1,14 +1,28 @@
 {
   "_id": "M0snR8JY3JjZfnpk",
   "name": "Smuggling Compartment",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Cyberlimbs / Cyberarms",
     "description": "Small hidden compartment",
-    "subtype": "Cyberarm Upgrade",
+    "source": "",
+    "cost": 2000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Cyberarm Upgrade",
+    "container": "Cyberarm",
     "rating": 0,
-    "quantity": 1,
-    "cost": 2000
+    "maxRating": null,
+    "essence": 0,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface),Cyberarm",
+    "incompatible": [
+      "Cyber GunCyberarm Upgrade",
+      "Cyber Holster",
+      "Grapple Gun",
+      "GyroarmCyberarm Upgrade"
+    ]
   },
   "flags": {
     "srx": {

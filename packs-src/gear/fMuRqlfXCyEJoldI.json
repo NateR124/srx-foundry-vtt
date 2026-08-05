@@ -1,14 +1,23 @@
 {
   "_id": "fMuRqlfXCyEJoldI",
   "name": "Defensive AI",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "+1 Defense Score",
-    "subtype": "Reaction Enhancers Upgrade",
+    "source": "",
+    "cost": 65000,
+    "legality": "restricted",
+    "wareType": "cyberware",
+    "category": "Reaction Enhancers Upgrade",
+    "container": "Reaction Enhancers",
     "rating": 0,
-    "quantity": 1,
-    "cost": 65000
+    "maxRating": null,
+    "essence": 0.5,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface),Reaction Enhancers",
+    "incompatible": []
   },
   "flags": {
     "srx": {

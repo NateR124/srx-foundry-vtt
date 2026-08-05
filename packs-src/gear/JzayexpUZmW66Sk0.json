@@ -1,14 +1,23 @@
 {
   "_id": "JzayexpUZmW66Sk0",
   "name": "Toxin Extractor",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "Leverage on toxin resistance",
-    "subtype": "ware",
+    "source": "",
+    "cost": 8000,
+    "legality": "",
+    "wareType": "bioware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 8000
+    "maxRating": null,
+    "essence": 0.2,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "",
+    "incompatible": []
   },
   "flags": {
     "srx": {

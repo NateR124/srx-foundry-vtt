@@ -44,8 +44,46 @@ function onPreCreateItem(item, data) {
 }
 
 /**
- * Register the import-time AE injection hook. Idempotent-safe to call once.
+ * Keep a 'ware item's generated AE in step with the item: rating changes
+ * rescale the per-rating change rows ("+Rating to Body"), and the installed
+ * toggle flips `disabled` so a spare in a bag stops modifying the owner.
+ * Runs on the initiating client only — everyone else gets the AE update
+ * through normal document sync.
+ */
+async function onUpdateItem(item, changes, _options, userId) {
+  if (game.user.id !== userId) return;
+  if (item.type !== "ware") return;
+  const sys = changes.system;
+  if (!sys) return;
+  const ratingChanged = sys.rating !== undefined || sys.maxRating !== undefined;
+  const installedChanged = sys.installed !== undefined;
+  if (!ratingChanged && !installedChanged) return;
+
+  const generated = item.effects.filter((e) => e.getFlag("srx", "fromCatalog"));
+  if (!generated.length) return;
+
+  let freshChanges = null;
+  if (ratingChanged) {
+    try {
+      freshChanges = catalogEffectDataForItem(item)[0]?.changes ?? null;
+    } catch (err) {
+      console.warn("SRX | 'ware AE rescale failed", item?.name, err);
+    }
+  }
+  const updates = generated.map((effect) => {
+    const patch = { _id: effect.id };
+    if (installedChanged) patch.disabled = item.system.installed === false;
+    if (freshChanges) patch.changes = freshChanges;
+    return patch;
+  });
+  await item.updateEmbeddedDocuments("ActiveEffect", updates);
+}
+
+/**
+ * Register the import-time AE injection hook and the 'ware lifecycle sync.
+ * Idempotent-safe to call once.
  */
 export function registerActiveEffectHooks() {
   Hooks.on("preCreateItem", onPreCreateItem);
+  Hooks.on("updateItem", onUpdateItem);
 }

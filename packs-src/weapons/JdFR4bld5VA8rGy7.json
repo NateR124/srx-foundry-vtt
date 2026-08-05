@@ -1,14 +1,21 @@
 {
   "_id": "JdFR4bld5VA8rGy7",
   "name": "Imaging Scope",
-  "type": "gear",
+  "type": "weaponMod",
   "system": {
     "summary": "",
     "description": "",
-    "subtype": "Modification",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 200
+    "source": "",
+    "cost": 200,
+    "legality": "",
+    "mounts": [
+      "top"
+    ],
+    "allMountsRequired": false,
+    "noMount": false,
+    "requiresMod": "",
+    "attachedTo": "",
+    "attachedMounts": []
   },
   "flags": {
     "srx": {

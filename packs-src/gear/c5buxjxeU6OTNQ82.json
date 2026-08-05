@@ -1,14 +1,26 @@
 {
   "_id": "c5buxjxeU6OTNQ82",
   "name": "Cybertorso",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Cyberlimbs / Other Cyberlimbs",
     "description": "+3 Armor, +2 Hardened Armor, 1 free hit on Armor tests vs. critical hits",
-    "subtype": "ware",
+    "source": "",
+    "cost": 45000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Cyberlimbs",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 45000
+    "maxRating": null,
+    "essence": 1.5,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": [
+      "Dermal Plating",
+      "Orthoskin"
+    ]
   },
   "flags": {
     "srx": {

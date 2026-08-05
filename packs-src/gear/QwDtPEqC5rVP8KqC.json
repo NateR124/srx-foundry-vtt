@@ -1,14 +1,23 @@
 {
   "_id": "QwDtPEqC5rVP8KqC",
   "name": "Ultrasound",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Senseware / Earware",
     "description": "Ultrasound Vision Enhancement",
-    "subtype": "Earware",
+    "source": "",
+    "cost": 9000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Earware",
+    "container": "Cyberears",
     "rating": 0,
-    "quantity": 1,
-    "cost": 9000
+    "maxRating": null,
+    "essence": 0.2,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {

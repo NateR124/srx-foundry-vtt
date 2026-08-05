@@ -168,6 +168,21 @@ SRX.attackActions = ["major", "complex"];
 SRX.fireModes = ["", "SS", "SA", "BF", "FA"];
 
 /**
+ * Weapon mod mount points, in the builder catalog's column order — a mod's
+ * `mounts: [0]` index resolves through this array (0 = barrel … 8 = sawedOff).
+ */
+SRX.weaponMounts = [
+  "barrel", "internal", "side", "stock", "top",
+  "underbarrel", "foldingStock", "bow", "sawedOff"
+];
+
+/** 'Ware kinds (p. 326). */
+SRX.wareTypes = ["cyberware", "bioware"];
+
+/** Base Essence every character starts with (p. 13). */
+SRX.baseEssence = 6;
+
+/**
  * Vision / sensory enhancements (p. 12 metatypes; gear/'ware columns).
  * Registered as Foundry DetectionMode + VisionMode ids in srx.mjs.
  */

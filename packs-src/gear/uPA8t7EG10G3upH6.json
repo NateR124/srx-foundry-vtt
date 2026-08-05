@@ -1,14 +1,23 @@
 {
   "_id": "uPA8t7EG10G3upH6",
   "name": "Smuggling Compartment",
-  "type": "gear",
+  "type": "ware",
   "system": {
     "summary": "Bodyware",
     "description": "Small hidden compartment",
-    "subtype": "ware",
+    "source": "",
+    "cost": 3000,
+    "legality": "",
+    "wareType": "cyberware",
+    "category": "Bodyware",
+    "container": "",
     "rating": 0,
-    "quantity": 1,
-    "cost": 3000
+    "maxRating": null,
+    "essence": 0.15,
+    "essenceScale": [],
+    "installed": true,
+    "prereq": "DNI (Direct Neural Interface)",
+    "incompatible": []
   },
   "flags": {
     "srx": {
