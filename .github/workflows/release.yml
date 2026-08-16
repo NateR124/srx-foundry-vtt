@@ -96,9 +96,25 @@ jobs:
           done
           cd stage && zip -r ../srx.zip . && cd ..
 
+      - name: Extract release notes from CHANGELOG
+        run: |
+          # Release body = the player-facing summary in CHANGELOG.md: the prose
+          # between this version's "## X.Y.Z" heading and its first "###"
+          # subsection. Empty extraction is fine — the release then falls back
+          # to just the auto-generated compare link, same as before.
+          VERSION="${GITHUB_REF_NAME#v}"
+          awk -v ver="$VERSION" '
+            /^## / { if (found) exit; if ($2 == ver) found=1; next }
+            found && /^### / { exit }
+            found { print }
+          ' CHANGELOG.md > release-notes.md
+          echo "--- release notes for $VERSION ---"
+          cat release-notes.md
+
       - name: Create release with assets
         uses: softprops/action-gh-release@v2
         with:
+          body_path: release-notes.md
           files: |
             srx.zip
             system.json

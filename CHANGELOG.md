@@ -3,6 +3,10 @@
 All notable changes to the SRX (Unofficial) Foundry VTT system. Versions follow
 `MAJOR.MINOR.PATCH`; the system targets Foundry **v14** (verified 14.364).
 
+The prose between a version heading and its first `###` subsection is the
+player-facing summary — release CI copies it into that tag's GitHub release
+notes, so keep it short, plain-language, and about what changed at the table.
+
 ## 1.1.0 — 2026-08-04 — 'Ware & weapon mods become real
 
 Closes the two remaining playtest reports: cyberware/bioware now interacts
