@@ -7,7 +7,7 @@ The prose between a version heading and its first `###` subsection is the
 player-facing summary — release CI copies it into that tag's GitHub release
 notes, so keep it short, plain-language, and about what changed at the table.
 
-## Unreleased
+## 1.2.0 — 2026-08-23 — Equipped pregens & chargen fixes
 
 Character creation now works out of the box: the Talents step lists the full
 bundled catalog (it used to demand a catalog import that 1.0.0 made
