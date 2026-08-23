@@ -25,7 +25,13 @@
 .srx-chargen-launch:hover { text-shadow: 0 0 6px var(--color-shadow-primary, #ff6400); }
 
 /* --- wizard --- */
-.srx.chargen-wizard { display: flex; flex-direction: column; gap: 0.75rem; }
+/* The window clamps to the viewport (core .application max-height) and
+ * .window-content is overflow:hidden, so the step body must be the scroll
+ * container or tall steps (Skills, Talents) get clipped with no scrollbar.
+ * flex:1 + min-height:0 down the chain lets core's .scrollable class work. */
+.srx.chargen-wizard { display: flex; flex-direction: column; gap: 0.75rem; flex: 1; min-height: 0; }
+
+.chargen-body.scrollable { flex: 1; }
 
 .chargen-steps {
   display: flex;
@@ -129,6 +135,10 @@
 
 /* metatype / talent option lists */
 .metatype-list, .talent-list { display: flex; flex-direction: column; gap: 0.25rem; }
+/* the flex display above would beat the UA [hidden] rule — filtered rows must
+ * still disappear */
+.talent-list > [hidden] { display: none; }
+input.talent-filter { width: 100%; margin-bottom: 0.35rem; }
 .metatype-option, .talent-option {
   display: flex;
   align-items: center;
@@ -236,7 +246,10 @@
 .chargen-nav button[disabled] { opacity: 0.5; cursor: not-allowed; }
 
 /* --- advancement panel --- */
-.srx.advance-panel { display: flex; flex-direction: column; gap: 0.75rem; }
+/* Same viewport-clamp story as the wizard: the whole panel scrolls, and the
+ * full-catalog talent list additionally caps its own height. */
+.srx.advance-panel { display: flex; flex-direction: column; gap: 0.75rem; flex: 1; min-height: 0; }
+.advance-talents .talent-list { max-height: 320px; overflow: hidden auto; }
 .advance-header .karma-header { margin: 0; }
 .advance-header .chargen-tile.balance b { color: #2e8b57; }
 .advance-header .earned-tile { cursor: text; }

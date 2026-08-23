@@ -1,5 +1,5 @@
 {{!-- SRX Karma advancement panel. Costs/validation: module/rules/karma.mjs --}}
-<div class="srx advance-panel">
+<div class="srx advance-panel scrollable">
 
   <header class="advance-header">
     <div class="chargen-tiles karma-header">
@@ -89,6 +89,7 @@
       {{#unless hasCatalog}}
       <p class="chargen-note">{{localize "SRX.Advance.noTalentCatalog"}}</p>
       {{else}}
+      <input type="search" name="talentFilter" class="talent-filter" placeholder="{{localize 'SRX.Chargen.talentFilter'}}">
       <div class="talent-list">
         {{#each talents}}
         <div class="talent-row {{#if this.owned}}owned{{/if}}">

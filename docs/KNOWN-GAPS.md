@@ -28,6 +28,12 @@ work is. Three categories:
   flat stat effects automate (1.1.0); `prereq`/`incompatible` chains (DNI
   before Wired Reflexes, Dermal Plating vs Orthoskin) display on the item but
   are not enforced on install.
+- **17 duplicate-name talent docs in the `srx.talents` pack.** The catalog
+  TSV lists some talents under several subheadings and the import kept one
+  doc per appearance (Initiation ×4, Astral Perception ×4, Reagents ×3, …—
+  identical karma). The chargen/advancement pickers collapse them to one
+  entry per name (517 docs → 500 choices); deduplicating the pack source
+  itself is the real fix.
 - **Pregens carry gear but no talents, spells, or 'ware.** The stat import
   never captured those item lists and the original SRX loadout source is
   gone; the gear loadouts are reconstructions keyed to each archetype's

@@ -11,7 +11,7 @@
     {{/each}}
   </nav>
 
-  <section class="chargen-body">
+  <section class="chargen-body scrollable">
 
     {{#if (srxEq step "priorities")}}
     <div class="step-title">{{localize "SRX.Chargen.step.priorities"}}</div>
@@ -211,6 +211,7 @@
       {{localize "SRX.Chargen.generalKarma"}}: <b>{{talents.generalSpent}}</b> / {{talents.generalAvail}} ·
       {{localize "SRX.Chargen.magicKarma"}}: <b>{{talents.magicSpent}}</b> / {{talents.magicAvail}}
     </p>
+    <input type="search" name="talentFilter" class="talent-filter" placeholder="{{localize 'SRX.Chargen.talentFilter'}}">
     <div class="talent-list">
       {{#each talents.catalog}}
       <label class="talent-option {{#if this.chosen}}picked{{/if}}">

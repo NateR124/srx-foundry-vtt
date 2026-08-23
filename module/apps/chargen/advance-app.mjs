@@ -23,6 +23,7 @@ import {
   ledgerEntry
 } from "../../rules/karma.mjs";
 import { metatypePackage, resolveChoiceKey, applyMetatypeMod } from "../../rules/metatype.mjs";
+import { loadTalentCatalog, getTalentDoc, wireTalentFilter } from "./talent-catalog.mjs";
 
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 
@@ -44,7 +45,10 @@ export class SrxAdvanceApp extends HandlebarsApplicationMixin(ApplicationV2) {
   };
 
   static PARTS = {
-    body: { template: "systems/srx/templates/apps/chargen/advance.hbs" }
+    body: {
+      template: "systems/srx/templates/apps/chargen/advance.hbs",
+      scrollable: ["", ".talent-list"]
+    }
   };
 
   constructor({ actor, ...options } = {}) {
@@ -54,6 +58,9 @@ export class SrxAdvanceApp extends HandlebarsApplicationMixin(ApplicationV2) {
 
   /** @type {Actor} */
   #actor;
+
+  /** Talent-list filter query; survives the re-render a purchase triggers. */
+  #talentFilter = "";
 
   get actor() { return this.#actor; }
 
@@ -103,16 +110,13 @@ export class SrxAdvanceApp extends HandlebarsApplicationMixin(ApplicationV2) {
     }).sort((a, b) => a.label.localeCompare(b.label));
 
     const ownedTalentNames = new Set(actor.items.filter((i) => i.type === "talent").map((i) => i.name));
-    const talents = (game.items?.filter?.((i) => i.type === "talent") ?? [])
-      .map((i) => {
-        const cost = i.system?.karma ?? 0;
-        return {
-          id: i.id, name: i.name, cost,
-          owned: ownedTalentNames.has(i.name),
-          canBuy: !ownedTalentNames.has(i.name) && cost <= balance
-        };
-      })
-      .sort((a, b) => a.name.localeCompare(b.name));
+    // Bundled compendium merged with world talents (world wins on name).
+    const talents = (await loadTalentCatalog())
+      .map((e) => ({
+        id: e.id, name: e.name, cost: e.karma,
+        owned: ownedTalentNames.has(e.name),
+        canBuy: !ownedTalentNames.has(e.name) && e.karma <= balance
+      }));
 
     return {
       actor,
@@ -231,7 +235,7 @@ export class SrxAdvanceApp extends HandlebarsApplicationMixin(ApplicationV2) {
 
   static async #onBuyTalent(_event, target) {
     const id = target.dataset.itemId;
-    const src = game.items?.get?.(id);
+    const src = await getTalentDoc(id);
     if (!src) return;
     const owned = this.#actor.items.some((i) => i.type === "talent" && i.name === src.name);
     await this.#commit({
@@ -249,6 +253,7 @@ export class SrxAdvanceApp extends HandlebarsApplicationMixin(ApplicationV2) {
   /** @override — wire the Karma-earned field's change without submitOnChange. */
   _onRender(context, options) {
     super._onRender(context, options);
+    wireTalentFilter(this.element, this.#talentFilter, (v) => { this.#talentFilter = v; });
     const input = this.element?.querySelector?.("input[name='system.details.karma.earned']");
     if (input) {
       input.addEventListener("change", async () => {

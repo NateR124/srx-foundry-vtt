@@ -9,13 +9,33 @@ notes, so keep it short, plain-language, and about what changed at the table.
 
 ## Unreleased
 
-Pregen characters now come equipped. Every pregen in the compendium carries a
-starting kit matched to its archetype — weapons it has the skills to use, armor
-already worn (so Armor ratings are non-zero out of the box), and role gear:
+Character creation now works out of the box: the Talents step lists the full
+bundled catalog (it used to demand a catalog import that 1.0.0 made
+unnecessary), and wizard pages taller than your screen — Skills on smaller
+displays — scroll properly instead of getting cut off. A filter box tames the
+500-talent list, in the wizard and the Karma advancement panel both. And
+pregen characters now come equipped: every pregen carries a starting kit
+matched to its archetype — weapons it has the skills to use, armor already
+worn (so Armor ratings are non-zero out of the box), and role gear:
 cyberdecks for deckers, drones for riggers, medkits for street docs, lockpicks
 for infiltrators, and a commlink and fake SIN for everyone.
 
+### Fixed
+- **Chargen talents step was empty** unless the pre-1.0 catalog import had
+  been run: it read world talent items only. Both chargen and the advancement
+  panel now read the bundled `srx.talents` compendium via a shared catalog
+  (`module/apps/chargen/talent-catalog.mjs`), index-backed so full documents
+  load only on purchase. World talent items still merge in and win on name
+  collision, so homebrew overrides keep working.
+- **No scrollbar on tall wizard steps** (reported on the Skills page at
+  smaller viewport heights): Foundry clamps windows to the viewport with
+  `overflow: hidden` content, and the wizard never declared a scroll
+  container. The step body now scrolls (core `.scrollable`, position
+  preserved across re-renders) with the step tabs and nav footer pinned;
+  same treatment on the advancement panel.
+
 ### Added
+- Talent name filter above the pickers in chargen and advancement.
 - `scripts/gear-pregens.mjs`: builds the pregen loadouts from the bundled
   catalog, keyed to each archetype's skill ratings (the original SRX pregen
   loadout source is no longer available, so these are reconstructions).

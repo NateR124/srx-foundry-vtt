@@ -30,6 +30,7 @@ import {
   assembleCharacter,
   fakeSinRating
 } from "./priority.mjs";
+import { loadTalentCatalog, getTalentEntry, getTalentDoc, wireTalentFilter } from "./talent-catalog.mjs";
 
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 
@@ -58,7 +59,10 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
   };
 
   static PARTS = {
-    body: { template: "systems/srx/templates/apps/chargen/wizard.hbs" }
+    body: {
+      template: "systems/srx/templates/apps/chargen/wizard.hbs",
+      scrollable: [".chargen-body"]
+    }
   };
 
   /**
@@ -76,6 +80,9 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
   #actor = null;
 
   #step = "priorities";
+
+  /** Talent-list filter query; survives the re-render a checkbox toggle triggers. */
+  #talentFilter = "";
 
   /** @type {object} the working build selection consumed by priority.mjs. */
   #selection;
@@ -151,7 +158,7 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
       case "magic": context.magic = this.#magicContext(); break;
       case "skills": context.skills = this.#skillContext(); break;
       case "resources": context.resources = this.#resourceContext(); break;
-      case "talents": context.talents = this.#talentContext(); break;
+      case "talents": context.talents = await this.#talentContext(); break;
       case "review": context.review = this.#reviewContext(verdict); break;
     }
     return context;
@@ -318,16 +325,14 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
     };
   }
 
-  #talentContext() {
+  async #talentContext() {
     const pri = this.#selection.priorities;
     const generalAvail = metatypeKarma(pri.metatype, this.#selection.metatype) ?? 0;
     const magicAvail = PRIORITY_TABLE[pri.magic]?.magic?.karma ?? 0;
     const chosen = this.#selection.talents ?? [];
     const chosenIds = new Set(chosen.map((t) => t.itemId));
-    // Consume the imported catalog. World talent items only.
-    const catalog = (game.items?.filter?.((i) => i.type === "talent") ?? [])
-      .map((i) => ({ id: i.id, name: i.name, karma: i.system?.karma ?? 0, category: i.system?.category ?? "general" }))
-      .sort((a, b) => a.name.localeCompare(b.name));
+    // Bundled compendium merged with world talents (world wins on name).
+    const catalog = await loadTalentCatalog();
     const magicCategories = new Set(["sorcery", "conjuring", "mysticism", "channeling", "threading"]);
     return {
       hasCatalog: catalog.length > 0,
@@ -412,6 +417,7 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
       });
     }
     this.#wireLiveBudget();
+    wireTalentFilter(this.element, this.#talentFilter, (v) => { this.#talentFilter = v; });
   }
 
   /** Live points readout: recompute spent/remaining on every keystroke without a
@@ -504,13 +510,13 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
     const chosen = [];
     for (const cb of form.querySelectorAll("input[name^='talent.']:checked")) {
       const id = cb.dataset.itemId;
-      const item = game.items?.get?.(id);
-      if (!item) continue;
+      const entry = getTalentEntry(id);
+      if (!entry) continue;
       const poolSel = form.querySelector(`select[data-pool-for='${id}']`);
       chosen.push({
         itemId: id,
-        name: item.name,
-        karma: item.system?.karma ?? 0,
+        name: entry.name,
+        karma: entry.karma,
         pool: poolSel?.value === "magic" ? "magic" : "general"
       });
     }
@@ -641,7 +647,7 @@ export class SrxChargenApp extends HandlebarsApplicationMixin(ApplicationV2) {
       // handled by the preCreateItem hook in module/active-effect/hooks.mjs.
       const talentDocs = [];
       for (const t of this.#selection.talents ?? []) {
-        const src = game.items?.get?.(t.itemId);
+        const src = await getTalentDoc(t.itemId);
         if (src) talentDocs.push(src.toObject());
       }
       if (talentDocs.length) await actor.createEmbeddedDocuments("Item", talentDocs);
