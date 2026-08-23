@@ -129,7 +129,429 @@
       "visionMagnification": false
     }
   },
-  "items": [],
+  "items": [
+    {
+      "_id": "31727620dd6cd3f1",
+      "name": "Ingram Smartgun X",
+      "type": "weapon",
+      "system": {
+        "summary": "Automatics / Submachine Guns",
+        "description": "",
+        "skill": "firearms",
+        "specialization": "Submachine Guns",
+        "category": "Automatics",
+        "range": "20/50/100m",
+        "properties": "",
+        "cost": 6200,
+        "attackModes": [
+          {
+            "name": "Ranged",
+            "action": "major",
+            "fireMode": "BF",
+            "acc": -1,
+            "dv": "9",
+            "dvType": "P",
+            "element": ""
+          },
+          {
+            "name": "Ranged",
+            "action": "complex",
+            "fireMode": "FA",
+            "acc": -3,
+            "dv": "10",
+            "dvType": "P",
+            "element": ""
+          }
+        ],
+        "mounts": {
+          "barrel": 2,
+          "internal": 1,
+          "side": 0,
+          "stock": 0,
+          "top": 1,
+          "underbarrel": 0,
+          "foldingStock": 1,
+          "bow": 0,
+          "sawedOff": 0
+        }
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "weapon",
+          "catalogData": {
+            "name": "Ingram Smartgun X",
+            "srxId": 4578,
+            "category": "Automatics",
+            "subcategory": "Submachine Guns",
+            "cost": 6200,
+            "properties": [],
+            "options": [],
+            "type": "Firearms",
+            "type2": "Automatics",
+            "type3": "Submachine Guns",
+            "skill": "Firearms",
+            "specialization": "Submachine Guns",
+            "isLargeMelee": false,
+            "isAmmo": false,
+            "isAccessory": false,
+            "range": {
+              "raw": "20/50/100m",
+              "bands": [
+                20,
+                50,
+                100
+              ]
+            },
+            "improvedRange": {
+              "raw": "20/50/150m",
+              "bands": [
+                20,
+                50,
+                150
+              ]
+            },
+            "canMod": true,
+            "mounts": {
+              "barrel": 2,
+              "internal": 1,
+              "side": 0,
+              "stock": 0,
+              "top": 1,
+              "underbarrel": 0,
+              "foldingStock": 1,
+              "bow": 0,
+              "sawedOff": 0
+            },
+            "installedMods": [
+              {
+                "name": "Advanced Gas-vent",
+                "modSlug": "advanced-gas-vent",
+                "mounts": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "name": "Silencer/Suppressor",
+                "modSlug": "silencer-suppressor",
+                "mounts": [
+                  0
+                ]
+              }
+            ],
+            "attackModes": [
+              {
+                "attackType": "Ranged",
+                "action": "Major",
+                "fireMode": "BF",
+                "accuracy": -1,
+                "dv": {
+                  "raw": "9",
+                  "value": 9,
+                  "type": "P",
+                  "element": null,
+                  "min": null,
+                  "max": null
+                }
+              },
+              {
+                "attackType": "Ranged",
+                "action": "Complex",
+                "fireMode": "FA",
+                "accuracy": -3,
+                "dv": {
+                  "raw": "10",
+                  "value": 10,
+                  "type": "P",
+                  "element": null,
+                  "min": null,
+                  "max": null
+                }
+              }
+            ],
+            "slug": "ingram-smartgun-x"
+          }
+        }
+      },
+      "sort": 100,
+      "_key": "!actors.items!C1kioMYMrGeRj30a.31727620dd6cd3f1"
+    },
+    {
+      "_id": "a8cb4460493be570",
+      "name": "Sword",
+      "type": "weapon",
+      "system": {
+        "summary": "Close Combat / Blades",
+        "description": "",
+        "skill": "closeCombat",
+        "specialization": "Blades",
+        "category": "Close Combat",
+        "range": "-",
+        "properties": "Two-Handed",
+        "cost": 350,
+        "attackModes": [
+          {
+            "name": "Melee",
+            "action": "major",
+            "fireMode": "",
+            "acc": 2,
+            "dv": "BOD-1",
+            "dvType": "P",
+            "element": ""
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "weapon",
+          "catalogData": {
+            "name": "Sword",
+            "srxId": 4528,
+            "category": "Close Combat",
+            "subcategory": "Blades",
+            "cost": 350,
+            "properties": [
+              "Two-Handed"
+            ],
+            "options": [],
+            "type": "Close Combat",
+            "type2": "Blades",
+            "type3": null,
+            "skill": "Close Combat",
+            "specialization": "Blades",
+            "isLargeMelee": false,
+            "isAmmo": false,
+            "isAccessory": false,
+            "range": {
+              "raw": "-"
+            },
+            "improvedRange": null,
+            "canMod": false,
+            "mounts": {
+              "barrel": 0,
+              "internal": 0,
+              "side": 0,
+              "stock": 0,
+              "top": 0,
+              "underbarrel": 0,
+              "foldingStock": 0,
+              "bow": 0,
+              "sawedOff": 0
+            },
+            "installedMods": [],
+            "attackModes": [
+              {
+                "attackType": "Melee",
+                "action": "Major",
+                "fireMode": null,
+                "accuracy": 2,
+                "dv": {
+                  "raw": "BOD-1",
+                  "attr": "bod",
+                  "mod": -1,
+                  "type": "P",
+                  "element": null,
+                  "min": 6,
+                  "max": null
+                }
+              }
+            ],
+            "slug": "sword"
+          }
+        }
+      },
+      "sort": 200,
+      "_key": "!actors.items!C1kioMYMrGeRj30a.a8cb4460493be570"
+    },
+    {
+      "_id": "4cac5accb4080c4d",
+      "name": "Armor Jacket",
+      "type": "armor",
+      "system": {
+        "summary": "",
+        "description": "",
+        "rating": 10,
+        "hardened": 2,
+        "heavy": true,
+        "shield": false,
+        "equipped": true,
+        "cost": 1300
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "armor",
+          "catalogData": {
+            "name": "Armor Jacket",
+            "srxId": 4006,
+            "cost": 1300,
+            "properties": [
+              "Heavy",
+              "Hardened (2)"
+            ],
+            "options": [],
+            "rating": 10,
+            "hardened": 2,
+            "heavy": true,
+            "shield": false,
+            "slug": "armor-jacket"
+          }
+        }
+      },
+      "sort": 300,
+      "_key": "!actors.items!C1kioMYMrGeRj30a.4cac5accb4080c4d"
+    },
+    {
+      "_id": "97a4ffedc1e878ec",
+      "name": "Meta Link Commlink",
+      "type": "gear",
+      "system": {
+        "summary": "Matrix Devices / Commlinks",
+        "description": "",
+        "subtype": "Matrix Devices",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 800
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Meta Link Commlink",
+            "srxId": 6006,
+            "category": "Matrix Devices",
+            "subcategory": "Commlinks",
+            "cost": 800,
+            "properties": [],
+            "options": [],
+            "type": "Matrix Devices",
+            "type2": "Commlinks",
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "3",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "4",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "meta-link-commlink"
+          }
+        }
+      },
+      "sort": 400,
+      "_key": "!actors.items!C1kioMYMrGeRj30a.97a4ffedc1e878ec"
+    },
+    {
+      "_id": "91fe5dca9cdae934",
+      "name": "Stim Patch",
+      "type": "gear",
+      "system": {
+        "summary": "Biotech",
+        "description": "",
+        "subtype": "Biotech",
+        "rating": 0,
+        "quantity": 2,
+        "cost": 200
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Stim Patch",
+            "srxId": 6157,
+            "category": "Biotech",
+            "cost": 200,
+            "properties": [],
+            "options": [],
+            "type": "Biotech",
+            "type2": null,
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "stim-patch"
+          }
+        }
+      },
+      "sort": 500,
+      "_key": "!actors.items!C1kioMYMrGeRj30a.91fe5dca9cdae934"
+    },
+    {
+      "_id": "76396a3ff42a1fa9",
+      "name": "Fake SIN",
+      "type": "gear",
+      "system": {
+        "summary": "Breaking & Entering Gear",
+        "description": "",
+        "subtype": "Breaking & Entering Gear",
+        "rating": 9,
+        "quantity": 1,
+        "cost": 700
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Fake SIN",
+            "srxId": 6092,
+            "category": "Breaking & Entering Gear",
+            "cost": 700,
+            "costDisplay": "Rating x Rating x 700",
+            "properties": [
+              "Illegal"
+            ],
+            "options": [],
+            "type": "Breaking & Entering Gear",
+            "type2": null,
+            "maxRating": 9,
+            "ratingSquared": true,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "fake-sin"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!C1kioMYMrGeRj30a.76396a3ff42a1fa9"
+    }
+  ],
   "effects": [],
   "folder": null,
   "sort": 0,

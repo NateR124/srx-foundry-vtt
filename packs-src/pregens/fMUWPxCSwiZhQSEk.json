@@ -134,7 +134,290 @@
       "visionMagnification": false
     }
   },
-  "items": [],
+  "items": [
+    {
+      "_id": "102300281a7c7b4a",
+      "name": "Streetline Special",
+      "type": "weapon",
+      "system": {
+        "summary": "Pistols / Light",
+        "description": "",
+        "skill": "firearms",
+        "specialization": "Pistols",
+        "category": "Pistols",
+        "range": "10/30/80m",
+        "properties": "Light",
+        "cost": 250,
+        "attackModes": [
+          {
+            "name": "Ranged",
+            "action": "major",
+            "fireMode": "SA",
+            "acc": 0,
+            "dv": "5",
+            "dvType": "P",
+            "element": ""
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "weapon",
+          "catalogData": {
+            "name": "Streetline Special",
+            "srxId": 4558,
+            "category": "Pistols",
+            "subcategory": "Light",
+            "cost": 250,
+            "properties": [
+              "Light"
+            ],
+            "options": [],
+            "type": "Firearms",
+            "type2": "Pistols",
+            "type3": "Light",
+            "skill": "Firearms",
+            "specialization": "Pistols",
+            "isLargeMelee": false,
+            "isAmmo": false,
+            "isAccessory": false,
+            "range": {
+              "raw": "10/30/80m",
+              "bands": [
+                10,
+                30,
+                80
+              ]
+            },
+            "improvedRange": {
+              "raw": "10/30/120m",
+              "bands": [
+                10,
+                30,
+                120
+              ]
+            },
+            "canMod": false,
+            "mounts": {
+              "barrel": 0,
+              "internal": 0,
+              "side": 0,
+              "stock": 0,
+              "top": 0,
+              "underbarrel": 0,
+              "foldingStock": 0,
+              "bow": 0,
+              "sawedOff": 0
+            },
+            "installedMods": [],
+            "attackModes": [
+              {
+                "attackType": "Ranged",
+                "action": "Major",
+                "fireMode": "SA",
+                "accuracy": 0,
+                "dv": {
+                  "raw": "5",
+                  "value": 5,
+                  "type": "P",
+                  "element": null,
+                  "min": null,
+                  "max": null
+                }
+              }
+            ],
+            "slug": "streetline-special"
+          }
+        }
+      },
+      "sort": 100,
+      "_key": "!actors.items!fMUWPxCSwiZhQSEk.102300281a7c7b4a"
+    },
+    {
+      "_id": "60a7cf83ce5c0874",
+      "name": "Armor Clothing",
+      "type": "armor",
+      "system": {
+        "summary": "",
+        "description": "",
+        "rating": 4,
+        "hardened": 0,
+        "heavy": false,
+        "shield": false,
+        "equipped": true,
+        "cost": 450
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "armor",
+          "catalogData": {
+            "name": "Armor Clothing",
+            "srxId": 4004,
+            "cost": 450,
+            "properties": [],
+            "options": [],
+            "rating": 4,
+            "hardened": 0,
+            "heavy": false,
+            "shield": false,
+            "slug": "armor-clothing"
+          }
+        }
+      },
+      "sort": 200,
+      "_key": "!actors.items!fMUWPxCSwiZhQSEk.60a7cf83ce5c0874"
+    },
+    {
+      "_id": "a716d2f7904f4535",
+      "name": "Meta Link Commlink",
+      "type": "gear",
+      "system": {
+        "summary": "Matrix Devices / Commlinks",
+        "description": "",
+        "subtype": "Matrix Devices",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 800
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Meta Link Commlink",
+            "srxId": 6006,
+            "category": "Matrix Devices",
+            "subcategory": "Commlinks",
+            "cost": 800,
+            "properties": [],
+            "options": [],
+            "type": "Matrix Devices",
+            "type2": "Commlinks",
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "3",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "4",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "meta-link-commlink"
+          }
+        }
+      },
+      "sort": 300,
+      "_key": "!actors.items!fMUWPxCSwiZhQSEk.a716d2f7904f4535"
+    },
+    {
+      "_id": "932d4ecada16b4bd",
+      "name": "Stim Patch",
+      "type": "gear",
+      "system": {
+        "summary": "Biotech",
+        "description": "",
+        "subtype": "Biotech",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 200
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Stim Patch",
+            "srxId": 6157,
+            "category": "Biotech",
+            "cost": 200,
+            "properties": [],
+            "options": [],
+            "type": "Biotech",
+            "type2": null,
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "stim-patch"
+          }
+        }
+      },
+      "sort": 400,
+      "_key": "!actors.items!fMUWPxCSwiZhQSEk.932d4ecada16b4bd"
+    },
+    {
+      "_id": "8a5c12456ae64252",
+      "name": "Fake SIN",
+      "type": "gear",
+      "system": {
+        "summary": "Breaking & Entering Gear",
+        "description": "",
+        "subtype": "Breaking & Entering Gear",
+        "rating": 9,
+        "quantity": 1,
+        "cost": 700
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Fake SIN",
+            "srxId": 6092,
+            "category": "Breaking & Entering Gear",
+            "cost": 700,
+            "costDisplay": "Rating x Rating x 700",
+            "properties": [
+              "Illegal"
+            ],
+            "options": [],
+            "type": "Breaking & Entering Gear",
+            "type2": null,
+            "maxRating": 9,
+            "ratingSquared": true,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "fake-sin"
+          }
+        }
+      },
+      "sort": 500,
+      "_key": "!actors.items!fMUWPxCSwiZhQSEk.8a5c12456ae64252"
+    }
+  ],
   "effects": [],
   "folder": null,
   "sort": 0,

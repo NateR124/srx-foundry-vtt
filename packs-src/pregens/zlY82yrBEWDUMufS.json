@@ -134,7 +134,533 @@
       "visionMagnification": false
     }
   },
-  "items": [],
+  "items": [
+    {
+      "_id": "3b10d6c7145e93c8",
+      "name": "Colt America L36",
+      "type": "weapon",
+      "system": {
+        "summary": "Pistols / Light",
+        "description": "",
+        "skill": "firearms",
+        "specialization": "Pistols",
+        "category": "Pistols",
+        "range": "10/30/80m",
+        "properties": "Light",
+        "cost": 420,
+        "attackModes": [
+          {
+            "name": "Ranged",
+            "action": "major",
+            "fireMode": "SS",
+            "acc": 0,
+            "dv": "7",
+            "dvType": "P",
+            "element": ""
+          }
+        ],
+        "mounts": {
+          "barrel": 1,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 1,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        }
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "weapon",
+          "catalogData": {
+            "name": "Colt America L36",
+            "srxId": 4555,
+            "category": "Pistols",
+            "subcategory": "Light",
+            "cost": 420,
+            "properties": [
+              "Light"
+            ],
+            "options": [],
+            "type": "Firearms",
+            "type2": "Pistols",
+            "type3": "Light",
+            "skill": "Firearms",
+            "specialization": "Pistols",
+            "isLargeMelee": false,
+            "isAmmo": false,
+            "isAccessory": false,
+            "range": {
+              "raw": "10/30/80m",
+              "bands": [
+                10,
+                30,
+                80
+              ]
+            },
+            "improvedRange": {
+              "raw": "10/30/120m",
+              "bands": [
+                10,
+                30,
+                120
+              ]
+            },
+            "canMod": true,
+            "mounts": {
+              "barrel": 1,
+              "internal": 0,
+              "side": 0,
+              "stock": 0,
+              "top": 1,
+              "underbarrel": 0,
+              "foldingStock": 0,
+              "bow": 0,
+              "sawedOff": 0
+            },
+            "installedMods": [],
+            "attackModes": [
+              {
+                "attackType": "Ranged",
+                "action": "Major",
+                "fireMode": "SS",
+                "accuracy": 0,
+                "dv": {
+                  "raw": "7",
+                  "value": 7,
+                  "type": "P",
+                  "element": null,
+                  "min": null,
+                  "max": null
+                }
+              }
+            ],
+            "slug": "colt-america-l36"
+          }
+        }
+      },
+      "sort": 100,
+      "_key": "!actors.items!zlY82yrBEWDUMufS.3b10d6c7145e93c8"
+    },
+    {
+      "_id": "afe9e4b8a2e9a0b6",
+      "name": "Extendable Baton",
+      "type": "weapon",
+      "system": {
+        "summary": "Close Combat / Clubs",
+        "description": "",
+        "skill": "closeCombat",
+        "specialization": "Clubs",
+        "category": "Close Combat",
+        "range": "-",
+        "properties": "",
+        "cost": 250,
+        "attackModes": [
+          {
+            "name": "Melee",
+            "action": "major",
+            "fireMode": "",
+            "acc": 1,
+            "dv": "BOD-4",
+            "dvType": "S",
+            "element": ""
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "weapon",
+          "catalogData": {
+            "name": "Extendable Baton",
+            "srxId": 4507,
+            "category": "Close Combat",
+            "subcategory": "Clubs",
+            "cost": 250,
+            "properties": [],
+            "options": [],
+            "type": "Close Combat",
+            "type2": "Clubs",
+            "type3": null,
+            "skill": "Close Combat",
+            "specialization": "Clubs",
+            "isLargeMelee": false,
+            "isAmmo": false,
+            "isAccessory": false,
+            "range": {
+              "raw": "-"
+            },
+            "improvedRange": null,
+            "canMod": false,
+            "mounts": {
+              "barrel": 0,
+              "internal": 0,
+              "side": 0,
+              "stock": 0,
+              "top": 0,
+              "underbarrel": 0,
+              "foldingStock": 0,
+              "bow": 0,
+              "sawedOff": 0
+            },
+            "installedMods": [],
+            "attackModes": [
+              {
+                "attackType": "Melee",
+                "action": "Major",
+                "fireMode": null,
+                "accuracy": 1,
+                "dv": {
+                  "raw": "BOD-4",
+                  "attr": "bod",
+                  "mod": -4,
+                  "type": "S",
+                  "element": null,
+                  "min": 3,
+                  "max": null
+                }
+              }
+            ],
+            "slug": "extendable-baton"
+          }
+        }
+      },
+      "sort": 200,
+      "_key": "!actors.items!zlY82yrBEWDUMufS.afe9e4b8a2e9a0b6"
+    },
+    {
+      "_id": "03c15e5d0ead78fe",
+      "name": "Urban Explorer Jumpsuit",
+      "type": "armor",
+      "system": {
+        "summary": "",
+        "description": "",
+        "rating": 8,
+        "hardened": 0,
+        "heavy": false,
+        "shield": false,
+        "equipped": true,
+        "cost": 350
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "armor",
+          "catalogData": {
+            "name": "Urban Explorer Jumpsuit",
+            "srxId": 4016,
+            "cost": 350,
+            "properties": [],
+            "options": [],
+            "rating": 8,
+            "hardened": 0,
+            "heavy": false,
+            "shield": false,
+            "slug": "urban-explorer-jumpsuit"
+          }
+        }
+      },
+      "sort": 300,
+      "_key": "!actors.items!zlY82yrBEWDUMufS.03c15e5d0ead78fe"
+    },
+    {
+      "_id": "5b95cf0e19ca59a4",
+      "name": "Meta Link Commlink",
+      "type": "gear",
+      "system": {
+        "summary": "Matrix Devices / Commlinks",
+        "description": "",
+        "subtype": "Matrix Devices",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 800
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Meta Link Commlink",
+            "srxId": 6006,
+            "category": "Matrix Devices",
+            "subcategory": "Commlinks",
+            "cost": 800,
+            "properties": [],
+            "options": [],
+            "type": "Matrix Devices",
+            "type2": "Commlinks",
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "3",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "4",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "meta-link-commlink"
+          }
+        }
+      },
+      "sort": 400,
+      "_key": "!actors.items!zlY82yrBEWDUMufS.5b95cf0e19ca59a4"
+    },
+    {
+      "_id": "32e6ef0551102bb2",
+      "name": "Medkit",
+      "type": "gear",
+      "system": {
+        "summary": "Tools & Survival Gear",
+        "description": "",
+        "subtype": "Tools & Survival Gear",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 500
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Medkit",
+            "srxId": 6138,
+            "category": "Tools & Survival Gear",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "type": "Tools & Survival Gear",
+            "type2": null,
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "medkit"
+          }
+        }
+      },
+      "sort": 500,
+      "_key": "!actors.items!zlY82yrBEWDUMufS.32e6ef0551102bb2"
+    },
+    {
+      "_id": "85300f4f18d1c708",
+      "name": "Trauma Patch",
+      "type": "gear",
+      "system": {
+        "summary": "Biotech",
+        "description": "",
+        "subtype": "Biotech",
+        "rating": 0,
+        "quantity": 2,
+        "cost": 100
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Trauma Patch",
+            "srxId": 6159,
+            "category": "Biotech",
+            "cost": 100,
+            "properties": [],
+            "options": [],
+            "type": "Biotech",
+            "type2": null,
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "trauma-patch"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!zlY82yrBEWDUMufS.85300f4f18d1c708"
+    },
+    {
+      "_id": "511eea7661a44d89",
+      "name": "Antidote Patch",
+      "type": "gear",
+      "system": {
+        "summary": "Biotech",
+        "description": "",
+        "subtype": "Biotech",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 200
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Antidote Patch",
+            "srxId": 6149,
+            "category": "Biotech",
+            "cost": 200,
+            "properties": [],
+            "options": [
+              "List all toxins"
+            ],
+            "type": "Biotech",
+            "type2": null,
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "antidote-patch"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!zlY82yrBEWDUMufS.511eea7661a44d89"
+    },
+    {
+      "_id": "359d653952bae082",
+      "name": "Stim Patch",
+      "type": "gear",
+      "system": {
+        "summary": "Biotech",
+        "description": "",
+        "subtype": "Biotech",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 200
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Stim Patch",
+            "srxId": 6157,
+            "category": "Biotech",
+            "cost": 200,
+            "properties": [],
+            "options": [],
+            "type": "Biotech",
+            "type2": null,
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "stim-patch"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!zlY82yrBEWDUMufS.359d653952bae082"
+    },
+    {
+      "_id": "b5fba7941b3798a3",
+      "name": "Fake SIN",
+      "type": "gear",
+      "system": {
+        "summary": "Breaking & Entering Gear",
+        "description": "",
+        "subtype": "Breaking & Entering Gear",
+        "rating": 9,
+        "quantity": 1,
+        "cost": 700
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Fake SIN",
+            "srxId": 6092,
+            "category": "Breaking & Entering Gear",
+            "cost": 700,
+            "costDisplay": "Rating x Rating x 700",
+            "properties": [
+              "Illegal"
+            ],
+            "options": [],
+            "type": "Breaking & Entering Gear",
+            "type2": null,
+            "maxRating": 9,
+            "ratingSquared": true,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "fake-sin"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!zlY82yrBEWDUMufS.b5fba7941b3798a3"
+    }
+  ],
   "effects": [],
   "folder": null,
   "sort": 0,

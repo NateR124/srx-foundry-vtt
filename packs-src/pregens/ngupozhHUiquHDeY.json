@@ -134,7 +134,413 @@
       "visionMagnification": false
     }
   },
-  "items": [],
+  "items": [
+    {
+      "_id": "9f8c340b6dc1a862",
+      "name": "Krime Wrathammer",
+      "type": "weapon",
+      "system": {
+        "summary": "Close Combat / Clubs",
+        "description": "",
+        "skill": "closeCombat",
+        "specialization": "Clubs",
+        "category": "Close Combat",
+        "range": "-",
+        "properties": "Two-Handed",
+        "cost": 4400,
+        "attackModes": [
+          {
+            "name": "Melee",
+            "action": "complex",
+            "fireMode": "",
+            "acc": 1,
+            "dv": "BOD+1",
+            "dvType": "P",
+            "element": ""
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "weapon",
+          "catalogData": {
+            "name": "Krime Wrathammer",
+            "srxId": 4509,
+            "category": "Close Combat",
+            "subcategory": "Clubs",
+            "cost": 4400,
+            "properties": [
+              "Two-Handed"
+            ],
+            "options": [],
+            "type": "Close Combat",
+            "type2": "Clubs",
+            "type3": null,
+            "skill": "Close Combat",
+            "specialization": "Clubs",
+            "isLargeMelee": true,
+            "isAmmo": false,
+            "isAccessory": false,
+            "range": {
+              "raw": "-"
+            },
+            "improvedRange": null,
+            "canMod": false,
+            "mounts": {
+              "barrel": 0,
+              "internal": 0,
+              "side": 0,
+              "stock": 0,
+              "top": 0,
+              "underbarrel": 0,
+              "foldingStock": 0,
+              "bow": 0,
+              "sawedOff": 0
+            },
+            "installedMods": [],
+            "attackModes": [
+              {
+                "attackType": "Melee",
+                "action": "Complex",
+                "fireMode": null,
+                "accuracy": 1,
+                "dv": {
+                  "raw": "BOD+1",
+                  "attr": "bod",
+                  "mod": 1,
+                  "type": "P",
+                  "element": null,
+                  "min": 7,
+                  "max": null
+                }
+              }
+            ],
+            "slug": "krime-wrathammer",
+            "variantOf": "maul"
+          }
+        }
+      },
+      "sort": 100,
+      "_key": "!actors.items!ngupozhHUiquHDeY.9f8c340b6dc1a862"
+    },
+    {
+      "_id": "85097c376ec57375",
+      "name": "Remington Roomsweeper",
+      "type": "weapon",
+      "system": {
+        "summary": "Shotguns",
+        "description": "",
+        "skill": "firearms",
+        "specialization": "Shotguns",
+        "category": "Shotguns",
+        "range": "20/50/100m (Slug), 20m (Shot Round)",
+        "properties": "Two-Handed",
+        "cost": 2600,
+        "attackModes": [
+          {
+            "name": "Ranged",
+            "action": "major",
+            "fireMode": "SS",
+            "acc": 0,
+            "dv": "10",
+            "dvType": "P",
+            "element": ""
+          },
+          {
+            "name": "AOE",
+            "action": "major",
+            "fireMode": "SS",
+            "acc": 0,
+            "dv": "5",
+            "dvType": "P",
+            "element": ""
+          }
+        ],
+        "mounts": {
+          "barrel": 0,
+          "internal": 0,
+          "side": 0,
+          "stock": 1,
+          "top": 1,
+          "underbarrel": 1,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 1
+        }
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "weapon",
+          "catalogData": {
+            "name": "Remington Roomsweeper",
+            "srxId": 4603,
+            "category": "Shotguns",
+            "cost": 2600,
+            "properties": [
+              "Two-Handed"
+            ],
+            "options": [],
+            "type": "Firearms",
+            "type2": "Shotguns",
+            "type3": null,
+            "skill": "Firearms",
+            "specialization": "Shotguns",
+            "isLargeMelee": false,
+            "isAmmo": false,
+            "isAccessory": false,
+            "range": {
+              "raw": "20/50/100m (Slug), 20m (Shot Round)"
+            },
+            "improvedRange": {
+              "raw": "20/50/150m (Slug), 20m (Shot Round)"
+            },
+            "canMod": true,
+            "mounts": {
+              "barrel": 0,
+              "internal": 0,
+              "side": 0,
+              "stock": 1,
+              "top": 1,
+              "underbarrel": 1,
+              "foldingStock": 0,
+              "bow": 0,
+              "sawedOff": 1
+            },
+            "installedMods": [
+              {
+                "name": "Sawed-off",
+                "modSlug": "sawed-off",
+                "mounts": [
+                  8
+                ]
+              }
+            ],
+            "attackModes": [
+              {
+                "attackType": "Ranged",
+                "action": "Major",
+                "fireMode": "SS",
+                "accuracy": 0,
+                "dv": {
+                  "raw": "10",
+                  "value": 10,
+                  "type": "P",
+                  "element": null,
+                  "min": null,
+                  "max": null
+                }
+              },
+              {
+                "attackType": "AOE",
+                "action": "Major",
+                "fireMode": "SS",
+                "accuracy": null,
+                "dv": {
+                  "raw": "5",
+                  "value": 5,
+                  "type": "P",
+                  "element": null,
+                  "min": null,
+                  "max": null
+                }
+              }
+            ],
+            "slug": "remington-roomsweeper"
+          }
+        }
+      },
+      "sort": 200,
+      "_key": "!actors.items!ngupozhHUiquHDeY.85097c376ec57375"
+    },
+    {
+      "_id": "fa16b8985afb7810",
+      "name": "Armor Jacket",
+      "type": "armor",
+      "system": {
+        "summary": "",
+        "description": "",
+        "rating": 10,
+        "hardened": 2,
+        "heavy": true,
+        "shield": false,
+        "equipped": true,
+        "cost": 1300
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "armor",
+          "catalogData": {
+            "name": "Armor Jacket",
+            "srxId": 4006,
+            "cost": 1300,
+            "properties": [
+              "Heavy",
+              "Hardened (2)"
+            ],
+            "options": [],
+            "rating": 10,
+            "hardened": 2,
+            "heavy": true,
+            "shield": false,
+            "slug": "armor-jacket"
+          }
+        }
+      },
+      "sort": 300,
+      "_key": "!actors.items!ngupozhHUiquHDeY.fa16b8985afb7810"
+    },
+    {
+      "_id": "1f9a3ce39d937619",
+      "name": "Meta Link Commlink",
+      "type": "gear",
+      "system": {
+        "summary": "Matrix Devices / Commlinks",
+        "description": "",
+        "subtype": "Matrix Devices",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 800
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Meta Link Commlink",
+            "srxId": 6006,
+            "category": "Matrix Devices",
+            "subcategory": "Commlinks",
+            "cost": 800,
+            "properties": [],
+            "options": [],
+            "type": "Matrix Devices",
+            "type2": "Commlinks",
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "3",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "4",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "meta-link-commlink"
+          }
+        }
+      },
+      "sort": 400,
+      "_key": "!actors.items!ngupozhHUiquHDeY.1f9a3ce39d937619"
+    },
+    {
+      "_id": "ccc148eb8a5c65f0",
+      "name": "Stim Patch",
+      "type": "gear",
+      "system": {
+        "summary": "Biotech",
+        "description": "",
+        "subtype": "Biotech",
+        "rating": 0,
+        "quantity": 2,
+        "cost": 200
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Stim Patch",
+            "srxId": 6157,
+            "category": "Biotech",
+            "cost": 200,
+            "properties": [],
+            "options": [],
+            "type": "Biotech",
+            "type2": null,
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "stim-patch"
+          }
+        }
+      },
+      "sort": 500,
+      "_key": "!actors.items!ngupozhHUiquHDeY.ccc148eb8a5c65f0"
+    },
+    {
+      "_id": "d2dc5d02ebfb776d",
+      "name": "Fake SIN",
+      "type": "gear",
+      "system": {
+        "summary": "Breaking & Entering Gear",
+        "description": "",
+        "subtype": "Breaking & Entering Gear",
+        "rating": 9,
+        "quantity": 1,
+        "cost": 700
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Fake SIN",
+            "srxId": 6092,
+            "category": "Breaking & Entering Gear",
+            "cost": 700,
+            "costDisplay": "Rating x Rating x 700",
+            "properties": [
+              "Illegal"
+            ],
+            "options": [],
+            "type": "Breaking & Entering Gear",
+            "type2": null,
+            "maxRating": 9,
+            "ratingSquared": true,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "fake-sin"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!ngupozhHUiquHDeY.d2dc5d02ebfb776d"
+    }
+  ],
   "effects": [],
   "folder": null,
   "sort": 0,

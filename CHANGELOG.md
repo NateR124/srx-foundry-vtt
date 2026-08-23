@@ -7,6 +7,25 @@ The prose between a version heading and its first `###` subsection is the
 player-facing summary — release CI copies it into that tag's GitHub release
 notes, so keep it short, plain-language, and about what changed at the table.
 
+## Unreleased
+
+Pregen characters now come equipped. Every pregen in the compendium carries a
+starting kit matched to its archetype — weapons it has the skills to use, armor
+already worn (so Armor ratings are non-zero out of the box), and role gear:
+cyberdecks for deckers, drones for riggers, medkits for street docs, lockpicks
+for infiltrators, and a commlink and fake SIN for everyone.
+
+### Added
+- `scripts/gear-pregens.mjs`: builds the pregen loadouts from the bundled
+  catalog, keyed to each archetype's skill ratings (the original SRX pregen
+  loadout source is no longer available, so these are reconstructions).
+  Idempotent — each run replaces a pregen's items with its table loadout.
+
+### Changed
+- All 65 `pregens` pack actors gain embedded starting items (386 total).
+- Pregens still carry no talents, spells, or 'ware — now recorded in
+  KNOWN-GAPS.md.
+
 ## 1.1.0 — 2026-08-04 — 'Ware & weapon mods become real
 
 Closes the two remaining playtest reports: cyberware/bioware now interacts

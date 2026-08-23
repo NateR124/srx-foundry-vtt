@@ -124,7 +124,521 @@
       "visionMagnification": false
     }
   },
-  "items": [],
+  "items": [
+    {
+      "_id": "2c865ae689e01f0e",
+      "name": "Harima UltraKraft Katana",
+      "type": "weapon",
+      "system": {
+        "summary": "Close Combat / Blades",
+        "description": "",
+        "skill": "closeCombat",
+        "specialization": "Blades",
+        "category": "Close Combat",
+        "range": "-",
+        "properties": "Restricted, Two-Handed",
+        "cost": 22500,
+        "attackModes": [
+          {
+            "name": "Melee",
+            "action": "major",
+            "fireMode": "",
+            "acc": 4,
+            "dv": "BOD-1",
+            "dvType": "P",
+            "element": ""
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "weapon",
+          "catalogData": {
+            "name": "Harima UltraKraft Katana",
+            "srxId": 4531,
+            "category": "Close Combat",
+            "subcategory": "Blades",
+            "cost": 22500,
+            "properties": [
+              "Restricted",
+              "Two-Handed"
+            ],
+            "options": [],
+            "type": "Close Combat",
+            "type2": "Blades",
+            "type3": null,
+            "skill": "Close Combat",
+            "specialization": "Blades",
+            "isLargeMelee": false,
+            "isAmmo": false,
+            "isAccessory": false,
+            "range": {
+              "raw": "-"
+            },
+            "improvedRange": null,
+            "canMod": false,
+            "mounts": {
+              "barrel": 0,
+              "internal": 0,
+              "side": 0,
+              "stock": 0,
+              "top": 0,
+              "underbarrel": 0,
+              "foldingStock": 0,
+              "bow": 0,
+              "sawedOff": 0
+            },
+            "installedMods": [],
+            "attackModes": [
+              {
+                "attackType": "Melee",
+                "action": "Major",
+                "fireMode": null,
+                "accuracy": 4,
+                "dv": {
+                  "raw": "BOD-1",
+                  "attr": "bod",
+                  "mod": -1,
+                  "type": "P",
+                  "element": null,
+                  "min": 7,
+                  "max": null
+                }
+              }
+            ],
+            "slug": "harima-ultrakraft-katana",
+            "variantOf": "sword"
+          }
+        }
+      },
+      "sort": 100,
+      "_key": "!actors.items!SNgSdY3OPGXvRUCO.2c865ae689e01f0e"
+    },
+    {
+      "_id": "7354352209d0be5d",
+      "name": "Throwing Knife",
+      "type": "weapon",
+      "system": {
+        "summary": "Projectile Weapons / Throwing weapons",
+        "description": "",
+        "skill": "projectileWeapons",
+        "specialization": "Throwing Weapons",
+        "category": "Projectile Weapons",
+        "range": "5/10/BOD x 5m (Min. 15)",
+        "properties": "",
+        "cost": 10,
+        "attackModes": [
+          {
+            "name": "Ranged",
+            "action": "major",
+            "fireMode": "",
+            "acc": 0,
+            "dv": "4",
+            "dvType": "P",
+            "element": ""
+          }
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "weapon",
+          "catalogData": {
+            "name": "Throwing Knife",
+            "srxId": 4544,
+            "category": "Projectile Weapons",
+            "subcategory": "Throwing weapons",
+            "cost": 10,
+            "properties": [],
+            "options": [],
+            "type": "Projectile Weapons",
+            "type2": "Throwing weapons",
+            "type3": "Thrown Blade",
+            "skill": "Projectile Weapons",
+            "specialization": "Throwing Weapons",
+            "isLargeMelee": false,
+            "isAmmo": false,
+            "isAccessory": false,
+            "range": {
+              "raw": "5/10/BOD x 5m (Min. 15)",
+              "bands": [
+                5,
+                10,
+                {
+                  "attr": "bod",
+                  "mult": 5,
+                  "min": 15
+                }
+              ]
+            },
+            "improvedRange": {
+              "raw": "10/20/BOD x 10m (Min. 30)",
+              "bands": [
+                10,
+                20,
+                {
+                  "attr": "bod",
+                  "mult": 10,
+                  "min": 30
+                }
+              ]
+            },
+            "canMod": false,
+            "mounts": {
+              "barrel": 0,
+              "internal": 0,
+              "side": 0,
+              "stock": 0,
+              "top": 0,
+              "underbarrel": 0,
+              "foldingStock": 0,
+              "bow": 0,
+              "sawedOff": 0
+            },
+            "installedMods": [],
+            "attackModes": [
+              {
+                "attackType": "Ranged",
+                "action": "Major",
+                "fireMode": null,
+                "accuracy": 0,
+                "dv": {
+                  "raw": "4",
+                  "value": 4,
+                  "type": "P",
+                  "element": null,
+                  "min": null,
+                  "max": null
+                }
+              }
+            ],
+            "slug": "throwing-knife"
+          }
+        }
+      },
+      "sort": 200,
+      "_key": "!actors.items!SNgSdY3OPGXvRUCO.7354352209d0be5d"
+    },
+    {
+      "_id": "1b1c1a0c336a49b3",
+      "name": "Ceska Black Scorpion",
+      "type": "weapon",
+      "system": {
+        "summary": "Pistols / Machine",
+        "description": "",
+        "skill": "firearms",
+        "specialization": "Pistols",
+        "category": "Pistols",
+        "range": "10/30/80m",
+        "properties": "",
+        "cost": 850,
+        "attackModes": [
+          {
+            "name": "Ranged",
+            "action": "major",
+            "fireMode": "SA",
+            "acc": 1,
+            "dv": "7",
+            "dvType": "P",
+            "element": ""
+          },
+          {
+            "name": "Ranged",
+            "action": "major",
+            "fireMode": "BF",
+            "acc": -1,
+            "dv": "8",
+            "dvType": "P",
+            "element": ""
+          }
+        ],
+        "mounts": {
+          "barrel": 1,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 1,
+          "underbarrel": 0,
+          "foldingStock": 1,
+          "bow": 0,
+          "sawedOff": 0
+        }
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "weapon",
+          "catalogData": {
+            "name": "Ceska Black Scorpion",
+            "srxId": 4569,
+            "category": "Pistols",
+            "subcategory": "Machine",
+            "cost": 850,
+            "properties": [],
+            "options": [],
+            "type": "Firearms",
+            "type2": "Pistols",
+            "type3": "Machine",
+            "skill": "Firearms",
+            "specialization": "Pistols",
+            "isLargeMelee": false,
+            "isAmmo": false,
+            "isAccessory": false,
+            "range": {
+              "raw": "10/30/80m",
+              "bands": [
+                10,
+                30,
+                80
+              ]
+            },
+            "improvedRange": {
+              "raw": "10/30/120m",
+              "bands": [
+                10,
+                30,
+                120
+              ]
+            },
+            "canMod": true,
+            "mounts": {
+              "barrel": 1,
+              "internal": 0,
+              "side": 0,
+              "stock": 0,
+              "top": 1,
+              "underbarrel": 0,
+              "foldingStock": 1,
+              "bow": 0,
+              "sawedOff": 0
+            },
+            "installedMods": [],
+            "attackModes": [
+              {
+                "attackType": "Ranged",
+                "action": "Major",
+                "fireMode": "SA",
+                "accuracy": 1,
+                "dv": {
+                  "raw": "7",
+                  "value": 7,
+                  "type": "P",
+                  "element": null,
+                  "min": null,
+                  "max": null
+                }
+              },
+              {
+                "attackType": "Ranged",
+                "action": "Major",
+                "fireMode": "BF",
+                "accuracy": -1,
+                "dv": {
+                  "raw": "8",
+                  "value": 8,
+                  "type": "P",
+                  "element": null,
+                  "min": null,
+                  "max": null
+                }
+              }
+            ],
+            "slug": "ceska-black-scorpion"
+          }
+        }
+      },
+      "sort": 300,
+      "_key": "!actors.items!SNgSdY3OPGXvRUCO.1b1c1a0c336a49b3"
+    },
+    {
+      "_id": "12ede07da5ee450f",
+      "name": "Chameleon Suit",
+      "type": "armor",
+      "system": {
+        "summary": "",
+        "description": "",
+        "rating": 7,
+        "hardened": 0,
+        "heavy": false,
+        "shield": false,
+        "equipped": true,
+        "cost": 29000
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "armor",
+          "catalogData": {
+            "name": "Chameleon Suit",
+            "srxId": 4010,
+            "cost": 29000,
+            "properties": [
+              "Restricted"
+            ],
+            "options": [],
+            "rating": 7,
+            "hardened": 0,
+            "heavy": false,
+            "shield": false,
+            "slug": "chameleon-suit"
+          }
+        }
+      },
+      "sort": 400,
+      "_key": "!actors.items!SNgSdY3OPGXvRUCO.12ede07da5ee450f"
+    },
+    {
+      "_id": "4a1b485b74d2ef4c",
+      "name": "Meta Link Commlink",
+      "type": "gear",
+      "system": {
+        "summary": "Matrix Devices / Commlinks",
+        "description": "",
+        "subtype": "Matrix Devices",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 800
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Meta Link Commlink",
+            "srxId": 6006,
+            "category": "Matrix Devices",
+            "subcategory": "Commlinks",
+            "cost": 800,
+            "properties": [],
+            "options": [],
+            "type": "Matrix Devices",
+            "type2": "Commlinks",
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "3",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "4",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "meta-link-commlink"
+          }
+        }
+      },
+      "sort": 500,
+      "_key": "!actors.items!SNgSdY3OPGXvRUCO.4a1b485b74d2ef4c"
+    },
+    {
+      "_id": "6e911837000a9d69",
+      "name": "Stealth Rope",
+      "type": "gear",
+      "system": {
+        "summary": "Tools & Survival Gear",
+        "description": "",
+        "subtype": "Tools & Survival Gear",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 200
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Stealth Rope",
+            "srxId": 6145,
+            "category": "Tools & Survival Gear",
+            "cost": 200,
+            "properties": [
+              "Illegal"
+            ],
+            "options": [],
+            "type": "Tools & Survival Gear",
+            "type2": null,
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "stealth-rope"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!SNgSdY3OPGXvRUCO.6e911837000a9d69"
+    },
+    {
+      "_id": "8a576caef0b74e63",
+      "name": "Fake SIN",
+      "type": "gear",
+      "system": {
+        "summary": "Breaking & Entering Gear",
+        "description": "",
+        "subtype": "Breaking & Entering Gear",
+        "rating": 9,
+        "quantity": 1,
+        "cost": 700
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Fake SIN",
+            "srxId": 6092,
+            "category": "Breaking & Entering Gear",
+            "cost": 700,
+            "costDisplay": "Rating x Rating x 700",
+            "properties": [
+              "Illegal"
+            ],
+            "options": [],
+            "type": "Breaking & Entering Gear",
+            "type2": null,
+            "maxRating": 9,
+            "ratingSquared": true,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "fake-sin"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!SNgSdY3OPGXvRUCO.8a576caef0b74e63"
+    }
+  ],
   "effects": [],
   "folder": null,
   "sort": 0,

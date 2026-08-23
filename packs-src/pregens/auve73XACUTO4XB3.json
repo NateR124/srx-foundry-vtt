@@ -119,7 +119,348 @@
       "visionMagnification": false
     }
   },
-  "items": [],
+  "items": [
+    {
+      "_id": "8acdf423d560cfa3",
+      "name": "Steyr TMP",
+      "type": "weapon",
+      "system": {
+        "summary": "Pistols / Machine",
+        "description": "",
+        "skill": "firearms",
+        "specialization": "Pistols",
+        "category": "Pistols",
+        "range": "10/30/80m",
+        "properties": "",
+        "cost": 550,
+        "attackModes": [
+          {
+            "name": "Ranged",
+            "action": "major",
+            "fireMode": "SA",
+            "acc": -1,
+            "dv": "7",
+            "dvType": "P",
+            "element": ""
+          },
+          {
+            "name": "Ranged",
+            "action": "major",
+            "fireMode": "BF",
+            "acc": -3,
+            "dv": "8",
+            "dvType": "P",
+            "element": ""
+          },
+          {
+            "name": "Ranged",
+            "action": "complex",
+            "fireMode": "FA",
+            "acc": -5,
+            "dv": "9",
+            "dvType": "P",
+            "element": ""
+          }
+        ],
+        "mounts": {
+          "barrel": 1,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 1,
+          "underbarrel": 0,
+          "foldingStock": 1,
+          "bow": 0,
+          "sawedOff": 0
+        }
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "weapon",
+          "catalogData": {
+            "name": "Steyr TMP",
+            "srxId": 4570,
+            "category": "Pistols",
+            "subcategory": "Machine",
+            "cost": 550,
+            "properties": [],
+            "options": [],
+            "type": "Firearms",
+            "type2": "Pistols",
+            "type3": "Machine",
+            "skill": "Firearms",
+            "specialization": "Pistols",
+            "isLargeMelee": false,
+            "isAmmo": false,
+            "isAccessory": false,
+            "range": {
+              "raw": "10/30/80m",
+              "bands": [
+                10,
+                30,
+                80
+              ]
+            },
+            "improvedRange": {
+              "raw": "10/30/120m",
+              "bands": [
+                10,
+                30,
+                120
+              ]
+            },
+            "canMod": true,
+            "mounts": {
+              "barrel": 1,
+              "internal": 0,
+              "side": 0,
+              "stock": 0,
+              "top": 1,
+              "underbarrel": 0,
+              "foldingStock": 1,
+              "bow": 0,
+              "sawedOff": 0
+            },
+            "installedMods": [],
+            "attackModes": [
+              {
+                "attackType": "Ranged",
+                "action": "Major",
+                "fireMode": "SA",
+                "accuracy": -1,
+                "dv": {
+                  "raw": "7",
+                  "value": 7,
+                  "type": "P",
+                  "element": null,
+                  "min": null,
+                  "max": null
+                }
+              },
+              {
+                "attackType": "Ranged",
+                "action": "Major",
+                "fireMode": "BF",
+                "accuracy": -3,
+                "dv": {
+                  "raw": "8",
+                  "value": 8,
+                  "type": "P",
+                  "element": null,
+                  "min": null,
+                  "max": null
+                }
+              },
+              {
+                "attackType": "Ranged",
+                "action": "Complex",
+                "fireMode": "FA",
+                "accuracy": -5,
+                "dv": {
+                  "raw": "9",
+                  "value": 9,
+                  "type": "P",
+                  "element": null,
+                  "min": null,
+                  "max": null
+                }
+              }
+            ],
+            "slug": "steyr-tmp"
+          }
+        }
+      },
+      "sort": 100,
+      "_key": "!actors.items!auve73XACUTO4XB3.8acdf423d560cfa3"
+    },
+    {
+      "_id": "82426852672ff280",
+      "name": "Lined Coat",
+      "type": "armor",
+      "system": {
+        "summary": "",
+        "description": "",
+        "rating": 9,
+        "hardened": 0,
+        "heavy": false,
+        "shield": false,
+        "equipped": true,
+        "cost": 2200
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "armor",
+          "catalogData": {
+            "name": "Lined Coat",
+            "srxId": 4014,
+            "cost": 2200,
+            "properties": [],
+            "options": [],
+            "rating": 9,
+            "hardened": 0,
+            "heavy": false,
+            "shield": false,
+            "slug": "lined-coat"
+          }
+        }
+      },
+      "sort": 200,
+      "_key": "!actors.items!auve73XACUTO4XB3.82426852672ff280"
+    },
+    {
+      "_id": "b031d4d96ee92c16",
+      "name": "Renraku Sensei Commlink",
+      "type": "gear",
+      "system": {
+        "summary": "Matrix Devices / Commlinks",
+        "description": "",
+        "subtype": "Matrix Devices",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 7000
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Renraku Sensei Commlink",
+            "srxId": 6009,
+            "category": "Matrix Devices",
+            "subcategory": "Commlinks",
+            "cost": 7000,
+            "properties": [],
+            "options": [],
+            "type": "Matrix Devices",
+            "type2": "Commlinks",
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "1",
+              "firewall": "4",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "7",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "renraku-sensei-commlink"
+          }
+        }
+      },
+      "sort": 300,
+      "_key": "!actors.items!auve73XACUTO4XB3.b031d4d96ee92c16"
+    },
+    {
+      "_id": "cc6e7fd62688ae15",
+      "name": "Erika MCD-1 Cyberdeck",
+      "type": "gear",
+      "system": {
+        "summary": "Matrix Devices / Cyberdecks",
+        "description": "",
+        "subtype": "Matrix Devices",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 58000
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Erika MCD-1 Cyberdeck",
+            "srxId": 6021,
+            "category": "Matrix Devices",
+            "subcategory": "Cyberdecks",
+            "cost": 58000,
+            "properties": [
+              "Illegal"
+            ],
+            "options": [],
+            "type": "Matrix Devices",
+            "type2": "Cyberdecks",
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": 3,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "2",
+              "hotSimFirewall": "1",
+              "hackingTests": "1",
+              "agents": "2",
+              "rank": "18",
+              "modCapacity": "1"
+            },
+            "installedEnhancements": [],
+            "slug": "erika-mcd-1-cyberdeck"
+          }
+        }
+      },
+      "sort": 400,
+      "_key": "!actors.items!auve73XACUTO4XB3.cc6e7fd62688ae15"
+    },
+    {
+      "_id": "d61e19101ad36cb0",
+      "name": "Fake SIN",
+      "type": "gear",
+      "system": {
+        "summary": "Breaking & Entering Gear",
+        "description": "",
+        "subtype": "Breaking & Entering Gear",
+        "rating": 9,
+        "quantity": 1,
+        "cost": 700
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Fake SIN",
+            "srxId": 6092,
+            "category": "Breaking & Entering Gear",
+            "cost": 700,
+            "costDisplay": "Rating x Rating x 700",
+            "properties": [
+              "Illegal"
+            ],
+            "options": [],
+            "type": "Breaking & Entering Gear",
+            "type2": null,
+            "maxRating": 9,
+            "ratingSquared": true,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "fake-sin"
+          }
+        }
+      },
+      "sort": 500,
+      "_key": "!actors.items!auve73XACUTO4XB3.d61e19101ad36cb0"
+    }
+  ],
   "effects": [],
   "folder": null,
   "sort": 0,

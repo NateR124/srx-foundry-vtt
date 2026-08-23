@@ -114,7 +114,401 @@
       "visionMagnification": false
     }
   },
-  "items": [],
+  "items": [
+    {
+      "_id": "b469110985cfbbb8",
+      "name": "Ares Predator V",
+      "type": "weapon",
+      "system": {
+        "summary": "Pistols / Heavy",
+        "description": "",
+        "skill": "firearms",
+        "specialization": "Pistols",
+        "category": "Pistols",
+        "range": "10/30/80m",
+        "properties": "",
+        "cost": 2050,
+        "attackModes": [
+          {
+            "name": "Ranged",
+            "action": "major",
+            "fireMode": "SA",
+            "acc": 1,
+            "dv": "8",
+            "dvType": "P",
+            "element": ""
+          }
+        ],
+        "mounts": {
+          "barrel": 1,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 1,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        }
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "weapon",
+          "catalogData": {
+            "name": "Ares Predator V",
+            "srxId": 4562,
+            "category": "Pistols",
+            "subcategory": "Heavy",
+            "cost": 2050,
+            "properties": [],
+            "options": [],
+            "type": "Firearms",
+            "type2": "Pistols",
+            "type3": "Heavy",
+            "skill": "Firearms",
+            "specialization": "Pistols",
+            "isLargeMelee": false,
+            "isAmmo": false,
+            "isAccessory": false,
+            "range": {
+              "raw": "10/30/80m",
+              "bands": [
+                10,
+                30,
+                80
+              ]
+            },
+            "improvedRange": {
+              "raw": "10/30/120m",
+              "bands": [
+                10,
+                30,
+                120
+              ]
+            },
+            "canMod": true,
+            "mounts": {
+              "barrel": 1,
+              "internal": 0,
+              "side": 0,
+              "stock": 0,
+              "top": 1,
+              "underbarrel": 0,
+              "foldingStock": 0,
+              "bow": 0,
+              "sawedOff": 0
+            },
+            "installedMods": [],
+            "attackModes": [
+              {
+                "attackType": "Ranged",
+                "action": "Major",
+                "fireMode": "SA",
+                "accuracy": 1,
+                "dv": {
+                  "raw": "8",
+                  "value": 8,
+                  "type": "P",
+                  "element": null,
+                  "min": null,
+                  "max": null
+                }
+              }
+            ],
+            "slug": "ares-predator-v"
+          }
+        }
+      },
+      "sort": 100,
+      "_key": "!actors.items!eJrbDY9ai9jA39GE.b469110985cfbbb8"
+    },
+    {
+      "_id": "e6f94eff24d31b0f",
+      "name": "Urban Explorer Jumpsuit",
+      "type": "armor",
+      "system": {
+        "summary": "",
+        "description": "",
+        "rating": 8,
+        "hardened": 0,
+        "heavy": false,
+        "shield": false,
+        "equipped": true,
+        "cost": 350
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "armor",
+          "catalogData": {
+            "name": "Urban Explorer Jumpsuit",
+            "srxId": 4016,
+            "cost": 350,
+            "properties": [],
+            "options": [],
+            "rating": 8,
+            "hardened": 0,
+            "heavy": false,
+            "shield": false,
+            "slug": "urban-explorer-jumpsuit"
+          }
+        }
+      },
+      "sort": 200,
+      "_key": "!actors.items!eJrbDY9ai9jA39GE.e6f94eff24d31b0f"
+    },
+    {
+      "_id": "25633daba6efaee0",
+      "name": "Renraku Sensei Commlink",
+      "type": "gear",
+      "system": {
+        "summary": "Matrix Devices / Commlinks",
+        "description": "",
+        "subtype": "Matrix Devices",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 7000
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Renraku Sensei Commlink",
+            "srxId": 6009,
+            "category": "Matrix Devices",
+            "subcategory": "Commlinks",
+            "cost": 7000,
+            "properties": [],
+            "options": [],
+            "type": "Matrix Devices",
+            "type2": "Commlinks",
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "1",
+              "firewall": "4",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "7",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "renraku-sensei-commlink"
+          }
+        }
+      },
+      "sort": 300,
+      "_key": "!actors.items!eJrbDY9ai9jA39GE.25633daba6efaee0"
+    },
+    {
+      "_id": "52ffbd9498ba6668",
+      "name": "MCT-Nissan Roto-Drone",
+      "type": "gear",
+      "system": {
+        "summary": "Drones (Aerial)",
+        "description": "",
+        "subtype": "Drones (Aerial)",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 45000
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "vehicle",
+          "catalogData": {
+            "name": "MCT-Nissan Roto-Drone",
+            "srxId": 7601,
+            "category": "Drones (Aerial)",
+            "cost": 45000,
+            "properties": [],
+            "options": [],
+            "type": "Drones (Aerial)",
+            "type2": null,
+            "type3": null,
+            "isDcc": false,
+            "skill": "Piloting",
+            "specialProperties": [
+              "Cold, Stun Damage Resistance (Leverage)",
+              "AOE Damage Vulnerability (Liability)"
+            ],
+            "operatorBonuses": {
+              "biotechAug": null,
+              "biotech": null,
+              "engineeringAug": null,
+              "engineering": null,
+              "stealthAug": null,
+              "stealth": null
+            },
+            "visionEnhancements": {
+              "flareCompensation": null,
+              "lowLight": null,
+              "thermographic": null,
+              "ultrasound": null,
+              "visionMagnification": null
+            },
+            "stats": {
+              "dccRank": null,
+              "dccMaxDrones": null,
+              "handling": 1,
+              "speed": 2,
+              "body": 5,
+              "armor": 9,
+              "health": 12,
+              "defenseScoreMod": null,
+              "autoRating": 3,
+              "autoDefenseScore": 2,
+              "dccBenefits": null,
+              "autoSkills": "Firearms,Perception,Piloting",
+              "alwaysOne": false
+            },
+            "vehicleMods": [
+              {
+                "name": "Combat Vehicle",
+                "value": "Built-In"
+              },
+              {
+                "name": "Smartlink (Vehicle)",
+                "value": "Built-In"
+              }
+            ],
+            "mounts": [
+              {
+                "index": 1,
+                "mount": {
+                  "orientation": "R",
+                  "heavy": false
+                },
+                "builtIn": {
+                  "weapon": "Mounted Assault Rifle",
+                  "orientation": "R",
+                  "retractable": false,
+                  "superior": false
+                }
+              },
+              {
+                "index": 2,
+                "mount": {
+                  "orientation": "F",
+                  "heavy": false
+                },
+                "builtIn": null
+              }
+            ],
+            "slug": "mct-nissan-roto-drone"
+          }
+        }
+      },
+      "sort": 400,
+      "_key": "!actors.items!eJrbDY9ai9jA39GE.52ffbd9498ba6668"
+    },
+    {
+      "_id": "4707d8c7a4c94745",
+      "name": "Mechanic's Kit",
+      "type": "gear",
+      "system": {
+        "summary": "Tools & Survival Gear",
+        "description": "",
+        "subtype": "Tools & Survival Gear",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 6000
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Mechanic's Kit",
+            "srxId": 6136,
+            "category": "Tools & Survival Gear",
+            "cost": 6000,
+            "properties": [],
+            "options": [],
+            "type": "Tools & Survival Gear",
+            "type2": null,
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "mechanics-kit"
+          }
+        }
+      },
+      "sort": 500,
+      "_key": "!actors.items!eJrbDY9ai9jA39GE.4707d8c7a4c94745"
+    },
+    {
+      "_id": "b6ab3b64934798bd",
+      "name": "Fake SIN",
+      "type": "gear",
+      "system": {
+        "summary": "Breaking & Entering Gear",
+        "description": "",
+        "subtype": "Breaking & Entering Gear",
+        "rating": 9,
+        "quantity": 1,
+        "cost": 700
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Fake SIN",
+            "srxId": 6092,
+            "category": "Breaking & Entering Gear",
+            "cost": 700,
+            "costDisplay": "Rating x Rating x 700",
+            "properties": [
+              "Illegal"
+            ],
+            "options": [],
+            "type": "Breaking & Entering Gear",
+            "type2": null,
+            "maxRating": 9,
+            "ratingSquared": true,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "fake-sin"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!eJrbDY9ai9jA39GE.b6ab3b64934798bd"
+    }
+  ],
   "effects": [],
   "folder": null,
   "sort": 0,

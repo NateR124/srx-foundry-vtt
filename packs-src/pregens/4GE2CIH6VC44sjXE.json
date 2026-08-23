@@ -124,7 +124,359 @@
       "visionMagnification": false
     }
   },
-  "items": [],
+  "items": [
+    {
+      "_id": "82dbafa737030521",
+      "name": "Fichetti Tiffani Needler",
+      "type": "weapon",
+      "system": {
+        "summary": "Pistols / Light",
+        "description": "",
+        "skill": "firearms",
+        "specialization": "Pistols",
+        "category": "Pistols",
+        "range": "10/30/80m",
+        "properties": "Light",
+        "cost": 450,
+        "attackModes": [
+          {
+            "name": "Ranged",
+            "action": "major",
+            "fireMode": "SA",
+            "acc": 0,
+            "dv": "6",
+            "dvType": "P",
+            "element": ""
+          }
+        ],
+        "mounts": {
+          "barrel": 1,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 0,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        }
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "weapon",
+          "catalogData": {
+            "name": "Fichetti Tiffani Needler",
+            "srxId": 4557,
+            "category": "Pistols",
+            "subcategory": "Light",
+            "cost": 450,
+            "properties": [
+              "Light"
+            ],
+            "options": [],
+            "type": "Firearms",
+            "type2": "Pistols",
+            "type3": "Light",
+            "skill": "Firearms",
+            "specialization": "Pistols",
+            "isLargeMelee": false,
+            "isAmmo": false,
+            "isAccessory": false,
+            "range": {
+              "raw": "10/30/80m",
+              "bands": [
+                10,
+                30,
+                80
+              ]
+            },
+            "improvedRange": {
+              "raw": "10/30/120m",
+              "bands": [
+                10,
+                30,
+                120
+              ]
+            },
+            "canMod": true,
+            "mounts": {
+              "barrel": 1,
+              "internal": 0,
+              "side": 0,
+              "stock": 0,
+              "top": 0,
+              "underbarrel": 0,
+              "foldingStock": 0,
+              "bow": 0,
+              "sawedOff": 0
+            },
+            "installedMods": [
+              {
+                "name": "Silencer/Suppressor",
+                "modSlug": "silencer-suppressor",
+                "mounts": [
+                  0
+                ]
+              }
+            ],
+            "attackModes": [
+              {
+                "attackType": "Ranged",
+                "action": "Major",
+                "fireMode": "SA",
+                "accuracy": 0,
+                "dv": {
+                  "raw": "6",
+                  "value": 6,
+                  "type": "P",
+                  "element": null,
+                  "min": null,
+                  "max": null
+                }
+              }
+            ],
+            "slug": "fichetti-tiffani-needler"
+          }
+        }
+      },
+      "sort": 100,
+      "_key": "!actors.items!4GE2CIH6VC44sjXE.82dbafa737030521"
+    },
+    {
+      "_id": "bf710b09799ca6a3",
+      "name": "Actioneer Business Clothes",
+      "type": "armor",
+      "system": {
+        "summary": "",
+        "description": "",
+        "rating": 9,
+        "hardened": 0,
+        "heavy": false,
+        "shield": false,
+        "equipped": true,
+        "cost": 1500
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "armor",
+          "catalogData": {
+            "name": "Actioneer Business Clothes",
+            "srxId": 4002,
+            "cost": 1500,
+            "properties": [],
+            "options": [],
+            "rating": 9,
+            "hardened": 0,
+            "heavy": false,
+            "shield": false,
+            "slug": "actioneer-business-clothes"
+          }
+        }
+      },
+      "sort": 200,
+      "_key": "!actors.items!4GE2CIH6VC44sjXE.bf710b09799ca6a3"
+    },
+    {
+      "_id": "1846303c16343a1c",
+      "name": "Erika Elite Commlink",
+      "type": "gear",
+      "system": {
+        "summary": "Matrix Devices / Commlinks",
+        "description": "",
+        "subtype": "Matrix Devices",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 15000
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Erika Elite Commlink",
+            "srxId": 6010,
+            "category": "Matrix Devices",
+            "subcategory": "Commlinks",
+            "cost": 15000,
+            "properties": [],
+            "options": [],
+            "type": "Matrix Devices",
+            "type2": "Commlinks",
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "1",
+              "firewall": "5",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "8",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "erika-elite-commlink"
+          }
+        }
+      },
+      "sort": 300,
+      "_key": "!actors.items!4GE2CIH6VC44sjXE.1846303c16343a1c"
+    },
+    {
+      "_id": "cb3e7739f4c13d6b",
+      "name": "Diguise Kit",
+      "type": "gear",
+      "system": {
+        "summary": "Breaking & Entering Gear",
+        "description": "",
+        "subtype": "Breaking & Entering Gear",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 800
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Diguise Kit",
+            "srxId": 6091,
+            "category": "Breaking & Entering Gear",
+            "cost": 800,
+            "properties": [],
+            "options": [],
+            "type": "Breaking & Entering Gear",
+            "type2": null,
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "diguise-kit"
+          }
+        }
+      },
+      "sort": 400,
+      "_key": "!actors.items!4GE2CIH6VC44sjXE.cb3e7739f4c13d6b"
+    },
+    {
+      "_id": "49875f4ae1048e2d",
+      "name": "Deep Fake",
+      "type": "gear",
+      "system": {
+        "summary": "Software Talents",
+        "description": "",
+        "subtype": "Utility",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 12000
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Deep Fake",
+            "srxId": 6055,
+            "category": "Software Talents",
+            "cost": 12000,
+            "properties": [
+              "Restricted"
+            ],
+            "options": [],
+            "type": "Utility",
+            "type2": "Software",
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "deep-fake"
+          }
+        }
+      },
+      "sort": 500,
+      "_key": "!actors.items!4GE2CIH6VC44sjXE.49875f4ae1048e2d"
+    },
+    {
+      "_id": "2aa0e00e4f056b4e",
+      "name": "Fake SIN",
+      "type": "gear",
+      "system": {
+        "summary": "Breaking & Entering Gear",
+        "description": "",
+        "subtype": "Breaking & Entering Gear",
+        "rating": 9,
+        "quantity": 1,
+        "cost": 700
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Fake SIN",
+            "srxId": 6092,
+            "category": "Breaking & Entering Gear",
+            "cost": 700,
+            "costDisplay": "Rating x Rating x 700",
+            "properties": [
+              "Illegal"
+            ],
+            "options": [],
+            "type": "Breaking & Entering Gear",
+            "type2": null,
+            "maxRating": 9,
+            "ratingSquared": true,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "fake-sin"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!4GE2CIH6VC44sjXE.2aa0e00e4f056b4e"
+    }
+  ],
   "effects": [],
   "folder": null,
   "sort": 0,

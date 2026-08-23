@@ -119,7 +119,361 @@
       "visionMagnification": false
     }
   },
-  "items": [],
+  "items": [
+    {
+      "_id": "2c241020d27761e4",
+      "name": "Ares Light Fire 75",
+      "type": "weapon",
+      "system": {
+        "summary": "Pistols / Light",
+        "description": "",
+        "skill": "firearms",
+        "specialization": "Pistols",
+        "category": "Pistols",
+        "range": "10/30/80m",
+        "properties": "Light, Restricted",
+        "cost": 2550,
+        "attackModes": [
+          {
+            "name": "Ranged",
+            "action": "major",
+            "fireMode": "SA",
+            "acc": 2,
+            "dv": "6",
+            "dvType": "P",
+            "element": ""
+          }
+        ],
+        "mounts": {
+          "barrel": 1,
+          "internal": 0,
+          "side": 0,
+          "stock": 0,
+          "top": 1,
+          "underbarrel": 0,
+          "foldingStock": 0,
+          "bow": 0,
+          "sawedOff": 0
+        }
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "weapon",
+          "catalogData": {
+            "name": "Ares Light Fire 75",
+            "srxId": 4553,
+            "category": "Pistols",
+            "subcategory": "Light",
+            "cost": 2550,
+            "properties": [
+              "Light",
+              "Restricted"
+            ],
+            "options": [],
+            "type": "Firearms",
+            "type2": "Pistols",
+            "type3": "Light",
+            "skill": "Firearms",
+            "specialization": "Pistols",
+            "isLargeMelee": false,
+            "isAmmo": false,
+            "isAccessory": false,
+            "range": {
+              "raw": "10/30/80m",
+              "bands": [
+                10,
+                30,
+                80
+              ]
+            },
+            "improvedRange": {
+              "raw": "10/30/120m",
+              "bands": [
+                10,
+                30,
+                120
+              ]
+            },
+            "canMod": true,
+            "mounts": {
+              "barrel": 1,
+              "internal": 0,
+              "side": 0,
+              "stock": 0,
+              "top": 1,
+              "underbarrel": 0,
+              "foldingStock": 0,
+              "bow": 0,
+              "sawedOff": 0
+            },
+            "installedMods": [
+              {
+                "name": "Silencer/Suppressor",
+                "modSlug": "silencer-suppressor",
+                "mounts": [
+                  0
+                ]
+              }
+            ],
+            "attackModes": [
+              {
+                "attackType": "Ranged",
+                "action": "Major",
+                "fireMode": "SA",
+                "accuracy": 2,
+                "dv": {
+                  "raw": "6",
+                  "value": 6,
+                  "type": "P",
+                  "element": null,
+                  "min": null,
+                  "max": null
+                }
+              }
+            ],
+            "slug": "ares-light-fire-75"
+          }
+        }
+      },
+      "sort": 100,
+      "_key": "!actors.items!UPGtgglzKzx83ewB.2c241020d27761e4"
+    },
+    {
+      "_id": "37d480c03920602b",
+      "name": "Armor Clothing",
+      "type": "armor",
+      "system": {
+        "summary": "",
+        "description": "",
+        "rating": 4,
+        "hardened": 0,
+        "heavy": false,
+        "shield": false,
+        "equipped": true,
+        "cost": 450
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "armor",
+          "catalogData": {
+            "name": "Armor Clothing",
+            "srxId": 4004,
+            "cost": 450,
+            "properties": [],
+            "options": [],
+            "rating": 4,
+            "hardened": 0,
+            "heavy": false,
+            "shield": false,
+            "slug": "armor-clothing"
+          }
+        }
+      },
+      "sort": 200,
+      "_key": "!actors.items!UPGtgglzKzx83ewB.37d480c03920602b"
+    },
+    {
+      "_id": "59a1a66d59965756",
+      "name": "Renraku Sensei Commlink",
+      "type": "gear",
+      "system": {
+        "summary": "Matrix Devices / Commlinks",
+        "description": "",
+        "subtype": "Matrix Devices",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 7000
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Renraku Sensei Commlink",
+            "srxId": 6009,
+            "category": "Matrix Devices",
+            "subcategory": "Commlinks",
+            "cost": 7000,
+            "properties": [],
+            "options": [],
+            "type": "Matrix Devices",
+            "type2": "Commlinks",
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "1",
+              "firewall": "4",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "7",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "renraku-sensei-commlink"
+          }
+        }
+      },
+      "sort": 300,
+      "_key": "!actors.items!UPGtgglzKzx83ewB.59a1a66d59965756"
+    },
+    {
+      "_id": "aafdfa1f9c976823",
+      "name": "Erika MCD-1 Cyberdeck",
+      "type": "gear",
+      "system": {
+        "summary": "Matrix Devices / Cyberdecks",
+        "description": "",
+        "subtype": "Matrix Devices",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 58000
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Erika MCD-1 Cyberdeck",
+            "srxId": 6021,
+            "category": "Matrix Devices",
+            "subcategory": "Cyberdecks",
+            "cost": 58000,
+            "properties": [
+              "Illegal"
+            ],
+            "options": [],
+            "type": "Matrix Devices",
+            "type2": "Cyberdecks",
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": 3,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "2",
+              "hotSimFirewall": "1",
+              "hackingTests": "1",
+              "agents": "2",
+              "rank": "18",
+              "modCapacity": "1"
+            },
+            "installedEnhancements": [],
+            "slug": "erika-mcd-1-cyberdeck"
+          }
+        }
+      },
+      "sort": 400,
+      "_key": "!actors.items!UPGtgglzKzx83ewB.aafdfa1f9c976823"
+    },
+    {
+      "_id": "d5c9a8f713a9dfaa",
+      "name": "Electrical Kit",
+      "type": "gear",
+      "system": {
+        "summary": "Tools & Survival Gear",
+        "description": "",
+        "subtype": "Tools & Survival Gear",
+        "rating": 0,
+        "quantity": 1,
+        "cost": 4000
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Electrical Kit",
+            "srxId": 6124,
+            "category": "Tools & Survival Gear",
+            "cost": 4000,
+            "properties": [],
+            "options": [],
+            "type": "Tools & Survival Gear",
+            "type2": null,
+            "maxRating": null,
+            "ratingSquared": false,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "electrical-kit-2"
+          }
+        }
+      },
+      "sort": 500,
+      "_key": "!actors.items!UPGtgglzKzx83ewB.d5c9a8f713a9dfaa"
+    },
+    {
+      "_id": "2af8080e54736812",
+      "name": "Fake SIN",
+      "type": "gear",
+      "system": {
+        "summary": "Breaking & Entering Gear",
+        "description": "",
+        "subtype": "Breaking & Entering Gear",
+        "rating": 9,
+        "quantity": 1,
+        "cost": 700
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "gear",
+          "catalogData": {
+            "name": "Fake SIN",
+            "srxId": 6092,
+            "category": "Breaking & Entering Gear",
+            "cost": 700,
+            "costDisplay": "Rating x Rating x 700",
+            "properties": [
+              "Illegal"
+            ],
+            "options": [],
+            "type": "Breaking & Entering Gear",
+            "type2": null,
+            "maxRating": 9,
+            "ratingSquared": true,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "capacity": 0,
+            "enhancementType": null,
+            "matrix": {
+              "dataProcessing": "",
+              "firewall": "",
+              "hotSimFirewall": "",
+              "hackingTests": "",
+              "agents": "",
+              "rank": "",
+              "modCapacity": ""
+            },
+            "installedEnhancements": [],
+            "slug": "fake-sin"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!UPGtgglzKzx83ewB.2af8080e54736812"
+    }
+  ],
   "effects": [],
   "folder": null,
   "sort": 0,

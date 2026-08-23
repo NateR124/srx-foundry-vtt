@@ -28,6 +28,11 @@ work is. Three categories:
   flat stat effects automate (1.1.0); `prereq`/`incompatible` chains (DNI
   before Wired Reflexes, Dermal Plating vs Orthoskin) display on the item but
   are not enforced on install.
+- **Pregens carry gear but no talents, spells, or 'ware.** The stat import
+  never captured those item lists and the original SRX loadout source is
+  gone; the gear loadouts are reconstructions keyed to each archetype's
+  skills (`scripts/gear-pregens.mjs`). A Combat Mage pregen still needs
+  spells dragged from the spells compendium before play.
 
 ## 2. Built but not live-verified ("pending live smoke")
 
