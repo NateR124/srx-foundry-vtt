@@ -7,7 +7,7 @@ The prose between a version heading and its first `###` subsection is the
 player-facing summary — release CI copies it into that tag's GitHub release
 notes, so keep it short, plain-language, and about what changed at the table.
 
-## Unreleased
+## 1.2.1 — 2026-08-23 — Sheet tabs scroll in place
 
 The character sheet now keeps its header, damage monitors, and tab bar pinned
 while the tab content scrolls beneath them — on shorter screens the 'Ware,
