@@ -57,7 +57,10 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
   };
 
   static PARTS = {
-    body: { template: "systems/srx/templates/actor/character-sheet.hbs" }
+    body: {
+      template: "systems/srx/templates/actor/character-sheet.hbs",
+      scrollable: [".tab-body"]
+    }
   };
 
   #activeTab = "main";

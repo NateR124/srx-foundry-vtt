@@ -7,6 +7,22 @@ The prose between a version heading and its first `###` subsection is the
 player-facing summary — release CI copies it into that tag's GitHub release
 notes, so keep it short, plain-language, and about what changed at the table.
 
+## Unreleased
+
+The character sheet now keeps its header, damage monitors, and tab bar pinned
+while the tab content scrolls beneath them — on shorter screens the 'Ware,
+Magic, and Matrix tabs used to scroll the whole sheet away behind a nearly
+invisible scrollbar. Scroll position also survives sheet edits now.
+
+### Fixed
+- **Character-sheet tabs clipped on small screens** (QA report, follow-up to
+  the 1.2.0 chargen fix): the whole window scrolled as one unit with core's
+  thin themed scrollbar as the only affordance. The tab sections now live in
+  a dedicated `.tab-body` scroll container (core `.scrollable`, stable
+  gutter), scoped to the character sheet — item/threat/host/vehicle sheets
+  keep their whole-window scroll. Scroll position is preserved across the
+  re-render every `submitOnChange` edit triggers.
+
 ## 1.2.0 — 2026-08-23 — Equipped pregens & chargen fixes
 
 Character creation now works out of the box: the Talents step lists the full

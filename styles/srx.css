@@ -5,6 +5,14 @@
   overflow-y: auto;
 }
 
+/* Character sheet: only the tab content scrolls — header, monitors, and the
+ * tab bar stay pinned (long tabs like 'Ware/Magic/Matrix on short screens
+ * otherwise scroll them away, and core's thin themed scrollbar on the whole
+ * window is easy to miss). Other srx sheets keep the whole-window scroll. */
+.srx.sheet.character .window-content { overflow: hidden; }
+.srx.character-sheet-body { display: flex; flex-direction: column; flex: 1; min-height: 0; }
+.srx.character-sheet-body .tab-body { flex: 1; min-height: 0; }
+
 .srx .sheet-header {
   display: flex;
   gap: 10px;

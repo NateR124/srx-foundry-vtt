@@ -112,6 +112,9 @@
     <a class="{{#if (srxEq activeTab 'bio')}}active{{/if}}" data-action="selectTab" data-tab="bio">{{localize "SRX.Tab.bio"}}</a>
   </nav>
 
+  {{!-- Tab content scrolls on its own; header, chrome strip, and tab bar stay pinned --}}
+  <div class="tab-body scrollable">
+
   {{!-- MAIN TAB --}}
   <section class="tab-main {{#unless (srxEq activeTab 'main')}}hidden{{/unless}}">
     <div class="main-grid">
@@ -574,4 +577,6 @@
       </div>
     </div>
   </section>
+
+  </div>
 </div>
