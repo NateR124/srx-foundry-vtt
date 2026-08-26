@@ -8,6 +8,7 @@ import {
 } from "../module/migrations/convert.mjs";
 import { SRX } from "../module/config.mjs";
 import { wareInstallProblems } from "../module/rules/ware.mjs";
+import { composeAttackModifiers } from "../module/rules/combat.mjs";
 
 /**
  * The 1.1.0 conversions run against the REAL pack sources (the repo lesson:
@@ -192,5 +193,17 @@ describe("wareInstallProblems against the full 'ware catalog (1.5.0)", () => {
     const tac = sys("Tactical Computer");
     const r = wareInstallProblems(tac, []);
     expect(r.missingPrereqs).toEqual(["DNI (Direct Neural Interface)", "Smartlink (Implanted)"]);
+  });
+});
+
+describe("composeAttackModifiers recoil compensation (R59)", () => {
+  it("gas-vent negates the recoil -1, nothing else changes", () => {
+    const plain = composeAttackModifiers({ recoil: true });
+    expect(plain.hitMods).toBe(-1);
+    const comped = composeAttackModifiers({ recoil: true, recoilComp: true });
+    expect(comped.hitMods).toBe(0);
+    expect(comped.notes).toContain("recoil negated (gas-vent)");
+    // comp without recoil is inert
+    expect(composeAttackModifiers({ recoilComp: true }).hitMods).toBe(0);
   });
 });

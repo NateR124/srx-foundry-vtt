@@ -46,7 +46,7 @@ export async function promptAttackConfig({
         <div class="form-group"><label><input type="checkbox" name="offHand" ${checked("offHand")}> ${game.i18n.localize("SRX.Combat.offHand")}</label></div>
         <div class="form-group"><label><input type="checkbox" name="inMeleeRanged" ${checked("inMeleeRanged")}> ${game.i18n.localize("SRX.Combat.inMeleeRanged")}</label></div>
         <div class="form-group"><label><input type="checkbox" name="unseen" ${checked("unseen")}> ${game.i18n.localize("SRX.Combat.unseen")}</label></div>
-        <div class="form-group"><label><input type="checkbox" name="recoil" ${checked("recoil")}> ${game.i18n.localize("SRX.Combat.recoil")}</label></div>
+        <div class="form-group"><label><input type="checkbox" name="recoil" ${checked("recoil")}> ${game.i18n.localize("SRX.Combat.recoil")}${defaults.recoilComp ? ` <span class="detail">${game.i18n.localize("SRX.Combat.recoilComp")}</span>` : ""}</label></div>
         <div class="form-group"><label><input type="checkbox" name="takeAim" ${checked("takeAim")}> ${game.i18n.localize("SRX.Combat.takeAim")}</label></div>
         <div class="form-group">
           <label>${game.i18n.localize("SRX.Combat.calledShot")}</label>
@@ -120,7 +120,7 @@ export async function promptAttackConfig({
     window: { title },
     position: { width: 420 },
     content,
-    render: (_event, dialog) => wireAttackPreview(dialog, { basePool, baseDefenseScore }),
+    render: (_event, dialog) => wireAttackPreview(dialog, { basePool, baseDefenseScore, recoilComp: !!defaults.recoilComp }),
     buttons: [
       {
         action: "roll",
@@ -163,6 +163,7 @@ export async function promptAttackConfig({
     inMeleeRanged: result.inMeleeRanged,
     unseen: result.unseen,
     recoil: result.recoil,
+    recoilComp: !!defaults.recoilComp,
     takeAim: result.takeAim,
     calledShot: result.calledShot,
     visibility: result.visibility,
@@ -249,7 +250,7 @@ export async function promptAttackConfig({
  * @param {HTMLElement|object} dialog - DialogV2 instance (or root element)
  * @param {{basePool: number, baseDefenseScore: number|null}} ctx
  */
-function wireAttackPreview(dialog, { basePool, baseDefenseScore }) {
+function wireAttackPreview(dialog, { basePool, baseDefenseScore, recoilComp = false }) {
   const root = dialog instanceof HTMLElement ? dialog : dialog?.element;
   const form = root?.querySelector("form");
   if (!form) return;
@@ -261,6 +262,7 @@ function wireAttackPreview(dialog, { basePool, baseDefenseScore }) {
       inMeleeRanged: el.inMeleeRanged.checked,
       unseen: el.unseen.checked,
       recoil: el.recoil.checked,
+      recoilComp,
       takeAim: el.takeAim.checked,
       calledShot: el.calledShot?.value ?? "none",
       visibility: el.visibility.value,

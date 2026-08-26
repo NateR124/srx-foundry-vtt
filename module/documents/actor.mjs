@@ -15,6 +15,7 @@ import {
   spendCombatantAction
 } from "../combat/actions.mjs";
 import { castSpell as castSpellPipeline } from "../magic/cast.mjs";
+import { attachedModsOf } from "../items/weapon-mods.mjs";
 import { sustainPenaltyForActor } from "../magic/sustain.mjs";
 import { cardHtml, esc } from "../chat/cards.mjs";
 
@@ -215,6 +216,9 @@ export class SrxActor extends foundry.documents.Actor {
       baseDefenseScore: baseDs,
       defaults: {
         recoil: isFirearm && firedLastPhase(combatant),
+        // Attached Gas-vent negates the recoil −1 (R59)
+        recoilComp: attachedModsOf(this, item.id)
+          .some((m) => /gas-vent/i.test(m.name)),
         fullDefense: defender ? hasFullDefense(defender) : false,
         inMeleeRanged: false,
         cover: coverDefault,

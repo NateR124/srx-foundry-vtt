@@ -301,6 +301,7 @@
   "SRX.Combat.inMeleeRanged": "Ranged while in melee (Liability)",
   "SRX.Combat.unseen": "Unseen by target (Leverage)",
   "SRX.Combat.recoil": "Recoil (−1 hit)",
+  "SRX.Combat.recoilComp": "(gas-vent negates)",
   "SRX.Combat.takeAim": "Take Aim (+1 hit)",
   "SRX.Combat.visibility": "Visibility impairment",
   "SRX.Combat.visNone": "None",

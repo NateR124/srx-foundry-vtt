@@ -227,6 +227,8 @@ export function coverDefenseBonus(cover = "none", { prone = false } = {}) {
  * @param {boolean} [opts.inMeleeRanged]
  * @param {boolean} [opts.unseen]
  * @param {boolean} [opts.recoil]
+ * @param {boolean} [opts.recoilComp] - a Gas-vent (or Advanced Gas-vent) is
+ *   attached to the firing weapon: the recoil −1 is negated (R59)
  * @param {boolean} [opts.takeAim]
  * @param {"none"|"medium"|"heavy"} [opts.visibility]
  * @param {boolean} [opts.visibilityMitigated]
@@ -255,7 +257,9 @@ export function composeAttackModifiers(opts = {}) {
     leverage = true;
     notes.push("unseen");
   }
-  if (opts.recoil) {
+  if (opts.recoil && opts.recoilComp) {
+    notes.push("recoil negated (gas-vent)");
+  } else if (opts.recoil) {
     hitMods -= 1;
     notes.push("recoil −1 hit");
   }
