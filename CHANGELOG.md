@@ -7,7 +7,7 @@ The prose between a version heading and its first `###` subsection is the
 player-facing summary — release CI copies it into that tag's GitHub release
 notes, so keep it short, plain-language, and about what changed at the table.
 
-## Unreleased
+## 1.4.0 — 2026-08-26 — Foci become real
 
 Foci are real items now. The magic-gear compendium's 62 foci (31 bought, 31
 crafted) become bondable, activatable focus items with the catalog's fixed
