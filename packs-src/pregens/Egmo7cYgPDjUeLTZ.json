@@ -554,7 +554,65 @@
       "_key": "!actors.items!Egmo7cYgPDjUeLTZ.61dab34181841cc1"
     },
     {
-      "_id": "571d847aedc395d6",
+      "_id": "1548df5dfd00181d",
+      "name": "DNI (Direct Neural Interface)",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Basic Matrix connection",
+        "source": "",
+        "cost": 500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.05,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "DNI (Direct Neural Interface)",
+            "srxId": 3030,
+            "category": "Headware",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "DNI (Direct Neural Interface)",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.05",
+              "value": 0.05,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Basic Matrix connection",
+            "effects": [],
+            "slug": "dni-direct-neural-interface"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!Egmo7cYgPDjUeLTZ.1548df5dfd00181d"
+    },
+    {
+      "_id": "7ea6c4bbe780a9f2",
       "name": "Superior Appearance Mod",
       "type": "ware",
       "system": {
@@ -593,8 +651,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "338b1807bf7bbffd",
-          "_key": "!actors.items.effects!Egmo7cYgPDjUeLTZ.571d847aedc395d6.338b1807bf7bbffd"
+          "_id": "597f92277ceb7b1d",
+          "_key": "!actors.items.effects!Egmo7cYgPDjUeLTZ.7ea6c4bbe780a9f2.597f92277ceb7b1d"
         }
       ],
       "flags": {
@@ -635,11 +693,11 @@
           }
         }
       },
-      "sort": 800,
-      "_key": "!actors.items!Egmo7cYgPDjUeLTZ.571d847aedc395d6"
+      "sort": 900,
+      "_key": "!actors.items!Egmo7cYgPDjUeLTZ.7ea6c4bbe780a9f2"
     },
     {
-      "_id": "fd2854d68f0dc1a5",
+      "_id": "b7325a81a6b8c65b",
       "name": "Voice Modulator",
       "type": "ware",
       "system": {
@@ -695,11 +753,11 @@
           }
         }
       },
-      "sort": 900,
-      "_key": "!actors.items!Egmo7cYgPDjUeLTZ.fd2854d68f0dc1a5"
+      "sort": 1000,
+      "_key": "!actors.items!Egmo7cYgPDjUeLTZ.b7325a81a6b8c65b"
     },
     {
-      "_id": "ef5872e4895aac8c",
+      "_id": "4768de638843682d",
       "name": "Dress the Part",
       "type": "talent",
       "system": {
@@ -753,11 +811,11 @@
           }
         }
       },
-      "sort": 1000,
-      "_key": "!actors.items!Egmo7cYgPDjUeLTZ.ef5872e4895aac8c"
+      "sort": 1100,
+      "_key": "!actors.items!Egmo7cYgPDjUeLTZ.4768de638843682d"
     },
     {
-      "_id": "7674174e610a3cbe",
+      "_id": "7462effe55b50537",
       "name": "Decoy",
       "type": "talent",
       "system": {
@@ -811,11 +869,11 @@
           }
         }
       },
-      "sort": 1100,
-      "_key": "!actors.items!Egmo7cYgPDjUeLTZ.7674174e610a3cbe"
+      "sort": 1200,
+      "_key": "!actors.items!Egmo7cYgPDjUeLTZ.7462effe55b50537"
     },
     {
-      "_id": "9a230ea45311e3c6",
+      "_id": "ccc89a625b8a8124",
       "name": "B&E Specialist",
       "type": "talent",
       "system": {
@@ -869,8 +927,8 @@
           }
         }
       },
-      "sort": 1200,
-      "_key": "!actors.items!Egmo7cYgPDjUeLTZ.9a230ea45311e3c6"
+      "sort": 1300,
+      "_key": "!actors.items!Egmo7cYgPDjUeLTZ.ccc89a625b8a8124"
     }
   ],
   "effects": [],

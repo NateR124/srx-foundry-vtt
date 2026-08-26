@@ -421,7 +421,65 @@
       "_key": "!actors.items!MjBUxA8fYy0ZdILd.1b7eaafd50c44959"
     },
     {
-      "_id": "d1abde1f15718755",
+      "_id": "f84d98d294a30a22",
+      "name": "DNI (Direct Neural Interface)",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Basic Matrix connection",
+        "source": "",
+        "cost": 500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.05,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "DNI (Direct Neural Interface)",
+            "srxId": 3030,
+            "category": "Headware",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "DNI (Direct Neural Interface)",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.05",
+              "value": 0.05,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Basic Matrix connection",
+            "effects": [],
+            "slug": "dni-direct-neural-interface"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!MjBUxA8fYy0ZdILd.f84d98d294a30a22"
+    },
+    {
+      "_id": "16d2ee1fadd43417",
       "name": "Superior Appearance Mod",
       "type": "ware",
       "system": {
@@ -460,8 +518,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "4ce96ece7d19b871",
-          "_key": "!actors.items.effects!MjBUxA8fYy0ZdILd.d1abde1f15718755.4ce96ece7d19b871"
+          "_id": "dc18aac6b9304b75",
+          "_key": "!actors.items.effects!MjBUxA8fYy0ZdILd.16d2ee1fadd43417.dc18aac6b9304b75"
         }
       ],
       "flags": {
@@ -502,11 +560,11 @@
           }
         }
       },
-      "sort": 600,
-      "_key": "!actors.items!MjBUxA8fYy0ZdILd.d1abde1f15718755"
+      "sort": 700,
+      "_key": "!actors.items!MjBUxA8fYy0ZdILd.16d2ee1fadd43417"
     },
     {
-      "_id": "0a7711589663d245",
+      "_id": "b4f4ead344fd9695",
       "name": "Wired Reflexes",
       "type": "ware",
       "system": {
@@ -549,8 +607,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "28b5e58c15012aa1",
-          "_key": "!actors.items.effects!MjBUxA8fYy0ZdILd.0a7711589663d245.28b5e58c15012aa1"
+          "_id": "814fa14b90615d5d",
+          "_key": "!actors.items.effects!MjBUxA8fYy0ZdILd.b4f4ead344fd9695.814fa14b90615d5d"
         }
       ],
       "flags": {
@@ -600,11 +658,11 @@
           }
         }
       },
-      "sort": 700,
-      "_key": "!actors.items!MjBUxA8fYy0ZdILd.0a7711589663d245"
+      "sort": 800,
+      "_key": "!actors.items!MjBUxA8fYy0ZdILd.b4f4ead344fd9695"
     },
     {
-      "_id": "b676cbbf13c9e143",
+      "_id": "6b5c8cc5093c16aa",
       "name": "Cool Under Pressure",
       "type": "talent",
       "system": {
@@ -658,11 +716,11 @@
           }
         }
       },
-      "sort": 800,
-      "_key": "!actors.items!MjBUxA8fYy0ZdILd.b676cbbf13c9e143"
+      "sort": 900,
+      "_key": "!actors.items!MjBUxA8fYy0ZdILd.6b5c8cc5093c16aa"
     },
     {
-      "_id": "adbb303918328c76",
+      "_id": "977d93171e19029a",
       "name": "Duck!",
       "type": "talent",
       "system": {
@@ -716,11 +774,11 @@
           }
         }
       },
-      "sort": 900,
-      "_key": "!actors.items!MjBUxA8fYy0ZdILd.adbb303918328c76"
+      "sort": 1000,
+      "_key": "!actors.items!MjBUxA8fYy0ZdILd.977d93171e19029a"
     },
     {
-      "_id": "8f144fbde783410b",
+      "_id": "efe49fc2dd773463",
       "name": "Gain Trust",
       "type": "talent",
       "system": {
@@ -774,8 +832,8 @@
           }
         }
       },
-      "sort": 1000,
-      "_key": "!actors.items!MjBUxA8fYy0ZdILd.8f144fbde783410b"
+      "sort": 1100,
+      "_key": "!actors.items!MjBUxA8fYy0ZdILd.efe49fc2dd773463"
     }
   ],
   "effects": [],

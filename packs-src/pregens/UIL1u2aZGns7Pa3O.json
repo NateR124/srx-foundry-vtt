@@ -515,7 +515,65 @@
       "_key": "!actors.items!UIL1u2aZGns7Pa3O.9cd0173678e93fe8"
     },
     {
-      "_id": "1db33d4051e39d4b",
+      "_id": "fae737107b16e143",
+      "name": "DNI (Direct Neural Interface)",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Basic Matrix connection",
+        "source": "",
+        "cost": 500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.05,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "DNI (Direct Neural Interface)",
+            "srxId": 3030,
+            "category": "Headware",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "DNI (Direct Neural Interface)",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.05",
+              "value": 0.05,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Basic Matrix connection",
+            "effects": [],
+            "slug": "dni-direct-neural-interface"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!UIL1u2aZGns7Pa3O.fae737107b16e143"
+    },
+    {
+      "_id": "5f0f70b3a92618ad",
       "name": "Wired Reflexes",
       "type": "ware",
       "system": {
@@ -558,8 +616,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "0ec6e9dda7d9ce9a",
-          "_key": "!actors.items.effects!UIL1u2aZGns7Pa3O.1db33d4051e39d4b.0ec6e9dda7d9ce9a"
+          "_id": "76fb1219c85a4c3a",
+          "_key": "!actors.items.effects!UIL1u2aZGns7Pa3O.5f0f70b3a92618ad.76fb1219c85a4c3a"
         }
       ],
       "flags": {
@@ -609,11 +667,11 @@
           }
         }
       },
-      "sort": 700,
-      "_key": "!actors.items!UIL1u2aZGns7Pa3O.1db33d4051e39d4b"
+      "sort": 800,
+      "_key": "!actors.items!UIL1u2aZGns7Pa3O.5f0f70b3a92618ad"
     },
     {
-      "_id": "af1ac1af8badbccb",
+      "_id": "0cdab74026835224",
       "name": "Dermal Plating",
       "type": "ware",
       "system": {
@@ -660,8 +718,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "5c54ac7b7c8a0b00",
-          "_key": "!actors.items.effects!UIL1u2aZGns7Pa3O.af1ac1af8badbccb.5c54ac7b7c8a0b00"
+          "_id": "97f2d8517d3f5d24",
+          "_key": "!actors.items.effects!UIL1u2aZGns7Pa3O.0cdab74026835224.97f2d8517d3f5d24"
         }
       ],
       "flags": {
@@ -710,11 +768,11 @@
           }
         }
       },
-      "sort": 800,
-      "_key": "!actors.items!UIL1u2aZGns7Pa3O.af1ac1af8badbccb"
+      "sort": 900,
+      "_key": "!actors.items!UIL1u2aZGns7Pa3O.0cdab74026835224"
     },
     {
-      "_id": "51d82ce1ad2fb57f",
+      "_id": "ac6696bbace902e1",
       "name": "Smartlink (Implanted)",
       "type": "ware",
       "system": {
@@ -769,11 +827,11 @@
           }
         }
       },
-      "sort": 900,
-      "_key": "!actors.items!UIL1u2aZGns7Pa3O.51d82ce1ad2fb57f"
+      "sort": 1000,
+      "_key": "!actors.items!UIL1u2aZGns7Pa3O.ac6696bbace902e1"
     },
     {
-      "_id": "beafc559408b421b",
+      "_id": "b793d197bd403cd2",
       "name": "Built Tough",
       "type": "talent",
       "system": {
@@ -804,8 +862,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "3c3328805c0cd305",
-          "_key": "!actors.items.effects!UIL1u2aZGns7Pa3O.beafc559408b421b.3c3328805c0cd305"
+          "_id": "a485cb1c9eee087d",
+          "_key": "!actors.items.effects!UIL1u2aZGns7Pa3O.b793d197bd403cd2.a485cb1c9eee087d"
         }
       ],
       "flags": {
@@ -854,11 +912,11 @@
           }
         }
       },
-      "sort": 1000,
-      "_key": "!actors.items!UIL1u2aZGns7Pa3O.beafc559408b421b"
+      "sort": 1100,
+      "_key": "!actors.items!UIL1u2aZGns7Pa3O.b793d197bd403cd2"
     },
     {
-      "_id": "f431960534cb449e",
+      "_id": "e7306f6fc87dc3cc",
       "name": "Quick Draw",
       "type": "talent",
       "system": {
@@ -912,11 +970,11 @@
           }
         }
       },
-      "sort": 1100,
-      "_key": "!actors.items!UIL1u2aZGns7Pa3O.f431960534cb449e"
+      "sort": 1200,
+      "_key": "!actors.items!UIL1u2aZGns7Pa3O.e7306f6fc87dc3cc"
     },
     {
-      "_id": "9035d00ed1702870",
+      "_id": "5928e0ff31b51cee",
       "name": "High Pain Tolerance",
       "type": "talent",
       "system": {
@@ -947,8 +1005,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "0ee4a749a9e68119",
-          "_key": "!actors.items.effects!UIL1u2aZGns7Pa3O.9035d00ed1702870.0ee4a749a9e68119"
+          "_id": "bef88ae500e996cc",
+          "_key": "!actors.items.effects!UIL1u2aZGns7Pa3O.5928e0ff31b51cee.bef88ae500e996cc"
         }
       ],
       "flags": {
@@ -997,8 +1055,8 @@
           }
         }
       },
-      "sort": 1200,
-      "_key": "!actors.items!UIL1u2aZGns7Pa3O.9035d00ed1702870"
+      "sort": 1300,
+      "_key": "!actors.items!UIL1u2aZGns7Pa3O.5928e0ff31b51cee"
     }
   ],
   "effects": [],

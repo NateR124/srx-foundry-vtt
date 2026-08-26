@@ -13,6 +13,7 @@ import {
   SpellData, FocusData, WeaponModData, WareData
 } from "./data/items.mjs";
 import { registerWeaponModHooks } from "./items/weapon-mods.mjs";
+import { registerWareInstallHooks } from "./items/ware-install.mjs";
 import { registerMigrationSetting, migrateWorld } from "./migrations/migrate.mjs";
 import * as magicRules from "./rules/magic.mjs";
 import * as qiRules from "./rules/qi.mjs";
@@ -194,6 +195,9 @@ Hooks.once("ready", () => {
   registerMatrixHooks();
   registerVehicleHooks();
   registerTimedHooks();
+  // Before the AE hooks: a drop demoted to "spare" must produce a DISABLED
+  // stat effect, and preCreateItem hooks run in registration order.
+  registerWareInstallHooks();
   registerActiveEffectHooks();
   registerFociHooks();
   registerConjureHooks();

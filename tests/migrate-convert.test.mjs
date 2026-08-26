@@ -7,6 +7,7 @@ import {
   isFocusGear, focusFromGear
 } from "../module/migrations/convert.mjs";
 import { SRX } from "../module/config.mjs";
+import { wareInstallProblems } from "../module/rules/ware.mjs";
 
 /**
  * The 1.1.0 conversions run against the REAL pack sources (the repo lesson:
@@ -149,5 +150,47 @@ describe("focusFromGear against the magic-gear pack (1.4.0)", () => {
     const { name, system } = focusFromGear(pc);
     expect(name).toBe("Power Focus (Crafted)");
     expect(system.cost).toBe(64000);
+  });
+});
+
+describe("wareInstallProblems against the full 'ware catalog (1.5.0)", () => {
+  const wareDocs = readPack("gear").filter((d) => d.type === "ware");
+  const sys = (name, category = null) => {
+    const d = wareDocs.find((w) => w.name === name && (category === null || w.system.category === category));
+    return { name: d.name, category: d.system.category, prereq: d.system.prereq, incompatible: d.system.incompatible };
+  };
+
+  it("blocks Cybereyes without DNI, allows with", () => {
+    const eyes = sys("Cybereyes");
+    expect(wareInstallProblems(eyes, []).missingPrereqs).toEqual(["DNI (Direct Neural Interface)"]);
+    expect(wareInstallProblems(eyes, [{ name: "DNI (Direct Neural Interface)", category: "Headware" }]).ok).toBe(true);
+  });
+
+  it("flags Dermal Plating vs installed Orthoskin (and names the conflict)", () => {
+    const dermal = sys("Dermal Plating");
+    const r = wareInstallProblems(dermal, [
+      { name: "DNI (Direct Neural Interface)", category: "Headware" },
+      { name: "Orthoskin", category: "Bodyware" }
+    ]);
+    expect(r.ok).toBe(false);
+    expect(r.conflicts).toEqual(["Orthoskin"]);
+  });
+
+  it("matches the corrupted name+category incompatible entries", () => {
+    // Grapple Gun (Cyberarm Upgrade) lists "Cyber GunCyberarm Upgrade"
+    const grapple = sys("Grapple Gun", "Cyberarm Upgrade");
+    const r = wareInstallProblems(grapple, [
+      { name: "DNI (Direct Neural Interface)", category: "Headware" },
+      { name: "Cyberarm", category: "Cyberlimbs" },
+      { name: "Cyber Gun", category: "Cyberarm Upgrade" }
+    ]);
+    expect(r.missingPrereqs).toEqual([]);
+    expect(r.conflicts).toEqual(["Cyber Gun"]);
+  });
+
+  it("multi-prereq chains report every missing link", () => {
+    const tac = sys("Tactical Computer");
+    const r = wareInstallProblems(tac, []);
+    expect(r.missingPrereqs).toEqual(["DNI (Direct Neural Interface)", "Smartlink (Implanted)"]);
   });
 });

@@ -575,114 +575,7 @@
       "_key": "!actors.items!6rw1qngyafwBsh6V.edafc76f55968b6e"
     },
     {
-      "_id": "3edef1157b8cbca4",
-      "name": "Control Rig",
-      "type": "ware",
-      "system": {
-        "summary": "Headware",
-        "description": "+2 Driving, Piloting; +Rating to Driving, Piloting, Agility, Athletics, Close Combat, Firearms, Projectile Weapons, and Stealth; Can take Biofeedback damage",
-        "source": "",
-        "cost": 0,
-        "legality": "",
-        "wareType": "cyberware",
-        "category": "Headware",
-        "container": "",
-        "rating": 1,
-        "maxRating": 3,
-        "essence": 0,
-        "essenceScale": [
-          1,
-          1.5,
-          2
-        ],
-        "installed": true,
-        "prereq": "DNI (Direct Neural Interface)",
-        "incompatible": []
-      },
-      "effects": [
-        {
-          "name": "Control Rig",
-          "img": "icons/svg/upgrade.svg",
-          "changes": [
-            {
-              "key": "system.skills.driving.bonus",
-              "mode": 2,
-              "value": "1"
-            },
-            {
-              "key": "system.skills.piloting.bonus",
-              "mode": 2,
-              "value": "1"
-            }
-          ],
-          "disabled": false,
-          "transfer": true,
-          "flags": {
-            "srx": {
-              "generated": true,
-              "fromCatalog": true
-            }
-          },
-          "_id": "418ed0e71f509391",
-          "_key": "!actors.items.effects!6rw1qngyafwBsh6V.3edef1157b8cbca4.418ed0e71f509391"
-        }
-      ],
-      "flags": {
-        "srx": {
-          "catalogType": "ware",
-          "catalogData": {
-            "name": "Control Rig",
-            "srxId": 3027,
-            "category": "Headware",
-            "cost": 0,
-            "costDisplay": "Per Rating: 50k/85k/130k",
-            "properties": [],
-            "options": [],
-            "dictionaryName": "Control Rig",
-            "type": "",
-            "type2": null,
-            "wareType": "Cyberware",
-            "canRepurchase": false,
-            "maxRating": 3,
-            "uniqueScale": 1,
-            "nuyenScale": [
-              50000,
-              85000,
-              130000
-            ],
-            "essence": {
-              "display": "Per Rating: 1/1.5/2",
-              "value": 0,
-              "scale": [
-                1,
-                1.5,
-                2
-              ]
-            },
-            "parentContainer": null,
-            "prereq": "DNI (Direct Neural Interface)",
-            "incompatible": [],
-            "grants": [],
-            "description": "+2 Driving, Piloting; +Rating to Driving, Piloting, Agility, Athletics, Close Combat, Firearms, Projectile Weapons, and Stealth; Can take Biofeedback damage",
-            "effects": [
-              {
-                "key": "driving",
-                "value": 1
-              },
-              {
-                "key": "piloting",
-                "value": 1
-              }
-            ],
-            "slug": "control-rig"
-          }
-        }
-      },
-      "sort": 800,
-      "_key": "!actors.items!6rw1qngyafwBsh6V.3edef1157b8cbca4"
-    },
-    {
-      "_id": "56085ff081fda9df",
+      "_id": "cf7f38fdd14f0bae",
       "name": "DNI (Direct Neural Interface)",
       "type": "ware",
       "system": {
@@ -736,11 +629,176 @@
           }
         }
       },
-      "sort": 900,
-      "_key": "!actors.items!6rw1qngyafwBsh6V.56085ff081fda9df"
+      "sort": 800,
+      "_key": "!actors.items!6rw1qngyafwBsh6V.cf7f38fdd14f0bae"
     },
     {
-      "_id": "06bfdf63b7fea983",
+      "_id": "eda04be52f417a8e",
+      "name": "Control Rig",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "+2 Driving, Piloting; +Rating to Driving, Piloting, Agility, Athletics, Close Combat, Firearms, Projectile Weapons, and Stealth; Can take Biofeedback damage",
+        "source": "",
+        "cost": 0,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 1,
+        "maxRating": 3,
+        "essence": 0,
+        "essenceScale": [
+          1,
+          1.5,
+          2
+        ],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": []
+      },
+      "effects": [
+        {
+          "name": "Control Rig",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.skills.driving.bonus",
+              "mode": 2,
+              "value": "1"
+            },
+            {
+              "key": "system.skills.piloting.bonus",
+              "mode": 2,
+              "value": "1"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "76c1b59bfd0d479b",
+          "_key": "!actors.items.effects!6rw1qngyafwBsh6V.eda04be52f417a8e.76c1b59bfd0d479b"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Control Rig",
+            "srxId": 3027,
+            "category": "Headware",
+            "cost": 0,
+            "costDisplay": "Per Rating: 50k/85k/130k",
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Control Rig",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": 3,
+            "uniqueScale": 1,
+            "nuyenScale": [
+              50000,
+              85000,
+              130000
+            ],
+            "essence": {
+              "display": "Per Rating: 1/1.5/2",
+              "value": 0,
+              "scale": [
+                1,
+                1.5,
+                2
+              ]
+            },
+            "parentContainer": null,
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [],
+            "grants": [],
+            "description": "+2 Driving, Piloting; +Rating to Driving, Piloting, Agility, Athletics, Close Combat, Firearms, Projectile Weapons, and Stealth; Can take Biofeedback damage",
+            "effects": [
+              {
+                "key": "driving",
+                "value": 1
+              },
+              {
+                "key": "piloting",
+                "value": 1
+              }
+            ],
+            "slug": "control-rig"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!6rw1qngyafwBsh6V.eda04be52f417a8e"
+    },
+    {
+      "_id": "81bef0356d32a19e",
+      "name": "DNI (Direct Neural Interface)",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Basic Matrix connection",
+        "source": "",
+        "cost": 500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.05,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "DNI (Direct Neural Interface)",
+            "srxId": 3030,
+            "category": "Headware",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "DNI (Direct Neural Interface)",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.05",
+              "value": 0.05,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Basic Matrix connection",
+            "effects": [],
+            "slug": "dni-direct-neural-interface"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!6rw1qngyafwBsh6V.81bef0356d32a19e"
+    },
+    {
+      "_id": "2b159c5b24391ee6",
       "name": "Drone Programmer",
       "type": "talent",
       "system": {
@@ -795,11 +853,11 @@
           }
         }
       },
-      "sort": 1000,
-      "_key": "!actors.items!6rw1qngyafwBsh6V.06bfdf63b7fea983"
+      "sort": 1100,
+      "_key": "!actors.items!6rw1qngyafwBsh6V.2b159c5b24391ee6"
     },
     {
-      "_id": "4b187bfd88df584d",
+      "_id": "93f6ae04f1d44add",
       "name": "Remote Security",
       "type": "talent",
       "system": {
@@ -854,11 +912,11 @@
           }
         }
       },
-      "sort": 1100,
-      "_key": "!actors.items!6rw1qngyafwBsh6V.4b187bfd88df584d"
+      "sort": 1200,
+      "_key": "!actors.items!6rw1qngyafwBsh6V.93f6ae04f1d44add"
     },
     {
-      "_id": "5f70ca502eb5a3fd",
+      "_id": "bf2b6b97ecf99020",
       "name": "Network Sentinel",
       "type": "talent",
       "system": {
@@ -913,11 +971,11 @@
           }
         }
       },
-      "sort": 1200,
-      "_key": "!actors.items!6rw1qngyafwBsh6V.5f70ca502eb5a3fd"
+      "sort": 1300,
+      "_key": "!actors.items!6rw1qngyafwBsh6V.bf2b6b97ecf99020"
     },
     {
-      "_id": "daee8ee59257c696",
+      "_id": "ab733d4db8542daf",
       "name": "Trace Icon",
       "type": "talent",
       "system": {
@@ -972,11 +1030,11 @@
           }
         }
       },
-      "sort": 1300,
-      "_key": "!actors.items!6rw1qngyafwBsh6V.daee8ee59257c696"
+      "sort": 1400,
+      "_key": "!actors.items!6rw1qngyafwBsh6V.ab733d4db8542daf"
     },
     {
-      "_id": "72db433f23cc2932",
+      "_id": "3964cc10b7eef1e3",
       "name": "Multi-tasking",
       "type": "talent",
       "system": {
@@ -1031,11 +1089,11 @@
           }
         }
       },
-      "sort": 1400,
-      "_key": "!actors.items!6rw1qngyafwBsh6V.72db433f23cc2932"
+      "sort": 1500,
+      "_key": "!actors.items!6rw1qngyafwBsh6V.3964cc10b7eef1e3"
     },
     {
-      "_id": "f5cfd6d3df42f46a",
+      "_id": "78d005923d06ba8e",
       "name": "Eye in the Sky",
       "type": "talent",
       "system": {
@@ -1090,11 +1148,11 @@
           }
         }
       },
-      "sort": 1500,
-      "_key": "!actors.items!6rw1qngyafwBsh6V.f5cfd6d3df42f46a"
+      "sort": 1600,
+      "_key": "!actors.items!6rw1qngyafwBsh6V.78d005923d06ba8e"
     },
     {
-      "_id": "6c8dcb63d0292fc5",
+      "_id": "8d30178e7b08b1cb",
       "name": "Scout Ahead",
       "type": "talent",
       "system": {
@@ -1148,8 +1206,8 @@
           }
         }
       },
-      "sort": 1600,
-      "_key": "!actors.items!6rw1qngyafwBsh6V.6c8dcb63d0292fc5"
+      "sort": 1700,
+      "_key": "!actors.items!6rw1qngyafwBsh6V.8d30178e7b08b1cb"
     }
   ],
   "effects": [],

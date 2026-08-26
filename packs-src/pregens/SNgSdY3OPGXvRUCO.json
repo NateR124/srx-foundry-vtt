@@ -639,7 +639,65 @@
       "_key": "!actors.items!SNgSdY3OPGXvRUCO.8a576caef0b74e63"
     },
     {
-      "_id": "51ebe7802ae8d8db",
+      "_id": "0b3cf38a5d0c6c08",
+      "name": "DNI (Direct Neural Interface)",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Basic Matrix connection",
+        "source": "",
+        "cost": 500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.05,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "DNI (Direct Neural Interface)",
+            "srxId": 3030,
+            "category": "Headware",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "DNI (Direct Neural Interface)",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.05",
+              "value": 0.05,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Basic Matrix connection",
+            "effects": [],
+            "slug": "dni-direct-neural-interface"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!SNgSdY3OPGXvRUCO.0b3cf38a5d0c6c08"
+    },
+    {
+      "_id": "b6e2161a9af95026",
       "name": "Synaptic Booster",
       "type": "ware",
       "system": {
@@ -694,11 +752,11 @@
           }
         }
       },
-      "sort": 800,
-      "_key": "!actors.items!SNgSdY3OPGXvRUCO.51ebe7802ae8d8db"
+      "sort": 900,
+      "_key": "!actors.items!SNgSdY3OPGXvRUCO.b6e2161a9af95026"
     },
     {
-      "_id": "7ab2a8c3b3f682c8",
+      "_id": "07b43ff6c60a605f",
       "name": "Muscle Toner",
       "type": "ware",
       "system": {
@@ -737,8 +795,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "8faf17bc55339cba",
-          "_key": "!actors.items.effects!SNgSdY3OPGXvRUCO.7ab2a8c3b3f682c8.8faf17bc55339cba"
+          "_id": "cae3a33c60c4340d",
+          "_key": "!actors.items.effects!SNgSdY3OPGXvRUCO.07b43ff6c60a605f.cae3a33c60c4340d"
         }
       ],
       "flags": {
@@ -780,11 +838,11 @@
           }
         }
       },
-      "sort": 900,
-      "_key": "!actors.items!SNgSdY3OPGXvRUCO.7ab2a8c3b3f682c8"
+      "sort": 1000,
+      "_key": "!actors.items!SNgSdY3OPGXvRUCO.07b43ff6c60a605f"
     },
     {
-      "_id": "e8469cbd7853463a",
+      "_id": "4d009586b2b08820",
       "name": "Cybereyes",
       "type": "ware",
       "system": {
@@ -847,11 +905,11 @@
           }
         }
       },
-      "sort": 1000,
-      "_key": "!actors.items!SNgSdY3OPGXvRUCO.e8469cbd7853463a"
+      "sort": 1100,
+      "_key": "!actors.items!SNgSdY3OPGXvRUCO.4d009586b2b08820"
     },
     {
-      "_id": "c3ae67243bfc1b00",
+      "_id": "7b1988830dd55fd5",
       "name": "Low-Light Vision",
       "type": "ware",
       "system": {
@@ -915,11 +973,11 @@
           }
         }
       },
-      "sort": 1100,
-      "_key": "!actors.items!SNgSdY3OPGXvRUCO.c3ae67243bfc1b00"
+      "sort": 1200,
+      "_key": "!actors.items!SNgSdY3OPGXvRUCO.7b1988830dd55fd5"
     },
     {
-      "_id": "a758263c452846eb",
+      "_id": "76be1649d5ae41df",
       "name": "Silent Professional",
       "type": "talent",
       "system": {
@@ -977,11 +1035,11 @@
           }
         }
       },
-      "sort": 1200,
-      "_key": "!actors.items!SNgSdY3OPGXvRUCO.a758263c452846eb"
+      "sort": 1300,
+      "_key": "!actors.items!SNgSdY3OPGXvRUCO.76be1649d5ae41df"
     },
     {
-      "_id": "0233da1cc4c6c9d3",
+      "_id": "50a74b4724feb86b",
       "name": "Blind-Fighting",
       "type": "talent",
       "system": {
@@ -1036,11 +1094,11 @@
           }
         }
       },
-      "sort": 1300,
-      "_key": "!actors.items!SNgSdY3OPGXvRUCO.0233da1cc4c6c9d3"
+      "sort": 1400,
+      "_key": "!actors.items!SNgSdY3OPGXvRUCO.50a74b4724feb86b"
     },
     {
-      "_id": "dc65d48c2190b212",
+      "_id": "d1dc849e774658d0",
       "name": "Assassin's Aim",
       "type": "talent",
       "system": {
@@ -1095,8 +1153,8 @@
           }
         }
       },
-      "sort": 1400,
-      "_key": "!actors.items!SNgSdY3OPGXvRUCO.dc65d48c2190b212"
+      "sort": 1500,
+      "_key": "!actors.items!SNgSdY3OPGXvRUCO.d1dc849e774658d0"
     }
   ],
   "effects": [],

@@ -789,7 +789,65 @@
       "_key": "!actors.items!lw9CnCRJ5ZZdcmPe.a982a73b64cbbc3c"
     },
     {
-      "_id": "03b33234c07a61ba",
+      "_id": "70dbb2449767ea2b",
+      "name": "DNI (Direct Neural Interface)",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Basic Matrix connection",
+        "source": "",
+        "cost": 500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.05,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "DNI (Direct Neural Interface)",
+            "srxId": 3030,
+            "category": "Headware",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "DNI (Direct Neural Interface)",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.05",
+              "value": 0.05,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Basic Matrix connection",
+            "effects": [],
+            "slug": "dni-direct-neural-interface"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!lw9CnCRJ5ZZdcmPe.70dbb2449767ea2b"
+    },
+    {
+      "_id": "80717c3e44b43b2a",
       "name": "Synaptic Booster",
       "type": "ware",
       "system": {
@@ -844,11 +902,11 @@
           }
         }
       },
-      "sort": 1100,
-      "_key": "!actors.items!lw9CnCRJ5ZZdcmPe.03b33234c07a61ba"
+      "sort": 1200,
+      "_key": "!actors.items!lw9CnCRJ5ZZdcmPe.80717c3e44b43b2a"
     },
     {
-      "_id": "299da363efa116ea",
+      "_id": "06f9ee29fd13e6af",
       "name": "Cybereyes",
       "type": "ware",
       "system": {
@@ -911,11 +969,11 @@
           }
         }
       },
-      "sort": 1200,
-      "_key": "!actors.items!lw9CnCRJ5ZZdcmPe.299da363efa116ea"
+      "sort": 1300,
+      "_key": "!actors.items!lw9CnCRJ5ZZdcmPe.06f9ee29fd13e6af"
     },
     {
-      "_id": "1d9c90dd0e91e2e9",
+      "_id": "3c1f8ae664e47c4f",
       "name": "Low-Light Vision",
       "type": "ware",
       "system": {
@@ -979,11 +1037,11 @@
           }
         }
       },
-      "sort": 1300,
-      "_key": "!actors.items!lw9CnCRJ5ZZdcmPe.1d9c90dd0e91e2e9"
+      "sort": 1400,
+      "_key": "!actors.items!lw9CnCRJ5ZZdcmPe.3c1f8ae664e47c4f"
     },
     {
-      "_id": "e9f8ec67415b7b6a",
+      "_id": "86943ca86bb75a0b",
       "name": "B&E Specialist",
       "type": "talent",
       "system": {
@@ -1037,11 +1095,11 @@
           }
         }
       },
-      "sort": 1400,
-      "_key": "!actors.items!lw9CnCRJ5ZZdcmPe.e9f8ec67415b7b6a"
+      "sort": 1500,
+      "_key": "!actors.items!lw9CnCRJ5ZZdcmPe.86943ca86bb75a0b"
     },
     {
-      "_id": "7384e2c8b0fc94c6",
+      "_id": "48c51829de6234a9",
       "name": "Silent Professional",
       "type": "talent",
       "system": {
@@ -1099,11 +1157,11 @@
           }
         }
       },
-      "sort": 1500,
-      "_key": "!actors.items!lw9CnCRJ5ZZdcmPe.7384e2c8b0fc94c6"
+      "sort": 1600,
+      "_key": "!actors.items!lw9CnCRJ5ZZdcmPe.48c51829de6234a9"
     },
     {
-      "_id": "1a9412f31b795593",
+      "_id": "50ea84132e63a224",
       "name": "Contraband",
       "type": "talent",
       "system": {
@@ -1159,8 +1217,8 @@
           }
         }
       },
-      "sort": 1600,
-      "_key": "!actors.items!lw9CnCRJ5ZZdcmPe.1a9412f31b795593"
+      "sort": 1700,
+      "_key": "!actors.items!lw9CnCRJ5ZZdcmPe.50ea84132e63a224"
     }
   ],
   "effects": [],

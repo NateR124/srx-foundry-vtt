@@ -29,7 +29,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import { catalogEffectDataForItem } from "../module/active-effect/catalog-effects.mjs";
-import { wareEssenceCost } from "../module/rules/ware.mjs";
+import { wareEssenceCost, wareInstallProblems } from "../module/rules/ware.mjs";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/(\w:)/, "$1")), "..");
 const PACKS = path.join(ROOT, "packs-src");
@@ -82,33 +82,33 @@ const comm = (name) => ({ name, systemTag: "commsSurveillance", firewall: 1 });
 
 const LOADOUTS = [
   { match: /^Street Samurai Juggernaut/, weapons: ["Combat Axe", "Defiance T-250"], armor: "Armor Jacket", gear: [["Stim Patch", 2]],
-    ware: [["Wired Reflexes", 2], "Dermal Plating", ["Bone Lacing", 1]],
+    ware: ["DNI (Direct Neural Interface)", ["Wired Reflexes", 2], "Dermal Plating", ["Bone Lacing", 1]],
     talents: ["Built Tough", "Guts", "Knockback"] },
   { match: /^Street Samurai Mercenary/, weapons: ["AK-97", "Ares Predator V", "Combat Knife"], armor: "Armor Jacket", gear: [["Stim Patch", 2]],
-    ware: [["Wired Reflexes", 1], "Smartlink (Implanted)", ["Muscle Replacement", 1], "Cybereyes"],
+    ware: ["DNI (Direct Neural Interface)", ["Wired Reflexes", 1], "Smartlink (Implanted)", ["Muscle Replacement", 1], "Cybereyes"],
     talents: ["Recoil Control", "Fast Reload", "Situational Awareness"] },
   { match: /^Street Samurai Resourceful/, weapons: ["Browning Ultra-Power", "Combat Knife"], armor: "Lined Coat", gear: ["Mechanic's Kit", "Medkit"],
-    ware: [["Wired Reflexes", 1], "Smartlink (Implanted)", "Cyberears"],
+    ware: ["DNI (Direct Neural Interface)", ["Wired Reflexes", 1], "Smartlink (Implanted)", "Cyberears"],
     talents: ["Knowledgeable", "Quick Healer", "Fast Reload"] },
   { match: /^Street Samurai Shadow/, weapons: ["Harima UltraKraft Katana", "Throwing Knife", "Ceska Black Scorpion"], armor: "Chameleon Suit", gear: ["Stealth Rope"],
-    ware: [["Synaptic Booster", 1], ["Muscle Toner", 1], "Cybereyes", "Low-Light Vision"],
+    ware: ["DNI (Direct Neural Interface)", ["Synaptic Booster", 1], ["Muscle Toner", 1], "Cybereyes", "Low-Light Vision"],
     talents: ["Silent Professional", "Blind-Fighting", "Assassin's Aim"] },
   { match: /^Street Samurai/, weapons: ["Ares Predator V", "Harima UltraKraft Katana"], armor: "Armor Jacket", gear: [["Stim Patch", 2]],
-    ware: [["Wired Reflexes", 2], "Dermal Plating", "Smartlink (Implanted)"],
+    ware: ["DNI (Direct Neural Interface)", ["Wired Reflexes", 2], "Dermal Plating", "Smartlink (Implanted)"],
     talents: ["Built Tough", "Quick Draw", "High Pain Tolerance"] },
 
   { match: /^Weapons Specialist Pulverizer/, weapons: ["Krime Wrathammer", "Remington Roomsweeper"], armor: "Armor Jacket", gear: [["Stim Patch", 2]],
-    ware: [["Wired Reflexes", 1], ["Bone Lacing", 2], "Dermal Plating"],
+    ware: ["DNI (Direct Neural Interface)", ["Wired Reflexes", 1], ["Bone Lacing", 2], "Dermal Plating"],
     talents: ["Knockback", "Reaping Attack", "Iron Stance"] },
   { match: /^Weapons Specialist Blaze/, weapons: ["Ingram Smartgun X", "Sword"], armor: "Armor Jacket", gear: [["Stim Patch", 2]],
-    ware: [["Wired Reflexes", 1], "Smartlink (Implanted)", "Dermal Plating"],
+    ware: ["DNI (Direct Neural Interface)", ["Wired Reflexes", 1], "Smartlink (Implanted)", "Dermal Plating"],
     talents: ["Wide Burst", "Skilled Sprayer", "Recoil Control"] },
 
   { match: /^Covert Ops/, weapons: ["Ceska Black Scorpion", "Combat Knife"], armor: "Chameleon Suit", gear: ["Infiltration Kit", "Lockpicks", "Stealth Rope", "Medkit"],
-    ware: [["Synaptic Booster", 1], "Cybereyes", "Low-Light Vision", "Thermographic Vision", "Voice Modulator"],
+    ware: ["DNI (Direct Neural Interface)", ["Synaptic Booster", 1], "Cybereyes", "Low-Light Vision", "Thermographic Vision", "Voice Modulator"],
     talents: ["B&E Specialist", "Silent Professional", "Situational Awareness"] },
   { match: /^Slink$/, weapons: ["Ares Light Fire 75", "Combat Knife", "Throwing Knife"], armor: "Chameleon Suit", gear: ["Lockpicks", "Sequencer", "Grapple Gun", "Stealth Rope"],
-    ware: [["Synaptic Booster", 1], "Cybereyes", "Low-Light Vision"],
+    ware: ["DNI (Direct Neural Interface)", ["Synaptic Booster", 1], "Cybereyes", "Low-Light Vision"],
     talents: ["B&E Specialist", "Silent Professional", "Contraband"] },
 
   { match: /^Decker Operative/, weapons: ["Steyr TMP"], armor: "Lined Coat", commlink: "Renraku Sensei Commlink", gear: ["Erika MCD-1 Cyberdeck"],
@@ -132,39 +132,39 @@ const LOADOUTS = [
     talents: ["Living Persona", "Jolt", "Burn", "Static Bomb", "Augmented Defense", "Shield"] },
 
   { match: /^Drone Rigger Assault Commander/, weapons: ["Ares Light Fire 75"], armor: "Urban Explorer Jumpsuit", commlink: "Renraku Sensei Commlink", gear: ["Northrup Wasp", "MCT-Nissan Roto-Drone", "Mechanic's Kit"],
-    ware: [["Control Rig", 1], "DNI (Direct Neural Interface)"],
+    ware: ["DNI (Direct Neural Interface)", ["Control Rig", 1], "DNI (Direct Neural Interface)"],
     talents: ["Drone Programmer", "Synchronize Targeting", "Remote Security", "Salvo", "Sensor Lock", "Calibrate Targeting"],
     devices: [comm("Renraku Sensei Commlink")] },
   { match: /^Drone Rigger Livewire/, weapons: ["Ares Predator V"], armor: "Urban Explorer Jumpsuit", commlink: "Renraku Sensei Commlink", gear: ["MCT-Nissan Roto-Drone", "Mechanic's Kit"],
-    ware: [["Control Rig", 1], "DNI (Direct Neural Interface)"],
+    ware: ["DNI (Direct Neural Interface)", ["Control Rig", 1], "DNI (Direct Neural Interface)"],
     talents: ["Drone Programmer", "Real-Time Sensory Optimization (RSO)", "Protected Device Segmentation (PDS)", "Aggressive Driving", "Redline", "Maneuver"],
     devices: [comm("Renraku Sensei Commlink")] },
   { match: /^Drone Rigger Overwatch/, weapons: ["Ares Light Fire 75"], armor: "Urban Explorer Jumpsuit", commlink: "Renraku Sensei Commlink", gear: ["MCT-Nissan Roto-Drone", "Bug Scanner", "Mechanic's Kit"],
-    ware: [["Control Rig", 1], "DNI (Direct Neural Interface)"],
+    ware: ["DNI (Direct Neural Interface)", ["Control Rig", 1], "DNI (Direct Neural Interface)"],
     talents: ["Drone Programmer", "Remote Security", "Network Sentinel", "Trace Icon", "Multi-tasking", "Eye in the Sky", "Scout Ahead"],
     devices: [comm("Renraku Sensei Commlink")] },
   { match: /^Rigger$/, weapons: ["Ares Predator V"], armor: "Urban Explorer Jumpsuit", commlink: "Renraku Sensei Commlink", gear: ["Ares Roadmaster", "MCT-Nissan Roto-Drone", "Mechanic's Kit"],
-    ware: [["Control Rig", 1], "DNI (Direct Neural Interface)"],
+    ware: ["DNI (Direct Neural Interface)", ["Control Rig", 1], "DNI (Direct Neural Interface)"],
     talents: ["Drone Programmer", "Remote Security", "Protected Device Segmentation (PDS)", "Grease Monkey", "Juryrig", "Careful Control"],
     devices: [comm("Renraku Sensei Commlink")] },
   { match: /^Wheels Fast/, weapons: ["Fichetti Security 600"], armor: "Lined Coat", gear: ["Suzuki Mirage", "Mechanic's Kit"],
-    ware: [["Control Rig", 1], "DNI (Direct Neural Interface)"],
+    ware: ["DNI (Direct Neural Interface)", ["Control Rig", 1], "DNI (Direct Neural Interface)"],
     talents: ["Aggressive Driving", "Turn into the Skid", "Redline"] },
   { match: /^Wheels Furious/, weapons: ["Ares Predator V"], armor: "Armor Jacket", gear: ["Jeep Trailblazer", "Mechanic's Kit"],
-    ware: [["Control Rig", 1], "DNI (Direct Neural Interface)"],
+    ware: ["DNI (Direct Neural Interface)", ["Control Rig", 1], "DNI (Direct Neural Interface)"],
     talents: ["Devastating Ram", "Aggressive Driving", "Box In"] },
 
   { match: /^Face Battle-Tested/, weapons: ["Browning Ultra-Power"], armor: "Kevlock Actioneer Attire", commlink: "Erika Elite Commlink", gear: ["Diguise Kit"],
-    ware: ["Superior Appearance Mod", ["Wired Reflexes", 1]],
+    ware: ["DNI (Direct Neural Interface)", "Superior Appearance Mod", ["Wired Reflexes", 1]],
     talents: ["Cool Under Pressure", "Duck!", "Gain Trust"] },
   { match: /^Face Con Artist/, weapons: ["Fichetti Tiffani Needler"], armor: "Actioneer Business Clothes", commlink: "Erika Elite Commlink", gear: ["Diguise Kit", "Deep Fake"],
-    ware: ["Superior Appearance Mod", "Voice Modulator"],
+    ware: ["DNI (Direct Neural Interface)", "Superior Appearance Mod", "Voice Modulator"],
     talents: ["Bait and Switch", "False Tell", "Gain Trust"] },
   { match: /^Face Infiltrator/, weapons: ["Walther Palm Pistol", "Combat Knife"], armor: "Actioneer Business Clothes", commlink: "Erika Elite Commlink", gear: ["Infiltration Kit", "Lockpicks"],
-    ware: ["Superior Appearance Mod", "Voice Modulator"],
+    ware: ["DNI (Direct Neural Interface)", "Superior Appearance Mod", "Voice Modulator"],
     talents: ["Dress the Part", "Decoy", "B&E Specialist"] },
   { match: /^Face$/, weapons: ["Fichetti Tiffani Needler"], armor: "Actioneer Business Clothes", commlink: "Erika Elite Commlink", gear: ["Diguise Kit"],
-    ware: ["Superior Appearance Mod"],
+    ware: ["DNI (Direct Neural Interface)", "Superior Appearance Mod"],
     talents: ["Gain Trust", "ID Rolodex", "Well Connected"] },
 
   { match: /^Mage Burn-out/, weapons: ["Streetline Special"], armor: "Armor Clothing", gear: ["Stim Patch"],
@@ -324,6 +324,15 @@ for (const f of fs.readdirSync(dir)) {
     delete doc.flags.srx.matrixDevices;
     if (!Object.keys(doc.flags.srx).length) delete doc.flags.srx;
     if (!Object.keys(doc.flags).length) delete doc.flags;
+  }
+
+  // 'Ware legality: every installed piece must satisfy its prereq chain and
+  // conflict list against the rest of the kit (rules/ware.mjs, p. 326).
+  const wareItems = items.filter((i) => i.type === "ware");
+  for (const w of wareItems) {
+    const others = wareItems.filter((x) => x !== w).map((x) => ({ name: x.name, category: x.system.category }));
+    const problems = wareInstallProblems({ prereq: w.system.prereq, incompatible: w.system.incompatible }, others);
+    if (!problems.ok) throw new Error(`${doc.name}: ${w.name} — missing [${problems.missingPrereqs}] conflicts [${problems.conflicts}]`);
   }
 
   // Essence audit (print only): installed 'ware must leave headroom.

@@ -579,7 +579,65 @@
       "_key": "!actors.items!HSvuy8EHDfWZ9e9M.2863ae831198d501"
     },
     {
-      "_id": "8c224241cde1e4ac",
+      "_id": "95ed06c40d399479",
+      "name": "DNI (Direct Neural Interface)",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Basic Matrix connection",
+        "source": "",
+        "cost": 500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.05,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "DNI (Direct Neural Interface)",
+            "srxId": 3030,
+            "category": "Headware",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "DNI (Direct Neural Interface)",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.05",
+              "value": 0.05,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Basic Matrix connection",
+            "effects": [],
+            "slug": "dni-direct-neural-interface"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!HSvuy8EHDfWZ9e9M.95ed06c40d399479"
+    },
+    {
+      "_id": "ccae533ac204c55d",
       "name": "Wired Reflexes",
       "type": "ware",
       "system": {
@@ -622,8 +680,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "75124852281e123c",
-          "_key": "!actors.items.effects!HSvuy8EHDfWZ9e9M.8c224241cde1e4ac.75124852281e123c"
+          "_id": "3266244dba9fa102",
+          "_key": "!actors.items.effects!HSvuy8EHDfWZ9e9M.ccae533ac204c55d.3266244dba9fa102"
         }
       ],
       "flags": {
@@ -673,11 +731,11 @@
           }
         }
       },
-      "sort": 800,
-      "_key": "!actors.items!HSvuy8EHDfWZ9e9M.8c224241cde1e4ac"
+      "sort": 900,
+      "_key": "!actors.items!HSvuy8EHDfWZ9e9M.ccae533ac204c55d"
     },
     {
-      "_id": "78316ae59f04cc03",
+      "_id": "2741b266864bada7",
       "name": "Smartlink (Implanted)",
       "type": "ware",
       "system": {
@@ -732,11 +790,11 @@
           }
         }
       },
-      "sort": 900,
-      "_key": "!actors.items!HSvuy8EHDfWZ9e9M.78316ae59f04cc03"
+      "sort": 1000,
+      "_key": "!actors.items!HSvuy8EHDfWZ9e9M.2741b266864bada7"
     },
     {
-      "_id": "d6747c00ede755d7",
+      "_id": "6c97b009ee8ac39c",
       "name": "Cyberears",
       "type": "ware",
       "system": {
@@ -791,11 +849,11 @@
           }
         }
       },
-      "sort": 1000,
-      "_key": "!actors.items!HSvuy8EHDfWZ9e9M.d6747c00ede755d7"
+      "sort": 1100,
+      "_key": "!actors.items!HSvuy8EHDfWZ9e9M.6c97b009ee8ac39c"
     },
     {
-      "_id": "e440718806bc002f",
+      "_id": "98b371b5d25ca8a0",
       "name": "Knowledgeable",
       "type": "talent",
       "system": {
@@ -849,11 +907,11 @@
           }
         }
       },
-      "sort": 1100,
-      "_key": "!actors.items!HSvuy8EHDfWZ9e9M.e440718806bc002f"
+      "sort": 1200,
+      "_key": "!actors.items!HSvuy8EHDfWZ9e9M.98b371b5d25ca8a0"
     },
     {
-      "_id": "e0ff4a6ad53686bd",
+      "_id": "45de8c12e82b4fe4",
       "name": "Quick Healer",
       "type": "talent",
       "system": {
@@ -907,11 +965,11 @@
           }
         }
       },
-      "sort": 1200,
-      "_key": "!actors.items!HSvuy8EHDfWZ9e9M.e0ff4a6ad53686bd"
+      "sort": 1300,
+      "_key": "!actors.items!HSvuy8EHDfWZ9e9M.45de8c12e82b4fe4"
     },
     {
-      "_id": "a305785ff9e87369",
+      "_id": "3d33c825cc5328a2",
       "name": "Fast Reload",
       "type": "talent",
       "system": {
@@ -966,8 +1024,8 @@
           }
         }
       },
-      "sort": 1300,
-      "_key": "!actors.items!HSvuy8EHDfWZ9e9M.a305785ff9e87369"
+      "sort": 1400,
+      "_key": "!actors.items!HSvuy8EHDfWZ9e9M.3d33c825cc5328a2"
     }
   ],
   "effects": [],

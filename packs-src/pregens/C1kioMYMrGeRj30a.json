@@ -552,7 +552,65 @@
       "_key": "!actors.items!C1kioMYMrGeRj30a.76396a3ff42a1fa9"
     },
     {
-      "_id": "8ac5c7d3c2cf0038",
+      "_id": "00abcc9af3004580",
+      "name": "DNI (Direct Neural Interface)",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Basic Matrix connection",
+        "source": "",
+        "cost": 500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.05,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "DNI (Direct Neural Interface)",
+            "srxId": 3030,
+            "category": "Headware",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "DNI (Direct Neural Interface)",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.05",
+              "value": 0.05,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Basic Matrix connection",
+            "effects": [],
+            "slug": "dni-direct-neural-interface"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!C1kioMYMrGeRj30a.00abcc9af3004580"
+    },
+    {
+      "_id": "12779146e02fa7f1",
       "name": "Wired Reflexes",
       "type": "ware",
       "system": {
@@ -595,8 +653,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "48efd6d9e72ca336",
-          "_key": "!actors.items.effects!C1kioMYMrGeRj30a.8ac5c7d3c2cf0038.48efd6d9e72ca336"
+          "_id": "f3093fc69bd170a5",
+          "_key": "!actors.items.effects!C1kioMYMrGeRj30a.12779146e02fa7f1.f3093fc69bd170a5"
         }
       ],
       "flags": {
@@ -646,11 +704,11 @@
           }
         }
       },
-      "sort": 700,
-      "_key": "!actors.items!C1kioMYMrGeRj30a.8ac5c7d3c2cf0038"
+      "sort": 800,
+      "_key": "!actors.items!C1kioMYMrGeRj30a.12779146e02fa7f1"
     },
     {
-      "_id": "47dc2ec8156de75c",
+      "_id": "f8192386b1805482",
       "name": "Smartlink (Implanted)",
       "type": "ware",
       "system": {
@@ -705,11 +763,11 @@
           }
         }
       },
-      "sort": 800,
-      "_key": "!actors.items!C1kioMYMrGeRj30a.47dc2ec8156de75c"
+      "sort": 900,
+      "_key": "!actors.items!C1kioMYMrGeRj30a.f8192386b1805482"
     },
     {
-      "_id": "0affd03d195bb60b",
+      "_id": "a537159b30f524a7",
       "name": "Dermal Plating",
       "type": "ware",
       "system": {
@@ -756,8 +814,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "b87fa6b136146fd0",
-          "_key": "!actors.items.effects!C1kioMYMrGeRj30a.0affd03d195bb60b.b87fa6b136146fd0"
+          "_id": "e8da5515b1f30c99",
+          "_key": "!actors.items.effects!C1kioMYMrGeRj30a.a537159b30f524a7.e8da5515b1f30c99"
         }
       ],
       "flags": {
@@ -806,11 +864,11 @@
           }
         }
       },
-      "sort": 900,
-      "_key": "!actors.items!C1kioMYMrGeRj30a.0affd03d195bb60b"
+      "sort": 1000,
+      "_key": "!actors.items!C1kioMYMrGeRj30a.a537159b30f524a7"
     },
     {
-      "_id": "5923d5e9108f763d",
+      "_id": "c38a150e0854471f",
       "name": "Wide Burst",
       "type": "talent",
       "system": {
@@ -865,11 +923,11 @@
           }
         }
       },
-      "sort": 1000,
-      "_key": "!actors.items!C1kioMYMrGeRj30a.5923d5e9108f763d"
+      "sort": 1100,
+      "_key": "!actors.items!C1kioMYMrGeRj30a.c38a150e0854471f"
     },
     {
-      "_id": "c31d79b93135f474",
+      "_id": "dcac30538f63a1f9",
       "name": "Skilled Sprayer",
       "type": "talent",
       "system": {
@@ -928,11 +986,11 @@
           }
         }
       },
-      "sort": 1100,
-      "_key": "!actors.items!C1kioMYMrGeRj30a.c31d79b93135f474"
+      "sort": 1200,
+      "_key": "!actors.items!C1kioMYMrGeRj30a.dcac30538f63a1f9"
     },
     {
-      "_id": "38b52ade4ceeea17",
+      "_id": "cf195c27dc09675e",
       "name": "Recoil Control",
       "type": "talent",
       "system": {
@@ -995,8 +1053,8 @@
           }
         }
       },
-      "sort": 1200,
-      "_key": "!actors.items!C1kioMYMrGeRj30a.38b52ade4ceeea17"
+      "sort": 1300,
+      "_key": "!actors.items!C1kioMYMrGeRj30a.cf195c27dc09675e"
     }
   ],
   "effects": [],

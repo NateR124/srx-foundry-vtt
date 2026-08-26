@@ -422,7 +422,65 @@
       "_key": "!actors.items!oYVqhEpXf29mZECy.16fa4597f8e3898c"
     },
     {
-      "_id": "9dfd642f80f7929d",
+      "_id": "6c41c21f798fa96f",
+      "name": "DNI (Direct Neural Interface)",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Basic Matrix connection",
+        "source": "",
+        "cost": 500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.05,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "DNI (Direct Neural Interface)",
+            "srxId": 3030,
+            "category": "Headware",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "DNI (Direct Neural Interface)",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.05",
+              "value": 0.05,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Basic Matrix connection",
+            "effects": [],
+            "slug": "dni-direct-neural-interface"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!oYVqhEpXf29mZECy.6c41c21f798fa96f"
+    },
+    {
+      "_id": "4870f25c6e07a4cd",
       "name": "Superior Appearance Mod",
       "type": "ware",
       "system": {
@@ -461,8 +519,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "148bb61885b051df",
-          "_key": "!actors.items.effects!oYVqhEpXf29mZECy.9dfd642f80f7929d.148bb61885b051df"
+          "_id": "043a2a0fbd6e7477",
+          "_key": "!actors.items.effects!oYVqhEpXf29mZECy.4870f25c6e07a4cd.043a2a0fbd6e7477"
         }
       ],
       "flags": {
@@ -503,11 +561,11 @@
           }
         }
       },
-      "sort": 600,
-      "_key": "!actors.items!oYVqhEpXf29mZECy.9dfd642f80f7929d"
+      "sort": 700,
+      "_key": "!actors.items!oYVqhEpXf29mZECy.4870f25c6e07a4cd"
     },
     {
-      "_id": "9bcde07d989a387d",
+      "_id": "22692706df4e273c",
       "name": "Gain Trust",
       "type": "talent",
       "system": {
@@ -561,11 +619,11 @@
           }
         }
       },
-      "sort": 700,
-      "_key": "!actors.items!oYVqhEpXf29mZECy.9bcde07d989a387d"
+      "sort": 800,
+      "_key": "!actors.items!oYVqhEpXf29mZECy.22692706df4e273c"
     },
     {
-      "_id": "c530f0cd29804a57",
+      "_id": "64d20a295e32bac7",
       "name": "ID Rolodex",
       "type": "talent",
       "system": {
@@ -621,11 +679,11 @@
           }
         }
       },
-      "sort": 800,
-      "_key": "!actors.items!oYVqhEpXf29mZECy.c530f0cd29804a57"
+      "sort": 900,
+      "_key": "!actors.items!oYVqhEpXf29mZECy.64d20a295e32bac7"
     },
     {
-      "_id": "53b76e3261d3bddf",
+      "_id": "273113e03d7b0a88",
       "name": "Well Connected",
       "type": "talent",
       "system": {
@@ -681,8 +739,8 @@
           }
         }
       },
-      "sort": 900,
-      "_key": "!actors.items!oYVqhEpXf29mZECy.53b76e3261d3bddf"
+      "sort": 1000,
+      "_key": "!actors.items!oYVqhEpXf29mZECy.273113e03d7b0a88"
     }
   ],
   "effects": [],

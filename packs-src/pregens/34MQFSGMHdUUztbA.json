@@ -696,7 +696,65 @@
       "_key": "!actors.items!34MQFSGMHdUUztbA.fbc27965696c2003"
     },
     {
-      "_id": "75f361f835f72533",
+      "_id": "e5a7c49fde7e3009",
+      "name": "DNI (Direct Neural Interface)",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Basic Matrix connection",
+        "source": "",
+        "cost": 500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.05,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "DNI (Direct Neural Interface)",
+            "srxId": 3030,
+            "category": "Headware",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "DNI (Direct Neural Interface)",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.05",
+              "value": 0.05,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Basic Matrix connection",
+            "effects": [],
+            "slug": "dni-direct-neural-interface"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!34MQFSGMHdUUztbA.e5a7c49fde7e3009"
+    },
+    {
+      "_id": "383dcdbf9c741105",
       "name": "Synaptic Booster",
       "type": "ware",
       "system": {
@@ -751,11 +809,11 @@
           }
         }
       },
-      "sort": 1000,
-      "_key": "!actors.items!34MQFSGMHdUUztbA.75f361f835f72533"
+      "sort": 1100,
+      "_key": "!actors.items!34MQFSGMHdUUztbA.383dcdbf9c741105"
     },
     {
-      "_id": "a8736b5caebfc462",
+      "_id": "d185fba7833d8c37",
       "name": "Cybereyes",
       "type": "ware",
       "system": {
@@ -818,11 +876,11 @@
           }
         }
       },
-      "sort": 1100,
-      "_key": "!actors.items!34MQFSGMHdUUztbA.a8736b5caebfc462"
+      "sort": 1200,
+      "_key": "!actors.items!34MQFSGMHdUUztbA.d185fba7833d8c37"
     },
     {
-      "_id": "d3a28aaa29a505a4",
+      "_id": "ce03567dffcf36c8",
       "name": "Low-Light Vision",
       "type": "ware",
       "system": {
@@ -886,11 +944,11 @@
           }
         }
       },
-      "sort": 1200,
-      "_key": "!actors.items!34MQFSGMHdUUztbA.d3a28aaa29a505a4"
+      "sort": 1300,
+      "_key": "!actors.items!34MQFSGMHdUUztbA.ce03567dffcf36c8"
     },
     {
-      "_id": "634a62155f6b717a",
+      "_id": "997910842ece7de1",
       "name": "Thermographic Vision",
       "type": "ware",
       "system": {
@@ -954,11 +1012,11 @@
           }
         }
       },
-      "sort": 1300,
-      "_key": "!actors.items!34MQFSGMHdUUztbA.634a62155f6b717a"
+      "sort": 1400,
+      "_key": "!actors.items!34MQFSGMHdUUztbA.997910842ece7de1"
     },
     {
-      "_id": "91fab249ccddb07a",
+      "_id": "53643ed6ac983eca",
       "name": "Voice Modulator",
       "type": "ware",
       "system": {
@@ -1014,11 +1072,11 @@
           }
         }
       },
-      "sort": 1400,
-      "_key": "!actors.items!34MQFSGMHdUUztbA.91fab249ccddb07a"
+      "sort": 1500,
+      "_key": "!actors.items!34MQFSGMHdUUztbA.53643ed6ac983eca"
     },
     {
-      "_id": "0162f397964c06a0",
+      "_id": "dbb9aa71f63f3f00",
       "name": "B&E Specialist",
       "type": "talent",
       "system": {
@@ -1072,11 +1130,11 @@
           }
         }
       },
-      "sort": 1500,
-      "_key": "!actors.items!34MQFSGMHdUUztbA.0162f397964c06a0"
+      "sort": 1600,
+      "_key": "!actors.items!34MQFSGMHdUUztbA.dbb9aa71f63f3f00"
     },
     {
-      "_id": "80d4c9961eda338f",
+      "_id": "d549d20de128ae9a",
       "name": "Silent Professional",
       "type": "talent",
       "system": {
@@ -1134,11 +1192,11 @@
           }
         }
       },
-      "sort": 1600,
-      "_key": "!actors.items!34MQFSGMHdUUztbA.80d4c9961eda338f"
+      "sort": 1700,
+      "_key": "!actors.items!34MQFSGMHdUUztbA.d549d20de128ae9a"
     },
     {
-      "_id": "bab45e0c5276ca02",
+      "_id": "053cb30758ed0535",
       "name": "Situational Awareness",
       "type": "talent",
       "system": {
@@ -1192,8 +1250,8 @@
           }
         }
       },
-      "sort": 1700,
-      "_key": "!actors.items!34MQFSGMHdUUztbA.bab45e0c5276ca02"
+      "sort": 1800,
+      "_key": "!actors.items!34MQFSGMHdUUztbA.053cb30758ed0535"
     }
   ],
   "effects": [],

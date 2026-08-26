@@ -5,6 +5,7 @@ import { getMatrixState, personaMds, personaInterfaceMods } from "../matrix/pers
 import { fociPanelData, bondFocus } from "../magic/foci.mjs";
 import { wareEssenceCost } from "../rules/ware.mjs";
 import { promptAttachMod, detachMod } from "../items/weapon-mods.mjs";
+import { installProblemsFor, installProblemText } from "../items/ware-install.mjs";
 
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
@@ -656,10 +657,18 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
     return this.render();
   }
 
-  /** Intent toggle: in the body (Essence + effects apply) vs spare in a bag. */
+  /** Intent toggle: in the body (Essence + effects apply) vs spare in a bag.
+   * Installing checks the catalog's prereq/incompatible chains (p. 326). */
   static async #onToggleWareInstalled(_event, target) {
     const item = this.document.items.get(target.dataset.itemId);
     if (!item || item.type !== "ware") return null;
+    if (!item.system.installed) {
+      const problems = installProblemsFor(item);
+      if (!problems.ok) {
+        ui.notifications.warn(installProblemText(item.name, problems));
+        return null;
+      }
+    }
     await item.update({ "system.installed": !item.system.installed });
     return this.render();
   }

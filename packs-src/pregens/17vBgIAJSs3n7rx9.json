@@ -541,7 +541,65 @@
       "_key": "!actors.items!17vBgIAJSs3n7rx9.dcb2c429ec7be3a9"
     },
     {
-      "_id": "40ca63dfd4c6d423",
+      "_id": "4b48ba9afc741010",
+      "name": "DNI (Direct Neural Interface)",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Basic Matrix connection",
+        "source": "",
+        "cost": 500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.05,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "DNI (Direct Neural Interface)",
+            "srxId": 3030,
+            "category": "Headware",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "DNI (Direct Neural Interface)",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.05",
+              "value": 0.05,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Basic Matrix connection",
+            "effects": [],
+            "slug": "dni-direct-neural-interface"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!17vBgIAJSs3n7rx9.4b48ba9afc741010"
+    },
+    {
+      "_id": "eff6caaa550ce022",
       "name": "Wired Reflexes",
       "type": "ware",
       "system": {
@@ -584,8 +642,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "fc6919212b2f6f84",
-          "_key": "!actors.items.effects!17vBgIAJSs3n7rx9.40ca63dfd4c6d423.fc6919212b2f6f84"
+          "_id": "d314c19b93bdf74e",
+          "_key": "!actors.items.effects!17vBgIAJSs3n7rx9.eff6caaa550ce022.d314c19b93bdf74e"
         }
       ],
       "flags": {
@@ -635,11 +693,11 @@
           }
         }
       },
-      "sort": 700,
-      "_key": "!actors.items!17vBgIAJSs3n7rx9.40ca63dfd4c6d423"
+      "sort": 800,
+      "_key": "!actors.items!17vBgIAJSs3n7rx9.eff6caaa550ce022"
     },
     {
-      "_id": "0d364f88fa02d371",
+      "_id": "a9a52a707261efa8",
       "name": "Bone Lacing",
       "type": "ware",
       "system": {
@@ -689,8 +747,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "00bc02646c4fe328",
-          "_key": "!actors.items.effects!17vBgIAJSs3n7rx9.0d364f88fa02d371.00bc02646c4fe328"
+          "_id": "ea4d85a4e8a5b80c",
+          "_key": "!actors.items.effects!17vBgIAJSs3n7rx9.a9a52a707261efa8.ea4d85a4e8a5b80c"
         }
       ],
       "flags": {
@@ -750,11 +808,11 @@
           }
         }
       },
-      "sort": 800,
-      "_key": "!actors.items!17vBgIAJSs3n7rx9.0d364f88fa02d371"
+      "sort": 900,
+      "_key": "!actors.items!17vBgIAJSs3n7rx9.a9a52a707261efa8"
     },
     {
-      "_id": "cdb1dac69df9d1c8",
+      "_id": "8997cca1f8acead2",
       "name": "Dermal Plating",
       "type": "ware",
       "system": {
@@ -801,8 +859,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "831d5372bada814a",
-          "_key": "!actors.items.effects!17vBgIAJSs3n7rx9.cdb1dac69df9d1c8.831d5372bada814a"
+          "_id": "ce0d4035e9e45e63",
+          "_key": "!actors.items.effects!17vBgIAJSs3n7rx9.8997cca1f8acead2.ce0d4035e9e45e63"
         }
       ],
       "flags": {
@@ -851,11 +909,11 @@
           }
         }
       },
-      "sort": 900,
-      "_key": "!actors.items!17vBgIAJSs3n7rx9.cdb1dac69df9d1c8"
+      "sort": 1000,
+      "_key": "!actors.items!17vBgIAJSs3n7rx9.8997cca1f8acead2"
     },
     {
-      "_id": "58a902d2386c7c63",
+      "_id": "3bf3071ed7f83ee0",
       "name": "Knockback",
       "type": "talent",
       "system": {
@@ -910,11 +968,11 @@
           }
         }
       },
-      "sort": 1000,
-      "_key": "!actors.items!17vBgIAJSs3n7rx9.58a902d2386c7c63"
+      "sort": 1100,
+      "_key": "!actors.items!17vBgIAJSs3n7rx9.3bf3071ed7f83ee0"
     },
     {
-      "_id": "c41cb7a412c6a69b",
+      "_id": "4053ed6d16f8bfdf",
       "name": "Reaping Attack",
       "type": "talent",
       "system": {
@@ -969,11 +1027,11 @@
           }
         }
       },
-      "sort": 1100,
-      "_key": "!actors.items!17vBgIAJSs3n7rx9.c41cb7a412c6a69b"
+      "sort": 1200,
+      "_key": "!actors.items!17vBgIAJSs3n7rx9.4053ed6d16f8bfdf"
     },
     {
-      "_id": "475780effe736376",
+      "_id": "a0987f00672807e0",
       "name": "Iron Stance",
       "type": "talent",
       "system": {
@@ -1028,8 +1086,8 @@
           }
         }
       },
-      "sort": 1200,
-      "_key": "!actors.items!17vBgIAJSs3n7rx9.475780effe736376"
+      "sort": 1300,
+      "_key": "!actors.items!17vBgIAJSs3n7rx9.a0987f00672807e0"
     }
   ],
   "effects": [],

@@ -72,3 +72,32 @@ export function essenceCapViolations(essence, { magic = 0, resonance = 0 } = {})
   if (resonance > cap) out.push({ key: "resonance", value: resonance, max: cap });
   return out;
 }
+
+/**
+ * Install legality for one 'ware piece against the body's installed set
+ * (p. 326): every comma-separated `prereq` name must already be installed,
+ * and no installed piece may appear in the `incompatible` list. Incompatible
+ * entries carry an import artifact — some concatenate name+category
+ * ("Cyber GunCyberarm Upgrade") — so installed pieces match an entry by name
+ * or by name+category. Conflicts are reported as the installed piece's name.
+ *
+ * @param {{ prereq?: string, incompatible?: string[] }} ware - the piece to install
+ * @param {Array<{ name: string, category?: string }>} installed - the OTHER installed 'ware
+ * @returns {{ ok: boolean, missingPrereqs: string[], conflicts: string[] }}
+ */
+export function wareInstallProblems(ware = {}, installed = []) {
+  const have = new Set();
+  for (const w of installed) {
+    have.add(w.name);
+    have.add(`${w.name}${w.category ?? ""}`);
+  }
+  const missingPrereqs = String(ware.prereq ?? "")
+    .split(",").map((s) => s.trim()).filter(Boolean)
+    .filter((p) => !have.has(p));
+  const list = (Array.isArray(ware.incompatible) ? ware.incompatible : [])
+    .map((s) => String(s).trim()).filter(Boolean);
+  const conflicts = installed
+    .filter((w) => list.includes(w.name) || list.includes(`${w.name}${w.category ?? ""}`))
+    .map((w) => w.name);
+  return { ok: !missingPrereqs.length && !conflicts.length, missingPrereqs, conflicts };
+}

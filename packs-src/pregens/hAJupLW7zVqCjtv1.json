@@ -527,7 +527,65 @@
       "_key": "!actors.items!hAJupLW7zVqCjtv1.c92a317c2f09e9bc"
     },
     {
-      "_id": "57722fa80b62fc19",
+      "_id": "cd6476facd400132",
+      "name": "DNI (Direct Neural Interface)",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Basic Matrix connection",
+        "source": "",
+        "cost": 500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.05,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "DNI (Direct Neural Interface)",
+            "srxId": 3030,
+            "category": "Headware",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "DNI (Direct Neural Interface)",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.05",
+              "value": 0.05,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Basic Matrix connection",
+            "effects": [],
+            "slug": "dni-direct-neural-interface"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!hAJupLW7zVqCjtv1.cd6476facd400132"
+    },
+    {
+      "_id": "443803dbcd9ebe5f",
       "name": "Wired Reflexes",
       "type": "ware",
       "system": {
@@ -570,8 +628,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "c9bcae78aa54a20b",
-          "_key": "!actors.items.effects!hAJupLW7zVqCjtv1.57722fa80b62fc19.c9bcae78aa54a20b"
+          "_id": "3f45f99007e32343",
+          "_key": "!actors.items.effects!hAJupLW7zVqCjtv1.443803dbcd9ebe5f.3f45f99007e32343"
         }
       ],
       "flags": {
@@ -621,11 +679,11 @@
           }
         }
       },
-      "sort": 700,
-      "_key": "!actors.items!hAJupLW7zVqCjtv1.57722fa80b62fc19"
+      "sort": 800,
+      "_key": "!actors.items!hAJupLW7zVqCjtv1.443803dbcd9ebe5f"
     },
     {
-      "_id": "140b70186316d46e",
+      "_id": "0a670c94457a7247",
       "name": "Dermal Plating",
       "type": "ware",
       "system": {
@@ -672,8 +730,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "d711488b17e64185",
-          "_key": "!actors.items.effects!hAJupLW7zVqCjtv1.140b70186316d46e.d711488b17e64185"
+          "_id": "786ad981af8e4436",
+          "_key": "!actors.items.effects!hAJupLW7zVqCjtv1.0a670c94457a7247.786ad981af8e4436"
         }
       ],
       "flags": {
@@ -722,11 +780,11 @@
           }
         }
       },
-      "sort": 800,
-      "_key": "!actors.items!hAJupLW7zVqCjtv1.140b70186316d46e"
+      "sort": 900,
+      "_key": "!actors.items!hAJupLW7zVqCjtv1.0a670c94457a7247"
     },
     {
-      "_id": "962582ff97dac90a",
+      "_id": "39c0a50427dddba1",
       "name": "Bone Lacing",
       "type": "ware",
       "system": {
@@ -776,8 +834,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "bd5be076070c01d6",
-          "_key": "!actors.items.effects!hAJupLW7zVqCjtv1.962582ff97dac90a.bd5be076070c01d6"
+          "_id": "b022e814fc30c891",
+          "_key": "!actors.items.effects!hAJupLW7zVqCjtv1.39c0a50427dddba1.b022e814fc30c891"
         }
       ],
       "flags": {
@@ -837,11 +895,11 @@
           }
         }
       },
-      "sort": 900,
-      "_key": "!actors.items!hAJupLW7zVqCjtv1.962582ff97dac90a"
+      "sort": 1000,
+      "_key": "!actors.items!hAJupLW7zVqCjtv1.39c0a50427dddba1"
     },
     {
-      "_id": "099c229374bd31d2",
+      "_id": "c70d8594a557394f",
       "name": "Built Tough",
       "type": "talent",
       "system": {
@@ -872,8 +930,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "d46ea19403683980",
-          "_key": "!actors.items.effects!hAJupLW7zVqCjtv1.099c229374bd31d2.d46ea19403683980"
+          "_id": "af386156a8e15b7b",
+          "_key": "!actors.items.effects!hAJupLW7zVqCjtv1.c70d8594a557394f.af386156a8e15b7b"
         }
       ],
       "flags": {
@@ -922,11 +980,11 @@
           }
         }
       },
-      "sort": 1000,
-      "_key": "!actors.items!hAJupLW7zVqCjtv1.099c229374bd31d2"
+      "sort": 1100,
+      "_key": "!actors.items!hAJupLW7zVqCjtv1.c70d8594a557394f"
     },
     {
-      "_id": "6e9b8d4be1b62527",
+      "_id": "6df1fa4e452033f9",
       "name": "Guts",
       "type": "talent",
       "system": {
@@ -980,11 +1038,11 @@
           }
         }
       },
-      "sort": 1100,
-      "_key": "!actors.items!hAJupLW7zVqCjtv1.6e9b8d4be1b62527"
+      "sort": 1200,
+      "_key": "!actors.items!hAJupLW7zVqCjtv1.6df1fa4e452033f9"
     },
     {
-      "_id": "c75fe0ba265aa728",
+      "_id": "f5811bceedcc2c25",
       "name": "Knockback",
       "type": "talent",
       "system": {
@@ -1039,8 +1097,8 @@
           }
         }
       },
-      "sort": 1200,
-      "_key": "!actors.items!hAJupLW7zVqCjtv1.c75fe0ba265aa728"
+      "sort": 1300,
+      "_key": "!actors.items!hAJupLW7zVqCjtv1.f5811bceedcc2c25"
     }
   ],
   "effects": [],

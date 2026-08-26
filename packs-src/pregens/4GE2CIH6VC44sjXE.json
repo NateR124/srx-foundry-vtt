@@ -477,7 +477,65 @@
       "_key": "!actors.items!4GE2CIH6VC44sjXE.2aa0e00e4f056b4e"
     },
     {
-      "_id": "a6e48253bdd13a41",
+      "_id": "bbab6f8d70b141d9",
+      "name": "DNI (Direct Neural Interface)",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Basic Matrix connection",
+        "source": "",
+        "cost": 500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.05,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "DNI (Direct Neural Interface)",
+            "srxId": 3030,
+            "category": "Headware",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "DNI (Direct Neural Interface)",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.05",
+              "value": 0.05,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Basic Matrix connection",
+            "effects": [],
+            "slug": "dni-direct-neural-interface"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!4GE2CIH6VC44sjXE.bbab6f8d70b141d9"
+    },
+    {
+      "_id": "0fab8f221d6469db",
       "name": "Superior Appearance Mod",
       "type": "ware",
       "system": {
@@ -516,8 +574,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "dbd8cda1957c48cc",
-          "_key": "!actors.items.effects!4GE2CIH6VC44sjXE.a6e48253bdd13a41.dbd8cda1957c48cc"
+          "_id": "c6dc1adf705f2e62",
+          "_key": "!actors.items.effects!4GE2CIH6VC44sjXE.0fab8f221d6469db.c6dc1adf705f2e62"
         }
       ],
       "flags": {
@@ -558,11 +616,11 @@
           }
         }
       },
-      "sort": 700,
-      "_key": "!actors.items!4GE2CIH6VC44sjXE.a6e48253bdd13a41"
+      "sort": 800,
+      "_key": "!actors.items!4GE2CIH6VC44sjXE.0fab8f221d6469db"
     },
     {
-      "_id": "55f9455fbb77687c",
+      "_id": "a3b03f950c9ce4df",
       "name": "Voice Modulator",
       "type": "ware",
       "system": {
@@ -618,11 +676,11 @@
           }
         }
       },
-      "sort": 800,
-      "_key": "!actors.items!4GE2CIH6VC44sjXE.55f9455fbb77687c"
+      "sort": 900,
+      "_key": "!actors.items!4GE2CIH6VC44sjXE.a3b03f950c9ce4df"
     },
     {
-      "_id": "7fce66a85dd512e3",
+      "_id": "b532f0dc81e75fcf",
       "name": "Bait and Switch",
       "type": "talent",
       "system": {
@@ -676,11 +734,11 @@
           }
         }
       },
-      "sort": 900,
-      "_key": "!actors.items!4GE2CIH6VC44sjXE.7fce66a85dd512e3"
+      "sort": 1000,
+      "_key": "!actors.items!4GE2CIH6VC44sjXE.b532f0dc81e75fcf"
     },
     {
-      "_id": "61a507b099fbcd2b",
+      "_id": "8d1116567a120a34",
       "name": "False Tell",
       "type": "talent",
       "system": {
@@ -734,11 +792,11 @@
           }
         }
       },
-      "sort": 1000,
-      "_key": "!actors.items!4GE2CIH6VC44sjXE.61a507b099fbcd2b"
+      "sort": 1100,
+      "_key": "!actors.items!4GE2CIH6VC44sjXE.8d1116567a120a34"
     },
     {
-      "_id": "3adf84effbf905e3",
+      "_id": "c26cb622f0f4abc2",
       "name": "Gain Trust",
       "type": "talent",
       "system": {
@@ -792,8 +850,8 @@
           }
         }
       },
-      "sort": 1100,
-      "_key": "!actors.items!4GE2CIH6VC44sjXE.3adf84effbf905e3"
+      "sort": 1200,
+      "_key": "!actors.items!4GE2CIH6VC44sjXE.c26cb622f0f4abc2"
     }
   ],
   "effects": [],

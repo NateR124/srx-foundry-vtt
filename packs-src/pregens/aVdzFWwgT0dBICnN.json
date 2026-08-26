@@ -662,7 +662,65 @@
       "_key": "!actors.items!aVdzFWwgT0dBICnN.ba7579f16d1ddebd"
     },
     {
-      "_id": "77ffb6b8be1e6644",
+      "_id": "3c6dc7c04ac323b4",
+      "name": "DNI (Direct Neural Interface)",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Basic Matrix connection",
+        "source": "",
+        "cost": 500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.05,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "DNI (Direct Neural Interface)",
+            "srxId": 3030,
+            "category": "Headware",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "DNI (Direct Neural Interface)",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.05",
+              "value": 0.05,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Basic Matrix connection",
+            "effects": [],
+            "slug": "dni-direct-neural-interface"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!aVdzFWwgT0dBICnN.3c6dc7c04ac323b4"
+    },
+    {
+      "_id": "1ba580a202610deb",
       "name": "Wired Reflexes",
       "type": "ware",
       "system": {
@@ -705,8 +763,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "abac0af077be61ea",
-          "_key": "!actors.items.effects!aVdzFWwgT0dBICnN.77ffb6b8be1e6644.abac0af077be61ea"
+          "_id": "466d51d6b7edd401",
+          "_key": "!actors.items.effects!aVdzFWwgT0dBICnN.1ba580a202610deb.466d51d6b7edd401"
         }
       ],
       "flags": {
@@ -756,11 +814,11 @@
           }
         }
       },
-      "sort": 800,
-      "_key": "!actors.items!aVdzFWwgT0dBICnN.77ffb6b8be1e6644"
+      "sort": 900,
+      "_key": "!actors.items!aVdzFWwgT0dBICnN.1ba580a202610deb"
     },
     {
-      "_id": "06f2f94b5765eec3",
+      "_id": "29e8e290fad3eb10",
       "name": "Smartlink (Implanted)",
       "type": "ware",
       "system": {
@@ -815,11 +873,11 @@
           }
         }
       },
-      "sort": 900,
-      "_key": "!actors.items!aVdzFWwgT0dBICnN.06f2f94b5765eec3"
+      "sort": 1000,
+      "_key": "!actors.items!aVdzFWwgT0dBICnN.29e8e290fad3eb10"
     },
     {
-      "_id": "e7c13599f3001b13",
+      "_id": "e4528e83d282e2a0",
       "name": "Muscle Replacement",
       "type": "ware",
       "system": {
@@ -863,8 +921,8 @@
               "fromCatalog": true
             }
           },
-          "_id": "7ded8a554296ca10",
-          "_key": "!actors.items.effects!aVdzFWwgT0dBICnN.e7c13599f3001b13.7ded8a554296ca10"
+          "_id": "65d7f8f6f1459f20",
+          "_key": "!actors.items.effects!aVdzFWwgT0dBICnN.e4528e83d282e2a0.65d7f8f6f1459f20"
         }
       ],
       "flags": {
@@ -910,11 +968,11 @@
           }
         }
       },
-      "sort": 1000,
-      "_key": "!actors.items!aVdzFWwgT0dBICnN.e7c13599f3001b13"
+      "sort": 1100,
+      "_key": "!actors.items!aVdzFWwgT0dBICnN.e4528e83d282e2a0"
     },
     {
-      "_id": "07ed800272ed9db6",
+      "_id": "7b5805958d581251",
       "name": "Cybereyes",
       "type": "ware",
       "system": {
@@ -977,11 +1035,11 @@
           }
         }
       },
-      "sort": 1100,
-      "_key": "!actors.items!aVdzFWwgT0dBICnN.07ed800272ed9db6"
+      "sort": 1200,
+      "_key": "!actors.items!aVdzFWwgT0dBICnN.7b5805958d581251"
     },
     {
-      "_id": "4d3a5dd236f48aff",
+      "_id": "799ce1bf7c56adb9",
       "name": "Recoil Control",
       "type": "talent",
       "system": {
@@ -1044,11 +1102,11 @@
           }
         }
       },
-      "sort": 1200,
-      "_key": "!actors.items!aVdzFWwgT0dBICnN.4d3a5dd236f48aff"
+      "sort": 1300,
+      "_key": "!actors.items!aVdzFWwgT0dBICnN.799ce1bf7c56adb9"
     },
     {
-      "_id": "44307fc6288c5cf0",
+      "_id": "de9d865f42bea841",
       "name": "Fast Reload",
       "type": "talent",
       "system": {
@@ -1103,11 +1161,11 @@
           }
         }
       },
-      "sort": 1300,
-      "_key": "!actors.items!aVdzFWwgT0dBICnN.44307fc6288c5cf0"
+      "sort": 1400,
+      "_key": "!actors.items!aVdzFWwgT0dBICnN.de9d865f42bea841"
     },
     {
-      "_id": "0b047bbbb3165e84",
+      "_id": "e967165cc4d9f37f",
       "name": "Situational Awareness",
       "type": "talent",
       "system": {
@@ -1161,8 +1219,8 @@
           }
         }
       },
-      "sort": 1400,
-      "_key": "!actors.items!aVdzFWwgT0dBICnN.0b047bbbb3165e84"
+      "sort": 1500,
+      "_key": "!actors.items!aVdzFWwgT0dBICnN.e967165cc4d9f37f"
     }
   ],
   "effects": [],
