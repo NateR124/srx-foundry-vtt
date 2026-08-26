@@ -849,6 +849,180 @@
       },
       "sort": 1100,
       "_key": "!actors.items!Ceqh9r2fYGrDsFCL.abb842761d97704d"
+    },
+    {
+      "_id": "6430f4c61df7f200",
+      "name": "Aggressive Driving",
+      "type": "talent",
+      "system": {
+        "summary": "Vehicle",
+        "description": "Reroll 1's on handling test with Ramming, Box In, or Force Crash",
+        "category": "vehicle",
+        "subgroup": "",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Aggressive Driving",
+            "srxId": 344,
+            "category": "Vehicle",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 6
+            },
+            "description": "Reroll 1's on handling test with Ramming, Box In, or Force Crash",
+            "effects": [],
+            "slug": "aggressive-driving"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!Ceqh9r2fYGrDsFCL.6430f4c61df7f200"
+    },
+    {
+      "_id": "d876189d54cea840",
+      "name": "Redline",
+      "type": "talent",
+      "system": {
+        "summary": "Vehicle",
+        "description": "Vehicle takes 2 damage to gain +1 Speed for 1 Combat Turn",
+        "category": "vehicle",
+        "subgroup": "",
+        "karma": 5,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Redline",
+            "srxId": 373,
+            "category": "Vehicle",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 5
+            },
+            "description": "Vehicle takes 2 damage to gain +1 Speed for 1 Combat Turn",
+            "effects": [],
+            "slug": "redline"
+          }
+        }
+      },
+      "sort": 1300,
+      "_key": "!actors.items!Ceqh9r2fYGrDsFCL.d876189d54cea840"
+    },
+    {
+      "_id": "9fded71e9c0ccc90",
+      "name": "Maneuver",
+      "type": "talent",
+      "system": {
+        "summary": "Vehicle",
+        "description": "Complex Action to gain +1 on chase test",
+        "category": "vehicle",
+        "subgroup": "",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Maneuver",
+            "srxId": 370,
+            "category": "Vehicle",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "Complex Action to gain +1 on chase test",
+            "effects": [],
+            "slug": "maneuver"
+          }
+        }
+      },
+      "sort": 1400,
+      "_key": "!actors.items!Ceqh9r2fYGrDsFCL.9fded71e9c0ccc90"
     }
   ],
   "effects": [],

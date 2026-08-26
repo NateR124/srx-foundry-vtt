@@ -1033,6 +1033,123 @@
       },
       "sort": 1400,
       "_key": "!actors.items!6rw1qngyafwBsh6V.72db433f23cc2932"
+    },
+    {
+      "_id": "f5cfd6d3df42f46a",
+      "name": "Eye in the Sky",
+      "type": "talent",
+      "system": {
+        "summary": "Vehicle / Autopilot",
+        "description": "You and vehicles on your DCC reroll 1's on Perception tests when observing ground from aerial view",
+        "category": "vehicle",
+        "subgroup": "Autopilot",
+        "karma": 5,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Eye in the Sky",
+            "srxId": 362,
+            "category": "Vehicle",
+            "subcategory": "Autopilot",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Autopilot",
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 5
+            },
+            "description": "You and vehicles on your DCC reroll 1's on Perception tests when observing ground from aerial view",
+            "effects": [],
+            "slug": "eye-in-the-sky"
+          }
+        }
+      },
+      "sort": 1500,
+      "_key": "!actors.items!6rw1qngyafwBsh6V.f5cfd6d3df42f46a"
+    },
+    {
+      "_id": "6c8dcb63d0292fc5",
+      "name": "Scout Ahead",
+      "type": "talent",
+      "system": {
+        "summary": "Vehicle",
+        "description": "Collect info on possible routes to adjust Chase Environment or Hazard Threshold +/-1",
+        "category": "vehicle",
+        "subgroup": "",
+        "karma": 8,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Scout Ahead",
+            "srxId": 377,
+            "category": "Vehicle",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 8
+            },
+            "description": "Collect info on possible routes to adjust Chase Environment or Hazard Threshold +/-1",
+            "effects": [],
+            "slug": "scout-ahead"
+          }
+        }
+      },
+      "sort": 1600,
+      "_key": "!actors.items!6rw1qngyafwBsh6V.6c8dcb63d0292fc5"
     }
   ],
   "effects": [],

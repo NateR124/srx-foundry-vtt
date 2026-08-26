@@ -715,6 +715,180 @@
       },
       "sort": 800,
       "_key": "!actors.items!BSjWESKCkAbTPZFz.0e6bd1781ea7a9b4"
+    },
+    {
+      "_id": "97a7cc4c07f29a75",
+      "name": "Devastating Ram",
+      "type": "talent",
+      "system": {
+        "summary": "Vehicle",
+        "description": "Target of your ram suffers Liability on Driving or Piloting tests",
+        "category": "vehicle",
+        "subgroup": "",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Devastating Ram",
+            "srxId": 352,
+            "category": "Vehicle",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "Target of your ram suffers Liability on Driving or Piloting tests",
+            "effects": [],
+            "slug": "devastating-ram"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!BSjWESKCkAbTPZFz.97a7cc4c07f29a75"
+    },
+    {
+      "_id": "87815b4f4210eeb1",
+      "name": "Aggressive Driving",
+      "type": "talent",
+      "system": {
+        "summary": "Vehicle",
+        "description": "Reroll 1's on handling test with Ramming, Box In, or Force Crash",
+        "category": "vehicle",
+        "subgroup": "",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Aggressive Driving",
+            "srxId": 344,
+            "category": "Vehicle",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 6
+            },
+            "description": "Reroll 1's on handling test with Ramming, Box In, or Force Crash",
+            "effects": [],
+            "slug": "aggressive-driving"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!BSjWESKCkAbTPZFz.87815b4f4210eeb1"
+    },
+    {
+      "_id": "b539a8c8558864dd",
+      "name": "Box In",
+      "type": "talent",
+      "system": {
+        "summary": "Vehicle",
+        "description": "Use Drive/Pilot action to force quarry to stop",
+        "category": "vehicle",
+        "subgroup": "",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Box In",
+            "srxId": 346,
+            "category": "Vehicle",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "Use Drive/Pilot action to force quarry to stop",
+            "effects": [],
+            "slug": "box-in"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!BSjWESKCkAbTPZFz.b539a8c8558864dd"
     }
   ],
   "effects": [],

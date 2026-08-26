@@ -917,6 +917,186 @@
       },
       "sort": 1100,
       "_key": "!actors.items!7cB4rWh1e0m7uEH3.9cb90be7f9fb0d95"
+    },
+    {
+      "_id": "7ad6ffea405159b3",
+      "name": "Silent Professional",
+      "type": "talent",
+      "system": {
+        "summary": "General",
+        "description": "Take Hide action with Partial Cover or Medium Visibility Impairment. When using Hide action, Run as Minor Action",
+        "category": "general",
+        "subgroup": "",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Silent Professional",
+            "srxId": 69,
+            "category": "General",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": "Stealth 5",
+            "prereq": {
+              "kind": "rating",
+              "subject": "Stealth",
+              "min": 5
+            },
+            "grants": [],
+            "cost": {
+              "karma": 6
+            },
+            "description": "Take Hide action with Partial Cover or Medium Visibility Impairment. When using Hide action, Run as Minor Action",
+            "effects": [],
+            "slug": "silent-professional"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!7cB4rWh1e0m7uEH3.7ad6ffea405159b3"
+    },
+    {
+      "_id": "af0032a27f6022e3",
+      "name": "Blind-Fighting",
+      "type": "talent",
+      "system": {
+        "summary": "Weapons / CC",
+        "description": "When in melee, mitigate all Visibility Impairments and unseen attackers don't gain Leverage",
+        "category": "weapons",
+        "subgroup": "CC",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Blind-Fighting",
+            "srxId": 115,
+            "category": "Weapons",
+            "subcategory": "CC",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "CC",
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 6
+            },
+            "description": "When in melee, mitigate all Visibility Impairments and unseen attackers don't gain Leverage",
+            "effects": [],
+            "slug": "blind-fighting"
+          }
+        }
+      },
+      "sort": 1300,
+      "_key": "!actors.items!7cB4rWh1e0m7uEH3.af0032a27f6022e3"
+    },
+    {
+      "_id": "6bba265572a5ded6",
+      "name": "Assassin's Aim",
+      "type": "talent",
+      "system": {
+        "summary": "Weapons / CC, F, PW",
+        "description": "If Leverage on attack or target's Defense Score is 1, reroll 1’s",
+        "category": "weapons",
+        "subgroup": "CC, F, PW",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Assassin's Aim",
+            "srxId": 111,
+            "category": "Weapons",
+            "subcategory": "CC, F, PW",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "CC, F, PW",
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "If Leverage on attack or target's Defense Score is 1, reroll 1’s",
+            "effects": [],
+            "slug": "assassins-aim"
+          }
+        }
+      },
+      "sort": 1400,
+      "_key": "!actors.items!7cB4rWh1e0m7uEH3.6bba265572a5ded6"
     }
   ],
   "effects": [],

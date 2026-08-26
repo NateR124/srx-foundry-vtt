@@ -808,6 +808,195 @@
       },
       "sort": 900,
       "_key": "!actors.items!C1kioMYMrGeRj30a.0affd03d195bb60b"
+    },
+    {
+      "_id": "5923d5e9108f763d",
+      "name": "Wide Burst",
+      "type": "talent",
+      "system": {
+        "summary": "Weapons / F (Burst Fire/Full-Auto Firing Mode)",
+        "description": "When using Burst Fire/Full-Auto firing mode, -1 DV to reroll 1's on attack test",
+        "category": "weapons",
+        "subgroup": "F (Burst Fire/Full-Auto Firing Mode)",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Wide Burst",
+            "srxId": 170,
+            "category": "Weapons",
+            "subcategory": "F (Burst Fire/Full-Auto Firing Mode)",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "F (Burst Fire/Full-Auto Firing Mode)",
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "When using Burst Fire/Full-Auto firing mode, -1 DV to reroll 1's on attack test",
+            "effects": [],
+            "slug": "wide-burst"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!C1kioMYMrGeRj30a.5923d5e9108f763d"
+    },
+    {
+      "_id": "c31d79b93135f474",
+      "name": "Skilled Sprayer",
+      "type": "talent",
+      "system": {
+        "summary": "Weapons / PW (Exotic Weapon - Sprayer)",
+        "description": "+1 DV to Exotic Weapon - Sprayer weapons",
+        "category": "weapons",
+        "subgroup": "PW (Exotic Weapon - Sprayer)",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Skilled Sprayer",
+            "srxId": 161,
+            "category": "Weapons",
+            "subcategory": "PW (Exotic Weapon - Sprayer)",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "PW (Exotic Weapon - Sprayer)",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": "Exotic Weapon - Sprayer (General Talent)",
+            "prereq": {
+              "kind": "talent",
+              "name": "Exotic Weapon - Sprayer",
+              "categoryHint": "General Talent"
+            },
+            "grants": [],
+            "cost": {
+              "karma": 6
+            },
+            "description": "+1 DV to Exotic Weapon - Sprayer weapons",
+            "effects": [],
+            "slug": "skilled-sprayer"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!C1kioMYMrGeRj30a.c31d79b93135f474"
+    },
+    {
+      "_id": "38b52ade4ceeea17",
+      "name": "Recoil Control",
+      "type": "talent",
+      "system": {
+        "summary": "General",
+        "description": "Fire 1 additional Action Phase without recoil penalty",
+        "category": "general",
+        "subgroup": "",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Recoil Control",
+            "srxId": 63,
+            "category": "General",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": "Body 5",
+            "prereq": {
+              "kind": "rating",
+              "subject": "Body",
+              "min": 5
+            },
+            "grants": [],
+            "cost": {
+              "karma": 6
+            },
+            "description": "Fire 1 additional Action Phase without recoil penalty",
+            "effects": [
+              {
+                "key": "Progressive Recoil Comp",
+                "value": 1
+              }
+            ],
+            "slug": "recoil-control"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!C1kioMYMrGeRj30a.38b52ade4ceeea17"
     }
   ],
   "effects": [],

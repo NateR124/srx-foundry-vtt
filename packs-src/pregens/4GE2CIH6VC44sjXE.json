@@ -620,6 +620,180 @@
       },
       "sort": 800,
       "_key": "!actors.items!4GE2CIH6VC44sjXE.55f9455fbb77687c"
+    },
+    {
+      "_id": "7fce66a85dd512e3",
+      "name": "Bait and Switch",
+      "type": "talent",
+      "system": {
+        "summary": "Social",
+        "description": "Switch places with ally with 1m of movement without granting Intercept action to opponents",
+        "category": "social",
+        "subgroup": "",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Bait and Switch",
+            "srxId": 174,
+            "category": "Social",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "Switch places with ally with 1m of movement without granting Intercept action to opponents",
+            "effects": [],
+            "slug": "bait-and-switch"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!4GE2CIH6VC44sjXE.7fce66a85dd512e3"
+    },
+    {
+      "_id": "61a507b099fbcd2b",
+      "name": "False Tell",
+      "type": "talent",
+      "system": {
+        "summary": "Social",
+        "description": "If you fail Con test, gain 1 free hit on next Con test",
+        "category": "social",
+        "subgroup": "",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "False Tell",
+            "srxId": 189,
+            "category": "Social",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 6
+            },
+            "description": "If you fail Con test, gain 1 free hit on next Con test",
+            "effects": [],
+            "slug": "false-tell"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!4GE2CIH6VC44sjXE.61a507b099fbcd2b"
+    },
+    {
+      "_id": "3adf84effbf905e3",
+      "name": "Gain Trust",
+      "type": "talent",
+      "system": {
+        "summary": "Social",
+        "description": "Reroll 1's on Con or Influence tests if you chat with target for 15+ minutes first",
+        "category": "social",
+        "subgroup": "",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Gain Trust",
+            "srxId": 192,
+            "category": "Social",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 6
+            },
+            "description": "Reroll 1's on Con or Influence tests if you chat with target for 15+ minutes first",
+            "effects": [],
+            "slug": "gain-trust"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!4GE2CIH6VC44sjXE.3adf84effbf905e3"
     }
   ],
   "effects": [],

@@ -107,18 +107,22 @@ export function activeFocusCount(actor) {
  * Over-limit is a *global* state: the p.297 penalty scales with how many active
  * foci exceed Willpower/2 and applies Liability to every resistance/Drain test,
  * so each active focus is flagged when the actor is over — not an arbitrary
- * "these specific ones." The Master Craftsman talent (+1 safe focus) is not
- * auto-detected here, matching {@link warnIfOverLimit} (a known gap — see
- * KNOWN-GAPS.md).
+ * "these specific ones." Owning the Master Craftsman talent raises the safe
+ * limit by 1 (here and in {@link warnIfOverLimit}).
  *
  * @param {Actor} actor
  * @returns {{ foci: Array<{id:string,name:string,force:number,focusType:string,
  *   bonded:boolean,active:boolean,grantsBonus:boolean,overLimit:boolean}>,
  *   activeCount:number, safeLimit:number, over:number }}
  */
+/** Owns the Master Craftsman talent → +1 safe active focus (p. 297). */
+function hasMasterCraftsman(actor) {
+  return [...(actor?.items ?? [])].some((i) => i.type === "talent" && /^master craftsman$/i.test(i.name));
+}
+
 export function fociPanelData(actor) {
   const wil = actor?.system?.attributes?.wil?.value ?? 0;
-  const safeLimit = safeActiveFociLimit(wil);
+  const safeLimit = safeActiveFociLimit(wil, { masterCraftsman: hasMasterCraftsman(actor) });
   const foci = [...(actor?.items ?? [])]
     .filter((i) => i.type === "focus")
     .sort((a, b) => a.name.localeCompare(b.name))
@@ -148,7 +152,7 @@ export function fociPanelData(actor) {
 async function warnIfOverLimit(actor) {
   if (!actor) return;
   const wil = actor.system.attributes?.wil?.value ?? 0;
-  const limit = safeActiveFociLimit(wil);
+  const limit = safeActiveFociLimit(wil, { masterCraftsman: hasMasterCraftsman(actor) });
   const over = fociOverLimit(activeFocusCount(actor), limit);
   if (over <= 0) return;
   await foundry.documents.ChatMessage.create({

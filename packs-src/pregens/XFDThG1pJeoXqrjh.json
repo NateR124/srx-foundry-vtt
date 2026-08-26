@@ -661,6 +661,180 @@
       },
       "sort": 800,
       "_key": "!actors.items!XFDThG1pJeoXqrjh.d48ef6fd82ede72a"
+    },
+    {
+      "_id": "0dfaacb04fc3f501",
+      "name": "Aggressive Driving",
+      "type": "talent",
+      "system": {
+        "summary": "Vehicle",
+        "description": "Reroll 1's on handling test with Ramming, Box In, or Force Crash",
+        "category": "vehicle",
+        "subgroup": "",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Aggressive Driving",
+            "srxId": 344,
+            "category": "Vehicle",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 6
+            },
+            "description": "Reroll 1's on handling test with Ramming, Box In, or Force Crash",
+            "effects": [],
+            "slug": "aggressive-driving"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!XFDThG1pJeoXqrjh.0dfaacb04fc3f501"
+    },
+    {
+      "_id": "7d3a7b6f77b9b497",
+      "name": "Turn into the Skid",
+      "type": "talent",
+      "system": {
+        "summary": "Vehicle",
+        "description": "Reduce crash damage by 4",
+        "category": "vehicle",
+        "subgroup": "",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Turn into the Skid",
+            "srxId": 383,
+            "category": "Vehicle",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "Reduce crash damage by 4",
+            "effects": [],
+            "slug": "turn-into-the-skid"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!XFDThG1pJeoXqrjh.7d3a7b6f77b9b497"
+    },
+    {
+      "_id": "8a770ebd18980f63",
+      "name": "Redline",
+      "type": "talent",
+      "system": {
+        "summary": "Vehicle",
+        "description": "Vehicle takes 2 damage to gain +1 Speed for 1 Combat Turn",
+        "category": "vehicle",
+        "subgroup": "",
+        "karma": 5,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Redline",
+            "srxId": 373,
+            "category": "Vehicle",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 5
+            },
+            "description": "Vehicle takes 2 damage to gain +1 Speed for 1 Combat Turn",
+            "effects": [],
+            "slug": "redline"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!XFDThG1pJeoXqrjh.8a770ebd18980f63"
     }
   ],
   "effects": [],

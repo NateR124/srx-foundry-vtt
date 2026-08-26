@@ -505,6 +505,184 @@
       },
       "sort": 600,
       "_key": "!actors.items!oYVqhEpXf29mZECy.9dfd642f80f7929d"
+    },
+    {
+      "_id": "9bcde07d989a387d",
+      "name": "Gain Trust",
+      "type": "talent",
+      "system": {
+        "summary": "Social",
+        "description": "Reroll 1's on Con or Influence tests if you chat with target for 15+ minutes first",
+        "category": "social",
+        "subgroup": "",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Gain Trust",
+            "srxId": 192,
+            "category": "Social",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 6
+            },
+            "description": "Reroll 1's on Con or Influence tests if you chat with target for 15+ minutes first",
+            "effects": [],
+            "slug": "gain-trust"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!oYVqhEpXf29mZECy.9bcde07d989a387d"
+    },
+    {
+      "_id": "c530f0cd29804a57",
+      "name": "ID Rolodex",
+      "type": "talent",
+      "system": {
+        "summary": "Social",
+        "description": "Gain 3 fake SINs",
+        "category": "social",
+        "subgroup": "",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "ID Rolodex",
+            "srxId": 193,
+            "category": "Social",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": "At Character Creation Only",
+            "prereq": {
+              "kind": "chargenOnly"
+            },
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "Gain 3 fake SINs",
+            "effects": [],
+            "slug": "id-rolodex"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!oYVqhEpXf29mZECy.c530f0cd29804a57"
+    },
+    {
+      "_id": "53b76e3261d3bddf",
+      "name": "Well Connected",
+      "type": "talent",
+      "system": {
+        "summary": "Social",
+        "description": "1 contact gains +6 on tests",
+        "category": "social",
+        "subgroup": "",
+        "karma": 3,
+        "option": "List Contacts",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Well Connected",
+            "srxId": 207,
+            "category": "Social",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [
+              "List Contacts"
+            ],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 3
+            },
+            "description": "1 contact gains +6 on tests",
+            "effects": [],
+            "slug": "well-connected"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!oYVqhEpXf29mZECy.53b76e3261d3bddf"
     }
   ],
   "effects": [],

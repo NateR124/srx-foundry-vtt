@@ -767,7 +767,65 @@
       "_key": "!actors.items!mm05ODwNsTh4PTAB.6f51f98e9e4fd83b"
     },
     {
-      "_id": "bc615a37ac1987a6",
+      "_id": "3cebf495333299b2",
+      "name": "Focused Concentration",
+      "type": "talent",
+      "system": {
+        "summary": "General",
+        "description": "Leverage on tests to maintain magical effects or administered programs",
+        "category": "general",
+        "subgroup": "",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Focused Concentration",
+            "srxId": 44,
+            "category": "General",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 6
+            },
+            "description": "Leverage on tests to maintain magical effects or administered programs",
+            "effects": [],
+            "slug": "focused-concentration"
+          }
+        }
+      },
+      "sort": 1300,
+      "_key": "!actors.items!mm05ODwNsTh4PTAB.3cebf495333299b2"
+    },
+    {
+      "_id": "a727a8d461130b98",
       "name": "Mysticism Focus",
       "type": "focus",
       "system": {
@@ -815,8 +873,8 @@
           }
         }
       },
-      "sort": 1300,
-      "_key": "!actors.items!mm05ODwNsTh4PTAB.bc615a37ac1987a6"
+      "sort": 1400,
+      "_key": "!actors.items!mm05ODwNsTh4PTAB.a727a8d461130b98"
     }
   ],
   "effects": [],

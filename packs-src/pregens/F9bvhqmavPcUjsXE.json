@@ -960,6 +960,190 @@
       },
       "sort": 1200,
       "_key": "!actors.items!F9bvhqmavPcUjsXE.e4e2ca85218003cd"
+    },
+    {
+      "_id": "cdb42a2f08a45252",
+      "name": "Salvo",
+      "type": "talent",
+      "system": {
+        "summary": "Vehicle",
+        "description": "Use Two-Weapon Attacks with vehicle with multiple weapons",
+        "category": "vehicle",
+        "subgroup": "",
+        "karma": 7,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Salvo",
+            "srxId": 375,
+            "category": "Vehicle",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 7
+            },
+            "description": "Use Two-Weapon Attacks with vehicle with multiple weapons",
+            "effects": [],
+            "slug": "salvo"
+          }
+        }
+      },
+      "sort": 1300,
+      "_key": "!actors.items!F9bvhqmavPcUjsXE.cdb42a2f08a45252"
+    },
+    {
+      "_id": "fd2d55f9ae019292",
+      "name": "Sensor Lock",
+      "type": "talent",
+      "system": {
+        "summary": "Vehicle / Autopilot",
+        "description": "Vehicles with smartlink on your DCC can use Take Aim action",
+        "category": "vehicle",
+        "subgroup": "Autopilot",
+        "karma": 8,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Sensor Lock",
+            "srxId": 378,
+            "category": "Vehicle",
+            "subcategory": "Autopilot",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Autopilot",
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": "Software 4",
+            "prereq": {
+              "kind": "rating",
+              "subject": "Software",
+              "min": 4
+            },
+            "grants": [],
+            "cost": {
+              "karma": 8
+            },
+            "description": "Vehicles with smartlink on your DCC can use Take Aim action",
+            "effects": [],
+            "slug": "sensor-lock"
+          }
+        }
+      },
+      "sort": 1400,
+      "_key": "!actors.items!F9bvhqmavPcUjsXE.fd2d55f9ae019292"
+    },
+    {
+      "_id": "695e6c29a3ac9b27",
+      "name": "Calibrate Targeting",
+      "type": "talent",
+      "system": {
+        "summary": "Vehicle / Autopilot",
+        "description": "Use Major Action to let 1 vehicle on DCC reroll 1's on attack",
+        "category": "vehicle",
+        "subgroup": "Autopilot",
+        "karma": 7,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Calibrate Targeting",
+            "srxId": 347,
+            "category": "Vehicle",
+            "subcategory": "Autopilot",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Autopilot",
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": "Software 4",
+            "prereq": {
+              "kind": "rating",
+              "subject": "Software",
+              "min": 4
+            },
+            "grants": [],
+            "cost": {
+              "karma": 7
+            },
+            "description": "Use Major Action to let 1 vehicle on DCC reroll 1's on attack",
+            "effects": [],
+            "slug": "calibrate-targeting"
+          }
+        }
+      },
+      "sort": 1500,
+      "_key": "!actors.items!F9bvhqmavPcUjsXE.695e6c29a3ac9b27"
     }
   ],
   "effects": [],

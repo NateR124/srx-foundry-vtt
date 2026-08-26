@@ -697,6 +697,180 @@
       },
       "sort": 900,
       "_key": "!actors.items!Egmo7cYgPDjUeLTZ.fd2854d68f0dc1a5"
+    },
+    {
+      "_id": "ef5872e4895aac8c",
+      "name": "Dress the Part",
+      "type": "talent",
+      "system": {
+        "summary": "Social",
+        "description": "Reroll 1's on Con or Influence tests that you select outfit for",
+        "category": "social",
+        "subgroup": "",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Dress the Part",
+            "srxId": 178,
+            "category": "Social",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 6
+            },
+            "description": "Reroll 1's on Con or Influence tests that you select outfit for",
+            "effects": [],
+            "slug": "dress-the-part"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!Egmo7cYgPDjUeLTZ.ef5872e4895aac8c"
+    },
+    {
+      "_id": "7674174e610a3cbe",
+      "name": "Decoy",
+      "type": "talent",
+      "system": {
+        "summary": "Social",
+        "description": "When you hit target, use Minor Action to give target -1 Defense Score against next attack",
+        "category": "social",
+        "subgroup": "",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Decoy",
+            "srxId": 177,
+            "category": "Social",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 6
+            },
+            "description": "When you hit target, use Minor Action to give target -1 Defense Score against next attack",
+            "effects": [],
+            "slug": "decoy"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!Egmo7cYgPDjUeLTZ.7674174e610a3cbe"
+    },
+    {
+      "_id": "9a230ea45311e3c6",
+      "name": "B&E Specialist",
+      "type": "talent",
+      "system": {
+        "summary": "General",
+        "description": "Use unaugmented Stealth in place of Engineering/Software when using B&E gear (infiltration kit, scanner kit, sequencer)",
+        "category": "general",
+        "subgroup": "",
+        "karma": 7,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "B&E Specialist",
+            "srxId": 7,
+            "category": "General",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 7
+            },
+            "description": "Use unaugmented Stealth in place of Engineering/Software when using B&E gear (infiltration kit, scanner kit, sequencer)",
+            "effects": [],
+            "slug": "b-e-specialist"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!Egmo7cYgPDjUeLTZ.9a230ea45311e3c6"
     }
   ],
   "effects": [],

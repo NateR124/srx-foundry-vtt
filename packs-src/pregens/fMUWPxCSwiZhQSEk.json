@@ -560,6 +560,122 @@
       },
       "sort": 800,
       "_key": "!actors.items!fMUWPxCSwiZhQSEk.81875ddcf777cbe6"
+    },
+    {
+      "_id": "a5d64afe7cbe5c3a",
+      "name": "Guts",
+      "type": "talent",
+      "system": {
+        "summary": "General",
+        "description": "Leverage on tests against fear, intimidation, or Frightened status",
+        "category": "general",
+        "subgroup": "",
+        "karma": 3,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Guts",
+            "srxId": 47,
+            "category": "General",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 3
+            },
+            "description": "Leverage on tests against fear, intimidation, or Frightened status",
+            "effects": [],
+            "slug": "guts"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!fMUWPxCSwiZhQSEk.a5d64afe7cbe5c3a"
+    },
+    {
+      "_id": "460ccf6dd0d3f4e0",
+      "name": "Focused Concentration",
+      "type": "talent",
+      "system": {
+        "summary": "General",
+        "description": "Leverage on tests to maintain magical effects or administered programs",
+        "category": "general",
+        "subgroup": "",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Focused Concentration",
+            "srxId": 44,
+            "category": "General",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 6
+            },
+            "description": "Leverage on tests to maintain magical effects or administered programs",
+            "effects": [],
+            "slug": "focused-concentration"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!fMUWPxCSwiZhQSEk.460ccf6dd0d3f4e0"
     }
   ],
   "effects": [],

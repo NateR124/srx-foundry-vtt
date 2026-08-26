@@ -847,6 +847,180 @@
       },
       "sort": 1200,
       "_key": "!actors.items!vL20dz4XHuZ19XFV.917ceb33c6eba562"
+    },
+    {
+      "_id": "697b3b066b121512",
+      "name": "Combat Medic",
+      "type": "talent",
+      "system": {
+        "summary": "General",
+        "description": "Do not suffer Liability without Biotech tools. Administer first aid in 1 Complex Action with Biotech tools. Can remove Wounded and Unconscious status.",
+        "category": "general",
+        "subgroup": "",
+        "karma": 12,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Combat Medic",
+            "srxId": 9,
+            "category": "General",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 12
+            },
+            "description": "Do not suffer Liability without Biotech tools. Administer first aid in 1 Complex Action with Biotech tools. Can remove Wounded and Unconscious status.",
+            "effects": [],
+            "slug": "combat-medic"
+          }
+        }
+      },
+      "sort": 1300,
+      "_key": "!actors.items!vL20dz4XHuZ19XFV.697b3b066b121512"
+    },
+    {
+      "_id": "ce0141bd9b30db19",
+      "name": "Quick Healer",
+      "type": "talent",
+      "system": {
+        "summary": "General",
+        "description": "1 free hit on recovery tests and dying resistance tests",
+        "category": "general",
+        "subgroup": "",
+        "karma": 5,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Quick Healer",
+            "srxId": 62,
+            "category": "General",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 5
+            },
+            "description": "1 free hit on recovery tests and dying resistance tests",
+            "effects": [],
+            "slug": "quick-healer"
+          }
+        }
+      },
+      "sort": 1400,
+      "_key": "!actors.items!vL20dz4XHuZ19XFV.ce0141bd9b30db19"
+    },
+    {
+      "_id": "e182fc956172493e",
+      "name": "Knowledgeable",
+      "type": "talent",
+      "system": {
+        "summary": "General",
+        "description": "Gain 2 knowledge domains. Additional knowledge domains cost 2 Karma.",
+        "category": "general",
+        "subgroup": "",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Knowledgeable",
+            "srxId": 54,
+            "category": "General",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "Gain 2 knowledge domains. Additional knowledge domains cost 2 Karma.",
+            "effects": [],
+            "slug": "knowledgeable"
+          }
+        }
+      },
+      "sort": 1500,
+      "_key": "!actors.items!vL20dz4XHuZ19XFV.e182fc956172493e"
     }
   ],
   "effects": [],

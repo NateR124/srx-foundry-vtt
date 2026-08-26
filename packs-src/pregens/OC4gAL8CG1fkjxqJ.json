@@ -981,6 +981,188 @@
       },
       "sort": 1200,
       "_key": "!actors.items!OC4gAL8CG1fkjxqJ.79fd09f546991612"
+    },
+    {
+      "_id": "c841f3243c75472d",
+      "name": "Grease Monkey",
+      "type": "talent",
+      "system": {
+        "summary": "Vehicle",
+        "description": "Repair 2 damage at no cost",
+        "category": "vehicle",
+        "subgroup": "",
+        "karma": 5,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Grease Monkey",
+            "srxId": 364,
+            "category": "Vehicle",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": "Engineering 4",
+            "prereq": {
+              "kind": "rating",
+              "subject": "Engineering",
+              "min": 4
+            },
+            "grants": [],
+            "cost": {
+              "karma": 5
+            },
+            "description": "Repair 2 damage at no cost",
+            "effects": [],
+            "slug": "grease-monkey"
+          }
+        }
+      },
+      "sort": 1300,
+      "_key": "!actors.items!OC4gAL8CG1fkjxqJ.c841f3243c75472d"
+    },
+    {
+      "_id": "9ccd95011d20495b",
+      "name": "Juryrig",
+      "type": "talent",
+      "system": {
+        "summary": "Vehicle",
+        "description": "Remove Wounded status from vehicle",
+        "category": "vehicle",
+        "subgroup": "",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Juryrig",
+            "srxId": 369,
+            "category": "Vehicle",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": "Engineering 4",
+            "prereq": {
+              "kind": "rating",
+              "subject": "Engineering",
+              "min": 4
+            },
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "Remove Wounded status from vehicle",
+            "effects": [],
+            "slug": "juryrig"
+          }
+        }
+      },
+      "sort": 1400,
+      "_key": "!actors.items!OC4gAL8CG1fkjxqJ.9ccd95011d20495b"
+    },
+    {
+      "_id": "4301ab027e4039cf",
+      "name": "Careful Control",
+      "type": "talent",
+      "system": {
+        "summary": "Vehicle",
+        "description": "Use Driving or Piloting in place of Stealth",
+        "category": "vehicle",
+        "subgroup": "",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Careful Control",
+            "srxId": 348,
+            "category": "Vehicle",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "Use Driving or Piloting in place of Stealth",
+            "effects": [],
+            "slug": "careful-control"
+          }
+        }
+      },
+      "sort": 1500,
+      "_key": "!actors.items!OC4gAL8CG1fkjxqJ.4301ab027e4039cf"
     }
   ],
   "effects": [],

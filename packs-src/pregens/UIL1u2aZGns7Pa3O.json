@@ -771,6 +771,234 @@
       },
       "sort": 900,
       "_key": "!actors.items!UIL1u2aZGns7Pa3O.51d82ce1ad2fb57f"
+    },
+    {
+      "_id": "beafc559408b421b",
+      "name": "Built Tough",
+      "type": "talent",
+      "system": {
+        "summary": "General",
+        "description": "+2 Stun Health",
+        "category": "general",
+        "subgroup": "",
+        "karma": 10,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [
+        {
+          "name": "Built Tough",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.monitors.stun.bonus",
+              "mode": 2,
+              "value": "2"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "3c3328805c0cd305",
+          "_key": "!actors.items.effects!UIL1u2aZGns7Pa3O.beafc559408b421b.3c3328805c0cd305"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Built Tough",
+            "srxId": 8,
+            "category": "General",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 10
+            },
+            "description": "+2 Stun Health",
+            "effects": [
+              {
+                "key": "Stun Health",
+                "value": 2
+              }
+            ],
+            "slug": "built-tough"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!UIL1u2aZGns7Pa3O.beafc559408b421b"
+    },
+    {
+      "_id": "f431960534cb449e",
+      "name": "Quick Draw",
+      "type": "talent",
+      "system": {
+        "summary": "General",
+        "description": "Draw/Stow Weapon as Free Action once per Action Phase",
+        "category": "general",
+        "subgroup": "",
+        "karma": 3,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Quick Draw",
+            "srxId": 61,
+            "category": "General",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 3
+            },
+            "description": "Draw/Stow Weapon as Free Action once per Action Phase",
+            "effects": [],
+            "slug": "quick-draw"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!UIL1u2aZGns7Pa3O.f431960534cb449e"
+    },
+    {
+      "_id": "9035d00ed1702870",
+      "name": "High Pain Tolerance",
+      "type": "talent",
+      "system": {
+        "summary": "General",
+        "description": "+2 Wounded Limit",
+        "category": "general",
+        "subgroup": "",
+        "karma": 10,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [
+        {
+          "name": "High Pain Tolerance",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.derivedMods.woundedLimit",
+              "mode": 2,
+              "value": "2"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "0ee4a749a9e68119",
+          "_key": "!actors.items.effects!UIL1u2aZGns7Pa3O.9035d00ed1702870.0ee4a749a9e68119"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "High Pain Tolerance",
+            "srxId": 48,
+            "category": "General",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 10
+            },
+            "description": "+2 Wounded Limit",
+            "effects": [
+              {
+                "key": "Wounded Limit",
+                "value": 2
+              }
+            ],
+            "slug": "high-pain-tolerance"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!UIL1u2aZGns7Pa3O.9035d00ed1702870"
     }
   ],
   "effects": [],

@@ -11,10 +11,9 @@
  * karma, category) is all indexable, so the 500+ full documents are never
  * fetched up front; only a talent actually bought/committed is loaded.
  *
- * The pack contains duplicate-named docs (the catalog TSV lists some talents
- * under several subheadings, and the import kept one doc per appearance —
- * e.g. Initiation ×4, identical karma). The picker collapses those to one
- * entry per name: 517 docs → 500 choices.
+ * Entries are collapsed to one per name — the pack has been deduplicated
+ * (1.5.0), but world items imported from older packs may still carry
+ * duplicate-named copies, and world talents override shipped ones by name.
  */
 
 const PACK_ID = "srx.talents";

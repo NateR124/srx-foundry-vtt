@@ -853,6 +853,183 @@
       },
       "sort": 900,
       "_key": "!actors.items!17vBgIAJSs3n7rx9.cdb1dac69df9d1c8"
+    },
+    {
+      "_id": "58a902d2386c7c63",
+      "name": "Knockback",
+      "type": "talent",
+      "system": {
+        "summary": "Weapons / CC (Clubs, Unarmed), F (Shotguns, Pistols - Single Shot Firing Mode)",
+        "description": "1 Crit Die is Slam Die - if you roll a 6, knock target back 2m",
+        "category": "weapons",
+        "subgroup": "CC (Clubs, Unarmed), F (Shotguns, Pistols - Single Shot Firing Mode)",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Knockback",
+            "srxId": 144,
+            "category": "Weapons",
+            "subcategory": "CC (Clubs, Unarmed), F (Shotguns, Pistols - Single Shot Firing Mode)",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "CC (Clubs, Unarmed), F (Shotguns, Pistols - Single Shot Firing Mode)",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": "TRUE",
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "1 Crit Die is Slam Die - if you roll a 6, knock target back 2m",
+            "effects": [],
+            "slug": "knockback"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!17vBgIAJSs3n7rx9.58a902d2386c7c63"
+    },
+    {
+      "_id": "c41cb7a412c6a69b",
+      "name": "Reaping Attack",
+      "type": "talent",
+      "system": {
+        "summary": "Weapons / CC",
+        "description": "Cleave through enemy and repeat attack against another target",
+        "category": "weapons",
+        "subgroup": "CC",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Reaping Attack",
+            "srxId": 157,
+            "category": "Weapons",
+            "subcategory": "CC",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "CC",
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "Cleave through enemy and repeat attack against another target",
+            "effects": [],
+            "slug": "reaping-attack"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!17vBgIAJSs3n7rx9.c41cb7a412c6a69b"
+    },
+    {
+      "_id": "475780effe736376",
+      "name": "Iron Stance",
+      "type": "talent",
+      "system": {
+        "summary": "Weapons / CC",
+        "description": "Leverage to resist being thrown, shoved, tripped, or physically forced to move against your will.",
+        "category": "weapons",
+        "subgroup": "CC",
+        "karma": 3,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Iron Stance",
+            "srxId": 143,
+            "category": "Weapons",
+            "subcategory": "CC",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "CC",
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 3
+            },
+            "description": "Leverage to resist being thrown, shoved, tripped, or physically forced to move against your will.",
+            "effects": [],
+            "slug": "iron-stance"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!17vBgIAJSs3n7rx9.475780effe736376"
     }
   ],
   "effects": [],

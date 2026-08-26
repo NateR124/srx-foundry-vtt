@@ -1016,6 +1016,184 @@
       },
       "sort": 1400,
       "_key": "!actors.items!34MQFSGMHdUUztbA.91fab249ccddb07a"
+    },
+    {
+      "_id": "0162f397964c06a0",
+      "name": "B&E Specialist",
+      "type": "talent",
+      "system": {
+        "summary": "General",
+        "description": "Use unaugmented Stealth in place of Engineering/Software when using B&E gear (infiltration kit, scanner kit, sequencer)",
+        "category": "general",
+        "subgroup": "",
+        "karma": 7,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "B&E Specialist",
+            "srxId": 7,
+            "category": "General",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 7
+            },
+            "description": "Use unaugmented Stealth in place of Engineering/Software when using B&E gear (infiltration kit, scanner kit, sequencer)",
+            "effects": [],
+            "slug": "b-e-specialist"
+          }
+        }
+      },
+      "sort": 1500,
+      "_key": "!actors.items!34MQFSGMHdUUztbA.0162f397964c06a0"
+    },
+    {
+      "_id": "80d4c9961eda338f",
+      "name": "Silent Professional",
+      "type": "talent",
+      "system": {
+        "summary": "General",
+        "description": "Take Hide action with Partial Cover or Medium Visibility Impairment. When using Hide action, Run as Minor Action",
+        "category": "general",
+        "subgroup": "",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Silent Professional",
+            "srxId": 69,
+            "category": "General",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": "Stealth 5",
+            "prereq": {
+              "kind": "rating",
+              "subject": "Stealth",
+              "min": 5
+            },
+            "grants": [],
+            "cost": {
+              "karma": 6
+            },
+            "description": "Take Hide action with Partial Cover or Medium Visibility Impairment. When using Hide action, Run as Minor Action",
+            "effects": [],
+            "slug": "silent-professional"
+          }
+        }
+      },
+      "sort": 1600,
+      "_key": "!actors.items!34MQFSGMHdUUztbA.80d4c9961eda338f"
+    },
+    {
+      "_id": "bab45e0c5276ca02",
+      "name": "Situational Awareness",
+      "type": "talent",
+      "system": {
+        "summary": "Social",
+        "description": "+Insight/3 to tests with mental attribute to end status or ongoing effect",
+        "category": "social",
+        "subgroup": "",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Situational Awareness",
+            "srxId": 201,
+            "category": "Social",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": null,
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "+Insight/3 to tests with mental attribute to end status or ongoing effect",
+            "effects": [],
+            "slug": "situational-awareness"
+          }
+        }
+      },
+      "sort": 1700,
+      "_key": "!actors.items!34MQFSGMHdUUztbA.bab45e0c5276ca02"
     }
   ],
   "effects": [],
