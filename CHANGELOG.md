@@ -7,7 +7,7 @@ The prose between a version heading and its first `###` subsection is the
 player-facing summary — release CI copies it into that tag's GitHub release
 notes, so keep it short, plain-language, and about what changed at the table.
 
-## Unreleased
+## 1.3.0 — 2026-08-26 — Table-ready pregens
 
 Pregens are now table-ready on every tab, not just Gear. Each archetype
 carries its cyberware — installed, with working stat effects and live Essence
