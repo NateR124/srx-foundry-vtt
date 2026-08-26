@@ -39,12 +39,10 @@ headless Foundry (matrix depth panels + host spider panel, vehicle cockpit +
 chase tracker, chargen wizard + advancement, foci lifecycle incl. the
 sustaining-focus cascade, astral projection time accrual, and a two-client
 multiplayer pass: player join/ownership, GM-executor cross-ownership relay,
-player rolls). Still pending a real pass:
+player rolls, and the full combat pipeline click-through — player attacking a
+GM-owned token through the attack dialog, defender resisting from the chat
+card, damage applied to the unlinked token actor). Still pending a real pass:
 
-- **Full combat pipeline click-through across clients** — a player attacking
-  a GM-owned token through the attack dialog, the defender resisting from the
-  chat card, damage applied. The relay and roll layers are verified; the
-  card-button chain is not.
 - **Chase-turn automation and DCC in anger** — the tracker opens and renders;
   a multi-vehicle chase with rolled environments hasn't been driven.
 - **Bulk Active Effect application through the catalog importer UI** — the

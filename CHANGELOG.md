@@ -7,7 +7,7 @@ The prose between a version heading and its first `###` subsection is the
 player-facing summary — release CI copies it into that tag's GitHub release
 notes, so keep it short, plain-language, and about what changed at the table.
 
-## Unreleased
+## 1.5.0 — 2026-08-26 — Known-gaps sweep
 
 A sweep through the known-gaps list. Cyberware now enforces its install
 chains — you'll be told you need a datajack before wiring in Wired Reflexes,
@@ -36,7 +36,8 @@ multiplayer pass of the permission relays.
 - `srx.talents` pack deduplicated: 517 docs → 500 unique talents (+47 traits).
 - KNOWN-GAPS trimmed to what's genuinely open; the live-smoke backlog is now
   verified (matrix panels, host spider, vehicle cockpit + chase tracker, foci
-  cascade, astral time budget, multiplayer join/relay/rolls).
+  cascade, astral time budget, multiplayer join/relay/rolls, and the full
+  player-vs-GM combat pipeline: attack dialog → hit card → resist → damage).
 
 ## 1.4.0 — 2026-08-26 — Foci become real
 
