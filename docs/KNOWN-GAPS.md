@@ -16,28 +16,15 @@ work is. Three categories:
 - **Great Forms** and **alchemy** content/automation are not built.
 - **Vehicle-specific talents** are honored only as roll modifiers inside the
   vehicle rules, not as a dedicated talent-item subsystem.
-- **Master Craftsman** (+1 safe active focus) is not auto-detected by the
-  foci over-limit warnings (`module/magic/foci.mjs`).
-- **Weapon mod mechanical effects.** Mods attach to weapons with full mount/
-  compatibility validation (1.1.0), but their *mechanical* consequences
-  (Gas-vent recoil compensation, Imaging Scope aim bonuses, Silencer
-  perception penalties) are not wired into the attack pipeline — the catalog
-  carries no machine-readable effect columns for mods, so players apply them
-  via the roll dialogs' modifier inputs.
-- **'Ware prerequisites/incompatibilities are advisory.** Essence costs and
-  flat stat effects automate (1.1.0); `prereq`/`incompatible` chains (DNI
-  before Wired Reflexes, Dermal Plating vs Orthoskin) display on the item but
-  are not enforced on install.
-- **17 duplicate-name talent docs in the `srx.talents` pack.** The catalog
-  TSV lists some talents under several subheadings and the import kept one
-  doc per appearance (Initiation ×4, Astral Perception ×4, Reagents ×3, …—
-  identical karma). The chargen/advancement pickers collapse them to one
-  entry per name (517 docs → 500 choices); deduplicating the pack source
-  itself is the real fix.
+- **Weapon mod mechanical effects (beyond Gas-vent).** An attached Gas-vent
+  negates the recoil −1 (R59, 1.5.0); the other mods' consequences (Imaging
+  Scope aim bonuses, Silencer perception penalties, Bipod) stay manual via
+  the roll dialogs' modifier inputs — the catalog carries no machine-readable
+  effect columns and the mod descriptions are empty, so wiring them means
+  finding the book text first.
 - **Pregen kits are reconstructions.** The original SRX loadout source is
   gone, so pregen gear/'ware/spells/talents/foci are keyed to each
   archetype's skills (`scripts/gear-pregens.mjs`), not the book sheets.
-  Mundane archetypes still carry no general/social/weapon talents.
 - **Most focus types have no automated effect.** The 1.4.0 focus items carry
   the catalog's Force/cost data, and the stat-granting types (power, sorcery,
   skill, willpower, protective, …) apply their bonus while active — but
@@ -47,18 +34,23 @@ work is. Three categories:
 
 ## 2. Built but not live-verified ("pending live smoke")
 
-The pure rules layers below are unit-tested, but their document/UI layers were
-raised to "done" on merged code without a fresh in-Foundry pass. Treat
-verifying these at a real table (or via the Quench batches — see
-`module/quench.mjs`) as high-value review work:
+Most of the old backlog here was live-verified in 1.5.0 against a scratch
+headless Foundry (matrix depth panels + host spider panel, vehicle cockpit +
+chase tracker, chargen wizard + advancement, foci lifecycle incl. the
+sustaining-focus cascade, astral projection time accrual, and a two-client
+multiplayer pass: player join/ownership, GM-executor cross-ownership relay,
+player rolls). Still pending a real pass:
 
-- Matrix character-tab depth panels and the host spider panel (DOM injection
-  is defensive/no-throw, so a rendering failure would be *silent*).
-- Vehicle depth: chase-turn automation, DCC drone control, mounts, repairs.
-- The two chargen ApplicationV2 UIs (priority wizard, Karma advancement).
-- Bulk Active Effect application on import.
-- Foci lifecycle, spirit services/expiry, astral projection time budget.
-- Full multiplayer smoke of the combat pipeline (cross-ownership relays).
+- **Full combat pipeline click-through across clients** — a player attacking
+  a GM-owned token through the attack dialog, the defender resisting from the
+  chat card, damage applied. The relay and roll layers are verified; the
+  card-button chain is not.
+- **Chase-turn automation and DCC in anger** — the tracker opens and renders;
+  a multi-vehicle chase with rolled environments hasn't been driven.
+- **Bulk Active Effect application through the catalog importer UI** — the
+  importer needs the pre-1.0 builder TSVs, which are no longer distributed;
+  the same AE builder is exercised by the pregen bake and the 1.1.0/1.4.0
+  migrations, so this path matters only for bring-your-own-data holdouts.
 
 ## 3. Interpretations awaiting confirmation
 

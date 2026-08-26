@@ -7,6 +7,37 @@ The prose between a version heading and its first `###` subsection is the
 player-facing summary — release CI copies it into that tag's GitHub release
 notes, so keep it short, plain-language, and about what changed at the table.
 
+## Unreleased
+
+A sweep through the known-gaps list. Cyberware now enforces its install
+chains — you'll be told you need a datajack before wiring in Wired Reflexes,
+and that Dermal Plating won't sit alongside Orthoskin (blocked items land in
+your bag as spares, not lost). A gas-vent on your gun negates the recoil
+penalty automatically. The foci safe limit recognizes Master Craftsman. The
+talent compendium loses its 17 duplicate entries, and every pregen rounds
+out with role talents — social tricks for faces, gun talents for samurai,
+vehicle talents for riggers. Under the hood, the whole "pending live smoke"
+backlog was verified against a live server, including a two-client
+multiplayer pass of the permission relays.
+
+### Added
+- **'Ware install enforcement**: prereq chains and incompatibilities from the
+  catalog are checked when installing from the sheet (refused with a message
+  naming what's missing) and when dropping 'ware onto a character (created
+  as an uninstalled spare with a notice). Pregen kits gained their DNI links
+  and are validated at bake time.
+- **Gas-vent recoil compensation** (provisional R59): an attached Gas-vent or
+  Advanced Gas-vent negates the recoil −1 in the attack dialog.
+- **Master Craftsman** raises the safe active-foci limit by 1 automatically.
+- Pregens: role talents for every archetype (mundanes included); full casters
+  get Focused Concentration.
+
+### Changed
+- `srx.talents` pack deduplicated: 517 docs → 500 unique talents (+47 traits).
+- KNOWN-GAPS trimmed to what's genuinely open; the live-smoke backlog is now
+  verified (matrix panels, host spider, vehicle cockpit + chase tracker, foci
+  cascade, astral time budget, multiplayer join/relay/rolls).
+
 ## 1.4.0 — 2026-08-26 — Foci become real
 
 Foci are real items now. The magic-gear compendium's 62 foci (31 bought, 31
