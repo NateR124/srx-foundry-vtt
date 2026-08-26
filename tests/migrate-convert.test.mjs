@@ -3,7 +3,8 @@ import { readdirSync, readFileSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import {
-  catalogTypeOf, wareSystemFromGear, weaponModSystemFromGear, weaponMountsFromCatalog
+  catalogTypeOf, wareSystemFromGear, weaponModSystemFromGear, weaponMountsFromCatalog,
+  isFocusGear, focusFromGear
 } from "../module/migrations/convert.mjs";
 import { SRX } from "../module/config.mjs";
 
@@ -108,5 +109,45 @@ describe("weaponMountsFromCatalog against the weapons pack", () => {
     expect(withMounts).toBe(56);
     const sword = weapons.find((d) => d.name === "Sword");
     expect(Object.values(weaponMountsFromCatalog(sword))).toEqual([0, 0, 0, 0, 0, 0, 0, 0, 0]);
+  });
+});
+
+describe("focusFromGear against the magic-gear pack (1.4.0)", () => {
+  const focusDocs = readPack("magic-gear").filter((d) => d.type === "focus" || isFocusGear(d));
+
+  it("converts all 62 foci catalog rows (31 bought + 31 crafted)", () => {
+    expect(focusDocs.length).toBe(62);
+    for (const doc of focusDocs) {
+      // Reconstruct the 1.3.x world shape: a generic magic-gear item.
+      const legacy = { ...doc, type: "gear", system: { summary: "Foci", description: "", subtype: "", rating: 0, quantity: 1, cost: 2000 } };
+      const { name, system } = focusFromGear(legacy);
+      expect(name).toMatch(/ Focus( \(Crafted\))?$/);
+      expect(SRX.focusTypes).toContain(system.focusType);
+      expect(system.force).toBeGreaterThanOrEqual(1);
+      expect(system.bonded).toBe(false);
+    }
+  });
+
+  it("keeps the fixed-Force table (Power = Force 8, cost Force² × 2,000¥)", () => {
+    const power = focusDocs.find((d) => d.flags.srx.catalogData.name === "Power");
+    const { name, system } = focusFromGear(power);
+    expect(name).toBe("Power Focus");
+    expect(system.force).toBe(8);
+    expect(system.cost).toBe(128000);
+    expect(system.greater).toBe(false);
+  });
+
+  it("maps Greater variants and the catalog's Mysiticism typo", () => {
+    const gw = focusDocs.find((d) => d.flags.srx.catalogData.name === "Weapon, Greater");
+    expect(focusFromGear(gw)).toMatchObject({ name: "Greater Weapon Focus", system: { focusType: "weapon", greater: true, force: 8 } });
+    const mys = focusDocs.find((d) => d.flags.srx.catalogData.name === "Mysiticism");
+    expect(focusFromGear(mys).name).toBe("Mysticism Focus");
+  });
+
+  it("crafted variants halve the base (Power crafted = 64,000¥)", () => {
+    const pc = focusDocs.find((d) => d.flags.srx.catalogData.name === "Power (Crafted)");
+    const { name, system } = focusFromGear(pc);
+    expect(name).toBe("Power Focus (Crafted)");
+    expect(system.cost).toBe(64000);
   });
 });

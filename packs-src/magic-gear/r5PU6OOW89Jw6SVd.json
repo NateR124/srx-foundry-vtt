@@ -1,18 +1,23 @@
 {
   "_id": "r5PU6OOW89Jw6SVd",
-  "name": "Qi (Crafted)",
-  "type": "gear",
+  "name": "Qi Focus (Crafted)",
+  "type": "focus",
   "system": {
-    "summary": "Foci (Crafted)",
+    "summary": "Focus — Force 5",
     "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 1000
+    "source": "",
+    "cost": 25000,
+    "legality": "",
+    "focusType": "qi",
+    "force": 5,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Qi (Crafted)",
         "srxId": 9074,

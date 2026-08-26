@@ -56,6 +56,7 @@ const gear = loadPack("gear", "gear");
 const ware = loadPack("gear", "ware");
 const spells = loadPack("spells");
 const talents = loadPack("talents", "talent");
+const foci = loadPack("magic-gear", "focus");
 
 /**
  * Look up a catalog item by name. `prefer` pins the source pack — several
@@ -64,7 +65,7 @@ const talents = loadPack("talents", "talent");
  */
 function catalog(name, prefer = null) {
   const doc = prefer?.get(name) ?? weapons.get(name) ?? armor.get(name) ?? gear.get(name)
-    ?? spells.get(name) ?? talents.get(name);
+    ?? spells.get(name) ?? talents.get(name) ?? foci.get(name);
   if (!doc) throw new Error(`catalog item not found in packs: "${name}"`);
   return doc;
 }
@@ -154,30 +155,41 @@ const LOADOUTS = [
   { match: /^Mage Burn-out/, weapons: ["Streetline Special"], armor: "Armor Clothing", gear: ["Stim Patch"],
     magic: 2, spells: ["Manabolt", "Heal", "Light"] },
   { match: /^Mage Charlatan/, weapons: ["Fichetti Security 600"], armor: "Lined Coat", gear: ["Diguise Kit"],
-    magic: 6, spells: ["Influence", "Disguise", "Phantasm", "Trid Phantasm", "Alter Memory", "Assess Truth", "Manabolt", "Invisibility"] },
+    magic: 6, spells: ["Influence", "Disguise", "Phantasm", "Trid Phantasm", "Alter Memory", "Assess Truth", "Manabolt", "Invisibility"],
+    foci: [["Sustaining Focus", 3]] },
   { match: /^Mage Combat Mage/, weapons: ["Fichetti Security 600"], armor: "Lined Coat", gear: [],
-    magic: 6, spells: ["Manabolt", "Powerball", "Fireball", "Lightning Bolt", "Ice Spear", "Heal", "Combat Sense", "Resist Pain"] },
+    magic: 6, spells: ["Manabolt", "Powerball", "Fireball", "Lightning Bolt", "Ice Spear", "Heal", "Combat Sense", "Resist Pain"],
+    foci: [["Sustaining Focus", 3]] },
   { match: /^Mage Warder/, weapons: ["Fichetti Security 600"], armor: "Lined Coat", gear: [],
-    magic: 6, spells: ["Detect Magic", "Analyze Magic", "Combat Sense", "Alertness", "Manabolt", "Entangle", "Bind", "Heal"] },
+    magic: 6, spells: ["Detect Magic", "Analyze Magic", "Combat Sense", "Alertness", "Manabolt", "Entangle", "Bind", "Heal"],
+    foci: [["Sustaining Focus", 3]] },
   { match: /^Mage/, weapons: ["Fichetti Security 600"], armor: "Lined Coat", gear: [],
-    magic: 6, spells: ["Manabolt", "Powerbolt", "Manaball", "Heal", "Invisibility", "Levitate", "Combat Sense", "Light"] },
+    magic: 6, spells: ["Manabolt", "Powerbolt", "Manaball", "Heal", "Invisibility", "Levitate", "Combat Sense", "Light"],
+    foci: [["Sustaining Focus", 3]] },
   { match: /^Sorcerer Adept \(Troll\)/, weapons: ["Sword"], armor: "Lined Coat", gear: [],
     magic: 5, spells: ["Manabolt", "Powerbolt", "Combat Sense", "Heal", "Fleet Feet", "Invisibility"],
-    talents: ["Astral Perception", "Magical Defenses", "Superior Focus"] },
+    talents: ["Astral Perception", "Magical Defenses", "Superior Focus"],
+    foci: ["Sorcery Focus"] },
   { match: /^Sorcerer Adept/, weapons: ["Fichetti Security 600"], armor: "Lined Coat", gear: [],
     magic: 5, spells: ["Manabolt", "Powerbolt", "Combat Sense", "Heal", "Fleet Feet", "Invisibility"],
-    talents: ["Astral Perception", "Magical Defenses", "Superior Focus"] },
+    talents: ["Astral Perception", "Magical Defenses", "Superior Focus"],
+    foci: ["Sorcery Focus"] },
 
   { match: /^Shaman Hunter/, weapons: ["Remington 950", "Combat Knife"], armor: "Lined Coat", gear: ["Survival Kit"],
-    magic: 6, spells: ["Detect Life", "Clairvoyance", "Combat Sense", "Manabolt", "Powerbolt", "Heal", "Fleet Feet", "Enhance Aim"] },
+    magic: 6, spells: ["Detect Life", "Clairvoyance", "Combat Sense", "Manabolt", "Powerbolt", "Heal", "Fleet Feet", "Enhance Aim"],
+    foci: [["Supplicating Focus", 3]] },
   { match: /^Shaman Lifebinder/, weapons: [], armor: "Lined Coat", gear: ["Medkit", ["Trauma Patch", 2], "Antidote Patch"],
-    magic: 6, spells: ["Heal", "Cure Disease", "Antidote", "Resist Pain", "Oxygenate", "Strengthen", "Detect Life", "Alertness"] },
+    magic: 6, spells: ["Heal", "Cure Disease", "Antidote", "Resist Pain", "Oxygenate", "Strengthen", "Detect Life", "Alertness"],
+    foci: [["Supplicating Focus", 3]] },
   { match: /^Shaman Mystic/, weapons: ["Recurve Bow", "Staff"], armor: "Lined Coat", gear: ["Survival Kit"],
-    magic: 6, spells: ["Detect Magic", "Analyze Magic", "Assess Truth", "Mindlink", "Combat Sense", "Heal"] },
+    magic: 6, spells: ["Detect Magic", "Analyze Magic", "Assess Truth", "Mindlink", "Combat Sense", "Heal"],
+    foci: ["Mysticism Focus"] },
   { match: /^Shaman Dreamweaver/, weapons: ["Walther Palm Pistol"], armor: "Lined Coat", gear: [],
-    magic: 6, spells: ["Phantasm", "Chaotic World", "Confusion", "Stupefy", "Mindlink", "Alter Memory", "Heal", "Manabolt"] },
+    magic: 6, spells: ["Phantasm", "Chaotic World", "Confusion", "Stupefy", "Mindlink", "Alter Memory", "Heal", "Manabolt"],
+    foci: [["Supplicating Focus", 3]] },
   { match: /^Shaman$/, weapons: ["Remington Roomsweeper"], armor: "Lined Coat", gear: ["Survival Kit"],
-    magic: 6, spells: ["Manabolt", "Heal", "Levitate", "Detect Life", "Invisibility", "Entangle"] },
+    magic: 6, spells: ["Manabolt", "Heal", "Levitate", "Detect Life", "Invisibility", "Entangle"],
+    foci: [["Supplicating Focus", 3]] },
 
   { match: /^Physical Adept Ghost/, weapons: ["Ceska Black Scorpion", "Combat Knife"], armor: "Chameleon Suit", gear: ["Climbing Gear", "Stealth Rope"],
     magic: 5, talents: ["Light Feet", "Blur", "Vanish", "Enhanced Awareness", "Supreme Balance", "Ultrasonic"] },
@@ -200,7 +212,7 @@ function did(...parts) {
 }
 
 /** Clone a catalog doc into embedded-item form, baking its stat AEs. */
-function embed(actorId, name, slot, { equipped = false, qty = null, ware = null, from = null, type = null } = {}) {
+function embed(actorId, name, slot, { equipped = false, qty = null, ware = null, focus = null, from = null, type = null } = {}) {
   const src = catalog(name, from);
   if (type && src.type !== type) throw new Error(`"${name}" resolved to type ${src.type}, expected ${type}`);
   const id = did(actorId, name, slot);
@@ -221,6 +233,10 @@ function embed(actorId, name, slot, { equipped = false, qty = null, ware = null,
   if (ware) {
     item.system.installed = true;
     if (item.system.maxRating != null) item.system.rating = ware.rating ?? 1;
+  }
+  if (focus) {
+    item.system.bonded = true;
+    if (focus.force) item.system.force = focus.force;
   }
   // Stat effects: baked here because pack-embedded items never pass the
   // preCreateItem hook that generates them at drop time.
@@ -257,6 +273,10 @@ for (const f of fs.readdirSync(dir)) {
   }
   for (const s of kit.spells ?? []) items.push(embed(doc._id, s, slot++, { from: spells, type: "spell" }));
   for (const t of kit.talents ?? []) items.push(embed(doc._id, t, slot++, { from: talents, type: "talent" }));
+  for (const fc of kit.foci ?? []) {
+    const [name, force] = Array.isArray(fc) ? fc : [fc, null];
+    items.push(embed(doc._id, name, slot++, { focus: { force }, from: foci, type: "focus" }));
+  }
   doc.items = items;
 
   // Magic/Resonance: table value or mundane 0 (the import left a flat 1 on

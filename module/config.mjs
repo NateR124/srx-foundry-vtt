@@ -62,7 +62,14 @@ SRX.spellDurations = ["instantaneous", "sustained", "timed", "permanent"];
 
 /** Focus type keys (subset; expand with catalog). */
 SRX.focusTypes = [
-  "power", "qi", "sorcery", "conjuring", "weapon", "sustaining", "spell", "spirit", "adept"
+  "power", "qi", "sorcery", "conjuring", "weapon", "sustaining", "spell", "spirit", "adept",
+  // 1.4.0: the full foci catalog became real focus items (migrations/convert.mjs);
+  // rules/foci.mjs already special-cases several of these (willpower, protective,
+  // skill, channeling, mysticism) — the rest are roll-context or narrative foci.
+  "channeling", "mysticism", "willpower", "protective", "skill", "healing",
+  "potency", "penetrating", "lethalFist", "astralArmor", "calling", "alchemical",
+  "potentiality", "fetish", "supplicating", "banishing", "binding",
+  "hastenedAnima", "unerringSorcery"
 ];
 
 /**

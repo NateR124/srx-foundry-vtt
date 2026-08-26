@@ -1,18 +1,23 @@
 {
   "_id": "Q9LVrpQPmdoNyUGC",
-  "name": "Sustaining (Crafted)",
-  "type": "gear",
+  "name": "Sustaining Focus (Crafted)",
+  "type": "focus",
   "system": {
-    "summary": "Foci (Crafted)",
+    "summary": "Focus — variable Force, cost Force × Force × 1,000¥",
     "description": "",
-    "subtype": "Focus",
-    "rating": 15,
-    "quantity": 1,
-    "cost": 1000
+    "source": "",
+    "cost": 1000,
+    "legality": "",
+    "focusType": "sustaining",
+    "force": 1,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Sustaining (Crafted)",
         "srxId": 9081,

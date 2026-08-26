@@ -1,18 +1,23 @@
 {
   "_id": "mGHKyb1a4pgbmJvz",
-  "name": "Fetish",
-  "type": "gear",
+  "name": "Fetish Focus",
+  "type": "focus",
   "system": {
-    "summary": "Foci",
-    "description": "",
-    "subtype": "Focus",
-    "rating": 15,
-    "quantity": 1,
-    "cost": 2000
+    "summary": "Focus — variable Force, cost Force × Force × 2,000¥",
+    "description": "<p>Options: Arcane Onslaught, Battle Mage, Legerdemain, Magical Marksman, Refined Weaving, Sorcerous Precision, Spell Shaping, Spell Shield</p>",
+    "source": "",
+    "cost": 2000,
+    "legality": "",
+    "focusType": "fetish",
+    "force": 1,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Fetish",
         "srxId": 9024,

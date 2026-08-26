@@ -9,13 +9,14 @@
  */
 
 import {
-  catalogTypeOf, wareSystemFromGear, weaponModSystemFromGear, weaponMountsFromCatalog
+  catalogTypeOf, wareSystemFromGear, weaponModSystemFromGear, weaponMountsFromCatalog,
+  isFocusGear, focusFromGear
 } from "./convert.mjs";
 import { catalogEffectDataForItem } from "../active-effect/catalog-effects.mjs";
 
 const SETTING = "systemMigrationVersion";
 /** Bump when a release needs a new migration pass. */
-const NEEDS_MIGRATION_BELOW = "1.1.0";
+const NEEDS_MIGRATION_BELOW = "1.4.0";
 
 export function registerMigrationSetting() {
   game.settings.register("srx", SETTING, {
@@ -32,6 +33,11 @@ function conversionFor(item) {
   }
   if (item.type === "gear" && ct === "weapon-mod") {
     return { _id: item.id, type: "weaponMod", system: weaponModSystemFromGear(obj) };
+  }
+  // 1.4.0: foci imported as magic-gear become real focus items.
+  if (item.type === "gear" && ct === "magic-gear" && isFocusGear(obj)) {
+    const { name, system } = focusFromGear(obj);
+    return { _id: item.id, name, type: "focus", system };
   }
   if (item.type === "weapon") {
     const current = obj.system?.mounts ?? {};

@@ -782,6 +782,56 @@
       },
       "sort": 1200,
       "_key": "!actors.items!2B5m46qTzpjyQxuT.273e86ab165bd24b"
+    },
+    {
+      "_id": "70e2efaaad728674",
+      "name": "Sustaining Focus",
+      "type": "focus",
+      "system": {
+        "summary": "Focus — variable Force, cost Force × Force × 2,000¥",
+        "description": "",
+        "source": "",
+        "cost": 2000,
+        "legality": "",
+        "focusType": "sustaining",
+        "force": 3,
+        "greater": false,
+        "bonded": true,
+        "active": false,
+        "imbued": ""
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "focus",
+          "catalogData": {
+            "name": "Sustaining",
+            "srxId": 9042,
+            "category": "Foci",
+            "cost": 2000,
+            "costDisplay": "Force x Force x 2,000",
+            "properties": [],
+            "options": [],
+            "type": "Focus",
+            "type2": "Magical Gear",
+            "type3": null,
+            "fixedRating": null,
+            "maxRating": 15,
+            "ratingSquared": true,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "talentPrereq": null,
+            "maxQty": null,
+            "karmaCost": null,
+            "crafted": false,
+            "equipPrereqs": [],
+            "alwaysUnique": true,
+            "slug": "sustaining"
+          }
+        }
+      },
+      "sort": 1300,
+      "_key": "!actors.items!2B5m46qTzpjyQxuT.70e2efaaad728674"
     }
   ],
   "effects": [],

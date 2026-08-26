@@ -800,6 +800,58 @@
       },
       "sort": 1300,
       "_key": "!actors.items!2lbZQD05NX20W6xt.228a71e1caf3a7e5"
+    },
+    {
+      "_id": "e3a1118ba12f8ceb",
+      "name": "Sorcery Focus",
+      "type": "focus",
+      "system": {
+        "summary": "Focus — Force 6",
+        "description": "",
+        "source": "",
+        "cost": 72000,
+        "legality": "",
+        "focusType": "sorcery",
+        "force": 6,
+        "greater": false,
+        "bonded": true,
+        "active": false,
+        "imbued": ""
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "focus",
+          "catalogData": {
+            "name": "Sorcery",
+            "srxId": 9038,
+            "category": "Foci",
+            "cost": 2000,
+            "costDisplay": "72,000",
+            "properties": [],
+            "options": [],
+            "type": "Focus",
+            "type2": "Magical Gear",
+            "type3": "Sorcery",
+            "fixedRating": 6,
+            "maxRating": null,
+            "ratingSquared": true,
+            "uniqueScale": null,
+            "uniqueNuyenScale": [],
+            "talentPrereq": null,
+            "maxQty": null,
+            "karmaCost": null,
+            "crafted": false,
+            "equipPrereqs": [
+              "Expertise: Sorcery"
+            ],
+            "alwaysUnique": true,
+            "slug": "sorcery"
+          }
+        }
+      },
+      "sort": 1400,
+      "_key": "!actors.items!2lbZQD05NX20W6xt.e3a1118ba12f8ceb"
     }
   ],
   "effects": [],

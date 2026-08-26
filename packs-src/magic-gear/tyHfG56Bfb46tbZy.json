@@ -1,18 +1,23 @@
 {
   "_id": "tyHfG56Bfb46tbZy",
-  "name": "Conjuring (Crafted)",
-  "type": "gear",
+  "name": "Conjuring Focus (Crafted)",
+  "type": "focus",
   "system": {
-    "summary": "Foci (Crafted)",
+    "summary": "Focus — Force 6",
     "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 1000
+    "source": "",
+    "cost": 36000,
+    "legality": "",
+    "focusType": "conjuring",
+    "force": 6,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Conjuring (Crafted)",
         "srxId": 9062,

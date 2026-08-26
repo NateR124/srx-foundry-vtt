@@ -1,18 +1,23 @@
 {
   "_id": "9mZUFStFllpqeNwM",
-  "name": "Adept",
-  "type": "gear",
+  "name": "Adept Focus",
+  "type": "focus",
   "system": {
-    "summary": "Foci",
-    "description": "",
-    "subtype": "Focus",
-    "rating": 15,
-    "quantity": 1,
-    "cost": 2000
+    "summary": "Focus — variable Force, cost Force × Force × 2,000¥",
+    "description": "<p>Options: all Adept talents except some</p>",
+    "source": "",
+    "cost": 2000,
+    "legality": "",
+    "focusType": "adept",
+    "force": 1,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Adept",
         "srxId": 9016,

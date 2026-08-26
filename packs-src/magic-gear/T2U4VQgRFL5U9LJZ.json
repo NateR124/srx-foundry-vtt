@@ -1,18 +1,23 @@
 {
   "_id": "T2U4VQgRFL5U9LJZ",
-  "name": "Fetish (Crafted)",
-  "type": "gear",
+  "name": "Fetish Focus (Crafted)",
+  "type": "focus",
   "system": {
-    "summary": "Foci (Crafted)",
-    "description": "",
-    "subtype": "Focus",
-    "rating": 15,
-    "quantity": 1,
-    "cost": 1000
+    "summary": "Focus — variable Force, cost Force × Force × 1,000¥",
+    "description": "<p>Options: Talents you know from above list</p>",
+    "source": "",
+    "cost": 1000,
+    "legality": "",
+    "focusType": "fetish",
+    "force": 1,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Fetish (Crafted)",
         "srxId": 9063,

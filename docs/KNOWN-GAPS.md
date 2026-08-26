@@ -34,13 +34,16 @@ work is. Three categories:
   identical karma). The chargen/advancement pickers collapse them to one
   entry per name (517 docs → 500 choices); deduplicating the pack source
   itself is the real fix.
-- **Pregen kits are reconstructions, and foci don't exist as items.** The
-  original SRX loadout source is gone, so pregen gear/'ware/spells/talents
-  are keyed to each archetype's skills (`scripts/gear-pregens.mjs`), not the
-  book sheets. Mundane archetypes still carry no general/social/weapon
-  talents. No pack ships focus-type items at all (magic-gear stores foci as
-  generic gear), so no pregen has a bonded focus and the Foci panel starts
-  empty for everyone.
+- **Pregen kits are reconstructions.** The original SRX loadout source is
+  gone, so pregen gear/'ware/spells/talents/foci are keyed to each
+  archetype's skills (`scripts/gear-pregens.mjs`), not the book sheets.
+  Mundane archetypes still carry no general/social/weapon talents.
+- **Most focus types have no automated effect.** The 1.4.0 focus items carry
+  the catalog's Force/cost data, and the stat-granting types (power, sorcery,
+  skill, willpower, protective, …) apply their bonus while active — but
+  roll-context foci (Weapon, Lethal Fist, Penetrating, Unerring Sorcery) and
+  behavioural ones beyond Spell/Sustaining/Spirit remain manual via the roll
+  dialogs' modifier inputs.
 
 ## 2. Built but not live-verified ("pending live smoke")
 

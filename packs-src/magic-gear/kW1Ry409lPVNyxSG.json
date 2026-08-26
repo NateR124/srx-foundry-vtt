@@ -1,18 +1,23 @@
 {
   "_id": "kW1Ry409lPVNyxSG",
-  "name": "Banishing (Crafted)",
-  "type": "gear",
+  "name": "Banishing Focus (Crafted)",
+  "type": "focus",
   "system": {
-    "summary": "Foci (Crafted)",
-    "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 1000
+    "summary": "Focus — Force 3",
+    "description": "<p>Options: Air, Earth, Fire, Quintessence, Water, Dreams, Enlightenment, Guardian, Predator, Trickster, World</p>",
+    "source": "",
+    "cost": 9000,
+    "legality": "",
+    "focusType": "banishing",
+    "force": 3,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Banishing (Crafted)",
         "srxId": 9058,

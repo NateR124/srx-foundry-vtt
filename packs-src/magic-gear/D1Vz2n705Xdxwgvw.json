@@ -1,18 +1,23 @@
 {
   "_id": "D1Vz2n705Xdxwgvw",
-  "name": "Weapon, Greater (Crafted)",
-  "type": "gear",
+  "name": "Greater Weapon Focus (Crafted)",
+  "type": "focus",
   "system": {
-    "summary": "Foci (Crafted)",
-    "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 1000
+    "summary": "Focus — Force 8",
+    "description": "<p>Options: list of close combat weapons & bows</p>",
+    "source": "",
+    "cost": 64000,
+    "legality": "",
+    "focusType": "weapon",
+    "force": 8,
+    "greater": true,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Weapon, Greater (Crafted)",
         "srxId": 9084,

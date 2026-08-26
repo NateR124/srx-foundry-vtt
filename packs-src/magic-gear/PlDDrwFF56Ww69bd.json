@@ -1,18 +1,23 @@
 {
   "_id": "PlDDrwFF56Ww69bd",
-  "name": "Spirit",
-  "type": "gear",
+  "name": "Spirit Focus",
+  "type": "focus",
   "system": {
-    "summary": "Foci",
-    "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 2000
+    "summary": "Focus — Force 5",
+    "description": "<p>Options: All spirit forms</p>",
+    "source": "",
+    "cost": 50000,
+    "legality": "",
+    "focusType": "spirit",
+    "force": 5,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Spirit",
         "srxId": 9040,

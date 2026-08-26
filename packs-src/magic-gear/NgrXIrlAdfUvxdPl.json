@@ -1,18 +1,23 @@
 {
   "_id": "NgrXIrlAdfUvxdPl",
-  "name": "Unerring Sorcery (Crafted)",
-  "type": "gear",
+  "name": "Unerring Sorcery Focus (Crafted)",
+  "type": "focus",
   "system": {
-    "summary": "Foci (Crafted)",
+    "summary": "Focus — Force 5",
     "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 1000
+    "source": "",
+    "cost": 25000,
+    "legality": "",
+    "focusType": "unerringSorcery",
+    "force": 5,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Unerring Sorcery (Crafted)",
         "srxId": 9082,

@@ -1,18 +1,23 @@
 {
   "_id": "qT7IpwHjBY9Oi5Tz",
-  "name": "Penetrating",
-  "type": "gear",
+  "name": "Penetrating Focus",
+  "type": "focus",
   "system": {
-    "summary": "Foci",
+    "summary": "Focus — Force 4",
     "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 2000
+    "source": "",
+    "cost": 32000,
+    "legality": "",
+    "focusType": "penetrating",
+    "force": 4,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Penetrating",
         "srxId": 9030,

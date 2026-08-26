@@ -1,18 +1,23 @@
 {
   "_id": "53QYGnIAnYZIKPgY",
-  "name": "Alchemical",
-  "type": "gear",
+  "name": "Alchemical Focus",
+  "type": "focus",
   "system": {
-    "summary": "Foci",
-    "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 2000
+    "summary": "Focus — Force 2",
+    "description": "<p>Options: All spells</p>",
+    "source": "",
+    "cost": 8000,
+    "legality": "",
+    "focusType": "alchemical",
+    "force": 2,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Alchemical",
         "srxId": 9017,

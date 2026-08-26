@@ -1,18 +1,23 @@
 {
   "_id": "XxIUBSUo4qj24y65",
-  "name": "Calling (Crafted)",
-  "type": "gear",
+  "name": "Calling Focus (Crafted)",
+  "type": "focus",
   "system": {
-    "summary": "Foci (Crafted)",
+    "summary": "Focus — Force 1",
     "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 1000
+    "source": "",
+    "cost": 1000,
+    "legality": "",
+    "focusType": "calling",
+    "force": 1,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Calling (Crafted)",
         "srxId": 9060,

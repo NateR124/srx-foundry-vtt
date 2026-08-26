@@ -1,18 +1,23 @@
 {
   "_id": "GYuabzksHoZsiu92",
-  "name": "Mysiticism",
-  "type": "gear",
+  "name": "Mysticism Focus",
+  "type": "focus",
   "system": {
-    "summary": "Foci",
+    "summary": "Focus — Force 5",
     "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 2000
+    "source": "",
+    "cost": 50000,
+    "legality": "",
+    "focusType": "mysticism",
+    "force": 5,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Mysiticism",
         "srxId": 9029,

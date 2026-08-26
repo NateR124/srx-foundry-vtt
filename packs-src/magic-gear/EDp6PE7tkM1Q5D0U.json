@@ -1,18 +1,23 @@
 {
   "_id": "EDp6PE7tkM1Q5D0U",
-  "name": "Lethal Fist, Greater (Crafted)",
-  "type": "gear",
+  "name": "Greater Lethal Fist Focus (Crafted)",
+  "type": "focus",
   "system": {
-    "summary": "Foci (Crafted)",
+    "summary": "Focus — Force 8",
     "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 1000
+    "source": "",
+    "cost": 64000,
+    "legality": "",
+    "focusType": "lethalFist",
+    "force": 8,
+    "greater": true,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Lethal Fist, Greater (Crafted)",
         "srxId": 9067,

@@ -1,18 +1,23 @@
 {
   "_id": "3xUw86sXIqixvjnC",
-  "name": "Alchemical (Crafted)",
-  "type": "gear",
+  "name": "Alchemical Focus (Crafted)",
+  "type": "focus",
   "system": {
-    "summary": "Foci (Crafted)",
-    "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 1000
+    "summary": "Focus — Force 2",
+    "description": "<p>Options: Spells you know</p>",
+    "source": "",
+    "cost": 4000,
+    "legality": "",
+    "focusType": "alchemical",
+    "force": 2,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Alchemical (Crafted)",
         "srxId": 9056,

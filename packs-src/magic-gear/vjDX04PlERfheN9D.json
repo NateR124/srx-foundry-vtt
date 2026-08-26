@@ -1,18 +1,23 @@
 {
   "_id": "vjDX04PlERfheN9D",
-  "name": "Skill (Crafted)",
-  "type": "gear",
+  "name": "Skill Focus (Crafted)",
+  "type": "focus",
   "system": {
-    "summary": "Foci (Crafted)",
-    "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 1000
+    "summary": "Focus — Force 4",
+    "description": "<p>Options: Athletics, Biotech, Close Combat, Con, Engineering, Firearms, Influence, Insight, Outdoors, Perception, Projectile Weapons, Stealth</p>",
+    "source": "",
+    "cost": 16000,
+    "legality": "",
+    "focusType": "skill",
+    "force": 4,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Skill (Crafted)",
         "srxId": 9076,

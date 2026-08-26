@@ -1,18 +1,23 @@
 {
   "_id": "2vrXaMlNurmjnIEW",
-  "name": "Spell (Crafted)",
-  "type": "gear",
+  "name": "Spell Focus (Crafted)",
+  "type": "focus",
   "system": {
-    "summary": "Foci (Crafted)",
-    "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 1000
+    "summary": "Focus — Force 3",
+    "description": "<p>Options: Spells you know</p>",
+    "source": "",
+    "cost": 9000,
+    "legality": "",
+    "focusType": "spell",
+    "force": 3,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Spell (Crafted)",
         "srxId": 9078,

@@ -1,18 +1,23 @@
 {
   "_id": "gmAzdy9ZABK4smDY",
-  "name": "Lethal Fist",
-  "type": "gear",
+  "name": "Lethal Fist Focus",
+  "type": "focus",
   "system": {
-    "summary": "Foci",
+    "summary": "Focus — Force 4",
     "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 2000
+    "source": "",
+    "cost": 32000,
+    "legality": "",
+    "focusType": "lethalFist",
+    "force": 4,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Lethal Fist",
         "srxId": 9027,

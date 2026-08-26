@@ -1,18 +1,23 @@
 {
   "_id": "GffEhK3PgqvyWvnU",
-  "name": "Power (Crafted)",
-  "type": "gear",
+  "name": "Power Focus (Crafted)",
+  "type": "focus",
   "system": {
-    "summary": "Foci (Crafted)",
+    "summary": "Focus — Force 8",
     "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 1000
+    "source": "",
+    "cost": 64000,
+    "legality": "",
+    "focusType": "power",
+    "force": 8,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Power (Crafted)",
         "srxId": 9072,

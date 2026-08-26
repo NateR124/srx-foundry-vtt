@@ -1,18 +1,23 @@
 {
   "_id": "gAhzHpPr5P0AuU2w",
-  "name": "Qi, Greater (Crafted)",
-  "type": "gear",
+  "name": "Greater Qi Focus (Crafted)",
+  "type": "focus",
   "system": {
-    "summary": "Foci (Crafted)",
+    "summary": "Focus — Force 10",
     "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 1000
+    "source": "",
+    "cost": 100000,
+    "legality": "",
+    "focusType": "qi",
+    "force": 10,
+    "greater": true,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Qi, Greater (Crafted)",
         "srxId": 9075,

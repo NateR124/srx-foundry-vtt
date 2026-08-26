@@ -1,18 +1,23 @@
 {
   "_id": "LgeZFVSjvaH5sS9H",
-  "name": "Channeling (Crafted)",
-  "type": "gear",
+  "name": "Channeling Focus (Crafted)",
+  "type": "focus",
   "system": {
-    "summary": "Foci (Crafted)",
+    "summary": "Focus — Force 6",
     "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 1000
+    "source": "",
+    "cost": 36000,
+    "legality": "",
+    "focusType": "channeling",
+    "force": 6,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Channeling (Crafted)",
         "srxId": 9061,

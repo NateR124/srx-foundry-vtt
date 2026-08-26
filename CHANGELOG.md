@@ -7,6 +7,25 @@ The prose between a version heading and its first `###` subsection is the
 player-facing summary — release CI copies it into that tag's GitHub release
 notes, so keep it short, plain-language, and about what changed at the table.
 
+## Unreleased
+
+Foci are real items now. The magic-gear compendium's 62 foci (31 bought, 31
+crafted) become bondable, activatable focus items with the catalog's fixed
+Force ratings and Force² pricing — a Power Focus is Force 8 and grants its +1
+Magic while active. Caster pregens each carry a bonded starting focus, and
+existing worlds convert their old gear-typed foci automatically on first GM
+login.
+
+### Added
+- **Focus items in the compendium**: all 62 foci catalog rows converted from
+  generic gear to `focus` type (`scripts/convert-foci.mjs`), with fixed Force,
+  computed cost, Greater flags, and imbue-option lists; the focusType roster
+  grows to the full catalog (the rules layer already implemented several of
+  the new types). Caster pregens get a bonded focus (Sustaining/Supplicating
+  F3, Mysticism F5, Sorcery F6 by archetype).
+- **1.4.0 world migration**: gear-typed foci imported from earlier versions
+  convert in place (same pure mapping as the pack bake), GM-only on ready.
+
 ## 1.3.0 — 2026-08-26 — Table-ready pregens
 
 Pregens are now table-ready on every tab, not just Gear. Each archetype

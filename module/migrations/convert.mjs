@@ -103,3 +103,84 @@ function legalityFromProperties(properties) {
   if (props.includes("restricted")) return "restricted";
   return "";
 }
+
+/* -------------------------------------------- */
+/*  1.4.0 — foci leave the `gear` type          */
+/* -------------------------------------------- */
+
+/** Catalog focus name (", Greater" stripped) → focusType slug. */
+const FOCUS_TYPE_BY_NAME = Object.freeze({
+  "Power": "power", "Qi": "qi", "Sorcery": "sorcery", "Conjuring": "conjuring",
+  "Weapon": "weapon", "Sustaining": "sustaining", "Spell": "spell",
+  "Spirit": "spirit", "Adept": "adept", "Channeling": "channeling",
+  // "Mysiticism" is the catalog's own typo
+  "Mysiticism": "mysticism", "Mysticism": "mysticism",
+  "Willpower": "willpower", "Protective": "protective", "Skill": "skill",
+  "Healing": "healing", "Potency": "potency", "Penetrating": "penetrating",
+  "Lethal Fist": "lethalFist", "Astral Armor": "astralArmor",
+  "Calling": "calling", "Alchemical": "alchemical",
+  "Potentiality": "potentiality", "Fetish": "fetish",
+  "Supplicating": "supplicating", "Banishing": "banishing",
+  "Binding": "binding", "Hastened Anima": "hastenedAnima",
+  "Unerring Sorcery": "unerringSorcery"
+});
+
+/** Is this legacy gear item a focus catalog row? */
+export function isFocusGear(itemObj) {
+  const cat = itemObj?.flags?.srx?.catalogData?.category ?? "";
+  return cat === "Foci" || cat === "Foci (Crafted)";
+}
+
+/**
+ * Parse a focus catalog row: base name, greater/crafted flags, type slug.
+ * Throws on an unknown focus name so a bad catalog fails loudly.
+ */
+export function parseFocusName(itemObj) {
+  const raw = String(itemObj?.flags?.srx?.catalogData?.name ?? itemObj?.name ?? "");
+  const crafted = /\s*\(Crafted\)\s*$/.test(raw);
+  let base = raw.replace(/\s*\(Crafted\)\s*$/, "");
+  const greater = /,\s*Greater$/.test(base);
+  base = base.replace(/,\s*Greater$/, "");
+  const focusType = FOCUS_TYPE_BY_NAME[base];
+  if (!focusType) throw new Error(`unknown focus catalog name: "${raw}"`);
+  // Display name (catalog typo fixed): "Greater Weapon Focus (Crafted)"
+  const clean = base === "Mysiticism" ? "Mysticism" : base;
+  const name = `${greater ? "Greater " : ""}${clean} Focus${crafted ? " (Crafted)" : ""}`;
+  return { name, focusType, greater, crafted };
+}
+
+/**
+ * Build FocusData system data from a legacy magic-gear item object.
+ * SRX foci are fixed-Force (catalogData.fixedRating); the five variable-Force
+ * foci (fixedRating null, cost Force² × base) default to Force 1.
+ * @param {object} itemObj - plain item data (toObject() / pack JSON)
+ * @returns {{ name: string, system: object }}
+ */
+export function focusFromGear(itemObj) {
+  const sys = itemObj?.system ?? {};
+  const cd = itemObj?.flags?.srx?.catalogData ?? {};
+  const { name, focusType, greater, crafted } = parseFocusName(itemObj);
+  const fixed = Number.isFinite(cd.fixedRating) ? cd.fixedRating : null;
+  const force = fixed ?? 1;
+  const base = crafted ? 1000 : 2000;
+  const options = Array.isArray(cd.options) ? cd.options.filter(Boolean) : [];
+  const summary = fixed !== null
+    ? `Focus — Force ${fixed}`
+    : `Focus — variable Force, cost Force × Force × ${base.toLocaleString("en-US")}¥`;
+  return {
+    name,
+    system: {
+      summary,
+      description: sys.description || (options.length ? `<p>Options: ${options.join(", ")}</p>` : ""),
+      source: sys.source ?? "",
+      cost: fixed !== null ? fixed * fixed * base : base,
+      legality: sys.legality || legalityFromProperties(cd.properties),
+      focusType,
+      force,
+      greater,
+      bonded: false,
+      active: false,
+      imbued: ""
+    }
+  };
+}

@@ -1,18 +1,23 @@
 {
   "_id": "mJIhQuSbaQ52HQfC",
-  "name": "Supplicating",
-  "type": "gear",
+  "name": "Supplicating Focus",
+  "type": "focus",
   "system": {
-    "summary": "Foci",
-    "description": "",
-    "subtype": "Focus",
-    "rating": 15,
-    "quantity": 1,
-    "cost": 2000
+    "summary": "Focus — variable Force, cost Force × Force × 2,000¥",
+    "description": "<p>Options: Advanced Binder, Banisher, Deadly Summons, Edge: Call Great Form, Edge: Conjured Luck, Edge: Rapid Summons, Elemental Infusion, Elemental Mastery, Evolved Elemental, Fortified Calling, Great Form Binding, Lethal Conjurer, Quickened Anima, Remote Service, Savage Spirit, Shunt Pain, Spirit Mastery</p>",
+    "source": "",
+    "cost": 2000,
+    "legality": "",
+    "focusType": "supplicating",
+    "force": 1,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Supplicating",
         "srxId": 9041,

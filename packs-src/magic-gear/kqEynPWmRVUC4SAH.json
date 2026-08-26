@@ -1,18 +1,23 @@
 {
   "_id": "kqEynPWmRVUC4SAH",
-  "name": "Sorcery",
-  "type": "gear",
+  "name": "Sorcery Focus",
+  "type": "focus",
   "system": {
-    "summary": "Foci",
+    "summary": "Focus — Force 6",
     "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 2000
+    "source": "",
+    "cost": 72000,
+    "legality": "",
+    "focusType": "sorcery",
+    "force": 6,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Sorcery",
         "srxId": 9038,

@@ -1,18 +1,23 @@
 {
   "_id": "e90EiInFpVaFrBOX",
-  "name": "Power",
-  "type": "gear",
+  "name": "Power Focus",
+  "type": "focus",
   "system": {
-    "summary": "Foci",
+    "summary": "Focus — Force 8",
     "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 2000
+    "source": "",
+    "cost": 128000,
+    "legality": "restricted",
+    "focusType": "power",
+    "force": 8,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Power",
         "srxId": 9033,

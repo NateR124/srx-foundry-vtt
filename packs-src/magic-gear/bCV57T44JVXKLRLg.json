@@ -1,18 +1,23 @@
 {
   "_id": "bCV57T44JVXKLRLg",
-  "name": "Weapon (Crafted)",
-  "type": "gear",
+  "name": "Weapon Focus (Crafted)",
+  "type": "focus",
   "system": {
-    "summary": "Foci (Crafted)",
-    "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 1000
+    "summary": "Focus — Force 4",
+    "description": "<p>Options: list of close combat weapons & bows</p>",
+    "source": "",
+    "cost": 16000,
+    "legality": "",
+    "focusType": "weapon",
+    "force": 4,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Weapon (Crafted)",
         "srxId": 9083,

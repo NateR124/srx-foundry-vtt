@@ -1,18 +1,23 @@
 {
   "_id": "r77lFrnJu3hSWsK6",
-  "name": "Penetrating (Crafted)",
-  "type": "gear",
+  "name": "Penetrating Focus (Crafted)",
+  "type": "focus",
   "system": {
-    "summary": "Foci (Crafted)",
+    "summary": "Focus — Force 4",
     "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 1000
+    "source": "",
+    "cost": 16000,
+    "legality": "",
+    "focusType": "penetrating",
+    "force": 4,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Penetrating (Crafted)",
         "srxId": 9069,

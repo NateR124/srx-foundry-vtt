@@ -1,18 +1,23 @@
 {
   "_id": "6AqUFbV49fW6REkw",
-  "name": "Astral Armor",
-  "type": "gear",
+  "name": "Astral Armor Focus",
+  "type": "focus",
   "system": {
-    "summary": "Foci",
+    "summary": "Focus — Force 4",
     "description": "",
-    "subtype": "Focus",
-    "rating": 0,
-    "quantity": 1,
-    "cost": 2000
+    "source": "",
+    "cost": 32000,
+    "legality": "",
+    "focusType": "astralArmor",
+    "force": 4,
+    "greater": false,
+    "bonded": false,
+    "active": false,
+    "imbued": ""
   },
   "flags": {
     "srx": {
-      "catalogType": "magic-gear",
+      "catalogType": "focus",
       "catalogData": {
         "name": "Astral Armor",
         "srxId": 9018,
