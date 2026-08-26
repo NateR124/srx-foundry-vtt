@@ -101,7 +101,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 2,
         "bonus": 0
       },
       "resonance": {
@@ -416,6 +416,150 @@
       },
       "sort": 500,
       "_key": "!actors.items!fMUWPxCSwiZhQSEk.8a5c12456ae64252"
+    },
+    {
+      "_id": "b5c1cafd29189663",
+      "name": "Manabolt",
+      "type": "spell",
+      "system": {
+        "summary": "Combat",
+        "description": "Target takes (Net Force + 1)P/S",
+        "category": "combat",
+        "pattern": "direct",
+        "duration": "instantaneous",
+        "range": "60m",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "P/S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Combat"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Manabolt",
+            "srxId": 1549,
+            "category": "Combat",
+            "description": "Target takes (Net Force + 1)P/S",
+            "range": {
+              "raw": "60m",
+              "bands": [
+                60
+              ]
+            },
+            "duration": "Instantaneous",
+            "resistance": "WIL",
+            "attack": {
+              "type": "Ranged",
+              "accuracy": "Resist: WIL",
+              "dv": {
+                "raw": "(F+1)",
+                "force": true,
+                "mod": 1,
+                "type": "P/S",
+                "element": null
+              }
+            },
+            "slug": "manabolt"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!fMUWPxCSwiZhQSEk.b5c1cafd29189663"
+    },
+    {
+      "_id": "a80f68e60b89a762",
+      "name": "Heal",
+      "type": "spell",
+      "system": {
+        "summary": "Health",
+        "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+        "category": "health",
+        "pattern": "touch",
+        "duration": "instantaneous",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Health"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Heal",
+            "srxId": 1534,
+            "category": "Health",
+            "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Instantaneous",
+            "resistance": null,
+            "attack": null,
+            "slug": "heal"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!fMUWPxCSwiZhQSEk.a80f68e60b89a762"
+    },
+    {
+      "_id": "81875ddcf777cbe6",
+      "name": "Light",
+      "type": "spell",
+      "system": {
+        "summary": "Manipulation",
+        "description": "Create light in area",
+        "category": "manipulation",
+        "pattern": "area",
+        "duration": "timed",
+        "range": "100m [A]",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Manipulation"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Light",
+            "srxId": 1544,
+            "category": "Manipulation",
+            "description": "Create light in area",
+            "range": {
+              "raw": "100m [A]",
+              "bands": [
+                100
+              ],
+              "area": true
+            },
+            "duration": "(Force)hours",
+            "resistance": null,
+            "attack": null,
+            "slug": "light"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!fMUWPxCSwiZhQSEk.81875ddcf777cbe6"
     }
   ],
   "effects": [],

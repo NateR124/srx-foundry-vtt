@@ -76,7 +76,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 6,
         "bonus": 0
       },
       "resonance": {
@@ -362,6 +362,369 @@
       },
       "sort": 400,
       "_key": "!actors.items!An5Ttaw7Scj1X32t.6df82bcce4eaf98b"
+    },
+    {
+      "_id": "136f43a313250f4e",
+      "name": "Detect Magic",
+      "type": "spell",
+      "system": {
+        "summary": "Detection",
+        "description": "Sense presence of magical effects",
+        "category": "detection",
+        "pattern": "self",
+        "duration": "sustained",
+        "range": "Self",
+        "action": "complex",
+        "resistanceAttr": "special",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Detection"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Detect Magic",
+            "srxId": 1522,
+            "category": "Detection",
+            "description": "Sense presence of magical effects",
+            "range": {
+              "raw": "Self",
+              "special": "Self"
+            },
+            "duration": "Sustained",
+            "resistance": "(10 - F)x2",
+            "attack": null,
+            "slug": "detect-magic"
+          }
+        }
+      },
+      "sort": 500,
+      "_key": "!actors.items!An5Ttaw7Scj1X32t.136f43a313250f4e"
+    },
+    {
+      "_id": "512937dff73cfeb5",
+      "name": "Analyze Magic",
+      "type": "spell",
+      "system": {
+        "summary": "Detection",
+        "description": "+Force to assensing test to examine magical effect or find astral signature",
+        "category": "detection",
+        "pattern": "direct",
+        "duration": "instantaneous",
+        "range": "30m",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Detection"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Analyze Magic",
+            "srxId": 1505,
+            "category": "Detection",
+            "description": "+Force to assensing test to examine magical effect or find astral signature",
+            "range": {
+              "raw": "30m",
+              "bands": [
+                30
+              ]
+            },
+            "duration": "Instantaneous",
+            "resistance": null,
+            "attack": null,
+            "slug": "analyze-magic"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!An5Ttaw7Scj1X32t.512937dff73cfeb5"
+    },
+    {
+      "_id": "3f9ae641a136220d",
+      "name": "Combat Sense",
+      "type": "spell",
+      "system": {
+        "summary": "Detection",
+        "description": "+1 to target's Defense Score",
+        "category": "detection",
+        "pattern": "touch",
+        "duration": "sustained",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Detection"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Combat Sense",
+            "srxId": 1515,
+            "category": "Detection",
+            "description": "+1 to target's Defense Score",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Sustained",
+            "resistance": null,
+            "attack": null,
+            "slug": "combat-sense"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!An5Ttaw7Scj1X32t.3f9ae641a136220d"
+    },
+    {
+      "_id": "9015f0b20e891e24",
+      "name": "Alertness",
+      "type": "spell",
+      "system": {
+        "summary": "Detection",
+        "description": "Target reroll 1's on Perception tests and gains +2 Accelerator",
+        "category": "detection",
+        "pattern": "touch",
+        "duration": "sustained",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Detection"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Alertness",
+            "srxId": 1503,
+            "category": "Detection",
+            "description": "Target reroll 1's on Perception tests and gains +2 Accelerator",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Sustained",
+            "resistance": null,
+            "attack": null,
+            "slug": "alertness"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!An5Ttaw7Scj1X32t.9015f0b20e891e24"
+    },
+    {
+      "_id": "fb3f20a8e2395796",
+      "name": "Manabolt",
+      "type": "spell",
+      "system": {
+        "summary": "Combat",
+        "description": "Target takes (Net Force + 1)P/S",
+        "category": "combat",
+        "pattern": "direct",
+        "duration": "instantaneous",
+        "range": "60m",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "P/S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Combat"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Manabolt",
+            "srxId": 1549,
+            "category": "Combat",
+            "description": "Target takes (Net Force + 1)P/S",
+            "range": {
+              "raw": "60m",
+              "bands": [
+                60
+              ]
+            },
+            "duration": "Instantaneous",
+            "resistance": "WIL",
+            "attack": {
+              "type": "Ranged",
+              "accuracy": "Resist: WIL",
+              "dv": {
+                "raw": "(F+1)",
+                "force": true,
+                "mod": 1,
+                "type": "P/S",
+                "element": null
+              }
+            },
+            "slug": "manabolt"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!An5Ttaw7Scj1X32t.fb3f20a8e2395796"
+    },
+    {
+      "_id": "ab13b59b1b1c6b92",
+      "name": "Entangle",
+      "type": "spell",
+      "system": {
+        "summary": "Manipulation",
+        "description": "All targets in area gain Grabbed status",
+        "category": "manipulation",
+        "pattern": "area",
+        "duration": "sustained",
+        "range": "50m [A]",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Manipulation"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Entangle",
+            "srxId": 1528,
+            "category": "Manipulation",
+            "description": "All targets in area gain Grabbed status",
+            "range": {
+              "raw": "50m [A]",
+              "bands": [
+                50
+              ],
+              "area": true
+            },
+            "duration": "Sustained",
+            "resistance": "WIL+AGI",
+            "attack": null,
+            "slug": "entangle"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!An5Ttaw7Scj1X32t.ab13b59b1b1c6b92"
+    },
+    {
+      "_id": "89cc47aae5005862",
+      "name": "Bind",
+      "type": "spell",
+      "system": {
+        "summary": "Manipulation",
+        "description": "Target gains Immobilized status",
+        "category": "manipulation",
+        "pattern": "direct",
+        "duration": "sustained",
+        "range": "80m",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Manipulation"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Bind",
+            "srxId": 1509,
+            "category": "Manipulation",
+            "description": "Target gains Immobilized status",
+            "range": {
+              "raw": "80m",
+              "bands": [
+                80
+              ]
+            },
+            "duration": "Sustained",
+            "resistance": "WIL+AGI",
+            "attack": null,
+            "slug": "bind"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!An5Ttaw7Scj1X32t.89cc47aae5005862"
+    },
+    {
+      "_id": "3be90e921ee2c1cf",
+      "name": "Heal",
+      "type": "spell",
+      "system": {
+        "summary": "Health",
+        "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+        "category": "health",
+        "pattern": "touch",
+        "duration": "instantaneous",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Health"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Heal",
+            "srxId": 1534,
+            "category": "Health",
+            "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Instantaneous",
+            "resistance": null,
+            "attack": null,
+            "slug": "heal"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!An5Ttaw7Scj1X32t.3be90e921ee2c1cf"
     }
   ],
   "effects": [],

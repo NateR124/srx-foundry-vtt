@@ -101,7 +101,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 0,
         "bonus": 0
       },
       "resonance": {
@@ -552,6 +552,151 @@
       },
       "sort": 700,
       "_key": "!actors.items!CpJe31UDcYt4fFTc.97b687089ce91155"
+    },
+    {
+      "_id": "0328b0d82f4fcd57",
+      "name": "Superior Appearance Mod",
+      "type": "ware",
+      "system": {
+        "summary": "Bodyware",
+        "description": "+1 Charisma",
+        "source": "",
+        "cost": 38000,
+        "legality": "",
+        "wareType": "bioware",
+        "category": "Bodyware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.2,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [
+        {
+          "name": "Superior Appearance Mod",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.attributes.cha.bonus",
+              "mode": 2,
+              "value": "1"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "28bb487e85c2b48e",
+          "_key": "!actors.items.effects!CpJe31UDcYt4fFTc.0328b0d82f4fcd57.28bb487e85c2b48e"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Superior Appearance Mod",
+            "srxId": 3118,
+            "category": "Bodyware",
+            "cost": 38000,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Superior Appearance Mod",
+            "type": "",
+            "type2": null,
+            "wareType": "Bioware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.2",
+              "value": 0.2,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "+1 Charisma",
+            "effects": [
+              {
+                "key": "cha",
+                "value": 1
+              }
+            ],
+            "slug": "superior-appearance-mod"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!CpJe31UDcYt4fFTc.0328b0d82f4fcd57"
+    },
+    {
+      "_id": "0d054c56547f57d0",
+      "name": "Voice Modulator",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Make any sound, imitate voices",
+        "source": "",
+        "cost": 10000,
+        "legality": "restricted",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.15,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Voice Modulator",
+            "srxId": 3045,
+            "category": "Headware",
+            "cost": 10000,
+            "properties": [
+              "Restricted"
+            ],
+            "options": [],
+            "dictionaryName": "Voice Modulator",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.15",
+              "value": 0.15,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [],
+            "grants": [],
+            "description": "Make any sound, imitate voices",
+            "effects": [],
+            "slug": "voice-modulator"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!CpJe31UDcYt4fFTc.0d054c56547f57d0"
     }
   ],
   "effects": [],

@@ -81,7 +81,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 5,
         "bonus": 0
       },
       "resonance": {
@@ -348,6 +348,373 @@
       },
       "sort": 400,
       "_key": "!actors.items!WCD1E4N9B9vQUJY9.30d58ff14ae7b674"
+    },
+    {
+      "_id": "5fc9c61bc45e38b4",
+      "name": "Phantasm",
+      "type": "spell",
+      "system": {
+        "summary": "Illusion",
+        "description": "Create illusion by controlling all sensory input of target",
+        "category": "illusion",
+        "pattern": "direct",
+        "duration": "sustained",
+        "range": "60m",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Illusion"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Phantasm",
+            "srxId": 1556,
+            "category": "Illusion",
+            "description": "Create illusion by controlling all sensory input of target",
+            "range": {
+              "raw": "60m",
+              "bands": [
+                60
+              ]
+            },
+            "duration": "Sust (1 hour)",
+            "resistance": "WIL+INT",
+            "attack": null,
+            "slug": "phantasm"
+          }
+        }
+      },
+      "sort": 500,
+      "_key": "!actors.items!WCD1E4N9B9vQUJY9.5fc9c61bc45e38b4"
+    },
+    {
+      "_id": "f8a43daad39bb139",
+      "name": "Chaotic World",
+      "type": "spell",
+      "system": {
+        "summary": "Illusion",
+        "description": "All targets in area have -2 Defense score and reroll 6's on all tests, excluding resistance tests",
+        "category": "illusion",
+        "pattern": "area",
+        "duration": "sustained",
+        "range": "50m [A]",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Illusion"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Chaotic World",
+            "srxId": 1512,
+            "category": "Illusion",
+            "description": "All targets in area have -2 Defense score and reroll 6's on all tests, excluding resistance tests",
+            "range": {
+              "raw": "50m [A]",
+              "bands": [
+                50
+              ],
+              "area": true
+            },
+            "duration": "Sustained",
+            "resistance": "WIL+INT",
+            "attack": null,
+            "slug": "chaotic-world"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!WCD1E4N9B9vQUJY9.f8a43daad39bb139"
+    },
+    {
+      "_id": "05520764996633ee",
+      "name": "Confusion",
+      "type": "spell",
+      "system": {
+        "summary": "Illusion",
+        "description": "Target has Liability on all tests, excluding resistance tests",
+        "category": "illusion",
+        "pattern": "direct",
+        "duration": "timed",
+        "range": "80m",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Illusion"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Confusion",
+            "srxId": 1516,
+            "category": "Illusion",
+            "description": "Target has Liability on all tests, excluding resistance tests",
+            "range": {
+              "raw": "80m",
+              "bands": [
+                80
+              ]
+            },
+            "duration": "10 minutes",
+            "resistance": "WIL+LOG",
+            "attack": null,
+            "slug": "confusion"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!WCD1E4N9B9vQUJY9.05520764996633ee"
+    },
+    {
+      "_id": "834108dee8035341",
+      "name": "Stupefy",
+      "type": "spell",
+      "system": {
+        "summary": "Health",
+        "description": "Target suffers Liability on tests with chosen mental attribute",
+        "category": "health",
+        "pattern": "touch",
+        "duration": "timed",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "attribute",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Health"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Stupefy",
+            "srxId": 1571,
+            "category": "Health",
+            "description": "Target suffers Liability on tests with chosen mental attribute",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "1 hour",
+            "resistance": "Special",
+            "attack": null,
+            "slug": "stupefy"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!WCD1E4N9B9vQUJY9.834108dee8035341"
+    },
+    {
+      "_id": "1661d0a5689f5c94",
+      "name": "Mindlink",
+      "type": "spell",
+      "system": {
+        "summary": "Detection",
+        "description": "All chosen targets share telepathic connection",
+        "category": "detection",
+        "pattern": "area",
+        "duration": "timed",
+        "range": "(F x 100)m",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Detection"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Mindlink",
+            "srxId": 1553,
+            "category": "Detection",
+            "description": "All chosen targets share telepathic connection",
+            "range": {
+              "raw": "(F x 100)m",
+              "force": true,
+              "mult": 100,
+              "unit": "m"
+            },
+            "duration": "(Force x 2)hours",
+            "resistance": null,
+            "attack": null,
+            "slug": "mindlink"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!WCD1E4N9B9vQUJY9.1661d0a5689f5c94"
+    },
+    {
+      "_id": "cda9e92d16441b93",
+      "name": "Alter Memory",
+      "type": "spell",
+      "system": {
+        "summary": "Manipulation",
+        "description": "Add to, alter, or erase target's memory",
+        "category": "manipulation",
+        "pattern": "direct",
+        "duration": "instantaneous",
+        "range": "5m",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Manipulation"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Alter Memory",
+            "srxId": 1504,
+            "category": "Manipulation",
+            "description": "Add to, alter, or erase target's memory",
+            "range": {
+              "raw": "5m",
+              "bands": [
+                5
+              ]
+            },
+            "duration": "Instantaneous",
+            "resistance": "WIL+LOG",
+            "attack": null,
+            "slug": "alter-memory"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!WCD1E4N9B9vQUJY9.cda9e92d16441b93"
+    },
+    {
+      "_id": "7f3943fae2c3427a",
+      "name": "Heal",
+      "type": "spell",
+      "system": {
+        "summary": "Health",
+        "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+        "category": "health",
+        "pattern": "touch",
+        "duration": "instantaneous",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Health"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Heal",
+            "srxId": 1534,
+            "category": "Health",
+            "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Instantaneous",
+            "resistance": null,
+            "attack": null,
+            "slug": "heal"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!WCD1E4N9B9vQUJY9.7f3943fae2c3427a"
+    },
+    {
+      "_id": "f8b9a019697b1cbe",
+      "name": "Manabolt",
+      "type": "spell",
+      "system": {
+        "summary": "Combat",
+        "description": "Target takes (Net Force + 1)P/S",
+        "category": "combat",
+        "pattern": "direct",
+        "duration": "instantaneous",
+        "range": "60m",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "P/S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Combat"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Manabolt",
+            "srxId": 1549,
+            "category": "Combat",
+            "description": "Target takes (Net Force + 1)P/S",
+            "range": {
+              "raw": "60m",
+              "bands": [
+                60
+              ]
+            },
+            "duration": "Instantaneous",
+            "resistance": "WIL",
+            "attack": {
+              "type": "Ranged",
+              "accuracy": "Resist: WIL",
+              "dv": {
+                "raw": "(F+1)",
+                "force": true,
+                "mod": 1,
+                "type": "P/S",
+                "element": null
+              }
+            },
+            "slug": "manabolt"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!WCD1E4N9B9vQUJY9.f8b9a019697b1cbe"
     }
   ],
   "effects": [],

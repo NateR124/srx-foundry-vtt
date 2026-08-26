@@ -91,7 +91,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 5,
         "bonus": 0
       },
       "resonance": {
@@ -437,6 +437,279 @@
       },
       "sort": 500,
       "_key": "!actors.items!NGZVcgSt2tF7AaT9.46b5783e4810b956"
+    },
+    {
+      "_id": "48e5d801ae4cc4fc",
+      "name": "Manabolt",
+      "type": "spell",
+      "system": {
+        "summary": "Combat",
+        "description": "Target takes (Net Force + 1)P/S",
+        "category": "combat",
+        "pattern": "direct",
+        "duration": "instantaneous",
+        "range": "60m",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "P/S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Combat"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Manabolt",
+            "srxId": 1549,
+            "category": "Combat",
+            "description": "Target takes (Net Force + 1)P/S",
+            "range": {
+              "raw": "60m",
+              "bands": [
+                60
+              ]
+            },
+            "duration": "Instantaneous",
+            "resistance": "WIL",
+            "attack": {
+              "type": "Ranged",
+              "accuracy": "Resist: WIL",
+              "dv": {
+                "raw": "(F+1)",
+                "force": true,
+                "mod": 1,
+                "type": "P/S",
+                "element": null
+              }
+            },
+            "slug": "manabolt"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!NGZVcgSt2tF7AaT9.48e5d801ae4cc4fc"
+    },
+    {
+      "_id": "04df3ea71239f5a9",
+      "name": "Heal",
+      "type": "spell",
+      "system": {
+        "summary": "Health",
+        "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+        "category": "health",
+        "pattern": "touch",
+        "duration": "instantaneous",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Health"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Heal",
+            "srxId": 1534,
+            "category": "Health",
+            "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Instantaneous",
+            "resistance": null,
+            "attack": null,
+            "slug": "heal"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!NGZVcgSt2tF7AaT9.04df3ea71239f5a9"
+    },
+    {
+      "_id": "7d698a06b17f777d",
+      "name": "Levitate",
+      "type": "spell",
+      "system": {
+        "summary": "Manipulation",
+        "description": "Move person or object through the air",
+        "category": "manipulation",
+        "pattern": "direct",
+        "duration": "sustained",
+        "range": "Special",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Manipulation"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Levitate",
+            "srxId": 1543,
+            "category": "Manipulation",
+            "description": "Move person or object through the air",
+            "range": {
+              "raw": "Special",
+              "special": "Special"
+            },
+            "duration": "Sustained",
+            "resistance": "WIL+BOD",
+            "attack": null,
+            "slug": "levitate"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!NGZVcgSt2tF7AaT9.7d698a06b17f777d"
+    },
+    {
+      "_id": "9f7264e10eb1b096",
+      "name": "Detect Life",
+      "type": "spell",
+      "system": {
+        "summary": "Detection",
+        "description": "Sense presence of living beings",
+        "category": "detection",
+        "pattern": "self",
+        "duration": "sustained",
+        "range": "Self",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Detection"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Detect Life",
+            "srxId": 1521,
+            "category": "Detection",
+            "description": "Sense presence of living beings",
+            "range": {
+              "raw": "Self",
+              "special": "Self"
+            },
+            "duration": "Sustained",
+            "resistance": "WIL+CHA",
+            "attack": null,
+            "slug": "detect-life"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!NGZVcgSt2tF7AaT9.9f7264e10eb1b096"
+    },
+    {
+      "_id": "bfa6d949bed3072a",
+      "name": "Invisibility",
+      "type": "spell",
+      "system": {
+        "summary": "Illusion",
+        "description": "Target becomes invisible",
+        "category": "illusion",
+        "pattern": "touch",
+        "duration": "sustained",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Illusion"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Invisibility",
+            "srxId": 1542,
+            "category": "Illusion",
+            "description": "Target becomes invisible",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Sust (1 hour)",
+            "resistance": "Special",
+            "attack": null,
+            "slug": "invisibility"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!NGZVcgSt2tF7AaT9.bfa6d949bed3072a"
+    },
+    {
+      "_id": "e3e1484961cd99c7",
+      "name": "Entangle",
+      "type": "spell",
+      "system": {
+        "summary": "Manipulation",
+        "description": "All targets in area gain Grabbed status",
+        "category": "manipulation",
+        "pattern": "area",
+        "duration": "sustained",
+        "range": "50m [A]",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Manipulation"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Entangle",
+            "srxId": 1528,
+            "category": "Manipulation",
+            "description": "All targets in area gain Grabbed status",
+            "range": {
+              "raw": "50m [A]",
+              "bands": [
+                50
+              ],
+              "area": true
+            },
+            "duration": "Sustained",
+            "resistance": "WIL+AGI",
+            "attack": null,
+            "slug": "entangle"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!NGZVcgSt2tF7AaT9.e3e1484961cd99c7"
     }
   ],
   "effects": [],

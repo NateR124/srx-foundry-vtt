@@ -111,7 +111,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 0,
         "bonus": 0
       },
       "resonance": {
@@ -787,6 +787,200 @@
       },
       "sort": 1000,
       "_key": "!actors.items!lw9CnCRJ5ZZdcmPe.a982a73b64cbbc3c"
+    },
+    {
+      "_id": "03b33234c07a61ba",
+      "name": "Synaptic Booster",
+      "type": "ware",
+      "system": {
+        "summary": "Bodyware",
+        "description": "+Rating to Accelerator",
+        "source": "",
+        "cost": 16000,
+        "legality": "",
+        "wareType": "bioware",
+        "category": "Bodyware",
+        "container": "",
+        "rating": 1,
+        "maxRating": 3,
+        "essence": 0.1,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Synaptic Booster",
+            "srxId": 3121,
+            "category": "Bodyware",
+            "cost": 16000,
+            "costDisplay": "Rating x 16,000",
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Synaptic Booster",
+            "type": "",
+            "type2": null,
+            "wareType": "Bioware",
+            "canRepurchase": false,
+            "maxRating": 3,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "Rating x 0.1",
+              "value": 0.1,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "+Rating to Accelerator",
+            "effects": [],
+            "slug": "synaptic-booster"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!lw9CnCRJ5ZZdcmPe.03b33234c07a61ba"
+    },
+    {
+      "_id": "299da363efa116ea",
+      "name": "Cybereyes",
+      "type": "ware",
+      "system": {
+        "summary": "Senseware / Eyeware",
+        "description": "Other eyeware cyberware costs no Essence",
+        "source": "",
+        "cost": 8500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Eyeware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.3,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Cat's Eyes",
+          "Hawk Eyes",
+          "Troll Eyes"
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Cybereyes",
+            "srxId": 3010,
+            "category": "Senseware",
+            "subcategory": "Eyeware",
+            "cost": 8500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Cybereyes",
+            "type": "Eyeware",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.3",
+              "value": 0.3,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [
+              "Cat's Eyes",
+              "Hawk Eyes",
+              "Troll Eyes"
+            ],
+            "grants": [],
+            "description": "Other eyeware cyberware costs no Essence",
+            "effects": [],
+            "slug": "cybereyes"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!lw9CnCRJ5ZZdcmPe.299da363efa116ea"
+    },
+    {
+      "_id": "1d9c90dd0e91e2e9",
+      "name": "Low-Light Vision",
+      "type": "ware",
+      "system": {
+        "summary": "Senseware / Eyeware",
+        "description": "Low-Light Vision Enhancement",
+        "source": "",
+        "cost": 750,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Eyeware",
+        "container": "Cybereyes",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.2,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Cat's Eyes"
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Low-Light Vision",
+            "srxId": 3013,
+            "category": "Senseware",
+            "subcategory": "Eyeware",
+            "cost": 750,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Low-Light Vision",
+            "type": "Eyeware",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.2",
+              "value": 0.2,
+              "scale": []
+            },
+            "parentContainer": "Cybereyes",
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [
+              "Cat's Eyes"
+            ],
+            "grants": [],
+            "description": "Low-Light Vision Enhancement",
+            "effects": [
+              {
+                "key": "lowLight",
+                "value": 1
+              }
+            ],
+            "slug": "low-light-vision"
+          }
+        }
+      },
+      "sort": 1300,
+      "_key": "!actors.items!lw9CnCRJ5ZZdcmPe.1d9c90dd0e91e2e9"
     }
   ],
   "effects": [],

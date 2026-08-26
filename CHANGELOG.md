@@ -7,6 +7,28 @@ The prose between a version heading and its first `###` subsection is the
 player-facing summary — release CI copies it into that tag's GitHub release
 notes, so keep it short, plain-language, and about what changed at the table.
 
+## Unreleased
+
+Pregens are now table-ready on every tab, not just Gear. Each archetype
+carries its cyberware — installed, with working stat effects and live Essence
+tracking; casters know their spells at an honest Magic rating (mundane
+pregens no longer show a phantom Magic 1); deckers get their hacking programs
+and persona devices, technomancers their complex forms, adepts their powers,
+and riggers their control rigs. The Matrix tab now also appears for
+technomancers, who it previously ignored entirely.
+
+### Fixed
+- **Pregens had empty Ware/Magic/Matrix tabs** (QA report): the stat import
+  never carried item lists, and every pregen had a flat Magic 1. All 65 now
+  get reconstructed kits keyed to their skills: 'ware (installed, Essence
+  derived, stat effects baked as embedded Active Effects — pack-embedded
+  items bypass the hook that generates them at drop time), themed spell
+  lists, program/complex-form/adept-power talents, and matrix persona
+  devices. Magic/Resonance set per archetype (capped by WIL, 0 for
+  mundanes).
+- **Matrix tab never showed for technomancers** — visibility only checked
+  hacking/software skills and firewall; threading and Resonance now count.
+
 ## 1.2.1 — 2026-08-23 — Sheet tabs scroll in place
 
 The character sheet now keeps its header, damage monitors, and tab bar pinned

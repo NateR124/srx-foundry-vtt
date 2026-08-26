@@ -76,7 +76,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 4,
         "bonus": 0
       },
       "resonance": {
@@ -362,6 +362,469 @@
       },
       "sort": 400,
       "_key": "!actors.items!43GEuURGQcnJi09w.377e8843437c2365"
+    },
+    {
+      "_id": "da35c16b9a638c79",
+      "name": "Manabolt",
+      "type": "spell",
+      "system": {
+        "summary": "Combat",
+        "description": "Target takes (Net Force + 1)P/S",
+        "category": "combat",
+        "pattern": "direct",
+        "duration": "instantaneous",
+        "range": "60m",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "P/S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Combat"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Manabolt",
+            "srxId": 1549,
+            "category": "Combat",
+            "description": "Target takes (Net Force + 1)P/S",
+            "range": {
+              "raw": "60m",
+              "bands": [
+                60
+              ]
+            },
+            "duration": "Instantaneous",
+            "resistance": "WIL",
+            "attack": {
+              "type": "Ranged",
+              "accuracy": "Resist: WIL",
+              "dv": {
+                "raw": "(F+1)",
+                "force": true,
+                "mod": 1,
+                "type": "P/S",
+                "element": null
+              }
+            },
+            "slug": "manabolt"
+          }
+        }
+      },
+      "sort": 500,
+      "_key": "!actors.items!43GEuURGQcnJi09w.da35c16b9a638c79"
+    },
+    {
+      "_id": "61a5f7aa00fb5204",
+      "name": "Powerbolt",
+      "type": "spell",
+      "system": {
+        "summary": "Combat",
+        "description": "Target takes (Net Force + 1)P/S",
+        "category": "combat",
+        "pattern": "direct",
+        "duration": "instantaneous",
+        "range": "60m",
+        "action": "complex",
+        "resistanceAttr": "bod",
+        "dvFormula": "nf+1",
+        "dvType": "P/S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Combat"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Powerbolt",
+            "srxId": 1559,
+            "category": "Combat",
+            "description": "Target takes (Net Force + 1)P/S",
+            "range": {
+              "raw": "60m",
+              "bands": [
+                60
+              ]
+            },
+            "duration": "Instantaneous",
+            "resistance": "BOD",
+            "attack": {
+              "type": "Ranged",
+              "accuracy": "Resist: BOD",
+              "dv": {
+                "raw": "(F+1)",
+                "force": true,
+                "mod": 1,
+                "type": "P/S",
+                "element": null
+              }
+            },
+            "slug": "powerbolt"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!43GEuURGQcnJi09w.61a5f7aa00fb5204"
+    },
+    {
+      "_id": "87b36f7859ef38a1",
+      "name": "Combat Sense",
+      "type": "spell",
+      "system": {
+        "summary": "Detection",
+        "description": "+1 to target's Defense Score",
+        "category": "detection",
+        "pattern": "touch",
+        "duration": "sustained",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Detection"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Combat Sense",
+            "srxId": 1515,
+            "category": "Detection",
+            "description": "+1 to target's Defense Score",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Sustained",
+            "resistance": null,
+            "attack": null,
+            "slug": "combat-sense"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!43GEuURGQcnJi09w.87b36f7859ef38a1"
+    },
+    {
+      "_id": "d1a0a878e6231e14",
+      "name": "Heal",
+      "type": "spell",
+      "system": {
+        "summary": "Health",
+        "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+        "category": "health",
+        "pattern": "touch",
+        "duration": "instantaneous",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Health"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Heal",
+            "srxId": 1534,
+            "category": "Health",
+            "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Instantaneous",
+            "resistance": null,
+            "attack": null,
+            "slug": "heal"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!43GEuURGQcnJi09w.d1a0a878e6231e14"
+    },
+    {
+      "_id": "a50bdc0b702b8dd1",
+      "name": "Fleet Feet",
+      "type": "spell",
+      "system": {
+        "summary": "Health",
+        "description": "+Force to target's Movement Rate. Target Runs as Minor Action, and Moves as Free Action.",
+        "category": "health",
+        "pattern": "direct",
+        "duration": "sustained",
+        "range": "30m",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Health"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Fleet Feet",
+            "srxId": 1531,
+            "category": "Health",
+            "description": "+Force to target's Movement Rate. Target Runs as Minor Action, and Moves as Free Action.",
+            "range": {
+              "raw": "30m",
+              "bands": [
+                30
+              ]
+            },
+            "duration": "Sustained",
+            "resistance": null,
+            "attack": null,
+            "slug": "fleet-feet"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!43GEuURGQcnJi09w.a50bdc0b702b8dd1"
+    },
+    {
+      "_id": "d269dce0a0e50a9b",
+      "name": "Invisibility",
+      "type": "spell",
+      "system": {
+        "summary": "Illusion",
+        "description": "Target becomes invisible",
+        "category": "illusion",
+        "pattern": "touch",
+        "duration": "sustained",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Illusion"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Invisibility",
+            "srxId": 1542,
+            "category": "Illusion",
+            "description": "Target becomes invisible",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Sust (1 hour)",
+            "resistance": "Special",
+            "attack": null,
+            "slug": "invisibility"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!43GEuURGQcnJi09w.d269dce0a0e50a9b"
+    },
+    {
+      "_id": "e5eb41babd5f0e5b",
+      "name": "Astral Perception",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / -",
+        "description": "See and affect the astral plane",
+        "category": "channeling",
+        "subgroup": "-",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Astral Perception",
+            "srxId": 486,
+            "category": "Channeling",
+            "subcategory": "-",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "-",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": "Minor",
+            "range": "Self",
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "See and affect the astral plane",
+            "effects": [],
+            "slug": "astral-perception-4"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!43GEuURGQcnJi09w.e5eb41babd5f0e5b"
+    },
+    {
+      "_id": "ae69275919208f3c",
+      "name": "Magical Defenses",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / -",
+        "description": "Improved Crit on resistance tests against magical effects",
+        "category": "channeling",
+        "subgroup": "-",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Magical Defenses",
+            "srxId": 510,
+            "category": "Channeling",
+            "subcategory": "-",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "-",
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "Improved Crit on resistance tests against magical effects",
+            "effects": [],
+            "slug": "magical-defenses-2"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!43GEuURGQcnJi09w.ae69275919208f3c"
+    },
+    {
+      "_id": "61dc288522c9b195",
+      "name": "Superior Focus",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / Yin",
+        "description": "Gain Focused Concentration General Talent. Wounded status does not give penalty to Defense Score.",
+        "category": "channeling",
+        "subgroup": "Yin",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Superior Focus",
+            "srxId": 536,
+            "category": "Channeling",
+            "subcategory": "Yin",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Yin",
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [
+              "Focused Concentration"
+            ],
+            "cost": {
+              "karma": 6
+            },
+            "description": "Gain Focused Concentration General Talent. Wounded status does not give penalty to Defense Score.",
+            "effects": [],
+            "slug": "superior-focus"
+          }
+        }
+      },
+      "sort": 1300,
+      "_key": "!actors.items!43GEuURGQcnJi09w.61dc288522c9b195"
     }
   ],
   "effects": [],

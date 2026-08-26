@@ -91,7 +91,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 5,
         "bonus": 0
       },
       "resonance": {
@@ -377,6 +377,390 @@
       },
       "sort": 400,
       "_key": "!actors.items!aGu8DaPAU2YSCjs4.a88e7bad8b5f8e25"
+    },
+    {
+      "_id": "095b1b2f27babf45",
+      "name": "Manabolt",
+      "type": "spell",
+      "system": {
+        "summary": "Combat",
+        "description": "Target takes (Net Force + 1)P/S",
+        "category": "combat",
+        "pattern": "direct",
+        "duration": "instantaneous",
+        "range": "60m",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "P/S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Combat"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Manabolt",
+            "srxId": 1549,
+            "category": "Combat",
+            "description": "Target takes (Net Force + 1)P/S",
+            "range": {
+              "raw": "60m",
+              "bands": [
+                60
+              ]
+            },
+            "duration": "Instantaneous",
+            "resistance": "WIL",
+            "attack": {
+              "type": "Ranged",
+              "accuracy": "Resist: WIL",
+              "dv": {
+                "raw": "(F+1)",
+                "force": true,
+                "mod": 1,
+                "type": "P/S",
+                "element": null
+              }
+            },
+            "slug": "manabolt"
+          }
+        }
+      },
+      "sort": 500,
+      "_key": "!actors.items!aGu8DaPAU2YSCjs4.095b1b2f27babf45"
+    },
+    {
+      "_id": "05787314fc3d3254",
+      "name": "Powerbolt",
+      "type": "spell",
+      "system": {
+        "summary": "Combat",
+        "description": "Target takes (Net Force + 1)P/S",
+        "category": "combat",
+        "pattern": "direct",
+        "duration": "instantaneous",
+        "range": "60m",
+        "action": "complex",
+        "resistanceAttr": "bod",
+        "dvFormula": "nf+1",
+        "dvType": "P/S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Combat"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Powerbolt",
+            "srxId": 1559,
+            "category": "Combat",
+            "description": "Target takes (Net Force + 1)P/S",
+            "range": {
+              "raw": "60m",
+              "bands": [
+                60
+              ]
+            },
+            "duration": "Instantaneous",
+            "resistance": "BOD",
+            "attack": {
+              "type": "Ranged",
+              "accuracy": "Resist: BOD",
+              "dv": {
+                "raw": "(F+1)",
+                "force": true,
+                "mod": 1,
+                "type": "P/S",
+                "element": null
+              }
+            },
+            "slug": "powerbolt"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!aGu8DaPAU2YSCjs4.05787314fc3d3254"
+    },
+    {
+      "_id": "d92b31d79b3ea0d9",
+      "name": "Manaball",
+      "type": "spell",
+      "system": {
+        "summary": "Combat",
+        "description": "All targets in area take (Net Force - 1)P/S",
+        "category": "combat",
+        "pattern": "area",
+        "duration": "instantaneous",
+        "range": "50m [A]",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf-1",
+        "dvType": "P/S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Combat"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Manaball",
+            "srxId": 1548,
+            "category": "Combat",
+            "description": "All targets in area take (Net Force - 1)P/S",
+            "range": {
+              "raw": "50m [A]",
+              "bands": [
+                50
+              ],
+              "area": true
+            },
+            "duration": "Instantaneous",
+            "resistance": "WIL",
+            "attack": {
+              "type": "AOE",
+              "accuracy": "Resist: WIL",
+              "dv": {
+                "raw": "(F-1)",
+                "force": true,
+                "mod": -1,
+                "type": "P/S",
+                "element": null
+              }
+            },
+            "slug": "manaball"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!aGu8DaPAU2YSCjs4.d92b31d79b3ea0d9"
+    },
+    {
+      "_id": "ba4bff0d526c599d",
+      "name": "Heal",
+      "type": "spell",
+      "system": {
+        "summary": "Health",
+        "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+        "category": "health",
+        "pattern": "touch",
+        "duration": "instantaneous",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Health"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Heal",
+            "srxId": 1534,
+            "category": "Health",
+            "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Instantaneous",
+            "resistance": null,
+            "attack": null,
+            "slug": "heal"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!aGu8DaPAU2YSCjs4.ba4bff0d526c599d"
+    },
+    {
+      "_id": "3ffb4e05c2576ddb",
+      "name": "Invisibility",
+      "type": "spell",
+      "system": {
+        "summary": "Illusion",
+        "description": "Target becomes invisible",
+        "category": "illusion",
+        "pattern": "touch",
+        "duration": "sustained",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Illusion"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Invisibility",
+            "srxId": 1542,
+            "category": "Illusion",
+            "description": "Target becomes invisible",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Sust (1 hour)",
+            "resistance": "Special",
+            "attack": null,
+            "slug": "invisibility"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!aGu8DaPAU2YSCjs4.3ffb4e05c2576ddb"
+    },
+    {
+      "_id": "28ec7dc95c0349a5",
+      "name": "Levitate",
+      "type": "spell",
+      "system": {
+        "summary": "Manipulation",
+        "description": "Move person or object through the air",
+        "category": "manipulation",
+        "pattern": "direct",
+        "duration": "sustained",
+        "range": "Special",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Manipulation"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Levitate",
+            "srxId": 1543,
+            "category": "Manipulation",
+            "description": "Move person or object through the air",
+            "range": {
+              "raw": "Special",
+              "special": "Special"
+            },
+            "duration": "Sustained",
+            "resistance": "WIL+BOD",
+            "attack": null,
+            "slug": "levitate"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!aGu8DaPAU2YSCjs4.28ec7dc95c0349a5"
+    },
+    {
+      "_id": "7cdaaebb52e25564",
+      "name": "Combat Sense",
+      "type": "spell",
+      "system": {
+        "summary": "Detection",
+        "description": "+1 to target's Defense Score",
+        "category": "detection",
+        "pattern": "touch",
+        "duration": "sustained",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Detection"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Combat Sense",
+            "srxId": 1515,
+            "category": "Detection",
+            "description": "+1 to target's Defense Score",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Sustained",
+            "resistance": null,
+            "attack": null,
+            "slug": "combat-sense"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!aGu8DaPAU2YSCjs4.7cdaaebb52e25564"
+    },
+    {
+      "_id": "35623aff42b7c0a7",
+      "name": "Light",
+      "type": "spell",
+      "system": {
+        "summary": "Manipulation",
+        "description": "Create light in area",
+        "category": "manipulation",
+        "pattern": "area",
+        "duration": "timed",
+        "range": "100m [A]",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Manipulation"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Light",
+            "srxId": 1544,
+            "category": "Manipulation",
+            "description": "Create light in area",
+            "range": {
+              "raw": "100m [A]",
+              "bands": [
+                100
+              ],
+              "area": true
+            },
+            "duration": "(Force)hours",
+            "resistance": null,
+            "attack": null,
+            "slug": "light"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!aGu8DaPAU2YSCjs4.35623aff42b7c0a7"
     }
   ],
   "effects": [],

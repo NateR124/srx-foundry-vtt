@@ -81,7 +81,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 0,
         "bonus": 0
       },
       "resonance": {
@@ -474,6 +474,606 @@
       },
       "sort": 600,
       "_key": "!actors.items!EgihXDvk0UM04bwo.bfeb4cb95ab196a7"
+    },
+    {
+      "_id": "e16aef04f545a2a2",
+      "name": "DNI (Direct Neural Interface)",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Basic Matrix connection",
+        "source": "",
+        "cost": 500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.05,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "DNI (Direct Neural Interface)",
+            "srxId": 3030,
+            "category": "Headware",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "DNI (Direct Neural Interface)",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.05",
+              "value": 0.05,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Basic Matrix connection",
+            "effects": [],
+            "slug": "dni-direct-neural-interface"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!EgihXDvk0UM04bwo.e16aef04f545a2a2"
+    },
+    {
+      "_id": "66ca57b590483574",
+      "name": "Hack Access",
+      "type": "talent",
+      "system": {
+        "summary": "Hacking / System Administration",
+        "description": "Gain Access to host or persona",
+        "category": "hacking",
+        "subgroup": "System Administration",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Hack Access",
+            "srxId": 234,
+            "category": "Hacking",
+            "subcategory": "System Administration",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "System Administration",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": "TRUE",
+            "matrixAction": "Complex",
+            "administered": "No",
+            "access": "No",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 6
+            },
+            "description": "Gain Access to host or persona",
+            "effects": [],
+            "slug": "hack-access"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!EgihXDvk0UM04bwo.66ca57b590483574"
+    },
+    {
+      "_id": "5fb372927fcbf9f9",
+      "name": "Exploit",
+      "type": "talent",
+      "system": {
+        "summary": "Hacking / Special",
+        "description": "1 free hit on Hacking tests against chosen system",
+        "category": "hacking",
+        "subgroup": "Special",
+        "karma": 4,
+        "option": "Alarms & Doors, Communications & Surveillance, Drones & Vehicles, Files & Databases, Personal & Industrial Equipment, Weapons & Cyberware",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Exploit",
+            "srxId": 231,
+            "category": "Hacking",
+            "subcategory": "Special",
+            "maxQty": 6,
+            "maxQtyForEachOption": 1,
+            "uniqueKarmaScale": [],
+            "options": [
+              "Alarms & Doors",
+              "Communications & Surveillance",
+              "Drones & Vehicles",
+              "Files & Databases",
+              "Personal & Industrial Equipment",
+              "Weapons & Cyberware"
+            ],
+            "options2": [],
+            "type": "Special",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": null,
+            "matrixAction": "Minor",
+            "administered": "Yes",
+            "access": "-",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "1 free hit on Hacking tests against chosen system",
+            "effects": [],
+            "slug": "exploit"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!EgihXDvk0UM04bwo.5fb372927fcbf9f9"
+    },
+    {
+      "_id": "cce496607e1a21e8",
+      "name": "Sleaze",
+      "type": "talent",
+      "system": {
+        "summary": "Hacking / System Administration",
+        "description": "1 free hit on tests for Hack Access or Backdoor programs",
+        "category": "hacking",
+        "subgroup": "System Administration",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Sleaze",
+            "srxId": 246,
+            "category": "Hacking",
+            "subcategory": "System Administration",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "System Administration",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": null,
+            "matrixAction": "Minor",
+            "administered": "Yes",
+            "access": "-",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "1 free hit on tests for Hack Access or Backdoor programs",
+            "effects": [],
+            "slug": "sleaze"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!EgihXDvk0UM04bwo.cce496607e1a21e8"
+    },
+    {
+      "_id": "935e76e6d3af0b40",
+      "name": "Snoop",
+      "type": "talent",
+      "system": {
+        "summary": "Hacking / Communications & Surveillance",
+        "description": "View/listen to target's communications, or spoof them with Access",
+        "category": "hacking",
+        "subgroup": "Communications & Surveillance",
+        "karma": 3,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Snoop",
+            "srxId": 247,
+            "category": "Hacking",
+            "subcategory": "Communications & Surveillance",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Communications & Surveillance",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": "TRUE",
+            "matrixAction": "Complex",
+            "administered": "Yes",
+            "access": "Special",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 3
+            },
+            "description": "View/listen to target's communications, or spoof them with Access",
+            "effects": [],
+            "slug": "snoop"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!EgihXDvk0UM04bwo.935e76e6d3af0b40"
+    },
+    {
+      "_id": "ae60315639e4beec",
+      "name": "Crack File",
+      "type": "talent",
+      "system": {
+        "summary": "Hacking / Files & Databases",
+        "description": "View, edit, copy, create, or delete file or data",
+        "category": "hacking",
+        "subgroup": "Files & Databases",
+        "karma": 3,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Crack File",
+            "srxId": 216,
+            "category": "Hacking",
+            "subcategory": "Files & Databases",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Files & Databases",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": "TRUE",
+            "matrixAction": "Complex",
+            "administered": "No",
+            "access": "No",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 3
+            },
+            "description": "View, edit, copy, create, or delete file or data",
+            "effects": [],
+            "slug": "crack-file"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!EgihXDvk0UM04bwo.ae60315639e4beec"
+    },
+    {
+      "_id": "e716c0737fdb5b03",
+      "name": "Loop the Feed",
+      "type": "talent",
+      "system": {
+        "summary": "Hacking / Communications & Surveillance",
+        "description": "Make surveillance device show past footage instead of current feed",
+        "category": "hacking",
+        "subgroup": "Communications & Surveillance",
+        "karma": 3,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Loop the Feed",
+            "srxId": 241,
+            "category": "Hacking",
+            "subcategory": "Communications & Surveillance",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Communications & Surveillance",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": "TRUE",
+            "matrixAction": "Complex",
+            "administered": "Yes",
+            "access": "Yes",
+            "prereqRaw": "Hack Access (Hacking Talent)",
+            "prereq": {
+              "kind": "talent",
+              "name": "Hack Access",
+              "categoryHint": "Hacking Talent"
+            },
+            "grants": [],
+            "cost": {
+              "karma": 3
+            },
+            "description": "Make surveillance device show past footage instead of current feed",
+            "effects": [],
+            "slug": "loop-the-feed"
+          }
+        }
+      },
+      "sort": 1300,
+      "_key": "!actors.items!EgihXDvk0UM04bwo.e716c0737fdb5b03"
+    },
+    {
+      "_id": "1fa63189f9158eac",
+      "name": "Encryption",
+      "type": "talent",
+      "system": {
+        "summary": "Software / Firewall",
+        "description": "+1 Matrix Defense Score against files & databases or communications & surveillance programs",
+        "category": "software",
+        "subgroup": "Firewall",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Encryption",
+            "srxId": 261,
+            "category": "Software",
+            "subcategory": "Firewall",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Firewall",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": "-",
+            "administered": "No",
+            "access": "-",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "+1 Matrix Defense Score against files & databases or communications & surveillance programs",
+            "effects": [],
+            "slug": "encryption-2"
+          }
+        }
+      },
+      "sort": 1400,
+      "_key": "!actors.items!EgihXDvk0UM04bwo.1fa63189f9158eac"
+    },
+    {
+      "_id": "d652edd08fdbc3dc",
+      "name": "Trace Icon",
+      "type": "talent",
+      "system": {
+        "summary": "Software / Data Processing",
+        "description": "Learn target icon's physical location",
+        "category": "software",
+        "subgroup": "Data Processing",
+        "karma": 3,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Trace Icon",
+            "srxId": 279,
+            "category": "Software",
+            "subcategory": "Data Processing",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Data Processing",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": "TRUE",
+            "matrixAction": "Complex",
+            "administered": "No",
+            "access": "-",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 3
+            },
+            "description": "Learn target icon's physical location",
+            "effects": [],
+            "slug": "trace-icon"
+          }
+        }
+      },
+      "sort": 1500,
+      "_key": "!actors.items!EgihXDvk0UM04bwo.d652edd08fdbc3dc"
+    },
+    {
+      "_id": "25024778eacee4e3",
+      "name": "Multi-tasking",
+      "type": "talent",
+      "system": {
+        "summary": "Software / Data Processing",
+        "description": "Ignore -2 penalty for 1 administered program",
+        "category": "software",
+        "subgroup": "Data Processing",
+        "karma": 8,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Multi-tasking",
+            "srxId": 265,
+            "category": "Software",
+            "subcategory": "Data Processing",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Data Processing",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": "-",
+            "administered": "No",
+            "access": "-",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 8
+            },
+            "description": "Ignore -2 penalty for 1 administered program",
+            "effects": [],
+            "slug": "multi-tasking"
+          }
+        }
+      },
+      "sort": 1600,
+      "_key": "!actors.items!EgihXDvk0UM04bwo.25024778eacee4e3"
     }
   ],
   "effects": [],
@@ -486,5 +1086,31 @@
     "name": "Decker System Cracker (Human)",
     "actorLink": true
   },
-  "_key": "!actors!EgihXDvk0UM04bwo"
+  "_key": "!actors!EgihXDvk0UM04bwo",
+  "flags": {
+    "srx": {
+      "matrixDevices": [
+        {
+          "id": "73e44db66cf2d7e0",
+          "wireless": true,
+          "unattended": false,
+          "bricked": false,
+          "disconnected": false,
+          "name": "MCT 360 Cyberdeck",
+          "systemTag": "personalIndustrialEquipment",
+          "firewall": 2
+        },
+        {
+          "id": "d3a85110903aaf22",
+          "wireless": true,
+          "unattended": false,
+          "bricked": false,
+          "disconnected": false,
+          "name": "Renraku Sensei Commlink",
+          "systemTag": "commsSurveillance",
+          "firewall": 1
+        }
+      ]
+    }
+  }
 }

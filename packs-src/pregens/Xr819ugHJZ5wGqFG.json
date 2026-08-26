@@ -90,7 +90,7 @@
         "bonus": 0
       },
       "resonance": {
-        "base": 1,
+        "base": 5,
         "bonus": 0
       }
     },
@@ -412,6 +412,360 @@
       },
       "sort": 500,
       "_key": "!actors.items!Xr819ugHJZ5wGqFG.b1b68da08c4ea9ab"
+    },
+    {
+      "_id": "ba386e712ec5bc29",
+      "name": "Living Persona",
+      "type": "talent",
+      "system": {
+        "summary": "Threading / Complex Form",
+        "description": "Essential technomancy talent. Connect to Matrix without any device.",
+        "category": "threading",
+        "subgroup": "Complex Form",
+        "karma": 0,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Living Persona",
+            "srxId": 311,
+            "category": "Threading",
+            "subcategory": "Complex Form",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Complex Form",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": null,
+            "matrixAction": "-",
+            "administered": "No",
+            "access": "-",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 0
+            },
+            "description": "Essential technomancy talent. Connect to Matrix without any device.",
+            "effects": [],
+            "slug": "living-persona"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!Xr819ugHJZ5wGqFG.ba386e712ec5bc29"
+    },
+    {
+      "_id": "da3ee59026869dec",
+      "name": "Jolt",
+      "type": "talent",
+      "system": {
+        "summary": "Threading / Fading",
+        "description": "Target can't fall unconscious",
+        "category": "threading",
+        "subgroup": "Fading",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Jolt",
+            "srxId": 307,
+            "category": "Threading",
+            "subcategory": "Fading",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Fading",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": "TRUE",
+            "matrixAction": "Major",
+            "administered": "Yes",
+            "access": "-",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "Target can't fall unconscious",
+            "effects": [],
+            "slug": "jolt"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!Xr819ugHJZ5wGqFG.da3ee59026869dec"
+    },
+    {
+      "_id": "17f4514b890b083e",
+      "name": "Burn",
+      "type": "talent",
+      "system": {
+        "summary": "Threading / Fading",
+        "description": "(Net Level x2)P damage to target in hot-sim and repeat damage every Action Phase",
+        "category": "threading",
+        "subgroup": "Fading",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Burn",
+            "srxId": 291,
+            "category": "Threading",
+            "subcategory": "Fading",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Fading",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": "TRUE",
+            "matrixAction": "Major",
+            "administered": "Yes",
+            "access": "No",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "(Net Level x2)P damage to target in hot-sim and repeat damage every Action Phase",
+            "effects": [],
+            "slug": "burn"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!Xr819ugHJZ5wGqFG.17f4514b890b083e"
+    },
+    {
+      "_id": "477ccb649ff4d791",
+      "name": "Static Bomb",
+      "type": "talent",
+      "system": {
+        "summary": "Threading / Fading",
+        "description": "All personas & devices in 30m radius affected by Killjoy Hacking program. Failure does not trigger IC.",
+        "category": "threading",
+        "subgroup": "Fading",
+        "karma": 8,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Static Bomb",
+            "srxId": 335,
+            "category": "Threading",
+            "subcategory": "Fading",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Fading",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": "TRUE",
+            "matrixAction": "Complex",
+            "administered": "No",
+            "access": "No",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 8
+            },
+            "description": "All personas & devices in 30m radius affected by Killjoy Hacking program. Failure does not trigger IC.",
+            "effects": [],
+            "slug": "static-bomb"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!Xr819ugHJZ5wGqFG.477ccb649ff4d791"
+    },
+    {
+      "_id": "9b16122aa9b73895",
+      "name": "Augmented Defense",
+      "type": "talent",
+      "system": {
+        "summary": "Threading / Infusion",
+        "description": "Matrix Defense action gives +2 Matrix Defense Score and 2 free hits on firewall tests",
+        "category": "threading",
+        "subgroup": "Infusion",
+        "karma": 3,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Augmented Defense",
+            "srxId": 286,
+            "category": "Threading",
+            "subcategory": "Infusion",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Infusion",
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": "-",
+            "administered": "No",
+            "access": "-",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 3
+            },
+            "description": "Matrix Defense action gives +2 Matrix Defense Score and 2 free hits on firewall tests",
+            "effects": [],
+            "slug": "augmented-defense"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!Xr819ugHJZ5wGqFG.9b16122aa9b73895"
+    },
+    {
+      "_id": "71f9b09d78a8b3eb",
+      "name": "Shield",
+      "type": "talent",
+      "system": {
+        "summary": "Threading / Complex Form",
+        "description": "Use Interrupt action to give ally +1 Matrix Defense Score if Matrix Defense score is less than yours",
+        "category": "threading",
+        "subgroup": "Complex Form",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Shield",
+            "srxId": 331,
+            "category": "Threading",
+            "subcategory": "Complex Form",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Complex Form",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": null,
+            "matrixAction": "Interrupt",
+            "administered": "No",
+            "access": "-",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 6
+            },
+            "description": "Use Interrupt action to give ally +1 Matrix Defense Score if Matrix Defense score is less than yours",
+            "effects": [],
+            "slug": "shield"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!Xr819ugHJZ5wGqFG.71f9b09d78a8b3eb"
     }
   ],
   "effects": [],

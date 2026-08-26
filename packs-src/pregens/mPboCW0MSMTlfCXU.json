@@ -96,7 +96,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 5,
         "bonus": 0
       },
       "resonance": {
@@ -410,6 +410,352 @@
       },
       "sort": 600,
       "_key": "!actors.items!mPboCW0MSMTlfCXU.61d013bcb6c6e898"
+    },
+    {
+      "_id": "c6d564c2e5d77169",
+      "name": "Heal",
+      "type": "spell",
+      "system": {
+        "summary": "Health",
+        "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+        "category": "health",
+        "pattern": "touch",
+        "duration": "instantaneous",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Health"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Heal",
+            "srxId": 1534,
+            "category": "Health",
+            "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Instantaneous",
+            "resistance": null,
+            "attack": null,
+            "slug": "heal"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!mPboCW0MSMTlfCXU.c6d564c2e5d77169"
+    },
+    {
+      "_id": "613f60b56a2d7081",
+      "name": "Cure Disease",
+      "type": "spell",
+      "system": {
+        "summary": "Health",
+        "description": "Cleanse diseases from target",
+        "category": "health",
+        "pattern": "touch",
+        "duration": "instantaneous",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Health"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Cure Disease",
+            "srxId": 1518,
+            "category": "Health",
+            "description": "Cleanse diseases from target",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Instantaneous",
+            "resistance": null,
+            "attack": null,
+            "slug": "cure-disease"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!mPboCW0MSMTlfCXU.613f60b56a2d7081"
+    },
+    {
+      "_id": "722de43a1364c2ae",
+      "name": "Antidote",
+      "type": "spell",
+      "system": {
+        "summary": "Health",
+        "description": "Cleanse toxins or drugs from target",
+        "category": "health",
+        "pattern": "touch",
+        "duration": "instantaneous",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Health"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Antidote",
+            "srxId": 1507,
+            "category": "Health",
+            "description": "Cleanse toxins or drugs from target",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Instantaneous",
+            "resistance": null,
+            "attack": null,
+            "slug": "antidote"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!mPboCW0MSMTlfCXU.722de43a1364c2ae"
+    },
+    {
+      "_id": "452d70c92396bb04",
+      "name": "Resist Pain",
+      "type": "spell",
+      "system": {
+        "summary": "Health",
+        "description": "+(Force x 1.5) to target's Wounded Limit",
+        "category": "health",
+        "pattern": "touch",
+        "duration": "sustained",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Health"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Resist Pain",
+            "srxId": 1562,
+            "category": "Health",
+            "description": "+(Force x 1.5) to target's Wounded Limit",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Sustained",
+            "resistance": null,
+            "attack": null,
+            "slug": "resist-pain"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!mPboCW0MSMTlfCXU.452d70c92396bb04"
+    },
+    {
+      "_id": "3bc5dbc2d6a2eb59",
+      "name": "Oxygenate",
+      "type": "spell",
+      "system": {
+        "summary": "Health",
+        "description": "All chosen targets do not need to breathe",
+        "category": "health",
+        "pattern": "area",
+        "duration": "sustained",
+        "range": "5m",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Health"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Oxygenate",
+            "srxId": 1554,
+            "category": "Health",
+            "description": "All chosen targets do not need to breathe",
+            "range": {
+              "raw": "5m",
+              "bands": [
+                5
+              ]
+            },
+            "duration": "Sustained",
+            "resistance": null,
+            "attack": null,
+            "slug": "oxygenate"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!mPboCW0MSMTlfCXU.3bc5dbc2d6a2eb59"
+    },
+    {
+      "_id": "88e669c9b1ac6a20",
+      "name": "Strengthen",
+      "type": "spell",
+      "system": {
+        "summary": "Health",
+        "description": "Target gains +2 augmentation bonus to tests with chosen physical attribute",
+        "category": "health",
+        "pattern": "touch",
+        "duration": "sustained",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Health"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Strengthen",
+            "srxId": 1570,
+            "category": "Health",
+            "description": "Target gains +2 augmentation bonus to tests with chosen physical attribute",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Sustained",
+            "resistance": null,
+            "attack": null,
+            "slug": "strengthen"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!mPboCW0MSMTlfCXU.88e669c9b1ac6a20"
+    },
+    {
+      "_id": "a2e7aed0129f536e",
+      "name": "Detect Life",
+      "type": "spell",
+      "system": {
+        "summary": "Detection",
+        "description": "Sense presence of living beings",
+        "category": "detection",
+        "pattern": "self",
+        "duration": "sustained",
+        "range": "Self",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Detection"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Detect Life",
+            "srxId": 1521,
+            "category": "Detection",
+            "description": "Sense presence of living beings",
+            "range": {
+              "raw": "Self",
+              "special": "Self"
+            },
+            "duration": "Sustained",
+            "resistance": "WIL+CHA",
+            "attack": null,
+            "slug": "detect-life"
+          }
+        }
+      },
+      "sort": 1300,
+      "_key": "!actors.items!mPboCW0MSMTlfCXU.a2e7aed0129f536e"
+    },
+    {
+      "_id": "e6acd103a528894c",
+      "name": "Alertness",
+      "type": "spell",
+      "system": {
+        "summary": "Detection",
+        "description": "Target reroll 1's on Perception tests and gains +2 Accelerator",
+        "category": "detection",
+        "pattern": "touch",
+        "duration": "sustained",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Detection"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Alertness",
+            "srxId": 1503,
+            "category": "Detection",
+            "description": "Target reroll 1's on Perception tests and gains +2 Accelerator",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Sustained",
+            "resistance": null,
+            "attack": null,
+            "slug": "alertness"
+          }
+        }
+      },
+      "sort": 1400,
+      "_key": "!actors.items!mPboCW0MSMTlfCXU.e6acd103a528894c"
     }
   ],
   "effects": [],

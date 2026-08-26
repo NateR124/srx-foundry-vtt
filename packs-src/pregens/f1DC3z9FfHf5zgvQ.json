@@ -106,7 +106,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 4,
         "bonus": 0
       },
       "resonance": {
@@ -530,6 +530,380 @@
       },
       "sort": 600,
       "_key": "!actors.items!f1DC3z9FfHf5zgvQ.0726f26248bd2e06"
+    },
+    {
+      "_id": "d6581be60047070a",
+      "name": "Detect Life",
+      "type": "spell",
+      "system": {
+        "summary": "Detection",
+        "description": "Sense presence of living beings",
+        "category": "detection",
+        "pattern": "self",
+        "duration": "sustained",
+        "range": "Self",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Detection"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Detect Life",
+            "srxId": 1521,
+            "category": "Detection",
+            "description": "Sense presence of living beings",
+            "range": {
+              "raw": "Self",
+              "special": "Self"
+            },
+            "duration": "Sustained",
+            "resistance": "WIL+CHA",
+            "attack": null,
+            "slug": "detect-life"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!f1DC3z9FfHf5zgvQ.d6581be60047070a"
+    },
+    {
+      "_id": "78fece4edff278cd",
+      "name": "Clairvoyance",
+      "type": "spell",
+      "system": {
+        "summary": "Detection",
+        "description": "View area at a distant point",
+        "category": "detection",
+        "pattern": "direct",
+        "duration": "sustained",
+        "range": "F x 10m",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Detection"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Clairvoyance",
+            "srxId": 1514,
+            "category": "Detection",
+            "description": "View area at a distant point",
+            "range": {
+              "raw": "F x 10m",
+              "force": true,
+              "mult": 10,
+              "unit": "m"
+            },
+            "duration": "Sust (1 hour)",
+            "resistance": "WIL+CHA",
+            "attack": null,
+            "slug": "clairvoyance"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!f1DC3z9FfHf5zgvQ.78fece4edff278cd"
+    },
+    {
+      "_id": "e6bc068328ea2a35",
+      "name": "Combat Sense",
+      "type": "spell",
+      "system": {
+        "summary": "Detection",
+        "description": "+1 to target's Defense Score",
+        "category": "detection",
+        "pattern": "touch",
+        "duration": "sustained",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Detection"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Combat Sense",
+            "srxId": 1515,
+            "category": "Detection",
+            "description": "+1 to target's Defense Score",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Sustained",
+            "resistance": null,
+            "attack": null,
+            "slug": "combat-sense"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!f1DC3z9FfHf5zgvQ.e6bc068328ea2a35"
+    },
+    {
+      "_id": "21687ad32716eed5",
+      "name": "Manabolt",
+      "type": "spell",
+      "system": {
+        "summary": "Combat",
+        "description": "Target takes (Net Force + 1)P/S",
+        "category": "combat",
+        "pattern": "direct",
+        "duration": "instantaneous",
+        "range": "60m",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "P/S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Combat"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Manabolt",
+            "srxId": 1549,
+            "category": "Combat",
+            "description": "Target takes (Net Force + 1)P/S",
+            "range": {
+              "raw": "60m",
+              "bands": [
+                60
+              ]
+            },
+            "duration": "Instantaneous",
+            "resistance": "WIL",
+            "attack": {
+              "type": "Ranged",
+              "accuracy": "Resist: WIL",
+              "dv": {
+                "raw": "(F+1)",
+                "force": true,
+                "mod": 1,
+                "type": "P/S",
+                "element": null
+              }
+            },
+            "slug": "manabolt"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!f1DC3z9FfHf5zgvQ.21687ad32716eed5"
+    },
+    {
+      "_id": "61ecacc47fc3e2c0",
+      "name": "Powerbolt",
+      "type": "spell",
+      "system": {
+        "summary": "Combat",
+        "description": "Target takes (Net Force + 1)P/S",
+        "category": "combat",
+        "pattern": "direct",
+        "duration": "instantaneous",
+        "range": "60m",
+        "action": "complex",
+        "resistanceAttr": "bod",
+        "dvFormula": "nf+1",
+        "dvType": "P/S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Combat"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Powerbolt",
+            "srxId": 1559,
+            "category": "Combat",
+            "description": "Target takes (Net Force + 1)P/S",
+            "range": {
+              "raw": "60m",
+              "bands": [
+                60
+              ]
+            },
+            "duration": "Instantaneous",
+            "resistance": "BOD",
+            "attack": {
+              "type": "Ranged",
+              "accuracy": "Resist: BOD",
+              "dv": {
+                "raw": "(F+1)",
+                "force": true,
+                "mod": 1,
+                "type": "P/S",
+                "element": null
+              }
+            },
+            "slug": "powerbolt"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!f1DC3z9FfHf5zgvQ.61ecacc47fc3e2c0"
+    },
+    {
+      "_id": "cd2276e34492891e",
+      "name": "Heal",
+      "type": "spell",
+      "system": {
+        "summary": "Health",
+        "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+        "category": "health",
+        "pattern": "touch",
+        "duration": "instantaneous",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Health"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Heal",
+            "srxId": 1534,
+            "category": "Health",
+            "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Instantaneous",
+            "resistance": null,
+            "attack": null,
+            "slug": "heal"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!f1DC3z9FfHf5zgvQ.cd2276e34492891e"
+    },
+    {
+      "_id": "81ceb4782d919d6f",
+      "name": "Fleet Feet",
+      "type": "spell",
+      "system": {
+        "summary": "Health",
+        "description": "+Force to target's Movement Rate. Target Runs as Minor Action, and Moves as Free Action.",
+        "category": "health",
+        "pattern": "direct",
+        "duration": "sustained",
+        "range": "30m",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Health"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Fleet Feet",
+            "srxId": 1531,
+            "category": "Health",
+            "description": "+Force to target's Movement Rate. Target Runs as Minor Action, and Moves as Free Action.",
+            "range": {
+              "raw": "30m",
+              "bands": [
+                30
+              ]
+            },
+            "duration": "Sustained",
+            "resistance": null,
+            "attack": null,
+            "slug": "fleet-feet"
+          }
+        }
+      },
+      "sort": 1300,
+      "_key": "!actors.items!f1DC3z9FfHf5zgvQ.81ceb4782d919d6f"
+    },
+    {
+      "_id": "4c5335908fe84bb8",
+      "name": "Enhance Aim",
+      "type": "spell",
+      "system": {
+        "summary": "Detection",
+        "description": "Target reroll 1's on attack tests with chosen skill",
+        "category": "detection",
+        "pattern": "direct",
+        "duration": "sustained",
+        "range": "30m",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Detection"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Enhance Aim",
+            "srxId": 1526,
+            "category": "Detection",
+            "description": "Target reroll 1's on attack tests with chosen skill",
+            "range": {
+              "raw": "30m",
+              "bands": [
+                30
+              ]
+            },
+            "duration": "Sustained",
+            "resistance": null,
+            "attack": null,
+            "slug": "enhance-aim"
+          }
+        }
+      },
+      "sort": 1400,
+      "_key": "!actors.items!f1DC3z9FfHf5zgvQ.4c5335908fe84bb8"
     }
   ],
   "effects": [],

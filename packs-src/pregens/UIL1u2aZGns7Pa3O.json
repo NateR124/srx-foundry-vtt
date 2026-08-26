@@ -96,7 +96,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 0,
         "bonus": 0
       },
       "resonance": {
@@ -513,6 +513,264 @@
       },
       "sort": 600,
       "_key": "!actors.items!UIL1u2aZGns7Pa3O.9cd0173678e93fe8"
+    },
+    {
+      "_id": "1db33d4051e39d4b",
+      "name": "Wired Reflexes",
+      "type": "ware",
+      "system": {
+        "summary": "Bodyware",
+        "description": "+Rating to Quickness",
+        "source": "",
+        "cost": 0,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Bodyware",
+        "container": "",
+        "rating": 2,
+        "maxRating": 3,
+        "essence": 0,
+        "essenceScale": [
+          1,
+          1.5,
+          2.5
+        ],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": []
+      },
+      "effects": [
+        {
+          "name": "Wired Reflexes",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.special.quickness.bonus",
+              "mode": 2,
+              "value": "2"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "0ec6e9dda7d9ce9a",
+          "_key": "!actors.items.effects!UIL1u2aZGns7Pa3O.1db33d4051e39d4b.0ec6e9dda7d9ce9a"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Wired Reflexes",
+            "srxId": 3125,
+            "category": "Bodyware",
+            "cost": 0,
+            "costDisplay": "Per Rating: 24k/64k/134k",
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Wired Reflexes",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": 3,
+            "uniqueScale": 1,
+            "nuyenScale": [
+              24000,
+              64000,
+              134000
+            ],
+            "essence": {
+              "display": "Per Rating: 1/1.5/2.5",
+              "value": 0,
+              "scale": [
+                1,
+                1.5,
+                2.5
+              ]
+            },
+            "parentContainer": null,
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [],
+            "grants": [],
+            "description": "+Rating to Quickness",
+            "effects": [
+              {
+                "key": "qui",
+                "value": 1
+              }
+            ],
+            "slug": "wired-reflexes"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!UIL1u2aZGns7Pa3O.1db33d4051e39d4b"
+    },
+    {
+      "_id": "af1ac1af8badbccb",
+      "name": "Dermal Plating",
+      "type": "ware",
+      "system": {
+        "summary": "Bodyware",
+        "description": "+2 Armor, Hardened Armor",
+        "source": "",
+        "cost": 25000,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Bodyware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.8,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Cybertorso",
+          "Orthoskin"
+        ]
+      },
+      "effects": [
+        {
+          "name": "Dermal Plating",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.derivedMods.armor",
+              "mode": 2,
+              "value": "2"
+            },
+            {
+              "key": "system.derivedMods.hardened",
+              "mode": 2,
+              "value": "2"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "5c54ac7b7c8a0b00",
+          "_key": "!actors.items.effects!UIL1u2aZGns7Pa3O.af1ac1af8badbccb.5c54ac7b7c8a0b00"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Dermal Plating",
+            "srxId": 3097,
+            "category": "Bodyware",
+            "cost": 25000,
+            "costDisplay": "25,500",
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Dermal Plating",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.8",
+              "value": 0.8,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [
+              "Cybertorso",
+              "Orthoskin"
+            ],
+            "grants": [],
+            "description": "+2 Armor, Hardened Armor",
+            "effects": [
+              {
+                "key": "armor",
+                "value": 2
+              },
+              {
+                "key": "hardenedArmor",
+                "value": 2
+              }
+            ],
+            "slug": "dermal-plating"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!UIL1u2aZGns7Pa3O.af1ac1af8badbccb"
+    },
+    {
+      "_id": "51d82ce1ad2fb57f",
+      "name": "Smartlink (Implanted)",
+      "type": "ware",
+      "system": {
+        "summary": "Senseware / Eyeware",
+        "description": "+2 to ranged attacks",
+        "source": "",
+        "cost": 12000,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Eyeware",
+        "container": "Cybereyes",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.3,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Smartlink (Implanted)",
+            "srxId": 3016,
+            "category": "Senseware",
+            "subcategory": "Eyeware",
+            "cost": 12000,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Smartlink (Implanted)",
+            "type": "Eyeware",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.3",
+              "value": 0.3,
+              "scale": []
+            },
+            "parentContainer": "Cybereyes",
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [],
+            "grants": [],
+            "description": "+2 to ranged attacks",
+            "effects": [],
+            "slug": "smartlink-implanted"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!UIL1u2aZGns7Pa3O.51d82ce1ad2fb57f"
     }
   ],
   "effects": [],

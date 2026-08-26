@@ -96,11 +96,13 @@ export class SrxCharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) 
     const showMagicTab = (sys.special.magic.value ?? 0) > 0 || isBuild;
     if (!showMagicTab && this.#activeTab === "magic") this.#activeTab = "main";
 
-    // Matrix tab: hackers/deckers only in Play (hide Firewall/matrix for
-    // non-hackers); Build always shows it
+    // Matrix tab: hackers/deckers/technomancers only in Play (hide Firewall/
+    // matrix for the rest); Build always shows it
     const showMatrixTab = isBuild
       || (sys.skills.hacking?.value ?? 0) > 0
       || (sys.skills.software?.value ?? 0) > 0
+      || (sys.skills.threading?.value ?? 0) > 0
+      || (sys.special.resonance?.value ?? 0) > 0
       || (sys.matrix?.firewall ?? 0) > 0;
     if (!showMatrixTab && this.#activeTab === "matrix") this.#activeTab = "main";
     context.showMatrixTab = showMatrixTab;

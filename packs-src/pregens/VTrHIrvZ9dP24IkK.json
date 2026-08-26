@@ -91,7 +91,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 5,
         "bonus": 0
       },
       "resonance": {
@@ -406,6 +406,411 @@
       },
       "sort": 500,
       "_key": "!actors.items!VTrHIrvZ9dP24IkK.d3e17fb62f2392c3"
+    },
+    {
+      "_id": "add25b493fba2974",
+      "name": "Kinesics",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / Yin",
+        "description": "+1 Con and Influence",
+        "category": "channeling",
+        "subgroup": "Yin",
+        "karma": 7,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [
+        {
+          "name": "Kinesics",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.skills.con.bonus",
+              "mode": 2,
+              "value": "1"
+            },
+            {
+              "key": "system.skills.influence.bonus",
+              "mode": 2,
+              "value": "1"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "5e9c9a5068767a72",
+          "_key": "!actors.items.effects!VTrHIrvZ9dP24IkK.add25b493fba2974.5e9c9a5068767a72"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Kinesics",
+            "srxId": 507,
+            "category": "Channeling",
+            "subcategory": "Yin",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Yin",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 7
+            },
+            "description": "+1 Con and Influence",
+            "effects": [
+              {
+                "key": "Con",
+                "value": 1
+              },
+              {
+                "key": "Influence",
+                "value": 1
+              }
+            ],
+            "slug": "kinesics"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!VTrHIrvZ9dP24IkK.add25b493fba2974"
+    },
+    {
+      "_id": "9f372e25cb2d9a20",
+      "name": "Mimic",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / Yang",
+        "description": "Alter appearance and voice",
+        "category": "channeling",
+        "subgroup": "Yang",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Mimic",
+            "srxId": 514,
+            "category": "Channeling",
+            "subcategory": "Yang",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Yang",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": "TRUE",
+            "action": "Complex",
+            "range": "Self",
+            "duration": "Sust (1 hour)",
+            "resistance": "WIL+INT",
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "Alter appearance and voice",
+            "effects": [],
+            "slug": "mimic"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!VTrHIrvZ9dP24IkK.9f372e25cb2d9a20"
+    },
+    {
+      "_id": "baa2ec098827903c",
+      "name": "Physical Elegance",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / Yin",
+        "description": "Gain Gifted Athlete General Talent. +1 Athletics and Stealth. Improved Crit on Athletics tests.",
+        "category": "channeling",
+        "subgroup": "Yin",
+        "karma": 10,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [
+        {
+          "name": "Physical Elegance",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.skills.athletics.bonus",
+              "mode": 2,
+              "value": "1"
+            },
+            {
+              "key": "system.skills.stealth.bonus",
+              "mode": 2,
+              "value": "1"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "66cd4812c1be4cae",
+          "_key": "!actors.items.effects!VTrHIrvZ9dP24IkK.baa2ec098827903c.66cd4812c1be4cae"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Physical Elegance",
+            "srxId": 524,
+            "category": "Channeling",
+            "subcategory": "Yin",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Yin",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [
+              "Gifted Athlete"
+            ],
+            "cost": {
+              "karma": 10
+            },
+            "description": "Gain Gifted Athlete General Talent. +1 Athletics and Stealth. Improved Crit on Athletics tests.",
+            "effects": [
+              {
+                "key": "Athletics",
+                "value": 1
+              },
+              {
+                "key": "Stealth",
+                "value": 1
+              }
+            ],
+            "slug": "physical-elegance"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!VTrHIrvZ9dP24IkK.baa2ec098827903c"
+    },
+    {
+      "_id": "66ea6ec5f292484f",
+      "name": "Mental Boost",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / Qi",
+        "description": "Leverage on Willpower, Logic, Intuition, or Charisma test (excluding attack or resistance tests)",
+        "category": "channeling",
+        "subgroup": "Qi",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Mental Boost",
+            "srxId": 512,
+            "category": "Channeling",
+            "subcategory": "Qi",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Qi",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": "TRUE",
+            "action": null,
+            "range": "Self",
+            "duration": "Instantaneous",
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "Leverage on Willpower, Logic, Intuition, or Charisma test (excluding attack or resistance tests)",
+            "effects": [],
+            "slug": "mental-boost"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!VTrHIrvZ9dP24IkK.66ea6ec5f292484f"
+    },
+    {
+      "_id": "0f502928a2263531",
+      "name": "Enhanced Awareness",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / Yin",
+        "description": "+1 Insight and Perception",
+        "category": "channeling",
+        "subgroup": "Yin",
+        "karma": 7,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [
+        {
+          "name": "Enhanced Awareness",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.skills.insight.bonus",
+              "mode": 2,
+              "value": "1"
+            },
+            {
+              "key": "system.skills.perception.bonus",
+              "mode": 2,
+              "value": "1"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "15028dadf9b0407b",
+          "_key": "!actors.items.effects!VTrHIrvZ9dP24IkK.0f502928a2263531.15028dadf9b0407b"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Enhanced Awareness",
+            "srxId": 495,
+            "category": "Channeling",
+            "subcategory": "Yin",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Yin",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 7
+            },
+            "description": "+1 Insight and Perception",
+            "effects": [
+              {
+                "key": "Insight",
+                "value": 1
+              },
+              {
+                "key": "Perception",
+                "value": 1
+              }
+            ],
+            "slug": "enhanced-awareness"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!VTrHIrvZ9dP24IkK.0f502928a2263531"
     }
   ],
   "effects": [],

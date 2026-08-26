@@ -101,7 +101,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 0,
         "bonus": 0
       },
       "resonance": {
@@ -539,6 +539,320 @@
       },
       "sort": 600,
       "_key": "!actors.items!ngupozhHUiquHDeY.d2dc5d02ebfb776d"
+    },
+    {
+      "_id": "ca04242ccfd53ec2",
+      "name": "Wired Reflexes",
+      "type": "ware",
+      "system": {
+        "summary": "Bodyware",
+        "description": "+Rating to Quickness",
+        "source": "",
+        "cost": 0,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Bodyware",
+        "container": "",
+        "rating": 1,
+        "maxRating": 3,
+        "essence": 0,
+        "essenceScale": [
+          1,
+          1.5,
+          2.5
+        ],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": []
+      },
+      "effects": [
+        {
+          "name": "Wired Reflexes",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.special.quickness.bonus",
+              "mode": 2,
+              "value": "1"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "431308d6629fce1a",
+          "_key": "!actors.items.effects!ngupozhHUiquHDeY.ca04242ccfd53ec2.431308d6629fce1a"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Wired Reflexes",
+            "srxId": 3125,
+            "category": "Bodyware",
+            "cost": 0,
+            "costDisplay": "Per Rating: 24k/64k/134k",
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Wired Reflexes",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": 3,
+            "uniqueScale": 1,
+            "nuyenScale": [
+              24000,
+              64000,
+              134000
+            ],
+            "essence": {
+              "display": "Per Rating: 1/1.5/2.5",
+              "value": 0,
+              "scale": [
+                1,
+                1.5,
+                2.5
+              ]
+            },
+            "parentContainer": null,
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [],
+            "grants": [],
+            "description": "+Rating to Quickness",
+            "effects": [
+              {
+                "key": "qui",
+                "value": 1
+              }
+            ],
+            "slug": "wired-reflexes"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!ngupozhHUiquHDeY.ca04242ccfd53ec2"
+    },
+    {
+      "_id": "4c38a69fca8587a4",
+      "name": "Bone Lacing",
+      "type": "ware",
+      "system": {
+        "summary": "Bodyware",
+        "description": "+1-3 Phys Health, +1 Hardened Armor, unarmed melee DV, (by type: Improved Crit, 5 hits on crit on Armor tests)",
+        "source": "",
+        "cost": 0,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Bodyware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0,
+        "essenceScale": [
+          0.3,
+          0.6,
+          0.9
+        ],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Bone Density Enhancement"
+        ]
+      },
+      "effects": [
+        {
+          "name": "Bone Lacing",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.derivedMods.hardened",
+              "mode": 2,
+              "value": "1"
+            },
+            {
+              "key": "system.monitors.physical.bonus",
+              "mode": 2,
+              "value": "1"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "8fe16bdd2364b0a4",
+          "_key": "!actors.items.effects!ngupozhHUiquHDeY.4c38a69fca8587a4.8fe16bdd2364b0a4"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Bone Lacing",
+            "srxId": 3091,
+            "category": "Bodyware",
+            "cost": 0,
+            "costDisplay": "Per Option: 5k/15k/30k",
+            "properties": [],
+            "options": [
+              "Plastic",
+              "Aluminum",
+              "Titanium"
+            ],
+            "dictionaryName": "Bone Lacing",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": 2,
+            "nuyenScale": [
+              5000,
+              15000,
+              30000
+            ],
+            "essence": {
+              "display": "Per Option: 0.3/0.6/0.9",
+              "value": 0,
+              "scale": [
+                0.3,
+                0.6,
+                0.9
+              ]
+            },
+            "parentContainer": null,
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [
+              "Bone Density Enhancement"
+            ],
+            "grants": [],
+            "description": "+1-3 Phys Health, +1 Hardened Armor, unarmed melee DV, (by type: Improved Crit, 5 hits on crit on Armor tests)",
+            "effects": [
+              {
+                "key": "hardenedArmor",
+                "value": 1
+              },
+              {
+                "key": "physicalHealth",
+                "value": 1
+              }
+            ],
+            "slug": "bone-lacing"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!ngupozhHUiquHDeY.4c38a69fca8587a4"
+    },
+    {
+      "_id": "bc41677b17bcbb07",
+      "name": "Dermal Plating",
+      "type": "ware",
+      "system": {
+        "summary": "Bodyware",
+        "description": "+2 Armor, Hardened Armor",
+        "source": "",
+        "cost": 25000,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Bodyware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.8,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Cybertorso",
+          "Orthoskin"
+        ]
+      },
+      "effects": [
+        {
+          "name": "Dermal Plating",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.derivedMods.armor",
+              "mode": 2,
+              "value": "2"
+            },
+            {
+              "key": "system.derivedMods.hardened",
+              "mode": 2,
+              "value": "2"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "aa6ada9566451b1c",
+          "_key": "!actors.items.effects!ngupozhHUiquHDeY.bc41677b17bcbb07.aa6ada9566451b1c"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Dermal Plating",
+            "srxId": 3097,
+            "category": "Bodyware",
+            "cost": 25000,
+            "costDisplay": "25,500",
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Dermal Plating",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.8",
+              "value": 0.8,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [
+              "Cybertorso",
+              "Orthoskin"
+            ],
+            "grants": [],
+            "description": "+2 Armor, Hardened Armor",
+            "effects": [
+              {
+                "key": "armor",
+                "value": 2
+              },
+              {
+                "key": "hardenedArmor",
+                "value": 2
+              }
+            ],
+            "slug": "dermal-plating"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!ngupozhHUiquHDeY.bc41677b17bcbb07"
     }
   ],
   "effects": [],

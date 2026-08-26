@@ -86,7 +86,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 5,
         "bonus": 0
       },
       "resonance": {
@@ -452,6 +452,426 @@
       },
       "sort": 500,
       "_key": "!actors.items!GDhRoKZTjgtDtIMO.90d37161e1e441b5"
+    },
+    {
+      "_id": "5142860154d0aae4",
+      "name": "Killing Hands",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / Yin",
+        "description": "Gain Martial Arts Training Weapons Talent. +2 DV to unarmed attacks.",
+        "category": "channeling",
+        "subgroup": "Yin",
+        "karma": 5,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Killing Hands",
+            "srxId": 506,
+            "category": "Channeling",
+            "subcategory": "Yin",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Yin",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [
+              "Martial Arts Training"
+            ],
+            "cost": {
+              "karma": 5
+            },
+            "description": "Gain Martial Arts Training Weapons Talent. +2 DV to unarmed attacks.",
+            "effects": [],
+            "slug": "killing-hands"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!GDhRoKZTjgtDtIMO.5142860154d0aae4"
+    },
+    {
+      "_id": "db81f4a43cb8d570",
+      "name": "Critical Strike",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / Qi",
+        "description": "Leverage on attack test",
+        "category": "channeling",
+        "subgroup": "Qi",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Critical Strike",
+            "srxId": 489,
+            "category": "Channeling",
+            "subcategory": "Qi",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Qi",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": "TRUE",
+            "action": null,
+            "range": "Self",
+            "duration": "Instantaneous",
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "Leverage on attack test",
+            "effects": [],
+            "slug": "critical-strike"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!GDhRoKZTjgtDtIMO.db81f4a43cb8d570"
+    },
+    {
+      "_id": "29b5f6812a5a3383",
+      "name": "Enhanced Speed",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / Yin",
+        "description": "+(Channeling/2) to Movement Rate",
+        "category": "channeling",
+        "subgroup": "Yin",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Enhanced Speed",
+            "srxId": 496,
+            "category": "Channeling",
+            "subcategory": "Yin",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Yin",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "+(Channeling/2) to Movement Rate",
+            "effects": [
+              {
+                "key": "Movement Rate",
+                "value": 0
+              }
+            ],
+            "slug": "enhanced-speed"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!GDhRoKZTjgtDtIMO.29b5f6812a5a3383"
+    },
+    {
+      "_id": "72c4045d10071204",
+      "name": "Pain Resistance",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / Yin",
+        "description": "+1 Wounded Limit",
+        "category": "channeling",
+        "subgroup": "Yin",
+        "karma": 3,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [
+        {
+          "name": "Pain Resistance",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.derivedMods.woundedLimit",
+              "mode": 2,
+              "value": "1"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "567b6d2e4f804691",
+          "_key": "!actors.items.effects!GDhRoKZTjgtDtIMO.72c4045d10071204.567b6d2e4f804691"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Pain Resistance",
+            "srxId": 522,
+            "category": "Channeling",
+            "subcategory": "Yin",
+            "maxQty": 2,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Yin",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 3
+            },
+            "description": "+1 Wounded Limit",
+            "effects": [
+              {
+                "key": "Wounded Limit",
+                "value": 1
+              }
+            ],
+            "slug": "pain-resistance"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!GDhRoKZTjgtDtIMO.72c4045d10071204"
+    },
+    {
+      "_id": "4c164f7a46b40ad3",
+      "name": "Mystic Armor",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / Yin",
+        "description": "+1 Armor",
+        "category": "channeling",
+        "subgroup": "Yin",
+        "karma": 8,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [
+        {
+          "name": "Mystic Armor",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.derivedMods.armor",
+              "mode": 2,
+              "value": "1"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "92fc87118af76de4",
+          "_key": "!actors.items.effects!GDhRoKZTjgtDtIMO.4c164f7a46b40ad3.92fc87118af76de4"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Mystic Armor",
+            "srxId": 516,
+            "category": "Channeling",
+            "subcategory": "Yin",
+            "maxQty": 2,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Yin",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 8
+            },
+            "description": "+1 Armor",
+            "effects": [
+              {
+                "key": "Armor",
+                "value": 1
+              }
+            ],
+            "slug": "mystic-armor"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!GDhRoKZTjgtDtIMO.4c164f7a46b40ad3"
+    },
+    {
+      "_id": "600c8b80bed5195a",
+      "name": "Gun Synchronicity",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / Yin",
+        "description": "Fire 1 additional Action Phase without recoil penalty",
+        "category": "channeling",
+        "subgroup": "Yin",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Gun Synchronicity",
+            "srxId": 499,
+            "category": "Channeling",
+            "subcategory": "Yin",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Yin",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "Fire 1 additional Action Phase without recoil penalty",
+            "effects": [
+              {
+                "key": "Progressive Recoil Comp",
+                "value": 1
+              }
+            ],
+            "slug": "gun-synchronicity"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!GDhRoKZTjgtDtIMO.600c8b80bed5195a"
     }
   ],
   "effects": [],

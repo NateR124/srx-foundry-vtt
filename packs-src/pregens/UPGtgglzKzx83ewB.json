@@ -86,7 +86,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 0,
         "bonus": 0
       },
       "resonance": {
@@ -472,6 +472,540 @@
       },
       "sort": 600,
       "_key": "!actors.items!UPGtgglzKzx83ewB.2af8080e54736812"
+    },
+    {
+      "_id": "fbb6edc1efa3d860",
+      "name": "DNI (Direct Neural Interface)",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Basic Matrix connection",
+        "source": "",
+        "cost": 500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.05,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "DNI (Direct Neural Interface)",
+            "srxId": 3030,
+            "category": "Headware",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "DNI (Direct Neural Interface)",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.05",
+              "value": 0.05,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Basic Matrix connection",
+            "effects": [],
+            "slug": "dni-direct-neural-interface"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!UPGtgglzKzx83ewB.fbb6edc1efa3d860"
+    },
+    {
+      "_id": "87744e0b23af0917",
+      "name": "Hack Access",
+      "type": "talent",
+      "system": {
+        "summary": "Hacking / System Administration",
+        "description": "Gain Access to host or persona",
+        "category": "hacking",
+        "subgroup": "System Administration",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Hack Access",
+            "srxId": 234,
+            "category": "Hacking",
+            "subcategory": "System Administration",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "System Administration",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": "TRUE",
+            "matrixAction": "Complex",
+            "administered": "No",
+            "access": "No",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 6
+            },
+            "description": "Gain Access to host or persona",
+            "effects": [],
+            "slug": "hack-access"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!UPGtgglzKzx83ewB.87744e0b23af0917"
+    },
+    {
+      "_id": "9df5d7e5e6c57351",
+      "name": "Backdoor",
+      "type": "talent",
+      "system": {
+        "summary": "Hacking / System Administration",
+        "description": "If take time to study host, on Hacking tests 1 Crit Die is Aptitude die - hit on 2+",
+        "category": "hacking",
+        "subgroup": "System Administration",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Backdoor",
+            "srxId": 210,
+            "category": "Hacking",
+            "subcategory": "System Administration",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "System Administration",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": "TRUE",
+            "matrixAction": "-",
+            "administered": "No",
+            "access": "No",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "If take time to study host, on Hacking tests 1 Crit Die is Aptitude die - hit on 2+",
+            "effects": [],
+            "slug": "backdoor"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!UPGtgglzKzx83ewB.9df5d7e5e6c57351"
+    },
+    {
+      "_id": "c0445c368d77b296",
+      "name": "Data Bomb",
+      "type": "talent",
+      "system": {
+        "summary": "Hacking / Files & Databases",
+        "description": "Set data bomb on file - 7P/S + net hits damage and Killjoy program to anyone that tries to access it",
+        "category": "hacking",
+        "subgroup": "Files & Databases",
+        "karma": 3,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Data Bomb",
+            "srxId": 219,
+            "category": "Hacking",
+            "subcategory": "Files & Databases",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Files & Databases",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": "TRUE",
+            "matrixAction": "-",
+            "administered": "No",
+            "access": "Yes",
+            "prereqRaw": "Hack Access (Hacking Talent)",
+            "prereq": {
+              "kind": "talent",
+              "name": "Hack Access",
+              "categoryHint": "Hacking Talent"
+            },
+            "grants": [],
+            "cost": {
+              "karma": 3
+            },
+            "description": "Set data bomb on file - 7P/S + net hits damage and Killjoy program to anyone that tries to access it",
+            "effects": [],
+            "slug": "data-bomb"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!UPGtgglzKzx83ewB.c0445c368d77b296"
+    },
+    {
+      "_id": "719957ad56082da1",
+      "name": "Boom",
+      "type": "talent",
+      "system": {
+        "summary": "Hacking / Weapons & Cyberware",
+        "description": "Defuse or detonate explosive",
+        "category": "hacking",
+        "subgroup": "Weapons & Cyberware",
+        "karma": 3,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Boom",
+            "srxId": 214,
+            "category": "Hacking",
+            "subcategory": "Weapons & Cyberware",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Weapons & Cyberware",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": "TRUE",
+            "matrixAction": "Special",
+            "administered": "Special",
+            "access": "Special",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 3
+            },
+            "description": "Defuse or detonate explosive",
+            "effects": [],
+            "slug": "boom"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!UPGtgglzKzx83ewB.719957ad56082da1"
+    },
+    {
+      "_id": "80b5cee84e292487",
+      "name": "Malfunction",
+      "type": "talent",
+      "system": {
+        "summary": "Hacking / Personal & Industrial Equipment",
+        "description": "Lock users out of device, or with Access brick device or force it to cause structural damage",
+        "category": "hacking",
+        "subgroup": "Personal & Industrial Equipment",
+        "karma": 3,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Malfunction",
+            "srxId": 242,
+            "category": "Hacking",
+            "subcategory": "Personal & Industrial Equipment",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Personal & Industrial Equipment",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": "TRUE",
+            "matrixAction": "Complex",
+            "administered": "Yes",
+            "access": "Special",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 3
+            },
+            "description": "Lock users out of device, or with Access brick device or force it to cause structural damage",
+            "effects": [],
+            "slug": "malfunction"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!UPGtgglzKzx83ewB.80b5cee84e292487"
+    },
+    {
+      "_id": "c0565851f292900c",
+      "name": "Crash Program",
+      "type": "talent",
+      "system": {
+        "summary": "Hacking / System Administration",
+        "description": "End administered program, Threading talent or IC.",
+        "category": "hacking",
+        "subgroup": "System Administration",
+        "karma": 3,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Crash Program",
+            "srxId": 217,
+            "category": "Hacking",
+            "subcategory": "System Administration",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "System Administration",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": "TRUE",
+            "matrixAction": "Complex",
+            "administered": "No",
+            "access": "No",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 3
+            },
+            "description": "End administered program, Threading talent or IC.",
+            "effects": [],
+            "slug": "crash-program"
+          }
+        }
+      },
+      "sort": 1300,
+      "_key": "!actors.items!UPGtgglzKzx83ewB.c0565851f292900c"
+    },
+    {
+      "_id": "f525d8942ff46901",
+      "name": "Encryption",
+      "type": "talent",
+      "system": {
+        "summary": "Software / Firewall",
+        "description": "+1 Matrix Defense Score against files & databases or communications & surveillance programs",
+        "category": "software",
+        "subgroup": "Firewall",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Encryption",
+            "srxId": 261,
+            "category": "Software",
+            "subcategory": "Firewall",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Firewall",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": "-",
+            "administered": "No",
+            "access": "-",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "+1 Matrix Defense Score against files & databases or communications & surveillance programs",
+            "effects": [],
+            "slug": "encryption-2"
+          }
+        }
+      },
+      "sort": 1400,
+      "_key": "!actors.items!UPGtgglzKzx83ewB.f525d8942ff46901"
+    },
+    {
+      "_id": "70b65bc2b91917b2",
+      "name": "Surge Protector",
+      "type": "talent",
+      "system": {
+        "summary": "Software / Firewall",
+        "description": "If forced to disconnect from Matrix, crash this program instead",
+        "category": "software",
+        "subgroup": "Firewall",
+        "karma": 3,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Surge Protector",
+            "srxId": 277,
+            "category": "Software",
+            "subcategory": "Firewall",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Firewall",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": null,
+            "matrixAction": "Minor",
+            "administered": "Yes",
+            "access": "-",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 3
+            },
+            "description": "If forced to disconnect from Matrix, crash this program instead",
+            "effects": [],
+            "slug": "surge-protector"
+          }
+        }
+      },
+      "sort": 1500,
+      "_key": "!actors.items!UPGtgglzKzx83ewB.70b65bc2b91917b2"
     }
   ],
   "effects": [],
@@ -484,5 +1018,31 @@
     "name": "Decker Saboteur (Human)",
     "actorLink": true
   },
-  "_key": "!actors!UPGtgglzKzx83ewB"
+  "_key": "!actors!UPGtgglzKzx83ewB",
+  "flags": {
+    "srx": {
+      "matrixDevices": [
+        {
+          "id": "e64e6236a405f95a",
+          "wireless": true,
+          "unattended": false,
+          "bricked": false,
+          "disconnected": false,
+          "name": "Erika MCD-1 Cyberdeck",
+          "systemTag": "personalIndustrialEquipment",
+          "firewall": 2
+        },
+        {
+          "id": "4e99b9521bd1d8ae",
+          "wireless": true,
+          "unattended": false,
+          "bricked": false,
+          "disconnected": false,
+          "name": "Renraku Sensei Commlink",
+          "systemTag": "commsSurveillance",
+          "firewall": 1
+        }
+      ]
+    }
+  }
 }

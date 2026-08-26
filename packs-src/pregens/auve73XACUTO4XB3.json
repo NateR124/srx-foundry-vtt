@@ -86,7 +86,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 0,
         "bonus": 0
       },
       "resonance": {
@@ -459,6 +459,536 @@
       },
       "sort": 500,
       "_key": "!actors.items!auve73XACUTO4XB3.d61e19101ad36cb0"
+    },
+    {
+      "_id": "dd5fb087113025f0",
+      "name": "DNI (Direct Neural Interface)",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Basic Matrix connection",
+        "source": "",
+        "cost": 500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.05,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "DNI (Direct Neural Interface)",
+            "srxId": 3030,
+            "category": "Headware",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "DNI (Direct Neural Interface)",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.05",
+              "value": 0.05,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Basic Matrix connection",
+            "effects": [],
+            "slug": "dni-direct-neural-interface"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!auve73XACUTO4XB3.dd5fb087113025f0"
+    },
+    {
+      "_id": "c1dadcc79164730d",
+      "name": "Hack Access",
+      "type": "talent",
+      "system": {
+        "summary": "Hacking / System Administration",
+        "description": "Gain Access to host or persona",
+        "category": "hacking",
+        "subgroup": "System Administration",
+        "karma": 6,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Hack Access",
+            "srxId": 234,
+            "category": "Hacking",
+            "subcategory": "System Administration",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "System Administration",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": "TRUE",
+            "matrixAction": "Complex",
+            "administered": "No",
+            "access": "No",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 6
+            },
+            "description": "Gain Access to host or persona",
+            "effects": [],
+            "slug": "hack-access"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!auve73XACUTO4XB3.c1dadcc79164730d"
+    },
+    {
+      "_id": "111c7a6693582e14",
+      "name": "Data Spike",
+      "type": "talent",
+      "system": {
+        "summary": "Hacking / System Administration",
+        "description": "7S + net hits damage to target in hot-sim. Failure doesn't trigger IC.",
+        "category": "hacking",
+        "subgroup": "System Administration",
+        "karma": 3,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Data Spike",
+            "srxId": 220,
+            "category": "Hacking",
+            "subcategory": "System Administration",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "System Administration",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": "TRUE",
+            "matrixAction": "Major",
+            "administered": "No",
+            "access": "No",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 3
+            },
+            "description": "7S + net hits damage to target in hot-sim. Failure doesn't trigger IC.",
+            "effects": [],
+            "slug": "data-spike"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!auve73XACUTO4XB3.111c7a6693582e14"
+    },
+    {
+      "_id": "86c789358829ed75",
+      "name": "Crash Program",
+      "type": "talent",
+      "system": {
+        "summary": "Hacking / System Administration",
+        "description": "End administered program, Threading talent or IC.",
+        "category": "hacking",
+        "subgroup": "System Administration",
+        "karma": 3,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Crash Program",
+            "srxId": 217,
+            "category": "Hacking",
+            "subcategory": "System Administration",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "System Administration",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": "TRUE",
+            "matrixAction": "Complex",
+            "administered": "No",
+            "access": "No",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 3
+            },
+            "description": "End administered program, Threading talent or IC.",
+            "effects": [],
+            "slug": "crash-program"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!auve73XACUTO4XB3.86c789358829ed75"
+    },
+    {
+      "_id": "824a6d1bc2d2a364",
+      "name": "Combat Hacker",
+      "type": "talent",
+      "system": {
+        "summary": "Hacking / System Administration",
+        "description": "+2 damage to Black Hammer, Blaster IC, and Data Spike programs",
+        "category": "hacking",
+        "subgroup": "System Administration",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Combat Hacker",
+            "srxId": 215,
+            "category": "Hacking",
+            "subcategory": "System Administration",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "System Administration",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": "-",
+            "administered": "No",
+            "access": "-",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "+2 damage to Black Hammer, Blaster IC, and Data Spike programs",
+            "effects": [],
+            "slug": "combat-hacker"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!auve73XACUTO4XB3.824a6d1bc2d2a364"
+    },
+    {
+      "_id": "5b47a7c37f74a3d3",
+      "name": "Cybercombat Offensive Utilities (CCO)",
+      "type": "talent",
+      "system": {
+        "summary": "Hacking / System Administration",
+        "description": "1 free hit on tests for Black Hammer, Crash Program, or Data Spike programs",
+        "category": "hacking",
+        "subgroup": "System Administration",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Cybercombat Offensive Utilities (CCO)",
+            "srxId": 218,
+            "category": "Hacking",
+            "subcategory": "System Administration",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "System Administration",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": null,
+            "matrixAction": "Minor",
+            "administered": "Yes",
+            "access": "-",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "1 free hit on tests for Black Hammer, Crash Program, or Data Spike programs",
+            "effects": [],
+            "slug": "cybercombat-offensive-utilities-cco"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!auve73XACUTO4XB3.5b47a7c37f74a3d3"
+    },
+    {
+      "_id": "05133542a842dca8",
+      "name": "Cybercombat Defensive Utilities (CCD)",
+      "type": "talent",
+      "system": {
+        "summary": "Software / Firewall",
+        "description": "+1 Matrix Defense Score against Black Hammer, Crash Program, and Data Spike",
+        "category": "software",
+        "subgroup": "Firewall",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Cybercombat Defensive Utilities (CCD)",
+            "srxId": 256,
+            "category": "Software",
+            "subcategory": "Firewall",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Firewall",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": null,
+            "matrixAction": "Minor",
+            "administered": "Yes",
+            "access": "-",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "+1 Matrix Defense Score against Black Hammer, Crash Program, and Data Spike",
+            "effects": [],
+            "slug": "cybercombat-defensive-utilities-ccd"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!auve73XACUTO4XB3.05133542a842dca8"
+    },
+    {
+      "_id": "f794116375d661da",
+      "name": "Encryption",
+      "type": "talent",
+      "system": {
+        "summary": "Software / Firewall",
+        "description": "+1 Matrix Defense Score against files & databases or communications & surveillance programs",
+        "category": "software",
+        "subgroup": "Firewall",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Encryption",
+            "srxId": 261,
+            "category": "Software",
+            "subcategory": "Firewall",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Firewall",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": "-",
+            "administered": "No",
+            "access": "-",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "+1 Matrix Defense Score against files & databases or communications & surveillance programs",
+            "effects": [],
+            "slug": "encryption-2"
+          }
+        }
+      },
+      "sort": 1300,
+      "_key": "!actors.items!auve73XACUTO4XB3.f794116375d661da"
+    },
+    {
+      "_id": "a78cc76e04ddc23a",
+      "name": "Biofeedback Filter",
+      "type": "talent",
+      "system": {
+        "summary": "Software / Firewall",
+        "description": "1 free hit on biofeedback resistance tests",
+        "category": "software",
+        "subgroup": "Firewall",
+        "karma": 3,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Biofeedback Filter",
+            "srxId": 252,
+            "category": "Software",
+            "subcategory": "Firewall",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Firewall",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": null,
+            "matrixAction": "Minor",
+            "administered": "Yes",
+            "access": "-",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 3
+            },
+            "description": "1 free hit on biofeedback resistance tests",
+            "effects": [],
+            "slug": "biofeedback-filter"
+          }
+        }
+      },
+      "sort": 1400,
+      "_key": "!actors.items!auve73XACUTO4XB3.a78cc76e04ddc23a"
     }
   ],
   "effects": [],
@@ -471,5 +1001,31 @@
     "name": "Decker Operative (Troll)",
     "actorLink": true
   },
-  "_key": "!actors!auve73XACUTO4XB3"
+  "_key": "!actors!auve73XACUTO4XB3",
+  "flags": {
+    "srx": {
+      "matrixDevices": [
+        {
+          "id": "9b043833e8ec1081",
+          "wireless": true,
+          "unattended": false,
+          "bricked": false,
+          "disconnected": false,
+          "name": "Erika MCD-1 Cyberdeck",
+          "systemTag": "personalIndustrialEquipment",
+          "firewall": 2
+        },
+        {
+          "id": "b5e14239a94cf295",
+          "wireless": true,
+          "unattended": false,
+          "bricked": false,
+          "disconnected": false,
+          "name": "Renraku Sensei Commlink",
+          "systemTag": "commsSurveillance",
+          "firewall": 1
+        }
+      ]
+    }
+  }
 }

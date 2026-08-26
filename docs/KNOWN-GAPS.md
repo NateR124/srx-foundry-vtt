@@ -34,11 +34,13 @@ work is. Three categories:
   identical karma). The chargen/advancement pickers collapse them to one
   entry per name (517 docs → 500 choices); deduplicating the pack source
   itself is the real fix.
-- **Pregens carry gear but no talents, spells, or 'ware.** The stat import
-  never captured those item lists and the original SRX loadout source is
-  gone; the gear loadouts are reconstructions keyed to each archetype's
-  skills (`scripts/gear-pregens.mjs`). A Combat Mage pregen still needs
-  spells dragged from the spells compendium before play.
+- **Pregen kits are reconstructions, and foci don't exist as items.** The
+  original SRX loadout source is gone, so pregen gear/'ware/spells/talents
+  are keyed to each archetype's skills (`scripts/gear-pregens.mjs`), not the
+  book sheets. Mundane archetypes still carry no general/social/weapon
+  talents. No pack ships focus-type items at all (magic-gear stores foci as
+  generic gear), so no pregen has a bonded focus and the Foci panel starts
+  empty for everyone.
 
 ## 2. Built but not live-verified ("pending live smoke")
 

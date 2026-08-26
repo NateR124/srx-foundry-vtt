@@ -96,7 +96,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 0,
         "bonus": 0
       },
       "resonance": {
@@ -665,6 +665,325 @@
       },
       "sort": 700,
       "_key": "!actors.items!wLgMphPhtnZpZOyT.4b83a823200b6ad1"
+    },
+    {
+      "_id": "9aa9baedd788ef42",
+      "name": "Wired Reflexes",
+      "type": "ware",
+      "system": {
+        "summary": "Bodyware",
+        "description": "+Rating to Quickness",
+        "source": "",
+        "cost": 0,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Bodyware",
+        "container": "",
+        "rating": 1,
+        "maxRating": 3,
+        "essence": 0,
+        "essenceScale": [
+          1,
+          1.5,
+          2.5
+        ],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": []
+      },
+      "effects": [
+        {
+          "name": "Wired Reflexes",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.special.quickness.bonus",
+              "mode": 2,
+              "value": "1"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "27b17cefe0322074",
+          "_key": "!actors.items.effects!wLgMphPhtnZpZOyT.9aa9baedd788ef42.27b17cefe0322074"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Wired Reflexes",
+            "srxId": 3125,
+            "category": "Bodyware",
+            "cost": 0,
+            "costDisplay": "Per Rating: 24k/64k/134k",
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Wired Reflexes",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": 3,
+            "uniqueScale": 1,
+            "nuyenScale": [
+              24000,
+              64000,
+              134000
+            ],
+            "essence": {
+              "display": "Per Rating: 1/1.5/2.5",
+              "value": 0,
+              "scale": [
+                1,
+                1.5,
+                2.5
+              ]
+            },
+            "parentContainer": null,
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [],
+            "grants": [],
+            "description": "+Rating to Quickness",
+            "effects": [
+              {
+                "key": "qui",
+                "value": 1
+              }
+            ],
+            "slug": "wired-reflexes"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!wLgMphPhtnZpZOyT.9aa9baedd788ef42"
+    },
+    {
+      "_id": "995d5f26cf649cb9",
+      "name": "Smartlink (Implanted)",
+      "type": "ware",
+      "system": {
+        "summary": "Senseware / Eyeware",
+        "description": "+2 to ranged attacks",
+        "source": "",
+        "cost": 12000,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Eyeware",
+        "container": "Cybereyes",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.3,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Smartlink (Implanted)",
+            "srxId": 3016,
+            "category": "Senseware",
+            "subcategory": "Eyeware",
+            "cost": 12000,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Smartlink (Implanted)",
+            "type": "Eyeware",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.3",
+              "value": 0.3,
+              "scale": []
+            },
+            "parentContainer": "Cybereyes",
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [],
+            "grants": [],
+            "description": "+2 to ranged attacks",
+            "effects": [],
+            "slug": "smartlink-implanted"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!wLgMphPhtnZpZOyT.995d5f26cf649cb9"
+    },
+    {
+      "_id": "8f4dd4720b4820d9",
+      "name": "Muscle Replacement",
+      "type": "ware",
+      "system": {
+        "summary": "Bodyware",
+        "description": "+Rating to Body, Agility",
+        "source": "",
+        "cost": 32000,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Bodyware",
+        "container": "",
+        "rating": 1,
+        "maxRating": 3,
+        "essence": 1,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": []
+      },
+      "effects": [
+        {
+          "name": "Muscle Replacement",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.attributes.bod.bonus",
+              "mode": 2,
+              "value": "1"
+            },
+            {
+              "key": "system.attributes.agi.bonus",
+              "mode": 2,
+              "value": "1"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "46ea2ffc52c19b82",
+          "_key": "!actors.items.effects!wLgMphPhtnZpZOyT.8f4dd4720b4820d9.46ea2ffc52c19b82"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Muscle Replacement",
+            "srxId": 3105,
+            "category": "Bodyware",
+            "cost": 32000,
+            "costDisplay": "Rating x 32,000",
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Muscle Replacement",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": 3,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "Rating x 1",
+              "value": 1,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [],
+            "grants": [],
+            "description": "+Rating to Body, Agility",
+            "effects": [
+              {
+                "key": "bod",
+                "value": 1
+              },
+              {
+                "key": "agi",
+                "value": 1
+              }
+            ],
+            "slug": "muscle-replacement"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!wLgMphPhtnZpZOyT.8f4dd4720b4820d9"
+    },
+    {
+      "_id": "9ab445037fd2a41c",
+      "name": "Cybereyes",
+      "type": "ware",
+      "system": {
+        "summary": "Senseware / Eyeware",
+        "description": "Other eyeware cyberware costs no Essence",
+        "source": "",
+        "cost": 8500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Eyeware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.3,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Cat's Eyes",
+          "Hawk Eyes",
+          "Troll Eyes"
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Cybereyes",
+            "srxId": 3010,
+            "category": "Senseware",
+            "subcategory": "Eyeware",
+            "cost": 8500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Cybereyes",
+            "type": "Eyeware",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.3",
+              "value": 0.3,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [
+              "Cat's Eyes",
+              "Hawk Eyes",
+              "Troll Eyes"
+            ],
+            "grants": [],
+            "description": "Other eyeware cyberware costs no Essence",
+            "effects": [],
+            "slug": "cybereyes"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!wLgMphPhtnZpZOyT.9ab445037fd2a41c"
     }
   ],
   "effects": [],

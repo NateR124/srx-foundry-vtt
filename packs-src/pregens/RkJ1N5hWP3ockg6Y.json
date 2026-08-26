@@ -86,7 +86,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 6,
         "bonus": 0
       },
       "resonance": {
@@ -420,6 +420,371 @@
       },
       "sort": 500,
       "_key": "!actors.items!RkJ1N5hWP3ockg6Y.ef140fc34567309d"
+    },
+    {
+      "_id": "80daeb2ad7f942b6",
+      "name": "Influence",
+      "type": "spell",
+      "system": {
+        "summary": "Manipulation",
+        "description": "Convince target to take an action",
+        "category": "manipulation",
+        "pattern": "direct",
+        "duration": "instantaneous",
+        "range": "30m",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Manipulation"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Influence",
+            "srxId": 1541,
+            "category": "Manipulation",
+            "description": "Convince target to take an action",
+            "range": {
+              "raw": "30m",
+              "bands": [
+                30
+              ]
+            },
+            "duration": "Instantaneous",
+            "resistance": "WIL+INT",
+            "attack": null,
+            "slug": "influence"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!RkJ1N5hWP3ockg6Y.80daeb2ad7f942b6"
+    },
+    {
+      "_id": "847e8db4e076179e",
+      "name": "Disguise",
+      "type": "spell",
+      "system": {
+        "summary": "Illusion",
+        "description": "Change target's appearance",
+        "category": "illusion",
+        "pattern": "touch",
+        "duration": "sustained",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Illusion"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Disguise",
+            "srxId": 1524,
+            "category": "Illusion",
+            "description": "Change target's appearance",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Sustained",
+            "resistance": "WIL+INT",
+            "attack": null,
+            "slug": "disguise"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!RkJ1N5hWP3ockg6Y.847e8db4e076179e"
+    },
+    {
+      "_id": "ada17205810f45db",
+      "name": "Phantasm",
+      "type": "spell",
+      "system": {
+        "summary": "Illusion",
+        "description": "Create illusion by controlling all sensory input of target",
+        "category": "illusion",
+        "pattern": "direct",
+        "duration": "sustained",
+        "range": "60m",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Illusion"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Phantasm",
+            "srxId": 1556,
+            "category": "Illusion",
+            "description": "Create illusion by controlling all sensory input of target",
+            "range": {
+              "raw": "60m",
+              "bands": [
+                60
+              ]
+            },
+            "duration": "Sust (1 hour)",
+            "resistance": "WIL+INT",
+            "attack": null,
+            "slug": "phantasm"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!RkJ1N5hWP3ockg6Y.ada17205810f45db"
+    },
+    {
+      "_id": "410e3e65c22f3998",
+      "name": "Trid Phantasm",
+      "type": "spell",
+      "system": {
+        "summary": "Illusion",
+        "description": "Create illusory scene",
+        "category": "illusion",
+        "pattern": "area",
+        "duration": "sustained",
+        "range": "80m [A]",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Illusion"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Trid Phantasm",
+            "srxId": 1577,
+            "category": "Illusion",
+            "description": "Create illusory scene",
+            "range": {
+              "raw": "80m [A]",
+              "bands": [
+                80
+              ],
+              "area": true
+            },
+            "duration": "Sust (1 hour)",
+            "resistance": "WIL+LOG",
+            "attack": null,
+            "slug": "trid-phantasm"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!RkJ1N5hWP3ockg6Y.410e3e65c22f3998"
+    },
+    {
+      "_id": "20d0c2163d6eb0e2",
+      "name": "Alter Memory",
+      "type": "spell",
+      "system": {
+        "summary": "Manipulation",
+        "description": "Add to, alter, or erase target's memory",
+        "category": "manipulation",
+        "pattern": "direct",
+        "duration": "instantaneous",
+        "range": "5m",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Manipulation"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Alter Memory",
+            "srxId": 1504,
+            "category": "Manipulation",
+            "description": "Add to, alter, or erase target's memory",
+            "range": {
+              "raw": "5m",
+              "bands": [
+                5
+              ]
+            },
+            "duration": "Instantaneous",
+            "resistance": "WIL+LOG",
+            "attack": null,
+            "slug": "alter-memory"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!RkJ1N5hWP3ockg6Y.20d0c2163d6eb0e2"
+    },
+    {
+      "_id": "862f9dbe15781126",
+      "name": "Assess Truth",
+      "type": "spell",
+      "system": {
+        "summary": "Detection",
+        "description": "Discern whether target is being truthful",
+        "category": "detection",
+        "pattern": "self",
+        "duration": "sustained",
+        "range": "Self",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Detection"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Assess Truth",
+            "srxId": 1508,
+            "category": "Detection",
+            "description": "Discern whether target is being truthful",
+            "range": {
+              "raw": "Self",
+              "special": "Self"
+            },
+            "duration": "Sust (1 hour)",
+            "resistance": "WIL+CHA",
+            "attack": null,
+            "slug": "assess-truth"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!RkJ1N5hWP3ockg6Y.862f9dbe15781126"
+    },
+    {
+      "_id": "becc5484beadc4d2",
+      "name": "Manabolt",
+      "type": "spell",
+      "system": {
+        "summary": "Combat",
+        "description": "Target takes (Net Force + 1)P/S",
+        "category": "combat",
+        "pattern": "direct",
+        "duration": "instantaneous",
+        "range": "60m",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "P/S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Combat"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Manabolt",
+            "srxId": 1549,
+            "category": "Combat",
+            "description": "Target takes (Net Force + 1)P/S",
+            "range": {
+              "raw": "60m",
+              "bands": [
+                60
+              ]
+            },
+            "duration": "Instantaneous",
+            "resistance": "WIL",
+            "attack": {
+              "type": "Ranged",
+              "accuracy": "Resist: WIL",
+              "dv": {
+                "raw": "(F+1)",
+                "force": true,
+                "mod": 1,
+                "type": "P/S",
+                "element": null
+              }
+            },
+            "slug": "manabolt"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!RkJ1N5hWP3ockg6Y.becc5484beadc4d2"
+    },
+    {
+      "_id": "94ec0ab02a5af961",
+      "name": "Invisibility",
+      "type": "spell",
+      "system": {
+        "summary": "Illusion",
+        "description": "Target becomes invisible",
+        "category": "illusion",
+        "pattern": "touch",
+        "duration": "sustained",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Illusion"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Invisibility",
+            "srxId": 1542,
+            "category": "Illusion",
+            "description": "Target becomes invisible",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Sust (1 hour)",
+            "resistance": "Special",
+            "attack": null,
+            "slug": "invisibility"
+          }
+        }
+      },
+      "sort": 1300,
+      "_key": "!actors.items!RkJ1N5hWP3ockg6Y.94ec0ab02a5af961"
     }
   ],
   "effects": [],

@@ -86,7 +86,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 0,
         "bonus": 0
       },
       "resonance": {
@@ -420,6 +420,91 @@
       },
       "sort": 500,
       "_key": "!actors.items!oYVqhEpXf29mZECy.16fa4597f8e3898c"
+    },
+    {
+      "_id": "9dfd642f80f7929d",
+      "name": "Superior Appearance Mod",
+      "type": "ware",
+      "system": {
+        "summary": "Bodyware",
+        "description": "+1 Charisma",
+        "source": "",
+        "cost": 38000,
+        "legality": "",
+        "wareType": "bioware",
+        "category": "Bodyware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.2,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [
+        {
+          "name": "Superior Appearance Mod",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.attributes.cha.bonus",
+              "mode": 2,
+              "value": "1"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "148bb61885b051df",
+          "_key": "!actors.items.effects!oYVqhEpXf29mZECy.9dfd642f80f7929d.148bb61885b051df"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Superior Appearance Mod",
+            "srxId": 3118,
+            "category": "Bodyware",
+            "cost": 38000,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Superior Appearance Mod",
+            "type": "",
+            "type2": null,
+            "wareType": "Bioware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.2",
+              "value": 0.2,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "+1 Charisma",
+            "effects": [
+              {
+                "key": "cha",
+                "value": 1
+              }
+            ],
+            "slug": "superior-appearance-mod"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!oYVqhEpXf29mZECy.9dfd642f80f7929d"
     }
   ],
   "effects": [],

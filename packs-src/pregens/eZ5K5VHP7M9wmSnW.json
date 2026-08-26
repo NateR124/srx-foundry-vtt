@@ -81,7 +81,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 5,
         "bonus": 0
       },
       "resonance": {
@@ -444,6 +444,364 @@
       },
       "sort": 500,
       "_key": "!actors.items!eZ5K5VHP7M9wmSnW.2bd9658d06a5560c"
+    },
+    {
+      "_id": "ab2977b91ffabd8a",
+      "name": "Killing Hands",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / Yin",
+        "description": "Gain Martial Arts Training Weapons Talent. +2 DV to unarmed attacks.",
+        "category": "channeling",
+        "subgroup": "Yin",
+        "karma": 5,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Killing Hands",
+            "srxId": 506,
+            "category": "Channeling",
+            "subcategory": "Yin",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Yin",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [
+              "Martial Arts Training"
+            ],
+            "cost": {
+              "karma": 5
+            },
+            "description": "Gain Martial Arts Training Weapons Talent. +2 DV to unarmed attacks.",
+            "effects": [],
+            "slug": "killing-hands"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!eZ5K5VHP7M9wmSnW.ab2977b91ffabd8a"
+    },
+    {
+      "_id": "1544d328c26c57d0",
+      "name": "Critical Strike",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / Qi",
+        "description": "Leverage on attack test",
+        "category": "channeling",
+        "subgroup": "Qi",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Critical Strike",
+            "srxId": 489,
+            "category": "Channeling",
+            "subcategory": "Qi",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Qi",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": "TRUE",
+            "action": null,
+            "range": "Self",
+            "duration": "Instantaneous",
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "Leverage on attack test",
+            "effects": [],
+            "slug": "critical-strike"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!eZ5K5VHP7M9wmSnW.1544d328c26c57d0"
+    },
+    {
+      "_id": "f7a4b73ceaacf663",
+      "name": "Empowered Strikes",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / Yin",
+        "description": "Gain Melee Weapons Training Weapons Talent. +1 DV with projectile weapons.",
+        "category": "channeling",
+        "subgroup": "Yin",
+        "karma": 5,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Empowered Strikes",
+            "srxId": 494,
+            "category": "Channeling",
+            "subcategory": "Yin",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Yin",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [
+              "Melee Weapons Training"
+            ],
+            "cost": {
+              "karma": 5
+            },
+            "description": "Gain Melee Weapons Training Weapons Talent. +1 DV with projectile weapons.",
+            "effects": [],
+            "slug": "empowered-strikes"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!eZ5K5VHP7M9wmSnW.f7a4b73ceaacf663"
+    },
+    {
+      "_id": "45da8f743bb0d1d9",
+      "name": "Nerve Strike",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / Yang",
+        "description": "Unarmed attack can cause Dazed status",
+        "category": "channeling",
+        "subgroup": "Yang",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Nerve Strike",
+            "srxId": 520,
+            "category": "Channeling",
+            "subcategory": "Yang",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Yang",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": "TRUE",
+            "action": null,
+            "range": "Touch",
+            "duration": "Instantaneous",
+            "resistance": "WIL+BOD",
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "Unarmed attack can cause Dazed status",
+            "effects": [],
+            "slug": "nerve-strike"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!eZ5K5VHP7M9wmSnW.45da8f743bb0d1d9"
+    },
+    {
+      "_id": "2f891bdadef537ea",
+      "name": "Missile Parry",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / Yang",
+        "description": "Catch projectile attacks and hurl them back",
+        "category": "channeling",
+        "subgroup": "Yang",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Missile Parry",
+            "srxId": 515,
+            "category": "Channeling",
+            "subcategory": "Yang",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Yang",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": "Interrupt",
+            "range": "Touch",
+            "duration": "Instantaneous",
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "Catch projectile attacks and hurl them back",
+            "effects": [],
+            "slug": "missile-parry"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!eZ5K5VHP7M9wmSnW.2f891bdadef537ea"
+    },
+    {
+      "_id": "0f98551dd324ab62",
+      "name": "Supreme Balance",
+      "type": "talent",
+      "system": {
+        "summary": "Channeling / Yin",
+        "description": "Run as Minor Action and Move as Free Action. Do not suffer Liability when running. Leverage on tests to keep balance or avoid being knocked prone.",
+        "category": "channeling",
+        "subgroup": "Yin",
+        "karma": 5,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Supreme Balance",
+            "srxId": 537,
+            "category": "Channeling",
+            "subcategory": "Yin",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Yin",
+            "type2": null,
+            "activeAbility": "TRUE",
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 5
+            },
+            "description": "Run as Minor Action and Move as Free Action. Do not suffer Liability when running. Leverage on tests to keep balance or avoid being knocked prone.",
+            "effects": [],
+            "slug": "supreme-balance"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!eZ5K5VHP7M9wmSnW.0f98551dd324ab62"
     }
   ],
   "effects": [],

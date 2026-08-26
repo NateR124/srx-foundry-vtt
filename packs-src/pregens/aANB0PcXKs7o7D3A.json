@@ -81,7 +81,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 4,
         "bonus": 0
       },
       "resonance": {
@@ -367,6 +367,416 @@
       },
       "sort": 400,
       "_key": "!actors.items!aANB0PcXKs7o7D3A.3a52b55aa6d21101"
+    },
+    {
+      "_id": "78871032c2691b4b",
+      "name": "Manabolt",
+      "type": "spell",
+      "system": {
+        "summary": "Combat",
+        "description": "Target takes (Net Force + 1)P/S",
+        "category": "combat",
+        "pattern": "direct",
+        "duration": "instantaneous",
+        "range": "60m",
+        "action": "complex",
+        "resistanceAttr": "wil",
+        "dvFormula": "nf+1",
+        "dvType": "P/S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Combat"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Manabolt",
+            "srxId": 1549,
+            "category": "Combat",
+            "description": "Target takes (Net Force + 1)P/S",
+            "range": {
+              "raw": "60m",
+              "bands": [
+                60
+              ]
+            },
+            "duration": "Instantaneous",
+            "resistance": "WIL",
+            "attack": {
+              "type": "Ranged",
+              "accuracy": "Resist: WIL",
+              "dv": {
+                "raw": "(F+1)",
+                "force": true,
+                "mod": 1,
+                "type": "P/S",
+                "element": null
+              }
+            },
+            "slug": "manabolt"
+          }
+        }
+      },
+      "sort": 500,
+      "_key": "!actors.items!aANB0PcXKs7o7D3A.78871032c2691b4b"
+    },
+    {
+      "_id": "ed03154cd1260e18",
+      "name": "Powerball",
+      "type": "spell",
+      "system": {
+        "summary": "Combat",
+        "description": "All targets in area take (Net Force - 1)P/S",
+        "category": "combat",
+        "pattern": "area",
+        "duration": "instantaneous",
+        "range": "50m [A]",
+        "action": "complex",
+        "resistanceAttr": "bod",
+        "dvFormula": "nf-1",
+        "dvType": "P/S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Combat"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Powerball",
+            "srxId": 1558,
+            "category": "Combat",
+            "description": "All targets in area take (Net Force - 1)P/S",
+            "range": {
+              "raw": "50m [A]",
+              "bands": [
+                50
+              ],
+              "area": true
+            },
+            "duration": "Instantaneous",
+            "resistance": "BOD",
+            "attack": {
+              "type": "AOE",
+              "accuracy": "Resist: BOD",
+              "dv": {
+                "raw": "(F-1)",
+                "force": true,
+                "mod": -1,
+                "type": "P/S",
+                "element": null
+              }
+            },
+            "slug": "powerball"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!aANB0PcXKs7o7D3A.ed03154cd1260e18"
+    },
+    {
+      "_id": "f18ace069bebca45",
+      "name": "Fireball",
+      "type": "spell",
+      "system": {
+        "summary": "Combat",
+        "description": "Ranged AOE attack - DV (F+3)P Fire",
+        "category": "combat",
+        "pattern": "area",
+        "duration": "instantaneous",
+        "range": "50m [A]",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+3",
+        "dvType": "P",
+        "element": "fire",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Combat"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Fireball",
+            "srxId": 1529,
+            "category": "Combat",
+            "description": "Ranged AOE attack - DV (F+3)P Fire",
+            "range": {
+              "raw": "50m [A]",
+              "bands": [
+                50
+              ],
+              "area": true
+            },
+            "duration": "Instantaneous",
+            "resistance": null,
+            "attack": {
+              "type": "AOE",
+              "accuracy": null,
+              "dv": {
+                "raw": "(F+3)",
+                "force": true,
+                "mod": 3,
+                "type": "P",
+                "element": "Fire"
+              }
+            },
+            "slug": "fireball"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!aANB0PcXKs7o7D3A.f18ace069bebca45"
+    },
+    {
+      "_id": "42794db6871825d5",
+      "name": "Lightning Bolt",
+      "type": "spell",
+      "system": {
+        "summary": "Combat",
+        "description": "Ranged attack - Acc 3, DV (F+3)P Electricity",
+        "category": "combat",
+        "pattern": "direct",
+        "duration": "instantaneous",
+        "range": "20/50/100m",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+3",
+        "dvType": "P",
+        "element": "electricity",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Combat"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Lightning Bolt",
+            "srxId": 1545,
+            "category": "Combat",
+            "description": "Ranged attack - Acc 3, DV (F+3)P Electricity",
+            "range": {
+              "raw": "20/50/100m",
+              "bands": [
+                20,
+                50,
+                100
+              ]
+            },
+            "duration": "Instantaneous",
+            "resistance": null,
+            "attack": {
+              "type": "Ranged",
+              "accuracy": 3,
+              "dv": {
+                "raw": "(F+3)",
+                "force": true,
+                "mod": 3,
+                "type": "P",
+                "element": "Electricity"
+              }
+            },
+            "slug": "lightning-bolt"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!aANB0PcXKs7o7D3A.42794db6871825d5"
+    },
+    {
+      "_id": "61b723defa1c8cd9",
+      "name": "Ice Spear",
+      "type": "spell",
+      "system": {
+        "summary": "Combat",
+        "description": "Ranged attack - Acc 2, DV (F+4)P Cold",
+        "category": "combat",
+        "pattern": "direct",
+        "duration": "instantaneous",
+        "range": "10/20/50m",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+4",
+        "dvType": "P",
+        "element": "cold",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Combat"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Ice Spear",
+            "srxId": 1537,
+            "category": "Combat",
+            "description": "Ranged attack - Acc 2, DV (F+4)P Cold",
+            "range": {
+              "raw": "10/20/50m",
+              "bands": [
+                10,
+                20,
+                50
+              ]
+            },
+            "duration": "Instantaneous",
+            "resistance": null,
+            "attack": {
+              "type": "Ranged",
+              "accuracy": 2,
+              "dv": {
+                "raw": "(F+4)",
+                "force": true,
+                "mod": 4,
+                "type": "P",
+                "element": "Cold"
+              }
+            },
+            "slug": "ice-spear"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!aANB0PcXKs7o7D3A.61b723defa1c8cd9"
+    },
+    {
+      "_id": "85b49ae94761d343",
+      "name": "Heal",
+      "type": "spell",
+      "system": {
+        "summary": "Health",
+        "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+        "category": "health",
+        "pattern": "touch",
+        "duration": "instantaneous",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Health"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Heal",
+            "srxId": 1534,
+            "category": "Health",
+            "description": "Heal damage with Healing test - (Force x 3) + target's Essence",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Instantaneous",
+            "resistance": null,
+            "attack": null,
+            "slug": "heal"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!aANB0PcXKs7o7D3A.85b49ae94761d343"
+    },
+    {
+      "_id": "94261930d993a35c",
+      "name": "Combat Sense",
+      "type": "spell",
+      "system": {
+        "summary": "Detection",
+        "description": "+1 to target's Defense Score",
+        "category": "detection",
+        "pattern": "touch",
+        "duration": "sustained",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Detection"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Combat Sense",
+            "srxId": 1515,
+            "category": "Detection",
+            "description": "+1 to target's Defense Score",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Sustained",
+            "resistance": null,
+            "attack": null,
+            "slug": "combat-sense"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!aANB0PcXKs7o7D3A.94261930d993a35c"
+    },
+    {
+      "_id": "22e75c5d617d0a06",
+      "name": "Resist Pain",
+      "type": "spell",
+      "system": {
+        "summary": "Health",
+        "description": "+(Force x 1.5) to target's Wounded Limit",
+        "category": "health",
+        "pattern": "touch",
+        "duration": "sustained",
+        "range": "Touch",
+        "action": "complex",
+        "resistanceAttr": "",
+        "dvFormula": "nf+1",
+        "dvType": "S",
+        "element": "",
+        "drainSkill": "sorcery",
+        "physicalDrain": false,
+        "keywords": "Health"
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "spell",
+          "catalogData": {
+            "name": "Resist Pain",
+            "srxId": 1562,
+            "category": "Health",
+            "description": "+(Force x 1.5) to target's Wounded Limit",
+            "range": {
+              "raw": "Touch",
+              "special": "Touch"
+            },
+            "duration": "Sustained",
+            "resistance": null,
+            "attack": null,
+            "slug": "resist-pain"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!aANB0PcXKs7o7D3A.22e75c5d617d0a06"
     }
   ],
   "effects": [],

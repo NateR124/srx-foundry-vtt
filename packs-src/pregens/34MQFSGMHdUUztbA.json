@@ -111,7 +111,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 0,
         "bonus": 0
       },
       "resonance": {
@@ -694,6 +694,328 @@
       },
       "sort": 900,
       "_key": "!actors.items!34MQFSGMHdUUztbA.fbc27965696c2003"
+    },
+    {
+      "_id": "75f361f835f72533",
+      "name": "Synaptic Booster",
+      "type": "ware",
+      "system": {
+        "summary": "Bodyware",
+        "description": "+Rating to Accelerator",
+        "source": "",
+        "cost": 16000,
+        "legality": "",
+        "wareType": "bioware",
+        "category": "Bodyware",
+        "container": "",
+        "rating": 1,
+        "maxRating": 3,
+        "essence": 0.1,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Synaptic Booster",
+            "srxId": 3121,
+            "category": "Bodyware",
+            "cost": 16000,
+            "costDisplay": "Rating x 16,000",
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Synaptic Booster",
+            "type": "",
+            "type2": null,
+            "wareType": "Bioware",
+            "canRepurchase": false,
+            "maxRating": 3,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "Rating x 0.1",
+              "value": 0.1,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "+Rating to Accelerator",
+            "effects": [],
+            "slug": "synaptic-booster"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!34MQFSGMHdUUztbA.75f361f835f72533"
+    },
+    {
+      "_id": "a8736b5caebfc462",
+      "name": "Cybereyes",
+      "type": "ware",
+      "system": {
+        "summary": "Senseware / Eyeware",
+        "description": "Other eyeware cyberware costs no Essence",
+        "source": "",
+        "cost": 8500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Eyeware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.3,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Cat's Eyes",
+          "Hawk Eyes",
+          "Troll Eyes"
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Cybereyes",
+            "srxId": 3010,
+            "category": "Senseware",
+            "subcategory": "Eyeware",
+            "cost": 8500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Cybereyes",
+            "type": "Eyeware",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.3",
+              "value": 0.3,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [
+              "Cat's Eyes",
+              "Hawk Eyes",
+              "Troll Eyes"
+            ],
+            "grants": [],
+            "description": "Other eyeware cyberware costs no Essence",
+            "effects": [],
+            "slug": "cybereyes"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!34MQFSGMHdUUztbA.a8736b5caebfc462"
+    },
+    {
+      "_id": "d3a28aaa29a505a4",
+      "name": "Low-Light Vision",
+      "type": "ware",
+      "system": {
+        "summary": "Senseware / Eyeware",
+        "description": "Low-Light Vision Enhancement",
+        "source": "",
+        "cost": 750,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Eyeware",
+        "container": "Cybereyes",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.2,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Cat's Eyes"
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Low-Light Vision",
+            "srxId": 3013,
+            "category": "Senseware",
+            "subcategory": "Eyeware",
+            "cost": 750,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Low-Light Vision",
+            "type": "Eyeware",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.2",
+              "value": 0.2,
+              "scale": []
+            },
+            "parentContainer": "Cybereyes",
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [
+              "Cat's Eyes"
+            ],
+            "grants": [],
+            "description": "Low-Light Vision Enhancement",
+            "effects": [
+              {
+                "key": "lowLight",
+                "value": 1
+              }
+            ],
+            "slug": "low-light-vision"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!34MQFSGMHdUUztbA.d3a28aaa29a505a4"
+    },
+    {
+      "_id": "634a62155f6b717a",
+      "name": "Thermographic Vision",
+      "type": "ware",
+      "system": {
+        "summary": "Senseware / Eyeware",
+        "description": "Thermographic Vision Enhancement",
+        "source": "",
+        "cost": 1500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Eyeware",
+        "container": "Cybereyes",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.2,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Troll Eyes"
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Thermographic Vision",
+            "srxId": 3017,
+            "category": "Senseware",
+            "subcategory": "Eyeware",
+            "cost": 1500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Thermographic Vision",
+            "type": "Eyeware",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.2",
+              "value": 0.2,
+              "scale": []
+            },
+            "parentContainer": "Cybereyes",
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [
+              "Troll Eyes"
+            ],
+            "grants": [],
+            "description": "Thermographic Vision Enhancement",
+            "effects": [
+              {
+                "key": "thermographic",
+                "value": 1
+              }
+            ],
+            "slug": "thermographic-vision"
+          }
+        }
+      },
+      "sort": 1300,
+      "_key": "!actors.items!34MQFSGMHdUUztbA.634a62155f6b717a"
+    },
+    {
+      "_id": "91fab249ccddb07a",
+      "name": "Voice Modulator",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Make any sound, imitate voices",
+        "source": "",
+        "cost": 10000,
+        "legality": "restricted",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.15,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Voice Modulator",
+            "srxId": 3045,
+            "category": "Headware",
+            "cost": 10000,
+            "properties": [
+              "Restricted"
+            ],
+            "options": [],
+            "dictionaryName": "Voice Modulator",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.15",
+              "value": 0.15,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [],
+            "grants": [],
+            "description": "Make any sound, imitate voices",
+            "effects": [],
+            "slug": "voice-modulator"
+          }
+        }
+      },
+      "sort": 1400,
+      "_key": "!actors.items!34MQFSGMHdUUztbA.91fab249ccddb07a"
     }
   ],
   "effects": [],

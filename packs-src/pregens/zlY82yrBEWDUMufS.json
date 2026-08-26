@@ -101,7 +101,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 0,
         "bonus": 0
       },
       "resonance": {
@@ -659,6 +659,194 @@
       },
       "sort": 900,
       "_key": "!actors.items!zlY82yrBEWDUMufS.b5fba7941b3798a3"
+    },
+    {
+      "_id": "debfc8c55bb22634",
+      "name": "Toxin Extractor",
+      "type": "ware",
+      "system": {
+        "summary": "Bodyware",
+        "description": "Leverage on toxin resistance",
+        "source": "",
+        "cost": 8000,
+        "legality": "",
+        "wareType": "bioware",
+        "category": "Bodyware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.2,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Toxin Extractor",
+            "srxId": 3124,
+            "category": "Bodyware",
+            "cost": 8000,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Toxin Extractor",
+            "type": "",
+            "type2": null,
+            "wareType": "Bioware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.2",
+              "value": 0.2,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Leverage on toxin resistance",
+            "effects": [
+              {
+                "key": "toxins",
+                "value": 1
+              }
+            ],
+            "slug": "toxin-extractor"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!zlY82yrBEWDUMufS.debfc8c55bb22634"
+    },
+    {
+      "_id": "fd2d5d0c319baa0a",
+      "name": "Cybereyes",
+      "type": "ware",
+      "system": {
+        "summary": "Senseware / Eyeware",
+        "description": "Other eyeware cyberware costs no Essence",
+        "source": "",
+        "cost": 8500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Eyeware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.3,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": [
+          "Cat's Eyes",
+          "Hawk Eyes",
+          "Troll Eyes"
+        ]
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Cybereyes",
+            "srxId": 3010,
+            "category": "Senseware",
+            "subcategory": "Eyeware",
+            "cost": 8500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Cybereyes",
+            "type": "Eyeware",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.3",
+              "value": 0.3,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [
+              "Cat's Eyes",
+              "Hawk Eyes",
+              "Troll Eyes"
+            ],
+            "grants": [],
+            "description": "Other eyeware cyberware costs no Essence",
+            "effects": [],
+            "slug": "cybereyes"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!zlY82yrBEWDUMufS.fd2d5d0c319baa0a"
+    },
+    {
+      "_id": "c00f52fa7f49d2cd",
+      "name": "DNI (Direct Neural Interface)",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Basic Matrix connection",
+        "source": "",
+        "cost": 500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.05,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "DNI (Direct Neural Interface)",
+            "srxId": 3030,
+            "category": "Headware",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "DNI (Direct Neural Interface)",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.05",
+              "value": 0.05,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Basic Matrix connection",
+            "effects": [],
+            "slug": "dni-direct-neural-interface"
+          }
+        }
+      },
+      "sort": 1200,
+      "_key": "!actors.items!zlY82yrBEWDUMufS.c00f52fa7f49d2cd"
     }
   ],
   "effects": [],

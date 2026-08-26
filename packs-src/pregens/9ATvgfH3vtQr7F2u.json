@@ -111,7 +111,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 0,
         "bonus": 0
       },
       "resonance": {
@@ -577,6 +577,222 @@
       },
       "sort": 700,
       "_key": "!actors.items!9ATvgfH3vtQr7F2u.17af5398cae9e650"
+    },
+    {
+      "_id": "451341c4f0b09bb9",
+      "name": "Wired Reflexes",
+      "type": "ware",
+      "system": {
+        "summary": "Bodyware",
+        "description": "+Rating to Quickness",
+        "source": "",
+        "cost": 0,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Bodyware",
+        "container": "",
+        "rating": 1,
+        "maxRating": 3,
+        "essence": 0,
+        "essenceScale": [
+          1,
+          1.5,
+          2.5
+        ],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": []
+      },
+      "effects": [
+        {
+          "name": "Wired Reflexes",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.special.quickness.bonus",
+              "mode": 2,
+              "value": "1"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "43f4fe03c0593948",
+          "_key": "!actors.items.effects!9ATvgfH3vtQr7F2u.451341c4f0b09bb9.43f4fe03c0593948"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Wired Reflexes",
+            "srxId": 3125,
+            "category": "Bodyware",
+            "cost": 0,
+            "costDisplay": "Per Rating: 24k/64k/134k",
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Wired Reflexes",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": 3,
+            "uniqueScale": 1,
+            "nuyenScale": [
+              24000,
+              64000,
+              134000
+            ],
+            "essence": {
+              "display": "Per Rating: 1/1.5/2.5",
+              "value": 0,
+              "scale": [
+                1,
+                1.5,
+                2.5
+              ]
+            },
+            "parentContainer": null,
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [],
+            "grants": [],
+            "description": "+Rating to Quickness",
+            "effects": [
+              {
+                "key": "qui",
+                "value": 1
+              }
+            ],
+            "slug": "wired-reflexes"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!9ATvgfH3vtQr7F2u.451341c4f0b09bb9"
+    },
+    {
+      "_id": "0b8189d84e0f8427",
+      "name": "Smartlink (Implanted)",
+      "type": "ware",
+      "system": {
+        "summary": "Senseware / Eyeware",
+        "description": "+2 to ranged attacks",
+        "source": "",
+        "cost": 12000,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Eyeware",
+        "container": "Cybereyes",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.3,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Smartlink (Implanted)",
+            "srxId": 3016,
+            "category": "Senseware",
+            "subcategory": "Eyeware",
+            "cost": 12000,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Smartlink (Implanted)",
+            "type": "Eyeware",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.3",
+              "value": 0.3,
+              "scale": []
+            },
+            "parentContainer": "Cybereyes",
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [],
+            "grants": [],
+            "description": "+2 to ranged attacks",
+            "effects": [],
+            "slug": "smartlink-implanted"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!9ATvgfH3vtQr7F2u.0b8189d84e0f8427"
+    },
+    {
+      "_id": "ac3d039a63828b69",
+      "name": "Cyberears",
+      "type": "ware",
+      "system": {
+        "summary": "Senseware / Earware",
+        "description": "Other earware cyberware costs no Essence",
+        "source": "",
+        "cost": 2000,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Earware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.2,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Cyberears",
+            "srxId": 3005,
+            "category": "Senseware",
+            "subcategory": "Earware",
+            "cost": 2000,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Cyberears",
+            "type": "Earware",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.2",
+              "value": 0.2,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [],
+            "grants": [],
+            "description": "Other earware cyberware costs no Essence",
+            "effects": [],
+            "slug": "cyberears"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!9ATvgfH3vtQr7F2u.ac3d039a63828b69"
     }
   ],
   "effects": [],

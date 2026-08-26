@@ -81,7 +81,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 0,
         "bonus": 0
       },
       "resonance": {
@@ -507,6 +507,348 @@
       },
       "sort": 600,
       "_key": "!actors.items!Ceqh9r2fYGrDsFCL.be7df9627e38f440"
+    },
+    {
+      "_id": "072d760c736b56d5",
+      "name": "Control Rig",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "+2 Driving, Piloting; +Rating to Driving, Piloting, Agility, Athletics, Close Combat, Firearms, Projectile Weapons, and Stealth; Can take Biofeedback damage",
+        "source": "",
+        "cost": 0,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 1,
+        "maxRating": 3,
+        "essence": 0,
+        "essenceScale": [
+          1,
+          1.5,
+          2
+        ],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": []
+      },
+      "effects": [
+        {
+          "name": "Control Rig",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.skills.driving.bonus",
+              "mode": 2,
+              "value": "1"
+            },
+            {
+              "key": "system.skills.piloting.bonus",
+              "mode": 2,
+              "value": "1"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "09174f145ef0d8a9",
+          "_key": "!actors.items.effects!Ceqh9r2fYGrDsFCL.072d760c736b56d5.09174f145ef0d8a9"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Control Rig",
+            "srxId": 3027,
+            "category": "Headware",
+            "cost": 0,
+            "costDisplay": "Per Rating: 50k/85k/130k",
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Control Rig",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": 3,
+            "uniqueScale": 1,
+            "nuyenScale": [
+              50000,
+              85000,
+              130000
+            ],
+            "essence": {
+              "display": "Per Rating: 1/1.5/2",
+              "value": 0,
+              "scale": [
+                1,
+                1.5,
+                2
+              ]
+            },
+            "parentContainer": null,
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [],
+            "grants": [],
+            "description": "+2 Driving, Piloting; +Rating to Driving, Piloting, Agility, Athletics, Close Combat, Firearms, Projectile Weapons, and Stealth; Can take Biofeedback damage",
+            "effects": [
+              {
+                "key": "driving",
+                "value": 1
+              },
+              {
+                "key": "piloting",
+                "value": 1
+              }
+            ],
+            "slug": "control-rig"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!Ceqh9r2fYGrDsFCL.072d760c736b56d5"
+    },
+    {
+      "_id": "c5296ffe3bc3c331",
+      "name": "DNI (Direct Neural Interface)",
+      "type": "ware",
+      "system": {
+        "summary": "Headware",
+        "description": "Basic Matrix connection",
+        "source": "",
+        "cost": 500,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Headware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.05,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "DNI (Direct Neural Interface)",
+            "srxId": 3030,
+            "category": "Headware",
+            "cost": 500,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "DNI (Direct Neural Interface)",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.05",
+              "value": 0.05,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "Basic Matrix connection",
+            "effects": [],
+            "slug": "dni-direct-neural-interface"
+          }
+        }
+      },
+      "sort": 800,
+      "_key": "!actors.items!Ceqh9r2fYGrDsFCL.c5296ffe3bc3c331"
+    },
+    {
+      "_id": "b8cfa5d86559acd5",
+      "name": "Drone Programmer",
+      "type": "talent",
+      "system": {
+        "summary": "Software / Data Processing",
+        "description": "Can purchase certain Vehicle Talents",
+        "category": "software",
+        "subgroup": "Data Processing",
+        "karma": 8,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Drone Programmer",
+            "srxId": 258,
+            "category": "Software",
+            "subcategory": "Data Processing",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Data Processing",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": "-",
+            "administered": "No",
+            "access": "-",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 8
+            },
+            "description": "Can purchase certain Vehicle Talents",
+            "effects": [],
+            "slug": "drone-programmer"
+          }
+        }
+      },
+      "sort": 900,
+      "_key": "!actors.items!Ceqh9r2fYGrDsFCL.b8cfa5d86559acd5"
+    },
+    {
+      "_id": "4ad007d077de18f3",
+      "name": "Real-Time Sensory Optimization (RSO)",
+      "type": "talent",
+      "system": {
+        "summary": "Software / Data Processing",
+        "description": "If Software ≥ Perception, target gains +2 Perception",
+        "category": "software",
+        "subgroup": "Data Processing",
+        "karma": 8,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Real-Time Sensory Optimization (RSO)",
+            "srxId": 270,
+            "category": "Software",
+            "subcategory": "Data Processing",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "Data Processing",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": "TRUE",
+            "matrixTest": null,
+            "matrixAction": "Complex",
+            "administered": "Yes",
+            "access": "-",
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 8
+            },
+            "description": "If Software ≥ Perception, target gains +2 Perception",
+            "effects": [],
+            "slug": "real-time-sensory-optimization-rso"
+          }
+        }
+      },
+      "sort": 1000,
+      "_key": "!actors.items!Ceqh9r2fYGrDsFCL.4ad007d077de18f3"
+    },
+    {
+      "_id": "abb842761d97704d",
+      "name": "Protected Device Segmentation (PDS)",
+      "type": "talent",
+      "system": {
+        "summary": "Weapons / CC, F, PW",
+        "description": "+1 Matrix Defense Score against weapons & cyberware programs",
+        "category": "weapons",
+        "subgroup": "CC, F, PW",
+        "karma": 4,
+        "option": "",
+        "isEdgeAction": false
+      },
+      "effects": [],
+      "flags": {
+        "srx": {
+          "catalogType": "talent",
+          "catalogData": {
+            "name": "Protected Device Segmentation (PDS)",
+            "srxId": 154,
+            "category": "Weapons",
+            "subcategory": "CC, F, PW",
+            "maxQty": 1,
+            "maxQtyForEachOption": null,
+            "uniqueKarmaScale": [],
+            "options": [],
+            "options2": [],
+            "type": "CC, F, PW",
+            "type2": null,
+            "activeAbility": null,
+            "skillMastery": null,
+            "addlSkillMastery": null,
+            "alchemy": null,
+            "edgeUsage": null,
+            "hasDrainFading": null,
+            "action": null,
+            "range": null,
+            "duration": null,
+            "resistance": null,
+            "matrixProgram": null,
+            "matrixTest": null,
+            "matrixAction": null,
+            "administered": null,
+            "access": null,
+            "prereqRaw": null,
+            "prereq": null,
+            "grants": [],
+            "cost": {
+              "karma": 4
+            },
+            "description": "+1 Matrix Defense Score against weapons & cyberware programs",
+            "effects": [],
+            "slug": "protected-device-segmentation-pds"
+          }
+        }
+      },
+      "sort": 1100,
+      "_key": "!actors.items!Ceqh9r2fYGrDsFCL.abb842761d97704d"
     }
   ],
   "effects": [],
@@ -519,5 +861,21 @@
     "name": "Drone Rigger Livewire (Elf)",
     "actorLink": true
   },
-  "_key": "!actors!Ceqh9r2fYGrDsFCL"
+  "_key": "!actors!Ceqh9r2fYGrDsFCL",
+  "flags": {
+    "srx": {
+      "matrixDevices": [
+        {
+          "id": "c77b18bea1eb5c1f",
+          "wireless": true,
+          "unattended": false,
+          "bricked": false,
+          "disconnected": false,
+          "name": "Renraku Sensei Commlink",
+          "systemTag": "commsSurveillance",
+          "firewall": 1
+        }
+      ]
+    }
+  }
 }

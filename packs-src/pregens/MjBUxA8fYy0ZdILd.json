@@ -86,7 +86,7 @@
         "bonus": 0
       },
       "magic": {
-        "base": 1,
+        "base": 0,
         "bonus": 0
       },
       "resonance": {
@@ -419,6 +419,189 @@
       },
       "sort": 500,
       "_key": "!actors.items!MjBUxA8fYy0ZdILd.1b7eaafd50c44959"
+    },
+    {
+      "_id": "d1abde1f15718755",
+      "name": "Superior Appearance Mod",
+      "type": "ware",
+      "system": {
+        "summary": "Bodyware",
+        "description": "+1 Charisma",
+        "source": "",
+        "cost": 38000,
+        "legality": "",
+        "wareType": "bioware",
+        "category": "Bodyware",
+        "container": "",
+        "rating": 0,
+        "maxRating": null,
+        "essence": 0.2,
+        "essenceScale": [],
+        "installed": true,
+        "prereq": "",
+        "incompatible": []
+      },
+      "effects": [
+        {
+          "name": "Superior Appearance Mod",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.attributes.cha.bonus",
+              "mode": 2,
+              "value": "1"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "4ce96ece7d19b871",
+          "_key": "!actors.items.effects!MjBUxA8fYy0ZdILd.d1abde1f15718755.4ce96ece7d19b871"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Superior Appearance Mod",
+            "srxId": 3118,
+            "category": "Bodyware",
+            "cost": 38000,
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Superior Appearance Mod",
+            "type": "",
+            "type2": null,
+            "wareType": "Bioware",
+            "canRepurchase": false,
+            "maxRating": null,
+            "uniqueScale": null,
+            "nuyenScale": [],
+            "essence": {
+              "display": "0.2",
+              "value": 0.2,
+              "scale": []
+            },
+            "parentContainer": null,
+            "prereq": null,
+            "incompatible": [],
+            "grants": [],
+            "description": "+1 Charisma",
+            "effects": [
+              {
+                "key": "cha",
+                "value": 1
+              }
+            ],
+            "slug": "superior-appearance-mod"
+          }
+        }
+      },
+      "sort": 600,
+      "_key": "!actors.items!MjBUxA8fYy0ZdILd.d1abde1f15718755"
+    },
+    {
+      "_id": "0a7711589663d245",
+      "name": "Wired Reflexes",
+      "type": "ware",
+      "system": {
+        "summary": "Bodyware",
+        "description": "+Rating to Quickness",
+        "source": "",
+        "cost": 0,
+        "legality": "",
+        "wareType": "cyberware",
+        "category": "Bodyware",
+        "container": "",
+        "rating": 1,
+        "maxRating": 3,
+        "essence": 0,
+        "essenceScale": [
+          1,
+          1.5,
+          2.5
+        ],
+        "installed": true,
+        "prereq": "DNI (Direct Neural Interface)",
+        "incompatible": []
+      },
+      "effects": [
+        {
+          "name": "Wired Reflexes",
+          "img": "icons/svg/upgrade.svg",
+          "changes": [
+            {
+              "key": "system.special.quickness.bonus",
+              "mode": 2,
+              "value": "1"
+            }
+          ],
+          "disabled": false,
+          "transfer": true,
+          "flags": {
+            "srx": {
+              "generated": true,
+              "fromCatalog": true
+            }
+          },
+          "_id": "28b5e58c15012aa1",
+          "_key": "!actors.items.effects!MjBUxA8fYy0ZdILd.0a7711589663d245.28b5e58c15012aa1"
+        }
+      ],
+      "flags": {
+        "srx": {
+          "catalogType": "ware",
+          "catalogData": {
+            "name": "Wired Reflexes",
+            "srxId": 3125,
+            "category": "Bodyware",
+            "cost": 0,
+            "costDisplay": "Per Rating: 24k/64k/134k",
+            "properties": [],
+            "options": [],
+            "dictionaryName": "Wired Reflexes",
+            "type": "",
+            "type2": null,
+            "wareType": "Cyberware",
+            "canRepurchase": false,
+            "maxRating": 3,
+            "uniqueScale": 1,
+            "nuyenScale": [
+              24000,
+              64000,
+              134000
+            ],
+            "essence": {
+              "display": "Per Rating: 1/1.5/2.5",
+              "value": 0,
+              "scale": [
+                1,
+                1.5,
+                2.5
+              ]
+            },
+            "parentContainer": null,
+            "prereq": "DNI (Direct Neural Interface)",
+            "incompatible": [],
+            "grants": [],
+            "description": "+Rating to Quickness",
+            "effects": [
+              {
+                "key": "qui",
+                "value": 1
+              }
+            ],
+            "slug": "wired-reflexes"
+          }
+        }
+      },
+      "sort": 700,
+      "_key": "!actors.items!MjBUxA8fYy0ZdILd.0a7711589663d245"
     }
   ],
   "effects": [],
